@@ -1,0 +1,230 @@
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: floor(($grid-gutter-width / 2));
+	padding-right: ceil(($grid-gutter-width / 2));
+	@include clearfix;
+	@media (min-width: $screen-sm-min) {
+		width: $container-sm;
+		padding-left: $grid-gutter-width;
+		padding-right: $grid-gutter-width;
+	}
+	@media (min-width: $screen-md-min) {
+		width: $container-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		width: $container-lg;
+	}
+}
+
+
+#schedule_call {
+	// Prevents the margin around a header from forcing a scrollbar because of a height: 100% bug
+	padding: 1px;
+}
+#ScheduleOnceIframe__bigcommerce,
+#ScheduleOnceIframe__call,
+#ScheduleOnceIframe__webinar {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	max-width: 1015px;
+	width: 100%;
+}
+
+#enable_disable_recharge {
+	margin: 50px auto;
+}
+#enable_disable_recharge_text {
+	margin: -25px auto 0;
+	max-width: 500px;
+}
+
+
+
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.layout__container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.layout {
+  @include make-row;
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns;
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+@include make-grid(xs);
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+  @include make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+  @include make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+  @include make-grid(lg);
+}
+
+
+
+
+
+
+
+
+// Sticky Footer
+&__wrapper {
+	// Reset old Sticky Footer code
+	#wrap {
+		min-height: initial;
+		height: initial;
+		margin: 0 auto;
+		padding: 0;
+	}
+}
+&__wrapper {
+	// New Sticky Footer code
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto ($footer-height + $footer-margin) * -1;
+	.push {
+		height: $footer-height + $footer-margin;
+	}
+}
+
+
+	.layout__container{
+		box-sizing: border-box;
+		&:before {
+			display: table;
+			content: " ";
+		}
+	}
+	.layout {
+		@include make-row;
+		box-sizing: border-box;
+	}
+	.layout__sidebar {
+		box-sizing: border-box;
+		@include make-xs-column(12);
+		@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+			@include make-xs-column(4);
+		}
+		@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+			@include make-xs-column(3);
+		}
+		@media screen and (min-width: $screen-lg-min) {
+			@include make-xs-column(3);
+		}
+		+ .layout__content {
+			padding-top: 8px; // Alignment fix. .nav--sidebar adds 8px of padding to the top of the first link. This will align content with the link text. Might look weird when that first link is set to 'Active'
+		}
+	}
+	.layout__content {
+		box-sizing: border-box;
+		@include make-xs-column(12);
+		@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+			@include make-xs-column(8);
+		}
+		@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+			@include make-xs-column(9);
+		}
+		@media screen and (min-width: $screen-lg-min) {
+			@include make-xs-column(9);
+		}
+	}
+	.layout__full {
+		box-sizing: border-box;
+		@include make-xs-column(12);
+	}
+
+
+/* Page: Signup Questions */
+#schedule_once_container {
+	margin-bottom: 10px;
+	p {
+		max-width: 670px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	.header {
+		margin-top: 0;
+	}
+}
+#install_recharge {
+	margin-bottom: 21px;
+}

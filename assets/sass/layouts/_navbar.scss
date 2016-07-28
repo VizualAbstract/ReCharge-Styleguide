@@ -1,0 +1,314 @@
+/* 
+	Components: Navbars
+	Version 1.1
+	Date: 5-12-2016
+	Author: Corey M. Capetillo
+	5-5-2016
+		- Create file
+	5-12-2016
+		- Tweak pixel alignments for Devon. Adjust responsive breakpoints to maintain status-quo link structure
+	5-22-2016
+		- Add forced --mobile flag for setup navbar
+		- Adjust background and link colors for dropdown menus so the contrast follows the same pattern as the standard navbar
+*/
+@mixin mobile-navbar() {
+	.dropdown {
+		clear: both;
+		&--open {
+			.dropdown__trigger {
+				background-color: $black;
+			}
+		}
+		&__trigger {
+			height: 50px;
+			border-top: 1px solid $gray;
+			.fa {
+				margin-right: 10px;
+			}
+			&::after {
+				float: right;
+				line-height: 49px;
+				left: 0;
+				top: 0;
+			}
+		}
+		&__menu {
+			position: relative;
+			width: 100%;
+			display: none;
+		}
+	}
+	.navbar__collapse {
+		width: 100%;
+		overflow-x: visible;
+		.navbar__links {
+			background-color: $gray-dark;
+			width: 100%;
+			> li {
+				display: block;
+				> a,
+				> span {
+					height: 50px;
+					line-height: 50px;
+				}
+			}
+			&--left,
+			&--right {
+				float: left;
+			}
+		}
+		&.collapse {
+			display: none;
+			height: initial;
+			overflow-x: visible;
+			&.in {
+				display: block;
+				overflow-y: auto;
+			}
+		}
+		.navbar__return {
+			border-left-width: 0;
+			border-bottom: 1px solid $gray;
+			height: 50px !important;
+			line-height: 50px !important;
+			width: 100%;
+			text-align: left;
+			&--highlight {
+				@media screen and (max-width: 915px) { // $screen-xs-max
+					border-top-width: 0;
+				}
+			}
+		}
+	}
+	.switch {
+		position: absolute;
+		top: 12px;
+		right: 60px;
+	}
+
+	@include responsive-visibility('.visible-xs');
+	@include responsive-invisibility('.hidden-xs');
+}
+
+.navbar {
+	position: relative;
+	min-height: $navbar-height;
+	min-width: 320px;
+	font-family: 'ralewaymedium', arial, sans-serif;
+
+	width: 100%;
+	background-color: $navbar-background;
+	color: $navbar-color;
+	&__container {
+		margin-left: auto;
+		margin-right: auto;
+		@media (min-width: $screen-sm-min) {
+			width: $container-sm;
+			padding-left: $grid-gutter-width;
+			padding-right: $grid-gutter-width;
+		}
+		@media (min-width: $screen-md-min) {
+			width: $container-md;
+		}
+		@media (min-width: $screen-lg-min) {
+			width: $container-lg;
+		}
+	}
+	&__links {
+		a,
+		li > span {
+			color: $navbar-color;
+			height: $navbar-height;
+			line-height: $navbar-height;
+			display: block;
+		}
+		.fa {
+			font-size: $font-size-large + 1;
+			line-height: 1;
+			position: relative;
+			top: 4px;
+		}
+	}
+
+	.switch {
+		position: relative;
+		top: 12px;
+		margin: 0 ($padding-large-vertical / 2) 0 0;
+	}
+
+	&__collapse {
+		&.collapse {
+			display: block;
+			height: auto;
+			overflow: visible;
+		}
+	}
+
+	@include clearfix();
+
+	@media screen and (max-width: 915px) { // max-width: 955px //  $screen-xs-max
+		@include mobile-navbar();
+	}
+}
+
+.navbar__brand {
+    float: left;
+	font-size: $font-size-base;
+	line-height: $navbar-height;
+	height: $navbar-height;
+	text-align: center;
+	width: 57px;
+    display: block;
+
+    @include text-hide();
+
+	background-image: url('../images/navbar__brand--white.svg');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+
+	@media screen and (min-width: 355px) and (max-width: 915px){ // max-width: 955px // 420px // $screen-xs-max
+		background-image: url('../images/navbar__brand--mobile--white.svg');
+		width: 140px;
+	}
+}
+
+.navbar__toggle {
+	display: none;
+	position: relative;
+	float: right;
+	text-align: center;
+	font-size: $font-size-large;
+	line-height: $navbar-height;
+	height: $navbar-height;
+	width: $navbar-height;
+	cursor: pointer;
+	&.collapsed {
+		color: $white;
+	}
+	&,
+	&:hover,
+	&:focus {
+		color: $primary-color;
+	}
+	@media screen and (max-width: 915px){ // max-width: 955px // $screen-xs-max
+		display: block;
+	}
+}
+
+.navbar__links {
+	display: block;
+	float: left;
+	&--left {
+		float: left;
+	}
+	&--right {
+		float: right;
+	}
+	li {
+		font-size: $font-size-base;
+		> a,
+		> span {
+			padding: 0 ($padding-large-vertical - 2);
+		}
+		&.active,
+		&:hover {
+			> a,
+			> span {
+				background-color: $navbar-active-background;
+			}
+		}
+	}
+}
+
+.navbar--mobile {
+	@include mobile-navbar();
+	max-width: 480px;
+	.navbar__toggle {
+		display: block !important;
+	}
+	.navbar__brand {
+		background-image: url('../images/navbar__brand--mobile--white.svg');
+		width: 140px;
+	}
+}
+
+.navbar--setup {
+	background-color: $navbar-setup-background;
+	color: $navbar-setup-color;
+	li {
+		> a,
+		> span {
+			color: $navbar-setup-color;
+			background-color: $navbar-setup-background;
+			@media screen and (max-width: $screen-xs-max) {
+				background-color: darken($navbar-setup-background, 10%);
+			}
+		}
+	}
+	.navbar__brand {
+		width: 60px !important;
+	}
+	.navbar__links {
+		li.active,
+		li:hover,
+		li:active {
+			> a,
+			> span {
+				color: $white;
+				background-color: $gray-dark;
+			}
+		}
+	}
+	.dropdown {
+		&--open .dropdown__trigger {
+			background-color: $gray-dark !important;
+			color: $white;
+		}
+		&__menu {
+			li > a,
+			li > span {
+				background-color: darken($navbar-setup-background, 10%);
+				color: $gray-darker;
+			}
+			li.active,
+			li:hover,
+			li:active {
+				> a,
+				> span {
+					background-color: $gray-dark;
+					color: $white;
+				}
+			}
+		}
+	}
+	.navbar__toggle.collapsed {
+		color: $gray-darker;
+	}
+	.navbar__brand {
+		background-image: url('../images/navbar__brand--gray-darker.svg');
+	}
+	&.navbar--mobile {
+		li {
+			> a,
+			> span {
+				background-color: darken($navbar-setup-background, 10%);
+			}
+		}
+	}
+}
+
+.navbar__return {
+	width: 200px;
+	text-align: center;
+	box-sizing: border-box;
+	border-left: 1px solid $white;
+	&--highlight {
+		border-top-width: 0;
+		color: $gray-darker !important;
+		background-color: $primary-color !important;
+		&:hover,
+		&:focus {
+			background-color: $secondary-color !important;
+		}
+	}
+}

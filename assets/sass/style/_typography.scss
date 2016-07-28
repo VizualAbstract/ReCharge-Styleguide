@@ -1,0 +1,146 @@
+/* 
+	Element: Typography
+	Version 2.0
+	Date: 7-18-2016
+	Author: Corey M. Capetillo
+*/
+h1, .h1 {
+	font-size: $h1-font-size;
+	font-family: 'ralewayregular', arial, san-serif;
+	font-weight: normal;
+	font-style: normal;
+	margin-top: 23px;
+	margin-bottom: 38px;
+}
+h2, .h2 {
+	font-size: $h2-font-size;
+	font-family: 'ralewayregular', arial, san-serif;
+	font-weight: normal;
+	font-style: normal;
+	margin-bottom: 12px; // margin-bottom: 28px;
+}
+h3, .h3 {
+	font-family: 'ralewaysemibold', arial, san-serif;
+	font-size: $h3-font-size;
+	font-weight: normal;
+	font-style: normal;
+	@media screen and (min-width: $screen-sm-min){
+		line-height: 1;
+	}
+}
+h4, .h4 {
+	font-family: 'ralewayregular', arial, san-serif;
+	font-weight: normal;
+}
+h5, .h5 {
+	font-family: 'ralewaysemibold', arial, san-serif;
+	font-size: $h5-font-size;
+	font-weight: normal;
+	line-height: 25px;
+	font-style: normal;
+}
+
+body {
+	line-height: 25px;
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $link-hover-color;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+    line-height: 25px;
+}
+
+p + p {
+	margin-top: 18px;
+}
+
+strong {
+	font-weight: normal;
+	font-family: 'ralewaysemibold', arial, sans-serif;
+}
+
+address {
+	font-style: normal;
+}
+
+hr {
+	border-width: 0;
+	border-bottom: 1px solid #EEE;
+}
+
+ul,
+ol {
+	list-style-position: inside;
+	line-height: 25px;
+	li {
+		margin-top: 0;
+	}
+	ul,
+	ol {
+		padding-left: 1em;
+	}
+}
+
+ul {
+	list-style-type: disc;
+	ul {
+		list-style-type: circle;
+	}
+}
+
+ol {
+	list-style-type: decimal;
+	ol {
+		list-style-type: lower-alpha;
+	}
+}
+
+pre,
+code {
+	background-color: #EEE;
+	border-radius: 4px;
+	border: 1px solid #DDD;
+	font-size: 80%;
+	letter-spacing: .05em;
+}
+code {
+	padding-left: .35em;
+	padding-right: .35em;
+}
+pre {
+	padding: 1em;
+	overflow: auto;
+}
+
+/* Fix margins, so we don't have to wrap everything in a paragraph. Might be too aggressive. Monitor */
+p + pre,
+pre + pre,
+pre + p,
+p + ul,
+ul + ul,
+ul + p,
+p + ol,
+ol + ol,
+ol + p,
+pre + ul,
+ul + pre,
+ol + pre,
+pre + ol,
+ol + ul,
+ul + ol {
+	margin-top: 18px;
+}
+
+hr {
+	margin-top: 18px;
+	margin-bottom: 18px;
+}

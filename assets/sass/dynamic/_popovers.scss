@@ -1,0 +1,184 @@
+//
+// Popovers
+// --------------------------------------------------
+$popover-bg: #424242;
+$border-radius-large: 0;
+$popover-arrow-color: #424242;
+$popover-title-bg: #424242;
+$popover-arrow-width: 10px;
+
+.popover-button {
+  width: 14px;
+  height: 16px;
+  color: #424242;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'fontawesome', arial, san-serif;
+  vertical-align: baseline;
+  line-height: 16px;
+  padding: 4px 8px 5px;
+  box-sizing: content-box;
+  &:after {
+    content: "\f05a";
+  }
+  &--active {
+    color: #4DD6B7;
+  }
+  z-index: $zindex-popover+1;
+}
+
+.popover-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $zindex-popover;
+  display: none;
+  max-width: $popover-max-width;
+  color: #FFF;
+  padding: 0;
+  // Our parent element can be arbitrary since popovers are by default inserted as a sibling of their target element.
+  // So reset our font and text properties to avoid inheriting weird values.
+  // @include reset-text;
+  font-size: 16px;
+  background: $popover-bg;
+  background-clip: content-box;
+
+  // Offset the popover to account for the popover arrow
+  &.top     { padding-top: -$popover-arrow-width+8; }
+  &.right   { padding-top: $popover-arrow-width+8; }
+  &.bottom  { padding-top: $popover-arrow-width+8; }
+  &.left    { padding-top: $popover-arrow-width+8; }
+}
+
+
+
+.popover-box__title {
+  margin: 0;
+  padding: 20px 20px 0;
+  font-size: $font-size-base;
+  font-family: 'ralewaysemibold', arial, sans-serif;
+}
+
+.popover-box__content {
+  padding: 0 20px 20px;
+  p {
+    margin-top: 10px;
+  }
+  a {
+    cursor: pointer; // Force pointer, sometimes it's ignored
+  }
+}
+
+// Arrows
+//
+// .arrow is outer, .arrow:after is inner
+
+.popover-box > .popover-box__arrow {
+  &,
+  &:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+  }
+}
+.popover-box > .popover-box__arrow {
+  // border-width: $popover-arrow-outer-width;
+}
+.popover-box > .popover-box__arrow:after {
+  border-width: $popover-arrow-width;
+  content: "";
+}
+
+.popover-box {
+  &.top > .popover-box__arrow {
+    // left: 50%;
+    // margin-left: -$popover-arrow-outer-width;
+    // border-bottom-width: 0;
+    // border-top-color: $popover-arrow-outer-fallback-color; // IE8 fallback
+    // border-top-color: $popover-arrow-outer-color;
+    // bottom: -$popover-arrow-outer-width;
+    // &:after {
+    //   content: " ";
+    //   bottom: 1px;
+    //   margin-left: -$popover-arrow-width;
+    //   border-bottom-width: 0;
+    //   border-top-color: $popover-arrow-color;
+    // }
+  }
+  &.right > .popover-box__arrow {
+    // top: 50%;
+    // left: -$popover-arrow-outer-width;
+    // margin-top: -$popover-arrow-outer-width;
+    // border-left-width: 0;
+    // border-right-color: $popover-arrow-outer-fallback-color; // IE8 fallback
+    // border-right-color: $popover-arrow-outer-color;
+    // &:after {
+    //   content: " ";
+    //   left: 1px;
+    //   bottom: -$popover-arrow-width;
+    //   border-left-width: 0;
+    //   border-right-color: $popover-arrow-color;
+    // }
+    top: 8px;
+    &:after {
+      content: " ";
+      border-top-width: 0;
+      border-bottom-color: $popover-arrow-color;
+    }
+  }
+  &.bottom > .popover-box__arrow {
+    // left: 50%;
+    // margin-left: -$popover-arrow-outer-width;
+    // border-top-width: 0;
+    // border-bottom-color: $popover-arrow-outer-fallback-color; // IE8 fallback
+    // border-bottom-color: $popover-arrow-outer-color;
+    // top: -$popover-arrow-outer-width;
+    // &:after {
+    //   content: " ";
+    //   top: 1px;
+    //   margin-left: -$popover-arrow-width;
+    //   border-top-width: 0;
+    //   border-bottom-color: $popover-arrow-color;
+    // }
+    // top: -$popover-arrow-width;
+    // &:after {
+    //   content: " ";
+    //   border-top-width: 0;
+    //   border-bottom-color: $popover-arrow-color;
+    // }
+    left: 50%;
+    top: 8;
+    &:after {
+      content: " ";
+      margin-left: -$popover-arrow-width;
+      border-top-width: 0;
+      border-bottom-color: $popover-arrow-color;
+    }
+  }
+
+  &.left > .popover-box__arrow {
+    // top: 50%;
+    // right: -$popover-arrow-outer-width;
+    // margin-top: -$popover-arrow-outer-width;
+    // border-right-width: 0;
+    // &:after {
+    //   content: " ";
+    //   right: 1px;
+    //   border-right-width: 0;
+    //   border-left-color: $popover-arrow-color;
+    //   bottom: -$popover-arrow-width;
+    // }
+    top: 8;
+    right: 0;
+    &:after {
+      content: " ";
+      right: 0;
+      border-top-width: 0;
+      border-bottom-color: $popover-arrow-color;
+    }
+  }
+}

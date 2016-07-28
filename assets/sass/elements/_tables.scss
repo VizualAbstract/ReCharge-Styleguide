@@ -1,0 +1,280 @@
+/* Tables */
+.table {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: top;
+
+	// optional - looks better for small cell values
+	white-space: nowrap;
+	border-collapse: collapse;
+	border-spacing: 0;
+	th,
+	td {
+		line-height: $line-height-computed + 3;
+		padding: initial;
+		padding-right: 25px;
+		&:last-child {
+			padding-right: 10px;
+			text-align: right;
+		}
+		&:first-child {
+			text-align: left;
+		}
+	}
+	th {
+		text-align: left;
+	}
+	th,
+	td {
+		border-top: 1px solid transparent;
+	}
+	tbody > tr > td {
+		border-top-color: $gray-lighter;
+		font-size: 14px;
+	}
+	tfoot > tr > td {
+		border-top: 1px solid $gray-lighter;
+	}
+}
+.table__container {
+	min-height: .01%;
+	overflow-x: auto;
+	.table {
+		// width: 100%;
+		width: initial;
+		overflow-x: auto;
+
+		@media screen and (min-width: $screen-sm-min) {
+			width: 100%;
+		}
+
+		@media screen and (max-width: $screen-xs-max) {
+			// IE needs inline-block to position scrolling shadows:
+			display: inline-block;
+			max-width: 100%;
+			// Otherwise, just continue with:
+			display: block;
+			max-width: min-content;
+			// So table is centered on mobile if it's not wide enough to reveal the shadows
+		}
+
+		@include clearfix();
+	}
+
+	.table,
+	.table--alt tbody {
+		// optional - enable iOS momentum scrolling
+		scrolling: touch;
+
+		// scrolling shadows
+		background: radial-gradient(left, ellipse, rgba(0,0,0, .1) 0%, rgba(0,0,0, 0) 75%) 0 center, radial-gradient(right, ellipse, rgba(0,0,0, .1) 0%, rgba(0,0,0, 0) 75%) 100% center;
+		background-size: 8px 100%, 8px 100%;
+		background-attachment: scroll, scroll;
+		background-repeat: no-repeat;
+		@media screen and (min-width: $screen-sm-min) {
+			background: none;
+		}
+	}
+	.table {
+		th {
+			&:first-child,
+			&:last-child {
+				background-color: #FFF;
+			}
+		}
+		td {
+			&:last-child {
+				background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+				background-repeat: no-repeat;
+				background-position: 100% 0;
+				background-size: 20px 100%;
+			}
+		}
+		& td:first-child,
+		&--alt tbody tr:first-child,
+		&--pinned th:nth-child(2),
+		&--pinned tbody td:nth-child(2){
+			// change these gradients from white to your background colour if it differs
+			// gradient on the first cells to hide the left shadow
+			background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+			background-repeat: no-repeat;
+			background-size: 20px 100%;
+		}
+		&--alt th {
+			border-top: 1px solid $gray-lighter;
+		}
+		// gradient on the last cells to hide the right shadow
+		&--alt tbody tr:last-child,
+		&--pinned th:last-child,
+		&--pinned tbody td:last-child {
+			background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+			background-repeat: no-repeat;
+			background-position: 100% 0;
+			background-size: 20px 100%;
+		}
+		&--pinned {
+		}
+		td:first-child:last-child,
+		td:nth-child(2):last-child {
+			background-image: linear-gradient(to left, rgba(255,255,255, 1) 0%, rgba(255,255,255,0) 6%, rgba(255,255,255,0) 96%, rgba(255,255,255, 1) 100%);
+			background-size: 100%;
+		}
+	}
+	// change these gradients from white to your background colour if it differs
+	// gradient on the first cells to hide the left shadow
+	.table td:first-child,
+	.table--alt tbody tr:first-child,
+	.table--pinned thead > tr > th:nth-child(2),
+	.table--pinned tfoot > tr > td:nth-child(2),
+	.table--pinned tbody > tr > td:nth-child(2) {
+	}
+	// gradient on the last cells to hide the right shadow
+	.table--alt tbody tr:last-child,
+	.table--pinned thead > tr > th:last-child,
+	.table--pinned tbody > tr > td:last-child {
+		background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+		background-repeat: no-repeat;
+		background-position: 100% 0;
+		background-size: 20px 100%;
+	}
+
+
+
+
+	@media screen and (max-width: $screen-xs-max) {
+		.table--alt {
+		  display: flex;
+		  overflow: hidden;
+		  background: none;
+		}
+
+		.table--alt thead {
+		  display: flex;
+		  flex-shrink: 0;
+		  min-width: min-content;
+		}
+
+		.table--alt tfoot {
+			@media screen and (max-width: $screen-xs-max) {
+				display: none;
+			}
+		}
+
+		.table--alt tbody {
+		  display: flex;
+		  position: relative;
+		  overflow-x: auto;
+		  overflow-y: hidden;
+		}
+
+		.table--alt tr {
+		  display: flex;
+		  flex-direction: column;
+		  min-width: min-content;
+		  flex-shrink: 0;
+		}
+
+		.table--alt td,
+		.table--alt th {
+		  display: block;
+		}
+
+		.table--flip td {
+		  background-image: none !important;
+		  // border-collapse is no longer active
+		  border-left: 0;
+		}
+
+		// border-collapse is no longer active
+		.table--alt th:not(:last-child),
+		.table--alt td:not(:last-child) {
+		  border-bottom: 0;
+		}
+		.table--alt td {
+			padding-left: 5px;
+		}
+
+		.table--alt th,
+		.table--alt td {
+			padding-right: 15px;
+			&:last-child {
+				@media screen and (max-width: $screen-xs-max) {
+					text-align: left;
+				}
+			}
+		}
+		.table--alt td {
+			@media screen and (max-width: $screen-xs-max) {
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+	/* Mobile */
+	@media only screen and (max-width: 767px) {
+		.table--pinned {
+			margin-left: 125px;
+			position: static;
+			thead > tr > th:first-child,
+			tfoot > tr > td:first-child,
+			tbody > tr > td:first-child {
+				position: absolute;
+				left: 15px;
+				background-color: #FFF;
+				width: 100px;
+				overflow: hidden;
+			}
+			thead > tr > th:nth-child(2),
+			tfoot > tr > td:nth-child(2),
+			tbody > tr > td:nth-child(2) {
+				padding-left: 5px;
+			}
+			tfoot td:last-child {
+				text-align: left !important;
+			}
+		}
+		.table--stacked {
+			background-image: none;
+			max-width: 100%;
+			&, tbody, th, td, tr { 
+				display: block;
+    			width: 100%;
+			}
+			thead,
+			tfoot {
+				display: none !important;
+			}
+			tbody > tr > td,
+			tfoot > tr > td {
+				&:before {
+					content: attr(data-label);
+					font-weight: normal;
+					font-style: normal;
+					font-family: 'ralewaysemibold';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 38%;
+					white-space: nowrap;
+					font-size: 16px;
+					line-height: $line-height-computed + 3;
+					display: block;
+					box-sizing: border-box;
+				}
+				border: none;
+				position: relative;
+				padding-left: 38%;
+				text-align: left;
+				border-bottom: 1px solid $gray-lighter;
+				box-sizing: border-box;
+				&:last-child {
+					border-bottom-color: transparent;
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+}

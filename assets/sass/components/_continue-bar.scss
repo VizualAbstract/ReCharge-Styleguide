@@ -1,0 +1,70 @@
+/* 
+	Components: Continue Bar
+	Version 1.0
+	Date: 5-5-2016
+	Author: Corey M. Capetillo
+*/
+.continue {
+	height: 60px;
+	line-height: 60px;
+	font-size: $font-size-base;
+	background-color: $continue-background;
+	min-width: 295px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	button,
+	a {
+		line-height: 60px;
+		appearance: none;
+		border: 0;
+		&,
+		&:hover,
+		&:focus {
+			outline: 0;
+			color: $gray-darker;
+		}
+	}
+	.fa {
+		font-size: 30px;
+		line-height: 60px;
+	}
+	&__previous {
+		padding: 0 15px;
+	}
+	&__next {
+		background-color: $primary-color;
+		text-align: left;
+		min-width: 195px;
+		position: relative;
+		height: 60px;
+		line-height: 60px;
+		display: block;
+		float: right;
+		font-family: 'ralewaysemibold', arial, sans-serif;
+		padding: 0 30px 0 0;
+		.fa {
+			margin-left: 15px;
+			display: block;
+			float: right;
+		}
+		&::before {
+			position: absolute;
+			top: 0;
+			left: -60px;
+			content: "";
+			border-width: 30px;
+			border-color: $primary-color;
+			border-left-color: transparent;
+    		border-style: solid;
+		}
+		&:hover {
+			background-color: $secondary-color;
+			&::before {
+				border-color: $secondary-color;
+				border-left-color: transparent;
+			}
+		}
+	}
+}

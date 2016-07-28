@@ -1,0 +1,99 @@
+/* 
+	Components: Dropdowns
+	Version 2.0
+	Date: 7-21-2016
+	Author: Corey M. Capetillo
+
+	5-5-2016
+		- Conception
+	7-21-2016
+		- .dropdown gets the .button padding removed
+		- The inner link now receives that padding (7px 15px)
+		- 'left' position removed from caret
+		- 'left-margin' added to caret for even spacing between it and the dropdown button text
+*/
+.dropdown {
+	position: relative;
+	padding: 0;
+	&--left {
+		.dropdown__menu {
+			left: 0;
+			right: auto;
+		}
+	}
+	&--right {
+		.dropdown__menu {
+			left: auto;
+			right: 0;
+		}
+	}
+	&--open {
+		.dropdown__trigger {
+			&::after {
+				content: '\f0d8';
+				top: -1px;
+			}
+		}
+		.dropdown__menu {
+			display: block !important;
+		}
+	}
+}
+.dropdown__trigger {
+	position: relative;
+	display: block;
+    color: inherit;
+
+	line-height: $line-height-base;
+
+	padding: $padding-base-vertical $padding-base-horizontal;
+    &:hover,
+    &:hover {
+    	color: inherit;
+    }
+	&::after {
+		content: '\f0d7';
+		position: relative;
+		font-family: FontAwesome;
+		font-weight: normal;
+		font-size: 19px;
+		line-height: 1;
+		top: 2px;
+		display: inline-block;
+		margin-left: 10px;
+		margin-right: 1px;
+	}
+}
+.dropdown__menu {
+	display: none;
+	position: absolute;
+	text-align: left;
+    top: 100%;
+	min-width: 240px;
+	left: 0;
+	right: auto;
+	z-index: 100;
+	background-color: $gray-dark;
+	li {
+		width: 100%;
+		color: $white;
+		&:empty {
+			border-bottom: 1px solid $white;
+		}
+		&.active,
+		&:hover,
+		&:active {
+			> a {
+				background-color: $brand-blue;
+				display: block;
+			}
+		}
+		> a,
+		> span {
+			height: 40px;
+			line-height: 40px;
+			color: inherit;
+			padding: 0 18px;
+		}
+	}
+}

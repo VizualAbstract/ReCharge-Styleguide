@@ -1,0 +1,83 @@
+/* 
+	Element: Switches
+	Version 1.0
+	Date: 5-5-2016
+	Author: Corey M. Capetillo
+*/
+.switch {
+	font-size: $font-size-small;
+	background-color: $gray-lighter;
+	color: $gray-darker;
+	display: block;
+	cursor: pointer;
+	height: 34px;
+	line-height: 34px;
+	border-radius: 17px;
+	width: 145px;
+	position: relative;
+	&--large {
+		min-width: 300px;
+		width: 100%;
+		max-width: 500px;
+		line-height: 44px;
+		height: 44px;
+		border-radius: 22px;
+		font-size: $font-size-base;
+		.switch__overlay {
+			height: 44px;
+			border-radius: 22px;
+		}
+		.switch__left,
+		.switch__right {
+			transition: color .3s;
+		}
+		.switch__left {
+			color: $white;
+		}
+		.switch__right {
+			color: $black;
+		}
+		.switch__input:checked {
+			+ .switch__overlay + .switch__left {
+				color: $black;
+			}
+			+ .switch__overlay + .switch__left + .switch__right {
+				color: $white;
+			}
+		}
+	}
+}
+.switch__input {
+	display: none;
+}
+.switch__overlay {
+	height: 34px;
+	width: 50%;
+	position: absolute;
+	z-index: 10;
+	left: 0%;
+	right: 50%;
+	display: block;
+	transition: all .3s;
+	background: $switch-on-background;
+	border-radius: 17px;
+}
+.switch__left,
+.switch__right {
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+	position: relative;
+	z-index: 20;
+}
+.switch__left {
+	float: left;
+}
+.switch__right {
+	float: right;
+}
+.switch--checked .switch__input + .switch__overlay,
+.switch__input:checked + .switch__overlay {
+	left: 50%;
+	right: 50%;
+}

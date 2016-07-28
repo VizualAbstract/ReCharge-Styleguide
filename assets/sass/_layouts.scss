@@ -1,0 +1,44 @@
+.layout__container{
+	box-sizing: border-box;
+	&:before {
+		display: table;
+		content: " ";
+	}
+}
+.layout {
+	@include make-row;
+	box-sizing: border-box;
+}
+.layout__sidebar {
+	box-sizing: border-box;
+	@include make-xs-column(12);
+	@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		@include make-xs-column(4);
+	}
+	@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+		@include make-xs-column(3);
+	}
+	@media screen and (min-width: $screen-lg-min) {
+		@include make-xs-column(3);
+	}
+	+ .layout__content {
+		padding-top: 8px; // Alignment fix. .nav--sidebar adds 8px of padding to the top of the first link. This will align content with the link text. Might look weird when that first link is set to 'Active'
+	}
+}
+.layout__content {
+	box-sizing: border-box;
+	@include make-xs-column(12);
+	@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		@include make-xs-column(8);
+	}
+	@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+		@include make-xs-column(9);
+	}
+	@media screen and (min-width: $screen-lg-min) {
+		@include make-xs-column(9);
+	}
+}
+.layout__full {
+	box-sizing: border-box;
+	@include make-xs-column(12);
+}

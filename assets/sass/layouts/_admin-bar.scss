@@ -1,0 +1,57 @@
+.admin-tools {
+	box-sizing: border-box;
+	background-color: #53BAD3;
+	color: #FFF;
+
+	left: 0;
+	width: 100%;
+
+	bottom: auto;
+	top: 100%;
+	margin-top: -80px;
+
+	z-index: 1000000;
+
+	pre {
+		background-color: transparent;
+		border-width: 0;
+		padding: 0;
+		color: #FFF;
+	}
+
+	pre button {
+		font-size: 11px !important;
+	}
+
+	// transition: bottom .2s;
+
+	position: fixed;
+	&__header,
+	&__content {
+		box-sizing: border-box;
+		padding: 20px;
+	}
+	&__header {
+		height: 80px;
+		width: 100%;
+		.title-bar__title {
+			text-transform: uppercase;
+		}
+		.title-bar__controls {
+			text-align: right;
+		}
+	}
+	&__content {
+		padding-top: 0;
+		.form__group {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&.in {
+		bottom: 0;
+		top: auto;
+		margin-top: 0;
+	}
+}

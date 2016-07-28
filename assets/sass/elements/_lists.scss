@@ -1,0 +1,21 @@
+ul,
+li {
+	&.list-unstyled {
+		list-style-type: none;
+	}
+}
+
+.nav {
+	list-style-type: none;
+}
+
+ol {
+	list-style-position: inside;
+	list-style-type: decimal;
+	li {
+		// line-height: 1em;
+		+ li {
+			// margin-top: 1em;
+		}
+	}
+}

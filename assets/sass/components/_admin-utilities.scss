@@ -1,0 +1,45 @@
+/* 
+	Elements: Progress Bar
+	Version 1.0
+	Date: 5-12-2016
+	Author: Corey M. Capetillo
+*/
+.admin-recharge,
+.admin-shopify,
+.admin-bigcommerce {
+	position: relative;
+}
+.admin-recharge::after,
+.admin-shopify::after,
+.admin-bigcommerce::after {
+	font-family: fontawesome, arial;
+    padding-left: 5px;
+    font-weight: 500;
+}
+.admin-recharge::after {
+	color: #FBA200;
+	content: "\f005";
+}
+.admin-shopify::after {
+	color: #7AB55C;
+	content: "\f005  Shopify";
+}
+.admin-bigcommerce::after {
+	color: #4A8BF2;
+	content: "\f005  BigCom";
+}
+
+.navbar__brand--shopify {
+	background-image: url('../images/navbar__brand--shopify.svg');
+
+	@media screen and (min-width: 355px) and (max-width: 915px){ // max-width: 955px // 420px // $screen-xs-max
+		background-image: url('../images/navbar__brand--mobile--shopify.svg');
+	}
+}
+.navbar__brand--bigcommerce {
+	background-image: url('../images/navbar__brand--bigcommerce.svg');
+
+	@media screen and (min-width: 355px) and (max-width: 915px){ // max-width: 955px // 420px // $screen-xs-max
+		background-image: url('../images/navbar__brand--mobile--bigcommerce.svg');
+	}
+}

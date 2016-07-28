@@ -1,0 +1,54 @@
+.installation__image {
+	height: 195px;
+}
+#installation-animation img {
+	animation: spin 1.2s linear infinite;
+	margin: 0 auto;
+	display: block;
+	width: 195px;
+}
+#installation-complete {
+	height: 195px;
+	width: 100%;
+	text-align: center;
+	font-size: 150px;
+	line-height: 195px;
+	color: #338A9D;
+}
+#installation {
+	position: relative;
+}
+.animation__step {
+	width: 100%;
+	display: block;
+	top: 0;
+	left: 0;
+	transition: opacity .55s;
+}
+#step__installation {
+	position: relative;
+	opacity: 1;
+	z-index: 5;
+	&.animation__off {
+		position: absolute;
+		opacity: 0;
+		z-index: 0;
+	}
+	.installation__image {
+		margin-top: 10px;
+		margin-bottom: 15px;
+	}
+}
+#step__complete {
+	position: absolute;
+	opacity: 0;
+	z-index: 0;
+	&.animation__on {
+		position: relative;
+		opacity: 1;
+		z-index: 5;
+	}
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

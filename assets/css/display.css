@@ -1,0 +1,168 @@
+/* Colors */
+/* This stylesheet is for the Style Guide page only */
+body.new {
+  margin: 0;
+  padding: 0; }
+  body.new .example {
+    position: relative;
+    background-color: #FFF;
+    border: 1px solid #E6E6E6;
+    margin: 1em 0 0;
+    padding: 15px;
+    box-sizing: border-box;
+    min-height: 80px;
+    padding-top: 40px; }
+    body.new .example:before {
+      content: "EXAMPLE";
+      font-family: ralewaybold;
+      font-size: 12px;
+      color: #8E8F8E;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 15px 15px 0; }
+    body.new .example .admin-tools {
+      position: relative !important;
+      bottom: auto !important;
+      top: 0 !important;
+      margin-top: 0; }
+    @media screen and (max-width: 768px) {
+      body.new .example {
+        margin-left: -30px;
+        margin-right: -30px;
+        border-left: 0;
+        border-right: 0; } }
+    body.new .example + figure {
+      margin: 0 0 1em;
+      border-top-width: 0; }
+  body.new figure {
+    margin: 0 0 1em;
+    border: 1px solid #E6E6E6;
+    border-top-width: 0;
+    box-sizing: border-box;
+    display: none; }
+    @media screen and (max-width: 768px) {
+      body.new figure {
+        margin-left: -30px;
+        margin-right: -30px;
+        border-left: 0;
+        border-right: 0; } }
+    body.new figure pre {
+      margin: 0;
+      padding: 0; }
+    body.new figure code,
+    body.new figure pre {
+      backgroud-color: transparent;
+      border-radius: 0;
+      font-size: 100%;
+      letter-spacing: initial;
+      border-width: 0; }
+  body.new code.hljs {
+    padding: 0 30px 1em; }
+  body.new .continue {
+    position: relative; }
+  body.new #installation {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto; }
+  body.new .modal {
+    overflow-y: auto; }
+  body.new .see-code {
+    display: block;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #E6E6E6;
+    border-top-width: 0;
+    background-color: #E6E6E6;
+    box-sizing: border-box;
+    line-height: 30px;
+    margin-bottom: 1em; }
+    body.new .see-code:hover {
+      background-color: #E6E6E6; }
+    body.new .see-code + figure {
+      margin-top: -1em; }
+    @media screen and (max-width: 768px) {
+      body.new .see-code {
+        margin-left: -30px;
+        margin-right: -30px;
+        border-left: 0;
+        border-right: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-sizing: content-box; } }
+  body.new .container,
+  body.new .container *[class^=grid__],
+  body.new .container .grid {
+    box-sizing: border-box; }
+  body.new .show-grid [class^=grid__],
+  body.new .show-grid [class^=layout__] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #bef0e5; }
+    body.new .show-grid [class^=grid__] p,
+    body.new .show-grid [class^=layout__] p {
+      background-color: #6bddc3;
+      line-height: 50px;
+      text-align: center; }
+  body.new .patterns__container {
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    paddin-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box; }
+
+.new .styleguide__content .styleguide__page > h2 {
+  margin-top: 50px !important;
+  font-size: 20px;
+  font-family: 'ralewaybold', arial, sans-serif; }
+.new .styleguide__content .example > h3 {
+  font-size: 18px;
+  margin-bottom: 1em;
+  margin-top: 2em; }
+
+/* Pattern library layout */
+html,
+body {
+  height: 100%; }
+
+.new .styleguide__menu {
+  display: none;
+  padding: 1em;
+  box-sizing: border-box;
+  border-right: 1px solid #444;
+  background-color: #424242;
+  color: #FFF; }
+  .new .styleguide__menu h5 {
+    margin-bottom: 15px; }
+  .new .styleguide__menu a {
+    color: #FFF; }
+.new .styleguide__page {
+  padding: 0 30px 30px; }
+@media screen and (min-width: 768px) {
+  .new .styleguide__menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    overflow-y: auto; }
+    .new .styleguide__menu li {
+      padding-bottom: 1em; }
+  .new .styleguide__content {
+    position: relative;
+    margin-left: 250px;
+    overflow-y: auto;
+    min-height: 100%; } }
+
+.example.overflow-fix {
+  overflow-x: hidden;
+  overflow-y: overlay; }
+
+.admin-tools + .admin-tools,
+.navbar + .navbar {
+  margin-top: 15px !important; }
+
+/*# sourceMappingURL=display.css.map */

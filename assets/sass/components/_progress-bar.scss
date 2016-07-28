@@ -1,0 +1,122 @@
+/* 
+	Components: Progress Bar
+	Version 1.0
+	Date: 5-5-2016
+	Author: Corey M. Capetillo
+*/
+.progress {
+	display: block;
+	width: 100%;
+	height: 30px;
+	background-color: $gray-lighter;
+	font-family: 'ralewaysemibold', arial, sans-serif;
+	&--inactive {
+		.progress__step {
+			&,
+			&:hover,
+			&:active {
+				color: transparent;
+				cursor: default;
+			}
+			&::before {
+				border-left-color: transparent !important;
+			}
+		}
+	}
+	@media screen and (max-width: $screen-xs-max){
+		display: table;
+		.progress__step {
+			display: table-cell;
+			width: auto;
+			float: none;
+			overflow: hidden;
+			white-space: nowrap;
+			text-align: left;
+			padding-left: 15px;
+			& + .progress__step {
+				padding-left: 25px;
+			}
+		}
+	}
+}
+
+.progress__step {
+	display: block;
+	width: 33.33%;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	position: relative;
+	z-index: 5;
+	font-size: $font-size-small;
+	&::after,
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0%;
+		border-width: 15px;
+		border-color: transparent;
+		border-style: solid;
+	}
+	&::after {
+		margin-left: -1px;
+	}
+	&,
+	&:hover,
+	&--incomplete,
+	&--incomplete:hover {
+		color: $gray-darker;
+	}
+	&--active,
+	&--active:hover,
+	&--complete,
+	&--complete:hover {
+		color: $white;
+	}
+	&--incomplete {
+		background-color: $gray-lighter;
+	}
+	&--active {
+		background-color: $gray-darker;
+	}
+	&--complete {
+		background-color: $primary-color;
+	}
+	&:first-child {
+		&::before,
+		&::after {
+			border-left-width: 0;
+		}
+	}
+	&--incomplete + .progress__step--incomplete,
+	&--complete + .progress__step--complete,
+	&--active + .progress__step--active {
+		&::before {
+			border-left-color: $white;
+		}
+	}
+	&--incomplete + .progress__step--incomplete,
+	&--incomplete + .progress__step--complete,
+	&--incomplete + .progress__step--active {
+		&::after {
+			border-left-color: $gray-lighter;
+		}
+	}
+	&--active + .progress__step--incomplete,
+	&--active + .progress__step--complete,
+	&--active + .progress__step--active {
+		&::after {
+			border-left-color: $gray-darker;
+		}
+	}
+	&--complete + .progress__step--incomplete,
+	&--complete + .progress__step--complete,
+	&--complete + .progress__step--active {
+		&::after {
+			border-left-color: $primary-color;
+		}
+	}
+}

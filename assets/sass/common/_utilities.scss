@@ -1,0 +1,47 @@
+.text--right {
+	text-align: right !important;
+}
+
+.text--left {
+	text-align: left !important;
+}
+
+.text--center {
+	text-align: center !important;
+}
+
+.text-hide {
+	@include text-hide;
+}
+
+.clearfix {
+	@include clearfix;
+}
+
+.updates {
+	&__block {
+		padding-bottom: 2em;
+		border-bottom: 1px solid #EEE;
+		margin-bottom: 2em;
+		> ul,
+		> ol,
+		hr,
+		p {
+			margin-top: 1em !important;
+			margin-bottom: 1em !important;
+		}
+		pre,
+		code {
+		}
+		code {
+			color: #ec3d10;
+		}
+		ul,
+		ol {
+			li {
+				line-height: 1.61803em;
+				margin-top: 0;
+			}
+		}
+	}
+}

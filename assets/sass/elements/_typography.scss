@@ -1,0 +1,199 @@
+/* 
+	Element: Base Styles
+	Version 1.0
+	Date: 5-5-2016
+	Author: Corey M. Capetillo
+*/
+// body {
+// 	font-weight: 500;
+// 	font-family: 'ralewaymedium', arial, san-serif;
+// 	-webkit-font-smoothing: antialiased;
+// 	color: $gray-darker;
+// 	font-size: $font-size-base;
+// 	line-height: 25px;
+// }
+
+#wrapper {
+	margin-bottom: 45px;
+}
+
+// .container {
+// 	padding: 0 45px;
+// 	max-width: 1200px;
+// 	margin-left: auto;
+// 	margin-right: auto;
+// }
+
+.header {
+	display: block;
+	text-align: center;
+	margin: 50px auto 63px;
+	&__title {
+		color: $brand-blue;
+		font-weight: normal;
+		font-style: normal;
+		line-height: 1;
+		letter-spacing: -0.037em;
+	}
+}
+
+h1 + .header__description, 
+.h1 + .header__description {
+	margin-top: -38px;
+	margin-bottom: 38px;
+	padding-top: 10px;
+}
+
+.title-info {
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
+	font-family: 'ralewayregular', arial, sans-serif;
+	
+	a {
+		text-decoration: underline;
+	}
+	&.pull-right,
+	&.pull-left {
+		@media screen and (max-width: $screen-xs-max){
+			float: none !important;
+			display: block;
+			text-align: left;
+		}
+	}
+}
+
+.list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	> li {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+}
+.list--inline {
+	font-size: 0;
+	> li {
+		font-size: $font-size-base;
+		display: inline-block;
+	}
+}
+
+.visible-xs {
+	display: none;
+}
+.hidden-xs {
+	display: initial;
+}
+
+.align {
+	&--left {
+		text-align: left;
+	}
+	&--center {
+		text-align: center;
+	}
+	&--right {
+		text-align: right;
+	}
+}
+
+.pull {
+	&--left {
+		float: left;
+	}
+	&--right {
+		float: right;
+	}
+}
+
+@media (max-width: $screen-xs-max) {
+  @include responsive-invisibility('.hidden-xs');
+}
+
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  @include responsive-invisibility('.hidden-sm');
+}
+
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  @include responsive-invisibility('.hidden-md');
+}
+
+@media (min-width: $screen-lg-min) {
+  @include responsive-invisibility('.hidden-lg');
+}
+
+h1, .h1 {
+	font-size: $h1-font-size;
+	font-family: 'ralewayregular', arial, san-serif;
+	font-weight: normal;
+	font-style: normal;
+	margin-top: 23px;
+	margin-bottom: 38px;
+}
+h2, .h2 {
+	font-size: $h2-font-size;
+	font-family: 'ralewayregular', arial, san-serif;
+	font-weight: normal;
+	font-style: normal;
+	margin-bottom: 12px; // margin-bottom: 28px;
+}
+h3, .h3 {
+	font-family: 'ralewaysemibold', arial, san-serif;
+	font-size: $h3-font-size;
+	font-weight: normal;
+	font-style: normal;
+	@media screen and (min-width: $screen-sm-min){
+		line-height: 1;
+	}
+}
+h4, .h4 {
+	font-family: 'ralewayregular', arial, san-serif;
+	font-weight: normal;
+}
+h5, .h5 {
+	font-family: 'ralewaysemibold', arial, san-serif;
+	font-size: $h5-font-size;
+	font-weight: normal;
+	line-height: 25px;
+	font-style: normal;
+}
+
+body {
+	line-height: 25px;
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $link-hover-color;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+    line-height: 25px;
+}
+
+p + p {
+	margin-top: 18px;
+}
+
+strong {
+	font-weight: normal;
+	font-family: 'ralewaysemibold', arial, sans-serif;
+}
+
+address {
+	font-style: normal;
+}
+
+hr {
+	border-width: 0;
+	border-bottom: 1px solid #EEE;
+}

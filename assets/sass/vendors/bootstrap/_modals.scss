@@ -1,0 +1,236 @@
+/*!
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+.modal__open {
+	overflow: hidden;
+}
+.modal {
+	display: none;
+	overflow: auto;
+	overflow-y: auto;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: $zindex-modal;
+	-webkit-overflow-scrolling: touch;
+	outline: 0;
+	h2 {
+		padding-right: 42px;
+	}
+}
+.modal__close {
+	font-family: fontawesome;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	border: 0;
+	padding: 0;
+	background: transparent;
+	outline: 0;
+	cursor: pointer;
+	color: #424242;
+	z-index: $zindex-modal;
+	&::before {
+		content: "\f00d";
+		font-size: 24px;
+	}
+}
+.modal.fade .modal__dialog {
+	transform: translate(0, -25%);
+	transition: transform 0.3s ease-out;
+}
+.modal.in .modal__dialog {
+	transform: translate(0, 0);
+}
+.modal__open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.modal__dialog {
+	position: relative;
+	width: auto;
+	margin: 10px;
+}
+.modal__content {
+	position: relative;
+	background-color: #ffffff;
+	background-clip: padding-box;
+	outline: 0;
+	padding: 35px 30px;
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	h3 {
+		font-family: 'ralewaysemibold', arial, sans-serif;
+	}
+}
+.modal__backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: $zindex-modal-background;
+	background-color: #000;
+}
+.modal__backdrop.fade {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.modal__backdrop.in,
+.modal__backdrop.fade.in {
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+.modal__scrollbar-measure {
+	position: absolute;
+	top: -9999px;
+	width: 50px;
+	height: 50px;
+	overflow: scroll;
+}
+.modal__open {
+	overflow: hidden;
+}
+@media (min-width: 768px) {
+	.modal__dialog {
+		width: 700px;
+		margin: 4% auto;
+	}
+	.modal--small {
+		width: 300px;
+	}
+}
+@media (min-width: 992px) {
+	.modal--large {
+		width: 900px;
+	}
+}
+
+.modal__actions {
+	@extend .form__actions;
+	// font-size: 0;
+	// background: #FFF;
+	// border-top-width: 0 !important;
+	// .button {
+	// 	&,
+	// 	&--block.button {
+	// 		vertical-align: baseline;
+	// 		display: inline-block;
+	// 		width: 49%;
+	// 		+ .button {
+	// 			&,
+	// 			&--block.button {
+	// 				margin-left: 2%;
+	// 			}
+	// 		}
+	// 	}
+	// }
+}
+
+.fade {
+	opacity: 0;
+	transition: opacity 0.2s linear;
+}
+.fade.in {
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+.dropup,
+.dropdown {
+  position: relative;
+}
+.dropdown-toggle:focus {
+  outline: 0;
+}
+.dropdown__menu.pull-right {
+  right: 0;
+  left: auto;
+}
+.dropdown__menu > li > a {
+  display: block;
+  clear: both;
+  white-space: nowrap;
+}
+.dropdown__menu > .active > a,
+.dropdown__menu > .active > a:hover,
+.dropdown__menu > .active > a:focus {
+  outline: 0;
+}
+.dropdown__menu > .disabled > a:hover,
+.dropdown__menu > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  cursor: not-allowed;
+}
+.open > .dropdown__menu {
+  display: block;
+}
+.open > a {
+  outline: 0;
+}
+.dropdown__menu-right {
+  left: auto;
+  right: 0;
+}
+.dropdown__menu-left {
+  left: 0;
+  right: auto;
+}
+
+
+
+.dropdown-backdrop,
+.dropdown__backdrop {
+	position: static;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	z-index: $zindex-modal-background;
+}
+
+
+.collapse {
+  display: none;
+}
+.collapse.in {
+  display: block;
+}
+tr.collapse.in {
+  display: table-row;
+}
+tbody.collapse.in {
+  display: table-row-group;
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-property: height, visibility;
+  -o-transition-property: height, visibility;
+     transition-property: height, visibility;
+  -webkit-transition-duration: 0.35s;
+  -o-transition-duration: 0.35s;
+     transition-duration: 0.35s;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+     transition-timing-function: ease;
+}
