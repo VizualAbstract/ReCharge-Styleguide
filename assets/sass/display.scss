@@ -41,6 +41,11 @@ body.new {
 			border-top-width: 0;
 		}
 	}
+	.styleguide__page {
+		> hr {
+			margin: 50px 0;
+		}
+	}
 	figure {
 		margin: 0 0 1em;
 		border: 1px solid #E6E6E6;
@@ -213,7 +218,7 @@ body {
 	margin-top: 15px !important;
 }
 
-#button-blocks + .example .button + .button {
+#buttons-blocked + .example .button + .button {
 	margin-top: 15px !important;
 	display: table !important;
 }

@@ -35,6 +35,8 @@ body.new {
     body.new .example + figure {
       margin: 0 0 1em;
       border-top-width: 0; }
+  body.new .styleguide__page > hr {
+    margin: 50px 0; }
   body.new figure {
     margin: 0 0 1em;
     border: 1px solid #E6E6E6;
@@ -165,7 +167,7 @@ body {
 .navbar + .navbar {
   margin-top: 15px !important; }
 
-#button-blocks + .example .button + .button {
+#buttons-blocked + .example .button + .button {
   margin-top: 15px !important;
   display: table !important; }
 
