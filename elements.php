@@ -21,7 +21,7 @@
 <button class="button button--disabled">Disabled</button>
 </div><!-- .example -->
 
-<h2 id="button-links">Buttons: Links</h2>
+<h2 id="buttons-links">Buttons: Links</h2>
 <div class="example">
 <a href="#" class="button button--link">Button</a>
 <input type="submit" class="button button--link" value="Button">
@@ -33,14 +33,14 @@
 <button class="button button--disabled button--link">Disabled</button>
 </div><!-- .example -->
 
-<h2 id="large-buttons">Buttons: Large</h2>
+<h2 id="buttons-large">Buttons: Large</h2>
 <div class="example">
 <a href="#" class="button button--large">Large Button</a>
 <input type="submit" class="button button--large button--primary" value="Large Button">
 <button class="button button--large button--disabled">Large Button</button>
 </div><!-- .example -->
 
-<h2 id="button-blocks">Buttons: Blocked</h2>
+<h2 id="buttons-blocked">Buttons: Blocked</h2>
 <div class="example">
 <a href="#" class="button button--block">Large Block Button</a>
 <input type="submit" class="button button--block button--primary" value="Large Block Button">
@@ -49,7 +49,7 @@
 
 <hr>
 
-<h2 id="input-fields">Inputs: Textfield</h2>
+<h2 id="inputs-text-field">Inputs: Text-field</h2>
 <div class="example">
 <fieldset>
 	<label class="form__label">Input type="text"</label>
@@ -69,14 +69,14 @@
 </fieldset>
 </div><!-- .example -->
 
-<h2 id="textarea">Inputs: Textarea</h2>
+<h2 id="inputs-textarea">Inputs: Textarea</h2>
 <div class="example">
 <textarea class="form__input"></textarea>
 <textarea placeholder="Sed posuere consectetur est at lobortis" class="form__input"></textarea>
 <textarea class="form__input">Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor.</textarea>
 </div><!-- .example -->
 
-<h2 id="radio-inputs">Inputs: Radio</h2>
+<h2 id="inputs-radio">Inputs: Radio</h2>
 <div class="example">
 <input id="radio_1" type="radio" name="radio_group" checked class="form__radio">
 <label for="radio_1" class="form__radio__label">Radio</label>
@@ -91,7 +91,7 @@
 <label for="radio_3" class="form__radio__label">Radio</label>
 </div><!-- .example -->
 
-<h2 id="checkbox-inputs">Inputs: Checkbox</h2>
+<h2 id="inputs-checkbox">Inputs: Checkbox</h2>
 <div class="example">
 <input id="checkbox_1" type="checkbox" name="checkbox" checked class="form__checkbox">
 <label for="checkbox_1" class="form__checkbox__label">Checkbox</label>
@@ -106,7 +106,7 @@
 <label for="checkbox_3" class="form__checkbox__label">Checkbox</label>
 </div><!-- .example -->
 
-<h2 id="select-inputs">Inputs: Select</h2>
+<h2 id="inputs-select">Inputs: Select</h2>
 <div class="example">
 <strong>Select Inputs</strong>
 <select class="form__select">
@@ -121,124 +121,7 @@
 </select><!-- .form__select -->
 </div><!-- .example -->
 
-<h2 id="switches">Inputs: Switches</h2>
-<div class="example">
-	<label class="switch">
-		<div class="switch__inner">
-			<input class="switch__input" type="checkbox">
-			<span class="switch__overlay"></span>
-			<span class="switch__left">Off</span>
-			<span class="switch__right">On</span>
-		</div><!-- .switch__inner -->
-	</label><!-- .switch -->
-	<br>
-	<label class="switch">
-		<div class="switch__inner">
-			<input class="switch__input" type="checkbox" checked="checked">
-			<span class="switch__overlay"></span>
-			<span class="switch__left">Off</span>
-			<span class="switch__right">On</span>
-		</div><!-- .switch__inner -->
-	</label><!-- .switch -->
-	<br>
-	<label class="switch switch--large">
-		<div class="switch__inner">
-			<input class="switch__input" type="checkbox">
-			<span class="switch__overlay"></span>
-			<span class="switch__left">Large Off</span>
-			<span class="switch__right">Large On</span>
-		</div><!-- .switch__inner -->
-	</label><!-- .switch -->
-</div><!-- .example -->
-
 <hr>
-
-<h2 id="input-groups">Input Groups</h2>
-<p>
-	Input groups will have their addon items seperated by 15px. They can be either auto-width or full-width by adding <code>.input-group--full</code>
-</p>
-<div class="example">
-	<div class="input-group">
-		<div class="input-group__addon">
-			$
-		</div><!-- .form__input-group__addon -->
-		<input type="text" id="" name="" value="10.99" placeholder="0.00" class="form__input">
-		<div class="input-group__addon">
-			<button id="" name="" class="button">Calculate</button>
-		</div><!-- .form__input-group__addon -->
-	</div><!-- .input-group -->
-	<div class="input-group input-group--full">
-		<div class="input-group__addon">
-			$
-		</div><!-- .form__input-group__addon -->
-		<input type="text" id="" name="" value="10.99" placeholder="0.00" class="form__input">
-		<div class="input-group__addon">
-			<button id="" name="" class="button">Calculate</button>
-		</div><!-- .form__input-group__addon -->
-	</div><!-- .input-group  -->
-</div><!-- .example -->
-
-<h2 id="form-search">Input Groups: Search</h2>
-<p>
-	Form search relies on <a href="elements.php/#forms">Input Groups</a>, but wrapping the component in <code>.form__search</code> will remove the 15px gap between the button and the input field and finally set the button's min-width to 40px.
-</p>
-<div class="example">
-	<form class="form__search">
-		<div class="input-group">
-			<div class="input-group__addon">
-				<label for="search_terms" class="form__label">Search</label>
-			</div>
-			<input type="text" id="search_terms" name="search_terms" value="" placeholder="Search terms..." class="form__input">
-			<div class="input-group__addon">
-				<button id="submit_search" class="button">
-					<span class="fa fa-search"></span>
-				</button><!-- #submit_search .button -->
-			</div>
-		</div><!-- .form__search -->
-		<div class="input-group input-group--full">
-			<div class="input-group__addon">
-				<label for="search_terms" class="form__label">Search</label>
-			</div>
-			<input type="text" id="search_terms" name="search_terms" value="" placeholder="Search terms..." class="form__input">
-			<div class="input-group__addon">
-				<button id="submit_search" class="button">
-					<span class="fa fa-search"></span>
-				</button><!-- #submit_search .button -->
-			</div>
-		</div><!-- .input-group -->
-	</form><!-- .form__search -->
-</div><!-- .example -->
-
-<hr>
-
-<h2 id="card-details">Form: Card Details</h2>
-<div class="example">
-<div class="card-details">
-	<span class="card-details__date">
-		<label for="exp-month" class="card-details__label">Expiration Month/Year</label>
-		<span class="card-details__date__month">
-			<input type="text" name="exp-month" id="exp-month" data-stripe="exp-month" placeholder="MM" value="" class="form__input">
-		</span><!-- .card-details__date__month -->
-		<span class="card-details__date__divider">
-			/
-		</span><!-- .card-details__date__divider -->
-		<span class="card-details__date__year">
-			<input type="text" name="exp-year" id="exp-year" data-stripe="exp-year" placeholder="YYYY" value="" class="form__input">
-		</span><!-- .card-details__date__year-->
-	</span>
-	<span class="card-details__security">
-		<label for="cvc" class="card-details__label">CSV</label>
-		<span class="card-details__security__csv">
-			<input type="text" name="cvc" id="cvc" autocomplete="off" value="" class="form__input">
-		</span><!-- .card-details__security__csv -->
-	</span><!-- .card-details__security -->
-	<span class="card-details__cards text--right">
-		<img src="assets/images/credit-cards_mastercard.svg" alt="Master Card icon" class="card-details__icon">
-		<img src="assets/images/credit-cards_visa.svg" alt="Visa Card icon" class="card-details__icon">
-		<img src="assets/images/credit-cards_amex.svg" alt="American Express Card icon" class="card-details__icon">
-	</span><!-- .card-details__cards -->
-</div><!-- .credit-card -->
-</div><!-- .example -->
 
 <h2 id="form-groups">Form: Groups</h2>
 <div class="example">
@@ -266,7 +149,7 @@
 </div><!-- .form__group -->
 </div><!-- .example -->
 
-<h2 id="form-actions">Form: Errors</h2>
+<h2 id="form-errors">Form: Errors</h2>
 <div class="example">
 <div class="form__errors"><p>Error 400: Could not find payment information</p></div>
 </div><!-- .example -->
@@ -277,6 +160,96 @@
 	<button class="button button--default button--large">Cancel</button>
 	<button class="button button--primary button--large">Save</button>
 </div><!-- .form__actions -->
+</div><!-- .example -->
+
+
+<hr>
+
+<h2 id="input-groups">Input Groups</h2>
+<p>
+	Input groups will have their addon items seperated by 15px. They can be either auto-width or full-width by adding <code>.input-group--full</code>
+</p>
+<div class="example">
+<div class="input-group">
+	<div class="input-group__addon">
+		$
+	</div><!-- .form__input-group__addon -->
+	<input type="text" id="" name="" value="10.99" placeholder="0.00" class="form__input">
+	<div class="input-group__addon">
+		<button id="" name="" class="button">Calculate</button>
+	</div><!-- .form__input-group__addon -->
+</div><!-- .input-group -->
+<div class="input-group input-group--full">
+	<div class="input-group__addon">
+		$
+	</div><!-- .form__input-group__addon -->
+	<input type="text" id="" name="" value="10.99" placeholder="0.00" class="form__input">
+	<div class="input-group__addon">
+		<button id="" name="" class="button">Calculate</button>
+	</div><!-- .form__input-group__addon -->
+</div><!-- .input-group  -->
+</div><!-- .example -->
+
+<h2 id="input-groups-search">Input Groups: Search</h2>
+<p>
+	Form search relies on <a href="elements.php/#forms">Input Groups</a>, but wrapping the component in <code>.form__search</code> will remove the 15px gap between the button and the input field and finally set the button's min-width to 40px.
+</p>
+<div class="example">
+<form class="form__search">
+	<div class="input-group">
+		<div class="input-group__addon">
+			<label for="search_terms" class="form__label">Search</label>
+		</div>
+		<input type="text" id="search_terms" name="search_terms" value="" placeholder="Search terms..." class="form__input">
+		<div class="input-group__addon">
+			<button id="submit_search" class="button">
+				<span class="fa fa-search"></span>
+			</button><!-- #submit_search .button -->
+		</div>
+	</div><!-- .form__search -->
+	<div class="input-group input-group--full">
+		<div class="input-group__addon">
+			<label for="search_terms" class="form__label">Search</label>
+		</div>
+		<input type="text" id="search_terms" name="search_terms" value="" placeholder="Search terms..." class="form__input">
+		<div class="input-group__addon">
+			<button id="submit_search" class="button">
+				<span class="fa fa-search"></span>
+			</button><!-- #submit_search .button -->
+		</div>
+	</div><!-- .input-group -->
+</form><!-- .form__search -->
+</div><!-- .example -->
+
+<hr>
+
+<h2 id="form-card-details">Form: Card Details</h2>
+<div class="example">
+<div class="card-details">
+	<span class="card-details__date">
+		<label for="exp-month" class="card-details__label">Expiration Month/Year</label>
+		<span class="card-details__date__month">
+			<input type="text" name="exp-month" id="exp-month" data-stripe="exp-month" placeholder="MM" value="" class="form__input">
+		</span><!-- .card-details__date__month -->
+		<span class="card-details__date__divider">
+			/
+		</span><!-- .card-details__date__divider -->
+		<span class="card-details__date__year">
+			<input type="text" name="exp-year" id="exp-year" data-stripe="exp-year" placeholder="YYYY" value="" class="form__input">
+		</span><!-- .card-details__date__year-->
+	</span>
+	<span class="card-details__security">
+		<label for="cvc" class="card-details__label">CSV</label>
+		<span class="card-details__security__csv">
+			<input type="text" name="cvc" id="cvc" autocomplete="off" value="" class="form__input">
+		</span><!-- .card-details__security__csv -->
+	</span><!-- .card-details__security -->
+	<span class="card-details__cards text--right">
+		<img src="assets/images/credit-cards_mastercard.svg" alt="Master Card icon" class="card-details__icon">
+		<img src="assets/images/credit-cards_visa.svg" alt="Visa Card icon" class="card-details__icon">
+		<img src="assets/images/credit-cards_amex.svg" alt="American Express Card icon" class="card-details__icon">
+	</span><!-- .card-details__cards -->
+</div><!-- .credit-card -->
 </div><!-- .example -->
 
 <hr>
@@ -333,7 +306,7 @@
 </table><!-- .table -->
 </div><!-- .example -->
 
-<h2 id="responsive-tables">Tables: Responsive</h2>
+<h2 id="table-responsive">Tables: Responsive</h2>
 <p>Mobile-friendly tables are a special beast. The following documents several approaches available, since no perfect solution exists for every situation.</p>
 <p>
 	<strong>Overflow Wrapper</strong><br>
