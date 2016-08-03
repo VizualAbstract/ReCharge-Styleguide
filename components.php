@@ -5,7 +5,7 @@
 
 <hr>
 
-<h2 id="header">Setup Header</h2>
+<h2 id="setup-header">Setup Header</h2>
 <p>The previous base class name for this component was <code>.header</code>, but this was before I realized this was the Setup Header, not a standard header. The old class nomiclature will be removed in the future.</p>
 <div class="example">
 	<div class="setup-header">

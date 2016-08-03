@@ -5,6 +5,11 @@
 body.new {
 	margin: 0;
 	padding: 0;
+	li.divider {
+		padding-top: 8px;
+		margin-bottom: 8px;
+		height: 0;
+	}
 	.example {
 		position: relative;
 		background-color: #FFF;

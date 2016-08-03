@@ -1644,7 +1644,12 @@ h1 + .setup-header__description,
 .new .nav {
   list-style-type: none;
 }
-/* line 12, ../sass/elements/_lists.scss */
+/* line 15, ../sass/elements/_lists.scss */
+.new ul > li.divider,
+.new ol > li.divider {
+  list-style: none;
+}
+/* line 21, ../sass/elements/_lists.scss */
 .new ol {
   list-style-position: inside;
   list-style-type: decimal;

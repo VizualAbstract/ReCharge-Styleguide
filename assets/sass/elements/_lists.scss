@@ -9,6 +9,15 @@ li {
 	list-style-type: none;
 }
 
+ul,
+ol {
+	> li {
+		&.divider {
+			list-style: none;
+		}
+	}
+}
+
 ol {
 	list-style-position: inside;
 	list-style-type: decimal;

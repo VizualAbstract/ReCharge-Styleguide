@@ -27,41 +27,38 @@
 
 <h3>Elements</h3>
 <ul>
-	<li><a href="/elements.php#buttons-blocked"></a></li>
-	<li><a href="/elements.php#buttons-links"></a></li>
-	<li><a href="/elements.php#buttons-large"></a></li>
-	<li><a href="/elements.php#buttons-blocked"></a></li>
-	<li></li>
-	<li><a href="/elements.php#inputs-text-field"></a></li>
-	<li><a href="/elements.php#inputs-textarea"></a></li>
-	<li><a href="/elements.php#inputs-radio"></a></li>
-	<li><a href="/elements.php#inputs-checkbox"></a></li>
-	<li><a href="/elements.php#inputs-select"></a></li>
-	<li></li>
-	<li><a href="/elements.php#form-groups"></a></li>
-	<li><a href="/elements.php#form-errors"></a></li>
-	<li><a href="/elements.php#form-actions"></a></li>
-	<li></li>
-	<li><a href="/elements.php#card-details"></a></li>
-	<li></li>
-	<li><a href="/elements.php#tables"></a></li>
-	<li><a href="/elements.php#tables-responsive"></a></li>
+	<li><a href="/elements.php#buttons">Buttons</a></li>
+	<li><a href="/elements.php#buttons-links">Buttons: Links</a></li>
+	<li><a href="/elements.php#buttons-large">Buttons: Large</a></li>
+	<li><a href="/elements.php#buttons-blocked">Buttons: Blocked</a></li>
+	<li class="divider"></li>
+	<li><a href="/elements.php#inputs-text-field">Inputs: Text-Field</a></li>
+	<li><a href="/elements.php#inputs-textarea">Inputs: Textarea</a></li>
+	<li><a href="/elements.php#inputs-radio">Inputs: Radio</a></li>
+	<li><a href="/elements.php#inputs-checkbox">Inputs: Checkbox</a></li>
+	<li><a href="/elements.php#inputs-select">Inputs: Select</a></li>
+	<li class="divider"></li>
+	<li><a href="/elements.php#form-groups">Form: Groups</a></li>
+	<li><a href="/elements.php#form-errors">Form: Errors</a></li>
+	<li><a href="/elements.php#form-actions">Form: Actions</a></li>
+	<li class="divider"></li>
+	<li><a href="/elements.php#card-details">Card Details</a></li>
+	<li class="divider"></li>
+	<li><a href="/elements.php#tables">Tables</a></li>
+	<li><a href="/elements.php#tables-responsive">Tables: Responsive</a></li>
 </ul>
 <br>
 
 <h3>Components</h3>
 <ul>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
+	<li><a href="/components.php#setup-header">Setup Header</a></li>
+	<li><a href="/components.php#title-bar">Title Bar</a></li>
+	<li><a href="/components.php#info-bar">Info Bar</a></li>
+	<li><a href="/components.php#dropdowns">Dropdowns</a></li>
+	<li><a href="/components.php#switches">Switches</a></li>
+	<li><a href="/components.php#action-lists">Action Lists</a></li>
+	<li><a href="/components.php#progress-bar">Progress Bar</a></li>
+	<li><a href="/components.php#continue-bar">Continue Bar</a></li>
 </ul>
 <br>
 

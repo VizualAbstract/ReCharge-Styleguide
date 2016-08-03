@@ -3,6 +3,10 @@
 body.new {
   margin: 0;
   padding: 0; }
+  body.new li.divider {
+    padding-top: 8px;
+    margin-bottom: 8px;
+    height: 0; }
   body.new .example {
     position: relative;
     background-color: #FFF;
