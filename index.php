@@ -8,6 +8,96 @@
 <hr>
 
 <h2 id="directory">Directory</h2>
+<h3>Utility</h3>
+<ul>
+	<li><a href="/styleguide/utility.php#alignment-helpers">Alignment Helpers</a></li>
+	<li><a href="/styleguide/utility.php#responsive-helpers">Responsive Helpers</a></li>
+	<li><a href="/styleguide/utility.php#structural-helpers">Structural Helpers</a></li>
+</ul>
+<br>
+
+<h3>Style</h3>
+<ul>
+	<li><a href="/styleguide/style.php#colors">Colors</a></li>
+	<li><a href="/styleguide/style.php#fonts">Fonts</a></li>
+	<li><a href="/styleguide/style.php#typography">Typography</a></li>
+	<li><a href="/styleguide/style.php#animation">Animation</a></li>
+</ul>
+<br>
+
+<h3>Elements</h3>
+<ul>
+	<li><a href="/elements.php#buttons-blocked"></a></li>
+	<li><a href="/elements.php#buttons-links"></a></li>
+	<li><a href="/elements.php#buttons-large"></a></li>
+	<li><a href="/elements.php#buttons-blocked"></a></li>
+	<li></li>
+	<li><a href="/elements.php#inputs-text-field"></a></li>
+	<li><a href="/elements.php#inputs-textarea"></a></li>
+	<li><a href="/elements.php#inputs-radio"></a></li>
+	<li><a href="/elements.php#inputs-checkbox"></a></li>
+	<li><a href="/elements.php#inputs-select"></a></li>
+	<li></li>
+	<li><a href="/elements.php#form-groups"></a></li>
+	<li><a href="/elements.php#form-errors"></a></li>
+	<li><a href="/elements.php#form-actions"></a></li>
+	<li></li>
+	<li><a href="/elements.php#card-details"></a></li>
+	<li></li>
+	<li><a href="/elements.php#tables"></a></li>
+	<li><a href="/elements.php#tables-responsive"></a></li>
+</ul>
+<br>
+
+<h3>Components</h3>
+<ul>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+</ul>
+<br>
+
+<h3>Layouts</h3>
+<ul>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+</ul>
+<br>
+
+<h3>Dynamic</h3>
+<ul>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+</ul>
+<br>
+
+<h3>Vendor</h3>
+<ul>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+</ul>
+<br>
+
 <h2 id="resources">Resources</h2>
 <h2 id="contact">Contact</h2>
 

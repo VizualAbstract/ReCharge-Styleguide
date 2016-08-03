@@ -223,7 +223,7 @@
 
 <hr>
 
-<h2 id="form-card-details">Form: Card Details</h2>
+<h2 id="card-details">Card Details</h2>
 <div class="example">
 <div class="card-details">
 	<span class="card-details__date">
@@ -306,7 +306,7 @@
 </table><!-- .table -->
 </div><!-- .example -->
 
-<h2 id="table-responsive">Tables: Responsive</h2>
+<h2 id="tables-responsive">Tables: Responsive</h2>
 <p>Mobile-friendly tables are a special beast. The following documents several approaches available, since no perfect solution exists for every situation.</p>
 <p>
 	<strong>Overflow Wrapper</strong><br>
