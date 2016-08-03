@@ -786,15 +786,15 @@
 		"shouldRunBless": 1,
 		"useLibsass": 0
 		},
-	"\/assets\/sass\/misc\/_installation-animation.scss": {
+	"\/assets\/sass\/style\/_animation.scss": {
 		"createSourceMap": 1,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/sass\/misc\/_installation-animation.scss",
-		"outputAbbreviatedPath": "\/assets\/sass\/css\/_installation-animation.css",
+		"inputAbbreviatedPath": "\/assets\/sass\/style\/_animation.scss",
+		"outputAbbreviatedPath": "\/assets\/sass\/css\/_animation.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

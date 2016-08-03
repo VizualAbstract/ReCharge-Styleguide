@@ -2,6 +2,8 @@
 	5-5-2016 - Create this file
 	5-10-2016 - Add .new wrapper and admin_utilities.scss
 	7-14-2016 - Re-organized sass structure of files and group nomiclature
+	8-3-206 - Move #installation-animation to animation.scss and include with style
+			- .Header will now be setup-header and be grouped within components
 */
 /*
 	Common
@@ -91,7 +93,7 @@
   margin-top: 25px;
 }
 
-/* line 16, ../sass/app.scss */
+/* line 18, ../sass/app.scss */
 .new {
   /* http://meyerweb.com/eric/tools/css/reset/ 
      v2.0 | 20110126
@@ -612,7 +614,7 @@
   margin-top: 0;
 }
 
-/* line 23, ../sass/app.scss */
+/* line 25, ../sass/app.scss */
 .new {
   /* 
   	Element: Typography
@@ -621,6 +623,14 @@
   	Author: Corey M. Capetillo
   */
   /* Fix margins, so we don't have to wrap everything in a paragraph. Might be too aggressive. Monitor */
+  /* 
+  	Style: Animation
+  	Version 1
+  	Date: 6-3-2016
+  	Author: Corey M. Capetillo
+  	6-3-2016
+  		- Create file
+  */
 }
 /* line 7, ../sass/style/_typography.scss */
 .new h1, .new .h1 {
@@ -995,12 +1005,85 @@
 .new .swatch.background--pink {
   color: #424242;
 }
-
+/* line 10, ../sass/style/_animation.scss */
+.new .installation__image {
+  height: 195px;
+}
+/* line 13, ../sass/style/_animation.scss */
+.new #installation-animation img {
+  -webkit-animation: spin 1.2s linear infinite;
+          animation: spin 1.2s linear infinite;
+  margin: 0 auto;
+  display: block;
+  width: 195px;
+}
+/* line 19, ../sass/style/_animation.scss */
+.new #installation-complete {
+  height: 195px;
+  width: 100%;
+  text-align: center;
+  font-size: 150px;
+  line-height: 195px;
+  color: #338A9D;
+}
+/* line 27, ../sass/style/_animation.scss */
+.new #installation {
+  position: relative;
+}
+/* line 30, ../sass/style/_animation.scss */
+.new .animation__step {
+  width: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  -webkit-transition: opacity .55s;
+  transition: opacity .55s;
+}
+/* line 37, ../sass/style/_animation.scss */
+.new #step__installation {
+  position: relative;
+  opacity: 1;
+  z-index: 5;
+}
+/* line 41, ../sass/style/_animation.scss */
+.new #step__installation.animation__off {
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+}
+/* line 46, ../sass/style/_animation.scss */
+.new #step__installation .installation__image {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+/* line 51, ../sass/style/_animation.scss */
+.new #step__complete {
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+}
+/* line 55, ../sass/style/_animation.scss */
+.new #step__complete.animation__on {
+  position: relative;
+  opacity: 1;
+  z-index: 5;
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 /*
 	Layouts
 	Bare-bone html elements. Essential to the general look and feel. Class nomiclature follows standard HTML naming conventions, but CSS selectors are used for their improved rendering speed.
 */
-/* line 32, ../sass/app.scss */
+/* line 35, ../sass/app.scss */
 .new {
   /* 
   	Element: Base Styles
@@ -1054,91 +1137,60 @@
   margin-bottom: 45px;
 }
 /* line 27, ../sass/elements/_typography.scss */
-.new .header {
-  display: block;
-  text-align: center;
-  margin: 50px auto 63px;
-}
-/* line 31, ../sass/elements/_typography.scss */
-.new .header__title {
-  color: #2c93ac;
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: -0.037em;
-}
-/* line 40, ../sass/elements/_typography.scss */
 .new h1 + .header__description,
-.new .h1 + .header__description {
+.new .h1 + .header__description
+h1 + .setup-header__description,
+.new .h1 + .setup-header__description {
   margin-top: -38px;
   margin-bottom: 38px;
   padding-top: 10px;
 }
-/* line 47, ../sass/elements/_typography.scss */
-.new .title-info {
-  font-weight: normal;
-  font-style: normal;
-  font-size: 16px;
-  font-family: 'ralewayregular', arial, sans-serif;
-}
-/* line 53, ../sass/elements/_typography.scss */
-.new .title-info a {
-  text-decoration: underline;
-}
-@media screen and (max-width: 767px) {
-  /* line 56, ../sass/elements/_typography.scss */
-  .new .title-info.pull-right, .new .title-info.pull-left {
-    float: none !important;
-    display: block;
-    text-align: left;
-  }
-}
-/* line 66, ../sass/elements/_typography.scss */
+/* line 36, ../sass/elements/_typography.scss */
 .new .list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 70, ../sass/elements/_typography.scss */
+/* line 40, ../sass/elements/_typography.scss */
 .new .list > li {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-/* line 76, ../sass/elements/_typography.scss */
+/* line 46, ../sass/elements/_typography.scss */
 .new .list--inline {
   font-size: 0;
 }
-/* line 78, ../sass/elements/_typography.scss */
+/* line 48, ../sass/elements/_typography.scss */
 .new .list--inline > li {
   font-size: 16px;
   display: inline-block;
 }
-/* line 84, ../sass/elements/_typography.scss */
+/* line 54, ../sass/elements/_typography.scss */
 .new .visible-xs {
   display: none;
 }
-/* line 87, ../sass/elements/_typography.scss */
+/* line 57, ../sass/elements/_typography.scss */
 .new .hidden-xs {
   display: initial;
 }
-/* line 92, ../sass/elements/_typography.scss */
+/* line 62, ../sass/elements/_typography.scss */
 .new .align--left {
   text-align: left;
 }
-/* line 95, ../sass/elements/_typography.scss */
+/* line 65, ../sass/elements/_typography.scss */
 .new .align--center {
   text-align: center;
 }
-/* line 98, ../sass/elements/_typography.scss */
+/* line 68, ../sass/elements/_typography.scss */
 .new .align--right {
   text-align: right;
 }
-/* line 104, ../sass/elements/_typography.scss */
+/* line 74, ../sass/elements/_typography.scss */
 .new .pull--left {
   float: left;
 }
-/* line 107, ../sass/elements/_typography.scss */
+/* line 77, ../sass/elements/_typography.scss */
 .new .pull--right {
   float: right;
 }
@@ -1166,7 +1218,7 @@
     display: none !important;
   }
 }
-/* line 128, ../sass/elements/_typography.scss */
+/* line 98, ../sass/elements/_typography.scss */
 .new h1, .new .h1 {
   font-size: 35px;
   font-family: 'ralewayregular', arial, san-serif;
@@ -1175,7 +1227,7 @@
   margin-top: 23px;
   margin-bottom: 38px;
 }
-/* line 136, ../sass/elements/_typography.scss */
+/* line 106, ../sass/elements/_typography.scss */
 .new h2, .new .h2 {
   font-size: 30px;
   font-family: 'ralewayregular', arial, san-serif;
@@ -1183,7 +1235,7 @@
   font-style: normal;
   margin-bottom: 12px;
 }
-/* line 143, ../sass/elements/_typography.scss */
+/* line 113, ../sass/elements/_typography.scss */
 .new h3, .new .h3 {
   font-family: 'ralewaysemibold', arial, san-serif;
   font-size: 24px;
@@ -1191,17 +1243,17 @@
   font-style: normal;
 }
 @media screen and (min-width: 768px) {
-  /* line 143, ../sass/elements/_typography.scss */
+  /* line 113, ../sass/elements/_typography.scss */
   .new h3, .new .h3 {
     line-height: 1;
   }
 }
-/* line 152, ../sass/elements/_typography.scss */
+/* line 122, ../sass/elements/_typography.scss */
 .new h4, .new .h4 {
   font-family: 'ralewayregular', arial, san-serif;
   font-weight: normal;
 }
-/* line 156, ../sass/elements/_typography.scss */
+/* line 126, ../sass/elements/_typography.scss */
 .new h5, .new .h5 {
   font-family: 'ralewaysemibold', arial, san-serif;
   font-size: 16px;
@@ -1209,42 +1261,58 @@
   line-height: 25px;
   font-style: normal;
 }
-/* line 164, ../sass/elements/_typography.scss */
+/* line 134, ../sass/elements/_typography.scss */
 .new body {
   line-height: 25px;
 }
-/* line 168, ../sass/elements/_typography.scss */
+/* line 138, ../sass/elements/_typography.scss */
 .new a {
   color: #4DD6B7;
   text-decoration: none;
 }
-/* line 173, ../sass/elements/_typography.scss */
+/* line 143, ../sass/elements/_typography.scss */
 .new a:hover {
   color: #2bac8f;
 }
-/* line 177, ../sass/elements/_typography.scss */
+/* line 147, ../sass/elements/_typography.scss */
 .new p {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 25px;
 }
-/* line 183, ../sass/elements/_typography.scss */
+/* line 153, ../sass/elements/_typography.scss */
 .new p + p {
   margin-top: 18px;
 }
-/* line 187, ../sass/elements/_typography.scss */
+/* line 157, ../sass/elements/_typography.scss */
 .new strong {
   font-weight: normal;
   font-family: 'ralewaysemibold', arial, sans-serif;
 }
-/* line 192, ../sass/elements/_typography.scss */
+/* line 162, ../sass/elements/_typography.scss */
 .new address {
   font-style: normal;
 }
-/* line 196, ../sass/elements/_typography.scss */
+/* line 166, ../sass/elements/_typography.scss */
 .new hr {
   border-width: 0;
   border-bottom: 1px solid #EEE;
+}
+/* line 171, ../sass/elements/_typography.scss */
+.new .setup-header,
+.new .header {
+  display: block;
+  text-align: center;
+  margin: 50px auto 63px;
+}
+/* line 176, ../sass/elements/_typography.scss */
+.new .setup-header__title,
+.new .header__title {
+  color: #2c93ac;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: -0.037em;
 }
 /* line 2, ../sass/elements/_tables.scss */
 .new .table {
@@ -2355,7 +2423,7 @@
 	Components
 	Typically made up of Elements, grouped with with a unique class identifier. Serves a specific, but widely-used purpose.
 */
-/* line 52, ../sass/app.scss */
+/* line 55, ../sass/app.scss */
 .new {
   /* 
   	Components: Dropdowns
@@ -2382,7 +2450,9 @@
   	Version 1.0
   	Date: 6-26-2016
   	Author: Corey M. Capetillo
+  	- Added the old title-info element for organization
   */
+  /* This will be removed */
   /* 
   	Components: Progress Bar
   	Version 1.0
@@ -2576,31 +2646,31 @@
   left: 50%;
   right: 50%;
 }
-/* line 8, ../sass/components/_title-bar.scss */
+/* line 9, ../sass/components/_title-bar.scss */
 .new .info-bar {
   display: table;
   width: 100%;
 }
-/* line 11, ../sass/components/_title-bar.scss */
+/* line 12, ../sass/components/_title-bar.scss */
 .new .info-bar__label, .new .info-bar__content {
   display: table-cell;
   vertical-align: top;
 }
-/* line 16, ../sass/components/_title-bar.scss */
+/* line 17, ../sass/components/_title-bar.scss */
 .new .info-bar__label {
   text-align: left;
 }
-/* line 19, ../sass/components/_title-bar.scss */
+/* line 20, ../sass/components/_title-bar.scss */
 .new .info-bar__content {
   text-align: right;
 }
-/* line 24, ../sass/components/_title-bar.scss */
+/* line 25, ../sass/components/_title-bar.scss */
 .new .title-bar {
   display: table;
   width: 100%;
   min-height: 40px;
 }
-/* line 28, ../sass/components/_title-bar.scss */
+/* line 29, ../sass/components/_title-bar.scss */
 .new .title-bar h1, .new .title-bar .h1,
 .new .title-bar h2, .new .title-bar .h2,
 .new .title-bar h3, .new .title-bar .h3,
@@ -2610,15 +2680,34 @@
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 37, ../sass/components/_title-bar.scss */
+/* line 38, ../sass/components/_title-bar.scss */
 .new .title-bar__title, .new .title-bar__content {
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: top;
 }
-/* line 42, ../sass/components/_title-bar.scss */
+/* line 43, ../sass/components/_title-bar.scss */
 .new .title-bar__content {
   text-align: right;
   font-size: 16px;
+}
+/* line 50, ../sass/components/_title-bar.scss */
+.new .title-info {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  font-family: 'ralewayregular', arial, sans-serif;
+}
+/* line 56, ../sass/components/_title-bar.scss */
+.new .title-info a {
+  text-decoration: underline;
+}
+@media screen and (max-width: 767px) {
+  /* line 59, ../sass/components/_title-bar.scss */
+  .new .title-info.pull-right, .new .title-info.pull-left {
+    float: none !important;
+    display: block;
+    text-align: left;
+  }
 }
 /* line 7, ../sass/components/_progress-bar.scss */
 .new .progress {
@@ -2910,7 +2999,7 @@
 	Layout
 	Structural elements dependant on each other to build out a page. Houses Components.
 */
-/* line 66, ../sass/app.scss */
+/* line 69, ../sass/app.scss */
 .new {
   /* Page: Signup Questions */
   /* 
@@ -4888,7 +4977,7 @@
 	Vendors
 	Impoted libraries, generally serving a singular purpose.
 */
-/* line 90, ../sass/app.scss */
+/* line 93, ../sass/app.scss */
 .new {
   /*!
    * Bootstrap v3.3.5 (http://getbootstrap.com)
@@ -5391,12 +5480,12 @@
 }
 
 /* Temporary fix until we no longer need to use .new {} */
-/* line 95, ../sass/app.scss */
+/* line 98, ../sass/app.scss */
 .modal__open {
   overflow: hidden;
 }
 
-/* line 98, ../sass/app.scss */
+/* line 101, ../sass/app.scss */
 .modal__backdrop {
   position: fixed;
   top: 0;
@@ -5407,13 +5496,13 @@
   background-color: #000;
 }
 
-/* line 107, ../sass/app.scss */
+/* line 110, ../sass/app.scss */
 .modal__backdrop.fade {
   opacity: 0;
   filter: alpha(opacity=0);
 }
 
-/* line 111, ../sass/app.scss */
+/* line 114, ../sass/app.scss */
 .modal__backdrop.in,
 .modal__backdrop.fade.in {
   opacity: 0.7;
@@ -5424,79 +5513,5 @@
 	Misc
 	Items that don't fit anywhere else. Usually found in a singular location within the app.
 */
-/* line 1, ../sass/misc/_installation-animation.scss */
-.new .installation__image {
-  height: 195px;
-}
-/* line 4, ../sass/misc/_installation-animation.scss */
-.new #installation-animation img {
-  -webkit-animation: spin 1.2s linear infinite;
-          animation: spin 1.2s linear infinite;
-  margin: 0 auto;
-  display: block;
-  width: 195px;
-}
-/* line 10, ../sass/misc/_installation-animation.scss */
-.new #installation-complete {
-  height: 195px;
-  width: 100%;
-  text-align: center;
-  font-size: 150px;
-  line-height: 195px;
-  color: #338A9D;
-}
-/* line 18, ../sass/misc/_installation-animation.scss */
-.new #installation {
-  position: relative;
-}
-/* line 21, ../sass/misc/_installation-animation.scss */
-.new .animation__step {
-  width: 100%;
-  display: block;
-  top: 0;
-  left: 0;
-  -webkit-transition: opacity .55s;
-  transition: opacity .55s;
-}
-/* line 28, ../sass/misc/_installation-animation.scss */
-.new #step__installation {
-  position: relative;
-  opacity: 1;
-  z-index: 5;
-}
-/* line 32, ../sass/misc/_installation-animation.scss */
-.new #step__installation.animation__off {
-  position: absolute;
-  opacity: 0;
-  z-index: 0;
-}
-/* line 37, ../sass/misc/_installation-animation.scss */
-.new #step__installation .installation__image {
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-/* line 42, ../sass/misc/_installation-animation.scss */
-.new #step__complete {
-  position: absolute;
-  opacity: 0;
-  z-index: 0;
-}
-/* line 46, ../sass/misc/_installation-animation.scss */
-.new #step__complete.animation__on {
-  position: relative;
-  opacity: 1;
-  z-index: 5;
-}
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
 
 /*# sourceMappingURL=app.min.css.map */
