@@ -165,9 +165,19 @@
 			$(function() {
 				// Generates the menus with target tags for quick linking
 				var menu = $('#menu');
+				var count = 0;
 				$('h2').each(function(i) {
 					var link_href = $(this).attr('id');
 					var link_text = $(this).text();
+
+					var previous_element = $(this).prev();
+					if (previous_element[0].nodeName == 'HR'){
+						if (count !== 0) {
+							menu.append("<li></li>");
+						} else {
+							count++;
+						}
+					}
 					if (typeof(link_href) !== 'undefined' && typeof(link_text) !== 'undefined'){
 						if (link_href.length > 0 && link_text.length > 0){
 							var link = "<li><a href=\"#" + link_href + "\">" + link_text + "</a></li>";
