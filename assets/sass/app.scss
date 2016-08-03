@@ -2,6 +2,8 @@
 	5-5-2016 - Create this file
 	5-10-2016 - Add .new wrapper and admin_utilities.scss
 	7-14-2016 - Re-organized sass structure of files and group nomiclature
+	8-3-206 - Move #installation-animation to animation.scss and include with style
+			- .Header will now be setup-header and be grouped within components
 */
 
 /*
@@ -23,6 +25,7 @@
 .new {
 	@import 'style/_typography.scss';
 	@import 'style/_colors.scss';
+	@import 'style/_animation.scss';
 }
 
 /*
@@ -119,7 +122,6 @@
 	Items that don't fit anywhere else. Usually found in a singular location within the app.
 */
 .new {
-	@import 'misc/_installation-animation.scss';
 }
 
 // html,

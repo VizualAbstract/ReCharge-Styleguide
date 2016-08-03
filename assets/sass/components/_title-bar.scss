@@ -3,6 +3,7 @@
 	Version 1.0
 	Date: 6-26-2016
 	Author: Corey M. Capetillo
+	- Added the old title-info element for organization
 */
 
 .info-bar {
@@ -37,10 +38,30 @@
 	&__title,
 	&__content {
 		display: table-cell;
-		vertical-align: middle;
+		vertical-align: top;
 	}
 	&__content {
 		text-align: right;
 		font-size: $font-size-base;
+	}
+}
+
+/* This will be removed */
+.title-info {
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
+	font-family: 'ralewayregular', arial, sans-serif;
+	
+	a {
+		text-decoration: underline;
+	}
+	&.pull-right,
+	&.pull-left {
+		@media screen and (max-width: $screen-xs-max){
+			float: none !important;
+			display: block;
+			text-align: left;
+		}
 	}
 }
