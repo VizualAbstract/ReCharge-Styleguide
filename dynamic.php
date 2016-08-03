@@ -12,7 +12,7 @@ Tooltip <span class="tooltip-button"
 			title='Tooltip is set via title="attribute"'></span> ...
 </div><!-- .example -->
 
-<h2 id="tooltips">Popover</h2>
+<h2 id="popover">Popover</h2>
 <div class="example">
 Popover <span class="popover-button" 
 			data-toggle="rc_popover" 

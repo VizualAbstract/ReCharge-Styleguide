@@ -75,27 +75,10 @@
 
 <h3>Dynamic</h3>
 <ul>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
+	<li><a href="/dynamic.php#tooltips">Tooltips</a></li>
+	<li><a href="/dynamic.php#popover">Popover</a></li>
+	<li><a href="/dynamic.php#modals">Modals</a></li>
 </ul>
 <br>
-
-<h3>Vendor</h3>
-<ul>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-</ul>
-<br>
-
-<h2 id="resources">Resources</h2>
-<h2 id="contact">Contact</h2>
 
 <?php include('includes/footer.php'); ?>
