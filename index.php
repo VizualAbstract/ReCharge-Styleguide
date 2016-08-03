@@ -64,12 +64,12 @@
 
 <h3>Layouts</h3>
 <ul>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
-	<li><a href=""></a></li>
+	<li><a href="/layouts.php#navbar">Navbar</a></li>
+	<li><a href="/layouts.php#navbar-setup">Navbar: Setup</a></li>
+	<li><a href="/layouts.php#footer">Footer</a></li>
+	<li><a href="/layouts.php#navs">Navs</a></li>
+	<li><a href="/layouts.php#layout-and-grid-system">Layout and Grid System</a></li>
+	<li><a href="/layouts.php#admin-tools">Admin Tools</a></li>
 </ul>
 <br>
 
