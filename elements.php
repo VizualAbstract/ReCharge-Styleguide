@@ -1,7 +1,155 @@
 <?php include('includes/header.php'); ?>
 <h1>Elements</h1>
 <p>Bare-bone, base HTML DOM elements. Class nomiclature follows standard HTML naming conventions, but CSS selectors are used for their improved rendering speed.</p>
-<p><strong>Needs:</strong> Lists, Buttons, Images, Forms</p>
+<p><strong>Needs:</strong> Lists, Images, Form Groups</p>
+
+<hr>
+
+<h2 id="buttons">Buttons</h2>
+<div class="description">
+	<p>The <code>.button</code> class will render links, input[type="submit"] and buttons in the same fashion. Use  <code>.button--primary</code>, <code>.button--secondary</code>, <code>.button--danger</code>, <code>.button--disabled</code> to stylize further.</p>
+</div><!-- .description -->
+<div class="example">
+<a href="#" class="button">Button</a>
+<input type="submit" class="button" value="Button">
+<button class="button">Button</button>
+<hr>
+<button class="button button--secondary">Default</button>
+<button class="button button--primary">Primary</button>
+<button class="button button--secondary">Secondary</button>
+<button class="button button--danger">Danger</button>
+<button class="button button--disabled">Disabled</button>
+</div><!-- .example -->
+
+<h2 id="button-links">Buttons: Links</h2>
+<div class="example">
+<a href="#" class="button button--link">Button</a>
+<input type="submit" class="button button--link" value="Button">
+<button class="button button--link">Button</button>
+<button class="button button--default button--link">Default</button>
+<button class="button button--primary button--link">Primary</button>
+<button class="button button--secondary button--link">Secondary</button>
+<button class="button button--danger button--link">Danger</button>
+<button class="button button--disabled button--link">Disabled</button>
+</div><!-- .example -->
+
+<h2 id="large-buttons">Buttons: Large</h2>
+<div class="example">
+<a href="#" class="button button--large">Large Button</a>
+<input type="submit" class="button button--large button--primary" value="Large Button">
+<button class="button button--large button--disabled">Large Button</button>
+</div><!-- .example -->
+
+<h2 id="button-blocks">Buttons: Blocked</h2>
+<div class="example">
+<a href="#" class="button button--block">Large Block Button</a>
+<input type="submit" class="button button--block button--primary" value="Large Block Button">
+<button class="button button--block button--disabled">Large Block Button</button>
+</div><!-- .example -->
+
+<hr>
+
+<h2 id="input-fields">Inputs: Textfield</h2>
+<div class="example">
+<fieldset>
+	<label class="form__label">Input type="text"</label>
+	<input type="text" class="form__input" value="">
+
+	<label class="form__label">Input type="text"</label>
+	<input type="text" class="form__input" value="" placeholder="Placeholder text">
+
+	<label class="form__label">Input type="text"</label>
+	<input type="text" class="form__input" value="Text Input" placeholder="placeholder text">
+
+	<label class="form__label">Input type="text"</label>
+	<input type="text" class="form__input form__input--focus" value="Text Input: Focus" placeholder="placeholder text">
+
+	<label class="form__label">Input type="text"</label>
+	<input type="text" class="form__input form__input--invalid" value="Text Input: Invalid" placeholder="placeholder text">
+</fieldset>
+</div><!-- .example -->
+
+<h2 id="textarea">Inputs: Textarea</h2>
+<div class="example">
+<textarea class="form__input"></textarea>
+<textarea placeholder="Sed posuere consectetur est at lobortis" class="form__input"></textarea>
+<textarea class="form__input">Sed posuere consectetur est at lobortis. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempus porttitor.</textarea>
+</div><!-- .example -->
+
+<h2 id="radio-inputs">Inputs: Radio</h2>
+<div class="example">
+<input id="radio_1" type="radio" name="radio_group" checked class="form__radio">
+<label for="radio_1" class="form__radio__label">Radio</label>
+
+<input id="radio_2" type="radio" name="radio_group" class="form__radio">
+<label for="radio_2" class="form__radio__label">Radio</label>
+
+<input id="radio_4" type="radio" name="radio_group" required class="form__radio">
+<label for="radio_4" class="form__radio__label">Radio</label>
+
+<input id="radio_3" type="radio" name="radio_group" disabled class="form__radio">
+<label for="radio_3" class="form__radio__label">Radio</label>
+</div><!-- .example -->
+
+<h2 id="checkbox-inputs">Inputs: Checkbox</h2>
+<div class="example">
+<input id="checkbox_1" type="checkbox" name="checkbox" checked class="form__checkbox">
+<label for="checkbox_1" class="form__checkbox__label">Checkbox</label>
+
+<input id="checkbox_2" type="checkbox" name="checkbox" class="form__checkbox">
+<label for="checkbox_2">Checkbox</label>
+
+<input id="checkbox_4" type="checkbox" name="checkbox" required class="form__checkbox">
+<label for="checkbox_4" class="form__checkbox__label">Checkbox</label>
+
+<input id="checkbox_3" type="checkbox" name="checkbox" disabled class="form__checkbox">
+<label for="checkbox_3" class="form__checkbox__label">Checkbox</label>
+</div><!-- .example -->
+
+<h2 id="select-inputs">Inputs: Select</h2>
+<div class="example">
+<strong>Select Inputs</strong>
+<select class="form__select">
+	<option selected="selected">Option 1</option>
+	<option>Option 2</option>
+	<option>Option 3</option>
+</select><!-- .form__select -->
+<select multiple class="form__select">
+	<option selected="selected">Option 1</option>
+	<option>Option 2</option>
+	<option>Option 3</option>
+</select><!-- .form__select -->
+</div><!-- .example -->
+
+<h2 id="switches">Inputs: Switches</h2>
+<div class="example">
+	<label class="switch">
+		<div class="switch__inner">
+			<input class="switch__input" type="checkbox">
+			<span class="switch__overlay"></span>
+			<span class="switch__left">Off</span>
+			<span class="switch__right">On</span>
+		</div><!-- .switch__inner -->
+	</label><!-- .switch -->
+	<br>
+	<label class="switch">
+		<div class="switch__inner">
+			<input class="switch__input" type="checkbox" checked="checked">
+			<span class="switch__overlay"></span>
+			<span class="switch__left">Off</span>
+			<span class="switch__right">On</span>
+		</div><!-- .switch__inner -->
+	</label><!-- .switch -->
+	<br>
+	<label class="switch switch--large">
+		<div class="switch__inner">
+			<input class="switch__input" type="checkbox">
+			<span class="switch__overlay"></span>
+			<span class="switch__left">Large Off</span>
+			<span class="switch__right">Large On</span>
+		</div><!-- .switch__inner -->
+	</label><!-- .switch -->
+</div><!-- .example -->
 
 <hr>
 
@@ -30,8 +178,8 @@
 	</div><!-- .input-group  -->
 </div><!-- .example -->
 
+<h2 id="form-search">Input Groups: Search</h2>
 <p>
-	<strong>Form Search</strong><br>
 	Form search relies on <a href="elements.php/#forms">Input Groups</a>, but wrapping the component in <code>.form__search</code> will remove the 15px gap between the button and the input field and finally set the button's min-width to 40px.
 </p>
 <div class="example">
@@ -60,6 +208,78 @@
 		</div><!-- .input-group -->
 	</form><!-- .form__search -->
 </div><!-- .example -->
+
+<hr>
+
+<h2 id="card-details">Form: Card Details</h2>
+<div class="example">
+<div class="card-details">
+	<span class="card-details__date">
+		<label for="exp-month" class="card-details__label">Expiration Month/Year</label>
+		<span class="card-details__date__month">
+			<input type="text" name="exp-month" id="exp-month" data-stripe="exp-month" placeholder="MM" value="" class="form__input">
+		</span><!-- .card-details__date__month -->
+		<span class="card-details__date__divider">
+			/
+		</span><!-- .card-details__date__divider -->
+		<span class="card-details__date__year">
+			<input type="text" name="exp-year" id="exp-year" data-stripe="exp-year" placeholder="YYYY" value="" class="form__input">
+		</span><!-- .card-details__date__year-->
+	</span>
+	<span class="card-details__security">
+		<label for="cvc" class="card-details__label">CSV</label>
+		<span class="card-details__security__csv">
+			<input type="text" name="cvc" id="cvc" autocomplete="off" value="" class="form__input">
+		</span><!-- .card-details__security__csv -->
+	</span><!-- .card-details__security -->
+	<span class="card-details__cards text--right">
+		<img src="assets/images/credit-cards_mastercard.svg" alt="Master Card icon" class="card-details__icon">
+		<img src="assets/images/credit-cards_visa.svg" alt="Visa Card icon" class="card-details__icon">
+		<img src="assets/images/credit-cards_amex.svg" alt="American Express Card icon" class="card-details__icon">
+	</span><!-- .card-details__cards -->
+</div><!-- .credit-card -->
+</div><!-- .example -->
+
+<h2 id="form-groups">Form: Groups</h2>
+<div class="example">
+<div class="form__group">
+	<label class="form__label">First Name</label>
+	<input type="text" class="form__input" placeholder="James" value="">
+</div><!-- .form__group -->
+<div class="form__group">
+	<label class="form__label">Last Name</label>
+	<select class="form__select">
+		<option selected="selected">Washington</option>
+		<option>Lincoln</option>
+		<option>Roosevelt</option>
+	</select><!-- .form__select -->
+</div><!-- .form__group -->
+<div class="form__group">
+	<input id="radio_male" type="radio" name="select_gender" checked>
+	<label for="radio_male" selected>Male</label>
+	<input id="radio_female" type="radio" name="select_gender">
+	<label for="radio_female">Female</label>
+</div><!-- .form__group -->
+<div class="form__group">
+	<button class="button">Save Form</button>
+	<a href="#" class="button button--link">Cancel</a>
+</div><!-- .form__group -->
+</div><!-- .example -->
+
+<h2 id="form-actions">Form: Errors</h2>
+<div class="example">
+<div class="form__errors"><p>Error 400: Could not find payment information</p></div>
+</div><!-- .example -->
+
+<h2 id="form-actions">Form: Actions</h2>
+<div class="example">
+<div class="form__actions">
+	<button class="button button--default button--large">Cancel</button>
+	<button class="button button--primary button--large">Save</button>
+</div><!-- .form__actions -->
+</div><!-- .example -->
+
+<hr>
 
 <h2 id="tables">Tables</h2>
 <p>Tables are the second most common element on ReCharge behind forms.</p>
@@ -113,7 +333,7 @@
 </table><!-- .table -->
 </div><!-- .example -->
 
-<h2 id="responsive-tables">Responsive Tables</h2>
+<h2 id="responsive-tables">Tables: Responsive</h2>
 <p>Mobile-friendly tables are a special beast. The following documents several approaches available, since no perfect solution exists for every situation.</p>
 <p>
 	<strong>Overflow Wrapper</strong><br>
