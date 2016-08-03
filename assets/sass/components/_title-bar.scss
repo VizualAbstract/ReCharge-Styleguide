@@ -19,6 +19,7 @@
 	}
 	&__content {
 		text-align: right;
+		white-space: nowrap;
 	}
 }
 
@@ -43,6 +44,7 @@
 	&__content {
 		text-align: right;
 		font-size: $font-size-base;
+		white-space: nowrap;
 	}
 }
 

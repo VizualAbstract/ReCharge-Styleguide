@@ -2668,14 +2668,15 @@ h1 + .setup-header__description,
 /* line 20, ../sass/components/_title-bar.scss */
 .new .info-bar__content {
   text-align: right;
+  white-space: nowrap;
 }
-/* line 25, ../sass/components/_title-bar.scss */
+/* line 26, ../sass/components/_title-bar.scss */
 .new .title-bar {
   display: table;
   width: 100%;
   min-height: 40px;
 }
-/* line 29, ../sass/components/_title-bar.scss */
+/* line 30, ../sass/components/_title-bar.scss */
 .new .title-bar h1, .new .title-bar .h1,
 .new .title-bar h2, .new .title-bar .h2,
 .new .title-bar h3, .new .title-bar .h3,
@@ -2685,29 +2686,30 @@ h1 + .setup-header__description,
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 38, ../sass/components/_title-bar.scss */
+/* line 39, ../sass/components/_title-bar.scss */
 .new .title-bar__title, .new .title-bar__content {
   display: table-cell;
   vertical-align: top;
 }
-/* line 43, ../sass/components/_title-bar.scss */
+/* line 44, ../sass/components/_title-bar.scss */
 .new .title-bar__content {
   text-align: right;
   font-size: 16px;
+  white-space: nowrap;
 }
-/* line 50, ../sass/components/_title-bar.scss */
+/* line 52, ../sass/components/_title-bar.scss */
 .new .title-info {
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
   font-family: 'ralewayregular', arial, sans-serif;
 }
-/* line 56, ../sass/components/_title-bar.scss */
+/* line 58, ../sass/components/_title-bar.scss */
 .new .title-info a {
   text-decoration: underline;
 }
 @media screen and (max-width: 767px) {
-  /* line 59, ../sass/components/_title-bar.scss */
+  /* line 61, ../sass/components/_title-bar.scss */
   .new .title-info.pull-right, .new .title-info.pull-left {
     float: none !important;
     display: block;
