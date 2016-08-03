@@ -201,14 +201,19 @@ body {
 	}
 }
 
-
 .example {
 	&.overflow-fix {
-	    overflow-x: hidden;
+    overflow-x: hidden;
 	    overflow-y: overlay;
 	}
 }
+
 .admin-tools + .admin-tools,
 .navbar + .navbar {
 	margin-top: 15px !important;
+}
+
+#button-blocks + .example .button + .button {
+	margin-top: 15px !important;
+	display: table !important;
 }

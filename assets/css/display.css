@@ -165,4 +165,8 @@ body {
 .navbar + .navbar {
   margin-top: 15px !important; }
 
+#button-blocks + .example .button + .button {
+  margin-top: 15px !important;
+  display: table !important; }
+
 /*# sourceMappingURL=display.css.map */
