@@ -1,4 +1,9 @@
-// Mixins with weird names to avoid overwrites
+/*
+	6-5-2016:
+		- Change min-width to 65. This is primarily to accomidate numbers.
+		- We may eventually go to a named-class minimum
+
+*/
 
 @mixin dk-pre($property, $value, $prefixes) {
 	@each $prefix in $prefixes {
@@ -42,7 +47,7 @@ $dk-arrow-color: #424242 !default;
 	line-height: $line-height-base;
 
 	width: 100%;
-	min-width: 100px;
+    min-width: 65px;
 	max-width: 100%;
 	margin: 12px 0 20px;
 
