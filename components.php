@@ -248,46 +248,4 @@
 </p>
 </div><!-- .example -->
 
-<hr>
-
-<h2 id="contextual-options">Contextual Options</h2>
-<p>If a radio button is selected, or a checkbox is checked, and a contextual container follows it immediatly, it will be displayed.</p>
-<div class="example">
-<div class="form__group">
-	<input id="radio_1" type="radio" name="radio_group" class="form__radio">
-	<label for="radio_1" class="form__radio__label">Only storeowner is able to cancel subscription</label>
-
-	<input id="radio_2" type="radio" name="radio_group" checked="" class="form__radio">
-	<label for="radio_2" class="form__radio__label">Customer is able to cancel subscription</label>
-	<div class="contextual__input__options">
-		<div class="form__group">
-			<label for="chargers_before_allowed_cancellation">Allow cancellation after</label>
-			<div class="input-group">
-				<select id="chargers_before_allowed_cancellation" name="chargers_before_allowed_cancellation" class="form__select">
-					<option value="1">1</option>
-					<option value="1">2</option>
-					<option value="1">3</option>
-					<option value="1">4</option>
-				</select><!-- #chargers_before_allowed_cancellation -->
-				<div class="input-group__addon">
-					charge(s)
-				</div><!-- .form__input-group__addon -->
-			</div><!-- .input-group -->
-		</div><!-- .form__group -->
-	</div><!-- .contextual__input__options -->
-</div><!-- .form__group -->
-</div><!-- .example -->
-<style>
-	.new .form__radio:checked + .form__radio__label + .contextual__input__options {
-		display: block;
-	}
-	.new .contextual__input__options {
-		background-color: #f3f3f3;
-		padding: 18px 20px 0;
-		margin-left: 24px;
-		margin-top: -7px;
-		display: none;
-	}
-</style>
-
 <?php include('includes/footer.php'); ?>

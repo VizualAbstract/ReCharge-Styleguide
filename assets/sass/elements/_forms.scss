@@ -10,6 +10,7 @@
 		- Remove submit button color on hover
 	8-4-2016
 		- Add textarea class for code blocks
+		- Add contextual blocks for hidden inputs unless they're needed
 */
 .form {
 	.form__label {
@@ -483,6 +484,24 @@ input[type="checkbox"] {
 		padding-left: 0;
 		.button {
 			min-width: 40px;
+		}
+	}
+}
+
+.contextual__input__options {
+	background-color: #f3f3f3;
+	padding: 18px 20px 0;
+	margin-left: 24px;
+	margin-top: -7px;
+	display: none;
+}
+
+.form__checkbox:checked,
+.form__radio:checked {
+	+ .form__checkbox__label,
+	+ .form__radio__label {
+		+ .contextual__input__options {
+			display: block;
 		}
 	}
 }
