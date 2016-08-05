@@ -53,8 +53,8 @@ $line-height-computed: floor(($font-size-base * $line-height-base)) !default;
 $link-color: $primary-color !default;
 $link-hover-color: $secondary-color !default;
 
-$padding-base-horizontal: 15px - 1 !default;
-$padding-base-vertical: $padding-base-horizontal - 8 !default;
+$padding-base-horizontal: 10px !default;
+$padding-base-vertical: $padding-base-horizontal - 3 !default;
 
 $padding-large-horizontal: 20px !default;
 $padding-large-vertical: $padding-large-horizontal - 3 !default;
@@ -96,6 +96,7 @@ $continue-background: #d6d6d6 !default;
 $h1-font-size: 35px !default;
 $h2-font-size: 30px !default;
 $h3-font-size: 24px !default;
+$h4-font-size: 20px !default;
 $h5-font-size: 16px !default;
 
 $screen-xs-max: 767px !default;

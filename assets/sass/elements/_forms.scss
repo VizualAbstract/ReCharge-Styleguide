@@ -8,6 +8,8 @@
 	7-22-2016
 		- Removed color: $white from submit .button
 		- Remove submit button color on hover
+	8-4-2016
+		- Add textarea class for code blocks
 */
 .form {
 	.form__label {
@@ -214,7 +216,7 @@ input[type="text"].button {
 
 textarea.form__input {
 	line-height: $line-height-base;
-	padding: $padding-base-vertical;
+	padding: $padding-base-vertical $padding-base-horizontal;
 
 	border-width: 1px;
 	border-style: solid;
@@ -223,6 +225,14 @@ textarea.form__input {
 	box-sizing: border-box;
 
 	min-height: 100px; // Same height as two inputs stacked together (40 + 20 + 40), for a more uniform look
+}
+
+textarea.form__input__code {
+	@extend .form__input;
+	font-family: 'pt-mono', monospace;
+	font-size: 16px;
+	color: $gray-dark;
+	line-height: 21px;
 }
 
 fieldset {

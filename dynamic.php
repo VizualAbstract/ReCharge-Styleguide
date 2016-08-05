@@ -24,7 +24,8 @@ Popover <span class="popover-button"
 <h2 id="modals">Modals</h2>
 <div class="example">
 <button data-toggle="modal__window" data-target="#modal" class="button">Launch Modal</button>
-<div class="modal fade" id="modal">
+
+<div id="modal__context_feature_action" class="modal fade">
 	<div class="modal__dialog">
 		<div class="modal__content">
 			<button class="modal__close" data-dismiss="modal__window"></button>
@@ -34,11 +35,11 @@ Popover <span class="popover-button"
 			<br>
 			<div class="modal__actions">
 				<button class="button button--block" data-dismiss="modal__window">Dismiss Me</button>
-				<button class="button button--block button--primary" data-dismiss="modal__window">Confirm Me</button>
+				<button id="confirm__context_feature_action" class="button button--block button--primary">Confirm Me</button>
 			</div><!-- .modal__actions -->
 		</div><!-- .modal__content -->
 	</div><!-- .modal__dialog -->
-</div><!-- .modal .fade -->
+</div><!-- #modal__context_feature_action .modal .fade -->
 </div><!-- .example -->
 
 <?php include('includes/footer.php'); ?>

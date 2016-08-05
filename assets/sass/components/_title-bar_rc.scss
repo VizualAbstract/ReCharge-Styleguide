@@ -1,0 +1,50 @@
+/* 
+	Components: Info Bars (Proxy)
+	Version 1.0
+	Date: 8-4-2016
+	Author: Corey M. Capetillo
+	8-3-2016:
+		- Added the old title-info element for organization
+*/
+
+.rc_info-bar {
+	display: table;
+	width: 100%;
+	&__label,
+	&__content {
+		display: table-cell;
+		vertical-align: top;
+	}
+	&__label {
+		text-align: left;
+	}
+	&__content {
+		text-align: right;
+		white-space: nowrap;
+	}
+}
+
+.rc_title-bar {
+	display: table;
+	width: 100%;
+	min-height: 40px;
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5,
+	h6, .h6 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	&__title,
+	&__content {
+		display: table-cell;
+		vertical-align: top;
+	}
+	&__content {
+		text-align: right;
+		font-size: $font-size-base;
+		white-space: nowrap;
+	}
+}

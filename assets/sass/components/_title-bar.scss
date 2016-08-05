@@ -4,7 +4,31 @@
 	Date: 6-26-2016
 	Author: Corey M. Capetillo
 	- Added the old title-info element for organization
+	8-4-2016: 
+		- page-titles added
 */
+
+.page-title {
+	width: 100%;
+	min-height: 40px;
+    margin-top: 23px;
+    margin-bottom: 38px;
+	h1, .h1 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	&__description {
+		display: table;
+		width: 100%;
+	}
+	&__description {
+		font-size: $font-size-base;
+		text-align: left;
+		p {
+			margin: 15px 0;
+		}
+	}
+}
 
 .info-bar {
 	display: table;

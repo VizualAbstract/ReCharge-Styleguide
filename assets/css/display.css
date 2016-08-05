@@ -123,10 +123,6 @@ body.new {
   margin-top: 50px !important;
   font-size: 20px;
   font-family: 'ralewaybold', arial, sans-serif; }
-.new .styleguide__content .example > h3 {
-  font-size: 18px;
-  margin-bottom: 1em;
-  margin-top: 2em; }
 
 /* Pattern library layout */
 html,

@@ -14,11 +14,30 @@
 	</div><!-- .setup-header -->
 </div><!-- .example -->
 
+<h2 id="page-title">Page Title</h2>
+<p>The page title relies on the title-bar to create the header-to-action layout, but now adds the ability to include a description</p>
+<div class="example">
+<div class="page-title">
+	<div class="title-bar">
+		<div class="title-bar__title">
+			<h1>Customer Portal settings</h1>
+		</div><!-- .info-bar__title -->
+		<div class="title-bar__content">
+			<button class="button button--primary">Save</button>
+		</div><!-- .title-bar__content -->
+	</div><!-- .title-bar -->
+	<div class="page-title__description">
+		<p>The Customer Portal is where your customers manage their subscriptions. Set the controls for the  portal so that your customers see only the options that you set.</p>
+	</div><!-- .page-title__description -->
+</div><!-- .page-title -->
+</div><!-- .example -->
+
 <h2 id="title-bar">Title Bar</h2>
 <div class="description">
-	<p>Place a h1 representary class (.h1, .h2, .h3, etc) in the element so it may adopt the correct margin, otherwise, the heading margin will be reset</p>
 	<p>Not much seperates the difference between the <strong>Title Bar</strong> and the <a href="#info-bar">Info Bar</a>. The one notable difference is that the vertical-alignment of the <strong>Title Bar</strong> is set to <em>middle</em>.</p>
+	<p>Place a h1 representary class (.h1, .h2, .h3, etc) in the element so it may adopt the correct margin, otherwise, the heading margin will be reset</p>
 </div><!-- .description -->
+
 <div class="example">
 <div class="title-bar h1">
 	<div class="title-bar__title">
@@ -28,6 +47,7 @@
 		<a href="#">This is a title link</a>
 	</div><!-- .title-bar__content -->
 </div><!-- .title-bar -->
+
 <div class="title-bar h3">
 	<div class="title-bar__title">
 		<h3>This is an H3 title</h3>
@@ -68,6 +88,8 @@
 	</div><!-- .info-bar__content -->
 </div><!-- .info-bar -->
 </div><!-- .example -->
+
+<hr>
 
 <h2 id="dropdowns">Dropdowns</h2>
 <div class="example">
@@ -225,4 +247,52 @@
 	</div><!-- .continue -->
 </p>
 </div><!-- .example -->
+
+<hr>
+
+<h2 id="contextual-options">Contextual Options</h2>
+
+<div class="example">
+<div class="form__group">
+	<div class="contextual">
+		<div class="contextual__input">
+			<input id="radio_1" type="radio" name="radio_group" class="form__radio">
+			<label for="radio_1" class="form__radio__label">Only storeowner is able to cancel subscription</label>
+		</div><!-- .contextual-radio__option -->
+		<div class="contextual__input">
+			<input id="radio_2" type="radio" name="radio_group" checked="" class="form__radio">
+			<label for="radio_2" class="form__radio__label">Customer is able to cancel subscription</label>
+			<div class="contextual__input__options">
+				<div class="form__group">
+					<label for="chargers_before_allowed_cancellation">Allow cancellation after</label>
+					<div class="input-group">
+						<select id="chargers_before_allowed_cancellation" name="chargers_before_allowed_cancellation" class="form__select">
+							<option value="1">1</option>
+							<option value="1">2</option>
+							<option value="1">3</option>
+							<option value="1">4</option>
+						</select><!-- #chargers_before_allowed_cancellation -->
+						<div class="input-group__addon">
+							charge(s)
+						</div><!-- .form__input-group__addon -->
+					</div><!-- .input-group -->
+				</div><!-- .form__group -->
+			</div><!-- .contextual__input__options -->
+		</div><!-- .contextual-radio__option -->
+	</div>
+	<style>
+		.new .contextual__input .form__radio:checked + .form__radio__label + .contextual__input__options {
+			display: block;
+		}
+		.new .contextual__input__options {
+			background-color: #f3f3f3;
+			padding: 18px 20px 0;
+			margin-left: 24px;
+			margin-top: -7px;
+			display: none;
+		}
+	</style>
+</div><!-- .form__group -->
+</div><!-- .example -->
+
 <?php include('includes/footer.php'); ?>

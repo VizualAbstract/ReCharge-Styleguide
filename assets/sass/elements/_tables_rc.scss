@@ -1,0 +1,12 @@
+/* Tables */
+.rc_table {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: top;
+
+	td:last-child {
+		white-space: nowrap;
+		width: 1%;
+	}
+}

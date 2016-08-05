@@ -1,0 +1,236 @@
+/*
+	5-5-2016 - Create this file
+	5-10-2016 - Add .new wrapper and admin_utilities.scss
+	7-14-2016 - Re-organized sass structure of files and group nomiclature
+	8-3-206 - Move #installation-animation to animation.scss and include with style
+			- .Header will now be setup-header and be grouped within components
+*/
+
+/*
+	Common
+	Resets, browser normalization, css utilities. Items that don't fit in any one group, but serve an important purpose
+*/
+
+@import '_mixins.scss';
+@import 'common/_variables.scss';
+// @import 'style/_fonts.scss';
+
+.recharge {
+// .new {
+// 	// _reset.scss is considered a temporary decision, until bh-styles.css and bh-ui.css are removed.
+// 	@import 'common/_reset.scss';
+// 	@import 'common/_normalize.scss';
+	@import 'common/_utilities.scss';
+// }
+
+// .new {
+// 	@import 'style/_typography.scss';
+// 	@import 'style/_colors.scss';
+// 	@import 'style/_animation.scss';
+// }
+
+/*
+	Layouts
+	Bare-bone html elements. Essential to the general look and feel. Class nomiclature follows standard HTML naming conventions, but CSS selectors are used for their improved rendering speed.
+*/
+	// 	@import 'elements/_typography.scss';
+	// 	font-family: 'ralewayregular', arial, sans-serif;
+	// 	font-weight: normal;
+	// 	font-style: normal;
+	// 	-webkit-font-smoothing: antialiased;
+	// 	color: $gray-darker;
+	// 	font-size: $font-size-base;
+		@import 'elements/_tables_rc.scss';
+	// 	@import 'elements/_lists.scss';
+	// 	@import 'elements/_buttons.scss';
+	// 	@import 'elements/_images.scss';
+	// 	@import 'elements/_forms.scss';
+	// 	@import 'elements/_buttons.scss';
+
+/*
+	Layout
+	Structural elements dependant on each other to build out a page. Houses Components.
+*/
+	// .new {
+		@import 'layouts/_grid_rc.scss';
+	// 	@import 'layouts/_header.scss';
+	// 	@import 'layouts/_footer.scss';
+	// 	@import 'layouts/_sidebar.scss';
+	// 	@import 'layouts/_menu.scss';
+	// 	@import 'layouts/_navbar.scss';
+	// 	@import 'layouts/_admin-bar.scss';
+	// }
+
+/*
+	Components
+	Typically made up of Elements, grouped with with a unique class identifier. Serves a specific, but widely-used purpose.
+*/
+	// 	@import 'components/_dropdowns.scss';
+	// 	@import 'components/_switches.scss';
+		@import 'components/_title-bar_rc.scss';
+	// 	@import 'components/_progress-bar.scss';
+	// 	@import 'components/_continue-bar.scss';
+	// 	@import 'components/_admin-utilities.scss';
+	// 	@import 'components/_action-list.scss';
+
+
+/*
+	Dynamic
+	Heavily dependant on javascript to deliver a specific effect.
+*/
+// .new {
+// 	@import 'dynamic/_modals.scss';
+// 	@import 'dynamic/_tooltips.scss';
+// 	@import 'dynamic/_popovers.scss';
+// }
+
+/*
+	Vendors
+	Impoted libraries, generally serving a singular purpose.
+*/
+// .new {
+// 	@import 'vendors/_bootstrap.scss';
+// 	@import 'vendors/_dropkick.scss';
+// }
+/* Temporary fix until we no longer need to use .new {} */
+// .modal__open {
+// 	overflow: hidden;
+// }
+// .modal__backdrop {
+// 	position: fixed;
+// 	top: 0;
+// 	right: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	z-index: $zindex-modal-background;
+// 	background-color: #000;
+// }
+// .modal__backdrop.fade {
+// 	opacity: 0;
+// 	filter: alpha(opacity=0);
+// }
+// .modal__backdrop.in,
+// .modal__backdrop.fade.in {
+// 	opacity: 0.7;
+// 	filter: alpha(opacity=70);
+// }
+
+/*
+	Misc
+	Items that don't fit anywhere else. Usually found in a singular location within the app.
+*/
+// .new {
+// }
+
+// html,
+// body {
+// 	height: 100%;
+// 	background-color: #FFF;
+// }
+// body.new {
+// 	margin: 0;
+// 	padding: 0;
+// }
+// // Copied this out of .new, since it gets prepended to the closing </body> tag, well outside of .new
+// .modal__backdrop {
+// 	position: fixed;
+// 	top: 0;
+// 	right: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	z-index: 40;
+// 	background-color: #000;
+// }
+// .modal__backdrop.fade {
+// 	opacity: 0;
+// 	filter: alpha(opacity=0);
+// }
+// .modal__backdrop.in {
+// 	opacity: 0.7;
+// 	filter: alpha(opacity=70);
+// }
+// .new {
+// 	@import '_variables.scss';
+
+// 	@import 'sass/bootstrap/_mixins.scss';
+// 	@import 'sass/bootstrap/_grid.scss';
+// 	@import 'sass/bootstrap/_modals.scss';
+// 	@import 'sass/bootstrap/_tooltips.scss';
+// 	@import 'sass/bootstrap/_popovers.scss';
+// 	@import 'sass/bootstrap/_navs.scss';
+
+// 	& {
+// 		font-family: 'ralewayregular', arial, sans-serif;
+// 		font-weight: normal;
+// 		font-style: normal;
+// 		-webkit-font-smoothing: antialiased;
+// 		color: $gray-darker;
+// 		font-size: $font-size-base;
+// 	}
+
+// 	@import 'sass/layouts/_grid.scss';
+// 	@import 'sass/layouts/_admin-tools.scss';
+
+// 	@import 'elements/_forms.scss';
+// 	@import 'elements/_buttons.scss';
+// .layout__container{
+// 	box-sizing: border-box;
+// 	&:before {
+// 		display: table;
+// 		content: " ";
+// 	}
+// }
+// .layout {
+// 	@include make-row;
+// 	box-sizing: border-box;
+// }
+// .layout__sidebar {
+// 	box-sizing: border-box;
+// 	@include make-xs-column(12);
+// 	@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+// 		@include make-xs-column(4);
+// 	}
+// 	@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+// 		@include make-xs-column(3);
+// 	}
+// 	@media screen and (min-width: $screen-lg-min) {
+// 		@include make-xs-column(3);
+// 	}
+// 	+ .layout__content {
+// 		padding-top: 8px; // Alignment fix. .nav--sidebar adds 8px of padding to the top of the first link. This will align content with the link text. Might look weird when that first link is set to 'Active'
+// 	}
+// }
+// .layout__content {
+// 	box-sizing: border-box;
+// 	@include make-xs-column(12);
+// 	@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+// 		@include make-xs-column(8);
+// 	}
+// 	@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+// 		@include make-xs-column(9);
+// 	}
+// 	@media screen and (min-width: $screen-lg-min) {
+// 		@include make-xs-column(9);
+// 	}
+// }
+// .layout__full {
+// 	box-sizing: border-box;
+// 	@include make-xs-column(12);
+// }
+
+
+// 	@import 'components/_navbars.scss';
+// 	@import 'components/_dropdowns.scss';
+// 	@import 'components/_progress.scss';
+// 	@import 'components/_continue.scss';
+// 	@import 'components/_switch.scss';
+// 	@import 'components/_installation_animation.scss';
+// 	@import 'components/_info-bar.scss';
+
+// 	@import 'components/_footer.scss';
+// 	@import 'elements/_admin_utilities.scss';
+// 	@import 'pages/signup_questions.scss';
+// 	@import 'sass/common/_utility.scss';
+// }
+
+}

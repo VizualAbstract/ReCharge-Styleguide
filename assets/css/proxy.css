@@ -1,0 +1,247 @@
+/*
+	5-5-2016 - Create this file
+	5-10-2016 - Add .new wrapper and admin_utilities.scss
+	7-14-2016 - Re-organized sass structure of files and group nomiclature
+	8-3-206 - Move #installation-animation to animation.scss and include with style
+			- .Header will now be setup-header and be grouped within components
+*/
+/*
+	Common
+	Resets, browser normalization, css utilities. Items that don't fit in any one group, but serve an important purpose
+*/
+/* Colors */
+.recharge {
+  /*
+  	Layouts
+  	Bare-bone html elements. Essential to the general look and feel. Class nomiclature follows standard HTML naming conventions, but CSS selectors are used for their improved rendering speed.
+  */
+  /* Tables */
+  /*
+  	Layout
+  	Structural elements dependant on each other to build out a page. Houses Components.
+  */
+  /*
+  	Components
+  	Typically made up of Elements, grouped with with a unique class identifier. Serves a specific, but widely-used purpose.
+  */
+  /* 
+  	Components: Info Bars (Proxy)
+  	Version 1.0
+  	Date: 8-4-2016
+  	Author: Corey M. Capetillo
+  	8-3-2016:
+  		- Added the old title-info element for organization
+  */
+  /*
+  	Dynamic
+  	Heavily dependant on javascript to deliver a specific effect.
+  */
+  /*
+  	Vendors
+  	Impoted libraries, generally serving a singular purpose.
+  */
+  /* Temporary fix until we no longer need to use .new {} */
+  /*
+  	Misc
+  	Items that don't fit anywhere else. Usually found in a singular location within the app.
+  */ }
+  .recharge .text--right {
+    text-align: right !important; }
+  .recharge .text--left {
+    text-align: left !important; }
+  .recharge .text--center {
+    text-align: center !important; }
+  .recharge .text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0; }
+  .recharge .clearfix:before, .recharge .clearfix:after {
+    content: " ";
+    display: table; }
+  .recharge .clearfix:after {
+    clear: both; }
+  .recharge .rc_visible_xs {
+    display: none; }
+  @media screen and (max-width: 767px) {
+    .recharge span.rc_visible-xs {
+      display: initial; }
+    .recharge span.rc_visible-xs {
+      display: block; }
+    .recharge th,
+    .recharge td.rc_visible-xs {
+      display: table-cell; }
+    .recharge thead.rc_visible_xs {
+      display: table-header-group; } }
+  .recharge .updates__block {
+    padding-bottom: 2em;
+    border-bottom: 1px solid #EEE;
+    margin-bottom: 2em; }
+    .recharge .updates__block > ul,
+    .recharge .updates__block > ol,
+    .recharge .updates__block hr,
+    .recharge .updates__block p {
+      margin-top: 1em !important;
+      margin-bottom: 1em !important; }
+    .recharge .updates__block code {
+      color: #ec3d10; }
+    .recharge .updates__block ul li,
+    .recharge .updates__block ol li {
+      line-height: 1.61803em;
+      margin-top: 0; }
+  .recharge .rc_table {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: top; }
+    .recharge .rc_table td:last-child {
+      white-space: nowrap;
+      width: 1%; }
+  .recharge .rc_layout__container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px; }
+    .recharge .rc_layout__container:before, .recharge .rc_layout__container:after {
+      content: " ";
+      display: table; }
+    .recharge .rc_layout__container:after {
+      clear: both; }
+    @media (min-width: 768px) {
+      .recharge .rc_layout__container {
+        max-width: 740px; } }
+    @media (min-width: 992px) {
+      .recharge .rc_layout__container {
+        max-width: 960px; } }
+    @media (min-width: 1200px) {
+      .recharge .rc_layout__container {
+        max-width: 1160px; } }
+  .recharge .rc_layout {
+    margin-left: -10px;
+    margin-right: -10px; }
+    .recharge .rc_layout:before, .recharge .rc_layout:after {
+      content: " ";
+      display: table; }
+    .recharge .rc_layout:after {
+      clear: both; }
+  .recharge .rc_layout__container {
+    box-sizing: border-box; }
+    .recharge .rc_layout__container:before {
+      display: table;
+      content: " "; }
+  .recharge .rc_layout {
+    margin-left: -10px;
+    margin-right: -10px;
+    box-sizing: border-box; }
+    .recharge .rc_layout:before, .recharge .rc_layout:after {
+      content: " ";
+      display: table; }
+    .recharge .rc_layout:after {
+      clear: both; }
+  .recharge .rc_layout__sidebar {
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px; }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      .recharge .rc_layout__sidebar {
+        position: relative;
+        float: left;
+        width: 25%;
+        min-height: 1px;
+        padding-left: 10px;
+        padding-right: 10px; } }
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      .recharge .rc_layout__sidebar {
+        position: relative;
+        float: left;
+        width: 25%;
+        min-height: 1px;
+        padding-left: 10px;
+        padding-right: 10px; } }
+    @media screen and (min-width: 1200px) {
+      .recharge .rc_layout__sidebar {
+        position: relative;
+        float: left;
+        width: 25%;
+        min-height: 1px;
+        padding-left: 10px;
+        padding-right: 10px; } }
+    .recharge .rc_layout__sidebar + .rc_layout__content {
+      padding-top: 8px; }
+  .recharge .rc_layout__content {
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px; }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      .recharge .rc_layout__content {
+        position: relative;
+        float: left;
+        width: 66.6666666667%;
+        min-height: 1px;
+        padding-left: 10px;
+        padding-right: 10px; } }
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      .recharge .rc_layout__content {
+        position: relative;
+        float: left;
+        width: 75%;
+        min-height: 1px;
+        padding-left: 10px;
+        padding-right: 10px; } }
+    @media screen and (min-width: 1200px) {
+      .recharge .rc_layout__content {
+        position: relative;
+        float: left;
+        width: 75%;
+        min-height: 1px;
+        padding-left: 10px;
+        padding-right: 10px; } }
+  .recharge .rc_layout__full {
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .recharge .rc_info-bar {
+    display: table;
+    width: 100%; }
+    .recharge .rc_info-bar__label, .recharge .rc_info-bar__content {
+      display: table-cell;
+      vertical-align: top; }
+    .recharge .rc_info-bar__label {
+      text-align: left; }
+    .recharge .rc_info-bar__content {
+      text-align: right;
+      white-space: nowrap; }
+  .recharge .rc_title-bar {
+    display: table;
+    width: 100%;
+    min-height: 40px; }
+    .recharge .rc_title-bar h1, .recharge .rc_title-bar .h1,
+    .recharge .rc_title-bar h2, .recharge .rc_title-bar .h2,
+    .recharge .rc_title-bar h3, .recharge .rc_title-bar .h3,
+    .recharge .rc_title-bar h4, .recharge .rc_title-bar .h4,
+    .recharge .rc_title-bar h5, .recharge .rc_title-bar .h5,
+    .recharge .rc_title-bar h6, .recharge .rc_title-bar .h6 {
+      margin-top: 0;
+      margin-bottom: 0; }
+    .recharge .rc_title-bar__title, .recharge .rc_title-bar__content {
+      display: table-cell;
+      vertical-align: top; }
+    .recharge .rc_title-bar__content {
+      text-align: right;
+      font-size: 16px;
+      white-space: nowrap; }
+
+/*# sourceMappingURL=proxy.css.map */

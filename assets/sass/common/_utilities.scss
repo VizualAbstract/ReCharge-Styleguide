@@ -18,6 +18,25 @@
 	@include clearfix;
 }
 
+.rc_visible_xs {
+	display: none;
+}
+@media screen and (max-width: $screen-xs-max) {
+	span.rc_visible-xs {
+		display: initial;
+	}
+	span.rc_visible-xs {
+		display: block;
+	}
+	th,
+	td.rc_visible-xs {
+		display: table-cell;
+	}
+	thead.rc_visible_xs {
+		display: table-header-group;
+	}
+}
+
 .updates {
 	&__block {
 		padding-bottom: 2em;
