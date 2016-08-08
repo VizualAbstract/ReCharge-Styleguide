@@ -1,75 +1,118 @@
 	
 				</div><!-- .styleguide__content -->
 			</div><!-- .styleguide__page -->
-			<script>
-				function toggleVariable(value) {
-					if (value == 'True') {
-						return 'False';
-					} else {
-						return 'True';
-					}
-				}
-				function activateTrigger(variable, currentURL, value) {
-					var cleanURL = currentURL;
-					// Turn the URL string into an array
-					var urlArray = cleanURL.split('&');
-					// Clean the URL, removing the search string, but replacing it with a ?
-					var location = window.location.toString().replace(window.location.search, "?");
-					// We'll join the completed array into the new url as a string
-					var newURL = '';
-					var hasParameters = false;
-					var parameterFound = false;
-					// Iterate through each parameter and value pair
-					for (var i = 0; i < urlArray.length; i++) {
-						var parameter = urlArray[i];
-						var parameterArray = parameter.split('=');
-						if (urlArray.length > 0 && urlArray[i] != ""){
-							hasParameters = true;
-						}
-						// Split the parameter and value pair
-						for (var z = 0; z < parameterArray.length; z++) {
-							// If the variable we want to update == the current parameter...
-							if (variable == parameterArray[z]){
-								parameterFound = true;
-								// ..toggle the value, from True to False, or False to True
-								parameterArray[1] = toggleVariable(parameterArray[1]);
-								// Re-join the parameter and value in a string
-								var newParameterValue = parameterArray.join('=');
-								// Replace string segment in old array with new string
-								urlArray[i] = newParameterValue;
-							}
-						}
-					}
-					// Re-join the entire URL string
-					newURL = urlArray.join('&');
-					if (parameterFound === true) {
-						// Parameter found. Update and reload page
-						window.location.href = location + newURL;
-					} else {
-						// Parameter not found.
-						if (hasParameters === true) {
-							// If parameters exist, add, with & before
-							window.location.href = location + currentURL + '&' + variable + '=' + toggleVariable(value); // toggle variable trigger manually
-						} else {
-							// If no parameters exist, add, with ? before
-							window.location.href = newURL + '?' + variable + '=' + toggleVariable(value); // toggle variable trigger manually
-						}
-					}
-				}
-
-				$(function(){
-					$('pre button').on('click', function(e) {
-						e.preventDefault();
-						var __this = $(this);
-						var variable = $(this).data('toggle');
-						var value = $(this).text();
-						var currentURL = decodeURIComponent(window.location.search.substring(1));
-						var isVariableUsed = activateTrigger(variable, currentURL, value);
-						// $(this).text(toggleVariable(value));
-					});
-				});
-			</script>
 		</div><!-- .container -->
+		<script>
+			$(function(){
+				$('.form__color').each(function(i){
+					var color = $(this).val();
+					var name = $(this).attr('name');
+					$(this).after('<input type="color" value="' + color + '" name="' + name + '" class="form__color__picker">');
+				});
+				// When someone types a hex code into the text input, try to render an appropriate color. Named colors, hex, rgb, HSL
+				$(document).on('keyup', '.form__color', function() {
+					var color_picker = $(this).attr('id');
+					var color = $(this).val();
+					$('input[name="' + color_picker + '"]').spectrum('set', color);
+				});
+
+				// When someone clicks or focuses on the color input, show the color picker
+				$(document).on('focus, click', '.form__color', function() {
+					var color_picker = $(this).attr('id');
+					$('input[name="' + color_picker + '"]').spectrum('show');
+				});
+
+				// When a person clicks outside of the text input, read the value and try to show the relative hex code
+				$(document).on('blur', '.form__color', function() {
+					var color_picker = $(this).attr('id');
+					var color = $('input[name="' + color_picker + '"]').spectrum('get', color);
+					$(this).val(color);
+				});
+
+				// Initializes the spectrum color picker
+				$('.form__color__picker').spectrum({
+				    showInitial: false,
+				    showInput: false,
+				    checkoutFiresChange: true,
+				    showButtons: false,
+				    showPalette: false,
+				    preferredFormat: "hex",
+				    move: function(color) {
+				    	// When a color is chosen, update the associated text input field
+						var color_picker = $(this).attr('name');
+				        $('#' + color_picker).val(color);
+				    }
+				});
+			});
+		</script>
+		<script>
+			function toggleVariable(value) {
+				if (value == 'True') {
+					return 'False';
+				} else {
+					return 'True';
+				}
+			}
+			function activateTrigger(variable, currentURL, value) {
+				var cleanURL = currentURL;
+				// Turn the URL string into an array
+				var urlArray = cleanURL.split('&');
+				// Clean the URL, removing the search string, but replacing it with a ?
+				var location = window.location.toString().replace(window.location.search, "?");
+				// We'll join the completed array into the new url as a string
+				var newURL = '';
+				var hasParameters = false;
+				var parameterFound = false;
+				// Iterate through each parameter and value pair
+				for (var i = 0; i < urlArray.length; i++) {
+					var parameter = urlArray[i];
+					var parameterArray = parameter.split('=');
+					if (urlArray.length > 0 && urlArray[i] != ""){
+						hasParameters = true;
+					}
+					// Split the parameter and value pair
+					for (var z = 0; z < parameterArray.length; z++) {
+						// If the variable we want to update == the current parameter...
+						if (variable == parameterArray[z]){
+							parameterFound = true;
+							// ..toggle the value, from True to False, or False to True
+							parameterArray[1] = toggleVariable(parameterArray[1]);
+							// Re-join the parameter and value in a string
+							var newParameterValue = parameterArray.join('=');
+							// Replace string segment in old array with new string
+							urlArray[i] = newParameterValue;
+						}
+					}
+				}
+				// Re-join the entire URL string
+				newURL = urlArray.join('&');
+				if (parameterFound === true) {
+					// Parameter found. Update and reload page
+					window.location.href = location + newURL;
+				} else {
+					// Parameter not found.
+					if (hasParameters === true) {
+						// If parameters exist, add, with & before
+						window.location.href = location + currentURL + '&' + variable + '=' + toggleVariable(value); // toggle variable trigger manually
+					} else {
+						// If no parameters exist, add, with ? before
+						window.location.href = newURL + '?' + variable + '=' + toggleVariable(value); // toggle variable trigger manually
+					}
+				}
+			}
+
+			$(function(){
+				$('pre button').on('click', function(e) {
+					e.preventDefault();
+					var __this = $(this);
+					var variable = $(this).data('toggle');
+					var value = $(this).text();
+					var currentURL = decodeURIComponent(window.location.search.substring(1));
+					var isVariableUsed = activateTrigger(variable, currentURL, value);
+					// $(this).text(toggleVariable(value));
+				});
+			});
+		</script>
 		<script>
 			$(function(){
 				// Generate the code samples

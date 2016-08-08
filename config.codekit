@@ -200,10 +200,10 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/vendors.js",
-		"outputAbbreviatedPath": "\/js\/vendors.min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/vendors.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 1,
-		"outputStyle": 1,
+		"outputStyle": 0,
 		"syntaxCheckerStyle": 1
 		},
 	"\/assets\/js\/vendors.min.js": {
@@ -223,6 +223,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/vendors\/dropkick.js",
 		"outputAbbreviatedPath": "\/assets\/js\/vendors\/min\/dropkick-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/assets\/js\/vendors\/min\/spectrum-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/vendors\/min\/spectrum-min.js",
+		"outputAbbreviatedPath": "\/assets\/js\/vendors\/min\/min\/spectrum-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -278,6 +289,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/vendors\/polyfills\/indexof.js",
 		"outputAbbreviatedPath": "\/assets\/js\/vendors\/polyfills\/min\/indexof-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/assets\/js\/vendors\/spectrum.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/js\/vendors\/spectrum.js",
+		"outputAbbreviatedPath": "\/assets\/js\/vendors\/min\/spectrum-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -538,6 +560,15 @@
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 1,
 		"useLibsass": 0
+		},
+	"\/assets\/sass\/css\/_spectrum.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/sass\/css\/_spectrum.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/assets\/sass\/display.scss": {
 		"createSourceMap": 1,
@@ -948,6 +979,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/sass\/vendors\/_dropkick.scss",
 		"outputAbbreviatedPath": "\/assets\/sass\/css\/_dropkick.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"useLibsass": 0
+		},
+	"\/assets\/sass\/vendors\/_spectrum.scss": {
+		"createSourceMap": 1,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/sass\/vendors\/_spectrum.scss",
+		"outputAbbreviatedPath": "\/assets\/sass\/css\/_spectrum.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

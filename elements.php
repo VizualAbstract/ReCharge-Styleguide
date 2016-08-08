@@ -122,6 +122,14 @@
 </select><!-- .form__select -->
 </div><!-- .example -->
 
+<h2 id="inputs-color">Inputs: Color</h2>
+<div class="example">
+<div class="form__group">
+	<input type="text" value="#676767" id="colors_font_color" name="colors_font_color" class="form__color">
+	<!-- <input type="color" value="#676767" name="colors_font_color" class="form__color__picker"> -->
+</div><!-- .form__group -->
+</div><!-- .example -->
+
 <hr>
 
 <h2 id="form-groups">Form: Groups</h2>

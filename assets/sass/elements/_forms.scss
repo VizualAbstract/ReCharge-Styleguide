@@ -11,6 +11,8 @@
 	8-4-2016
 		- Add textarea class for code blocks
 		- Add contextual blocks for hidden inputs unless they're needed
+	8-5-2016
+		- Add color picker. Might need a better way for new input types to adopt the input[type='text'] styles
 */
 .form {
 	.form__label {
@@ -83,7 +85,8 @@ p + .form__group  {
 
 button.form__input,
 input.form__input,
-textarea.form__input {
+textarea.form__input,
+input.form__color {
 	border-style: solid;
 	box-sizing: border-box;
 	outline: 0;
@@ -111,7 +114,8 @@ input.button {
 }
 
 input.form__input,
-textarea.form__input {
+textarea.form__input,
+input.form__color {
 	color: #424242;
 }
 
@@ -141,12 +145,19 @@ select.form__input {
 	display: block;
 }
 
+input[type="text"].form__input,
+select.form__input,
+input[type="email"].form__input,
+input[type="password"].form__input,
+textarea.form__input, {
+	width: 100%;
+}
+
 .form__input,
 .form__placeholder {
 	margin: 12px 0;
 	display: block;
 
-	width: 100%;
 	min-width: 100px;
 	max-width: 100%;
 	color: #424242;
@@ -173,6 +184,7 @@ input[type="text"].form__input,
 input[type="search"].form__input,
 input[type="password"].form__input,
 input[type="date"].form__input,
+input.form__color,
 textarea.form__input {
 	border-width: 1px;
 	border-style: solid;
@@ -203,6 +215,7 @@ textarea.form__input {
 }
 
 textarea.form__input + textarea.form__input,
+input.form__color__picker + input.form__color,
 input[type="text"].form__input + input[type="text"].form__input,
 input[type="email"].form__input + input[type="email"].form__input,
 input[type="password"].form__input + input[type="password"].form__input {
@@ -502,6 +515,22 @@ input[type="checkbox"] {
 	+ .form__radio__label {
 		+ .contextual__input__options {
 			display: block;
+		}
+	}
+}
+
+input[type="text"].form__color {
+	@extend .form__input;
+
+	display: inline;
+	width: 100px;
+}
+
+input[type="color"].form__color {
+	&__picker {
+		+ .sp-replacer {
+			margin: 12px 8px;
+			vertical-align: top;
 		}
 	}
 }

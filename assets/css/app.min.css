@@ -1149,6 +1149,8 @@
   	8-4-2016
   		- Add textarea class for code blocks
   		- Add contextual blocks for hidden inputs unless they're needed
+  	8-5-2016
+  		- Add color picker. Might need a better way for new input types to adopt the input[type='text'] styles
   */
   /* 
   	Element: Buttons
@@ -1820,57 +1822,57 @@ h1 + .setup-header__description,
   max-width: 100%;
   height: auto;
 }
-/* line 16, ../sass/elements/_forms.scss */
+/* line 18, ../sass/elements/_forms.scss */
 .new .form .form__label {
   display: block;
 }
-/* line 20, ../sass/elements/_forms.scss */
+/* line 22, ../sass/elements/_forms.scss */
 .new .form--inline .form__label {
   display: inline;
 }
-/* line 26, ../sass/elements/_forms.scss */
+/* line 28, ../sass/elements/_forms.scss */
 .new .form__errors {
   margin-bottom: 30px;
   position: relative;
   text-align: center;
   color: #EC3D10;
 }
-/* line 31, ../sass/elements/_forms.scss */
+/* line 33, ../sass/elements/_forms.scss */
 .new .form__errors:empty {
   display: none;
 }
-/* line 36, ../sass/elements/_forms.scss */
+/* line 38, ../sass/elements/_forms.scss */
 .new .form__help {
   line-height: 11px;
 }
-/* line 40, ../sass/elements/_forms.scss */
+/* line 42, ../sass/elements/_forms.scss */
 .new .form__group {
   margin-bottom: 30px;
   position: relative;
 }
-/* line 43, ../sass/elements/_forms.scss */
+/* line 45, ../sass/elements/_forms.scss */
 .new .form__group .button {
   margin-top: 10px;
 }
-/* line 46, ../sass/elements/_forms.scss */
+/* line 48, ../sass/elements/_forms.scss */
 .new .form__group p:last-child {
   margin-bottom: -4px;
 }
-/* line 50, ../sass/elements/_forms.scss */
+/* line 52, ../sass/elements/_forms.scss */
 .new p + .form__group {
   margin-top: 18px;
 }
-/* line 55, ../sass/elements/_forms.scss */
+/* line 57, ../sass/elements/_forms.scss */
 .new .form--signup .form__group {
   position: relative;
   margin-bottom: 45px;
 }
 @media screen and (min-width: 768px) {
-  /* line 55, ../sass/elements/_forms.scss */
+  /* line 57, ../sass/elements/_forms.scss */
   .new .form--signup .form__group {
     margin-bottom: 55px;
   }
-  /* line 60, ../sass/elements/_forms.scss */
+  /* line 62, ../sass/elements/_forms.scss */
   .new .form--signup .form__group .form__response {
     position: absolute;
     top: 100%;
@@ -1879,12 +1881,12 @@ h1 + .setup-header__description,
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  /* line 55, ../sass/elements/_forms.scss */
+  /* line 57, ../sass/elements/_forms.scss */
   .new .form--signup .form__group {
     margin-bottom: 65px;
   }
 }
-/* line 73, ../sass/elements/_forms.scss */
+/* line 75, ../sass/elements/_forms.scss */
 .new .form__actions, .new .modal__actions {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1892,29 +1894,31 @@ h1 + .setup-header__description,
   display: flex;
   width: 100%;
 }
-/* line 76, ../sass/elements/_forms.scss */
+/* line 78, ../sass/elements/_forms.scss */
 .new .form__actions .button, .new .modal__actions .button {
   -webkit-box-flex: 100%;
   -webkit-flex: 100%;
       -ms-flex: 100%;
           flex: 100%;
 }
-/* line 78, ../sass/elements/_forms.scss */
+/* line 80, ../sass/elements/_forms.scss */
 .new .form__actions .button + .button, .new .modal__actions .button + .button {
   margin-left: 10px;
 }
-/* line 84, ../sass/elements/_forms.scss */
+/* line 86, ../sass/elements/_forms.scss */
 .new button.form__input,
 .new input.form__input,
+.new input[type="text"].form__color,
 .new textarea.form__input,
-.new textarea.form__input__code {
+.new textarea.form__input__code,
+.new input.form__color {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
   line-height: 1.5625;
   padding: 6px 10px 7px;
 }
-/* line 95, ../sass/elements/_forms.scss */
+/* line 98, ../sass/elements/_forms.scss */
 .new .form input[type="submit"] + input[type="submit"],
 .new .form input[type="submit"] + button,
 .new .form input + input[type="submit"],
@@ -1925,19 +1929,20 @@ h1 + .setup-header__description,
 .new .form input + a {
   margin-left: 15px;
 }
-/* line 107, ../sass/elements/_forms.scss */
+/* line 110, ../sass/elements/_forms.scss */
 .new button.button,
 .new input.button {
   vertical-align: middle;
   height: 40px;
 }
-/* line 113, ../sass/elements/_forms.scss */
-.new input.form__input,
+/* line 116, ../sass/elements/_forms.scss */
+.new input.form__input, .new input[type="text"].form__color,
 .new textarea.form__input,
-.new textarea.form__input__code {
+.new textarea.form__input__code,
+.new input.form__color {
   color: #424242;
 }
-/* line 118, ../sass/elements/_forms.scss */
+/* line 122, ../sass/elements/_forms.scss */
 .new button.button,
 .new input[type="submit"].button {
   -ms-touch-action: manipulation;
@@ -1946,76 +1951,98 @@ h1 + .setup-header__description,
   border-width: 0;
   min-width: 100px;
 }
-/* line 127, ../sass/elements/_forms.scss */
+/* line 131, ../sass/elements/_forms.scss */
 .new button.button:hover, .new button.button:active,
 .new input[type="submit"].button:hover,
 .new input[type="submit"].button:active {
   outline: 0;
 }
-/* line 133, ../sass/elements/_forms.scss */
+/* line 137, ../sass/elements/_forms.scss */
 .new button.button:disabled, .new button.button.disabled,
 .new input[type="submit"].button:disabled,
 .new input[type="submit"].button.disabled {
   background-color: #D8D8D8 !important;
   cursor: default;
 }
-/* line 140, ../sass/elements/_forms.scss */
+/* line 144, ../sass/elements/_forms.scss */
 .new select.form__input {
   display: block;
 }
-/* line 144, ../sass/elements/_forms.scss */
-.new .form__input, .new textarea.form__input__code,
+/* line 148, ../sass/elements/_forms.scss */
+.new input[type="text"].form__input, .new input[type="text"].form__color,
+.new select.form__input,
+.new input[type="email"].form__input,
+.new input[type="email"][type="text"].form__color,
+.new input[type="password"].form__input,
+.new input[type="password"][type="text"].form__color,
+.new textarea.form__input,
+.new textarea.form__input__code {
+  width: 100%;
+}
+/* line 156, ../sass/elements/_forms.scss */
+.new .form__input, .new textarea.form__input__code, .new input[type="text"].form__color,
 .new .form__placeholder {
   margin: 12px 0;
   display: block;
-  width: 100%;
   min-width: 100px;
   max-width: 100%;
   color: #424242;
 }
-/* line 154, ../sass/elements/_forms.scss */
-.new .form__input::-webkit-input-placeholder, .new textarea.form__input__code::-webkit-input-placeholder,
+/* line 165, ../sass/elements/_forms.scss */
+.new .form__input::-webkit-input-placeholder, .new textarea.form__input__code::-webkit-input-placeholder, .new input[type="text"].form__color::-webkit-input-placeholder,
 .new .form__placeholder::-webkit-input-placeholder {
   color: #676767;
 }
-/* line 157, ../sass/elements/_forms.scss */
-.new .form__input:-moz-placeholder, .new textarea.form__input__code:-moz-placeholder,
+/* line 168, ../sass/elements/_forms.scss */
+.new .form__input:-moz-placeholder, .new textarea.form__input__code:-moz-placeholder, .new input[type="text"].form__color:-moz-placeholder,
 .new .form__placeholder:-moz-placeholder {
   color: #676767;
 }
-/* line 160, ../sass/elements/_forms.scss */
-.new .form__input::-moz-placeholder, .new textarea.form__input__code::-moz-placeholder,
+/* line 171, ../sass/elements/_forms.scss */
+.new .form__input::-moz-placeholder, .new textarea.form__input__code::-moz-placeholder, .new input[type="text"].form__color::-moz-placeholder,
 .new .form__placeholder::-moz-placeholder {
   color: #676767;
 }
-/* line 163, ../sass/elements/_forms.scss */
-.new .form__input:-ms-input-placeholder, .new textarea.form__input__code:-ms-input-placeholder,
+/* line 174, ../sass/elements/_forms.scss */
+.new .form__input:-ms-input-placeholder, .new textarea.form__input__code:-ms-input-placeholder, .new input[type="text"].form__color:-ms-input-placeholder,
 .new .form__placeholder:-ms-input-placeholder {
   color: #676767;
 }
-/* line 168, ../sass/elements/_forms.scss */
+/* line 179, ../sass/elements/_forms.scss */
 .new p.form__placeholder {
   margin: 4px 0;
 }
-/* line 172, ../sass/elements/_forms.scss */
-.new input[type="text"].form__input,
+/* line 183, ../sass/elements/_forms.scss */
+.new input[type="text"].form__input, .new input[type="text"].form__color,
 .new input[type="search"].form__input,
+.new input[type="search"][type="text"].form__color,
 .new input[type="password"].form__input,
+.new input[type="password"][type="text"].form__color,
 .new input[type="date"].form__input,
+.new input[type="date"][type="text"].form__color,
+.new input.form__color,
 .new textarea.form__input,
 .new textarea.form__input__code {
   border-width: 1px;
   border-style: solid;
   border-color: #676767;
 }
-/* line 180, ../sass/elements/_forms.scss */
-.new input[type="text"].form__input:focus, .new input[type="text"].form__input.form__input--focus,
+/* line 192, ../sass/elements/_forms.scss */
+.new input[type="text"].form__input:focus, .new input[type="text"].form__color:focus, .new input[type="text"].form__input.form__input--focus, .new input[type="text"].form__input--focus.form__color,
 .new input[type="search"].form__input:focus,
+.new input[type="search"][type="text"].form__color:focus,
 .new input[type="search"].form__input.form__input--focus,
+.new input[type="search"].form__input--focus[type="text"].form__color,
 .new input[type="password"].form__input:focus,
+.new input[type="password"][type="text"].form__color:focus,
 .new input[type="password"].form__input.form__input--focus,
+.new input[type="password"].form__input--focus[type="text"].form__color,
 .new input[type="date"].form__input:focus,
+.new input[type="date"][type="text"].form__color:focus,
 .new input[type="date"].form__input.form__input--focus,
+.new input[type="date"].form__input--focus[type="text"].form__color,
+.new input.form__color:focus,
+.new input.form__color.form__input--focus,
 .new textarea.form__input:focus,
 .new textarea.form__input__code:focus,
 .new textarea.form__input.form__input--focus,
@@ -2024,21 +2051,29 @@ h1 + .setup-header__description,
   outline: none;
   box-shadow: none;
 }
-/* line 186, ../sass/elements/_forms.scss */
-.new input[type="text"].form__input:required, .new input[type="text"].form__input.form__input--invalid,
+/* line 198, ../sass/elements/_forms.scss */
+.new input[type="text"].form__input:required, .new input[type="text"].form__color:required, .new input[type="text"].form__input.form__input--invalid, .new input[type="text"].form__input--invalid.form__color,
 .new input[type="search"].form__input:required,
+.new input[type="search"][type="text"].form__color:required,
 .new input[type="search"].form__input.form__input--invalid,
+.new input[type="search"].form__input--invalid[type="text"].form__color,
 .new input[type="password"].form__input:required,
+.new input[type="password"][type="text"].form__color:required,
 .new input[type="password"].form__input.form__input--invalid,
+.new input[type="password"].form__input--invalid[type="text"].form__color,
 .new input[type="date"].form__input:required,
+.new input[type="date"][type="text"].form__color:required,
 .new input[type="date"].form__input.form__input--invalid,
+.new input[type="date"].form__input--invalid[type="text"].form__color,
+.new input.form__color:required,
+.new input.form__color.form__input--invalid,
 .new textarea.form__input:required,
 .new textarea.form__input__code:required,
 .new textarea.form__input.form__input--invalid,
 .new textarea.form__input--invalid.form__input__code {
   border-color: #EC3D10;
 }
-/* line 192, ../sass/elements/_forms.scss */
+/* line 204, ../sass/elements/_forms.scss */
 .new .form__error {
   color: #EC3D10;
   font-family: 'ralewaysemibold', arial, sans-serif;
@@ -2047,27 +2082,37 @@ h1 + .setup-header__description,
   line-height: 25px;
 }
 @media screen and (min-width: 768px) {
-  /* line 192, ../sass/elements/_forms.scss */
+  /* line 204, ../sass/elements/_forms.scss */
   .new .form__error {
     position: absolute;
     top: 0;
     right: 0;
   }
 }
-/* line 205, ../sass/elements/_forms.scss */
+/* line 217, ../sass/elements/_forms.scss */
 .new textarea.form__input + textarea.form__input, .new textarea.form__input__code + textarea.form__input, .new textarea.form__input + textarea.form__input__code, .new textarea.form__input__code + textarea.form__input__code,
+.new input.form__color__picker + input.form__color,
 .new input[type="text"].form__input + input[type="text"].form__input,
+.new input[type="text"].form__color + input[type="text"].form__input,
+.new input[type="text"].form__input + input[type="text"].form__color,
+.new input[type="text"].form__color + input[type="text"].form__color,
 .new input[type="email"].form__input + input[type="email"].form__input,
-.new input[type="password"].form__input + input[type="password"].form__input {
+.new input[type="email"][type="text"].form__color + input[type="email"].form__input,
+.new input[type="email"].form__input + input[type="email"][type="text"].form__color,
+.new input[type="email"][type="text"].form__color + input[type="email"][type="text"].form__color,
+.new input[type="password"].form__input + input[type="password"].form__input,
+.new input[type="password"][type="text"].form__color + input[type="password"].form__input,
+.new input[type="password"].form__input + input[type="password"][type="text"].form__color,
+.new input[type="password"][type="text"].form__color + input[type="password"][type="text"].form__color {
   margin: 20px 0;
 }
-/* line 212, ../sass/elements/_forms.scss */
+/* line 225, ../sass/elements/_forms.scss */
 .new input[type="text"].button {
   line-height: 1.5625;
   padding: 7px;
   height: 40px;
 }
-/* line 218, ../sass/elements/_forms.scss */
+/* line 231, ../sass/elements/_forms.scss */
 .new textarea.form__input, .new textarea.form__input__code {
   line-height: 1.5625;
   padding: 7px 10px;
@@ -2077,31 +2122,31 @@ h1 + .setup-header__description,
   box-sizing: border-box;
   min-height: 100px;
 }
-/* line 231, ../sass/elements/_forms.scss */
+/* line 244, ../sass/elements/_forms.scss */
 .new textarea.form__input__code {
   font-family: 'pt-mono', monospace;
   font-size: 16px;
   color: #676767;
   line-height: 21px;
 }
-/* line 239, ../sass/elements/_forms.scss */
+/* line 252, ../sass/elements/_forms.scss */
 .new fieldset {
   padding: 0;
   margin: 0;
   border: 0;
   min-width: 0;
 }
-/* line 244, ../sass/elements/_forms.scss */
+/* line 257, ../sass/elements/_forms.scss */
 .new fieldset + fieldset {
   margin-top: 55px;
 }
-/* line 249, ../sass/elements/_forms.scss */
+/* line 262, ../sass/elements/_forms.scss */
 .new h1 + fieldset,
 .new h2 + fieldset,
 .new h3 + fieldset {
   margin-top: 40px;
 }
-/* line 255, ../sass/elements/_forms.scss */
+/* line 268, ../sass/elements/_forms.scss */
 .new legend {
   display: block;
   width: 100%;
@@ -2111,7 +2156,7 @@ h1 + .setup-header__description,
   font-size: 16px;
   margin: 0 0 28px;
 }
-/* line 267, ../sass/elements/_forms.scss */
+/* line 280, ../sass/elements/_forms.scss */
 .new label {
   display: block;
   max-width: 100%;
@@ -2120,22 +2165,22 @@ h1 + .setup-header__description,
   display: block;
   line-height: 25px;
 }
-/* line 278, ../sass/elements/_forms.scss */
+/* line 291, ../sass/elements/_forms.scss */
 .new .form__label + .button {
   margin: 12px 0;
 }
-/* line 283, ../sass/elements/_forms.scss */
+/* line 296, ../sass/elements/_forms.scss */
 .new input[type="radio"],
 .new input[type="checkbox"] {
   display: none;
 }
-/* line 286, ../sass/elements/_forms.scss */
+/* line 299, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label,
 .new input[type="checkbox"] + label {
   cursor: pointer;
   display: block;
 }
-/* line 289, ../sass/elements/_forms.scss */
+/* line 302, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label::before,
 .new input[type="checkbox"] + label::before {
   width: 16px;
@@ -2156,37 +2201,37 @@ h1 + .setup-header__description,
   position: relative;
   top: -2px;
 }
-/* line 313, ../sass/elements/_forms.scss */
+/* line 326, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label::after,
 .new input[type="checkbox"] + label::after {
   display: table;
   content: "";
   margin: 10px 0;
 }
-/* line 323, ../sass/elements/_forms.scss */
+/* line 336, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label::before {
   border-radius: 50%;
 }
-/* line 334, ../sass/elements/_forms.scss */
+/* line 347, ../sass/elements/_forms.scss */
 .new input[type="radio"]:checked + label::before, .new input[type="radio"].form__input--checked + label::before,
 .new input[type="checkbox"]:checked + label::before,
 .new input[type="checkbox"].form__input--checked + label::before {
   content: "\f00c";
   background-color: #767676;
 }
-/* line 343, ../sass/elements/_forms.scss */
+/* line 356, ../sass/elements/_forms.scss */
 .new input[type="radio"]:required + label::before, .new input[type="radio"].form__input--required + label::before,
 .new input[type="checkbox"]:required + label::before,
 .new input[type="checkbox"].form__input--required + label::before {
   border-color: #EC3D10;
 }
-/* line 349, ../sass/elements/_forms.scss */
+/* line 362, ../sass/elements/_forms.scss */
 .new input[type="radio"]:required:checked + label::before, .new input[type="radio"].form__input--required:checked + label::before,
 .new input[type="checkbox"]:required:checked + label::before,
 .new input[type="checkbox"].form__input--required:checked + label::before {
   background-color: #EC3D10;
 }
-/* line 358, ../sass/elements/_forms.scss */
+/* line 371, ../sass/elements/_forms.scss */
 .new input[type="radio"]:disabled + label::before, .new input[type="radio"].form__input--disabled + label::before,
 .new input[type="checkbox"]:disabled + label::before,
 .new input[type="checkbox"].form__input--disabled + label::before {
@@ -2194,44 +2239,44 @@ h1 + .setup-header__description,
   color: #767676;
   text-indent: 3px;
 }
-/* line 367, ../sass/elements/_forms.scss */
+/* line 380, ../sass/elements/_forms.scss */
 .new .card-details {
   width: 100%;
   font-size: 0;
 }
-/* line 370, ../sass/elements/_forms.scss */
-.new .card-details input.form__input {
+/* line 383, ../sass/elements/_forms.scss */
+.new .card-details input.form__input, .new .card-details input[type="text"].form__color {
   min-width: 10px;
   font-size: 16px;
   margin-bottom: 0;
 }
-/* line 375, ../sass/elements/_forms.scss */
+/* line 388, ../sass/elements/_forms.scss */
 .new .card-details__date, .new .card-details__security, .new .card-details__cards {
   display: inline-block;
   vertical-align: middle;
   box-sizing: border-box;
 }
-/* line 382, ../sass/elements/_forms.scss */
+/* line 395, ../sass/elements/_forms.scss */
 .new .card-details__label {
   font-size: 16px;
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 387, ../sass/elements/_forms.scss */
+/* line 400, ../sass/elements/_forms.scss */
 .new .card-details__date {
   width: 30%;
 }
-/* line 389, ../sass/elements/_forms.scss */
+/* line 402, ../sass/elements/_forms.scss */
 .new .card-details__date__month, .new .card-details__date__divider, .new .card-details__date__year {
   font-size: 0;
   display: inline-block !important;
   vertical-align: top;
 }
-/* line 396, ../sass/elements/_forms.scss */
+/* line 409, ../sass/elements/_forms.scss */
 .new .card-details__date__month {
   width: 29.62% !important;
 }
-/* line 399, ../sass/elements/_forms.scss */
+/* line 412, ../sass/elements/_forms.scss */
 .new .card-details__date__divider {
   width: 14.83% !important;
   font-size: 16px;
@@ -2239,16 +2284,16 @@ h1 + .setup-header__description,
   line-height: 40px;
   padding-top: 10px;
 }
-/* line 406, ../sass/elements/_forms.scss */
+/* line 419, ../sass/elements/_forms.scss */
 .new .card-details__date__year {
   width: 55.55% !important;
 }
-/* line 410, ../sass/elements/_forms.scss */
+/* line 423, ../sass/elements/_forms.scss */
 .new .card-details__security {
   width: 15%;
   padding-left: 20px;
 }
-/* line 414, ../sass/elements/_forms.scss */
+/* line 427, ../sass/elements/_forms.scss */
 .new .card-details__cards {
   width: 55%;
   margin-top: 37px;
@@ -2256,7 +2301,7 @@ h1 + .setup-header__description,
   height: 40px;
   line-height: 40px;
 }
-/* line 421, ../sass/elements/_forms.scss */
+/* line 434, ../sass/elements/_forms.scss */
 .new .card-details__icon {
   width: 20%;
   margin-left: 10%;
@@ -2264,26 +2309,26 @@ h1 + .setup-header__description,
   vertical-align: middle;
 }
 @media screen and (min-width: 768px) {
-  /* line 421, ../sass/elements/_forms.scss */
+  /* line 434, ../sass/elements/_forms.scss */
   .new .card-details__icon {
     width: 16.42%;
     margin-left: 20px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 432, ../sass/elements/_forms.scss */
+  /* line 445, ../sass/elements/_forms.scss */
   .new .card-details__date {
     width: 50%;
   }
-  /* line 435, ../sass/elements/_forms.scss */
+  /* line 448, ../sass/elements/_forms.scss */
   .new .card-details__security {
     width: 20%;
   }
-  /* line 438, ../sass/elements/_forms.scss */
+  /* line 451, ../sass/elements/_forms.scss */
   .new .card-details__cards {
     width: 30%;
   }
-  /* line 441, ../sass/elements/_forms.scss */
+  /* line 454, ../sass/elements/_forms.scss */
   .new .card-details .form__error {
     position: absolute;
     right: 0;
@@ -2291,52 +2336,52 @@ h1 + .setup-header__description,
     bottom: -30px;
   }
 }
-/* line 450, ../sass/elements/_forms.scss */
+/* line 463, ../sass/elements/_forms.scss */
 .new .input-group {
   display: table;
   border-collapse: separate;
   box-sizing: border-box;
 }
-/* line 454, ../sass/elements/_forms.scss */
-.new .input-group .form__input, .new .input-group textarea.form__input__code, .new .input-group__addon {
+/* line 467, ../sass/elements/_forms.scss */
+.new .input-group .form__input, .new .input-group textarea.form__input__code, .new .input-group input[type="text"].form__color, .new .input-group__addon {
   display: table-cell;
   box-sizing: border-box;
 }
-/* line 459, ../sass/elements/_forms.scss */
+/* line 472, ../sass/elements/_forms.scss */
 .new .input-group__addon {
   padding-left: 15px;
 }
-/* line 461, ../sass/elements/_forms.scss */
+/* line 474, ../sass/elements/_forms.scss */
 .new .input-group__addon:first-child {
   padding-left: 0;
   padding-right: 15px;
 }
-/* line 465, ../sass/elements/_forms.scss */
+/* line 478, ../sass/elements/_forms.scss */
 .new .input-group__addon .button {
   margin-top: 11px;
   margin-bottom: 13px;
 }
-/* line 472, ../sass/elements/_forms.scss */
+/* line 485, ../sass/elements/_forms.scss */
 .new .input-group--full {
   width: 100%;
 }
-/* line 474, ../sass/elements/_forms.scss */
-.new .input-group--full .form__input, .new .input-group--full textarea.form__input__code {
+/* line 487, ../sass/elements/_forms.scss */
+.new .input-group--full .form__input, .new .input-group--full textarea.form__input__code, .new .input-group--full input[type="text"].form__color {
   width: 100%;
 }
-/* line 477, ../sass/elements/_forms.scss */
+/* line 490, ../sass/elements/_forms.scss */
 .new .input-group--full .input-group__addon {
   width: 1%;
 }
-/* line 483, ../sass/elements/_forms.scss */
+/* line 496, ../sass/elements/_forms.scss */
 .new .form__search .input-group__addon {
   padding-left: 0;
 }
-/* line 485, ../sass/elements/_forms.scss */
+/* line 498, ../sass/elements/_forms.scss */
 .new .form__search .input-group__addon .button {
   min-width: 40px;
 }
-/* line 491, ../sass/elements/_forms.scss */
+/* line 504, ../sass/elements/_forms.scss */
 .new .contextual__input__options {
   background-color: #f3f3f3;
   padding: 18px 20px 0;
@@ -2344,12 +2389,22 @@ h1 + .setup-header__description,
   margin-top: -7px;
   display: none;
 }
-/* line 503, ../sass/elements/_forms.scss */
+/* line 516, ../sass/elements/_forms.scss */
 .new .form__checkbox:checked + .form__checkbox__label + .contextual__input__options,
 .new .form__checkbox:checked + .form__radio__label + .contextual__input__options,
 .new .form__radio:checked + .form__checkbox__label + .contextual__input__options,
 .new .form__radio:checked + .form__radio__label + .contextual__input__options {
   display: block;
+}
+/* line 522, ../sass/elements/_forms.scss */
+.new input[type="text"].form__color {
+  display: inline;
+  width: 100px;
+}
+/* line 531, ../sass/elements/_forms.scss */
+.new input[type="color"].form__color__picker + .sp-replacer {
+  margin: 12px 8px;
+  vertical-align: top;
 }
 /* line 12, ../sass/elements/_buttons.scss */
 .new .button {
@@ -5084,6 +5139,34 @@ h1 + .setup-header__description,
   		- We may eventually go to a named-class minimum
   
   */
+  /***
+  Spectrum Colorpicker v1.8.0
+  https://github.com/bgrins/spectrum
+  Author: Brian Grinstead
+  License: MIT
+  ***/
+  /* Fix for * { box-sizing: border-box; } */
+  /* http://ansciath.tumblr.com/post/7347495869/css-aspect-ratio */
+  /* Don't allow text selection */
+  /* Gradients for hue, saturation and value instead of images.  Not pretty... but it works */
+  /* IE filters do not support multiple color stops.
+  Generate 6 divs, line them up, and do two color gradients for each.
+  Yes, really.
+  */
+  /* Clearfix hack */
+  /* Mobile devices, make hue slider bigger so it is easier to slide */
+  /*
+  Theme authors:
+  Here are the basic themeable display options (colors, fonts, global widths).
+  See http://bgrins.github.io/spectrum/themes/ for instructions.
+  */
+  /* Input */
+  /* Palettes */
+  /* Initial */
+  /* Buttons */
+  /* Replacer (the little preview div that shows up instead of the <input>) */
+  /* Buttons: http://hellohappy.org/css3-buttons/ */
+  /* Temporary styles to fix color picker to Devon's style request */
 }
 /* line 6, ../sass/vendors/_bootstrap.scss */
 .new .modal__open {
@@ -5578,14 +5661,630 @@ h1 + .setup-header__description,
 .new select[data-dkcacheid] {
   display: none;
 }
+/* line 8, ../sass/vendors/_spectrum.scss */
+.new .sp-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  /* https://github.com/bgrins/spectrum/issues/40 */
+  z-index: 9999994;
+  overflow: hidden;
+}
+/* line 20, ../sass/vendors/_spectrum.scss */
+.new .sp-container.sp-flat {
+  position: relative;
+}
+/* line 25, ../sass/vendors/_spectrum.scss */
+.new .sp-container,
+.new .sp-container * {
+  box-sizing: content-box;
+}
+/* line 31, ../sass/vendors/_spectrum.scss */
+.new .sp-top {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+/* line 37, ../sass/vendors/_spectrum.scss */
+.new .sp-top-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+/* line 45, ../sass/vendors/_spectrum.scss */
+.new .sp-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 20%;
+}
+/* line 53, ../sass/vendors/_spectrum.scss */
+.new .sp-hue {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 84%;
+  height: 100%;
+}
+/* line 62, ../sass/vendors/_spectrum.scss */
+.new .sp-clear-enabled .sp-hue {
+  top: 33px;
+  height: 77.5%;
+}
+/* line 67, ../sass/vendors/_spectrum.scss */
+.new .sp-fill {
+  padding-top: 80%;
+}
+/* line 71, ../sass/vendors/_spectrum.scss */
+.new .sp-sat, .new .sp-val {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/* line 79, ../sass/vendors/_spectrum.scss */
+.new .sp-alpha-enabled .sp-top {
+  margin-bottom: 18px;
+}
+/* line 83, ../sass/vendors/_spectrum.scss */
+.new .sp-alpha-enabled .sp-alpha {
+  display: block;
+}
+/* line 87, ../sass/vendors/_spectrum.scss */
+.new .sp-alpha-handle {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  width: 6px;
+  left: 50%;
+  cursor: pointer;
+  border: 1px solid black;
+  background: white;
+  opacity: .8;
+}
+/* line 99, ../sass/vendors/_spectrum.scss */
+.new .sp-alpha {
+  display: none;
+  position: absolute;
+  bottom: -14px;
+  right: 0;
+  left: 0;
+  height: 8px;
+}
+/* line 108, ../sass/vendors/_spectrum.scss */
+.new .sp-alpha-inner {
+  border: solid 1px #333;
+}
+/* line 112, ../sass/vendors/_spectrum.scss */
+.new .sp-clear {
+  display: none;
+}
+/* line 116, ../sass/vendors/_spectrum.scss */
+.new .sp-clear.sp-clear-display {
+  background-position: center;
+}
+/* line 120, ../sass/vendors/_spectrum.scss */
+.new .sp-clear-enabled .sp-clear {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  left: 84%;
+  height: 28px;
+}
+/* line 131, ../sass/vendors/_spectrum.scss */
+.new .sp-container,
+.new .sp-replacer,
+.new .sp-preview,
+.new .sp-dragger,
+.new .sp-slider,
+.new .sp-alpha,
+.new .sp-clear,
+.new .sp-alpha-handle,
+.new .sp-container.sp-dragging .sp-input,
+.new .sp-container button {
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
+/* line 147, ../sass/vendors/_spectrum.scss */
+.new .sp-container.sp-input-disabled .sp-input-container {
+  display: none;
+}
+/* line 151, ../sass/vendors/_spectrum.scss */
+.new .sp-container.sp-buttons-disabled .sp-button-container {
+  display: none;
+}
+/* line 155, ../sass/vendors/_spectrum.scss */
+.new .sp-container.sp-palette-buttons-disabled .sp-palette-button-container {
+  display: none;
+}
+/* line 159, ../sass/vendors/_spectrum.scss */
+.new .sp-palette-only .sp-picker-container {
+  display: none;
+}
+/* line 163, ../sass/vendors/_spectrum.scss */
+.new .sp-palette-disabled .sp-palette-container {
+  display: none;
+}
+/* line 167, ../sass/vendors/_spectrum.scss */
+.new .sp-initial-disabled .sp-initial {
+  display: none;
+}
+/* line 172, ../sass/vendors/_spectrum.scss */
+.new .sp-sat {
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#FFF), to(rgba(204, 154, 129, 0)));
+  background-image: -webkit-linear-gradient(left, #FFF, rgba(204, 154, 129, 0));
+  background-image: -webkit-linear-gradient(left, #fff, rgba(204, 154, 129, 0));
+  background-image: linear-gradient(to right, #fff, rgba(204, 154, 129, 0));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr=#FFFFFFFF, endColorstr=#00CC9A81)";
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr='#FFFFFFFF', endColorstr='#00CC9A81');
+}
+/* line 183, ../sass/vendors/_spectrum.scss */
+.new .sp-val {
+  background-image: -webkit-gradient(linear, 0 100%, 0 0, from(#000000), to(rgba(204, 154, 129, 0)));
+  background-image: -webkit-linear-gradient(bottom, #000000, rgba(204, 154, 129, 0));
+  background-image: -webkit-linear-gradient(bottom, #000, rgba(204, 154, 129, 0));
+  background-image: linear-gradient(to top, #000, rgba(204, 154, 129, 0));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00CC9A81, endColorstr=#FF000000)";
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00CC9A81', endColorstr='#FF000000');
+}
+/* line 194, ../sass/vendors/_spectrum.scss */
+.new .sp-hue {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff0000), color-stop(0.17, #ffff00), color-stop(0.33, #00ff00), color-stop(0.5, #00ffff), color-stop(0.67, #0000ff), color-stop(0.83, #ff00ff), to(#ff0000));
+  background: -webkit-linear-gradient(top, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);
+  background: linear-gradient(to bottom, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);
+}
+/* line 207, ../sass/vendors/_spectrum.scss */
+.new .sp-1 {
+  height: 17%;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0000', endColorstr='#ffff00');
+}
+/* line 212, ../sass/vendors/_spectrum.scss */
+.new .sp-2 {
+  height: 16%;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff00', endColorstr='#00ff00');
+}
+/* line 217, ../sass/vendors/_spectrum.scss */
+.new .sp-3 {
+  height: 17%;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ff00', endColorstr='#00ffff');
+}
+/* line 222, ../sass/vendors/_spectrum.scss */
+.new .sp-4 {
+  height: 17%;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffff', endColorstr='#0000ff');
+}
+/* line 227, ../sass/vendors/_spectrum.scss */
+.new .sp-5 {
+  height: 16%;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0000ff', endColorstr='#ff00ff');
+}
+/* line 232, ../sass/vendors/_spectrum.scss */
+.new .sp-6 {
+  height: 17%;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00ff', endColorstr='#ff0000');
+}
+/* line 237, ../sass/vendors/_spectrum.scss */
+.new .sp-hidden {
+  display: none !important;
+}
+/* line 242, ../sass/vendors/_spectrum.scss */
+.new .sp-cf:before,
+.new .sp-cf:after {
+  content: "";
+  display: table;
+}
+/* line 248, ../sass/vendors/_spectrum.scss */
+.new .sp-cf:after {
+  clear: both;
+}
+/* line 252, ../sass/vendors/_spectrum.scss */
+.new .sp-cf {
+  *zoom: 1;
+}
+@media (max-device-width: 480px) {
+  /* line 258, ../sass/vendors/_spectrum.scss */
+  .new .sp-color {
+    right: 40%;
+  }
+  /* line 261, ../sass/vendors/_spectrum.scss */
+  .new .sp-hue {
+    left: 63%;
+  }
+  /* line 264, ../sass/vendors/_spectrum.scss */
+  .new .sp-fill {
+    padding-top: 60%;
+  }
+}
+/* line 269, ../sass/vendors/_spectrum.scss */
+.new .sp-dragger {
+  border-radius: 5px;
+  height: 5px;
+  width: 5px;
+  border: 1px solid #fff;
+  background: #000;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 281, ../sass/vendors/_spectrum.scss */
+.new .sp-slider {
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  height: 6px;
+  left: 0px;
+  right: 0px;
+  opacity: 1;
+  margin-top: 2px;
+  border: 1px solid #676767;
+  background: #FFF;
+  border-radius: 0;
+  box-shadow: inset -1px -1px 1px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+/* line 303, ../sass/vendors/_spectrum.scss */
+.new .sp-container {
+  border-radius: 0;
+  background-color: #ECECEC;
+  border: solid 1px #f0c49B;
+  padding: 0;
+}
+/* line 310, ../sass/vendors/_spectrum.scss */
+.new .sp-container,
+.new .sp-container button,
+.new .sp-container input,
+.new .sp-color,
+.new .sp-hue,
+.new .sp-clear {
+  font: normal 12px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+/* line 320, ../sass/vendors/_spectrum.scss */
+.new .sp-top {
+  margin-bottom: 3px;
+}
+/* line 325, ../sass/vendors/_spectrum.scss */
+.new .sp-input-container {
+  float: right;
+  width: 100px;
+  margin-bottom: 4px;
+}
+/* line 331, ../sass/vendors/_spectrum.scss */
+.new .sp-initial-disabled .sp-input-container {
+  width: 100%;
+}
+/* line 335, ../sass/vendors/_spectrum.scss */
+.new .sp-input {
+  font-size: 12px !important;
+  border: 1px inset;
+  padding: 4px 5px;
+  margin: 0;
+  width: 100%;
+  background: transparent;
+  border-radius: 3px;
+  color: #222;
+}
+/* line 346, ../sass/vendors/_spectrum.scss */
+.new .sp-input:focus {
+  border: 1px solid orange;
+}
+/* line 350, ../sass/vendors/_spectrum.scss */
+.new .sp-input.sp-validation-error {
+  border: 1px solid red;
+  background: #fdd;
+}
+/* line 355, ../sass/vendors/_spectrum.scss */
+.new .sp-picker-container, .new .sp-palette-container {
+  float: left;
+  position: relative;
+  padding: 10px;
+  padding-bottom: 300px;
+  margin-bottom: -290px;
+}
+/* line 363, ../sass/vendors/_spectrum.scss */
+.new .sp-picker-container {
+  width: 172px;
+  border-left: solid 1px #fff;
+}
+/* line 369, ../sass/vendors/_spectrum.scss */
+.new .sp-palette-container {
+  border-right: solid 1px #ccc;
+}
+/* line 373, ../sass/vendors/_spectrum.scss */
+.new .sp-palette-only .sp-palette-container {
+  border: 0;
+}
+/* line 377, ../sass/vendors/_spectrum.scss */
+.new .sp-palette .sp-thumb-el {
+  display: block;
+  position: relative;
+  float: left;
+  width: 24px;
+  height: 15px;
+  margin: 3px;
+  cursor: pointer;
+  border: solid 2px transparent;
+}
+/* line 388, ../sass/vendors/_spectrum.scss */
+.new .sp-palette .sp-thumb-el:hover, .new .sp-palette .sp-thumb-el.sp-thumb-active {
+  border-color: orange;
+}
+/* line 392, ../sass/vendors/_spectrum.scss */
+.new .sp-thumb-el {
+  position: relative;
+}
+/* line 397, ../sass/vendors/_spectrum.scss */
+.new .sp-initial {
+  float: left;
+  border: solid 1px #333;
+}
+/* line 402, ../sass/vendors/_spectrum.scss */
+.new .sp-initial span {
+  width: 30px;
+  height: 25px;
+  border: none;
+  display: block;
+  float: left;
+  margin: 0;
+}
+/* line 411, ../sass/vendors/_spectrum.scss */
+.new .sp-initial .sp-clear-display {
+  background-position: center;
+}
+/* line 416, ../sass/vendors/_spectrum.scss */
+.new .sp-palette-button-container,
+.new .sp-button-container {
+  float: right;
+}
+/* line 422, ../sass/vendors/_spectrum.scss */
+.new .sp-replacer {
+  margin: 0;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 4px;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  border: solid 1px #91765d;
+  background: #eee;
+  color: #333;
+  vertical-align: middle;
+}
+/* line 436, ../sass/vendors/_spectrum.scss */
+.new .sp-replacer:hover, .new .sp-replacer.sp-active {
+  border-color: #F0C49B;
+  color: #111;
+}
+/* line 441, ../sass/vendors/_spectrum.scss */
+.new .sp-replacer.sp-disabled {
+  cursor: default;
+  border-color: silver;
+  color: silver;
+}
+/* line 447, ../sass/vendors/_spectrum.scss */
+.new .sp-dd {
+  padding: 2px 0;
+  height: 16px;
+  line-height: 16px;
+  float: left;
+  font-size: 10px;
+}
+/* line 455, ../sass/vendors/_spectrum.scss */
+.new .sp-preview {
+  position: relative;
+  width: 25px;
+  height: 20px;
+  border: solid 1px #222;
+  margin-right: 5px;
+  float: left;
+  z-index: 0;
+}
+/* line 465, ../sass/vendors/_spectrum.scss */
+.new .sp-palette {
+  *width: 220px;
+  max-width: 220px;
+}
+/* line 470, ../sass/vendors/_spectrum.scss */
+.new .sp-palette .sp-thumb-el {
+  width: 16px;
+  height: 16px;
+  margin: 2px 1px;
+  border: solid 1px #d0d0d0;
+}
+/* line 477, ../sass/vendors/_spectrum.scss */
+.new .sp-container {
+  padding-bottom: 0;
+}
+/* line 482, ../sass/vendors/_spectrum.scss */
+.new .sp-container button {
+  background-color: #eeeeee;
+  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: linear-gradient(to bottom, #eeeeee, #cccccc);
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
+  border-radius: 3px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1;
+  padding: 5px 4px;
+  text-align: center;
+  text-shadow: 0 1px 0 #eee;
+  vertical-align: middle;
+}
+/* line 497, ../sass/vendors/_spectrum.scss */
+.new .sp-container button:hover {
+  background-color: #dddddd;
+  background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
+  background-image: linear-gradient(to bottom, #dddddd, #bbbbbb);
+  border: 1px solid #bbb;
+  border-bottom: 1px solid #999;
+  cursor: pointer;
+  text-shadow: 0 1px 0 #ddd;
+}
+/* line 506, ../sass/vendors/_spectrum.scss */
+.new .sp-container button:active {
+  border: 1px solid #aaa;
+  border-bottom: 1px solid #888;
+  box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+}
+/* line 512, ../sass/vendors/_spectrum.scss */
+.new .sp-cancel {
+  font-size: 11px;
+  color: #d93f3f !important;
+  margin: 0;
+  padding: 2px;
+  margin-right: 5px;
+  vertical-align: middle;
+  text-decoration: none;
+}
+/* line 522, ../sass/vendors/_spectrum.scss */
+.new .sp-cancel:hover {
+  color: #d93f3f !important;
+  text-decoration: underline;
+}
+/* line 527, ../sass/vendors/_spectrum.scss */
+.new .sp-palette span:hover,
+.new .sp-palette span.sp-thumb-active {
+  border-color: #000;
+}
+/* line 532, ../sass/vendors/_spectrum.scss */
+.new .sp-preview,
+.new .sp-alpha,
+.new .sp-thumb-el {
+  position: relative;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAIAAADZF8uwAAAAGUlEQVQYV2M4gwH+YwCGIasIUwhT25BVBADtzYNYrHvv4gAAAABJRU5ErkJggg==);
+}
+/* line 538, ../sass/vendors/_spectrum.scss */
+.new .sp-preview-inner,
+.new .sp-alpha-inner,
+.new .sp-thumb-inner {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+/* line 549, ../sass/vendors/_spectrum.scss */
+.new .sp-palette .sp-thumb-inner {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+/* line 554, ../sass/vendors/_spectrum.scss */
+.new .sp-palette .sp-thumb-light.sp-thumb-active .sp-thumb-inner {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIVJREFUeNpiYBhsgJFMffxAXABlN5JruT4Q3wfi/0DsT64h8UD8HmpIPCWG/KemIfOJCUB+Aoacx6EGBZyHBqI+WsDCwuQ9mhxeg2A210Ntfo8klk9sOMijaURm7yc1UP2RNCMbKE9ODK1HM6iegYLkfx8pligC9lCD7KmRof0ZhjQACDAAceovrtpVBRkAAAAASUVORK5CYII=);
+}
+/* line 558, ../sass/vendors/_spectrum.scss */
+.new .sp-palette .sp-thumb-dark.sp-thumb-active .sp-thumb-inner {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAMdJREFUOE+tkgsNwzAMRMugEAahEAahEAZhEAqlEAZhEAohEAYh81X2dIm8fKpEspLGvudPOsUYpxE2BIJCroJmEW9qJ+MKaBFhEMNabSy9oIcIPwrB+afvAUFoK4H0tMaQ3XtlrggDhOVVMuT4E5MMG0FBbCEYzjYT7OxLEvIHQLY2zWwQ3D+9luyOQTfKDiFD3iUIfPk8VqrKjgAiSfGFPecrg6HN6m/iBcwiDAo7WiBeawa+Kwh7tZoSCGLMqwlSAzVDhoK+6vH4G0P5wdkAAAAASUVORK5CYII=);
+}
+/* line 562, ../sass/vendors/_spectrum.scss */
+.new .sp-clear-display {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(data:image/gif;base64,R0lGODlhFAAUAPcAAAAAAJmZmZ2dnZ6enqKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq/Hx8fLy8vT09PX19ff39/j4+Pn5+fr6+vv7+wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAP8ALAAAAAAUABQAAAihAP9FoPCvoMGDBy08+EdhQAIJCCMybCDAAYUEARBAlFiQQoMABQhKUJBxY0SPICEYHBnggEmDKAuoPMjS5cGYMxHW3IiT478JJA8M/CjTZ0GgLRekNGpwAsYABHIypcAgQMsITDtWJYBR6NSqMico9cqR6tKfY7GeBCuVwlipDNmefAtTrkSzB1RaIAoXodsABiZAEFB06gIBWC1mLVgBa0AAOw==);
+}
+/* line 569, ../sass/vendors/_spectrum.scss */
+.new .sp-dd {
+  display: none;
+}
+/* line 573, ../sass/vendors/_spectrum.scss */
+.new .sp-replacer.sp-light {
+  padding: 0;
+  width: 39px;
+  height: 39px;
+  box-sizing: border-box;
+  border-width: 0;
+  border: 1px solid #424242;
+  position: relative;
+}
+/* line 583, ../sass/vendors/_spectrum.scss */
+.new .sp-preview {
+  margin: 0;
+  margin-right: 0;
+  width: 100%;
+  height: 100%;
+  float: none;
+}
+/* line 591, ../sass/vendors/_spectrum.scss */
+.new .sp-preview-inner {
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+}
+/* line 597, ../sass/vendors/_spectrum.scss */
+.new .sp-preview {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: none;
+}
+/* line 607, ../sass/vendors/_spectrum.scss */
+.new .sp-replacer:hover,
+.new .sp-replacer.sp-active {
+  border-color: #424242;
+}
+/* line 612, ../sass/vendors/_spectrum.scss */
+.new .sp-container {
+  border-color: #424242;
+  border-width: 0;
+  height: 158px;
+  overflow: visible;
+}
+/* line 619, ../sass/vendors/_spectrum.scss */
+.new .sp-picker-container {
+  height: 158px;
+  padding-bottom: 0;
+}
+/* line 624, ../sass/vendors/_spectrum.scss */
+.new .sp-container:before {
+  content: "";
+  display: block;
+  border-width: 11px;
+  border-right-color: #ecebec;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 30000;
+  border-style: solid;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+  margin-left: -22px;
+  visibility: visible;
+  margin-top: -11px;
+}
+/* line 644, ../sass/vendors/_spectrum.scss */
+.new .sp-picker-container {
+  border-width: 0;
+}
 
 /* Temporary fix until we no longer need to use .new {} */
-/* line 98, ../sass/app.scss */
+/* line 99, ../sass/app.scss */
 .modal__open {
   overflow: hidden;
 }
 
-/* line 101, ../sass/app.scss */
+/* line 102, ../sass/app.scss */
 .modal__backdrop {
   position: fixed;
   top: 0;
@@ -5596,13 +6295,13 @@ h1 + .setup-header__description,
   background-color: #000;
 }
 
-/* line 110, ../sass/app.scss */
+/* line 111, ../sass/app.scss */
 .modal__backdrop.fade {
   opacity: 0;
   filter: alpha(opacity=0);
 }
 
-/* line 114, ../sass/app.scss */
+/* line 115, ../sass/app.scss */
 .modal__backdrop.in,
 .modal__backdrop.fade.in {
   opacity: 0.7;
