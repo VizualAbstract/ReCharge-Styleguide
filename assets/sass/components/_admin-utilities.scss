@@ -8,6 +8,7 @@
 	8-9-16:
 		- Admin Tools will also color radio and checkbox inputs using the same shade of blue
 		- No longer use the double-colon for :before or :after. Incompatible with all browsers
+		- Add specific label classes to radio and checkbox admin classes
 */
 .admin-recharge,
 .admin-shopify,
@@ -57,13 +58,15 @@
 		}
 		.form__radio,
 		.form__checkbox {
-			+ label {
+			+ .form__radio__label,
+			+ .form__checkbox__label {
 				&:before {
 					border-color: #53BAD3;
 				}
 			}
 			&:checked {
-				+ label {
+				+ .form__radio__label,
+				+ .form__checkbox__label {
 					&:before {
 						background-color: #53BAD3;
 					}

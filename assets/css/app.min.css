@@ -2734,6 +2734,7 @@ h1 + .setup-header__description,
   	8-9-16:
   		- Admin Tools will also color radio and checkbox inputs using the same shade of blue
   		- No longer use the double-colon for :before or :after. Incompatible with all browsers
+  		- Add specific label classes to radio and checkbox admin classes
   */
 }
 /* line 15, ../sass/components/_dropdowns.scss */
@@ -3182,13 +3183,13 @@ h1 + .setup-header__description,
   border-color: #2bac8f;
   border-left-color: transparent;
 }
-/* line 12, ../sass/components/_admin-utilities.scss */
+/* line 13, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge,
 .new .admin-shopify,
 .new .admin-bigcommerce {
   position: relative;
 }
-/* line 18, ../sass/components/_admin-utilities.scss */
+/* line 19, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge:after,
 .new .admin-shopify:after,
 .new .admin-bigcommerce:after {
@@ -3196,87 +3197,91 @@ h1 + .setup-header__description,
   padding-left: 5px;
   font-weight: 500;
 }
-/* line 26, ../sass/components/_admin-utilities.scss */
+/* line 27, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge:after {
   color: #FBA200;
   content: "\f005";
 }
-/* line 32, ../sass/components/_admin-utilities.scss */
+/* line 33, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group {
   color: #53BAD3;
 }
-/* line 34, ../sass/components/_admin-utilities.scss */
+/* line 35, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group:after {
   content: "";
   display: none;
 }
-/* line 38, ../sass/components/_admin-utilities.scss */
+/* line 39, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input, .new .admin-recharge.form__group textarea.form__input__code, .new .admin-recharge.form__group input[type="text"].form__color,
 .new .admin-recharge.form__group .form__input__code {
   color: #53BAD3;
   border: 1px solid #53BAD3;
 }
-/* line 42, ../sass/components/_admin-utilities.scss */
+/* line 43, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input:focus, .new .admin-recharge.form__group textarea.form__input__code:focus, .new .admin-recharge.form__group input[type="text"].form__color:focus,
 .new .admin-recharge.form__group .form__input__code:focus {
   border-color: #4DD6B7;
 }
-/* line 45, ../sass/components/_admin-utilities.scss */
+/* line 46, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input::-webkit-input-placeholder, .new .admin-recharge.form__group textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__color::-webkit-input-placeholder,
 .new .admin-recharge.form__group .form__input__code::-webkit-input-placeholder {
   color: #53BAD3;
 }
-/* line 48, ../sass/components/_admin-utilities.scss */
+/* line 49, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input:-moz-placeholder, .new .admin-recharge.form__group textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__color:-moz-placeholder,
 .new .admin-recharge.form__group .form__input__code:-moz-placeholder {
   color: #53BAD3;
 }
-/* line 51, ../sass/components/_admin-utilities.scss */
+/* line 52, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input::-moz-placeholder, .new .admin-recharge.form__group textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__color::-moz-placeholder,
 .new .admin-recharge.form__group .form__input__code::-moz-placeholder {
   color: #53BAD3;
 }
-/* line 54, ../sass/components/_admin-utilities.scss */
+/* line 55, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input:-ms-input-placeholder, .new .admin-recharge.form__group textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__color:-ms-input-placeholder,
 .new .admin-recharge.form__group .form__input__code:-ms-input-placeholder {
   color: #53BAD3;
 }
-/* line 61, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group .form__radio + label:before,
-.new .admin-recharge.form__group .form__checkbox + label:before {
+/* line 63, ../sass/components/_admin-utilities.scss */
+.new .admin-recharge.form__group .form__radio + .form__radio__label:before,
+.new .admin-recharge.form__group .form__radio + .form__checkbox__label:before,
+.new .admin-recharge.form__group .form__checkbox + .form__radio__label:before,
+.new .admin-recharge.form__group .form__checkbox + .form__checkbox__label:before {
   border-color: #53BAD3;
 }
-/* line 67, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group .form__radio:checked + label:before,
-.new .admin-recharge.form__group .form__checkbox:checked + label:before {
+/* line 70, ../sass/components/_admin-utilities.scss */
+.new .admin-recharge.form__group .form__radio:checked + .form__radio__label:before,
+.new .admin-recharge.form__group .form__radio:checked + .form__checkbox__label:before,
+.new .admin-recharge.form__group .form__checkbox:checked + .form__radio__label:before,
+.new .admin-recharge.form__group .form__checkbox:checked + .form__checkbox__label:before {
   background-color: #53BAD3;
 }
-/* line 76, ../sass/components/_admin-utilities.scss */
+/* line 79, ../sass/components/_admin-utilities.scss */
 .new .admin-shopify::after {
   color: #7AB55C;
   content: "\f005  Shopify";
 }
-/* line 80, ../sass/components/_admin-utilities.scss */
+/* line 83, ../sass/components/_admin-utilities.scss */
 .new .admin-bigcommerce::after {
   color: #4A8BF2;
   content: "\f005  BigCom";
 }
-/* line 85, ../sass/components/_admin-utilities.scss */
+/* line 88, ../sass/components/_admin-utilities.scss */
 .new .navbar__brand--shopify {
   background-image: url("../images/navbar__brand--shopify.svg");
 }
 @media screen and (min-width: 355px) and (max-width: 915px) {
-  /* line 85, ../sass/components/_admin-utilities.scss */
+  /* line 88, ../sass/components/_admin-utilities.scss */
   .new .navbar__brand--shopify {
     background-image: url("../images/navbar__brand--mobile--shopify.svg");
   }
 }
-/* line 92, ../sass/components/_admin-utilities.scss */
+/* line 95, ../sass/components/_admin-utilities.scss */
 .new .navbar__brand--bigcommerce {
   background-image: url("../images/navbar__brand--bigcommerce.svg");
 }
 @media screen and (min-width: 355px) and (max-width: 915px) {
-  /* line 92, ../sass/components/_admin-utilities.scss */
+  /* line 95, ../sass/components/_admin-utilities.scss */
   .new .navbar__brand--bigcommerce {
     background-image: url("../images/navbar__brand--mobile--bigcommerce.svg");
   }
