@@ -15,6 +15,8 @@
 		- Add color picker. Might need a better way for new input types to adopt the input[type='text'] styles
 	8-8-2016
 		- Create several fixes to address spacing issues between elements
+	8-9-16:
+		- No longer use the double-colon for :before or :after. Incompatible with all browsers
 */
 .form {
 	.form__label {
