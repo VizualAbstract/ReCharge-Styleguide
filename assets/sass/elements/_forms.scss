@@ -17,7 +17,10 @@
 		- Create several fixes to address spacing issues between elements
 	8-9-16:
 		- No longer use the double-colon for :before or :after. Incompatible with all browsers
+		- Standardized some of the spacing between fieldsets, form groups, and headers to formgroups
+		- Headers should be placed within a legend. Legends will get margin comparitive to a form group
 */
+
 .form {
 	.form__label {
 		display: block;
@@ -30,7 +33,7 @@
 }
 
 .form__errors {
-	margin-bottom: 30px;
+	margin-bottom: $form-group-spacing;
 	position: relative;
 	text-align: center;
 	color: #EC3D10;
@@ -44,7 +47,7 @@
 }	
 
 .form__group {
-	margin-bottom: 30px;
+	margin-bottom: $form-group-spacing;
 	position: relative;
 	.button {
 		margin-top: 10px;
@@ -259,20 +262,20 @@ fieldset {
   border: 0;
   min-width: 0; // Reset `min-width: min-content;` on fieldsets for Chrome and Firefox, to use as block element
   + fieldset {
-  	margin-top: 40px;
+  	margin-top: $fieldset-spacing;
   }
 }
 
 h1 + fieldset,
 h2 + fieldset,
 h3 + fieldset {
-	margin-top: 40px;
+	margin-top: $form-group-spacing;
 }
 
 fieldset + h1,
 fieldset + h2,
 fieldset + h3 {
-    margin-top: 40px;
+    margin-top: $fieldset-spacing;
 }
 
 legend {
@@ -284,7 +287,15 @@ legend {
 
   font-size: $font-size-base;
 //  font-family: 'ralewaysemibold', arial, sans-serif;
-  margin: 0 0 28px;
+  margin: 0 0 ($form-group-spacing - 4);
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5 {
+  	line-height: 1;
+  	margin: 0;
+  }
 }
 
 label {
@@ -481,7 +492,7 @@ input[type="checkbox"],
 			position: absolute;
 			right: 0;
 			top: auto;
-			bottom: -30px;
+			bottom: -$form-group-spacing;
 		}
 	}
 }
