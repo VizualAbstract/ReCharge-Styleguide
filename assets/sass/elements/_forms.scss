@@ -13,6 +13,8 @@
 		- Add contextual blocks for hidden inputs unless they're needed
 	8-5-2016
 		- Add color picker. Might need a better way for new input types to adopt the input[type='text'] styles
+	8-8-2016
+		- Create several fixes to address spacing issues between elements
 */
 .form {
 	.form__label {
@@ -255,7 +257,7 @@ fieldset {
   border: 0;
   min-width: 0; // Reset `min-width: min-content;` on fieldsets for Chrome and Firefox, to use as block element
   + fieldset {
-  	margin-top: 55px;
+  	margin-top: 40px;
   }
 }
 
@@ -263,6 +265,12 @@ h1 + fieldset,
 h2 + fieldset,
 h3 + fieldset {
 	margin-top: 40px;
+}
+
+fieldset + h1,
+fieldset + h2,
+fieldset + h3 {
+    margin-top: 40px;
 }
 
 legend {
@@ -294,12 +302,16 @@ label {
 }
 
 input[type="radio"],
-input[type="checkbox"] {
+input[type="checkbox"],
+.form__radio,
+.form__checkbox {
 	display: none;
-	+ label {
+	+ label,
+	+ .form__radio__label,
+	+ .form__checkbox__label {
 		cursor: pointer;
 		display: block;
-		&::before {
+		&:before {
 			width: 16px;
 			height: 16px;
 			content: "";
@@ -323,7 +335,7 @@ input[type="checkbox"] {
 			position: relative;
 			top: -2px;
 		}
-		&::after {
+		&:after {
 			display: table;
 			content: "";
 			margin: 10px 0;
@@ -331,20 +343,26 @@ input[type="checkbox"] {
 	}
 }
 
-input[type="radio"]{
-	+ label {
-		&::before {
+input[type="radio"],
+.form__radio {
+	+ label,
+	+ .form__radio__label {
+		&:before {
 			border-radius: 50%;
 		}
 	} 
 }
 
 input[type="radio"],
-input[type="checkbox"] {
+input[type="checkbox"],
+.form__radio,
+.form__checkbox {
 	&:checked,
 	&.form__input--checked {
-		+ label {
-			&::before {
+		+ label,
+		+ .form__radio__label,
+		+ .form__checkbox__label {
+			&:before {
 				content: "\f00c";
 				background-color: #767676;
 			}
@@ -352,12 +370,16 @@ input[type="checkbox"] {
 	}
 	&:required,
 	&.form__input--required {
-		+ label {
+		+ label,
+		+ .form__radio__label,
+		+ .form__checkbox__label {
 			&::before {
 				border-color: #EC3D10
 			}
 		}
-		&:checked {
+		&:checked,
+		+ .form__radio__label,
+		+ .form__checkbox__label {
 			+ label {
 				&::before {
 					background-color: #EC3D10;
@@ -367,8 +389,10 @@ input[type="checkbox"] {
 	}
 	&:disabled,
 	&.form__input--disabled {
-		+ label {
-			&::before {
+		+ label,
+		+ .form__radio__label,
+		+ .form__checkbox__label {
+			&:before {
 				content: "\f068";
 				color: #767676;
 				text-indent: 3px;
@@ -501,12 +525,25 @@ input[type="checkbox"] {
 	}
 }
 
+/* Contextual sub-form */
 .contextual__input__options {
 	background-color: #f3f3f3;
 	padding: 18px 20px 0;
 	margin-left: 24px;
 	margin-top: -7px;
 	display: none;
+}
+
+.form__group {
+	.form__radio__label,
+	.form__checkbox__label {
+		&:last-of-type {
+			margin-bottom: -16px; // Fix, because the line-height adds too much visual space on the final item.
+			+ .contextual__input__options {
+				margin-top: 19px; // Fix for contextual input options
+			}
+		}
+	}
 }
 
 .form__checkbox:checked,
@@ -519,6 +556,7 @@ input[type="checkbox"] {
 	}
 }
 
+/* Color input */
 input[type="text"].form__color {
 	@extend .form__input;
 
@@ -529,7 +567,7 @@ input[type="text"].form__color {
 input[type="color"].form__color {
 	&__picker {
 		+ .sp-replacer {
-			margin: 12px 8px;
+			margin: 12px 13px;
 			vertical-align: top;
 		}
 	}

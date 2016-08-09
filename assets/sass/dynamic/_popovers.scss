@@ -16,7 +16,8 @@ $popover-arrow-width: 10px;
   display: inline-block;
   font-family: 'fontawesome', arial, san-serif;
   vertical-align: baseline;
-  line-height: 16px;
+  line-height: $font-size-base;
+  font-size: $font-size-base;
   padding: 4px 8px 5px;
   box-sizing: content-box;
   &:after {
