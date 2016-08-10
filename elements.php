@@ -79,7 +79,7 @@
 
 <h2 id="inputs-radio">Inputs: Radio</h2>
 <div class="example">
-<input id="radio_1" type="radio" name="radio_group" checked class="form__radio">
+<input id="radio_1" type="radio" name="radio_group" checked="checked" class="form__radio">
 <label for="radio_1" class="form__radio__label">Radio</label>
 
 <input id="radio_2" type="radio" name="radio_group" class="form__radio">
@@ -94,7 +94,7 @@
 
 <h2 id="inputs-checkbox">Inputs: Checkbox</h2>
 <div class="example">
-<input id="checkbox_1" type="checkbox" name="checkbox" checked class="form__checkbox">
+<input id="checkbox_1" type="checkbox" name="checkbox" checked="checked" class="form__checkbox">
 <label for="checkbox_1" class="form__checkbox__label">Checkbox</label>
 
 <input id="checkbox_2" type="checkbox" name="checkbox" class="form__checkbox">

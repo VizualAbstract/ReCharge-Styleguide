@@ -20,15 +20,4 @@ $(function(){
 	$(".form__select").dropkick({
 		mobile: true
 	});
-	$('.admin-tools').on('click', '#toggle-admin-tools', function(e) {
-		e.preventDefault();
-		$('.admin-tools').toggleClass('in');
-		if ($(this).text() == 'Show'){
-			$(this).text('Hide');
-			$('.wrapper, .new__wrapper').attr('style', 'margin-bottom: ' + $('.admin-tools').height() + 'px');
-		} else {
-			$(this).text('Show');
-			$('.wrapper, .new__wrapper').attr('style', '');
-		}
-	});
 })
