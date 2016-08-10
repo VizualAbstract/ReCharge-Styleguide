@@ -268,13 +268,17 @@ fieldset {
 
 h1 + fieldset,
 h2 + fieldset,
-h3 + fieldset {
+h3 + fieldset,
+h4 + fieldset,
+h5 + fieldset {
 	margin-top: $form-group-spacing;
 }
 
 fieldset + h1,
 fieldset + h2,
-fieldset + h3 {
+fieldset + h3,
+fieldset + h4,
+fieldset + h5 {
     margin-top: $fieldset-spacing;
 }
 

@@ -746,15 +746,15 @@
 		"shouldRunBless": 1,
 		"useLibsass": 0
 		},
-	"\/assets\/sass\/layouts\/_admin-bar.scss": {
+	"\/assets\/sass\/layouts\/_admin-tools.scss": {
 		"createSourceMap": 1,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/sass\/layouts\/_admin-bar.scss",
-		"outputAbbreviatedPath": "\/assets\/sass\/css\/_admin-bar.css",
+		"inputAbbreviatedPath": "\/assets\/sass\/layouts\/_admin-tools.scss",
+		"outputAbbreviatedPath": "\/assets\/sass\/css\/_admin-tools.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -1196,17 +1196,6 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
-		},
-	"\/js\/scripts.min.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/scripts.min.js",
-		"outputAbbreviatedPath": "\/js\/min\/scripts.min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
 		},
 	"\/layouts.php": {
 		"fileType": 8192,

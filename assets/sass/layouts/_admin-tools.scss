@@ -1,0 +1,25 @@
+.admin-tools {
+	background-color: #53BAD3;
+	color: #FFF;
+
+	box-sizing: border-box;
+	padding: 20px;
+
+	left: 0;
+	width: 100%;
+
+	&__toggler {
+		background-color: transparent;
+		font-family: monospace;
+		border-width: 0;
+		padding: 0;
+		color: #FFF;
+		button {
+			font-size: 11px !important;
+			padding: 4px 8px;
+			line-height: 1;
+			height: auto;
+			cursor: pointer;
+		}
+	}
+}
