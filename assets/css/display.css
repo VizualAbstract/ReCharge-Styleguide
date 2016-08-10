@@ -1,3 +1,9 @@
+/*
+
+	8-10-16:
+		- Add variables for fieldset margin
+		- Adjust z-index. Popovers and tooltips were appearing over modal overlay
+*/
 /* Colors */
 /* This stylesheet is for the Style Guide page only */
 body.new {

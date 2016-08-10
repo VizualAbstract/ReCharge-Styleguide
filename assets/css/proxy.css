@@ -9,6 +9,12 @@
 	Common
 	Resets, browser normalization, css utilities. Items that don't fit in any one group, but serve an important purpose
 */
+/*
+
+	8-10-16:
+		- Add variables for fieldset margin
+		- Adjust z-index. Popovers and tooltips were appearing over modal overlay
+*/
 /* Colors */
 .recharge {
   /*

@@ -9,6 +9,12 @@
 	Common
 	Resets, browser normalization, css utilities. Items that don't fit in any one group, but serve an important purpose
 */
+/*
+
+	8-10-16:
+		- Add variables for fieldset margin
+		- Adjust z-index. Popovers and tooltips were appearing over modal overlay
+*/
 /* Colors */
 /* 
 	Element: Fonts
@@ -581,12 +587,12 @@
   border: 0;
 }
 /* line 18, ../sass/_mixins.scss */
-.new .clearfix:before, .new .clearfix:after {
+.new .clearfix:before, .new .contextual__input__options:before, .new .clearfix:after, .new .contextual__input__options:after {
   content: " ";
   display: table;
 }
 /* line 23, ../sass/_mixins.scss */
-.new .clearfix:after {
+.new .clearfix:after, .new .contextual__input__options:after {
   clear: both;
 }
 /* line 21, ../sass/common/_utilities.scss */
@@ -1158,6 +1164,12 @@
   		- No longer use the double-colon for :before or :after. Incompatible with all browsers
   		- Standardized some of the spacing between fieldsets, form groups, and headers to formgroups
   		- Headers should be placed within a legend. Legends will get margin comparitive to a form group
+  	8-10-16:
+  		- Give the final fieldset a bottom margin of 60
+  		- Form action div should receive the same amount of spacing as a fieldset
+  		- Use variables for fieldset margin
+  		- Add new form help text
+  		- Add support for contextual dropdowns with new form help text
   */
   /* Contextual sub-form */
   /* Color input */
@@ -1831,57 +1843,61 @@ h1 + .setup-header__description,
   max-width: 100%;
   height: auto;
 }
-/* line 25, ../sass/elements/_forms.scss */
+/* line 31, ../sass/elements/_forms.scss */
 .new .form .form__label {
   display: block;
 }
-/* line 29, ../sass/elements/_forms.scss */
+/* line 35, ../sass/elements/_forms.scss */
 .new .form--inline .form__label {
   display: inline;
 }
-/* line 35, ../sass/elements/_forms.scss */
+/* line 41, ../sass/elements/_forms.scss */
 .new .form__errors {
   margin-bottom: 24px;
   position: relative;
   text-align: center;
   color: #EC3D10;
 }
-/* line 40, ../sass/elements/_forms.scss */
+/* line 46, ../sass/elements/_forms.scss */
 .new .form__errors:empty {
   display: none;
 }
-/* line 45, ../sass/elements/_forms.scss */
+/* line 51, ../sass/elements/_forms.scss */
 .new .form__help {
-  line-height: 11px;
+  color: #8E8F8E;
+  margin-top: -20px;
+  margin-bottom: 24px;
+  padding-left: 25px;
+  line-height: 25px;
 }
-/* line 49, ../sass/elements/_forms.scss */
+/* line 59, ../sass/elements/_forms.scss */
 .new .form__group {
   margin-bottom: 24px;
   position: relative;
 }
-/* line 52, ../sass/elements/_forms.scss */
+/* line 62, ../sass/elements/_forms.scss */
 .new .form__group .button {
   margin-top: 10px;
 }
-/* line 55, ../sass/elements/_forms.scss */
+/* line 65, ../sass/elements/_forms.scss */
 .new .form__group p:last-child {
   margin-bottom: -4px;
 }
-/* line 59, ../sass/elements/_forms.scss */
+/* line 69, ../sass/elements/_forms.scss */
 .new p + .form__group {
   margin-top: 18px;
 }
-/* line 64, ../sass/elements/_forms.scss */
+/* line 74, ../sass/elements/_forms.scss */
 .new .form--signup .form__group {
   position: relative;
   margin-bottom: 45px;
 }
 @media screen and (min-width: 768px) {
-  /* line 64, ../sass/elements/_forms.scss */
+  /* line 74, ../sass/elements/_forms.scss */
   .new .form--signup .form__group {
     margin-bottom: 55px;
   }
-  /* line 69, ../sass/elements/_forms.scss */
+  /* line 79, ../sass/elements/_forms.scss */
   .new .form--signup .form__group .form__response {
     position: absolute;
     top: 100%;
@@ -1890,31 +1906,33 @@ h1 + .setup-header__description,
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  /* line 64, ../sass/elements/_forms.scss */
+  /* line 74, ../sass/elements/_forms.scss */
   .new .form--signup .form__group {
     margin-bottom: 65px;
   }
 }
-/* line 82, ../sass/elements/_forms.scss */
+/* line 92, ../sass/elements/_forms.scss */
 .new .form__actions, .new .modal__actions {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  margin-top: 32px;
+  margin-bottom: 60px;
 }
-/* line 85, ../sass/elements/_forms.scss */
+/* line 97, ../sass/elements/_forms.scss */
 .new .form__actions .button, .new .modal__actions .button {
   -webkit-box-flex: 100%;
   -webkit-flex: 100%;
       -ms-flex: 100%;
           flex: 100%;
 }
-/* line 87, ../sass/elements/_forms.scss */
+/* line 99, ../sass/elements/_forms.scss */
 .new .form__actions .button + .button, .new .modal__actions .button + .button {
   margin-left: 10px;
 }
-/* line 93, ../sass/elements/_forms.scss */
+/* line 105, ../sass/elements/_forms.scss */
 .new button.form__input,
 .new input.form__input,
 .new input[type="text"].form__color,
@@ -1927,7 +1945,7 @@ h1 + .setup-header__description,
   line-height: 1.5625;
   padding: 6px 10px 7px;
 }
-/* line 105, ../sass/elements/_forms.scss */
+/* line 117, ../sass/elements/_forms.scss */
 .new .form input[type="submit"] + input[type="submit"],
 .new .form input[type="submit"] + button,
 .new .form input + input[type="submit"],
@@ -1938,20 +1956,20 @@ h1 + .setup-header__description,
 .new .form input + a {
   margin-left: 15px;
 }
-/* line 117, ../sass/elements/_forms.scss */
+/* line 129, ../sass/elements/_forms.scss */
 .new button.button,
 .new input.button {
   vertical-align: middle;
   height: 40px;
 }
-/* line 123, ../sass/elements/_forms.scss */
+/* line 135, ../sass/elements/_forms.scss */
 .new input.form__input, .new input[type="text"].form__color,
 .new textarea.form__input,
 .new textarea.form__input__code,
 .new input.form__color {
   color: #424242;
 }
-/* line 129, ../sass/elements/_forms.scss */
+/* line 141, ../sass/elements/_forms.scss */
 .new button.button,
 .new input[type="submit"].button {
   -ms-touch-action: manipulation;
@@ -1960,24 +1978,24 @@ h1 + .setup-header__description,
   border-width: 0;
   min-width: 100px;
 }
-/* line 138, ../sass/elements/_forms.scss */
+/* line 150, ../sass/elements/_forms.scss */
 .new button.button:hover, .new button.button:active,
 .new input[type="submit"].button:hover,
 .new input[type="submit"].button:active {
   outline: 0;
 }
-/* line 144, ../sass/elements/_forms.scss */
+/* line 156, ../sass/elements/_forms.scss */
 .new button.button:disabled, .new button.button.disabled,
 .new input[type="submit"].button:disabled,
 .new input[type="submit"].button.disabled {
   background-color: #D8D8D8 !important;
   cursor: default;
 }
-/* line 151, ../sass/elements/_forms.scss */
+/* line 163, ../sass/elements/_forms.scss */
 .new select.form__input {
   display: block;
 }
-/* line 155, ../sass/elements/_forms.scss */
+/* line 167, ../sass/elements/_forms.scss */
 .new input[type="text"].form__input, .new input[type="text"].form__color,
 .new select.form__input,
 .new input[type="email"].form__input,
@@ -1988,7 +2006,7 @@ h1 + .setup-header__description,
 .new textarea.form__input__code {
   width: 100%;
 }
-/* line 163, ../sass/elements/_forms.scss */
+/* line 175, ../sass/elements/_forms.scss */
 .new .form__input, .new textarea.form__input__code, .new input[type="text"].form__color,
 .new .form__placeholder {
   margin: 12px 0;
@@ -1997,31 +2015,31 @@ h1 + .setup-header__description,
   max-width: 100%;
   color: #424242;
 }
-/* line 172, ../sass/elements/_forms.scss */
+/* line 184, ../sass/elements/_forms.scss */
 .new .form__input::-webkit-input-placeholder, .new textarea.form__input__code::-webkit-input-placeholder, .new input[type="text"].form__color::-webkit-input-placeholder,
 .new .form__placeholder::-webkit-input-placeholder {
   color: #676767;
 }
-/* line 175, ../sass/elements/_forms.scss */
+/* line 187, ../sass/elements/_forms.scss */
 .new .form__input:-moz-placeholder, .new textarea.form__input__code:-moz-placeholder, .new input[type="text"].form__color:-moz-placeholder,
 .new .form__placeholder:-moz-placeholder {
   color: #676767;
 }
-/* line 178, ../sass/elements/_forms.scss */
+/* line 190, ../sass/elements/_forms.scss */
 .new .form__input::-moz-placeholder, .new textarea.form__input__code::-moz-placeholder, .new input[type="text"].form__color::-moz-placeholder,
 .new .form__placeholder::-moz-placeholder {
   color: #676767;
 }
-/* line 181, ../sass/elements/_forms.scss */
+/* line 193, ../sass/elements/_forms.scss */
 .new .form__input:-ms-input-placeholder, .new textarea.form__input__code:-ms-input-placeholder, .new input[type="text"].form__color:-ms-input-placeholder,
 .new .form__placeholder:-ms-input-placeholder {
   color: #676767;
 }
-/* line 186, ../sass/elements/_forms.scss */
+/* line 198, ../sass/elements/_forms.scss */
 .new p.form__placeholder {
   margin: 4px 0;
 }
-/* line 190, ../sass/elements/_forms.scss */
+/* line 202, ../sass/elements/_forms.scss */
 .new input[type="text"].form__input, .new input[type="text"].form__color,
 .new input[type="search"].form__input,
 .new input[type="search"][type="text"].form__color,
@@ -2036,7 +2054,7 @@ h1 + .setup-header__description,
   border-style: solid;
   border-color: #676767;
 }
-/* line 199, ../sass/elements/_forms.scss */
+/* line 211, ../sass/elements/_forms.scss */
 .new input[type="text"].form__input:focus, .new input[type="text"].form__color:focus, .new input[type="text"].form__input.form__input--focus, .new input[type="text"].form__input--focus.form__color,
 .new input[type="search"].form__input:focus,
 .new input[type="search"][type="text"].form__color:focus,
@@ -2060,7 +2078,7 @@ h1 + .setup-header__description,
   outline: none;
   box-shadow: none;
 }
-/* line 205, ../sass/elements/_forms.scss */
+/* line 217, ../sass/elements/_forms.scss */
 .new input[type="text"].form__input:required, .new input[type="text"].form__color:required, .new input[type="text"].form__input.form__input--invalid, .new input[type="text"].form__input--invalid.form__color,
 .new input[type="search"].form__input:required,
 .new input[type="search"][type="text"].form__color:required,
@@ -2082,7 +2100,7 @@ h1 + .setup-header__description,
 .new textarea.form__input--invalid.form__input__code {
   border-color: #EC3D10;
 }
-/* line 211, ../sass/elements/_forms.scss */
+/* line 223, ../sass/elements/_forms.scss */
 .new .form__error {
   color: #EC3D10;
   font-family: 'ralewaysemibold', arial, sans-serif;
@@ -2091,14 +2109,14 @@ h1 + .setup-header__description,
   line-height: 25px;
 }
 @media screen and (min-width: 768px) {
-  /* line 211, ../sass/elements/_forms.scss */
+  /* line 223, ../sass/elements/_forms.scss */
   .new .form__error {
     position: absolute;
     top: 0;
     right: 0;
   }
 }
-/* line 224, ../sass/elements/_forms.scss */
+/* line 236, ../sass/elements/_forms.scss */
 .new textarea.form__input + textarea.form__input, .new textarea.form__input__code + textarea.form__input, .new textarea.form__input + textarea.form__input__code, .new textarea.form__input__code + textarea.form__input__code,
 .new input.form__color__picker + input.form__color,
 .new input[type="text"].form__input + input[type="text"].form__input,
@@ -2115,13 +2133,13 @@ h1 + .setup-header__description,
 .new input[type="password"][type="text"].form__color + input[type="password"][type="text"].form__color {
   margin: 20px 0;
 }
-/* line 232, ../sass/elements/_forms.scss */
+/* line 244, ../sass/elements/_forms.scss */
 .new input[type="text"].button {
   line-height: 1.5625;
   padding: 7px;
   height: 40px;
 }
-/* line 238, ../sass/elements/_forms.scss */
+/* line 250, ../sass/elements/_forms.scss */
 .new textarea.form__input, .new textarea.form__input__code {
   line-height: 1.5625;
   padding: 7px 10px;
@@ -2131,25 +2149,29 @@ h1 + .setup-header__description,
   box-sizing: border-box;
   min-height: 100px;
 }
-/* line 251, ../sass/elements/_forms.scss */
+/* line 263, ../sass/elements/_forms.scss */
 .new textarea.form__input__code {
   font-family: 'pt-mono', monospace;
   font-size: 16px;
   color: #676767;
   line-height: 21px;
 }
-/* line 259, ../sass/elements/_forms.scss */
+/* line 271, ../sass/elements/_forms.scss */
 .new fieldset {
   padding: 0;
   margin: 0;
   border: 0;
   min-width: 0;
 }
-/* line 264, ../sass/elements/_forms.scss */
+/* line 276, ../sass/elements/_forms.scss */
 .new fieldset + fieldset {
   margin-top: 32px;
 }
-/* line 269, ../sass/elements/_forms.scss */
+/* line 279, ../sass/elements/_forms.scss */
+.new fieldset:last-child {
+  margin-bottom: 60px;
+}
+/* line 284, ../sass/elements/_forms.scss */
 .new h1 + fieldset,
 .new h2 + fieldset,
 .new h3 + fieldset,
@@ -2157,7 +2179,7 @@ h1 + .setup-header__description,
 .new h5 + fieldset {
   margin-top: 24px;
 }
-/* line 277, ../sass/elements/_forms.scss */
+/* line 292, ../sass/elements/_forms.scss */
 .new fieldset + h1,
 .new fieldset + h2,
 .new fieldset + h3,
@@ -2165,7 +2187,7 @@ h1 + .setup-header__description,
 .new fieldset + h5 {
   margin-top: 32px;
 }
-/* line 285, ../sass/elements/_forms.scss */
+/* line 300, ../sass/elements/_forms.scss */
 .new legend {
   display: block;
   width: 100%;
@@ -2175,7 +2197,7 @@ h1 + .setup-header__description,
   font-size: 16px;
   margin: 0 0 20px;
 }
-/* line 295, ../sass/elements/_forms.scss */
+/* line 310, ../sass/elements/_forms.scss */
 .new legend h1, .new legend .h1,
 .new legend h2, .new legend .h2,
 .new legend h3, .new legend .h3,
@@ -2184,7 +2206,7 @@ h1 + .setup-header__description,
   line-height: 1;
   margin: 0;
 }
-/* line 305, ../sass/elements/_forms.scss */
+/* line 320, ../sass/elements/_forms.scss */
 .new label {
   display: block;
   max-width: 100%;
@@ -2193,18 +2215,18 @@ h1 + .setup-header__description,
   display: block;
   line-height: 25px;
 }
-/* line 316, ../sass/elements/_forms.scss */
+/* line 331, ../sass/elements/_forms.scss */
 .new .form__label + .button {
   margin: 12px 0;
 }
-/* line 321, ../sass/elements/_forms.scss */
+/* line 336, ../sass/elements/_forms.scss */
 .new input[type="radio"],
 .new input[type="checkbox"],
 .new .form__radio,
 .new .form__checkbox {
   display: none;
 }
-/* line 326, ../sass/elements/_forms.scss */
+/* line 341, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label,
 .new input[type="radio"] + .form__radio__label,
 .new input[type="radio"] + .form__checkbox__label,
@@ -2220,7 +2242,7 @@ h1 + .setup-header__description,
   cursor: pointer;
   display: block;
 }
-/* line 331, ../sass/elements/_forms.scss */
+/* line 346, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label:before,
 .new input[type="radio"] + .form__radio__label:before,
 .new input[type="radio"] + .form__checkbox__label:before,
@@ -2238,6 +2260,7 @@ h1 + .setup-header__description,
   content: "";
   display: inline-block;
   box-sizing: border-box;
+  background-color: #FFF;
   margin-right: 9px;
   line-height: 15px;
   text-indent: 1px;
@@ -2251,7 +2274,7 @@ h1 + .setup-header__description,
   position: relative;
   top: -2px;
 }
-/* line 355, ../sass/elements/_forms.scss */
+/* line 371, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label:after,
 .new input[type="radio"] + .form__radio__label:after,
 .new input[type="radio"] + .form__checkbox__label:after,
@@ -2268,14 +2291,14 @@ h1 + .setup-header__description,
   content: "";
   margin: 10px 0;
 }
-/* line 367, ../sass/elements/_forms.scss */
+/* line 383, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label:before,
 .new input[type="radio"] + .form__radio__label:before,
 .new .form__radio + label:before,
 .new .form__radio + .form__radio__label:before {
   border-radius: 50%;
 }
-/* line 382, ../sass/elements/_forms.scss */
+/* line 398, ../sass/elements/_forms.scss */
 .new input[type="radio"]:checked + label:before,
 .new input[type="radio"]:checked + .form__radio__label:before,
 .new input[type="radio"]:checked + .form__checkbox__label:before, .new input[type="radio"].form__input--checked + label:before,
@@ -2302,7 +2325,7 @@ h1 + .setup-header__description,
   content: "\f00c";
   background-color: #767676;
 }
-/* line 393, ../sass/elements/_forms.scss */
+/* line 409, ../sass/elements/_forms.scss */
 .new input[type="radio"]:required + label::before,
 .new input[type="radio"]:required + .form__radio__label::before,
 .new input[type="radio"]:required + .form__checkbox__label::before, .new input[type="radio"].form__input--required + label::before,
@@ -2328,7 +2351,7 @@ h1 + .setup-header__description,
 .new .form__checkbox.form__input--required + .form__checkbox__label::before {
   border-color: #EC3D10;
 }
-/* line 401, ../sass/elements/_forms.scss */
+/* line 417, ../sass/elements/_forms.scss */
 .new input[type="radio"]:required:checked + label::before,
 .new input[type="radio"]:required + .form__radio__label + label::before,
 .new input[type="radio"]:required + .form__checkbox__label + label::before, .new input[type="radio"].form__input--required:checked + label::before,
@@ -2354,7 +2377,7 @@ h1 + .setup-header__description,
 .new .form__checkbox.form__input--required + .form__checkbox__label + label::before {
   background-color: #EC3D10;
 }
-/* line 412, ../sass/elements/_forms.scss */
+/* line 428, ../sass/elements/_forms.scss */
 .new input[type="radio"]:disabled + label:before,
 .new input[type="radio"]:disabled + .form__radio__label:before,
 .new input[type="radio"]:disabled + .form__checkbox__label:before, .new input[type="radio"].form__input--disabled + label:before,
@@ -2382,44 +2405,44 @@ h1 + .setup-header__description,
   color: #767676;
   text-indent: 3px;
 }
-/* line 421, ../sass/elements/_forms.scss */
+/* line 437, ../sass/elements/_forms.scss */
 .new .card-details {
   width: 100%;
   font-size: 0;
 }
-/* line 424, ../sass/elements/_forms.scss */
+/* line 440, ../sass/elements/_forms.scss */
 .new .card-details input.form__input, .new .card-details input[type="text"].form__color {
   min-width: 10px;
   font-size: 16px;
   margin-bottom: 0;
 }
-/* line 429, ../sass/elements/_forms.scss */
+/* line 445, ../sass/elements/_forms.scss */
 .new .card-details__date, .new .card-details__security, .new .card-details__cards {
   display: inline-block;
   vertical-align: middle;
   box-sizing: border-box;
 }
-/* line 436, ../sass/elements/_forms.scss */
+/* line 452, ../sass/elements/_forms.scss */
 .new .card-details__label {
   font-size: 16px;
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 441, ../sass/elements/_forms.scss */
+/* line 457, ../sass/elements/_forms.scss */
 .new .card-details__date {
   width: 30%;
 }
-/* line 443, ../sass/elements/_forms.scss */
+/* line 459, ../sass/elements/_forms.scss */
 .new .card-details__date__month, .new .card-details__date__divider, .new .card-details__date__year {
   font-size: 0;
   display: inline-block !important;
   vertical-align: top;
 }
-/* line 450, ../sass/elements/_forms.scss */
+/* line 466, ../sass/elements/_forms.scss */
 .new .card-details__date__month {
   width: 29.62% !important;
 }
-/* line 453, ../sass/elements/_forms.scss */
+/* line 469, ../sass/elements/_forms.scss */
 .new .card-details__date__divider {
   width: 14.83% !important;
   font-size: 16px;
@@ -2427,16 +2450,16 @@ h1 + .setup-header__description,
   line-height: 40px;
   padding-top: 10px;
 }
-/* line 460, ../sass/elements/_forms.scss */
+/* line 476, ../sass/elements/_forms.scss */
 .new .card-details__date__year {
   width: 55.55% !important;
 }
-/* line 464, ../sass/elements/_forms.scss */
+/* line 480, ../sass/elements/_forms.scss */
 .new .card-details__security {
   width: 15%;
   padding-left: 20px;
 }
-/* line 468, ../sass/elements/_forms.scss */
+/* line 484, ../sass/elements/_forms.scss */
 .new .card-details__cards {
   width: 55%;
   margin-top: 37px;
@@ -2444,7 +2467,7 @@ h1 + .setup-header__description,
   height: 40px;
   line-height: 40px;
 }
-/* line 475, ../sass/elements/_forms.scss */
+/* line 491, ../sass/elements/_forms.scss */
 .new .card-details__icon {
   width: 20%;
   margin-left: 10%;
@@ -2452,26 +2475,26 @@ h1 + .setup-header__description,
   vertical-align: middle;
 }
 @media screen and (min-width: 768px) {
-  /* line 475, ../sass/elements/_forms.scss */
+  /* line 491, ../sass/elements/_forms.scss */
   .new .card-details__icon {
     width: 16.42%;
     margin-left: 20px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 486, ../sass/elements/_forms.scss */
+  /* line 502, ../sass/elements/_forms.scss */
   .new .card-details__date {
     width: 50%;
   }
-  /* line 489, ../sass/elements/_forms.scss */
+  /* line 505, ../sass/elements/_forms.scss */
   .new .card-details__security {
     width: 20%;
   }
-  /* line 492, ../sass/elements/_forms.scss */
+  /* line 508, ../sass/elements/_forms.scss */
   .new .card-details__cards {
     width: 30%;
   }
-  /* line 495, ../sass/elements/_forms.scss */
+  /* line 511, ../sass/elements/_forms.scss */
   .new .card-details .form__error {
     position: absolute;
     right: 0;
@@ -2479,52 +2502,52 @@ h1 + .setup-header__description,
     bottom: -24px;
   }
 }
-/* line 504, ../sass/elements/_forms.scss */
+/* line 520, ../sass/elements/_forms.scss */
 .new .input-group {
   display: table;
   border-collapse: separate;
   box-sizing: border-box;
 }
-/* line 508, ../sass/elements/_forms.scss */
+/* line 524, ../sass/elements/_forms.scss */
 .new .input-group .form__input, .new .input-group textarea.form__input__code, .new .input-group input[type="text"].form__color, .new .input-group__addon {
   display: table-cell;
   box-sizing: border-box;
 }
-/* line 513, ../sass/elements/_forms.scss */
+/* line 529, ../sass/elements/_forms.scss */
 .new .input-group__addon {
   padding-left: 15px;
 }
-/* line 515, ../sass/elements/_forms.scss */
+/* line 531, ../sass/elements/_forms.scss */
 .new .input-group__addon:first-child {
   padding-left: 0;
   padding-right: 15px;
 }
-/* line 519, ../sass/elements/_forms.scss */
+/* line 535, ../sass/elements/_forms.scss */
 .new .input-group__addon .button {
   margin-top: 11px;
   margin-bottom: 13px;
 }
-/* line 526, ../sass/elements/_forms.scss */
+/* line 542, ../sass/elements/_forms.scss */
 .new .input-group--full {
   width: 100%;
 }
-/* line 528, ../sass/elements/_forms.scss */
+/* line 544, ../sass/elements/_forms.scss */
 .new .input-group--full .form__input, .new .input-group--full textarea.form__input__code, .new .input-group--full input[type="text"].form__color {
   width: 100%;
 }
-/* line 531, ../sass/elements/_forms.scss */
+/* line 547, ../sass/elements/_forms.scss */
 .new .input-group--full .input-group__addon {
   width: 1%;
 }
-/* line 537, ../sass/elements/_forms.scss */
+/* line 553, ../sass/elements/_forms.scss */
 .new .form__search .input-group__addon {
   padding-left: 0;
 }
-/* line 539, ../sass/elements/_forms.scss */
+/* line 555, ../sass/elements/_forms.scss */
 .new .form__search .input-group__addon .button {
   min-width: 40px;
 }
-/* line 546, ../sass/elements/_forms.scss */
+/* line 562, ../sass/elements/_forms.scss */
 .new .contextual__input__options {
   background-color: #f3f3f3;
   padding: 18px 20px 0;
@@ -2532,29 +2555,36 @@ h1 + .setup-header__description,
   margin-top: -7px;
   display: none;
 }
-/* line 557, ../sass/elements/_forms.scss */
+/* line 575, ../sass/elements/_forms.scss */
 .new .form__group .form__radio__label:last-of-type,
 .new .form__group .form__checkbox__label:last-of-type {
   margin-bottom: -16px;
 }
-/* line 559, ../sass/elements/_forms.scss */
+/* line 577, ../sass/elements/_forms.scss */
 .new .form__group .form__radio__label:last-of-type + .contextual__input__options,
 .new .form__group .form__checkbox__label:last-of-type + .contextual__input__options {
   margin-top: 19px;
 }
-/* line 570, ../sass/elements/_forms.scss */
+/* line 588, ../sass/elements/_forms.scss */
 .new .form__checkbox:checked + .form__checkbox__label + .contextual__input__options,
 .new .form__checkbox:checked + .form__radio__label + .contextual__input__options,
 .new .form__radio:checked + .form__checkbox__label + .contextual__input__options,
 .new .form__radio:checked + .form__radio__label + .contextual__input__options {
   display: block;
 }
-/* line 577, ../sass/elements/_forms.scss */
+/* line 592, ../sass/elements/_forms.scss */
+.new .form__checkbox:checked + .form__checkbox__label + .form__help + .contextual__input__options,
+.new .form__checkbox:checked + .form__radio__label + .form__help + .contextual__input__options,
+.new .form__radio:checked + .form__checkbox__label + .form__help + .contextual__input__options,
+.new .form__radio:checked + .form__radio__label + .form__help + .contextual__input__options {
+  display: block;
+}
+/* line 600, ../sass/elements/_forms.scss */
 .new input[type="text"].form__color {
   display: inline;
   width: 100px;
 }
-/* line 586, ../sass/elements/_forms.scss */
+/* line 609, ../sass/elements/_forms.scss */
 .new input[type="color"].form__color__picker + .sp-replacer {
   margin: 12px 13px;
   vertical-align: top;
@@ -3382,6 +3412,10 @@ h1 + .setup-header__description,
   	5-22-2016
   		- Add forced --mobile flag for setup navbar
   		- Adjust background and link colors for dropdown menus so the contrast follows the same pattern as the standard navbar
+  */
+  /*
+  	8-10-16:
+  		- Tooltips will now be simplified, removing header and will be inline instead of overlaied with javascript
   */
 }
 /* line 1, ../sass/layouts/_grid.scss */
@@ -5034,7 +5068,7 @@ h1 + .setup-header__description,
 .new .navbar__return--highlight:hover, .new .navbar__return--highlight:focus {
   background-color: #2bac8f !important;
 }
-/* line 1, ../sass/layouts/_admin-tools.scss */
+/* line 5, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools {
   background-color: #53BAD3;
   color: #FFF;
@@ -5042,8 +5076,10 @@ h1 + .setup-header__description,
   padding: 20px;
   left: 0;
   width: 100%;
+  /* Temporary fix for the excessive ammount of margin on the bottom of the page that appears when this is used. This is because the footer has a top-margin of 30 pixels and the PUSH has a bottom margin of 80px */
+  margin-bottom: -110px;
 }
-/* line 11, ../sass/layouts/_admin-tools.scss */
+/* line 18, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools__toggler {
   background-color: transparent;
   font-family: monospace;
@@ -5051,7 +5087,7 @@ h1 + .setup-header__description,
   padding: 0;
   color: #FFF;
 }
-/* line 17, ../sass/layouts/_admin-tools.scss */
+/* line 24, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools__toggler button {
   font-size: 11px !important;
   padding: 4px 8px;
@@ -5078,7 +5114,7 @@ h1 + .setup-header__description,
   font-size: 16px;
   padding: 8px;
   box-sizing: content-box;
-  z-index: 71;
+  z-index: 51;
 }
 /* line 21, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-button:after {
@@ -5091,7 +5127,7 @@ h1 + .setup-header__description,
 /* line 33, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box {
   position: absolute;
-  z-index: 70;
+  z-index: 50;
   display: block;
   max-width: 500px;
   font-size: 16px;
@@ -5337,7 +5373,7 @@ h1 + .setup-header__description,
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 50;
+  z-index: 90;
   -webkit-overflow-scrolling: touch;
   outline: 0;
 }
@@ -5356,7 +5392,7 @@ h1 + .setup-header__description,
   background: transparent;
   outline: 0;
   cursor: pointer;
-  z-index: 50;
+  z-index: 90;
 }
 /* line 36, ../sass/vendors/_bootstrap.scss */
 .new .modal__close::before {
@@ -5416,7 +5452,7 @@ h1 + .setup-header__description,
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 40;
+  z-index: 80;
   background-color: #000;
 }
 /* line 83, ../sass/vendors/_bootstrap.scss */
@@ -6565,7 +6601,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 40;
+  z-index: 80;
   background-color: #000;
 }
 

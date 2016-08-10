@@ -132,7 +132,7 @@
 <div class="example">
 <div class="admin-tools">
 	<div class="layout__container">
-		<h5>ReCharge Admin Tools</h5>
+		<h5>RECHARGE ADMIN TOOLS</h5>
 		<fieldset>
 			<div class="form__group">
 				<label for="delete-account" class="form__label">This will cancel your account</label>

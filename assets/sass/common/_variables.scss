@@ -1,3 +1,10 @@
+/*
+
+	8-10-16:
+		- Add variables for fieldset margin
+		- Adjust z-index. Popovers and tooltips were appearing over modal overlay
+*/
+
 /* Colors */
 $white: #FFFFFF;
 $gray-lighter: #EEEEEE;
@@ -61,7 +68,8 @@ $padding-large-vertical: $padding-large-horizontal - 3 !default;
 
 // Form padding
 $form-group-spacing: 24px;
-$fieldset-spacing: 60px - $form-group-spacing - 4; // Account for the final form-group element, plus a few extra pixels since an h3 or h4 should lead a new fieldset
+$fieldset-spacing: 60px;
+$fieldset-spacing-calculated: $fieldset-spacing - $form-group-spacing - 4; // Account for the final form-group element, plus a few extra pixels since an h3 or h4 should lead a new fieldset
 
 $button-color: $white !default;
 $button-background: #5C5C5C !default;
@@ -113,11 +121,11 @@ $screen-lg-min: 1200px !default;
 
 $zindex-navbar:            10 !default;
 $zindex-dropdown:          10 !default;
+$zindex-tooltip:           50 !default;
 $zindex-popover:           60 !default;
-$zindex-tooltip:           70 !default;
-$zindex-navbar-fixed:      30 !default;
-$zindex-modal-background:  40 !default;
-$zindex-modal:             50 !default;
+$zindex-navbar-fixed:      70 !default;
+$zindex-modal-background:  80 !default;
+$zindex-modal:             90 !default;
 
 
 //** Popover body background color

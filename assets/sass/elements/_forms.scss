@@ -19,6 +19,12 @@
 		- No longer use the double-colon for :before or :after. Incompatible with all browsers
 		- Standardized some of the spacing between fieldsets, form groups, and headers to formgroups
 		- Headers should be placed within a legend. Legends will get margin comparitive to a form group
+	8-10-16:
+		- Give the final fieldset a bottom margin of 60
+		- Form action div should receive the same amount of spacing as a fieldset
+		- Use variables for fieldset margin
+		- Add new form help text
+		- Add support for contextual dropdowns with new form help text
 */
 
 .form {
@@ -43,7 +49,11 @@
 }
 
 .form__help {
-	line-height: 11px;
+    color: $gray;
+    margin-top: -20px;
+    margin-bottom: 24px;
+    padding-left: 25px;
+    line-height: 25px;
 }	
 
 .form__group {
@@ -82,6 +92,8 @@ p + .form__group  {
 .form__actions {
 	display: flex;
 	width: 100%;
+	margin-top: $fieldset-spacing-calculated;
+	margin-bottom: $fieldset-spacing;
 	.button {
   		flex: 100%;
   		+ .button {
@@ -257,13 +269,16 @@ textarea.form__input__code {
 }
 
 fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  min-width: 0; // Reset `min-width: min-content;` on fieldsets for Chrome and Firefox, to use as block element
-  + fieldset {
-  	margin-top: $fieldset-spacing;
-  }
+	padding: 0;
+	margin: 0;
+	border: 0;
+	min-width: 0; // Reset `min-width: min-content;` on fieldsets for Chrome and Firefox, to use as block element
+	+ fieldset {
+		margin-top: $fieldset-spacing-calculated;
+	}
+	&:last-child {
+		margin-bottom: $fieldset-spacing;
+	}
 }
 
 h1 + fieldset,
@@ -279,7 +294,7 @@ fieldset + h2,
 fieldset + h3,
 fieldset + h4,
 fieldset + h5 {
-    margin-top: $fieldset-spacing;
+    margin-top: $fieldset-spacing-calculated;
 }
 
 legend {
@@ -334,6 +349,7 @@ input[type="checkbox"],
 			content: "";
 			display: inline-block;
 			box-sizing: border-box;
+			background-color: #FFF;
 
 			margin-right: 9px;
 
@@ -549,6 +565,8 @@ input[type="checkbox"],
 	margin-left: 24px;
 	margin-top: -7px;
 	display: none;
+
+	@extend .clearfix;
 }
 
 .form__group {
@@ -569,6 +587,11 @@ input[type="checkbox"],
 	+ .form__radio__label {
 		+ .contextual__input__options {
 			display: block;
+		}
+		+ .form__help {
+			+ .contextual__input__options {
+				display: block;
+			}
 		}
 	}
 }
