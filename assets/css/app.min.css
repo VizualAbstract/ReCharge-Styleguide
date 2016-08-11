@@ -5100,7 +5100,16 @@ h1 + .setup-header__description,
 	Dynamic
 	Heavily dependant on javascript to deliver a specific effect.
 */
-/* line 6, ../sass/dynamic/_tooltips.scss */
+/* line 83, ../sass/app.scss */
+.new {
+  /*
+    8-10-16:
+      - Move the variables to the top of the page
+      - Remove unused lines of CSS
+      - This page now functions a little more similair to Popovers. The goal is to unify this with that.
+  */
+}
+/* line 22, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-button {
   width: 14px;
   height: 16px;
@@ -5112,55 +5121,50 @@ h1 + .setup-header__description,
   vertical-align: baseline;
   line-height: 16px;
   font-size: 16px;
-  padding: 8px;
+  padding: 4px 8px 5px;
   box-sizing: content-box;
   z-index: 51;
 }
-/* line 21, ../sass/dynamic/_tooltips.scss */
+/* line 35, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-button:after {
   content: "\f05a";
 }
-/* line 24, ../sass/dynamic/_tooltips.scss */
+/* line 38, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-button--active {
   color: #4DD6B7;
 }
-/* line 33, ../sass/dynamic/_tooltips.scss */
+/* line 45, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box {
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: 50;
-  display: block;
+  display: none;
   max-width: 500px;
+  color: #FFF;
   font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  opacity: 0;
-  cursor: default;
-  margin: 0 !important;
+  background: #424242;
   background-clip: content-box;
 }
-/* line 49, ../sass/dynamic/_tooltips.scss */
-.new .tooltip-box.in {
-  opacity: 1;
-}
-/* line 52, ../sass/dynamic/_tooltips.scss */
+/* line 64, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.top {
   padding-top: 18px;
 }
-/* line 53, ../sass/dynamic/_tooltips.scss */
+/* line 65, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.right {
   padding-top: 18px;
 }
-/* line 54, ../sass/dynamic/_tooltips.scss */
+/* line 66, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.bottom {
-  padding-top: 18px;
+  padding-bottom: 18px;
 }
-/* line 55, ../sass/dynamic/_tooltips.scss */
+/* line 67, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.left {
   padding-top: 18px;
 }
-/* line 60, ../sass/dynamic/_tooltips.scss */
+/* line 70, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box__inner {
-  font-family: 'ralewaysemibold', arial, sans-serif;
+  font-family: 'ralewayregular', arial, sans-serif;
   max-width: 500px;
   padding: 20px;
   color: #FFF;
@@ -5169,57 +5173,53 @@ h1 + .setup-header__description,
   border-radius: 0;
   font-size: 16px;
 }
-/* line 72, ../sass/dynamic/_tooltips.scss */
-.new .tooltip-box__arrow {
+/* line 87, ../sass/dynamic/_tooltips.scss */
+.new .tooltip-box > .tooltip-box__arrow, .new .tooltip-box > .tooltip-box__arrow:after {
   position: absolute;
+  display: block;
   width: 0;
   height: 0;
   border-color: transparent;
   border-style: solid;
 }
-/* line 81, ../sass/dynamic/_tooltips.scss */
-.new .tooltip-box .tooltip-box__arrow {
-  top: 2px;
-}
-/* line 85, ../sass/dynamic/_tooltips.scss */
-.new .tooltip-box.top .tooltip-box__arrow {
-  left: 50%;
-  bottom: 2px;
-  right: auto;
-  top: auto;
-  margin-left: -10px;
-  border-width: 10px 10px 0;
-  border-top-color: #424242;
-}
-/* line 96, ../sass/dynamic/_tooltips.scss */
-.new .tooltip-box.right .tooltip-box__arrow {
-  top: 8px;
-  left: 0;
-  bottom: auto;
-  right: auto;
-  border-width: 0 10px 10px;
-  border-bottom-color: #424242;
+/* line 98, ../sass/dynamic/_tooltips.scss */
+.new .tooltip-box > .tooltip-box__arrow:after {
+  border-width: 10px;
+  content: "";
 }
 /* line 106, ../sass/dynamic/_tooltips.scss */
-.new .tooltip-box.left .tooltip-box__arrow {
+.new .tooltip-box.right > .tooltip-box__arrow {
   top: 8px;
-  left: auto;
-  bottom: auto;
-  right: 0;
-  border-width: 0 10px 10px;
+}
+/* line 108, ../sass/dynamic/_tooltips.scss */
+.new .tooltip-box.right > .tooltip-box__arrow:after {
+  content: " ";
+  border-top-width: 0;
   border-bottom-color: #424242;
+}
+/* line 114, ../sass/dynamic/_tooltips.scss */
+.new .tooltip-box.bottom > .tooltip-box__arrow {
+  bottom: 18px;
 }
 /* line 116, ../sass/dynamic/_tooltips.scss */
-.new .tooltip-box.bottom .tooltip-box__arrow {
-  top: 8px;
-  left: 50%;
-  bottom: auto;
-  right: auto;
-  margin-left: -10px;
-  border-width: 0 10px 10px;
+.new .tooltip-box.bottom > .tooltip-box__arrow:after {
+  content: " ";
+  border-bottom-width: 0;
+  border-top-color: #424242;
+}
+/* line 123, ../sass/dynamic/_tooltips.scss */
+.new .tooltip-box.left > .tooltip-box__arrow {
+  top: 8;
+  right: 0;
+}
+/* line 126, ../sass/dynamic/_tooltips.scss */
+.new .tooltip-box.left > .tooltip-box__arrow:after {
+  content: " ";
+  right: 0;
+  border-top-width: 0;
   border-bottom-color: #424242;
 }
-/* line 10, ../sass/dynamic/_popovers.scss */
+/* line 16, ../sass/dynamic/_popovers.scss */
 .new .popover-button {
   width: 14px;
   height: 16px;
@@ -5235,15 +5235,15 @@ h1 + .setup-header__description,
   box-sizing: content-box;
   z-index: 61;
 }
-/* line 23, ../sass/dynamic/_popovers.scss */
+/* line 29, ../sass/dynamic/_popovers.scss */
 .new .popover-button:after {
   content: "\f05a";
 }
-/* line 26, ../sass/dynamic/_popovers.scss */
+/* line 32, ../sass/dynamic/_popovers.scss */
 .new .popover-button--active {
   color: #4DD6B7;
 }
-/* line 32, ../sass/dynamic/_popovers.scss */
+/* line 38, ../sass/dynamic/_popovers.scss */
 .new .popover-box {
   position: absolute;
   top: 0;
@@ -5257,42 +5257,42 @@ h1 + .setup-header__description,
   background: #424242;
   background-clip: content-box;
 }
-/* line 49, ../sass/dynamic/_popovers.scss */
+/* line 55, ../sass/dynamic/_popovers.scss */
 .new .popover-box.top {
   padding-top: -2px;
 }
-/* line 50, ../sass/dynamic/_popovers.scss */
+/* line 56, ../sass/dynamic/_popovers.scss */
 .new .popover-box.right {
   padding-top: 18px;
 }
-/* line 51, ../sass/dynamic/_popovers.scss */
+/* line 57, ../sass/dynamic/_popovers.scss */
 .new .popover-box.bottom {
-  padding-top: 18px;
+  padding-bottom: 18px;
 }
-/* line 52, ../sass/dynamic/_popovers.scss */
+/* line 58, ../sass/dynamic/_popovers.scss */
 .new .popover-box.left {
   padding-top: 18px;
 }
-/* line 57, ../sass/dynamic/_popovers.scss */
+/* line 63, ../sass/dynamic/_popovers.scss */
 .new .popover-box__title {
   margin: 0;
   padding: 20px 20px 0;
   font-size: 16px;
   font-family: 'ralewaysemibold', arial, sans-serif;
 }
-/* line 64, ../sass/dynamic/_popovers.scss */
+/* line 70, ../sass/dynamic/_popovers.scss */
 .new .popover-box__content {
   padding: 0 20px 20px;
 }
-/* line 66, ../sass/dynamic/_popovers.scss */
+/* line 72, ../sass/dynamic/_popovers.scss */
 .new .popover-box__content p {
   margin-top: 10px;
 }
-/* line 69, ../sass/dynamic/_popovers.scss */
+/* line 75, ../sass/dynamic/_popovers.scss */
 .new .popover-box__content a {
   cursor: pointer;
 }
-/* line 79, ../sass/dynamic/_popovers.scss */
+/* line 85, ../sass/dynamic/_popovers.scss */
 .new .popover-box > .popover-box__arrow, .new .popover-box > .popover-box__arrow:after {
   position: absolute;
   display: block;
@@ -5301,39 +5301,37 @@ h1 + .setup-header__description,
   border-color: transparent;
   border-style: solid;
 }
-/* line 92, ../sass/dynamic/_popovers.scss */
+/* line 96, ../sass/dynamic/_popovers.scss */
 .new .popover-box > .popover-box__arrow:after {
   border-width: 10px;
   content: "";
 }
-/* line 113, ../sass/dynamic/_popovers.scss */
+/* line 104, ../sass/dynamic/_popovers.scss */
 .new .popover-box.right > .popover-box__arrow {
   top: 8px;
 }
-/* line 128, ../sass/dynamic/_popovers.scss */
+/* line 106, ../sass/dynamic/_popovers.scss */
 .new .popover-box.right > .popover-box__arrow:after {
   content: " ";
   border-top-width: 0;
   border-bottom-color: #424242;
 }
-/* line 134, ../sass/dynamic/_popovers.scss */
+/* line 112, ../sass/dynamic/_popovers.scss */
 .new .popover-box.bottom > .popover-box__arrow {
-  left: 50%;
-  top: 8;
+  bottom: 18px;
 }
-/* line 156, ../sass/dynamic/_popovers.scss */
+/* line 114, ../sass/dynamic/_popovers.scss */
 .new .popover-box.bottom > .popover-box__arrow:after {
   content: " ";
-  margin-left: -10px;
-  border-top-width: 0;
-  border-bottom-color: #424242;
+  border-bottom-width: 0;
+  border-top-color: #424242;
 }
-/* line 164, ../sass/dynamic/_popovers.scss */
+/* line 121, ../sass/dynamic/_popovers.scss */
 .new .popover-box.left > .popover-box__arrow {
   top: 8;
   right: 0;
 }
-/* line 178, ../sass/dynamic/_popovers.scss */
+/* line 124, ../sass/dynamic/_popovers.scss */
 .new .popover-box.left > .popover-box__arrow:after {
   content: " ";
   right: 0;

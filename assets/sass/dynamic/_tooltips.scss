@@ -1,7 +1,23 @@
+/*
+  8-10-16:
+    - Move the variables to the top of the page
+    - Remove unused lines of CSS
+    - This page now functions a little more similair to Popovers. The goal is to unify this with that.
+*/
 //
 // Tooltips
 // --------------------------------------------------
+$tooltip-bg: #424242;
+$border-radius-large: 0;
+$tooltip-arrow-color: #424242;
+$tooltip-title-bg: #424242;
 $tooltip-arrow-width: 10px;
+
+$tooltip-arrow-size: 10px;
+$tooltip-max-width: 500px;
+
+$tooltip-arrow-padding: 13px;
+$tooltip-arrow-offset: 2px;
 
 .tooltip-button {
   width: 14px;
@@ -14,51 +30,45 @@ $tooltip-arrow-width: 10px;
   vertical-align: baseline;
   line-height: $font-size-base;
   font-size: $font-size-base;
-  padding: 8px;
+  padding: 4px 8px 5px;
   box-sizing: content-box;
-  z-index: $zindex-tooltip+1;
-
   &:after {
     content: "\f05a";
   }
   &--active {
     color: #4DD6B7;
   }
+  z-index: $zindex-tooltip+1;
 }
-
-$tooltip-arrow-size: 10px;
-$tooltip-max-width: 500px;
 
 // Base class
 .tooltip-box {
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: $zindex-tooltip;
-  display: block;
-  max-width: 500px;
+  display: none;
+  max-width: $tooltip-max-width;
+  color: #FFF;
   // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
   // So reset our font and text properties to avoid inheriting weird values.
+
+  // @include reset-text;
   font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  opacity: 0;
-  cursor: default;
-  margin: 0 !important;
-  // @include opacity(0);
+  background: $tooltip-bg;
   background-clip: content-box;
 
-  &.in {
-    opacity: 1;
-  }
+  // &.in {
+  //   opacity: 1;
+  // }
   &.top     { padding-top: $tooltip-arrow-width+8; }
   &.right   { padding-top: $tooltip-arrow-width+8; }
-  &.bottom  { padding-top: $tooltip-arrow-width+8; }
+  &.bottom  { padding-bottom: $tooltip-arrow-width+8; }
   &.left    { padding-top: $tooltip-arrow-width+8; }
 }
-$tooltip-arrow-padding: 13px;
-$tooltip-arrow-offset: 2px;
 // Wrapper for the tooltip content
 .tooltip-box__inner {
-  font-family: 'ralewaysemibold', arial, sans-serif;
+  font-family: 'ralewayregular', arial, sans-serif;
   max-width: $tooltip-max-width;
   padding: 20px;
   color: #FFF;
@@ -68,59 +78,56 @@ $tooltip-arrow-offset: 2px;
   font-size: 16px;
 }
 
+
 // Arrows
-.tooltip-box__arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
+//
+// .arrow is outer, .arrow:after is inner
+
+.tooltip-box > .tooltip-box__arrow {
+  &,
+  &:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+  }
 }
-// Note: Deprecated .top-left, .top-right, .bottom-left, and .bottom-right as of v3.3.1
+
+.tooltip-box > .tooltip-box__arrow:after {
+  border-width: $tooltip-arrow-width;
+  content: "";
+}
+
 .tooltip-box {
-  .tooltip-box__arrow {
-    top: $tooltip-arrow-offset;
+  &.top > .tooltip-box__arrow {
   }
-  &.top {
-    .tooltip-box__arrow {
-      left: 50%;
-      bottom: $tooltip-arrow-offset;
-      right: auto;
-      top: auto;
-      margin-left: -$tooltip-arrow-size;
-      border-width:  $tooltip-arrow-size $tooltip-arrow-size 0;
-      border-top-color: #424242;
+  &.right > .tooltip-box__arrow {
+    top: 8px;
+    &:after {
+      content: " ";
+      border-top-width: 0;
+      border-bottom-color: $tooltip-arrow-color;
     }
   }
-  &.right {
-    .tooltip-box__arrow {
-      top: 8px;
-      left: 0;
-      bottom: auto;
-      right: auto;
-      border-width: 0 $tooltip-arrow-size $tooltip-arrow-size;
-      border-bottom-color: #424242;
+  &.bottom > .tooltip-box__arrow {
+    bottom: 18px;
+    &:after {
+      content: " ";
+      border-bottom-width: 0;
+      border-top-color: $tooltip-arrow-color;
     }
   }
-  &.left {
-    .tooltip-box__arrow {
-      top: 8px;
-      left: auto;
-      bottom: auto;
+
+  &.left > .tooltip-box__arrow {
+    top: 8;
+    right: 0;
+    &:after {
+      content: " ";
       right: 0;
-      border-width: 0 $tooltip-arrow-size $tooltip-arrow-size;
-      border-bottom-color: #424242;
-    }
-  }
-  &.bottom {
-    .tooltip-box__arrow {
-      top: 8px;
-      left: 50%;
-      bottom: auto;
-      right: auto;
-      margin-left: -$tooltip-arrow-size;
-      border-width: 0 $tooltip-arrow-size $tooltip-arrow-size;
-      border-bottom-color: #424242;
+      border-top-width: 0;
+      border-bottom-color: $tooltip-arrow-color;
     }
   }
 }
