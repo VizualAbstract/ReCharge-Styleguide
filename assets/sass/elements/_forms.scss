@@ -25,6 +25,7 @@
 		- Use variables for fieldset margin
 		- Add new form help text
 		- Add support for contextual dropdowns with new form help text
+		- Quick fix, too much margin beneath a form__select in contextual form dropdown
 */
 
 .form {
@@ -567,6 +568,12 @@ input[type="checkbox"],
 	display: none;
 
 	@extend .clearfix;
+
+	.form__group {
+		.form__select {
+			margin-bottom: 0; // Quick fix, too much margin beneath a form__select in contextual form dropdown
+		}
+	}
 }
 
 .form__group {
