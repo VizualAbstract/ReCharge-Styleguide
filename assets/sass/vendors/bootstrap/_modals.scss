@@ -114,23 +114,8 @@
 
 .modal__actions {
 	@extend .form__actions;
-	// font-size: 0;
-	// background: #FFF;
-	// border-top-width: 0 !important;
-	// .button {
-	// 	&,
-	// 	&--block.button {
-	// 		vertical-align: baseline;
-	// 		display: inline-block;
-	// 		width: 49%;
-	// 		+ .button {
-	// 			&,
-	// 			&--block.button {
-	// 				margin-left: 2%;
-	// 			}
-	// 		}
-	// 	}
-	// }
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .fade {

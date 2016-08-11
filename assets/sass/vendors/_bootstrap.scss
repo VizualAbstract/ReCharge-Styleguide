@@ -113,6 +113,8 @@
 
 .modal__actions {
 	@extend .form__actions;
+	margin-top: 0;
+	margin-bottom: 0;
 	.button {
 		@extend .button--large;
 	}
@@ -125,15 +127,6 @@
 .fade.in {
 	opacity: 1;
 }
-
-
-
-
-
-
-
-
-
 
 
 .dropup,

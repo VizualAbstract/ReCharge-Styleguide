@@ -23,7 +23,7 @@ Popover <span class="popover-button"
 
 <h2 id="modals">Modals</h2>
 <div class="example">
-<button data-toggle="modal__window" data-target="#modal" class="button">Launch Modal</button>
+<button data-toggle="modal__window" data-target="#modal__context_feature_action" class="button">Launch Modal</button>
 
 <div id="modal__context_feature_action" class="modal fade">
 	<div class="modal__dialog">

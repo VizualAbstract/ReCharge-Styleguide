@@ -1864,7 +1864,7 @@ h1 + .setup-header__description,
 }
 /* line 51, ../sass/elements/_forms.scss */
 .new .form__help {
-  color: #8E8F8E;
+  color: #676767;
   margin-top: -20px;
   margin-bottom: 24px;
   padding-left: 25px;
@@ -5108,6 +5108,12 @@ h1 + .setup-header__description,
       - Remove unused lines of CSS
       - This page now functions a little more similair to Popovers. The goal is to unify this with that.
   */
+  /*
+    8-10-16:
+      - Move the variables to the top of the page
+      - Remove unused lines of CSS
+      - This page now functions a little more similair to Tooltips. The goal is to unify this with that.
+  */
 }
 /* line 22, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-button {
@@ -5219,7 +5225,7 @@ h1 + .setup-header__description,
   border-top-width: 0;
   border-bottom-color: #424242;
 }
-/* line 16, ../sass/dynamic/_popovers.scss */
+/* line 22, ../sass/dynamic/_popovers.scss */
 .new .popover-button {
   width: 14px;
   height: 16px;
@@ -5235,15 +5241,15 @@ h1 + .setup-header__description,
   box-sizing: content-box;
   z-index: 61;
 }
-/* line 29, ../sass/dynamic/_popovers.scss */
+/* line 35, ../sass/dynamic/_popovers.scss */
 .new .popover-button:after {
   content: "\f05a";
 }
-/* line 32, ../sass/dynamic/_popovers.scss */
+/* line 38, ../sass/dynamic/_popovers.scss */
 .new .popover-button--active {
   color: #4DD6B7;
 }
-/* line 38, ../sass/dynamic/_popovers.scss */
+/* line 44, ../sass/dynamic/_popovers.scss */
 .new .popover-box {
   position: absolute;
   top: 0;
@@ -5257,42 +5263,42 @@ h1 + .setup-header__description,
   background: #424242;
   background-clip: content-box;
 }
-/* line 55, ../sass/dynamic/_popovers.scss */
+/* line 61, ../sass/dynamic/_popovers.scss */
 .new .popover-box.top {
   padding-top: -2px;
 }
-/* line 56, ../sass/dynamic/_popovers.scss */
+/* line 62, ../sass/dynamic/_popovers.scss */
 .new .popover-box.right {
   padding-top: 18px;
 }
-/* line 57, ../sass/dynamic/_popovers.scss */
+/* line 63, ../sass/dynamic/_popovers.scss */
 .new .popover-box.bottom {
   padding-bottom: 18px;
 }
-/* line 58, ../sass/dynamic/_popovers.scss */
+/* line 64, ../sass/dynamic/_popovers.scss */
 .new .popover-box.left {
   padding-top: 18px;
 }
-/* line 63, ../sass/dynamic/_popovers.scss */
+/* line 69, ../sass/dynamic/_popovers.scss */
 .new .popover-box__title {
   margin: 0;
   padding: 20px 20px 0;
   font-size: 16px;
   font-family: 'ralewaysemibold', arial, sans-serif;
 }
-/* line 70, ../sass/dynamic/_popovers.scss */
+/* line 76, ../sass/dynamic/_popovers.scss */
 .new .popover-box__content {
   padding: 0 20px 20px;
 }
-/* line 72, ../sass/dynamic/_popovers.scss */
+/* line 78, ../sass/dynamic/_popovers.scss */
 .new .popover-box__content p {
   margin-top: 10px;
 }
-/* line 75, ../sass/dynamic/_popovers.scss */
+/* line 81, ../sass/dynamic/_popovers.scss */
 .new .popover-box__content a {
   cursor: pointer;
 }
-/* line 85, ../sass/dynamic/_popovers.scss */
+/* line 91, ../sass/dynamic/_popovers.scss */
 .new .popover-box > .popover-box__arrow, .new .popover-box > .popover-box__arrow:after {
   position: absolute;
   display: block;
@@ -5301,37 +5307,37 @@ h1 + .setup-header__description,
   border-color: transparent;
   border-style: solid;
 }
-/* line 96, ../sass/dynamic/_popovers.scss */
+/* line 102, ../sass/dynamic/_popovers.scss */
 .new .popover-box > .popover-box__arrow:after {
   border-width: 10px;
   content: "";
 }
-/* line 104, ../sass/dynamic/_popovers.scss */
+/* line 110, ../sass/dynamic/_popovers.scss */
 .new .popover-box.right > .popover-box__arrow {
   top: 8px;
 }
-/* line 106, ../sass/dynamic/_popovers.scss */
+/* line 112, ../sass/dynamic/_popovers.scss */
 .new .popover-box.right > .popover-box__arrow:after {
   content: " ";
   border-top-width: 0;
   border-bottom-color: #424242;
 }
-/* line 112, ../sass/dynamic/_popovers.scss */
+/* line 118, ../sass/dynamic/_popovers.scss */
 .new .popover-box.bottom > .popover-box__arrow {
   bottom: 18px;
 }
-/* line 114, ../sass/dynamic/_popovers.scss */
+/* line 120, ../sass/dynamic/_popovers.scss */
 .new .popover-box.bottom > .popover-box__arrow:after {
   content: " ";
   border-bottom-width: 0;
   border-top-color: #424242;
 }
-/* line 121, ../sass/dynamic/_popovers.scss */
+/* line 127, ../sass/dynamic/_popovers.scss */
 .new .popover-box.left > .popover-box__arrow {
   top: 8;
   right: 0;
 }
-/* line 124, ../sass/dynamic/_popovers.scss */
+/* line 130, ../sass/dynamic/_popovers.scss */
 .new .popover-box.left > .popover-box__arrow:after {
   content: " ";
   right: 0;
@@ -5489,43 +5495,48 @@ h1 + .setup-header__description,
     width: 900px;
   }
 }
-/* line 121, ../sass/vendors/_bootstrap.scss */
+/* line 114, ../sass/vendors/_bootstrap.scss */
+.new .modal__actions {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* line 123, ../sass/vendors/_bootstrap.scss */
 .new .fade {
   opacity: 0;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-/* line 125, ../sass/vendors/_bootstrap.scss */
+/* line 127, ../sass/vendors/_bootstrap.scss */
 .new .fade.in {
   opacity: 1;
 }
-/* line 139, ../sass/vendors/_bootstrap.scss */
+/* line 132, ../sass/vendors/_bootstrap.scss */
 .new .dropup,
 .new .dropdown {
   position: relative;
 }
-/* line 143, ../sass/vendors/_bootstrap.scss */
+/* line 136, ../sass/vendors/_bootstrap.scss */
 .new .dropdown-toggle:focus {
   outline: 0;
 }
-/* line 146, ../sass/vendors/_bootstrap.scss */
+/* line 139, ../sass/vendors/_bootstrap.scss */
 .new .dropdown__menu.pull-right {
   right: 0;
   left: auto;
 }
-/* line 150, ../sass/vendors/_bootstrap.scss */
+/* line 143, ../sass/vendors/_bootstrap.scss */
 .new .dropdown__menu > li > a {
   display: block;
   clear: both;
   white-space: nowrap;
 }
-/* line 155, ../sass/vendors/_bootstrap.scss */
+/* line 148, ../sass/vendors/_bootstrap.scss */
 .new .dropdown__menu > .active > a,
 .new .dropdown__menu > .active > a:hover,
 .new .dropdown__menu > .active > a:focus {
   outline: 0;
 }
-/* line 160, ../sass/vendors/_bootstrap.scss */
+/* line 153, ../sass/vendors/_bootstrap.scss */
 .new .dropdown__menu > .disabled > a:hover,
 .new .dropdown__menu > .disabled > a:focus {
   text-decoration: none;
@@ -5534,25 +5545,25 @@ h1 + .setup-header__description,
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   cursor: not-allowed;
 }
-/* line 168, ../sass/vendors/_bootstrap.scss */
+/* line 161, ../sass/vendors/_bootstrap.scss */
 .new .open > .dropdown__menu {
   display: block;
 }
-/* line 171, ../sass/vendors/_bootstrap.scss */
+/* line 164, ../sass/vendors/_bootstrap.scss */
 .new .open > a {
   outline: 0;
 }
-/* line 174, ../sass/vendors/_bootstrap.scss */
+/* line 167, ../sass/vendors/_bootstrap.scss */
 .new .dropdown__menu-right {
   left: auto;
   right: 0;
 }
-/* line 178, ../sass/vendors/_bootstrap.scss */
+/* line 171, ../sass/vendors/_bootstrap.scss */
 .new .dropdown__menu-left {
   left: 0;
   right: auto;
 }
-/* line 185, ../sass/vendors/_bootstrap.scss */
+/* line 178, ../sass/vendors/_bootstrap.scss */
 .new .dropdown-backdrop,
 .new .dropdown__backdrop {
   position: static;
@@ -5562,23 +5573,23 @@ h1 + .setup-header__description,
   top: 0;
   z-index: 990;
 }
-/* line 196, ../sass/vendors/_bootstrap.scss */
+/* line 189, ../sass/vendors/_bootstrap.scss */
 .new .collapse {
   display: none;
 }
-/* line 199, ../sass/vendors/_bootstrap.scss */
+/* line 192, ../sass/vendors/_bootstrap.scss */
 .new .collapse.in {
   display: block;
 }
-/* line 202, ../sass/vendors/_bootstrap.scss */
+/* line 195, ../sass/vendors/_bootstrap.scss */
 .new tr.collapse.in {
   display: table-row;
 }
-/* line 205, ../sass/vendors/_bootstrap.scss */
+/* line 198, ../sass/vendors/_bootstrap.scss */
 .new tbody.collapse.in {
   display: table-row-group;
 }
-/* line 208, ../sass/vendors/_bootstrap.scss */
+/* line 201, ../sass/vendors/_bootstrap.scss */
 .new .collapsing {
   position: relative;
   height: 0;
