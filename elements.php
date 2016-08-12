@@ -134,7 +134,7 @@
 </div><!-- .description -->
 <div class="example">
 <?php include('_elements/tables-responsive.php'); ?>
-</div>
+</div><!-- .example -->
 
 <div class="description">
 	<p>
