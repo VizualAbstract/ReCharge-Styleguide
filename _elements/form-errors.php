@@ -1,0 +1,1 @@
+<div class="form__errors"><p>Error 400: Could not find payment information</p></div>

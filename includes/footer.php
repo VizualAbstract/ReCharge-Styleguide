@@ -1,7 +1,7 @@
 	
-				</div><!-- .styleguide__content -->
-			</div><!-- .styleguide__page -->
-		</div><!-- .container -->
+				</div><!-- .styleguide__page -->
+			</div><!-- .styleguide__content -->
+		</span><!-- .new -->
 		<script>
 			$(function(){
 				$('.form__color').each(function(i){
@@ -15,33 +15,44 @@
 					var color = $(this).val();
 					$('input[name="' + color_picker + '"]').spectrum('set', color);
 				});
-
 				// When someone clicks or focuses on the color input, show the color picker
 				$(document).on('focus, click', '.form__color', function() {
 					var color_picker = $(this).attr('id');
 					$('input[name="' + color_picker + '"]').spectrum('show');
 				});
-
 				// When a person clicks outside of the text input, read the value and try to show the relative hex code
 				$(document).on('blur', '.form__color', function() {
 					var color_picker = $(this).attr('id');
 					var color = $('input[name="' + color_picker + '"]').spectrum('get', color);
 					$(this).val(color);
 				});
-
 				// Initializes the spectrum color picker
 				$('.form__color__picker').spectrum({
-				    showInitial: false,
-				    showInput: false,
-				    checkoutFiresChange: true,
-				    showButtons: false,
-				    showPalette: false,
-				    preferredFormat: "hex",
-				    move: function(color) {
-				    	// When a color is chosen, update the associated text input field
+					showInitial: false,
+					showInput: false,
+					checkoutFiresChange: true,
+					showButtons: false,
+					showPalette: false,
+					preferredFormat: "hex",
+					move: function(color) {
+						// When a color is chosen, update the associated text input field
 						var color_picker = $(this).attr('name');
-				        $('#' + color_picker).val(color);
-				    }
+						$('#' + color_picker).val(color);
+					}
+				});
+			});
+		</script>
+		<script>
+			$(function() {
+				$('.table--stacked').each(function(i) {
+					var thead_th = $(this).find('thead th');
+					var tbody_tr = $(this).find('tbody tr');
+					$(tbody_tr).each(function(e) {
+						var column = $(this).find('td')
+						$(column).each(function(c) {
+							$(this).attr('data-label', $(thead_th[c]).text());
+						});
+					});
 				});
 			});
 		</script>
