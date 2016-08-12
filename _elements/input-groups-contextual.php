@@ -2,9 +2,6 @@
 	<input id="radio_group_contextual_1" type="radio" name="radio_group_contextual" class="form__radio">
 	<label for="radio_group_contextual_1" class="form__radio__label">Only storeowner is able to cancel subscription</label>
 
-	<input id="radio_group_contextual_1" type="radio" name="radio_group_contextual" class="form__radio">
-	<label for="radio_group_contextual_1" class="form__radio__label">Only storeowner is able to cancel subscription</label>
-
 	<input id="radio_group_contextual_2" type="radio" name="radio_group_contextual" checked="checked" class="form__radio">
 	<label for="radio_group_contextual_2" class="form__radio__label">Customer is able to cancel subscription</label>
 	<p class="form__help">This is help text for the form input</p>
