@@ -23,7 +23,7 @@
 <h2 id="animation">Animation</h2>
 <p>This started off as a misc item, where we needed a loading animation for a modal. The assets created for this are valuable, although the modal was removed by Mike.</p>
 <div class="example">
-<?php include('_style/animation.phhp'); ?>
+<?php include('_style/animation.php'); ?>
 </div><!-- .example -->
 
 <?php include('includes/footer.php'); ?>

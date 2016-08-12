@@ -6,13 +6,17 @@
 <hr>
 
 <h2 id="setup-header">Setup Header</h2>
-<p>The previous base class name for this component was <code>.header</code>, but this was before I realized this was the Setup Header, not a standard header. The old class nomiclature will be removed in the future.</p>
+<div class="description">
+	<p>The previous base class name for this component was <code>.header</code>, but this was before I realized this was the Setup Header, not a standard header. The old class nomiclature will be removed in the future.</p>
+</div><!-- .description -->
 <div class="example">
 <?php include('_components/setup-header.php'); ?>
 </div><!-- .example -->
 
 <h2 id="page-title">Page Title</h2>
-<p>The page title relies on the title-bar to create the header-to-action layout, but now adds the ability to include a description</p>
+<div class="description">
+	<p>The page title relies on the title-bar to create the header-to-action layout, but now adds the ability to include a description</p>
+</div><!-- .description -->
 <div class="example">
 <?php include('_components/page-title.php'); ?>
 </div><!-- .example -->
@@ -41,7 +45,7 @@
 <h2 id="dropdowns">Dropdowns</h2>
 <div class="example">
 <?php include('_components/dropdowns.php'); ?>
-</div>
+</div><!-- .example -->
 
 <h2 id="switches">Switches</h2>
 <div class="example">
