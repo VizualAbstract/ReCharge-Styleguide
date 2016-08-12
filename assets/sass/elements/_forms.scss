@@ -30,6 +30,7 @@
 		- Create form__help
 		- Adjust spacing between form__groups and form__help
 		- Add spacing beneath contextual menus
+		- Make adjustments to spacing above radio and checkbox buttons in form groups, so it matches better with other elements in form groups
 */
 
 .form {
@@ -76,7 +77,7 @@
 		margin-top: 10px;
 	}
 	p:last-child {
-		margin-bottom: -4px;
+    	margin-bottom: 5px;
 	}
 }
 p + .form__group  {
@@ -351,6 +352,12 @@ input[type="checkbox"],
 .form__radio,
 .form__checkbox {
 	display: none;
+	&:first-of-type {
+		+ .form__radio__label,
+		+ .form__checkbox__label {
+			margin-top: 6px; // Make adjustments to spacing above radio and checkbox buttons in form groups, so it matches better with other elements in form groups
+		}
+	}
 	+ label,
 	+ .form__radio__label,
 	+ .form__checkbox__label {

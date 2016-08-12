@@ -1,6 +1,11 @@
 <div class="form__group">
 	<label class="form__label">First Name</label>
 	<input type="text" class="form__input" placeholder="James" value="">
+	<p class="form__help">Do not include your middle name</p>
+</div><!-- .form__group -->
+<div class="form__group">
+	<label class="form__label">First Name</label>
+	<input type="text" class="form__input" placeholder="James" value="">
 </div><!-- .form__group -->
 <div class="form__group">
 	<label class="form__label">Last Name</label>
