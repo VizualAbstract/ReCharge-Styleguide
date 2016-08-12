@@ -1,21 +1,3 @@
-<?php include('includes/header.php'); ?>
-<h1>Dynamic</h1>
-<p>Heavily dependant on javascript to deliver a specific effect.</p>
-
-<hr>
-
-<h2 id="tooltips">Tooltips</h2>
-<div class="example">
-<?php include('_dynamic/tooltips.php'); ?>
-</div><!-- .example -->
-
-<h2 id="popover">Popover</h2>
-<div class="example">
-<?php include('_dynamic/popover.php'); ?>
-</div><!-- .example -->
-
-<h2 id="modals">Modals</h2>
-<div class="example">
 <button data-toggle="modal__window" data-target="#modal__context_feature_action" class="button">Launch Modal</button>
 
 <div id="modal__context_feature_action" class="modal fade">
@@ -33,6 +15,3 @@
 		</div><!-- .modal__content -->
 	</div><!-- .modal__dialog -->
 </div><!-- #modal__context_feature_action .modal .fade -->
-</div><!-- .example -->
-
-<?php include('includes/footer.php'); ?>
