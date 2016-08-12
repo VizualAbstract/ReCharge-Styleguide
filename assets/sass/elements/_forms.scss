@@ -26,6 +26,8 @@
 		- Add new form help text
 		- Add support for contextual dropdowns with new form help text
 		- Quick fix, too much margin beneath a form__select in contextual form dropdown
+	8-12-16:
+		- Adjust spacing between form__groups and form__help
 */
 
 .form {
@@ -50,21 +52,29 @@
 }
 
 .form__help {
-    color: $gray-dark;
-    margin-top: -20px;
-    margin-bottom: 24px;
-    padding-left: 25px;
-    line-height: 25px;
-}	
+	color: $gray-dark;
+	margin-top: -6px;
+	margin-bottom: 16px;
+	line-height: 25px;
+}
+
+.form__checkbox__label,
+.form__radio__label {
+	+ .form__help {
+		margin-top: -19px;
+		padding-left: 25px;
+	}
+}
 
 .form__group {
-	margin-bottom: $form-group-spacing;
+	@extend .clearfix;
+	margin-bottom: $form-group-spacing-calculated;
 	position: relative;
 	.button {
 		margin-top: 10px;
 	}
 	p:last-child {
-    	margin-bottom: -4px;
+		margin-bottom: -4px;
 	}
 }
 p + .form__group  {
@@ -344,6 +354,7 @@ input[type="checkbox"],
 	+ .form__checkbox__label {
 		cursor: pointer;
 		display: block;
+		line-height: 20px;
 		&:before {
 			width: 16px;
 			height: 16px;

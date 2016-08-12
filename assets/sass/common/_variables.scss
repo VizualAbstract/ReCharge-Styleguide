@@ -68,6 +68,7 @@ $padding-large-vertical: $padding-large-horizontal - 3 !default;
 
 // Form padding
 $form-group-spacing: 24px;
+$form-group-spacing-calculated: $form-group-spacing - 8;
 $fieldset-spacing: 60px;
 $fieldset-spacing-calculated: $fieldset-spacing - $form-group-spacing - 4; // Account for the final form-group element, plus a few extra pixels since an h3 or h4 should lead a new fieldset
 
