@@ -6,6 +6,8 @@
 	- Added the old title-info element for organization
 	8-4-2016: 
 		- page-titles added
+	8-15-2016:
+		- Give inline-buttons margin between eachother
 */
 
 .page-title {
@@ -69,6 +71,9 @@
 		text-align: right;
 		font-size: $font-size-base;
 		white-space: nowrap;
+		.button + .button {
+			margin-left: 9px;
+		}
 	}
 }
 

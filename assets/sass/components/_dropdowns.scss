@@ -11,10 +11,21 @@
 		- The inner link now receives that padding (7px 15px)
 		- 'left' position removed from caret
 		- 'left-margin' added to caret for even spacing between it and the dropdown button text
+	8-15-2016
+		- Make adjustments to dropdown so it supports having h1-h5 elements as the target-link for the dropdown
+		- Use negative-marign to fix h1-h5 tags
 */
+
 .dropdown {
 	position: relative;
 	padding: 0;
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5 {
+		display: inline;
+	}
 	&--left {
 		.dropdown__menu {
 			left: 0;
@@ -22,9 +33,12 @@
 		}
 	}
 	&--right {
-		.dropdown__menu {
-			left: auto;
-			right: 0;
+		@media screen and (min-width: $screen-sm-min) {
+			display: inline-block;
+			.dropdown__menu {
+				left: auto;
+				right: 0;
+			}
 		}
 	}
 	&--open {
@@ -51,17 +65,28 @@
     &:hover {
     	color: inherit;
     }
-	&::after {
+	&:after {
 		content: '\f0d7';
 		position: relative;
 		font-family: FontAwesome;
 		font-weight: normal;
 		font-size: 19px;
 		line-height: 1;
-		top: 2px;
 		display: inline-block;
-		margin-left: 10px;
 		margin-right: 1px;
+
+		top: 2px;
+		margin-left: 10px;
+	}
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5 {
+		top: 2px;
+		position: relative;
+		margin-right: -$padding-base-horizontal / 2;
+		margin-left: -$padding-base-horizontal;
 	}
 }
 .dropdown__menu {

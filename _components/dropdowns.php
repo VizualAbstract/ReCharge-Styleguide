@@ -18,3 +18,16 @@
 		<li><a href="#">Number Subscribers per Interval</a></li>
 	</ul>
 </div><!-- .button .dropdown -->
+
+<div class="dropdown dropdown--right">
+	<a href="#" class="dropdown__trigger" data-toggle="dropdown__menu">
+		<h3>
+			Recurring Charge Confirmation
+		</h3>
+	</a><!-- .dropdown__trigger -->
+	<ul class="dropdown__menu list">
+		<li><a href="#">Link 1</a></li>
+		<li><a href="#">Link 2</a></li>
+		<li><a href="#">Link 3</a></li>
+	</ul>
+</div><!-- .button .dropdown -->

@@ -31,6 +31,8 @@
 		- Adjust spacing between form__groups and form__help
 		- Add spacing beneath contextual menus
 		- Make adjustments to spacing above radio and checkbox buttons in form groups, so it matches better with other elements in form groups
+	8-15-16:
+		- Increase margin between inline buttons
 */
 
 .form {
@@ -111,7 +113,7 @@ p + .form__group  {
 	.button {
   		flex: 100%;
   		+ .button {
-  			margin-left: 10px;
+  			margin-left: 13px;
   		}
 	}
 }

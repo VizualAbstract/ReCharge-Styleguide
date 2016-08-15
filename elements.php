@@ -56,6 +56,7 @@
 </div><!-- .example -->
 
 <h2 id="inputs-color">Inputs: Color</h2>
+<p>As with all inputs, each color input requires a unique and relevant ID and name attribute.</p>
 <div class="example">
 <?php include('_elements/inputs-color.php'); ?>
 </div><!-- .example -->
