@@ -2784,6 +2784,11 @@ h1 + .setup-header__description,
   	Version 1.0
   	Date: 5-5-2016
   	Author: Corey M. Capetillo
+  	8-15-16:
+  		- Make switches inline-block;
+  		- Set switch buttons to box-sizing: border-box;
+  		- Add padding on either end as 5px;
+  		- Set font-weight to medium
   */
   /* 
   	Components: Info Bars
@@ -2944,20 +2949,20 @@ h1 + .setup-header__description,
   color: inherit;
   padding: 0 18px;
 }
-/* line 7, ../sass/components/_switches.scss */
+/* line 12, ../sass/components/_switches.scss */
 .new .switch {
+  font-family: 'raleway-medium', arial, sans-serif;
   font-size: 14px;
   background-color: #EEEEEE;
   color: #424242;
-  display: block;
+  display: inline-block;
   cursor: pointer;
   height: 34px;
   line-height: 34px;
   border-radius: 17px;
-  width: 145px;
   position: relative;
 }
-/* line 18, ../sass/components/_switches.scss */
+/* line 23, ../sass/components/_switches.scss */
 .new .switch--large {
   min-width: 300px;
   width: 100%;
@@ -2967,38 +2972,38 @@ h1 + .setup-header__description,
   border-radius: 22px;
   font-size: 16px;
 }
-/* line 26, ../sass/components/_switches.scss */
+/* line 31, ../sass/components/_switches.scss */
 .new .switch--large .switch__overlay {
   height: 44px;
   border-radius: 22px;
 }
-/* line 30, ../sass/components/_switches.scss */
+/* line 35, ../sass/components/_switches.scss */
 .new .switch--large .switch__left,
 .new .switch--large .switch__right {
   -webkit-transition: color .3s;
   transition: color .3s;
 }
-/* line 34, ../sass/components/_switches.scss */
+/* line 39, ../sass/components/_switches.scss */
 .new .switch--large .switch__left {
   color: #FFFFFF;
 }
-/* line 37, ../sass/components/_switches.scss */
+/* line 42, ../sass/components/_switches.scss */
 .new .switch--large .switch__right {
   color: #000000;
 }
-/* line 41, ../sass/components/_switches.scss */
+/* line 46, ../sass/components/_switches.scss */
 .new .switch--large .switch__input:checked + .switch__overlay + .switch__left {
   color: #000000;
 }
-/* line 44, ../sass/components/_switches.scss */
+/* line 49, ../sass/components/_switches.scss */
 .new .switch--large .switch__input:checked + .switch__overlay + .switch__left + .switch__right {
   color: #FFFFFF;
 }
-/* line 50, ../sass/components/_switches.scss */
+/* line 55, ../sass/components/_switches.scss */
 .new .switch__input {
   display: none;
 }
-/* line 53, ../sass/components/_switches.scss */
+/* line 58, ../sass/components/_switches.scss */
 .new .switch__overlay {
   height: 34px;
   width: 50%;
@@ -3012,24 +3017,27 @@ h1 + .setup-header__description,
   background: #4DD6B7;
   border-radius: 17px;
 }
-/* line 65, ../sass/components/_switches.scss */
+/* line 70, ../sass/components/_switches.scss */
 .new .switch__left,
 .new .switch__right {
+  box-sizing: border-box;
   display: inline-block;
   width: 50%;
   text-align: center;
   position: relative;
   z-index: 20;
+  padding-left: 16px;
+  padding-right: 16px;
 }
-/* line 73, ../sass/components/_switches.scss */
+/* line 81, ../sass/components/_switches.scss */
 .new .switch__left {
   float: left;
 }
-/* line 76, ../sass/components/_switches.scss */
+/* line 84, ../sass/components/_switches.scss */
 .new .switch__right {
   float: right;
 }
-/* line 79, ../sass/components/_switches.scss */
+/* line 87, ../sass/components/_switches.scss */
 .new .switch--checked .switch__input + .switch__overlay,
 .new .switch__input:checked + .switch__overlay {
   left: 50%;
@@ -3497,38 +3505,41 @@ h1 + .setup-header__description,
   display: table;
   width: 100%;
 }
-/* line 4, ../sass/components/_action-list.scss */
+/* line 7, ../sass/components/_action-list.scss */
+.new .action-list--border .action-list__item__content, .new .action-list--border .action-list__item__action {
+  border-bottom: 1px solid #EEE;
+}
+/* line 14, ../sass/components/_action-list.scss */
 .new .action-list__item {
   display: table-row;
   width: 100%;
   text-align: left;
 }
-/* line 8, ../sass/components/_action-list.scss */
+/* line 18, ../sass/components/_action-list.scss */
 .new .action-list__item__content, .new .action-list__item__action {
   display: table-cell;
   height: 75px;
-  border-bottom: 1px solid #EEE;
   vertical-align: middle;
 }
-/* line 15, ../sass/components/_action-list.scss */
+/* line 24, ../sass/components/_action-list.scss */
 .new .action-list__item__content {
   text-align: left;
 }
-/* line 17, ../sass/components/_action-list.scss */
+/* line 26, ../sass/components/_action-list.scss */
 .new .action-list__item__content > * {
   vertical-align: middle;
 }
-/* line 21, ../sass/components/_action-list.scss */
+/* line 30, ../sass/components/_action-list.scss */
 .new .action-list__item__action {
   text-align: right;
   padding-left: 15px;
 }
-/* line 26, ../sass/components/_action-list.scss */
+/* line 35, ../sass/components/_action-list.scss */
 .new .action-list__item:last-child .action-list__item__content,
 .new .action-list__item:last-child .action-list__item__action {
   border-bottom-width: 0 !important;
 }
-/* line 34, ../sass/components/_action-list.scss */
+/* line 43, ../sass/components/_action-list.scss */
 .new .subscription-product-media {
   width: 75px;
   height: 60px;
@@ -3539,7 +3550,7 @@ h1 + .setup-header__description,
   display: inline-block;
   line-height: 60px;
 }
-/* line 43, ../sass/components/_action-list.scss */
+/* line 52, ../sass/components/_action-list.scss */
 .new .subscription-product-media .product-image {
   max-height: 60px;
   max-width: 75px;

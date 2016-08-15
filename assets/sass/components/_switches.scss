@@ -3,17 +3,22 @@
 	Version 1.0
 	Date: 5-5-2016
 	Author: Corey M. Capetillo
+	8-15-16:
+		- Make switches inline-block;
+		- Set switch buttons to box-sizing: border-box;
+		- Add padding on either end as 5px;
+		- Set font-weight to medium
 */
 .switch {
+	font-family: 'raleway-medium', arial, sans-serif;
 	font-size: $font-size-small;
 	background-color: $gray-lighter;
 	color: $gray-darker;
-	display: block;
+	display: inline-block;
 	cursor: pointer;
 	height: 34px;
 	line-height: 34px;
 	border-radius: 17px;
-	width: 145px;
 	position: relative;
 	&--large {
 		min-width: 300px;
@@ -64,11 +69,14 @@
 }
 .switch__left,
 .switch__right {
+    box-sizing: border-box;
 	display: inline-block;
 	width: 50%;
 	text-align: center;
 	position: relative;
 	z-index: 20;
+	padding-left: 16px;
+	padding-right: 16px;
 }
 .switch__left {
 	float: left;

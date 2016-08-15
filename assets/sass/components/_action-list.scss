@@ -1,6 +1,16 @@
 .action-list {
 	display: table;
 	width: 100%;
+	&--border {
+		.action-list {
+			&__item {
+				&__content,
+				&__action {
+					border-bottom: 1px solid #EEE;
+				}
+			}
+		}
+	}
 	&__item {
 		display: table-row;
 		width: 100%;
@@ -9,7 +19,6 @@
 		&__action {
 			display: table-cell;
 			height: 75px;
-			border-bottom: 1px solid #EEE;
 			vertical-align: middle;
 		}
 		&__content {
