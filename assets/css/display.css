@@ -167,6 +167,8 @@ body {
 
 .example .progress + .progress {
   margin-top: 18px; }
+.example .continue + .continue {
+  margin-top: 18px; }
 
 .example.overflow-fix {
   overflow-x: hidden;
