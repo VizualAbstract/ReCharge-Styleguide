@@ -14,6 +14,7 @@
 	8-15-2016
 		- Make adjustments to dropdown so it supports having h1-h5 elements as the target-link for the dropdown
 		- Use negative-marign to fix h1-h5 tags
+		- Dropdown menu needs to be semi-bold
 */
 
 .dropdown {
@@ -53,6 +54,7 @@
 		}
 	}
 }
+
 .dropdown__trigger {
 	position: relative;
 	display: block;
@@ -89,6 +91,7 @@
 		margin-left: -$padding-base-horizontal;
 	}
 }
+
 .dropdown__menu {
 	display: none;
 	position: absolute;
@@ -99,6 +102,8 @@
 	right: auto;
 	z-index: 100;
 	background-color: $gray-dark;
+	font-family: "raleway-semibold", arial, non-serif;
+	font-weight: normal;
 	li {
 		width: 100%;
 		color: $white;

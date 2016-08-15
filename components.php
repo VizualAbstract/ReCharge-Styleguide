@@ -13,22 +13,6 @@
 <?php include('_components/setup-header.php'); ?>
 </div><!-- .example -->
 
-<h2 id="dropdown-header">Dropdown Header</h2>
-<div class="description">
-	<p>There is no unique class name for the dropdown header, it is just a made up of a page-title, dropdown and buttons</p>
-</div><!-- .description -->
-<div class="example">
-<?php include('_components/dropdown-header.php'); ?>
-</div><!-- .example -->
-
-<h2 id="page-title">Page Title</h2>
-<div class="description">
-	<p>The page title relies on the title-bar to create the header-to-action layout, but now adds the ability to include a description</p>
-</div><!-- .description -->
-<div class="example">
-<?php include('_components/page-title.php'); ?>
-</div><!-- .example -->
-
 <h2 id="title-bar">Title Bar</h2>
 <div class="description">
 	<p>Not much seperates the difference between the <strong>Title Bar</strong> and the <a href="#info-bar">Info Bar</a>. The one notable difference is that the vertical-alignment of the <strong>Title Bar</strong> is set to <em>middle</em>.</p>
@@ -46,6 +30,22 @@
 </div><!-- .description -->
 <div class="example">
 <?php include('_components/info-bar.php'); ?>
+</div><!-- .example -->
+
+<h2 id="page-title">Page Title</h2>
+<div class="description">
+	<p>The page title relies on the title-bar to create the header-to-action layout, but now adds the ability to include a description</p>
+</div><!-- .description -->
+<div class="example">
+<?php include('_components/page-title.php'); ?>
+</div><!-- .example -->
+
+<h2 id="dropdown-header">Dropdown Header</h2>
+<div class="description">
+	<p>There is no unique class name for the dropdown header, it is just a made up of a page-title, dropdown and buttons</p>
+</div><!-- .description -->
+<div class="example">
+<?php include('_components/dropdown-header.php'); ?>
 </div><!-- .example -->
 
 <hr>
