@@ -6,7 +6,7 @@
 		<span class="switch__right">On</span>
 	</div><!-- .switch__inner -->
 </label><!-- .switch -->
-<br>
+
 <label class="switch">
 	<div class="switch__inner">
 		<input class="switch__input" type="checkbox" checked="checked">
@@ -15,7 +15,7 @@
 		<span class="switch__right">On</span>
 	</div><!-- .switch__inner -->
 </label><!-- .switch -->
-<br>
+
 <label class="switch switch--large">
 	<div class="switch__inner">
 		<input class="switch__input" type="checkbox">
