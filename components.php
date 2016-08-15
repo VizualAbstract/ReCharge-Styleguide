@@ -62,6 +62,11 @@
 <?php include('_components/progress-bar.php'); ?>
 </div><!-- .example -->
 
+<h2 id="breadcrumbs">Breadcrumbs</h2>
+<div class="example">
+<?php include('_components/breadcrumbs.php'); ?>
+</div><!-- .example -->
+
 <h2 id="continue-bar">Continue Bar</h2>
 <div class="example">
 <?php include('_components/continue-bar.php'); ?>

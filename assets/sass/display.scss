@@ -207,6 +207,12 @@ body {
 }
 
 .example {
+	.progress + .progress {
+		margin-top: 18px;
+	}
+}
+
+.example {
 	&.overflow-fix {
     overflow-x: hidden;
 	    overflow-y: overlay;

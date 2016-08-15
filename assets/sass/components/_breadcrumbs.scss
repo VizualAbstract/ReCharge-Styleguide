@@ -1,0 +1,79 @@
+/* 
+	Components: Breadcrumbs
+	Version 1.0
+	Date: 8-15-2016
+	Author: Corey M. Capetillo
+	8-15-2016:
+		- Create the breadcrumbs, based on progress-bar.
+		- Add highlight effect, as requested by devon
+		- Move padding to links, not the list items
+*/
+.breadcrumbs {
+	list-style: none;
+	display: table;
+	height: 30px;
+	width: 100%;
+	overflow: hidden;
+	background-color: $button-background;
+	color: $white;
+	font-family: 'ralewaysemibold', arial, sans-serif;
+	.crumb {
+		position: relative;
+		display: table-cell;
+		overflow: hidden;
+		white-space: nowrap;
+		text-align: left;
+		max-width: max-content;
+		font-size: $font-size-small;
+		a {
+			color: $white;
+			display: block;
+			height: 30px;
+			line-height: 30px;
+			padding-left: 20px;
+			padding-right: 10px;
+		}
+		&:after,
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0%;
+			border-width: 15px;
+			border-color: transparent;
+			border-style: solid;
+			background-color: transparent;
+		}
+		&:after {
+			margin-left: -1px;
+		}
+		&:hover {
+			background: $button-hover-background;
+			& + .crumb {
+				&:after {
+					border-left-color: $button-hover-background;
+				}
+			}
+		}
+		& + .crumb {
+			a {
+				padding-left: 31px;
+			}
+			&:before {
+				border-left-color: $white;
+			}
+			&:after {
+				border-left-color: $button-background;
+			}
+		}
+		&:last-child {
+			width: 100%;
+			max-width: 100%;
+			padding-left: 31px;
+			&:hover {
+				background-color: $button-background;
+			}
+		}
+	}
+}

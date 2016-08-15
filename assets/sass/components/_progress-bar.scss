@@ -3,6 +3,8 @@
 	Version 1.0
 	Date: 5-5-2016
 	Author: Corey M. Capetillo
+	8-15-16:
+		- Reduced font-size to 14px;
 */
 .progress {
 	display: block;
@@ -18,7 +20,7 @@
 				color: transparent;
 				cursor: default;
 			}
-			&::before {
+			&:before {
 				border-left-color: transparent !important;
 			}
 		}
@@ -50,8 +52,8 @@
 	position: relative;
 	z-index: 5;
 	font-size: $font-size-small;
-	&::after,
-	&::before {
+	&:after,
+	&:before {
 		content: "";
 		display: block;
 		position: absolute;
@@ -61,7 +63,7 @@
 		border-color: transparent;
 		border-style: solid;
 	}
-	&::after {
+	&:after {
 		margin-left: -1px;
 	}
 	&,
@@ -86,36 +88,36 @@
 		background-color: $primary-color;
 	}
 	&:first-child {
-		&::before,
-		&::after {
+		&:before,
+		&:after {
 			border-left-width: 0;
 		}
 	}
 	&--incomplete + .progress__step--incomplete,
 	&--complete + .progress__step--complete,
 	&--active + .progress__step--active {
-		&::before {
+		&:before {
 			border-left-color: $white;
 		}
 	}
 	&--incomplete + .progress__step--incomplete,
 	&--incomplete + .progress__step--complete,
 	&--incomplete + .progress__step--active {
-		&::after {
+		&:after {
 			border-left-color: $gray-lighter;
 		}
 	}
 	&--active + .progress__step--incomplete,
 	&--active + .progress__step--complete,
 	&--active + .progress__step--active {
-		&::after {
+		&:after {
 			border-left-color: $gray-darker;
 		}
 	}
 	&--complete + .progress__step--incomplete,
 	&--complete + .progress__step--complete,
 	&--complete + .progress__step--active {
-		&::after {
+		&:after {
 			border-left-color: $primary-color;
 		}
 	}

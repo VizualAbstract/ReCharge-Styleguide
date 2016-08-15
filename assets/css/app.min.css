@@ -2794,12 +2794,24 @@ h1 + .setup-header__description,
   	Version 1.0
   	Date: 5-5-2016
   	Author: Corey M. Capetillo
+  	8-15-16:
+  		- Reduced font-size to 14px;
   */
   /* 
   	Components: Continue Bar
   	Version 1.0
   	Date: 5-5-2016
   	Author: Corey M. Capetillo
+  */
+  /* 
+  	Components: Breadcrumbs
+  	Version 1.0
+  	Date: 8-15-2016
+  	Author: Corey M. Capetillo
+  	8-15-2016:
+  		- Create the breadcrumbs, based on progress-bar.
+  		- Add highlight effect, as requested by devon
+  		- Move padding to links, not the list items
   */
   /* 
   	Elements: Progress Bar
@@ -3079,7 +3091,7 @@ h1 + .setup-header__description,
     text-align: left;
   }
 }
-/* line 7, ../sass/components/_progress-bar.scss */
+/* line 9, ../sass/components/_progress-bar.scss */
 .new .progress {
   display: block;
   width: 100%;
@@ -3087,21 +3099,21 @@ h1 + .setup-header__description,
   background-color: #EEEEEE;
   font-family: 'ralewaysemibold', arial, sans-serif;
 }
-/* line 15, ../sass/components/_progress-bar.scss */
+/* line 17, ../sass/components/_progress-bar.scss */
 .new .progress--inactive .progress__step, .new .progress--inactive .progress__step:hover, .new .progress--inactive .progress__step:active {
   color: transparent;
   cursor: default;
 }
-/* line 21, ../sass/components/_progress-bar.scss */
-.new .progress--inactive .progress__step::before {
+/* line 23, ../sass/components/_progress-bar.scss */
+.new .progress--inactive .progress__step:before {
   border-left-color: transparent !important;
 }
 @media screen and (max-width: 767px) {
-  /* line 7, ../sass/components/_progress-bar.scss */
+  /* line 9, ../sass/components/_progress-bar.scss */
   .new .progress {
     display: table;
   }
-  /* line 28, ../sass/components/_progress-bar.scss */
+  /* line 30, ../sass/components/_progress-bar.scss */
   .new .progress .progress__step {
     display: table-cell;
     width: auto;
@@ -3111,12 +3123,12 @@ h1 + .setup-header__description,
     text-align: left;
     padding-left: 15px;
   }
-  /* line 36, ../sass/components/_progress-bar.scss */
+  /* line 38, ../sass/components/_progress-bar.scss */
   .new .progress .progress__step + .progress__step {
     padding-left: 25px;
   }
 }
-/* line 43, ../sass/components/_progress-bar.scss */
+/* line 45, ../sass/components/_progress-bar.scss */
 .new .progress__step {
   display: block;
   width: 33.33%;
@@ -3128,8 +3140,8 @@ h1 + .setup-header__description,
   z-index: 5;
   font-size: 14px;
 }
-/* line 53, ../sass/components/_progress-bar.scss */
-.new .progress__step::after, .new .progress__step::before {
+/* line 55, ../sass/components/_progress-bar.scss */
+.new .progress__step:after, .new .progress__step:before {
   content: "";
   display: block;
   position: absolute;
@@ -3139,48 +3151,48 @@ h1 + .setup-header__description,
   border-color: transparent;
   border-style: solid;
 }
-/* line 64, ../sass/components/_progress-bar.scss */
-.new .progress__step::after {
+/* line 66, ../sass/components/_progress-bar.scss */
+.new .progress__step:after {
   margin-left: -1px;
 }
-/* line 67, ../sass/components/_progress-bar.scss */
+/* line 69, ../sass/components/_progress-bar.scss */
 .new .progress__step, .new .progress__step:hover, .new .progress__step--incomplete, .new .progress__step--incomplete:hover {
   color: #424242;
 }
-/* line 73, ../sass/components/_progress-bar.scss */
+/* line 75, ../sass/components/_progress-bar.scss */
 .new .progress__step--active, .new .progress__step--active:hover, .new .progress__step--complete, .new .progress__step--complete:hover {
   color: #FFFFFF;
 }
-/* line 79, ../sass/components/_progress-bar.scss */
+/* line 81, ../sass/components/_progress-bar.scss */
 .new .progress__step--incomplete {
   background-color: #EEEEEE;
 }
-/* line 82, ../sass/components/_progress-bar.scss */
+/* line 84, ../sass/components/_progress-bar.scss */
 .new .progress__step--active {
   background-color: #424242;
 }
-/* line 85, ../sass/components/_progress-bar.scss */
+/* line 87, ../sass/components/_progress-bar.scss */
 .new .progress__step--complete {
   background-color: #4DD6B7;
 }
-/* line 89, ../sass/components/_progress-bar.scss */
-.new .progress__step:first-child::before, .new .progress__step:first-child::after {
+/* line 91, ../sass/components/_progress-bar.scss */
+.new .progress__step:first-child:before, .new .progress__step:first-child:after {
   border-left-width: 0;
 }
-/* line 97, ../sass/components/_progress-bar.scss */
-.new .progress__step--incomplete + .progress__step--incomplete::before, .new .progress__step--complete + .progress__step--complete::before, .new .progress__step--active + .progress__step--active::before {
+/* line 99, ../sass/components/_progress-bar.scss */
+.new .progress__step--incomplete + .progress__step--incomplete:before, .new .progress__step--complete + .progress__step--complete:before, .new .progress__step--active + .progress__step--active:before {
   border-left-color: #FFFFFF;
 }
-/* line 104, ../sass/components/_progress-bar.scss */
-.new .progress__step--incomplete + .progress__step--incomplete::after, .new .progress__step--incomplete + .progress__step--complete::after, .new .progress__step--incomplete + .progress__step--active::after {
+/* line 106, ../sass/components/_progress-bar.scss */
+.new .progress__step--incomplete + .progress__step--incomplete:after, .new .progress__step--incomplete + .progress__step--complete:after, .new .progress__step--incomplete + .progress__step--active:after {
   border-left-color: #EEEEEE;
 }
-/* line 111, ../sass/components/_progress-bar.scss */
-.new .progress__step--active + .progress__step--incomplete::after, .new .progress__step--active + .progress__step--complete::after, .new .progress__step--active + .progress__step--active::after {
+/* line 113, ../sass/components/_progress-bar.scss */
+.new .progress__step--active + .progress__step--incomplete:after, .new .progress__step--active + .progress__step--complete:after, .new .progress__step--active + .progress__step--active:after {
   border-left-color: #424242;
 }
-/* line 118, ../sass/components/_progress-bar.scss */
-.new .progress__step--complete + .progress__step--incomplete::after, .new .progress__step--complete + .progress__step--complete::after, .new .progress__step--complete + .progress__step--active::after {
+/* line 120, ../sass/components/_progress-bar.scss */
+.new .progress__step--complete + .progress__step--incomplete:after, .new .progress__step--complete + .progress__step--complete:after, .new .progress__step--complete + .progress__step--active:after {
   border-left-color: #4DD6B7;
 }
 /* line 7, ../sass/components/_continue-bar.scss */
@@ -3259,6 +3271,84 @@ h1 + .setup-header__description,
 .new .continue__next:hover::before {
   border-color: #2bac8f;
   border-left-color: transparent;
+}
+/* line 11, ../sass/components/_breadcrumbs.scss */
+.new .breadcrumbs {
+  list-style: none;
+  display: table;
+  height: 30px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #5C5C5C;
+  color: #FFFFFF;
+  font-family: 'ralewaysemibold', arial, sans-serif;
+}
+/* line 20, ../sass/components/_breadcrumbs.scss */
+.new .breadcrumbs .crumb {
+  position: relative;
+  display: table-cell;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  font-size: 14px;
+}
+/* line 28, ../sass/components/_breadcrumbs.scss */
+.new .breadcrumbs .crumb a {
+  color: #FFFFFF;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+/* line 36, ../sass/components/_breadcrumbs.scss */
+.new .breadcrumbs .crumb:after, .new .breadcrumbs .crumb:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  border-width: 15px;
+  border-color: transparent;
+  border-style: solid;
+  background-color: transparent;
+}
+/* line 48, ../sass/components/_breadcrumbs.scss */
+.new .breadcrumbs .crumb:after {
+  margin-left: -1px;
+}
+/* line 51, ../sass/components/_breadcrumbs.scss */
+.new .breadcrumbs .crumb:hover {
+  background: #424242;
+}
+/* line 54, ../sass/components/_breadcrumbs.scss */
+.new .breadcrumbs .crumb:hover + .crumb:after {
+  border-left-color: #424242;
+}
+/* line 60, ../sass/components/_breadcrumbs.scss */
+.new .breadcrumbs .crumb + .crumb a {
+  padding-left: 31px;
+}
+/* line 63, ../sass/components/_breadcrumbs.scss */
+.new .breadcrumbs .crumb + .crumb:before {
+  border-left-color: #FFFFFF;
+}
+/* line 66, ../sass/components/_breadcrumbs.scss */
+.new .breadcrumbs .crumb + .crumb:after {
+  border-left-color: #5C5C5C;
+}
+/* line 70, ../sass/components/_breadcrumbs.scss */
+.new .breadcrumbs .crumb:last-child {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 31px;
+}
+/* line 74, ../sass/components/_breadcrumbs.scss */
+.new .breadcrumbs .crumb:last-child:hover {
+  background-color: #5C5C5C;
 }
 /* line 13, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge,
@@ -3423,7 +3513,7 @@ h1 + .setup-header__description,
 	Layout
 	Structural elements dependant on each other to build out a page. Houses Components.
 */
-/* line 69, ../sass/app.scss */
+/* line 70, ../sass/app.scss */
 .new {
   /* Page: Signup Questions */
   /* 
@@ -5132,7 +5222,7 @@ h1 + .setup-header__description,
 	Dynamic
 	Heavily dependant on javascript to deliver a specific effect.
 */
-/* line 83, ../sass/app.scss */
+/* line 84, ../sass/app.scss */
 .new {
   /*
     8-10-16:
@@ -5381,7 +5471,7 @@ h1 + .setup-header__description,
 	Vendors
 	Impoted libraries, generally serving a singular purpose.
 */
-/* line 93, ../sass/app.scss */
+/* line 94, ../sass/app.scss */
 .new {
   /*!
    * Bootstrap v3.3.5 (http://getbootstrap.com)
@@ -6630,12 +6720,12 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 }
 
 /* Temporary fix until we no longer need to use .new {} */
-/* line 100, ../sass/app.scss */
+/* line 101, ../sass/app.scss */
 .modal__open {
   overflow: hidden;
 }
 
-/* line 103, ../sass/app.scss */
+/* line 104, ../sass/app.scss */
 .modal__backdrop {
   position: fixed;
   top: 0;
@@ -6646,13 +6736,13 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   background-color: #000;
 }
 
-/* line 112, ../sass/app.scss */
+/* line 113, ../sass/app.scss */
 .modal__backdrop.fade {
   opacity: 0;
   filter: alpha(opacity=0);
 }
 
-/* line 116, ../sass/app.scss */
+/* line 117, ../sass/app.scss */
 .modal__backdrop.in,
 .modal__backdrop.fade.in {
   opacity: 0.7;
