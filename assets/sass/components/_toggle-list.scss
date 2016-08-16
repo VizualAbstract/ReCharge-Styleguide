@@ -1,0 +1,53 @@
+/* 
+	Element: Action List
+	Version 1.0
+	Date: 8-15-2016
+	Author: Corey M. Capetillo
+*/
+.toggle-list {
+	width: 100%;
+	&__item {
+		width: 100%;
+		text-align: left;
+		list-style: none;
+		&__content,
+		&__action {
+			vertical-align: middle;
+		}
+		&__content {
+			text-align: left;
+			> * {
+				vertical-align: middle;
+			}
+		}
+		&:last-child {
+			.action-list__item__content,
+			.action-list__item__action {
+				border-bottom-width: 0 !important;
+			}
+		}
+	}
+	@media screen and (max-width: $screen-xs-max) {
+		&__item {
+			&__action {
+				padding-top: 15px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+	@media screen and (min-width: $screen-sm-min) {
+		display: table;
+		&__item {
+			display: table-row;
+			&__content,
+			&__action {
+				height: 75px;
+				display: table-cell;
+			}
+			&__action {
+				text-align: right;
+				padding-left: 15px;
+			}
+		}
+	}
+}

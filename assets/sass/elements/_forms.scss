@@ -33,6 +33,9 @@
 		- Make adjustments to spacing above radio and checkbox buttons in form groups, so it matches better with other elements in form groups
 	8-15-16:
 		- Increase margin between inline buttons
+	8-16-16:
+		- Required no longer has a red-border
+		- Invalid is now !important, so admin-styles are overwritten
 */
 
 .form {
@@ -230,9 +233,8 @@ textarea.form__input {
 		outline: none;
 		box-shadow: none; // Prevent bh-ui styles fro madding a box-shadow
 	}
-	&:required,
 	&.form__input--invalid {
-		border-color: #EC3D10;
+		border-color: #EC3D10 !important;
 	}
 }
 

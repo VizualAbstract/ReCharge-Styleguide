@@ -65,6 +65,14 @@
 <?php include('_components/action-list.php'); ?>
 </div><!-- .example -->
 
+<h2 id="toggle-lists">Toggle Lists</h2>
+<div class="description">
+	<p><strong>Toggle Lists</strong> have a more specific use case than <a href="#action-lists">Action Lists</a>, which are a more general component. Toggle lists will lose their table-layout structure on mobile.</p>
+</div>
+<div class="example">
+<?php include('_components/toggle-list.php'); ?>
+</div><!-- .example -->
+
 <h2 id="progress-bar">Progress Bar</h2>
 <div class="example">
 <?php include('_components/progress-bar.php'); ?>

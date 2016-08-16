@@ -1,16 +1,12 @@
+/* 
+	Element: Action List
+	Version 1.0
+	Date: 5-5-2016
+	Author: Corey M. Capetillo
+*/
 .action-list {
 	display: table;
 	width: 100%;
-	&--border {
-		.action-list {
-			&__item {
-				&__content,
-				&__action {
-					border-bottom: 1px solid #EEE;
-				}
-			}
-		}
-	}
 	&__item {
 		display: table-row;
 		width: 100%;
@@ -20,6 +16,7 @@
 			display: table-cell;
 			height: 75px;
 			vertical-align: middle;
+			border-bottom: 1px solid #EEE;
 		}
 		&__content {
 			text-align: left;

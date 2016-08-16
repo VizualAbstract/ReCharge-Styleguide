@@ -96,10 +96,6 @@
 	@media screen and (min-width: $screen-lg-min) {
 		@include make-xs-column(3);
 	}
-
-	+ .rc_layout__content {
-		padding-top: 8px; // Alignment fix. .nav--sidebar adds 8px of padding to the top of the first link. This will align content with the link text. Might look weird when that first link is set to 'Active'
-	}
 }
 
 .rc_layout__content {
