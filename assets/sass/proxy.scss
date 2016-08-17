@@ -42,9 +42,9 @@
 	// 	font-size: $font-size-base;
 		@import 'elements/_tables_rc.scss';
 	// 	@import 'elements/_lists.scss';
-	// 	@import 'elements/_buttons.scss';
+		@import 'elements/_buttons_rc.scss';
 	// 	@import 'elements/_images.scss';
-	// 	@import 'elements/_forms.scss';
+		@import 'elements/_forms_rc.scss';
 	// 	@import 'elements/_buttons.scss';
 
 /*
@@ -79,7 +79,7 @@
 	Heavily dependant on javascript to deliver a specific effect.
 */
 // .new {
-// 	@import 'dynamic/_modals.scss';
+		@import 'dynamic/_modals_rc.scss';
 // 	@import 'dynamic/_tooltips.scss';
 // 	@import 'dynamic/_popovers.scss';
 // }
@@ -93,27 +93,29 @@
 // 	@import 'vendors/_dropkick.scss';
 // }
 /* Temporary fix until we no longer need to use .new {} */
-// .modal__open {
-// 	overflow: hidden;
-// }
-// .modal__backdrop {
-// 	position: fixed;
-// 	top: 0;
-// 	right: 0;
-// 	bottom: 0;
-// 	left: 0;
-// 	z-index: $zindex-modal-background;
-// 	background-color: #000;
-// }
-// .modal__backdrop.fade {
-// 	opacity: 0;
-// 	filter: alpha(opacity=0);
-// }
-// .modal__backdrop.in,
-// .modal__backdrop.fade.in {
-// 	opacity: 0.7;
-// 	filter: alpha(opacity=70);
-// }
+.rc_modal__open {
+	overflow: hidden;
+}
+
+.rc_modal__backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: $zindex-modal-background;
+	background-color: #000;
+	&.rc_fade {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		transition: opacity 0.2s linear;
+	}
+	&.rc_in,
+	&.rc_fade.rc_in {
+		opacity: 0.7;
+		filter: alpha(opacity=70);
+	}
+}
 
 /*
 	Misc
@@ -130,24 +132,6 @@
 // body.new {
 // 	margin: 0;
 // 	padding: 0;
-// }
-// // Copied this out of .new, since it gets prepended to the closing </body> tag, well outside of .new
-// .modal__backdrop {
-// 	position: fixed;
-// 	top: 0;
-// 	right: 0;
-// 	bottom: 0;
-// 	left: 0;
-// 	z-index: 40;
-// 	background-color: #000;
-// }
-// .modal__backdrop.fade {
-// 	opacity: 0;
-// 	filter: alpha(opacity=0);
-// }
-// .modal__backdrop.in {
-// 	opacity: 0.7;
-// 	filter: alpha(opacity=70);
 // }
 // .new {
 // 	@import '_variables.scss';

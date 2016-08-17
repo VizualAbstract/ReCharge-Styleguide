@@ -1,0 +1,620 @@
+/* 
+	Element: Forms
+	Version 1.1
+	Date: 5-5-2016
+	Author: Corey M. Capetillo
+	8-17-16:
+		- Create RC version
+*/
+
+// .form {
+// 	.form__label {
+// 		display: block;
+// 	}
+// 	&--inline {
+// 		.form__label {
+// 			display: inline;
+// 		}
+// 	}
+// }
+
+// .form__errors {
+// 	margin-bottom: $form-group-spacing;
+// 	position: relative;
+// 	text-align: center;
+// 	color: #EC3D10;
+// 	&:empty {
+// 		display: none;
+// 	}
+// }
+
+// .form__help {
+// 	color: $gray-dark;
+// 	margin-top: -6px;
+// 	margin-bottom: 16px;
+// 	line-height: 25px;
+// }
+
+// .form__checkbox__label,
+// .form__radio__label {
+// 	+ .form__help {
+// 		margin-top: -19px;
+// 		padding-left: 25px;
+// 	}
+// }
+
+// .form__group {
+// 	@extend .clearfix;
+// 	margin-bottom: $form-group-spacing-calculated;
+// 	position: relative;
+// 	.button {
+// 		margin-top: 10px;
+// 	}
+// 	p:last-child {
+//     	margin-bottom: 5px;
+// 	}
+// }
+// p + .form__group  {
+// 	margin-top: 18px;
+// }
+
+// .form--signup {
+// 	.form__group {
+// 		position: relative;
+// 		margin-bottom: 45px;
+// 		@media screen and (min-width: $screen-sm-min){
+// 			margin-bottom: 55px;
+// 			.form__response {
+// 				position: absolute;
+// 				top: 100%;
+// 				margin-top: 10px;
+// 				width: 100%;
+// 			}
+// 		}
+// 		@media screen and (min-width: $screen-sm-min) and (max-width: $screen-md-max){
+// 			margin-bottom: 65px;
+// 		}
+// 	}
+// }
+
+.rc_form__actions {
+	display: flex;
+	width: 100%;
+	margin-top: $fieldset-spacing-calculated;
+	margin-bottom: $fieldset-spacing;
+	.rc_button {
+  		flex: 100%;
+  		+ .rc_button {
+  			margin-left: 13px;
+  		}
+	}
+}
+
+// button.form__input,
+// input.form__input,
+// textarea.form__input,
+// input.form__color {
+// 	border-style: solid;
+// 	box-sizing: border-box;
+// 	outline: 0;
+// 	line-height: $line-height-base;
+// 	padding: ($padding-base-vertical - 1) $padding-base-horizontal $padding-base-vertical;
+// }
+
+// .form {
+// 	input[type="submit"] + input[type="submit"],
+// 	input[type="submit"] + button,
+// 	input + input[type="submit"],
+// 	input + button,
+// 	button + button,
+// 	button + a,
+// 	input[type="submit"] + a,
+// 	input + a {
+// 		margin-left: 15px;
+// 	}
+// }
+
+// button.button,
+// input.button {
+// 	vertical-align: middle; // Used to make buttons and input fields vertically-align correctly
+// 	height: ($line-height-computed + ($padding-base-vertical * 2) + 1);
+// }
+
+// input.form__input,
+// textarea.form__input,
+// input.form__color {
+// 	color: #424242;
+// }
+
+// button.button,
+// input[type="submit"].button {
+// 	touch-action: manipulation;
+// 	cursor: pointer;
+// 	border-width: 0;
+
+// 	min-width: 100px;
+
+// 	& {
+// 		&:hover,
+// 		&:active {
+// 			outline: 0;
+// 		}
+// 	}
+
+// 	&:disabled,
+// 	&.disabled {
+// 		background-color: $button-disabled-background !important;
+// 		cursor: default;
+// 	}
+// }
+
+// select.form__input {
+// 	display: block;
+// }
+
+// input[type="text"].form__input,
+// select.form__input,
+// input[type="email"].form__input,
+// input[type="password"].form__input,
+// textarea.form__input, {
+// 	width: 100%;
+// }
+
+// .form__input,
+// .form__placeholder {
+// 	margin: 12px 0;
+// 	display: block;
+
+// 	min-width: 100px;
+// 	max-width: 100%;
+// 	color: #424242;
+
+// 	&::-webkit-input-placeholder {
+// 		color: #676767;
+// 	}
+// 	&:-moz-placeholder {
+// 		color: #676767;
+// 	}
+// 	&::-moz-placeholder {
+// 		color: #676767;
+// 	}
+// 	&:-ms-input-placeholder {
+// 		color: #676767;
+// 	}
+// }
+
+// p.form__placeholder {
+// 	margin: 4px 0;
+// }
+
+// input[type="text"].form__input,
+// input[type="search"].form__input,
+// input[type="password"].form__input,
+// input[type="date"].form__input,
+// input.form__color,
+// textarea.form__input {
+// 	border-width: 1px;
+// 	border-style: solid;
+// 	border-color: #676767;
+// 	&:focus,
+// 	&.form__input--focus {
+// 		border-color: #4DD6B7;
+// 		outline: none;
+// 		box-shadow: none; // Prevent bh-ui styles fro madding a box-shadow
+// 	}
+// 	&.form__input--invalid {
+// 		border-color: #EC3D10 !important;
+// 	}
+// }
+
+// .form__error {
+// 	color: #EC3D10;
+// 	font-family: 'ralewaysemibold', arial, sans-serif;
+// 	text-align: right;
+// 	font-size: $font-size-base;
+// 	line-height: 25px;
+// 	@media screen and (min-width: $screen-sm-min){
+// 		position: absolute;
+// 		top: 0;
+// 		right: 0;
+// 	}
+// }
+
+// textarea.form__input + textarea.form__input,
+// input.form__color__picker + input.form__color,
+// input[type="text"].form__input + input[type="text"].form__input,
+// input[type="email"].form__input + input[type="email"].form__input,
+// input[type="password"].form__input + input[type="password"].form__input {
+// 	margin: 20px 0; // Fixes the spacing between display: block; input fields with borders when stacked
+// }
+
+// input[type="text"].button {
+// 	line-height: $line-height-base;
+// 	padding: $padding-base-vertical;
+// 	height: ($line-height-computed + ($padding-base-vertical * 2) + 1);
+// }
+
+// textarea.form__input {
+// 	line-height: $line-height-base;
+// 	padding: $padding-base-vertical $padding-base-horizontal;
+
+// 	border-width: 1px;
+// 	border-style: solid;
+// 	border-color: #676767;
+
+// 	box-sizing: border-box;
+
+// 	min-height: 100px; // Same height as two inputs stacked together (40 + 20 + 40), for a more uniform look
+// }
+
+// textarea.form__input__code {
+// 	@extend .form__input;
+// 	font-family: 'pt-mono', monospace;
+// 	font-size: 16px;
+// 	color: $gray-dark;
+// 	line-height: 21px;
+// }
+
+// fieldset {
+// 	padding: 0;
+// 	margin: 0;
+// 	border: 0;
+// 	min-width: 0; // Reset `min-width: min-content;` on fieldsets for Chrome and Firefox, to use as block element
+// 	+ fieldset {
+// 		margin-top: $fieldset-spacing-calculated;
+// 	}
+// 	&:last-child {
+// 		margin-bottom: $fieldset-spacing;
+// 	}
+// }
+
+// h1 + fieldset,
+// h2 + fieldset,
+// h3 + fieldset,
+// h4 + fieldset,
+// h5 + fieldset {
+// 	margin-top: $form-group-spacing;
+// }
+
+// fieldset + h1,
+// fieldset + h2,
+// fieldset + h3,
+// fieldset + h4,
+// fieldset + h5 {
+//     margin-top: $fieldset-spacing-calculated;
+// }
+
+// legend {
+//   display: block;
+//   width: 100%;
+//   padding: 0;
+//   line-height: inherit;
+//   border: 0;
+
+//   font-size: $font-size-base;
+// //  font-family: 'ralewaysemibold', arial, sans-serif;
+//   margin: 0 0 ($form-group-spacing - 4);
+//   h1, .h1,
+//   h2, .h2,
+//   h3, .h3,
+//   h4, .h4,
+//   h5, .h5 {
+//   	line-height: 1;
+//   	margin: 0;
+//   }
+// }
+
+// label {
+// 	display: block;
+// 	max-width: 100%; // Force IE8 to wrap long content
+// 	font-weight: normal;
+// 	font-style: normal;
+// 	display: block;
+// 	line-height: 25px;
+
+// }
+
+// .form__label {
+// 	+ .button {
+// 		margin: 12px 0;
+// 	}
+// }
+
+// input[type="radio"],
+// input[type="checkbox"],
+// .form__radio,
+// .form__checkbox {
+// 	display: none;
+// 	&:first-of-type {
+// 		+ .form__radio__label,
+// 		+ .form__checkbox__label {
+// 			margin-top: 6px; // Make adjustments to spacing above radio and checkbox buttons in form groups, so it matches better with other elements in form groups
+// 		}
+// 	}
+// 	+ label,
+// 	+ .form__radio__label,
+// 	+ .form__checkbox__label {
+// 		cursor: pointer;
+// 		display: block;
+// 		line-height: 20px;
+// 		&:before {
+// 			width: 16px;
+// 			height: 16px;
+// 			content: "";
+// 			display: inline-block;
+// 			box-sizing: border-box;
+// 			background-color: #FFF;
+
+// 			margin-right: 9px;
+
+// 			line-height: 15px;
+// 			text-indent: 1px;
+// 			font-size: 11px;
+			
+// 			color: #FFF;
+// 			font-family: fontawesome;
+
+// 			border-width: 1px;
+// 			border-style: solid;
+// 			border-color: #676767;
+
+// 			vertical-align: middle;
+// 			position: relative;
+// 			top: -2px;
+// 		}
+// 		&:after {
+// 			display: table;
+// 			content: "";
+// 			margin: 10px 0;
+// 		}
+// 	}
+// }
+
+// input[type="radio"],
+// .form__radio {
+// 	+ label,
+// 	+ .form__radio__label {
+// 		&:before {
+// 			border-radius: 50%;
+// 		}
+// 	} 
+// }
+
+// input[type="radio"],
+// input[type="checkbox"],
+// .form__radio,
+// .form__checkbox {
+// 	&:checked,
+// 	&.form__input--checked {
+// 		+ label,
+// 		+ .form__radio__label,
+// 		+ .form__checkbox__label {
+// 			&:before {
+// 				content: "\f00c";
+// 				background-color: #767676;
+// 			}
+// 		}
+// 	}
+// 	&:required,
+// 	&.form__input--required {
+// 		+ label,
+// 		+ .form__radio__label,
+// 		+ .form__checkbox__label {
+// 			&::before {
+// 				border-color: #EC3D10
+// 			}
+// 		}
+// 		&:checked,
+// 		+ .form__radio__label,
+// 		+ .form__checkbox__label {
+// 			+ label {
+// 				&::before {
+// 					background-color: #EC3D10;
+// 				}
+// 			}
+// 		}
+// 	}
+// 	&:disabled,
+// 	&.form__input--disabled {
+// 		+ label,
+// 		+ .form__radio__label,
+// 		+ .form__checkbox__label {
+// 			&:before {
+// 				content: "\f068";
+// 				color: #767676;
+// 				text-indent: 3px;
+// 			}
+// 		}
+// 	}
+// }
+
+// .card-details {
+// 	width: 100%;
+// 	font-size: 0;
+// 	input.form__input {
+// 		min-width: 10px;
+// 		font-size: $font-size-base;
+// 		margin-bottom: 0;
+// 	}
+// 	&__date,
+// 	&__security,
+// 	&__cards {
+// 		display: inline-block;
+// 		vertical-align: middle;
+// 		box-sizing: border-box;
+// 	}
+// 	&__label {
+// 		font-size: $font-size-base;
+// 		white-space: nowrap;
+// 		overflow: hidden;
+// 	}
+// 	&__date {
+// 		width: 30%;
+// 		&__month,
+// 		&__divider,
+// 		&__year {
+// 			font-size: 0;
+// 			display: inline-block !important;
+//     		vertical-align: top;
+// 		}
+// 		&__month {
+// 			width: 29.62% !important;
+// 		}
+// 		&__divider {
+// 			width: 14.83% !important;
+// 			font-size: 16px;
+// 			text-align: center;
+// 			line-height: 40px;
+// 			padding-top: 10px;
+// 		}
+// 		&__year {
+// 			width: 55.55% !important;
+// 		}
+// 	}
+// 	&__security {
+// 		width: 15%;
+// 		padding-left: 20px;
+// 	}
+// 	&__cards {
+// 		width: 55%;
+// 		margin-top: 37px;
+// 		vertical-align: top;
+// 		height: 40px;
+// 		line-height: 40px;
+// 	}
+// 	&__icon {
+// 		width: 20%;
+// 		margin-left: 10%;
+// 		max-width: 57px;
+//     	vertical-align: middle;
+// 		@media screen and (min-width: $screen-sm-min){
+// 			width: 16.42%;
+// 			margin-left: 20px;
+// 		}
+// 	}
+// 	@media screen and (max-width: $screen-xs-max){
+// 		&__date {
+// 			width: 50%;
+// 		}
+// 		&__security {
+// 			width: 20%;
+// 		}
+// 		&__cards {
+// 			width: 30%;
+// 		}
+// 		.form__error {
+// 			position: absolute;
+// 			right: 0;
+// 			top: auto;
+// 			bottom: -$form-group-spacing;
+// 		}
+// 	}
+// }
+
+// .input-group {
+// 	display: table;
+// 	border-collapse: separate;
+// 	box-sizing: border-box;
+// 	.form__input,
+// 	&__addon {
+// 		display: table-cell;
+// 		box-sizing: border-box;
+// 	}
+// 	&__addon {
+// 		padding-left: 15px;
+// 		&:first-child {
+// 			padding-left: 0;
+// 			padding-right: 15px;
+// 		}
+// 		.button {
+// 			margin-top: 11px;
+// 			margin-bottom: 13px;
+// 		}
+// 	}
+// }
+
+// .input-group--full {
+// 	width: 100%;
+// 	.form__input {
+// 		width: 100%;
+// 	}
+// 	.input-group__addon {
+// 		width: 1%;
+// 	}
+// }
+
+// .form__search {
+// 	.input-group__addon {
+// 		padding-left: 0;
+// 		.button {
+// 			min-width: 40px;
+// 		}
+// 	}
+// }
+
+// /* Contextual sub-form */
+// .contextual__input__options {
+// 	background-color: #f3f3f3;
+// 	padding: 18px 20px 0;
+// 	margin-left: 24px;
+// 	margin-top: -7px;
+// 	display: none;
+
+// 	margin-bottom: 23px;
+
+// 	&:last-of-type {
+//     	margin-bottom: 18px;
+// 	}
+
+// 	@extend .clearfix;
+
+// 	.form__group {
+// 		.form__select {
+// 			margin-bottom: 0; // Quick fix, too much margin beneath a form__select in contextual form dropdown
+// 		}
+// 	}
+// }
+
+// .form__group {
+// 	.form__radio__label,
+// 	.form__checkbox__label {
+// 		&:last-of-type {
+// 			margin-bottom: -16px; // Fix, because the line-height adds too much visual space on the final item.
+// 			+ .contextual__input__options {
+// 				margin-top: 19px; // Fix for contextual input options
+// 			}
+// 		}
+// 	}
+// }
+
+// .form__checkbox:checked,
+// .form__radio:checked {
+// 	+ .form__checkbox__label,
+// 	+ .form__radio__label {
+// 		+ .contextual__input__options {
+// 			display: block;
+// 		}
+// 		+ .form__help {
+// 			+ .contextual__input__options {
+// 				display: block;
+// 			}
+// 		}
+// 	}
+// }
+
+// /* Color input */
+// input[type="text"].form__color {
+// 	@extend .form__input;
+
+// 	display: inline;
+// 	width: 100px;
+// }
+
+// input[type="color"].form__color {
+// 	&__picker {
+// 		+ .sp-replacer {
+// 			margin: 12px 13px;
+// 			vertical-align: top;
+// 		}
+// 	}
+// }

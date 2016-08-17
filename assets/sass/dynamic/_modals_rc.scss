@@ -34,7 +34,7 @@
 			font-size: 24px;
 		}
 	}
-	&__title {
+	h2 {
 		padding-right: 42px;
 	}
 	&__content {
@@ -43,18 +43,14 @@
 		background-clip: padding-box;
 		outline: 0;
 		padding: 35px 30px;
+		h1, h2, h3, h4 {
+			color: #424242;
+		}
 		img {
 			max-width: 100%;
 			height: auto;
 		}
-		h1, .h1,
-		h2, .h2,
-		h3, .h3,
-		h4, .h4,
-		h5, .h5 {
-			color: #424242;
-		}
-		h3, .h3 {
+		h3 {
 			font-family: 'ralewaysemibold', arial, sans-serif;
 		}
 	}
@@ -71,11 +67,11 @@
 }
 
 .rc_modal {
-	&.rc_fade .rc_modal__dialog {
+	&.rc_fade &__dialog {
 		transform: translate(0, -25%);
 		transition: transform 0.3s ease-out;
 	}
-	&.rc_in .rc_modal__dialog {
+	&.rc_in &__dialog {
 		transform: translate(0, 0);
 	}
 	&__dialog {
@@ -108,7 +104,6 @@
 	&.rc_fade {
 		opacity: 0;
 		filter: alpha(opacity=0);
-		transition: opacity 0.2s linear;
 	}
 	&.rc_in,
 	&.rc_fade.rc_in {
@@ -126,19 +121,17 @@
 }
 
 .rc_modal__actions {
-	@extend .form__actions;
+	@extend .rc_form__actions;
 	margin-top: 0;
 	margin-bottom: 0;
-	.button {
-		@extend .button--large;
+	.rc_button {
+		@extend .rc_button--large;
 	}
 }
 
-.fade,
 .rc_fade {
 	opacity: 0;
 	transition: opacity 0.2s linear;
-	&.in,
 	&.rc_in {
 		opacity: 1;
 	}

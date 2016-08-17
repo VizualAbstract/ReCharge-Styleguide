@@ -1,0 +1,144 @@
+/* 
+	Element: Buttons
+	Version 1.0
+	Date: 5-5-2016
+	Author: Corey M. Capetillo
+	5-5-2016
+		- Creation date
+	7-22-2016
+		- Removed !important from button links
+		- Add hover-colors for button--links
+*/
+.rc_button {
+	font-family: 'ralewaysemibold', arial, sans-serif;
+	text-align: center;
+	text-decoration: none;
+
+	border-width: 0;
+	border-style: solid;
+	height: 40px;
+
+	box-sizing: border-box;
+	outline: 0;
+	min-width: 100px;
+
+	display: inline-block;
+
+	cursor: pointer;
+	touch-action: manipulation;
+	
+    white-space: nowrap;
+
+    vertical-align: middle;
+
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	padding: $padding-base-vertical $padding-base-horizontal;
+	height: ($line-height-computed + ($padding-base-vertical * 2) + 1);
+
+	& {
+		color: $button-color;
+		background-color: $button-background;
+		&:hover,
+		&:active {
+			color: $button-color;
+			background-color: $button-hover-background;
+			outline: 0;
+		}
+	}
+
+	&:disabled,
+	&.disabled,
+	&--disabled.button {
+		background-color: $button-disabled-background !important;
+		cursor: default !important;
+	}
+}
+.rc_button {
+	&--primary.button {
+		background-color: $button-primary-background;
+		color: $button-primary-color;
+		&:hover,
+		&:active {
+			color: $button-primary-color;
+			background-color: $button-primary-hover-background;
+		}
+	}
+	&--secondary.button {
+		background-color: $gray-dark;
+		&:hover,
+		&:active {
+			background-color: $gray-darker;
+		}
+	}
+	&--danger.button {
+		background-color: $button-danger-background;
+		color: $button-danger-color;
+		&:hover,
+		&:active {
+			color: $button-danger-color;
+			background-color: $button-danger-hover-background;
+		}
+	}
+}
+
+.rc_button {
+	&--large.button {
+		padding: $padding-large-vertical;
+		font-size: $font-size-base;
+
+		line-height: $line-height-base;
+		padding: $padding-large-vertical $padding-large-horizontal;
+		height: ($line-height-computed + ($padding-large-vertical * 2) + 1);
+	}
+	&--block.button {
+		display: inline-block;
+		width: 100%;
+		white-space: nowrap;
+	}
+	&--link.button {
+		appearance: none;
+		background: transparent !important;
+		font-family: 'ralewayregular', arial, sans-serif;
+		padding-left: 0;
+		padding-right: 0;
+		// text-decoration: underline;
+		color: $gray-darker;
+		&:hover,
+		&:hover {
+			color: $gray-darker;
+		}
+		&.rc_button--primary {
+			color: $color-primary;
+			&:hover,
+			&:hover {
+				color: $color-primary;
+			}
+		}
+		&.rc_button--secondary {
+			color: $color-secondary;
+			&:hover,
+			&:hover {
+				color: $color-secondary;
+			}
+		}
+		&.rc_button--danger {
+			color: $color-danger;
+			&:hover,
+			&:hover {
+				color: $color-danger;
+			}
+		}
+		&.rc_button--disabled {
+			color: #d8d8d8;
+			&:hover,
+			&:hover {
+				color: #d8d8d8;
+			}
+		}
+	}
+}
+
+.rc_button.rc_button--link.rc_button--alt {
+	text-decoration: none;
+}

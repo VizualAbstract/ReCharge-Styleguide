@@ -22,6 +22,25 @@
   	Bare-bone html elements. Essential to the general look and feel. Class nomiclature follows standard HTML naming conventions, but CSS selectors are used for their improved rendering speed.
   */
   /* Tables */
+  /* 
+  	Element: Buttons
+  	Version 1.0
+  	Date: 5-5-2016
+  	Author: Corey M. Capetillo
+  	5-5-2016
+  		- Creation date
+  	7-22-2016
+  		- Removed !important from button links
+  		- Add hover-colors for button--links
+  */
+  /* 
+  	Element: Forms
+  	Version 1.1
+  	Date: 5-5-2016
+  	Author: Corey M. Capetillo
+  	8-17-16:
+  		- Create RC version
+  */
   /*
   	Layout
   	Structural elements dependant on each other to build out a page. Houses Components.
@@ -37,10 +56,21 @@
   	Author: Corey M. Capetillo
   	8-3-2016:
   		- Added the old title-info element for organization
+  	8-16-2016:
+  		- Make the margin-bottom less aggressive
+  		- Add rc_page-title
   */
   /*
   	Dynamic
   	Heavily dependant on javascript to deliver a specific effect.
+  */
+  /* 
+  	Dynamic: Modals
+  	Version 1.0
+  	Date: 8-17-2016
+  	Author: Corey M. Capetillo
+  	8-17-2016:
+  		- Abstract modals outside of original file
   */
   /*
   	Vendors
@@ -104,6 +134,106 @@
     .recharge .rc_table td:last-child {
       white-space: nowrap;
       width: 1%; }
+  .recharge .rc_button {
+    font-family: 'ralewaysemibold', arial, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    border-width: 0;
+    border-style: solid;
+    height: 40px;
+    box-sizing: border-box;
+    outline: 0;
+    min-width: 100px;
+    display: inline-block;
+    cursor: pointer;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 1.5625;
+    padding: 7px 10px;
+    height: 40px; }
+    .recharge .rc_button {
+      color: #FFFFFF;
+      background-color: #5C5C5C; }
+      .recharge .rc_button:hover, .recharge .rc_button:active {
+        color: #FFFFFF;
+        background-color: #424242;
+        outline: 0; }
+    .recharge .rc_button:disabled, .recharge .rc_button.disabled, .recharge .rc_button--disabled.button {
+      background-color: #D8D8D8 !important;
+      cursor: default !important; }
+  .recharge .rc_button--primary.button {
+    background-color: #4DD6B7;
+    color: #FFFFFF; }
+    .recharge .rc_button--primary.button:hover, .recharge .rc_button--primary.button:active {
+      color: #FFFFFF;
+      background-color: #2BAC8F; }
+  .recharge .rc_button--secondary.button {
+    background-color: #676767; }
+    .recharge .rc_button--secondary.button:hover, .recharge .rc_button--secondary.button:active {
+      background-color: #424242; }
+  .recharge .rc_button--danger.button {
+    background-color: #EC3D10;
+    color: #FFFFFF; }
+    .recharge .rc_button--danger.button:hover, .recharge .rc_button--danger.button:active {
+      color: #FFFFFF;
+      background-color: #d4370e; }
+  .recharge .rc_button--large.button, .recharge .rc_modal__actions .button.rc_button {
+    padding: 17px;
+    font-size: 16px;
+    line-height: 1.5625;
+    padding: 17px 20px;
+    height: 60px; }
+  .recharge .rc_button--block.button {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap; }
+  .recharge .rc_button--link.button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background: transparent !important;
+    font-family: 'ralewayregular', arial, sans-serif;
+    padding-left: 0;
+    padding-right: 0;
+    color: #424242; }
+    .recharge .rc_button--link.button:hover, .recharge .rc_button--link.button:hover {
+      color: #424242; }
+    .recharge .rc_button--link.button.rc_button--primary {
+      color: #4DD6B7; }
+      .recharge .rc_button--link.button.rc_button--primary:hover, .recharge .rc_button--link.button.rc_button--primary:hover {
+        color: #4DD6B7; }
+    .recharge .rc_button--link.button.rc_button--secondary {
+      color: #2bac8f; }
+      .recharge .rc_button--link.button.rc_button--secondary:hover, .recharge .rc_button--link.button.rc_button--secondary:hover {
+        color: #2bac8f; }
+    .recharge .rc_button--link.button.rc_button--danger {
+      color: #EC3D10; }
+      .recharge .rc_button--link.button.rc_button--danger:hover, .recharge .rc_button--link.button.rc_button--danger:hover {
+        color: #EC3D10; }
+    .recharge .rc_button--link.button.rc_button--disabled {
+      color: #d8d8d8; }
+      .recharge .rc_button--link.button.rc_button--disabled:hover, .recharge .rc_button--link.button.rc_button--disabled:hover {
+        color: #d8d8d8; }
+  .recharge .rc_button.rc_button--link.rc_button--alt {
+    text-decoration: none; }
+  .recharge .rc_form__actions, .recharge .rc_modal__actions {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 60px; }
+    .recharge .rc_form__actions .rc_button, .recharge .rc_modal__actions .rc_button {
+      -webkit-box-flex: 100%;
+      -webkit-flex: 100%;
+          -ms-flex: 100%;
+              flex: 100%; }
+      .recharge .rc_form__actions .rc_button + .rc_button, .recharge .rc_modal__actions .rc_button + .rc_button {
+        margin-left: 13px; }
   .recharge .rc_layout__container {
     margin-right: auto;
     margin-left: auto;
@@ -217,6 +347,16 @@
     min-height: 1px;
     padding-left: 10px;
     padding-right: 10px; }
+  .recharge .rc_page-title {
+    width: 100%;
+    min-height: 40px; }
+    .recharge .rc_page-title h1, .recharge .rc_page-title .h1 {
+      margin-top: 0; }
+    .recharge .rc_page-title__description {
+      display: table;
+      width: 100%;
+      font-size: 16px;
+      text-align: left; }
   .recharge .rc_info-bar {
     display: table;
     width: 100%; }
@@ -238,8 +378,7 @@
     .recharge .rc_title-bar h4, .recharge .rc_title-bar .h4,
     .recharge .rc_title-bar h5, .recharge .rc_title-bar .h5,
     .recharge .rc_title-bar h6, .recharge .rc_title-bar .h6 {
-      margin-top: 0;
-      margin-bottom: 0; }
+      margin-top: 0; }
     .recharge .rc_title-bar__title, .recharge .rc_title-bar__content {
       display: table-cell;
       vertical-align: top; }
@@ -247,5 +386,122 @@
       text-align: right;
       font-size: 16px;
       white-space: nowrap; }
+  .recharge .rc_modal {
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 90;
+    -webkit-overflow-scrolling: touch;
+    outline: 0; }
+    .recharge .rc_modal__close {
+      font-family: fontawesome;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      outline: 0;
+      cursor: pointer;
+      z-index: 90; }
+      .recharge .rc_modal__close:before {
+        content: "\f00d";
+        font-size: 24px; }
+    .recharge .rc_modal h2 {
+      padding-right: 42px; }
+    .recharge .rc_modal__content {
+      position: relative;
+      background-color: #ffffff;
+      background-clip: padding-box;
+      outline: 0;
+      padding: 35px 30px; }
+      .recharge .rc_modal__content h1, .recharge .rc_modal__content h2, .recharge .rc_modal__content h3, .recharge .rc_modal__content h4 {
+        color: #424242; }
+      .recharge .rc_modal__content img {
+        max-width: 100%;
+        height: auto; }
+      .recharge .rc_modal__content h3 {
+        font-family: 'ralewaysemibold', arial, sans-serif; }
+    @media (min-width: 768px) {
+      .recharge .rc_modal--small {
+        width: 300px; } }
+    @media (min-width: 992px) {
+      .recharge .rc_modal--large {
+        width: 900px; } }
+  .recharge .rc_modal.rc_fade .recharge .rc_modal__dialog {
+    -webkit-transform: translate(0, -25%);
+            transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
+  .recharge .rc_modal.rc_in .recharge .rc_modal__dialog {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  .recharge .rc_modal__dialog {
+    position: relative;
+    width: auto;
+    margin: 10px; }
+    @media (min-width: 768px) {
+      .recharge .rc_modal__dialog {
+        width: 700px;
+        margin: 4% auto; } }
+  .recharge .rc_modal__open {
+    overflow: hidden; }
+    .recharge .rc_modal__open .rc_modal {
+      overflow-x: hidden;
+      overflow-y: auto; }
+  .recharge .rc_modal__backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #000; }
+    .recharge .rc_modal__backdrop.rc_fade {
+      opacity: 0;
+      filter: alpha(opacity=0); }
+    .recharge .rc_modal__backdrop.rc_in, .recharge .rc_modal__backdrop.rc_fade.rc_in {
+      opacity: 0.7;
+      filter: alpha(opacity=70); }
+  .recharge .rc_modal__scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll; }
+  .recharge .rc_modal__actions {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .recharge .rc_fade {
+    opacity: 0;
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear; }
+    .recharge .rc_fade.rc_in {
+      opacity: 1; }
+  .recharge .rc_modal__open {
+    overflow: hidden; }
+  .recharge .rc_modal__backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 80;
+    background-color: #000; }
+    .recharge .rc_modal__backdrop.rc_fade {
+      opacity: 0;
+      filter: alpha(opacity=0);
+      -webkit-transition: opacity 0.2s linear;
+      transition: opacity 0.2s linear; }
+    .recharge .rc_modal__backdrop.rc_in, .recharge .rc_modal__backdrop.rc_fade.rc_in {
+      opacity: 0.7;
+      filter: alpha(opacity=70); }
 
 /*# sourceMappingURL=proxy.css.map */
