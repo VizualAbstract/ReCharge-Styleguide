@@ -13,10 +13,17 @@
 <?php include('_components/setup-header.php'); ?>
 </div><!-- .example -->
 
+<h2 id="page-title">Page Title</h2>
+<div class="description">
+	<p>Page Title is a wrapper that supports a description. Mix with a <a href="#title-bar">.title-bar</a> to create interface elements.</a></p>
+</div><!-- .description -->
+<div class="example">
+<?php include('_components/page-title.php'); ?>
+</div><!-- .example -->
+
 <h2 id="title-bar">Title Bar</h2>
 <div class="description">
-	<p>Not much seperates the difference between the <strong>Title Bar</strong> and the <a href="#info-bar">Info Bar</a>. The one notable difference is that the vertical-alignment of the <strong>Title Bar</strong> is set to <em>middle</em>.</p>
-	<p>Place a h1 representary class (.h1, .h2, .h3, etc) in the element so it may adopt the correct margin, otherwise, the heading margin will be reset</p>
+	<p>Useful for page titles (h1, h2, h3, h4) that have relevant content or actions. Place a header class (.h1, .h2, .h3, etc) in the element so it may adopt the correct margin, otherwise, the heading margin will be reset.</p>
 </div><!-- .description -->
 <div class="example">
 <?php include('_components/title-bar.php'); ?>
@@ -25,19 +32,11 @@
 <h2 id="info-bar">Info Bar</h2>
 <div class="description">
 	<p>
-		Not much seperates the difference between the <strong>Info Bar</strong> and the <a href="#title-bar">Title Bar</a>. The one notable difference is that the vertical-alignment of the <strong>Info Bar is</strong> set to <code>top</code>.
+		Similair to the <a href="#title-bar">Title Bar</a>, but the content is vertically-aligned to the top. Better for overviews instead of page titles.
 	</p>
 </div><!-- .description -->
 <div class="example">
 <?php include('_components/info-bar.php'); ?>
-</div><!-- .example -->
-
-<h2 id="page-title">Page Title</h2>
-<div class="description">
-	<p>The page title relies on the title-bar to create the header-to-action layout, but now adds the ability to include a description</p>
-</div><!-- .description -->
-<div class="example">
-<?php include('_components/page-title.php'); ?>
 </div><!-- .example -->
 
 <h2 id="dropdown-header">Dropdown Header</h2>

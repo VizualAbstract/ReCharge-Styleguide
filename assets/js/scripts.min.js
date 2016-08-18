@@ -73,7 +73,7 @@ function rc_activate_trigger(variable, currentURL, value) {
 }
 $(function(){
 	// Forms: select field, dropdown and multi-select
-	$(".form__select").dropkick({
+	$(".new__wrapper .form__select").dropkick({
 		mobile: true
 	});
 	// Admin tools: variable toggler

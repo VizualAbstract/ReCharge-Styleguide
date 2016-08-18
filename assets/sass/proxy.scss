@@ -1,3 +1,4 @@
+
 /*
 	5-5-2016 - Create this file
 	5-10-2016 - Add .new wrapper and admin_utilities.scss
@@ -79,7 +80,7 @@
 	Heavily dependant on javascript to deliver a specific effect.
 */
 // .new {
-		@import 'dynamic/_modals_rc.scss';
+		@import 'dynamic/_modals.scss';
 // 	@import 'dynamic/_tooltips.scss';
 // 	@import 'dynamic/_popovers.scss';
 // }
@@ -93,29 +94,6 @@
 // 	@import 'vendors/_dropkick.scss';
 // }
 /* Temporary fix until we no longer need to use .new {} */
-.rc_modal__open {
-	overflow: hidden;
-}
-
-.rc_modal__backdrop {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: $zindex-modal-background;
-	background-color: #000;
-	&.rc_fade {
-		opacity: 0;
-		filter: alpha(opacity=0);
-		transition: opacity 0.2s linear;
-	}
-	&.rc_in,
-	&.rc_fade.rc_in {
-		opacity: 0.7;
-		filter: alpha(opacity=70);
-	}
-}
 
 /*
 	Misc
@@ -216,5 +194,28 @@
 // 	@import 'pages/signup_questions.scss';
 // 	@import 'sass/common/_utility.scss';
 // }
+}
 
+.rc_modal__open {
+	overflow: hidden;
+}
+
+.rc_modal__backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: $zindex-modal-background;
+	background-color: #000;
+	&.rc_fade {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		transition: opacity 0.2s linear;
+	}
+	&.rc_in,
+	&.rc_fade.rc_in {
+		opacity: 0.7;
+		filter: alpha(opacity=70);
+	}
 }

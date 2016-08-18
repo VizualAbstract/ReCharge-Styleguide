@@ -12,9 +12,6 @@
 	left: 0;
 	width: 100%;
 
-	/* Temporary fix for the excessive ammount of margin on the bottom of the page that appears when this is used. This is because the footer has a top-margin of 30 pixels and the PUSH has a bottom margin of 80px */
-	margin-bottom: -110px;
-
 	&__toggler {
 		background-color: transparent;
 		font-family: monospace;

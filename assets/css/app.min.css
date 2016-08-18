@@ -4631,34 +4631,38 @@ h1 + .setup-header__description,
     margin-left: 100%;
   }
 }
-/* line 150, ../sass/layouts/_grid.scss */
+/* line 143, ../sass/layouts/_grid.scss */
 .new__wrapper #wrap {
   min-height: initial;
   height: initial;
   margin: 0 auto;
   padding: 0;
 }
-/* line 157, ../sass/layouts/_grid.scss */
+/* line 149, ../sass/layouts/_grid.scss */
+.new__wrapper #content {
+  padding-bottom: 20px;
+}
+/* line 153, ../sass/layouts/_grid.scss */
 .new__wrapper {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -80px;
+  margin: 0 auto -50px;
 }
-/* line 163, ../sass/layouts/_grid.scss */
+/* line 159, ../sass/layouts/_grid.scss */
 .new__wrapper .push {
-  height: 80px;
+  height: 50px;
 }
-/* line 169, ../sass/layouts/_grid.scss */
+/* line 164, ../sass/layouts/_grid.scss */
 .new .layout__container {
   box-sizing: border-box;
 }
-/* line 171, ../sass/layouts/_grid.scss */
+/* line 166, ../sass/layouts/_grid.scss */
 .new .layout__container:before {
   display: table;
   content: " ";
 }
-/* line 176, ../sass/layouts/_grid.scss */
+/* line 171, ../sass/layouts/_grid.scss */
 .new .layout {
   margin-left: -10px;
   margin-right: -10px;
@@ -4673,7 +4677,7 @@ h1 + .setup-header__description,
 .new .layout:after {
   clear: both;
 }
-/* line 180, ../sass/layouts/_grid.scss */
+/* line 175, ../sass/layouts/_grid.scss */
 .new .layout__sidebar {
   box-sizing: border-box;
   position: relative;
@@ -4684,7 +4688,7 @@ h1 + .setup-header__description,
   padding-right: 10px;
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 180, ../sass/layouts/_grid.scss */
+  /* line 175, ../sass/layouts/_grid.scss */
   .new .layout__sidebar {
     position: relative;
     float: left;
@@ -4695,7 +4699,7 @@ h1 + .setup-header__description,
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  /* line 180, ../sass/layouts/_grid.scss */
+  /* line 175, ../sass/layouts/_grid.scss */
   .new .layout__sidebar {
     position: relative;
     float: left;
@@ -4706,7 +4710,7 @@ h1 + .setup-header__description,
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 180, ../sass/layouts/_grid.scss */
+  /* line 175, ../sass/layouts/_grid.scss */
   .new .layout__sidebar {
     position: relative;
     float: left;
@@ -4716,7 +4720,7 @@ h1 + .setup-header__description,
     padding-right: 10px;
   }
 }
-/* line 193, ../sass/layouts/_grid.scss */
+/* line 188, ../sass/layouts/_grid.scss */
 .new .layout__content {
   box-sizing: border-box;
   position: relative;
@@ -4727,7 +4731,7 @@ h1 + .setup-header__description,
   padding-right: 10px;
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 193, ../sass/layouts/_grid.scss */
+  /* line 188, ../sass/layouts/_grid.scss */
   .new .layout__content {
     position: relative;
     float: left;
@@ -4738,7 +4742,7 @@ h1 + .setup-header__description,
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  /* line 193, ../sass/layouts/_grid.scss */
+  /* line 188, ../sass/layouts/_grid.scss */
   .new .layout__content {
     position: relative;
     float: left;
@@ -4749,7 +4753,7 @@ h1 + .setup-header__description,
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 193, ../sass/layouts/_grid.scss */
+  /* line 188, ../sass/layouts/_grid.scss */
   .new .layout__content {
     position: relative;
     float: left;
@@ -4759,7 +4763,7 @@ h1 + .setup-header__description,
     padding-right: 10px;
   }
 }
-/* line 206, ../sass/layouts/_grid.scss */
+/* line 201, ../sass/layouts/_grid.scss */
 .new .layout__full {
   box-sizing: border-box;
   position: relative;
@@ -4769,44 +4773,50 @@ h1 + .setup-header__description,
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 213, ../sass/layouts/_grid.scss */
+/* line 208, ../sass/layouts/_grid.scss */
 .new #schedule_once_container {
   margin-bottom: 10px;
 }
-/* line 215, ../sass/layouts/_grid.scss */
+/* line 210, ../sass/layouts/_grid.scss */
 .new #schedule_once_container p {
   max-width: 670px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
-/* line 221, ../sass/layouts/_grid.scss */
+/* line 216, ../sass/layouts/_grid.scss */
 .new #schedule_once_container .header {
   margin-top: 0;
 }
-/* line 225, ../sass/layouts/_grid.scss */
+/* line 220, ../sass/layouts/_grid.scss */
 .new #install_recharge {
   margin-bottom: 21px;
 }
 /* line 7, ../sass/layouts/_footer.scss */
 .new .footer {
   background-color: #424242;
-  margin-top: 30px;
+  margin-top: 0;
   line-height: 50px;
   min-height: 50px;
   border-width: 0;
   text-align: center;
 }
-/* line 14, ../sass/layouts/_footer.scss */
+@media screen and (max-width: 767px) {
+  /* line 7, ../sass/layouts/_footer.scss */
+  .new .footer {
+    padding-top: 5px;
+  }
+}
+/* line 17, ../sass/layouts/_footer.scss */
 .new .footer__container {
   line-height: 0;
 }
-/* line 17, ../sass/layouts/_footer.scss */
+/* line 20, ../sass/layouts/_footer.scss */
 .new .footer__links {
   margin: 0;
   padding: 0;
 }
-/* line 20, ../sass/layouts/_footer.scss */
+/* line 23, ../sass/layouts/_footer.scss */
 .new .footer__links a {
   display: block;
   padding: 0 10px;
@@ -4815,12 +4825,12 @@ h1 + .setup-header__description,
   color: #FFFFFF;
   font-size: 12px;
 }
-/* line 27, ../sass/layouts/_footer.scss */
+/* line 30, ../sass/layouts/_footer.scss */
 .new .footer__links a:hover, .new .footer__links a:focus {
   color: #FFFFFF;
 }
 @media screen and (max-width: 767px) {
-  /* line 20, ../sass/layouts/_footer.scss */
+  /* line 23, ../sass/layouts/_footer.scss */
   .new .footer__links a {
     line-height: 2em;
     height: auto;
@@ -5298,10 +5308,8 @@ h1 + .setup-header__description,
   padding: 20px;
   left: 0;
   width: 100%;
-  /* Temporary fix for the excessive ammount of margin on the bottom of the page that appears when this is used. This is because the footer has a top-margin of 30 pixels and the PUSH has a bottom margin of 80px */
-  margin-bottom: -110px;
 }
-/* line 18, ../sass/layouts/_admin-tools.scss */
+/* line 15, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools__toggler {
   background-color: transparent;
   font-family: monospace;
@@ -5309,7 +5317,7 @@ h1 + .setup-header__description,
   padding: 0;
   color: #FFF;
 }
-/* line 24, ../sass/layouts/_admin-tools.scss */
+/* line 21, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools__toggler button {
   font-size: 11px !important;
   padding: 4px 8px;

@@ -11,6 +11,9 @@
 	min-height: $footer-height;
 	border-width: 0;
 	text-align: center;
+	@media screen and (max-width: $screen-xs-max) {
+    	padding-top: 5px;
+	}
 	&__container {
 		line-height: 0;
 	}

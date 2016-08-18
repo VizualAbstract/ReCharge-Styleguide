@@ -77,14 +77,14 @@
 // 	}
 // }
 
-.rc_form__actions {
+.form__actions {
 	display: flex;
 	width: 100%;
 	margin-top: $fieldset-spacing-calculated;
 	margin-bottom: $fieldset-spacing;
-	.rc_button {
+	.button {
   		flex: 100%;
-  		+ .rc_button {
+  		+ .button {
   			margin-left: 13px;
   		}
 	}
