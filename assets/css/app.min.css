@@ -5755,7 +5755,8 @@ h1 + .setup-header__description,
   	6-5-2016:
   		- Change min-width to 80px. This is primarily to accomidate numbers.
   		- We may eventually go to a named-class minimum
-  
+  	6-18-2016:
+  		- Form select should have just as much bottom margin as input fields
   */
 }
 /* line 6, ../sass/vendors/_bootstrap.scss */
@@ -5849,7 +5850,7 @@ h1 + .setup-header__description,
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
 }
-/* line 31, ../sass/vendors/_dropkick.scss */
+/* line 32, ../sass/vendors/_dropkick.scss */
 .new .dk-select,
 .new .dk-select *,
 .new .dk-select *:before,
@@ -5860,7 +5861,7 @@ h1 + .setup-header__description,
 .new .dk-select-multi *:after {
   box-sizing: border-box;
 }
-/* line 42, ../sass/vendors/_dropkick.scss */
+/* line 43, ../sass/vendors/_dropkick.scss */
 .new .dk-select,
 .new .dk-select-multi {
   position: relative;
@@ -5870,16 +5871,16 @@ h1 + .setup-header__description,
   width: 100%;
   min-width: 80px;
   max-width: 100%;
-  margin: 12px 0 20px;
+  margin: 12px 0;
   cursor: pointer;
   color: #424242;
 }
-/* line 57, ../sass/vendors/_dropkick.scss */
+/* line 58, ../sass/vendors/_dropkick.scss */
 .new .dk-select ::-moz-selection,
 .new .dk-select-multi ::-moz-selection {
   background: transparent;
 }
-/* line 60, ../sass/vendors/_dropkick.scss */
+/* line 61, ../sass/vendors/_dropkick.scss */
 .new .dk-select ::-moz-selection,
 .new .dk-select-multi ::-moz-selection {
   background: transparent;
@@ -5888,7 +5889,7 @@ h1 + .setup-header__description,
 .new .dk-select-multi ::selection {
   background: transparent;
 }
-/* line 65, ../sass/vendors/_dropkick.scss */
+/* line 66, ../sass/vendors/_dropkick.scss */
 .new .dk-selected {
   width: 100%;
   white-space: nowrap;
@@ -5905,14 +5906,14 @@ h1 + .setup-header__description,
   padding: 7px 10px;
   height: 40px;
 }
-/* line 84, ../sass/vendors/_dropkick.scss */
+/* line 85, ../sass/vendors/_dropkick.scss */
 .new .dk-selected:before, .new .dk-selected:after {
   content: '';
   display: block;
   position: absolute;
   right: 0;
 }
-/* line 91, ../sass/vendors/_dropkick.scss */
+/* line 92, ../sass/vendors/_dropkick.scss */
 .new .dk-selected:before {
   content: '\f0d7';
   position: relative;
@@ -5930,40 +5931,40 @@ h1 + .setup-header__description,
   right: -10px;
   margin: 0;
 }
-/* line 108, ../sass/vendors/_dropkick.scss */
+/* line 109, ../sass/vendors/_dropkick.scss */
 .new .dk-selected:after {
   top: 0;
   height: 100%;
   margin: 0 1.5em 0 0;
 }
-/* line 115, ../sass/vendors/_dropkick.scss */
+/* line 116, ../sass/vendors/_dropkick.scss */
 .new .dk-selected-disabled {
   color: #BBBBBB;
 }
-/* line 119, ../sass/vendors/_dropkick.scss */
+/* line 120, ../sass/vendors/_dropkick.scss */
 .new .dk-select .dk-select-options {
   position: absolute;
   display: none;
   left: 0;
   right: 0;
 }
-/* line 126, ../sass/vendors/_dropkick.scss */
+/* line 127, ../sass/vendors/_dropkick.scss */
 .new .dk-select-open-up .dk-select-options {
   border-radius: 0 0 0 0;
   margin-bottom: -1px;
   bottom: 100%;
 }
-/* line 132, ../sass/vendors/_dropkick.scss */
+/* line 133, ../sass/vendors/_dropkick.scss */
 .new .dk-select-open-down .dk-select-options {
   border-radius: 0 0 0 0;
   margin-top: -1px;
   top: 100%;
 }
-/* line 138, ../sass/vendors/_dropkick.scss */
+/* line 139, ../sass/vendors/_dropkick.scss */
 .new .dk-select-multi .dk-select-options {
   max-height: 10em;
 }
-/* line 142, ../sass/vendors/_dropkick.scss */
+/* line 143, ../sass/vendors/_dropkick.scss */
 .new .dk-select-options {
   background-color: white;
   border: 1px solid #424242;
@@ -5977,17 +5978,17 @@ h1 + .setup-header__description,
   width: auto;
   z-index: 100;
 }
-/* line 156, ../sass/vendors/_dropkick.scss */
+/* line 157, ../sass/vendors/_dropkick.scss */
 .new .dk-option-selected {
   background-color: #BDF0E4;
   color: #424242;
 }
-/* line 161, ../sass/vendors/_dropkick.scss */
+/* line 162, ../sass/vendors/_dropkick.scss */
 .new .dk-select-options-highlight .dk-option-selected {
   background-color: transparent;
   color: inherit;
 }
-/* line 166, ../sass/vendors/_dropkick.scss */
+/* line 167, ../sass/vendors/_dropkick.scss */
 .new .dk-option {
   font-size: 16px;
   line-height: 1.5625;
@@ -5995,117 +5996,117 @@ h1 + .setup-header__description,
   height: 40px;
   white-space: nowrap;
 }
-/* line 175, ../sass/vendors/_dropkick.scss */
+/* line 176, ../sass/vendors/_dropkick.scss */
 .new .dk-select-options .dk-option-highlight {
   background-color: #BDF0E4;
   color: #424242;
 }
-/* line 180, ../sass/vendors/_dropkick.scss */
+/* line 181, ../sass/vendors/_dropkick.scss */
 .new .dk-select-options .dk-option-disabled {
   color: #BBBBBB;
   background-color: transparent;
 }
-/* line 185, ../sass/vendors/_dropkick.scss */
+/* line 186, ../sass/vendors/_dropkick.scss */
 .new .dk-select-options .dk-option-hidden {
   display: none;
 }
-/* line 189, ../sass/vendors/_dropkick.scss */
+/* line 190, ../sass/vendors/_dropkick.scss */
 .new .dk-optgroup {
   border: solid #424242;
   border-width: 1px 0;
   padding: 0.25em 0;
   margin-top: 0.25em;
 }
-/* line 194, ../sass/vendors/_dropkick.scss */
+/* line 195, ../sass/vendors/_dropkick.scss */
 .new .dk-optgroup + .dk-option {
   margin-top: 0.25em;
 }
-/* line 197, ../sass/vendors/_dropkick.scss */
+/* line 198, ../sass/vendors/_dropkick.scss */
 .new .dk-optgroup + .dk-optgroup {
   border-top-width: 0;
   margin-top: 0;
 }
-/* line 201, ../sass/vendors/_dropkick.scss */
+/* line 202, ../sass/vendors/_dropkick.scss */
 .new .dk-optgroup:nth-child(2) {
   padding-top: 0;
   border-top: none;
   margin-top: 0;
 }
-/* line 206, ../sass/vendors/_dropkick.scss */
+/* line 207, ../sass/vendors/_dropkick.scss */
 .new .dk-optgroup:last-child {
   border-bottom-width: 0;
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 213, ../sass/vendors/_dropkick.scss */
+/* line 214, ../sass/vendors/_dropkick.scss */
 .new .dk-optgroup-label {
   padding: 0 0.5em 0.25em;
   font-weight: bold;
   width: 100%;
 }
-/* line 219, ../sass/vendors/_dropkick.scss */
+/* line 220, ../sass/vendors/_dropkick.scss */
 .new .dk-optgroup-options {
   list-style: none;
   padding-left: 0;
 }
-/* line 222, ../sass/vendors/_dropkick.scss */
+/* line 223, ../sass/vendors/_dropkick.scss */
 .new .dk-optgroup-options li {
   padding-left: 1.2em;
 }
-/* line 227, ../sass/vendors/_dropkick.scss */
+/* line 228, ../sass/vendors/_dropkick.scss */
 .new .dk-select-open-up .dk-selected {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-color: #4DD6B7;
 }
-/* line 233, ../sass/vendors/_dropkick.scss */
+/* line 234, ../sass/vendors/_dropkick.scss */
 .new .dk-select-open-down .dk-selected {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   border-color: #4DD6B7;
 }
-/* line 239, ../sass/vendors/_dropkick.scss */
+/* line 240, ../sass/vendors/_dropkick.scss */
 .new .dk-select-open-up .dk-selected:before,
 .new .dk-select-open-down .dk-selected:before {
   content: '\f0d8';
   top: -9px;
   color: #424242;
 }
-/* line 246, ../sass/vendors/_dropkick.scss */
+/* line 247, ../sass/vendors/_dropkick.scss */
 .new .dk-select-open-up .dk-select-options,
 .new .dk-select-open-down .dk-select-options,
 .new .dk-select-multi:focus .dk-select-options {
   display: block;
   border-color: #4DD6B7;
 }
-/* line 253, ../sass/vendors/_dropkick.scss */
+/* line 254, ../sass/vendors/_dropkick.scss */
 .new .dk-select-multi {
   outline: none;
 }
-/* line 258, ../sass/vendors/_dropkick.scss */
+/* line 259, ../sass/vendors/_dropkick.scss */
 .new .dk-selected:focus {
   outline: none;
   border-color: #4DD6B7 !important;
 }
-/* line 261, ../sass/vendors/_dropkick.scss */
+/* line 262, ../sass/vendors/_dropkick.scss */
 .new .dk-selected:focus:before {
   border-top-color: #424242;
 }
-/* line 266, ../sass/vendors/_dropkick.scss */
+/* line 267, ../sass/vendors/_dropkick.scss */
 .new .dk-select-disabled {
   opacity: 0.6;
   color: #BBBBBB;
   cursor: not-allowed;
 }
-/* line 271, ../sass/vendors/_dropkick.scss */
+/* line 272, ../sass/vendors/_dropkick.scss */
 .new .dk-select-disabled .dk-selected:hover, .new .dk-select-disabled .dk-selected:focus {
   border-color: inherit;
 }
-/* line 273, ../sass/vendors/_dropkick.scss */
+/* line 274, ../sass/vendors/_dropkick.scss */
 .new .dk-select-disabled .dk-selected:hover:before, .new .dk-select-disabled .dk-selected:focus:before {
   border-top-color: inherit;
 }
-/* line 280, ../sass/vendors/_dropkick.scss */
+/* line 281, ../sass/vendors/_dropkick.scss */
 .new select[data-dkcacheid] {
   display: none;
 }

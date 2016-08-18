@@ -2,7 +2,8 @@
 	6-5-2016:
 		- Change min-width to 80px. This is primarily to accomidate numbers.
 		- We may eventually go to a named-class minimum
-
+	6-18-2016:
+		- Form select should have just as much bottom margin as input fields
 */
 
 @mixin dk-pre($property, $value, $prefixes) {
@@ -49,7 +50,7 @@ $dk-arrow-color: #424242 !default;
 	width: 100%;
     min-width: 80px;
 	max-width: 100%;
-	margin: 12px 0 20px;
+	margin: 12px 0;
 
 	cursor: pointer;
 	color: $dk-color;
