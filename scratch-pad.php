@@ -4,8 +4,8 @@
 
 <hr>
 
-<h2 id="billing">Billing</h2>
-<div class="example">
+<h2 class="rc_sg__pattern_title" id="billing">Billing</h2>
+<div class="rc_sg__example">
 	<form>
 		<fieldset>
 			<legend>
@@ -108,8 +108,8 @@
 	</form>
 </div><!-- .example -->
 
-<h2 id="signup-questions">Signup Questions</h2>
-<div class="example">
+<h2 class="rc_sg__pattern_title" id="signup-questions">Signup Questions</h2>
+<div class="rc_sg__example">
 	<div class="header">
 		<h1 class="header__title">Sign up</h1>
 		<div class="header__description">30-day free trial</div>
@@ -139,8 +139,8 @@
 	</fieldset>
 </div><!-- .example -->
 
-<h2 id="incompatible-theme-and-storefront-password">Incompatible Theme &amp; Storefront Password</h2>
-<div class="example">
+<h2 class="rc_sg__pattern_title" id="incompatible-theme-and-storefront-password">Incompatible Theme &amp; Storefront Password</h2>
+<div class="rc_sg__example">
 	<fieldset>
 		<legend>
 			<h2>Installation requirements</h2>
@@ -156,8 +156,8 @@
 	</fieldset>
 </div><!-- .example -->
 
-<h2 id="unsupported-theme">Unsupported Theme</h2>
-<div class="example">
+<h2 class="rc_sg__pattern_title" id="unsupported-theme">Unsupported Theme</h2>
+<div class="rc_sg__example">
 	<fieldset>
 		<legend>
 			<h2>Installation alert</h2>
@@ -174,8 +174,8 @@
 	</fieldset>
 </div><!-- .example -->
 
-<h2 id="bold-removal-with-storefront-password">Bold removal with storefront password</h2>
-<div class="example">
+<h2 class="rc_sg__pattern_title" id="bold-removal-with-storefront-password">Bold removal with storefront password</h2>
+<div class="rc_sg__example">
 	<fieldset>
 		<legend>
 			<h2>Installation requirements</h2>
@@ -204,8 +204,8 @@
 	</fieldset>
 </div>
 
-<h2 id="bold-removal-v2">Bold removal v2</h2>
-<div class="example">
+<h2 class="rc_sg__pattern_title" id="bold-removal-v2">Bold removal v2</h2>
+<div class="rc_sg__example">
 	<fieldset>
 		<legend>
 			<h2>Installation conflict</h2>
@@ -222,8 +222,8 @@
 	</fieldset>
 </div><!-- .example -->
 
-<h2 id="bold-removal-v3">Bold removal v3</h2>
-<div class="example">
+<h2 class="rc_sg__pattern_title" id="bold-removal-v3">Bold removal v3</h2>
+<div class="rc_sg__example">
 	<fieldset>
 		<legend>
 			<h2>Installation conflict</h2>
@@ -248,8 +248,8 @@
 	</fieldset>
 </div><!-- .example -->
 
-<h2 id="bold-removal-v3-compare-solutions">Bold removal v3 - Compare Solutions</h2>
-<div class="example">
+<h2 class="rc_sg__pattern_title" id="bold-removal-v3-compare-solutions">Bold removal v3 - Compare Solutions</h2>
+<div class="rc_sg__example">
 	<fieldset>
 		<legend>
 			<h2>Installation conflict</h2>
@@ -294,7 +294,7 @@
 	</fieldset>
 </div><!-- .example -->
 
-<h2 id="subscription-modals">Subscription Modals</h2>
+<h2 class="rc_sg__pattern_title" id="subscription-modals">Subscription Modals</h2>
 <div class="example" style="background-color: rgba(0, 0, 0, .7);">
 	<div class="modal fade in" id="modal" style="position: relative; display: block;">
 		<div class="modal__dialog">
@@ -323,8 +323,8 @@
 	</div><!-- .modal .fade -->
 </div>
 
-<h2 id="subscription-forms">Subscription Forms</h2>
-<div class="example">
+<h2 class="rc_sg__pattern_title" id="subscription-forms">Subscription Forms</h2>
+<div class="rc_sg__example">
 <legend>
 	<strong>Discount for subscribers</strong>
 </legend>
@@ -404,8 +404,8 @@
 
 </div>
 
-<h2 id="recharge-updates">ReCharge Updates</h2>
-<div class="example">
+<h2 class="rc_sg__pattern_title" id="recharge-updates">ReCharge Updates</h2>
+<div class="rc_sg__example">
 <div class="header">
 	<h1 class="header__title">
 		Recent Updates

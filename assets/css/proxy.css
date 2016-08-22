@@ -18,6 +18,17 @@
 /* Colors */
 .recharge {
   /*
+  	Style: Utility
+  	Version 1.0
+  	Date: 8-22-2016
+  	Author: Corey M. Capetillo
+  	5-1-16: Page Created
+  	8-22-16:
+  		- Add alignment for justify and nowrap
+  		- Flesh out responsive utilities
+  		- Allow compatability for old class nomiclature
+  */
+  /*
   	Layouts
   	Bare-bone html elements. Essential to the general look and feel. Class nomiclature follows standard HTML naming conventions, but CSS selectors are used for their improved rendering speed.
   */
@@ -81,10 +92,10 @@
   	Misc
   	Items that don't fit anywhere else. Usually found in a singular location within the app.
   */ }
-  .recharge .text--right {
-    text-align: right !important; }
   .recharge .text--left {
     text-align: left !important; }
+  .recharge .text--right {
+    text-align: right !important; }
   .recharge .text--center {
     text-align: center !important; }
   .recharge .text--justify {
@@ -103,18 +114,158 @@
     display: table; }
   .recharge .clearfix:after {
     clear: both; }
-  .recharge .rc_visible_xs {
-    display: none; }
-  @media screen and (max-width: 767px) {
-    .recharge span.rc_visible-xs {
-      display: initial; }
-    .recharge span.rc_visible-xs {
-      display: block; }
-    .recharge th,
+  @media (max-width: 767px) {
+    .recharge .rc_hidden__xs {
+      display: none !important; }
+    .recharge .rc_hidden-xs {
+      display: none !important; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .recharge .rc_hidden__sm {
+      display: none !important; }
+    .recharge .rc_hidden-sm {
+      display: none !important; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .recharge .rc_hidden__md {
+      display: none !important; }
+    .recharge .rc_hidden-md {
+      display: none !important; } }
+  @media (min-width: 1200px) {
+    .recharge .rc_hidden__lg {
+      display: none !important; }
+    .recharge .rc_hidden-lg {
+      display: none !important; } }
+  @media (max-width: 767px) {
+    .recharge .rc_visible__xs {
+      display: initial !important; }
+    .recharge table.rc_visible__xs {
+      display: table !important; }
+    .recharge th.rc_visible__xs,
+    .recharge td.rc_visible__xs {
+      display: table !important; }
+    .recharge thead.rc_visible__xs {
+      display: table-header-group !important; }
+    .recharge b.rc_visible__xs,
+    .recharge strong.rc_visible__xs,
+    .recharge i.rc_visible__xs,
+    .recharge em.rc_visible__xs,
+    .recharge span.rc_visible__xs,
+    .recharge a.rc_visible__xs {
+      display: inline; }
+    .recharge .rc_visible-xs {
+      display: initial !important; }
+    .recharge table.rc_visible-xs {
+      display: table !important; }
+    .recharge th.rc_visible-xs,
     .recharge td.rc_visible-xs {
-      display: table-cell; }
-    .recharge thead.rc_visible_xs {
-      display: table-header-group; } }
+      display: table !important; }
+    .recharge thead.rc_visible-xs {
+      display: table-header-group !important; }
+    .recharge b.rc_visible-xs,
+    .recharge strong.rc_visible-xs,
+    .recharge i.rc_visible-xs,
+    .recharge em.rc_visible-xs,
+    .recharge span.rc_visible-xs,
+    .recharge a.rc_visible-xs {
+      display: inline; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .recharge .rc_visible__sm {
+      display: initial !important; }
+    .recharge table.rc_visible__sm {
+      display: table !important; }
+    .recharge th.rc_visible__sm,
+    .recharge td.rc_visible__sm {
+      display: table !important; }
+    .recharge thead.rc_visible__sm {
+      display: table-header-group !important; }
+    .recharge b.rc_visible__sm,
+    .recharge strong.rc_visible__sm,
+    .recharge i.rc_visible__sm,
+    .recharge em.rc_visible__sm,
+    .recharge span.rc_visible__sm,
+    .recharge a.rc_visible__sm {
+      display: inline; }
+    .recharge .rc_visible-sm {
+      display: initial !important; }
+    .recharge table.rc_visible-sm {
+      display: table !important; }
+    .recharge th.rc_visible-sm,
+    .recharge td.rc_visible-sm {
+      display: table !important; }
+    .recharge thead.rc_visible-sm {
+      display: table-header-group !important; }
+    .recharge b.rc_visible-sm,
+    .recharge strong.rc_visible-sm,
+    .recharge i.rc_visible-sm,
+    .recharge em.rc_visible-sm,
+    .recharge span.rc_visible-sm,
+    .recharge a.rc_visible-sm {
+      display: inline; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .recharge .rc_visible__md {
+      display: initial !important; }
+    .recharge table.rc_visible__md {
+      display: table !important; }
+    .recharge th.rc_visible__md,
+    .recharge td.rc_visible__md {
+      display: table !important; }
+    .recharge thead.rc_visible__md {
+      display: table-header-group !important; }
+    .recharge b.rc_visible__md,
+    .recharge strong.rc_visible__md,
+    .recharge i.rc_visible__md,
+    .recharge em.rc_visible__md,
+    .recharge span.rc_visible__md,
+    .recharge a.rc_visible__md {
+      display: inline; }
+    .recharge .rc_visible-md {
+      display: initial !important; }
+    .recharge table.rc_visible-md {
+      display: table !important; }
+    .recharge th.rc_visible-md,
+    .recharge td.rc_visible-md {
+      display: table !important; }
+    .recharge thead.rc_visible-md {
+      display: table-header-group !important; }
+    .recharge b.rc_visible-md,
+    .recharge strong.rc_visible-md,
+    .recharge i.rc_visible-md,
+    .recharge em.rc_visible-md,
+    .recharge span.rc_visible-md,
+    .recharge a.rc_visible-md {
+      display: inline; } }
+  @media (min-width: 1200px) {
+    .recharge .rc_visible__lg {
+      display: initial !important; }
+    .recharge table.rc_visible__lg {
+      display: table !important; }
+    .recharge th.rc_visible__lg,
+    .recharge td.rc_visible__lg {
+      display: table !important; }
+    .recharge thead.rc_visible__lg {
+      display: table-header-group !important; }
+    .recharge b.rc_visible__lg,
+    .recharge strong.rc_visible__lg,
+    .recharge i.rc_visible__lg,
+    .recharge em.rc_visible__lg,
+    .recharge span.rc_visible__lg,
+    .recharge a.rc_visible__lg {
+      display: inline; }
+    .recharge .rc_visible-lg {
+      display: initial !important; }
+    .recharge table.rc_visible-lg {
+      display: table !important; }
+    .recharge th.rc_visible-lg,
+    .recharge td.rc_visible-lg {
+      display: table !important; }
+    .recharge thead.rc_visible-lg {
+      display: table-header-group !important; }
+    .recharge b.rc_visible-lg,
+    .recharge strong.rc_visible-lg,
+    .recharge i.rc_visible-lg,
+    .recharge em.rc_visible-lg,
+    .recharge span.rc_visible-lg,
+    .recharge a.rc_visible-lg {
+      display: inline; } }
   .recharge .updates__block {
     padding-bottom: 2em;
     border-bottom: 1px solid #EEE;

@@ -5,24 +5,24 @@
 
 <hr>
 
-<h2 id="colors">Colors</h2>
-<div class="example">
+<h2 class="rc_sg__pattern_title" id="colors">Colors</h2>
+<div class="rc_sg__example">
 <?php include('_style/colors.php'); ?>
 </div><!-- .example -->
 
-<h2 id="fonts">Fonts</h2>
-<div class="example">
+<h2 class="rc_sg__pattern_title" id="fonts">Fonts</h2>
+<div class="rc_sg__example">
 <?php include('_style/fonts.php'); ?>
 </div><!-- .example -->
 
-<h2 id="typography">Typography</h2>
-<div class="example">
+<h2 class="rc_sg__pattern_title" id="typography">Typography</h2>
+<div class="rc_sg__example">
 <?php include('_style/typography.php'); ?>
 </div><!-- .example -->
 
-<h2 id="animation">Animation</h2>
+<h2 class="rc_sg__pattern_title" id="animation">Animation</h2>
 <p>This started off as a misc item, where we needed a loading animation for a modal. The assets created for this are valuable, although the modal was removed by Mike.</p>
-<div class="example">
+<div class="rc_sg__example">
 <?php include('_style/animation.php'); ?>
 </div><!-- .example -->
 

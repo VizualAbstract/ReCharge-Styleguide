@@ -7,7 +7,7 @@
 <p>You can view the ongoing status of this page <a href="https://docs.google.com/spreadsheets/d/1J-UcLAgN9eChuWUqMxEUObY6dlxIRZFL5eN2zrT4g18/edit?usp=sharing" target="_blank">here</a>.</p>
 <hr>
 
-<h2 id="directory">Directory</h2>
+<h2 class="rc_sg__pattern_title" id="directory">Directory</h2>
 <h3>Utility</h3>
 <ul>
 	<li><a href="/styleguide/utility.php#alignment-helpers">Alignment Helpers</a></li>

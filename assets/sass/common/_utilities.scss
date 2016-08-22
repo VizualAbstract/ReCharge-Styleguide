@@ -1,9 +1,22 @@
-.text--right {
-	text-align: right !important;
-}
+/*
+	Style: Utility
+	Version 1.0
+	Date: 8-22-2016
+	Author: Corey M. Capetillo
+	5-1-16: Page Created
+	8-22-16:
+		- Add alignment for justify and nowrap
+		- Flesh out responsive utilities
+		- Allow compatability for old class nomiclature
+*/
 
+// Alignment helpers
 .text--left {
 	text-align: left !important;
+}
+
+.text--right {
+	text-align: right !important;
 }
 
 .text--center {
@@ -27,23 +40,40 @@
 	@include clearfix;
 }
 
-.rc_visible_xs {
-	display: none;
+// Responsive helpers: hidden
+@media (max-width: $screen-xs-max) {
+	@include responsive-hidden('.rc_hidden__xs');
+	@include responsive-hidden('.rc_hidden-xs');
 }
-@media screen and (max-width: $screen-xs-max) {
-	span.rc_visible-xs {
-		display: initial;
-	}
-	span.rc_visible-xs {
-		display: block;
-	}
-	th,
-	td.rc_visible-xs {
-		display: table-cell;
-	}
-	thead.rc_visible_xs {
-		display: table-header-group;
-	}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	@include responsive-hidden('.rc_hidden__sm');
+	@include responsive-hidden('.rc_hidden-sm');
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	@include responsive-hidden('.rc_hidden__md');
+	@include responsive-hidden('.rc_hidden-md');
+}
+@media (min-width: $screen-lg-min) {
+	@include responsive-hidden('.rc_hidden__lg');
+	@include responsive-hidden('.rc_hidden-lg');
+}
+
+// Responsive helpers: visible
+@media (max-width: $screen-xs-max) {
+	@include responsive-visibility('.rc_visible__xs');
+	@include responsive-visibility('.rc_visible-xs');
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	@include responsive-visibility('.rc_visible__sm');
+	@include responsive-visibility('.rc_visible-sm');
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+	@include responsive-visibility('.rc_visible__md');
+	@include responsive-visibility('.rc_visible-md');
+}
+@media (min-width: $screen-lg-min) {
+	@include responsive-visibility('.rc_visible__lg');
+	@include responsive-visibility('.rc_visible-lg');
 }
 
 .updates {

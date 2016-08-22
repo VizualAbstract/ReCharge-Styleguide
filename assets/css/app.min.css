@@ -255,6 +255,17 @@
    * 1. Correct the inability to style clickable types in iOS and Safari.
    * 2. Change font properties to `inherit` in Safari.
    */
+  /*
+  	Style: Utility
+  	Version 1.0
+  	Date: 8-22-2016
+  	Author: Corey M. Capetillo
+  	5-1-16: Page Created
+  	8-22-16:
+  		- Add alignment for justify and nowrap
+  		- Flesh out responsive utilities
+  		- Allow compatability for old class nomiclature
+  */
 }
 /* line 6, ../sass/common/_reset.scss */
 .new html, .new body, .new div, .new span, .new applet, .new object, .new iframe,
@@ -566,28 +577,28 @@
   font: inherit;
   /* 2 */
 }
-/* line 1, ../sass/common/_utilities.scss */
-.new .text--right {
-  text-align: right !important;
-}
-/* line 5, ../sass/common/_utilities.scss */
+/* line 14, ../sass/common/_utilities.scss */
 .new .text--left {
   text-align: left !important;
 }
-/* line 9, ../sass/common/_utilities.scss */
+/* line 18, ../sass/common/_utilities.scss */
+.new .text--right {
+  text-align: right !important;
+}
+/* line 22, ../sass/common/_utilities.scss */
 .new .text--center {
   text-align: center !important;
 }
-/* line 13, ../sass/common/_utilities.scss */
+/* line 26, ../sass/common/_utilities.scss */
 .new .text--justify {
   text-align: justify !important;
   text-justify: inter-ideograph;
 }
-/* line 18, ../sass/common/_utilities.scss */
+/* line 31, ../sass/common/_utilities.scss */
 .new .text--nowrap {
   white-sace: nowrap;
 }
-/* line 22, ../sass/common/_utilities.scss */
+/* line 35, ../sass/common/_utilities.scss */
 .new .text--hide {
   font: 0/0 a;
   color: transparent;
@@ -604,36 +615,269 @@
 .new .clearfix:after, .new .form__group:after, .new .contextual__input__options:after {
   clear: both;
 }
-/* line 30, ../sass/common/_utilities.scss */
-.new .rc_visible_xs {
-  display: none;
+@media (max-width: 767px) {
+  /* line 55, ../sass/_mixins.scss */
+  .new .rc_hidden__xs {
+    display: none !important;
+  }
+  /* line 55, ../sass/_mixins.scss */
+  .new .rc_hidden-xs {
+    display: none !important;
+  }
 }
-@media screen and (max-width: 767px) {
-  /* line 34, ../sass/common/_utilities.scss */
-  .new span.rc_visible-xs {
-    display: initial;
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 55, ../sass/_mixins.scss */
+  .new .rc_hidden__sm {
+    display: none !important;
   }
-  /* line 37, ../sass/common/_utilities.scss */
-  .new span.rc_visible-xs {
-    display: block;
+  /* line 55, ../sass/_mixins.scss */
+  .new .rc_hidden-sm {
+    display: none !important;
   }
-  /* line 40, ../sass/common/_utilities.scss */
-  .new th,
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 55, ../sass/_mixins.scss */
+  .new .rc_hidden__md {
+    display: none !important;
+  }
+  /* line 55, ../sass/_mixins.scss */
+  .new .rc_hidden-md {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 55, ../sass/_mixins.scss */
+  .new .rc_hidden__lg {
+    display: none !important;
+  }
+  /* line 55, ../sass/_mixins.scss */
+  .new .rc_hidden-lg {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  /* line 30, ../sass/_mixins.scss */
+  .new .rc_visible__xs {
+    display: initial !important;
+  }
+  /* line 33, ../sass/_mixins.scss */
+  .new table.rc_visible__xs {
+    display: table !important;
+  }
+  /* line 36, ../sass/_mixins.scss */
+  .new th.rc_visible__xs,
+  .new td.rc_visible__xs {
+    display: table !important;
+  }
+  /* line 40, ../sass/_mixins.scss */
+  .new thead.rc_visible__xs {
+    display: table-header-group !important;
+  }
+  /* line 43, ../sass/_mixins.scss */
+  .new b.rc_visible__xs,
+  .new strong.rc_visible__xs,
+  .new i.rc_visible__xs,
+  .new em.rc_visible__xs,
+  .new span.rc_visible__xs,
+  .new a.rc_visible__xs {
+    display: inline;
+  }
+  /* line 30, ../sass/_mixins.scss */
+  .new .rc_visible-xs {
+    display: initial !important;
+  }
+  /* line 33, ../sass/_mixins.scss */
+  .new table.rc_visible-xs {
+    display: table !important;
+  }
+  /* line 36, ../sass/_mixins.scss */
+  .new th.rc_visible-xs,
   .new td.rc_visible-xs {
-    display: table-cell;
+    display: table !important;
   }
-  /* line 44, ../sass/common/_utilities.scss */
-  .new thead.rc_visible_xs {
-    display: table-header-group;
+  /* line 40, ../sass/_mixins.scss */
+  .new thead.rc_visible-xs {
+    display: table-header-group !important;
+  }
+  /* line 43, ../sass/_mixins.scss */
+  .new b.rc_visible-xs,
+  .new strong.rc_visible-xs,
+  .new i.rc_visible-xs,
+  .new em.rc_visible-xs,
+  .new span.rc_visible-xs,
+  .new a.rc_visible-xs {
+    display: inline;
   }
 }
-/* line 50, ../sass/common/_utilities.scss */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 30, ../sass/_mixins.scss */
+  .new .rc_visible__sm {
+    display: initial !important;
+  }
+  /* line 33, ../sass/_mixins.scss */
+  .new table.rc_visible__sm {
+    display: table !important;
+  }
+  /* line 36, ../sass/_mixins.scss */
+  .new th.rc_visible__sm,
+  .new td.rc_visible__sm {
+    display: table !important;
+  }
+  /* line 40, ../sass/_mixins.scss */
+  .new thead.rc_visible__sm {
+    display: table-header-group !important;
+  }
+  /* line 43, ../sass/_mixins.scss */
+  .new b.rc_visible__sm,
+  .new strong.rc_visible__sm,
+  .new i.rc_visible__sm,
+  .new em.rc_visible__sm,
+  .new span.rc_visible__sm,
+  .new a.rc_visible__sm {
+    display: inline;
+  }
+  /* line 30, ../sass/_mixins.scss */
+  .new .rc_visible-sm {
+    display: initial !important;
+  }
+  /* line 33, ../sass/_mixins.scss */
+  .new table.rc_visible-sm {
+    display: table !important;
+  }
+  /* line 36, ../sass/_mixins.scss */
+  .new th.rc_visible-sm,
+  .new td.rc_visible-sm {
+    display: table !important;
+  }
+  /* line 40, ../sass/_mixins.scss */
+  .new thead.rc_visible-sm {
+    display: table-header-group !important;
+  }
+  /* line 43, ../sass/_mixins.scss */
+  .new b.rc_visible-sm,
+  .new strong.rc_visible-sm,
+  .new i.rc_visible-sm,
+  .new em.rc_visible-sm,
+  .new span.rc_visible-sm,
+  .new a.rc_visible-sm {
+    display: inline;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 30, ../sass/_mixins.scss */
+  .new .rc_visible__md {
+    display: initial !important;
+  }
+  /* line 33, ../sass/_mixins.scss */
+  .new table.rc_visible__md {
+    display: table !important;
+  }
+  /* line 36, ../sass/_mixins.scss */
+  .new th.rc_visible__md,
+  .new td.rc_visible__md {
+    display: table !important;
+  }
+  /* line 40, ../sass/_mixins.scss */
+  .new thead.rc_visible__md {
+    display: table-header-group !important;
+  }
+  /* line 43, ../sass/_mixins.scss */
+  .new b.rc_visible__md,
+  .new strong.rc_visible__md,
+  .new i.rc_visible__md,
+  .new em.rc_visible__md,
+  .new span.rc_visible__md,
+  .new a.rc_visible__md {
+    display: inline;
+  }
+  /* line 30, ../sass/_mixins.scss */
+  .new .rc_visible-md {
+    display: initial !important;
+  }
+  /* line 33, ../sass/_mixins.scss */
+  .new table.rc_visible-md {
+    display: table !important;
+  }
+  /* line 36, ../sass/_mixins.scss */
+  .new th.rc_visible-md,
+  .new td.rc_visible-md {
+    display: table !important;
+  }
+  /* line 40, ../sass/_mixins.scss */
+  .new thead.rc_visible-md {
+    display: table-header-group !important;
+  }
+  /* line 43, ../sass/_mixins.scss */
+  .new b.rc_visible-md,
+  .new strong.rc_visible-md,
+  .new i.rc_visible-md,
+  .new em.rc_visible-md,
+  .new span.rc_visible-md,
+  .new a.rc_visible-md {
+    display: inline;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 30, ../sass/_mixins.scss */
+  .new .rc_visible__lg {
+    display: initial !important;
+  }
+  /* line 33, ../sass/_mixins.scss */
+  .new table.rc_visible__lg {
+    display: table !important;
+  }
+  /* line 36, ../sass/_mixins.scss */
+  .new th.rc_visible__lg,
+  .new td.rc_visible__lg {
+    display: table !important;
+  }
+  /* line 40, ../sass/_mixins.scss */
+  .new thead.rc_visible__lg {
+    display: table-header-group !important;
+  }
+  /* line 43, ../sass/_mixins.scss */
+  .new b.rc_visible__lg,
+  .new strong.rc_visible__lg,
+  .new i.rc_visible__lg,
+  .new em.rc_visible__lg,
+  .new span.rc_visible__lg,
+  .new a.rc_visible__lg {
+    display: inline;
+  }
+  /* line 30, ../sass/_mixins.scss */
+  .new .rc_visible-lg {
+    display: initial !important;
+  }
+  /* line 33, ../sass/_mixins.scss */
+  .new table.rc_visible-lg {
+    display: table !important;
+  }
+  /* line 36, ../sass/_mixins.scss */
+  .new th.rc_visible-lg,
+  .new td.rc_visible-lg {
+    display: table !important;
+  }
+  /* line 40, ../sass/_mixins.scss */
+  .new thead.rc_visible-lg {
+    display: table-header-group !important;
+  }
+  /* line 43, ../sass/_mixins.scss */
+  .new b.rc_visible-lg,
+  .new strong.rc_visible-lg,
+  .new i.rc_visible-lg,
+  .new em.rc_visible-lg,
+  .new span.rc_visible-lg,
+  .new a.rc_visible-lg {
+    display: inline;
+  }
+}
+/* line 80, ../sass/common/_utilities.scss */
 .new .updates__block {
   padding-bottom: 2em;
   border-bottom: 1px solid #EEE;
   margin-bottom: 2em;
 }
-/* line 54, ../sass/common/_utilities.scss */
+/* line 84, ../sass/common/_utilities.scss */
 .new .updates__block > ul,
 .new .updates__block > ol,
 .new .updates__block hr,
@@ -641,11 +885,11 @@
   margin-top: 1em !important;
   margin-bottom: 1em !important;
 }
-/* line 64, ../sass/common/_utilities.scss */
+/* line 94, ../sass/common/_utilities.scss */
 .new .updates__block code {
   color: #ec3d10;
 }
-/* line 69, ../sass/common/_utilities.scss */
+/* line 99, ../sass/common/_utilities.scss */
 .new .updates__block ul li,
 .new .updates__block ol li {
   line-height: 1.61803em;
@@ -1267,31 +1511,7 @@ h1 + .setup-header__description,
 .new .pull--right {
   float: right;
 }
-@media (max-width: 767px) {
-  /* line 43, ../sass/_mixins.scss */
-  .new .hidden-xs {
-    display: none !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  /* line 43, ../sass/_mixins.scss */
-  .new .hidden-sm {
-    display: none !important;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  /* line 43, ../sass/_mixins.scss */
-  .new .hidden-md {
-    display: none !important;
-  }
-}
-@media (min-width: 1200px) {
-  /* line 43, ../sass/_mixins.scss */
-  .new .hidden-lg {
-    display: none !important;
-  }
-}
-/* line 98, ../sass/elements/_typography.scss */
+/* line 82, ../sass/elements/_typography.scss */
 .new h1, .new .h1 {
   font-size: 35px;
   font-family: 'ralewayregular', arial, san-serif;
@@ -1300,7 +1520,7 @@ h1 + .setup-header__description,
   margin-top: 23px;
   margin-bottom: 38px;
 }
-/* line 106, ../sass/elements/_typography.scss */
+/* line 90, ../sass/elements/_typography.scss */
 .new h2, .new .h2 {
   font-size: 30px;
   font-family: 'ralewayregular', arial, san-serif;
@@ -1308,7 +1528,7 @@ h1 + .setup-header__description,
   font-style: normal;
   margin-bottom: 12px;
 }
-/* line 113, ../sass/elements/_typography.scss */
+/* line 97, ../sass/elements/_typography.scss */
 .new h3, .new .h3 {
   font-family: 'ralewaysemibold', arial, san-serif;
   font-size: 24px;
@@ -1316,17 +1536,17 @@ h1 + .setup-header__description,
   font-style: normal;
 }
 @media screen and (min-width: 768px) {
-  /* line 113, ../sass/elements/_typography.scss */
+  /* line 97, ../sass/elements/_typography.scss */
   .new h3, .new .h3 {
     line-height: 1;
   }
 }
-/* line 122, ../sass/elements/_typography.scss */
+/* line 106, ../sass/elements/_typography.scss */
 .new h4, .new .h4 {
   font-family: 'ralewayregular', arial, san-serif;
   font-weight: normal;
 }
-/* line 126, ../sass/elements/_typography.scss */
+/* line 110, ../sass/elements/_typography.scss */
 .new h5, .new .h5 {
   font-family: 'ralewaysemibold', arial, san-serif;
   font-size: 16px;
@@ -1334,51 +1554,51 @@ h1 + .setup-header__description,
   line-height: 25px;
   font-style: normal;
 }
-/* line 134, ../sass/elements/_typography.scss */
+/* line 118, ../sass/elements/_typography.scss */
 .new body {
   line-height: 25px;
 }
-/* line 138, ../sass/elements/_typography.scss */
+/* line 122, ../sass/elements/_typography.scss */
 .new a {
   color: #4DD6B7;
   text-decoration: none;
 }
-/* line 143, ../sass/elements/_typography.scss */
+/* line 127, ../sass/elements/_typography.scss */
 .new a:hover {
   color: #2bac8f;
 }
-/* line 147, ../sass/elements/_typography.scss */
+/* line 131, ../sass/elements/_typography.scss */
 .new p {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 25px;
 }
-/* line 153, ../sass/elements/_typography.scss */
+/* line 137, ../sass/elements/_typography.scss */
 .new p + p {
   margin-top: 18px;
 }
-/* line 157, ../sass/elements/_typography.scss */
+/* line 141, ../sass/elements/_typography.scss */
 .new strong {
   font-weight: normal;
   font-family: 'ralewaysemibold', arial, sans-serif;
 }
-/* line 162, ../sass/elements/_typography.scss */
+/* line 146, ../sass/elements/_typography.scss */
 .new address {
   font-style: normal;
 }
-/* line 166, ../sass/elements/_typography.scss */
+/* line 150, ../sass/elements/_typography.scss */
 .new hr {
   border-width: 0;
   border-bottom: 1px solid #EEE;
 }
-/* line 171, ../sass/elements/_typography.scss */
+/* line 155, ../sass/elements/_typography.scss */
 .new .setup-header,
 .new .header {
   display: block;
   text-align: center;
   margin: 50px auto 63px;
 }
-/* line 176, ../sass/elements/_typography.scss */
+/* line 160, ../sass/elements/_typography.scss */
 .new .setup-header__title,
 .new .header__title {
   color: #2c93ac;
@@ -3794,7 +4014,7 @@ h1 + .setup-header__description,
 .new .layout:after {
   clear: both;
 }
-/* line 183, ../sass/_mixins.scss */
+/* line 195, ../sass/_mixins.scss */
 .new .grid__xs__1, .new .grid__sm__1, .new .grid__md__1, .new .grid__lg__1, .new .grid__xs__2, .new .grid__sm__2, .new .grid__md__2, .new .grid__lg__2, .new .grid__xs__3, .new .grid__sm__3, .new .grid__md__3, .new .grid__lg__3, .new .grid__xs__4, .new .grid__sm__4, .new .grid__md__4, .new .grid__lg__4, .new .grid__xs__5, .new .grid__sm__5, .new .grid__md__5, .new .grid__lg__5, .new .grid__xs__6, .new .grid__sm__6, .new .grid__md__6, .new .grid__lg__6, .new .grid__xs__7, .new .grid__sm__7, .new .grid__md__7, .new .grid__lg__7, .new .grid__xs__8, .new .grid__sm__8, .new .grid__md__8, .new .grid__lg__8, .new .grid__xs__9, .new .grid__sm__9, .new .grid__md__9, .new .grid__lg__9, .new .grid__xs__10, .new .grid__sm__10, .new .grid__md__10, .new .grid__lg__10, .new .grid__xs__11, .new .grid__sm__11, .new .grid__md__11, .new .grid__lg__11, .new .grid__xs__12, .new .grid__sm__12, .new .grid__md__12, .new .grid__lg__12 {
   box-sizing: border-box;
   position: relative;
@@ -3802,840 +4022,840 @@ h1 + .setup-header__description,
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 200, ../sass/_mixins.scss */
+/* line 212, ../sass/_mixins.scss */
 .new .grid__xs__1, .new .grid__xs__2, .new .grid__xs__3, .new .grid__xs__4, .new .grid__xs__5, .new .grid__xs__6, .new .grid__xs__7, .new .grid__xs__8, .new .grid__xs__9, .new .grid__xs__10, .new .grid__xs__11, .new .grid__xs__12 {
   float: left;
 }
-/* line 208, ../sass/_mixins.scss */
+/* line 220, ../sass/_mixins.scss */
 .new .grid__xs__1 {
   width: 8.3333333333%;
 }
-/* line 208, ../sass/_mixins.scss */
+/* line 220, ../sass/_mixins.scss */
 .new .grid__xs__2 {
   width: 16.6666666667%;
 }
-/* line 208, ../sass/_mixins.scss */
+/* line 220, ../sass/_mixins.scss */
 .new .grid__xs__3 {
   width: 25%;
 }
-/* line 208, ../sass/_mixins.scss */
+/* line 220, ../sass/_mixins.scss */
 .new .grid__xs__4 {
   width: 33.3333333333%;
 }
-/* line 208, ../sass/_mixins.scss */
+/* line 220, ../sass/_mixins.scss */
 .new .grid__xs__5 {
   width: 41.6666666667%;
 }
-/* line 208, ../sass/_mixins.scss */
+/* line 220, ../sass/_mixins.scss */
 .new .grid__xs__6 {
   width: 50%;
 }
-/* line 208, ../sass/_mixins.scss */
+/* line 220, ../sass/_mixins.scss */
 .new .grid__xs__7 {
   width: 58.3333333333%;
 }
-/* line 208, ../sass/_mixins.scss */
+/* line 220, ../sass/_mixins.scss */
 .new .grid__xs__8 {
   width: 66.6666666667%;
 }
-/* line 208, ../sass/_mixins.scss */
+/* line 220, ../sass/_mixins.scss */
 .new .grid__xs__9 {
   width: 75%;
 }
-/* line 208, ../sass/_mixins.scss */
+/* line 220, ../sass/_mixins.scss */
 .new .grid__xs__10 {
   width: 83.3333333333%;
 }
-/* line 208, ../sass/_mixins.scss */
+/* line 220, ../sass/_mixins.scss */
 .new .grid__xs__11 {
   width: 91.6666666667%;
 }
-/* line 208, ../sass/_mixins.scss */
+/* line 220, ../sass/_mixins.scss */
 .new .grid__xs__12 {
   width: 100%;
 }
-/* line 228, ../sass/_mixins.scss */
+/* line 240, ../sass/_mixins.scss */
 .new .grid__xs__pull-0 {
   right: auto;
 }
-/* line 223, ../sass/_mixins.scss */
+/* line 235, ../sass/_mixins.scss */
 .new .grid__xs__pull__1 {
   right: 8.3333333333%;
 }
-/* line 223, ../sass/_mixins.scss */
+/* line 235, ../sass/_mixins.scss */
 .new .grid__xs__pull__2 {
   right: 16.6666666667%;
 }
-/* line 223, ../sass/_mixins.scss */
+/* line 235, ../sass/_mixins.scss */
 .new .grid__xs__pull__3 {
   right: 25%;
 }
-/* line 223, ../sass/_mixins.scss */
+/* line 235, ../sass/_mixins.scss */
 .new .grid__xs__pull__4 {
   right: 33.3333333333%;
 }
-/* line 223, ../sass/_mixins.scss */
+/* line 235, ../sass/_mixins.scss */
 .new .grid__xs__pull__5 {
   right: 41.6666666667%;
 }
-/* line 223, ../sass/_mixins.scss */
+/* line 235, ../sass/_mixins.scss */
 .new .grid__xs__pull__6 {
   right: 50%;
 }
-/* line 223, ../sass/_mixins.scss */
+/* line 235, ../sass/_mixins.scss */
 .new .grid__xs__pull__7 {
   right: 58.3333333333%;
 }
-/* line 223, ../sass/_mixins.scss */
+/* line 235, ../sass/_mixins.scss */
 .new .grid__xs__pull__8 {
   right: 66.6666666667%;
 }
-/* line 223, ../sass/_mixins.scss */
+/* line 235, ../sass/_mixins.scss */
 .new .grid__xs__pull__9 {
   right: 75%;
 }
-/* line 223, ../sass/_mixins.scss */
+/* line 235, ../sass/_mixins.scss */
 .new .grid__xs__pull__10 {
   right: 83.3333333333%;
 }
-/* line 223, ../sass/_mixins.scss */
+/* line 235, ../sass/_mixins.scss */
 .new .grid__xs__pull__11 {
   right: 91.6666666667%;
 }
-/* line 223, ../sass/_mixins.scss */
+/* line 235, ../sass/_mixins.scss */
 .new .grid__xs__pull__12 {
   right: 100%;
 }
-/* line 218, ../sass/_mixins.scss */
+/* line 230, ../sass/_mixins.scss */
 .new .grid__xs__push__0 {
   left: auto;
 }
-/* line 213, ../sass/_mixins.scss */
+/* line 225, ../sass/_mixins.scss */
 .new .grid__xs__push__1 {
   left: 8.3333333333%;
 }
-/* line 213, ../sass/_mixins.scss */
+/* line 225, ../sass/_mixins.scss */
 .new .grid__xs__push__2 {
   left: 16.6666666667%;
 }
-/* line 213, ../sass/_mixins.scss */
+/* line 225, ../sass/_mixins.scss */
 .new .grid__xs__push__3 {
   left: 25%;
 }
-/* line 213, ../sass/_mixins.scss */
+/* line 225, ../sass/_mixins.scss */
 .new .grid__xs__push__4 {
   left: 33.3333333333%;
 }
-/* line 213, ../sass/_mixins.scss */
+/* line 225, ../sass/_mixins.scss */
 .new .grid__xs__push__5 {
   left: 41.6666666667%;
 }
-/* line 213, ../sass/_mixins.scss */
+/* line 225, ../sass/_mixins.scss */
 .new .grid__xs__push__6 {
   left: 50%;
 }
-/* line 213, ../sass/_mixins.scss */
+/* line 225, ../sass/_mixins.scss */
 .new .grid__xs__push__7 {
   left: 58.3333333333%;
 }
-/* line 213, ../sass/_mixins.scss */
+/* line 225, ../sass/_mixins.scss */
 .new .grid__xs__push__8 {
   left: 66.6666666667%;
 }
-/* line 213, ../sass/_mixins.scss */
+/* line 225, ../sass/_mixins.scss */
 .new .grid__xs__push__9 {
   left: 75%;
 }
-/* line 213, ../sass/_mixins.scss */
+/* line 225, ../sass/_mixins.scss */
 .new .grid__xs__push__10 {
   left: 83.3333333333%;
 }
-/* line 213, ../sass/_mixins.scss */
+/* line 225, ../sass/_mixins.scss */
 .new .grid__xs__push__11 {
   left: 91.6666666667%;
 }
-/* line 213, ../sass/_mixins.scss */
+/* line 225, ../sass/_mixins.scss */
 .new .grid__xs__push__12 {
   left: 100%;
 }
-/* line 233, ../sass/_mixins.scss */
+/* line 245, ../sass/_mixins.scss */
 .new .grid__xs__offset__0 {
   margin-left: 0%;
 }
-/* line 233, ../sass/_mixins.scss */
+/* line 245, ../sass/_mixins.scss */
 .new .grid__xs__offset__1 {
   margin-left: 8.3333333333%;
 }
-/* line 233, ../sass/_mixins.scss */
+/* line 245, ../sass/_mixins.scss */
 .new .grid__xs__offset__2 {
   margin-left: 16.6666666667%;
 }
-/* line 233, ../sass/_mixins.scss */
+/* line 245, ../sass/_mixins.scss */
 .new .grid__xs__offset__3 {
   margin-left: 25%;
 }
-/* line 233, ../sass/_mixins.scss */
+/* line 245, ../sass/_mixins.scss */
 .new .grid__xs__offset__4 {
   margin-left: 33.3333333333%;
 }
-/* line 233, ../sass/_mixins.scss */
+/* line 245, ../sass/_mixins.scss */
 .new .grid__xs__offset__5 {
   margin-left: 41.6666666667%;
 }
-/* line 233, ../sass/_mixins.scss */
+/* line 245, ../sass/_mixins.scss */
 .new .grid__xs__offset__6 {
   margin-left: 50%;
 }
-/* line 233, ../sass/_mixins.scss */
+/* line 245, ../sass/_mixins.scss */
 .new .grid__xs__offset__7 {
   margin-left: 58.3333333333%;
 }
-/* line 233, ../sass/_mixins.scss */
+/* line 245, ../sass/_mixins.scss */
 .new .grid__xs__offset__8 {
   margin-left: 66.6666666667%;
 }
-/* line 233, ../sass/_mixins.scss */
+/* line 245, ../sass/_mixins.scss */
 .new .grid__xs__offset__9 {
   margin-left: 75%;
 }
-/* line 233, ../sass/_mixins.scss */
+/* line 245, ../sass/_mixins.scss */
 .new .grid__xs__offset__10 {
   margin-left: 83.3333333333%;
 }
-/* line 233, ../sass/_mixins.scss */
+/* line 245, ../sass/_mixins.scss */
 .new .grid__xs__offset__11 {
   margin-left: 91.6666666667%;
 }
-/* line 233, ../sass/_mixins.scss */
+/* line 245, ../sass/_mixins.scss */
 .new .grid__xs__offset__12 {
   margin-left: 100%;
 }
 @media (min-width: 768px) {
-  /* line 200, ../sass/_mixins.scss */
+  /* line 212, ../sass/_mixins.scss */
   .new .grid__sm__1, .new .grid__sm__2, .new .grid__sm__3, .new .grid__sm__4, .new .grid__sm__5, .new .grid__sm__6, .new .grid__sm__7, .new .grid__sm__8, .new .grid__sm__9, .new .grid__sm__10, .new .grid__sm__11, .new .grid__sm__12 {
     float: left;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__sm__1 {
     width: 8.3333333333%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__sm__2 {
     width: 16.6666666667%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__sm__3 {
     width: 25%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__sm__4 {
     width: 33.3333333333%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__sm__5 {
     width: 41.6666666667%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__sm__6 {
     width: 50%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__sm__7 {
     width: 58.3333333333%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__sm__8 {
     width: 66.6666666667%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__sm__9 {
     width: 75%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__sm__10 {
     width: 83.3333333333%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__sm__11 {
     width: 91.6666666667%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__sm__12 {
     width: 100%;
   }
-  /* line 228, ../sass/_mixins.scss */
+  /* line 240, ../sass/_mixins.scss */
   .new .grid__sm__pull-0 {
     right: auto;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__sm__pull__1 {
     right: 8.3333333333%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__sm__pull__2 {
     right: 16.6666666667%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__sm__pull__3 {
     right: 25%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__sm__pull__4 {
     right: 33.3333333333%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__sm__pull__5 {
     right: 41.6666666667%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__sm__pull__6 {
     right: 50%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__sm__pull__7 {
     right: 58.3333333333%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__sm__pull__8 {
     right: 66.6666666667%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__sm__pull__9 {
     right: 75%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__sm__pull__10 {
     right: 83.3333333333%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__sm__pull__11 {
     right: 91.6666666667%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__sm__pull__12 {
     right: 100%;
   }
-  /* line 218, ../sass/_mixins.scss */
+  /* line 230, ../sass/_mixins.scss */
   .new .grid__sm__push__0 {
     left: auto;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__sm__push__1 {
     left: 8.3333333333%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__sm__push__2 {
     left: 16.6666666667%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__sm__push__3 {
     left: 25%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__sm__push__4 {
     left: 33.3333333333%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__sm__push__5 {
     left: 41.6666666667%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__sm__push__6 {
     left: 50%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__sm__push__7 {
     left: 58.3333333333%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__sm__push__8 {
     left: 66.6666666667%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__sm__push__9 {
     left: 75%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__sm__push__10 {
     left: 83.3333333333%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__sm__push__11 {
     left: 91.6666666667%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__sm__push__12 {
     left: 100%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__sm__offset__0 {
     margin-left: 0%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__sm__offset__1 {
     margin-left: 8.3333333333%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__sm__offset__2 {
     margin-left: 16.6666666667%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__sm__offset__3 {
     margin-left: 25%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__sm__offset__4 {
     margin-left: 33.3333333333%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__sm__offset__5 {
     margin-left: 41.6666666667%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__sm__offset__6 {
     margin-left: 50%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__sm__offset__7 {
     margin-left: 58.3333333333%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__sm__offset__8 {
     margin-left: 66.6666666667%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__sm__offset__9 {
     margin-left: 75%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__sm__offset__10 {
     margin-left: 83.3333333333%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__sm__offset__11 {
     margin-left: 91.6666666667%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__sm__offset__12 {
     margin-left: 100%;
   }
 }
 @media (min-width: 992px) {
-  /* line 200, ../sass/_mixins.scss */
+  /* line 212, ../sass/_mixins.scss */
   .new .grid__md__1, .new .grid__md__2, .new .grid__md__3, .new .grid__md__4, .new .grid__md__5, .new .grid__md__6, .new .grid__md__7, .new .grid__md__8, .new .grid__md__9, .new .grid__md__10, .new .grid__md__11, .new .grid__md__12 {
     float: left;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__md__1 {
     width: 8.3333333333%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__md__2 {
     width: 16.6666666667%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__md__3 {
     width: 25%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__md__4 {
     width: 33.3333333333%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__md__5 {
     width: 41.6666666667%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__md__6 {
     width: 50%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__md__7 {
     width: 58.3333333333%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__md__8 {
     width: 66.6666666667%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__md__9 {
     width: 75%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__md__10 {
     width: 83.3333333333%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__md__11 {
     width: 91.6666666667%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__md__12 {
     width: 100%;
   }
-  /* line 228, ../sass/_mixins.scss */
+  /* line 240, ../sass/_mixins.scss */
   .new .grid__md__pull-0 {
     right: auto;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__md__pull__1 {
     right: 8.3333333333%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__md__pull__2 {
     right: 16.6666666667%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__md__pull__3 {
     right: 25%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__md__pull__4 {
     right: 33.3333333333%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__md__pull__5 {
     right: 41.6666666667%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__md__pull__6 {
     right: 50%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__md__pull__7 {
     right: 58.3333333333%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__md__pull__8 {
     right: 66.6666666667%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__md__pull__9 {
     right: 75%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__md__pull__10 {
     right: 83.3333333333%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__md__pull__11 {
     right: 91.6666666667%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__md__pull__12 {
     right: 100%;
   }
-  /* line 218, ../sass/_mixins.scss */
+  /* line 230, ../sass/_mixins.scss */
   .new .grid__md__push__0 {
     left: auto;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__md__push__1 {
     left: 8.3333333333%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__md__push__2 {
     left: 16.6666666667%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__md__push__3 {
     left: 25%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__md__push__4 {
     left: 33.3333333333%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__md__push__5 {
     left: 41.6666666667%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__md__push__6 {
     left: 50%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__md__push__7 {
     left: 58.3333333333%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__md__push__8 {
     left: 66.6666666667%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__md__push__9 {
     left: 75%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__md__push__10 {
     left: 83.3333333333%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__md__push__11 {
     left: 91.6666666667%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__md__push__12 {
     left: 100%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__md__offset__0 {
     margin-left: 0%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__md__offset__1 {
     margin-left: 8.3333333333%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__md__offset__2 {
     margin-left: 16.6666666667%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__md__offset__3 {
     margin-left: 25%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__md__offset__4 {
     margin-left: 33.3333333333%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__md__offset__5 {
     margin-left: 41.6666666667%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__md__offset__6 {
     margin-left: 50%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__md__offset__7 {
     margin-left: 58.3333333333%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__md__offset__8 {
     margin-left: 66.6666666667%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__md__offset__9 {
     margin-left: 75%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__md__offset__10 {
     margin-left: 83.3333333333%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__md__offset__11 {
     margin-left: 91.6666666667%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__md__offset__12 {
     margin-left: 100%;
   }
 }
 @media (min-width: 1200px) {
-  /* line 200, ../sass/_mixins.scss */
+  /* line 212, ../sass/_mixins.scss */
   .new .grid__lg__1, .new .grid__lg__2, .new .grid__lg__3, .new .grid__lg__4, .new .grid__lg__5, .new .grid__lg__6, .new .grid__lg__7, .new .grid__lg__8, .new .grid__lg__9, .new .grid__lg__10, .new .grid__lg__11, .new .grid__lg__12 {
     float: left;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__lg__1 {
     width: 8.3333333333%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__lg__2 {
     width: 16.6666666667%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__lg__3 {
     width: 25%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__lg__4 {
     width: 33.3333333333%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__lg__5 {
     width: 41.6666666667%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__lg__6 {
     width: 50%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__lg__7 {
     width: 58.3333333333%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__lg__8 {
     width: 66.6666666667%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__lg__9 {
     width: 75%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__lg__10 {
     width: 83.3333333333%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__lg__11 {
     width: 91.6666666667%;
   }
-  /* line 208, ../sass/_mixins.scss */
+  /* line 220, ../sass/_mixins.scss */
   .new .grid__lg__12 {
     width: 100%;
   }
-  /* line 228, ../sass/_mixins.scss */
+  /* line 240, ../sass/_mixins.scss */
   .new .grid__lg__pull-0 {
     right: auto;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__lg__pull__1 {
     right: 8.3333333333%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__lg__pull__2 {
     right: 16.6666666667%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__lg__pull__3 {
     right: 25%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__lg__pull__4 {
     right: 33.3333333333%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__lg__pull__5 {
     right: 41.6666666667%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__lg__pull__6 {
     right: 50%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__lg__pull__7 {
     right: 58.3333333333%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__lg__pull__8 {
     right: 66.6666666667%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__lg__pull__9 {
     right: 75%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__lg__pull__10 {
     right: 83.3333333333%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__lg__pull__11 {
     right: 91.6666666667%;
   }
-  /* line 223, ../sass/_mixins.scss */
+  /* line 235, ../sass/_mixins.scss */
   .new .grid__lg__pull__12 {
     right: 100%;
   }
-  /* line 218, ../sass/_mixins.scss */
+  /* line 230, ../sass/_mixins.scss */
   .new .grid__lg__push__0 {
     left: auto;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__lg__push__1 {
     left: 8.3333333333%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__lg__push__2 {
     left: 16.6666666667%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__lg__push__3 {
     left: 25%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__lg__push__4 {
     left: 33.3333333333%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__lg__push__5 {
     left: 41.6666666667%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__lg__push__6 {
     left: 50%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__lg__push__7 {
     left: 58.3333333333%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__lg__push__8 {
     left: 66.6666666667%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__lg__push__9 {
     left: 75%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__lg__push__10 {
     left: 83.3333333333%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__lg__push__11 {
     left: 91.6666666667%;
   }
-  /* line 213, ../sass/_mixins.scss */
+  /* line 225, ../sass/_mixins.scss */
   .new .grid__lg__push__12 {
     left: 100%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__lg__offset__0 {
     margin-left: 0%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__lg__offset__1 {
     margin-left: 8.3333333333%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__lg__offset__2 {
     margin-left: 16.6666666667%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__lg__offset__3 {
     margin-left: 25%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__lg__offset__4 {
     margin-left: 33.3333333333%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__lg__offset__5 {
     margin-left: 41.6666666667%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__lg__offset__6 {
     margin-left: 50%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__lg__offset__7 {
     margin-left: 58.3333333333%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__lg__offset__8 {
     margin-left: 66.6666666667%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__lg__offset__9 {
     margin-left: 75%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__lg__offset__10 {
     margin-left: 83.3333333333%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__lg__offset__11 {
     margin-left: 91.6666666667%;
   }
-  /* line 233, ../sass/_mixins.scss */
+  /* line 245, ../sass/_mixins.scss */
   .new .grid__lg__offset__12 {
     margin-left: 100%;
   }
@@ -5005,24 +5225,33 @@ h1 + .setup-header__description,
     top: 12px;
     right: 60px;
   }
-  /* line 32, ../sass/_mixins.scss */
+  /* line 30, ../sass/_mixins.scss */
   .new .navbar .visible-xs {
     display: initial !important;
   }
-  /* line 35, ../sass/_mixins.scss */
+  /* line 33, ../sass/_mixins.scss */
   .new .navbar table.visible-xs {
     display: table !important;
   }
   /* line 36, ../sass/_mixins.scss */
-  .new .navbar tr.visible-xs {
-    display: table-row !important;
-  }
-  /* line 37, ../sass/_mixins.scss */
   .new .navbar th.visible-xs,
   .new .navbar td.visible-xs {
-    display: table-cell !important;
+    display: table !important;
+  }
+  /* line 40, ../sass/_mixins.scss */
+  .new .navbar thead.visible-xs {
+    display: table-header-group !important;
   }
   /* line 43, ../sass/_mixins.scss */
+  .new .navbar b.visible-xs,
+  .new .navbar strong.visible-xs,
+  .new .navbar i.visible-xs,
+  .new .navbar em.visible-xs,
+  .new .navbar span.visible-xs,
+  .new .navbar a.visible-xs {
+    display: inline;
+  }
+  /* line 55, ../sass/_mixins.scss */
   .new .navbar .hidden-xs {
     display: none !important;
   }
@@ -5196,24 +5425,33 @@ h1 + .setup-header__description,
   top: 12px;
   right: 60px;
 }
-/* line 32, ../sass/_mixins.scss */
+/* line 30, ../sass/_mixins.scss */
 .new .navbar--mobile .visible-xs {
   display: initial !important;
 }
-/* line 35, ../sass/_mixins.scss */
+/* line 33, ../sass/_mixins.scss */
 .new .navbar--mobile table.visible-xs {
   display: table !important;
 }
 /* line 36, ../sass/_mixins.scss */
-.new .navbar--mobile tr.visible-xs {
-  display: table-row !important;
-}
-/* line 37, ../sass/_mixins.scss */
 .new .navbar--mobile th.visible-xs,
 .new .navbar--mobile td.visible-xs {
-  display: table-cell !important;
+  display: table !important;
+}
+/* line 40, ../sass/_mixins.scss */
+.new .navbar--mobile thead.visible-xs {
+  display: table-header-group !important;
 }
 /* line 43, ../sass/_mixins.scss */
+.new .navbar--mobile b.visible-xs,
+.new .navbar--mobile strong.visible-xs,
+.new .navbar--mobile i.visible-xs,
+.new .navbar--mobile em.visible-xs,
+.new .navbar--mobile span.visible-xs,
+.new .navbar--mobile a.visible-xs {
+  display: inline;
+}
+/* line 55, ../sass/_mixins.scss */
 .new .navbar--mobile .hidden-xs {
   display: none !important;
 }
