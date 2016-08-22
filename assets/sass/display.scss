@@ -3,8 +3,10 @@
 
 .styleguide {
 	.rc_sg {
-		&__title {
-
+		&__figure + .rc_sg__pattern_title {
+			margin-top: 50px;
+		}
+		&__pattern_title {
 		}
 		&__description {
 

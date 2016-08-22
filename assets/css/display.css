@@ -5,6 +5,8 @@
 		- Adjust z-index. Popovers and tooltips were appearing over modal overlay
 */
 /* Colors */
+.styleguide .rc_sg__figure + .rc_sg__pattern_title {
+  margin-top: 50px; }
 .styleguide .rc_sg__example {
   position: relative;
   background-color: #FFF;
