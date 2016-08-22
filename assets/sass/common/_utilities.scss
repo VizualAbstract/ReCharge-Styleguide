@@ -10,7 +10,16 @@
 	text-align: center !important;
 }
 
-.text-hide {
+.text--justify {
+	text-align: justify !important;
+    text-justify: inter-ideograph;
+}
+
+.text--nowrap {
+	white-sace: nowrap;
+}
+
+.text--hide {
 	@include text-hide;
 }
 

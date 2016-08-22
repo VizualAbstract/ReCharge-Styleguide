@@ -579,7 +579,16 @@
   text-align: center !important;
 }
 /* line 13, ../sass/common/_utilities.scss */
-.new .text-hide {
+.new .text--justify {
+  text-align: justify !important;
+  text-justify: inter-ideograph;
+}
+/* line 18, ../sass/common/_utilities.scss */
+.new .text--nowrap {
+  white-sace: nowrap;
+}
+/* line 22, ../sass/common/_utilities.scss */
+.new .text--hide {
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
@@ -595,36 +604,36 @@
 .new .clearfix:after, .new .form__group:after, .new .contextual__input__options:after {
   clear: both;
 }
-/* line 21, ../sass/common/_utilities.scss */
+/* line 30, ../sass/common/_utilities.scss */
 .new .rc_visible_xs {
   display: none;
 }
 @media screen and (max-width: 767px) {
-  /* line 25, ../sass/common/_utilities.scss */
+  /* line 34, ../sass/common/_utilities.scss */
   .new span.rc_visible-xs {
     display: initial;
   }
-  /* line 28, ../sass/common/_utilities.scss */
+  /* line 37, ../sass/common/_utilities.scss */
   .new span.rc_visible-xs {
     display: block;
   }
-  /* line 31, ../sass/common/_utilities.scss */
+  /* line 40, ../sass/common/_utilities.scss */
   .new th,
   .new td.rc_visible-xs {
     display: table-cell;
   }
-  /* line 35, ../sass/common/_utilities.scss */
+  /* line 44, ../sass/common/_utilities.scss */
   .new thead.rc_visible_xs {
     display: table-header-group;
   }
 }
-/* line 41, ../sass/common/_utilities.scss */
+/* line 50, ../sass/common/_utilities.scss */
 .new .updates__block {
   padding-bottom: 2em;
   border-bottom: 1px solid #EEE;
   margin-bottom: 2em;
 }
-/* line 45, ../sass/common/_utilities.scss */
+/* line 54, ../sass/common/_utilities.scss */
 .new .updates__block > ul,
 .new .updates__block > ol,
 .new .updates__block hr,
@@ -632,11 +641,11 @@
   margin-top: 1em !important;
   margin-bottom: 1em !important;
 }
-/* line 55, ../sass/common/_utilities.scss */
+/* line 64, ../sass/common/_utilities.scss */
 .new .updates__block code {
   color: #ec3d10;
 }
-/* line 60, ../sass/common/_utilities.scss */
+/* line 69, ../sass/common/_utilities.scss */
 .new .updates__block ul li,
 .new .updates__block ol li {
   line-height: 1.61803em;

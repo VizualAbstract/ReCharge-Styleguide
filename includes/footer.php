@@ -59,7 +59,7 @@
 		<script>
 			$(function(){
 				// Generate the code samples
-				$('.example').each(function(i) {
+				$('.rc_sg__example').each(function(i) {
 					var __this = $(this);
 					var html = __this.html();
 					// Replace special characters with unicode characters
@@ -67,11 +67,11 @@
 							return '&#' + i.charCodeAt(0) + ';';
 						});
 					__this
-						.after('<figure><pre><code>' + encodedHtml + '</code></pre></figure>')
-						.after('<div class="see-code">See Code</div>')
+						.after('<figure class="rc_sg__figure"><pre><code class="rc_sg__code">' + encodedHtml + '</code></pre></figure>')
+						.after('<div class="rc_sg__see_code">See Code</div>')
 				});
 				// Add a handy see-code toggle to keep the layout clean
-				$(document).on('click', '.see-code', function(){
+				$(document).on('click', '.rc_sg__see_code', function(){
 					var text = $(this).text();
 					if (text == 'See Code'){
 						text = 'Hide Code';

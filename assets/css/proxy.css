@@ -87,7 +87,12 @@
     text-align: left !important; }
   .recharge .text--center {
     text-align: center !important; }
-  .recharge .text-hide {
+  .recharge .text--justify {
+    text-align: justify !important;
+    text-justify: inter-ideograph; }
+  .recharge .text--nowrap {
+    white-sace: nowrap; }
+  .recharge .text--hide {
     font: 0/0 a;
     color: transparent;
     text-shadow: none;
