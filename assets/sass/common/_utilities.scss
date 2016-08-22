@@ -62,18 +62,58 @@
 @media (max-width: $screen-xs-max) {
 	@include responsive-visibility('.rc_visible__xs');
 	@include responsive-visibility('.rc_visible-xs');
+	// Display-type specific visibility
+	.rc_visible__xs__block {
+		display: block !important;
+	}
+	.rc_visible__xs__inline {
+		display: inline !important;
+	}
+	.rc_visible__xs__inline-block {
+		display: inline-block !important;
+	}
 }
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 	@include responsive-visibility('.rc_visible__sm');
 	@include responsive-visibility('.rc_visible-sm');
+	// Display-type specific visibility
+	.rc_visible__sm__block {
+		display: block !important;
+	}
+	.rc_visible__sm__inline {
+		display: inline !important;
+	}
+	.rc_visible__sm__inline-block {
+		display: inline-block !important;
+	}
 }
 @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 	@include responsive-visibility('.rc_visible__md');
 	@include responsive-visibility('.rc_visible-md');
+	// Display-type specific visibility
+	.rc_visible__md__block {
+		display: block !important;
+	}
+	.rc_visible__md__inline {
+		display: inline !important;
+	}
+	.rc_visible__md__inline-block {
+		display: inline-block !important;
+	}
 }
 @media (min-width: $screen-lg-min) {
 	@include responsive-visibility('.rc_visible__lg');
 	@include responsive-visibility('.rc_visible-lg');
+	// Display-type specific visibility
+	.rc_visible__lg__block {
+		display: block !important;
+	}
+	.rc_visible__lg__inline {
+		display: inline !important;
+	}
+	.rc_visible__lg__inline-block {
+		display: inline-block !important;
+	}
 }
 
 .updates {

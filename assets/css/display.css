@@ -180,7 +180,7 @@ body {
 .rc_sg__example > .table thead th:last-child,
 .rc_sg__example > .table tbody td,
 .rc_sg__example > .table tbody td:last-child {
-  text-align: center; }
+  text-align: left; }
 .rc_sg__example .table + .table {
   margin-top: 18px; }
 

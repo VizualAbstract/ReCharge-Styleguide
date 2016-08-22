@@ -97,11 +97,34 @@
 		</tr>
 	</tbody>
 </table><!-- .table -->
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Visibility Type</th>
+			<th>Display Type</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>.rc_sg__??__block</td>
+			<td>display: block;</td>
+		</tr>
+		<tr>
+			<td>.rc_sg__??__inline</td>
+			<td>display: inline;</td>
+		</tr>
+		<tr>
+			<td>.rc_sg__??__inline-block</td>
+			<td>display: inline-block;</td>
+		</tr>
+	</tbody>
+</table><!-- .table -->
 </div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="structural-helpers">Strucutral Helpers</h2>
 <p>
-	<code>.clearfix</code><br>
+	<code>.clearfix</code> - Helpful class to contain floats, clearing an element that otherwise has display problems.
 </p>
 
 <hr>

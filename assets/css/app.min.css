@@ -708,6 +708,18 @@
   .new a.rc_visible-xs {
     display: inline;
   }
+  /* line 66, ../sass/common/_utilities.scss */
+  .new .rc_visible__xs__block {
+    display: block !important;
+  }
+  /* line 69, ../sass/common/_utilities.scss */
+  .new .rc_visible__xs__inline {
+    display: inline !important;
+  }
+  /* line 72, ../sass/common/_utilities.scss */
+  .new .rc_visible__xs__inline-block {
+    display: inline-block !important;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 30, ../sass/_mixins.scss */
@@ -761,6 +773,18 @@
   .new span.rc_visible-sm,
   .new a.rc_visible-sm {
     display: inline;
+  }
+  /* line 80, ../sass/common/_utilities.scss */
+  .new .rc_visible__sm__block {
+    display: block !important;
+  }
+  /* line 83, ../sass/common/_utilities.scss */
+  .new .rc_visible__sm__inline {
+    display: inline !important;
+  }
+  /* line 86, ../sass/common/_utilities.scss */
+  .new .rc_visible__sm__inline-block {
+    display: inline-block !important;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -816,6 +840,18 @@
   .new a.rc_visible-md {
     display: inline;
   }
+  /* line 94, ../sass/common/_utilities.scss */
+  .new .rc_visible__md__block {
+    display: block !important;
+  }
+  /* line 97, ../sass/common/_utilities.scss */
+  .new .rc_visible__md__inline {
+    display: inline !important;
+  }
+  /* line 100, ../sass/common/_utilities.scss */
+  .new .rc_visible__md__inline-block {
+    display: inline-block !important;
+  }
 }
 @media (min-width: 1200px) {
   /* line 30, ../sass/_mixins.scss */
@@ -870,14 +906,26 @@
   .new a.rc_visible-lg {
     display: inline;
   }
+  /* line 108, ../sass/common/_utilities.scss */
+  .new .rc_visible__lg__block {
+    display: block !important;
+  }
+  /* line 111, ../sass/common/_utilities.scss */
+  .new .rc_visible__lg__inline {
+    display: inline !important;
+  }
+  /* line 114, ../sass/common/_utilities.scss */
+  .new .rc_visible__lg__inline-block {
+    display: inline-block !important;
+  }
 }
-/* line 80, ../sass/common/_utilities.scss */
+/* line 120, ../sass/common/_utilities.scss */
 .new .updates__block {
   padding-bottom: 2em;
   border-bottom: 1px solid #EEE;
   margin-bottom: 2em;
 }
-/* line 84, ../sass/common/_utilities.scss */
+/* line 124, ../sass/common/_utilities.scss */
 .new .updates__block > ul,
 .new .updates__block > ol,
 .new .updates__block hr,
@@ -885,11 +933,11 @@
   margin-top: 1em !important;
   margin-bottom: 1em !important;
 }
-/* line 94, ../sass/common/_utilities.scss */
+/* line 134, ../sass/common/_utilities.scss */
 .new .updates__block code {
   color: #ec3d10;
 }
-/* line 99, ../sass/common/_utilities.scss */
+/* line 139, ../sass/common/_utilities.scss */
 .new .updates__block ul li,
 .new .updates__block ol li {
   line-height: 1.61803em;

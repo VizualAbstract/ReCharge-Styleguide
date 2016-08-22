@@ -166,7 +166,13 @@
     .recharge em.rc_visible-xs,
     .recharge span.rc_visible-xs,
     .recharge a.rc_visible-xs {
-      display: inline; } }
+      display: inline; }
+    .recharge .rc_visible__xs__block {
+      display: block !important; }
+    .recharge .rc_visible__xs__inline {
+      display: inline !important; }
+    .recharge .rc_visible__xs__inline-block {
+      display: inline-block !important; } }
   @media (min-width: 768px) and (max-width: 991px) {
     .recharge .rc_visible__sm {
       display: initial !important; }
@@ -199,7 +205,13 @@
     .recharge em.rc_visible-sm,
     .recharge span.rc_visible-sm,
     .recharge a.rc_visible-sm {
-      display: inline; } }
+      display: inline; }
+    .recharge .rc_visible__sm__block {
+      display: block !important; }
+    .recharge .rc_visible__sm__inline {
+      display: inline !important; }
+    .recharge .rc_visible__sm__inline-block {
+      display: inline-block !important; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .recharge .rc_visible__md {
       display: initial !important; }
@@ -232,7 +244,13 @@
     .recharge em.rc_visible-md,
     .recharge span.rc_visible-md,
     .recharge a.rc_visible-md {
-      display: inline; } }
+      display: inline; }
+    .recharge .rc_visible__md__block {
+      display: block !important; }
+    .recharge .rc_visible__md__inline {
+      display: inline !important; }
+    .recharge .rc_visible__md__inline-block {
+      display: inline-block !important; } }
   @media (min-width: 1200px) {
     .recharge .rc_visible__lg {
       display: initial !important; }
@@ -265,7 +283,13 @@
     .recharge em.rc_visible-lg,
     .recharge span.rc_visible-lg,
     .recharge a.rc_visible-lg {
-      display: inline; } }
+      display: inline; }
+    .recharge .rc_visible__lg__block {
+      display: block !important; }
+    .recharge .rc_visible__lg__inline {
+      display: inline !important; }
+    .recharge .rc_visible__lg__inline-block {
+      display: inline-block !important; } }
   .recharge .updates__block {
     padding-bottom: 2em;
     border-bottom: 1px solid #EEE;
