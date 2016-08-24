@@ -1,11 +1,11 @@
-<ul class="toggle-list">
+<ul class="action-list">
 <?php for ($i = 1; $i <= 5; $i++){ ?>
-	<li class="toggle-list__item">
-		<div class="toggle-list__item__content">
+	<li class="action-list__item">
+		<div class="action-list__item__content">
 			<a href="#">Subscription Activation</a>
 			<p>Sent to customers when they first sign up for a subscription</p>
-		</div><!-- .toggle-list__item__content -->
-		<div class="toggle-list__item__action">
+		</div><!-- .action-list__item__content -->
+		<div class="action-list__item__action">
 			<label class="switch">
 				<div class="switch__inner">
 					<input class="switch__input" checked type="checkbox">
@@ -14,7 +14,7 @@
 					<span class="switch__right">Enabled</span>
 				</div><!-- .switch__inner -->
 			</label><!-- .switch -->
-		</div><!-- .toggle-list__item__action -->
-	</li><!-- .toggle-list__item -->
+		</div><!-- .action-list__item__action -->
+	</li><!-- .action-list__item -->
 <?php } ?>
-</ul><!-- .toggle-list -->
+</ul><!-- .action-list -->

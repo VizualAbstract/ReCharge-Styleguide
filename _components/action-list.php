@@ -1,6 +1,6 @@
-<h3>Basic example</h3>
+<h4>Basic example</h4>
 <ul class="action-list">
-<?php for ($i = 1; $i <= 5; $i++){ ?>
+<?php for ($i = 1; $i <= 3; $i++){ ?>
 	<li class="action-list__item">
 		<div class="action-list__item__content">
 			List Item Content
@@ -12,9 +12,11 @@
 <?php } ?>
 </ul><!-- .action-list -->
 
-<h3>With subscription product media</h3>
+<hr>
+
+<h4>With subscription product media</h4>
 <ul class="action-list">
-<?php for ($i = 1; $i <= 5; $i++){ ?>
+<?php for ($i = 1; $i <= 3; $i++){ ?>
 	<li class="action-list__item">
 		<div class="action-list__item__content">
 			<div class="subscription-product-media">
@@ -24,6 +26,30 @@
 		</div><!-- .action-list__item__content -->
 		<div class="action-list__item__action">
 			<a href="#"><span class="fa fa-plus-circle"></span></a>
+		</div><!-- .action-list__item__action -->
+	</li><!-- .action-list__item -->
+<?php } ?>
+</ul><!-- .action-list -->
+
+<hr>
+
+<h4>With switches</h4>
+<ul class="action-list">
+<?php for ($i = 1; $i <= 3; $i++){ ?>
+	<li class="action-list__item">
+		<div class="action-list__item__content">
+			<a href="#">Subscription Activation</a>
+			<p>Sent to customers when they first sign up for a subscription</p>
+		</div><!-- .action-list__item__content -->
+		<div class="action-list__item__action">
+			<label class="switch">
+				<div class="switch__inner">
+					<input class="switch__input" checked type="checkbox">
+					<span class="switch__overlay"></span>
+					<span class="switch__left">Disabled</span>
+					<span class="switch__right">Enabled</span>
+				</div><!-- .switch__inner -->
+			</label><!-- .switch -->
 		</div><!-- .action-list__item__action -->
 	</li><!-- .action-list__item -->
 <?php } ?>
