@@ -78,6 +78,7 @@
 		</div><!-- .navbar__collapse .collapse -->
 	</div><!-- .navbar__container -->
 </div><!-- .navbar -->
+
 <div class="navbar">
 	<a href="#" class="navbar__brand">
 		ReCharge
@@ -106,6 +107,7 @@
 		</ul><!-- .navbar__links .list -->
 	</div><!-- .navbar__collapse .collapse -->
 </div><!-- .navbar -->
+
 <div class="navbar navbar--mobile">
 	<a href="#" class="navbar__brand navbar__brand--shopify">
 		ReCharge
