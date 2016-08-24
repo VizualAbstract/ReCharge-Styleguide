@@ -64,13 +64,13 @@
 <?php include('_components/action-list.php'); ?>
 </div><!-- .example -->
 
-<h2 class="rc_sg__pattern_title" id="toggle-lists">Toggle Lists</h2>
+<?php /* <h2 class="rc_sg__pattern_title" id="toggle-lists">Toggle Lists</h2>
 <div class="rc_sg__description">
 	<p><strong>Toggle Lists</strong> have a more specific use case than <a href="#action-lists">Action Lists</a>, which are a more general component. Toggle lists will lose their table-layout structure on mobile.</p>
 </div>
 <div class="rc_sg__example">
 <?php include('_components/toggle-list.php'); ?>
-</div><!-- .example -->
+</div><!-- .example --> */ ?>
 
 <h2 class="rc_sg__pattern_title" id="progress-bar">Progress Bar</h2>
 <div class="rc_sg__example">

@@ -607,12 +607,12 @@
   border: 0;
 }
 /* line 18, ../sass/_mixins.scss */
-.new .clearfix:before, .new .form__group:before, .new .contextual__input__options:before, .new .clearfix:after, .new .form__group:after, .new .contextual__input__options:after {
+.new .clearfix:before, .new .form__group:before, .new .form__search:before, .new .form__search__no-results:before, .new .contextual__input__options:before, .new div.form__number:before, .new .clearfix:after, .new .form__group:after, .new .form__search:after, .new .form__search__no-results:after, .new .contextual__input__options:after, .new div.form__number:after {
   content: " ";
   display: table;
 }
 /* line 23, ../sass/_mixins.scss */
-.new .clearfix:after, .new .form__group:after, .new .contextual__input__options:after {
+.new .clearfix:after, .new .form__group:after, .new .form__search:after, .new .form__search__no-results:after, .new .contextual__input__options:after, .new div.form__number:after {
   clear: both;
 }
 @media (max-width: 767px) {
@@ -995,7 +995,7 @@
   }
 }
 /* line 33, ../sass/style/_typography.scss */
-.new h4, .new .h4 {
+.new h4, .new .h4, .new .form__search__no-results {
   font-family: 'ralewayregular', arial, san-serif;
   font-weight: normal;
   font-size: 20px;
@@ -1482,9 +1482,13 @@
   	8-16-16:
   		- Required no longer has a red-border
   		- Invalid is now !important, so admin-styles are overwritten
+  	8-24-16:
+  		- Add number inputs. They are set to display: inline-block
+  		- Expand dropkick select so it can be used for input__number
+  		- Expand search input group to add an active version
+  		- Add a form__search__no-results element
   */
   /* Contextual sub-form */
-  /* Color input */
   /* 
   	Element: Buttons
   	Version 1.0
@@ -1590,7 +1594,7 @@ h1 + .setup-header__description,
   }
 }
 /* line 106, ../sass/elements/_typography.scss */
-.new h4, .new .h4 {
+.new h4, .new .h4, .new .form__search__no-results {
   font-family: 'ralewayregular', arial, san-serif;
   font-weight: normal;
 }
@@ -2131,67 +2135,67 @@ h1 + .setup-header__description,
   max-width: 100%;
   height: auto;
 }
-/* line 42, ../sass/elements/_forms.scss */
+/* line 47, ../sass/elements/_forms.scss */
 .new .form .form__label {
   display: block;
 }
-/* line 46, ../sass/elements/_forms.scss */
+/* line 51, ../sass/elements/_forms.scss */
 .new .form--inline .form__label {
   display: inline;
 }
-/* line 52, ../sass/elements/_forms.scss */
+/* line 57, ../sass/elements/_forms.scss */
 .new .form__errors {
   margin-bottom: 24px;
   position: relative;
   text-align: center;
   color: #EC3D10;
 }
-/* line 57, ../sass/elements/_forms.scss */
+/* line 62, ../sass/elements/_forms.scss */
 .new .form__errors:empty {
   display: none;
 }
-/* line 62, ../sass/elements/_forms.scss */
+/* line 67, ../sass/elements/_forms.scss */
 .new .form__help {
   color: #676767;
   margin-top: -6px;
   margin-bottom: 16px;
   line-height: 25px;
 }
-/* line 71, ../sass/elements/_forms.scss */
+/* line 76, ../sass/elements/_forms.scss */
 .new .form__checkbox__label + .form__help,
 .new .form__radio__label + .form__help {
   margin-top: -19px;
   padding-left: 25px;
 }
-/* line 77, ../sass/elements/_forms.scss */
-.new .form__group {
+/* line 82, ../sass/elements/_forms.scss */
+.new .form__group, .new .form__search, .new .form__search__no-results {
   margin-bottom: 16px;
   position: relative;
 }
-/* line 81, ../sass/elements/_forms.scss */
-.new .form__group .button {
+/* line 86, ../sass/elements/_forms.scss */
+.new .form__group .button, .new .form__search .button, .new .form__search__no-results .button {
   margin-top: 10px;
 }
-/* line 84, ../sass/elements/_forms.scss */
-.new .form__group p:last-child {
+/* line 89, ../sass/elements/_forms.scss */
+.new .form__group p:last-child, .new .form__search p:last-child, .new .form__search__no-results p:last-child {
   margin-bottom: 5px;
 }
-/* line 88, ../sass/elements/_forms.scss */
-.new p + .form__group {
+/* line 93, ../sass/elements/_forms.scss */
+.new p + .form__group, .new p + .form__search, .new p + .form__search__no-results {
   margin-top: 18px;
 }
-/* line 93, ../sass/elements/_forms.scss */
-.new .form--signup .form__group {
+/* line 98, ../sass/elements/_forms.scss */
+.new .form--signup .form__group, .new .form--signup .form__search, .new .form--signup .form__search__no-results {
   position: relative;
   margin-bottom: 45px;
 }
 @media screen and (min-width: 768px) {
-  /* line 93, ../sass/elements/_forms.scss */
-  .new .form--signup .form__group {
+  /* line 98, ../sass/elements/_forms.scss */
+  .new .form--signup .form__group, .new .form--signup .form__search, .new .form--signup .form__search__no-results {
     margin-bottom: 55px;
   }
-  /* line 98, ../sass/elements/_forms.scss */
-  .new .form--signup .form__group .form__response {
+  /* line 103, ../sass/elements/_forms.scss */
+  .new .form--signup .form__group .form__response, .new .form--signup .form__search .form__response, .new .form--signup .form__search__no-results .form__response {
     position: absolute;
     top: 100%;
     margin-top: 10px;
@@ -2199,12 +2203,12 @@ h1 + .setup-header__description,
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  /* line 93, ../sass/elements/_forms.scss */
-  .new .form--signup .form__group {
+  /* line 98, ../sass/elements/_forms.scss */
+  .new .form--signup .form__group, .new .form--signup .form__search, .new .form--signup .form__search__no-results {
     margin-bottom: 65px;
   }
 }
-/* line 111, ../sass/elements/_forms.scss */
+/* line 116, ../sass/elements/_forms.scss */
 .new .form__actions, .new .rc_modal__actions {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2214,21 +2218,23 @@ h1 + .setup-header__description,
   margin-top: 32px;
   margin-bottom: 60px;
 }
-/* line 116, ../sass/elements/_forms.scss */
+/* line 121, ../sass/elements/_forms.scss */
 .new .form__actions .button, .new .rc_modal__actions .button {
   -webkit-box-flex: 100%;
   -webkit-flex: 100%;
       -ms-flex: 100%;
           flex: 100%;
 }
-/* line 118, ../sass/elements/_forms.scss */
+/* line 123, ../sass/elements/_forms.scss */
 .new .form__actions .button + .button, .new .rc_modal__actions .button + .button {
   margin-left: 13px;
 }
-/* line 124, ../sass/elements/_forms.scss */
+/* line 129, ../sass/elements/_forms.scss */
 .new button.form__input,
 .new input.form__input,
 .new input[type="text"].form__color,
+.new input[type="text"].form__number,
+.new input[type="number"].form__number,
 .new textarea.form__input,
 .new textarea.form__input__code,
 .new input.form__color {
@@ -2238,7 +2244,7 @@ h1 + .setup-header__description,
   line-height: 1.5625;
   padding: 6px 10px 7px;
 }
-/* line 136, ../sass/elements/_forms.scss */
+/* line 141, ../sass/elements/_forms.scss */
 .new .form input[type="submit"] + input[type="submit"],
 .new .form input[type="submit"] + button,
 .new .form input + input[type="submit"],
@@ -2249,20 +2255,21 @@ h1 + .setup-header__description,
 .new .form input + a {
   margin-left: 15px;
 }
-/* line 148, ../sass/elements/_forms.scss */
+/* line 153, ../sass/elements/_forms.scss */
 .new button.button,
 .new input.button {
   vertical-align: middle;
   height: 40px;
 }
-/* line 154, ../sass/elements/_forms.scss */
-.new input.form__input, .new input[type="text"].form__color,
+/* line 159, ../sass/elements/_forms.scss */
+.new input.form__input, .new input[type="text"].form__color, .new input[type="text"].form__number,
+.new input[type="number"].form__number,
 .new textarea.form__input,
 .new textarea.form__input__code,
 .new input.form__color {
   color: #424242;
 }
-/* line 160, ../sass/elements/_forms.scss */
+/* line 165, ../sass/elements/_forms.scss */
 .new button.button,
 .new input[type="submit"].button {
   -ms-touch-action: manipulation;
@@ -2271,36 +2278,41 @@ h1 + .setup-header__description,
   border-width: 0;
   min-width: 100px;
 }
-/* line 169, ../sass/elements/_forms.scss */
+/* line 174, ../sass/elements/_forms.scss */
 .new button.button:hover, .new button.button:active,
 .new input[type="submit"].button:hover,
 .new input[type="submit"].button:active {
   outline: 0;
 }
-/* line 175, ../sass/elements/_forms.scss */
+/* line 180, ../sass/elements/_forms.scss */
 .new button.button:disabled, .new button.button.disabled,
 .new input[type="submit"].button:disabled,
 .new input[type="submit"].button.disabled {
   background-color: #D8D8D8 !important;
   cursor: default;
 }
-/* line 182, ../sass/elements/_forms.scss */
+/* line 187, ../sass/elements/_forms.scss */
 .new select.form__input {
   display: block;
 }
-/* line 186, ../sass/elements/_forms.scss */
-.new input[type="text"].form__input, .new input[type="text"].form__color,
+/* line 191, ../sass/elements/_forms.scss */
+.new input[type="text"].form__input, .new input[type="text"].form__color, .new input[type="text"].form__number,
 .new select.form__input,
 .new input[type="email"].form__input,
 .new input[type="email"][type="text"].form__color,
+.new input[type="email"][type="text"].form__number,
+.new input[type="email"][type="number"].form__number,
 .new input[type="password"].form__input,
 .new input[type="password"][type="text"].form__color,
+.new input[type="password"][type="text"].form__number,
+.new input[type="password"][type="number"].form__number,
 .new textarea.form__input,
 .new textarea.form__input__code {
   width: 100%;
 }
-/* line 194, ../sass/elements/_forms.scss */
-.new .form__input, .new textarea.form__input__code, .new input[type="text"].form__color,
+/* line 199, ../sass/elements/_forms.scss */
+.new .form__input, .new textarea.form__input__code, .new input[type="text"].form__color, .new input[type="text"].form__number,
+.new input[type="number"].form__number,
 .new .form__placeholder {
   margin: 12px 0;
   display: block;
@@ -2308,38 +2320,51 @@ h1 + .setup-header__description,
   max-width: 100%;
   color: #424242;
 }
-/* line 203, ../sass/elements/_forms.scss */
-.new .form__input::-webkit-input-placeholder, .new textarea.form__input__code::-webkit-input-placeholder, .new input[type="text"].form__color::-webkit-input-placeholder,
+/* line 208, ../sass/elements/_forms.scss */
+.new .form__input::-webkit-input-placeholder, .new textarea.form__input__code::-webkit-input-placeholder, .new input[type="text"].form__color::-webkit-input-placeholder, .new input[type="text"].form__number::-webkit-input-placeholder,
+.new input[type="number"].form__number::-webkit-input-placeholder,
 .new .form__placeholder::-webkit-input-placeholder {
   color: #676767;
 }
-/* line 206, ../sass/elements/_forms.scss */
-.new .form__input:-moz-placeholder, .new textarea.form__input__code:-moz-placeholder, .new input[type="text"].form__color:-moz-placeholder,
+/* line 211, ../sass/elements/_forms.scss */
+.new .form__input:-moz-placeholder, .new textarea.form__input__code:-moz-placeholder, .new input[type="text"].form__color:-moz-placeholder, .new input[type="text"].form__number:-moz-placeholder,
+.new input[type="number"].form__number:-moz-placeholder,
 .new .form__placeholder:-moz-placeholder {
   color: #676767;
 }
-/* line 209, ../sass/elements/_forms.scss */
-.new .form__input::-moz-placeholder, .new textarea.form__input__code::-moz-placeholder, .new input[type="text"].form__color::-moz-placeholder,
+/* line 214, ../sass/elements/_forms.scss */
+.new .form__input::-moz-placeholder, .new textarea.form__input__code::-moz-placeholder, .new input[type="text"].form__color::-moz-placeholder, .new input[type="text"].form__number::-moz-placeholder,
+.new input[type="number"].form__number::-moz-placeholder,
 .new .form__placeholder::-moz-placeholder {
   color: #676767;
 }
-/* line 212, ../sass/elements/_forms.scss */
-.new .form__input:-ms-input-placeholder, .new textarea.form__input__code:-ms-input-placeholder, .new input[type="text"].form__color:-ms-input-placeholder,
+/* line 217, ../sass/elements/_forms.scss */
+.new .form__input:-ms-input-placeholder, .new textarea.form__input__code:-ms-input-placeholder, .new input[type="text"].form__color:-ms-input-placeholder, .new input[type="text"].form__number:-ms-input-placeholder,
+.new input[type="number"].form__number:-ms-input-placeholder,
 .new .form__placeholder:-ms-input-placeholder {
   color: #676767;
 }
-/* line 217, ../sass/elements/_forms.scss */
+/* line 222, ../sass/elements/_forms.scss */
 .new p.form__placeholder {
   margin: 4px 0;
 }
-/* line 221, ../sass/elements/_forms.scss */
-.new input[type="text"].form__input, .new input[type="text"].form__color,
+/* line 226, ../sass/elements/_forms.scss */
+.new input[type="number"].form__number,
+.new input[type="text"].form__input,
+.new input[type="text"].form__color,
+.new input[type="text"].form__number,
 .new input[type="search"].form__input,
 .new input[type="search"][type="text"].form__color,
+.new input[type="search"][type="text"].form__number,
+.new input[type="search"][type="number"].form__number,
 .new input[type="password"].form__input,
 .new input[type="password"][type="text"].form__color,
+.new input[type="password"][type="text"].form__number,
+.new input[type="password"][type="number"].form__number,
 .new input[type="date"].form__input,
 .new input[type="date"][type="text"].form__color,
+.new input[type="date"][type="text"].form__number,
+.new input[type="date"][type="number"].form__number,
 .new input.form__color,
 .new textarea.form__input,
 .new textarea.form__input__code {
@@ -2347,20 +2372,38 @@ h1 + .setup-header__description,
   border-style: solid;
   border-color: #676767;
 }
-/* line 230, ../sass/elements/_forms.scss */
-.new input[type="text"].form__input:focus, .new input[type="text"].form__color:focus, .new input[type="text"].form__input.form__input--focus, .new input[type="text"].form__input--focus.form__color,
+/* line 236, ../sass/elements/_forms.scss */
+.new input[type="number"].form__number:focus, .new input[type="number"].form__number.form__input--focus,
+.new input[type="text"].form__input:focus,
+.new input[type="text"].form__color:focus,
+.new input[type="text"].form__number:focus,
+.new input[type="text"].form__input.form__input--focus,
+.new input[type="text"].form__input--focus.form__color,
+.new input[type="text"].form__input--focus.form__number,
 .new input[type="search"].form__input:focus,
 .new input[type="search"][type="text"].form__color:focus,
+.new input[type="search"][type="text"].form__number:focus,
+.new input[type="search"][type="number"].form__number:focus,
 .new input[type="search"].form__input.form__input--focus,
 .new input[type="search"].form__input--focus[type="text"].form__color,
+.new input[type="search"].form__input--focus[type="text"].form__number,
+.new input[type="search"].form__input--focus[type="number"].form__number,
 .new input[type="password"].form__input:focus,
 .new input[type="password"][type="text"].form__color:focus,
+.new input[type="password"][type="text"].form__number:focus,
+.new input[type="password"][type="number"].form__number:focus,
 .new input[type="password"].form__input.form__input--focus,
 .new input[type="password"].form__input--focus[type="text"].form__color,
+.new input[type="password"].form__input--focus[type="text"].form__number,
+.new input[type="password"].form__input--focus[type="number"].form__number,
 .new input[type="date"].form__input:focus,
 .new input[type="date"][type="text"].form__color:focus,
+.new input[type="date"][type="text"].form__number:focus,
+.new input[type="date"][type="number"].form__number:focus,
 .new input[type="date"].form__input.form__input--focus,
 .new input[type="date"].form__input--focus[type="text"].form__color,
+.new input[type="date"].form__input--focus[type="text"].form__number,
+.new input[type="date"].form__input--focus[type="number"].form__number,
 .new input.form__color:focus,
 .new input.form__color.form__input--focus,
 .new textarea.form__input:focus,
@@ -2371,20 +2414,29 @@ h1 + .setup-header__description,
   outline: none;
   box-shadow: none;
 }
-/* line 236, ../sass/elements/_forms.scss */
-.new input[type="text"].form__input.form__input--invalid, .new input[type="text"].form__input--invalid.form__color,
+/* line 242, ../sass/elements/_forms.scss */
+.new input[type="number"].form__number.form__input--invalid,
+.new input[type="text"].form__input.form__input--invalid,
+.new input[type="text"].form__input--invalid.form__color,
+.new input[type="text"].form__input--invalid.form__number,
 .new input[type="search"].form__input.form__input--invalid,
 .new input[type="search"].form__input--invalid[type="text"].form__color,
+.new input[type="search"].form__input--invalid[type="text"].form__number,
+.new input[type="search"].form__input--invalid[type="number"].form__number,
 .new input[type="password"].form__input.form__input--invalid,
 .new input[type="password"].form__input--invalid[type="text"].form__color,
+.new input[type="password"].form__input--invalid[type="text"].form__number,
+.new input[type="password"].form__input--invalid[type="number"].form__number,
 .new input[type="date"].form__input.form__input--invalid,
 .new input[type="date"].form__input--invalid[type="text"].form__color,
+.new input[type="date"].form__input--invalid[type="text"].form__number,
+.new input[type="date"].form__input--invalid[type="number"].form__number,
 .new input.form__color.form__input--invalid,
 .new textarea.form__input.form__input--invalid,
 .new textarea.form__input--invalid.form__input__code {
   border-color: #EC3D10 !important;
 }
-/* line 241, ../sass/elements/_forms.scss */
+/* line 247, ../sass/elements/_forms.scss */
 .new .form__error {
   color: #EC3D10;
   font-family: 'ralewaysemibold', arial, sans-serif;
@@ -2393,37 +2445,67 @@ h1 + .setup-header__description,
   line-height: 25px;
 }
 @media screen and (min-width: 768px) {
-  /* line 241, ../sass/elements/_forms.scss */
+  /* line 247, ../sass/elements/_forms.scss */
   .new .form__error {
     position: absolute;
     top: 0;
     right: 0;
   }
 }
-/* line 254, ../sass/elements/_forms.scss */
+/* line 260, ../sass/elements/_forms.scss */
 .new textarea.form__input + textarea.form__input, .new textarea.form__input__code + textarea.form__input, .new textarea.form__input + textarea.form__input__code, .new textarea.form__input__code + textarea.form__input__code,
 .new input.form__color__picker + input.form__color,
+.new input[type="number"].form__number + input[type="number"].form__number,
 .new input[type="text"].form__input + input[type="text"].form__input,
 .new input[type="text"].form__color + input[type="text"].form__input,
+.new input[type="text"].form__number + input[type="text"].form__input,
 .new input[type="text"].form__input + input[type="text"].form__color,
 .new input[type="text"].form__color + input[type="text"].form__color,
+.new input[type="text"].form__number + input[type="text"].form__color,
+.new input[type="text"].form__input + input[type="text"].form__number,
+.new input[type="text"].form__color + input[type="text"].form__number,
+.new input[type="text"].form__number + input[type="text"].form__number,
 .new input[type="email"].form__input + input[type="email"].form__input,
 .new input[type="email"][type="text"].form__color + input[type="email"].form__input,
+.new input[type="email"][type="text"].form__number + input[type="email"].form__input,
+.new input[type="email"][type="number"].form__number + input[type="email"].form__input,
 .new input[type="email"].form__input + input[type="email"][type="text"].form__color,
 .new input[type="email"][type="text"].form__color + input[type="email"][type="text"].form__color,
+.new input[type="email"][type="text"].form__number + input[type="email"][type="text"].form__color,
+.new input[type="email"][type="number"].form__number + input[type="email"][type="text"].form__color,
+.new input[type="email"].form__input + input[type="email"][type="text"].form__number,
+.new input[type="email"][type="text"].form__color + input[type="email"][type="text"].form__number,
+.new input[type="email"][type="text"].form__number + input[type="email"][type="text"].form__number,
+.new input[type="email"][type="number"].form__number + input[type="email"][type="text"].form__number,
+.new input[type="email"].form__input + input[type="email"][type="number"].form__number,
+.new input[type="email"][type="text"].form__color + input[type="email"][type="number"].form__number,
+.new input[type="email"][type="text"].form__number + input[type="email"][type="number"].form__number,
+.new input[type="email"][type="number"].form__number + input[type="email"][type="number"].form__number,
 .new input[type="password"].form__input + input[type="password"].form__input,
 .new input[type="password"][type="text"].form__color + input[type="password"].form__input,
+.new input[type="password"][type="text"].form__number + input[type="password"].form__input,
+.new input[type="password"][type="number"].form__number + input[type="password"].form__input,
 .new input[type="password"].form__input + input[type="password"][type="text"].form__color,
-.new input[type="password"][type="text"].form__color + input[type="password"][type="text"].form__color {
+.new input[type="password"][type="text"].form__color + input[type="password"][type="text"].form__color,
+.new input[type="password"][type="text"].form__number + input[type="password"][type="text"].form__color,
+.new input[type="password"][type="number"].form__number + input[type="password"][type="text"].form__color,
+.new input[type="password"].form__input + input[type="password"][type="text"].form__number,
+.new input[type="password"][type="text"].form__color + input[type="password"][type="text"].form__number,
+.new input[type="password"][type="text"].form__number + input[type="password"][type="text"].form__number,
+.new input[type="password"][type="number"].form__number + input[type="password"][type="text"].form__number,
+.new input[type="password"].form__input + input[type="password"][type="number"].form__number,
+.new input[type="password"][type="text"].form__color + input[type="password"][type="number"].form__number,
+.new input[type="password"][type="text"].form__number + input[type="password"][type="number"].form__number,
+.new input[type="password"][type="number"].form__number + input[type="password"][type="number"].form__number {
   margin: 20px 0;
 }
-/* line 262, ../sass/elements/_forms.scss */
+/* line 269, ../sass/elements/_forms.scss */
 .new input[type="text"].button {
   line-height: 1.5625;
   padding: 7px;
   height: 40px;
 }
-/* line 268, ../sass/elements/_forms.scss */
+/* line 275, ../sass/elements/_forms.scss */
 .new textarea.form__input, .new textarea.form__input__code {
   line-height: 1.5625;
   padding: 7px 10px;
@@ -2433,29 +2515,29 @@ h1 + .setup-header__description,
   box-sizing: border-box;
   min-height: 100px;
 }
-/* line 281, ../sass/elements/_forms.scss */
+/* line 288, ../sass/elements/_forms.scss */
 .new textarea.form__input__code {
   font-family: 'pt-mono', monospace;
   font-size: 16px;
   color: #676767;
   line-height: 21px;
 }
-/* line 289, ../sass/elements/_forms.scss */
+/* line 296, ../sass/elements/_forms.scss */
 .new fieldset {
   padding: 0;
   margin: 0;
   border: 0;
   min-width: 0;
 }
-/* line 294, ../sass/elements/_forms.scss */
+/* line 301, ../sass/elements/_forms.scss */
 .new fieldset + fieldset {
   margin-top: 32px;
 }
-/* line 297, ../sass/elements/_forms.scss */
+/* line 304, ../sass/elements/_forms.scss */
 .new fieldset:last-child {
   margin-bottom: 60px;
 }
-/* line 302, ../sass/elements/_forms.scss */
+/* line 309, ../sass/elements/_forms.scss */
 .new h1 + fieldset,
 .new h2 + fieldset,
 .new h3 + fieldset,
@@ -2463,7 +2545,7 @@ h1 + .setup-header__description,
 .new h5 + fieldset {
   margin-top: 24px;
 }
-/* line 310, ../sass/elements/_forms.scss */
+/* line 317, ../sass/elements/_forms.scss */
 .new fieldset + h1,
 .new fieldset + h2,
 .new fieldset + h3,
@@ -2471,7 +2553,7 @@ h1 + .setup-header__description,
 .new fieldset + h5 {
   margin-top: 32px;
 }
-/* line 318, ../sass/elements/_forms.scss */
+/* line 325, ../sass/elements/_forms.scss */
 .new legend {
   display: block;
   width: 100%;
@@ -2481,16 +2563,16 @@ h1 + .setup-header__description,
   font-size: 16px;
   margin: 0 0 20px;
 }
-/* line 328, ../sass/elements/_forms.scss */
+/* line 335, ../sass/elements/_forms.scss */
 .new legend h1, .new legend .h1,
 .new legend h2, .new legend .h2,
 .new legend h3, .new legend .h3,
-.new legend h4, .new legend .h4,
+.new legend h4, .new legend .h4, .new legend .form__search__no-results,
 .new legend h5, .new legend .h5 {
   line-height: 1;
   margin: 0;
 }
-/* line 338, ../sass/elements/_forms.scss */
+/* line 345, ../sass/elements/_forms.scss */
 .new label {
   display: block;
   max-width: 100%;
@@ -2499,18 +2581,18 @@ h1 + .setup-header__description,
   display: block;
   line-height: 25px;
 }
-/* line 349, ../sass/elements/_forms.scss */
+/* line 356, ../sass/elements/_forms.scss */
 .new .form__label + .button {
   margin: 12px 0;
 }
-/* line 354, ../sass/elements/_forms.scss */
+/* line 361, ../sass/elements/_forms.scss */
 .new input[type="radio"],
 .new input[type="checkbox"],
 .new .form__radio,
 .new .form__checkbox {
   display: none;
 }
-/* line 360, ../sass/elements/_forms.scss */
+/* line 367, ../sass/elements/_forms.scss */
 .new input[type="radio"]:first-of-type + .form__radio__label,
 .new input[type="radio"]:first-of-type + .form__checkbox__label,
 .new input[type="checkbox"]:first-of-type + .form__radio__label,
@@ -2521,7 +2603,7 @@ h1 + .setup-header__description,
 .new .form__checkbox:first-of-type + .form__checkbox__label {
   margin-top: 6px;
 }
-/* line 365, ../sass/elements/_forms.scss */
+/* line 372, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label,
 .new input[type="radio"] + .form__radio__label,
 .new input[type="radio"] + .form__checkbox__label,
@@ -2538,7 +2620,7 @@ h1 + .setup-header__description,
   display: block;
   line-height: 20px;
 }
-/* line 371, ../sass/elements/_forms.scss */
+/* line 378, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label:before,
 .new input[type="radio"] + .form__radio__label:before,
 .new input[type="radio"] + .form__checkbox__label:before,
@@ -2570,7 +2652,7 @@ h1 + .setup-header__description,
   position: relative;
   top: -2px;
 }
-/* line 396, ../sass/elements/_forms.scss */
+/* line 403, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label:after,
 .new input[type="radio"] + .form__radio__label:after,
 .new input[type="radio"] + .form__checkbox__label:after,
@@ -2587,14 +2669,14 @@ h1 + .setup-header__description,
   content: "";
   margin: 10px 0;
 }
-/* line 408, ../sass/elements/_forms.scss */
+/* line 415, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label:before,
 .new input[type="radio"] + .form__radio__label:before,
 .new .form__radio + label:before,
 .new .form__radio + .form__radio__label:before {
   border-radius: 50%;
 }
-/* line 423, ../sass/elements/_forms.scss */
+/* line 430, ../sass/elements/_forms.scss */
 .new input[type="radio"]:checked + label:before,
 .new input[type="radio"]:checked + .form__radio__label:before,
 .new input[type="radio"]:checked + .form__checkbox__label:before, .new input[type="radio"].form__input--checked + label:before,
@@ -2621,7 +2703,7 @@ h1 + .setup-header__description,
   content: "\f00c";
   background-color: #767676;
 }
-/* line 434, ../sass/elements/_forms.scss */
+/* line 441, ../sass/elements/_forms.scss */
 .new input[type="radio"]:required + label::before,
 .new input[type="radio"]:required + .form__radio__label::before,
 .new input[type="radio"]:required + .form__checkbox__label::before, .new input[type="radio"].form__input--required + label::before,
@@ -2647,7 +2729,7 @@ h1 + .setup-header__description,
 .new .form__checkbox.form__input--required + .form__checkbox__label::before {
   border-color: #EC3D10;
 }
-/* line 442, ../sass/elements/_forms.scss */
+/* line 449, ../sass/elements/_forms.scss */
 .new input[type="radio"]:required:checked + label::before,
 .new input[type="radio"]:required + .form__radio__label + label::before,
 .new input[type="radio"]:required + .form__checkbox__label + label::before, .new input[type="radio"].form__input--required:checked + label::before,
@@ -2673,7 +2755,7 @@ h1 + .setup-header__description,
 .new .form__checkbox.form__input--required + .form__checkbox__label + label::before {
   background-color: #EC3D10;
 }
-/* line 453, ../sass/elements/_forms.scss */
+/* line 460, ../sass/elements/_forms.scss */
 .new input[type="radio"]:disabled + label:before,
 .new input[type="radio"]:disabled + .form__radio__label:before,
 .new input[type="radio"]:disabled + .form__checkbox__label:before, .new input[type="radio"].form__input--disabled + label:before,
@@ -2701,44 +2783,45 @@ h1 + .setup-header__description,
   color: #767676;
   text-indent: 3px;
 }
-/* line 462, ../sass/elements/_forms.scss */
+/* line 469, ../sass/elements/_forms.scss */
 .new .card-details {
   width: 100%;
   font-size: 0;
 }
-/* line 465, ../sass/elements/_forms.scss */
-.new .card-details input.form__input, .new .card-details input[type="text"].form__color {
+/* line 472, ../sass/elements/_forms.scss */
+.new .card-details input.form__input, .new .card-details input[type="text"].form__color, .new .card-details input[type="text"].form__number,
+.new .card-details input[type="number"].form__number {
   min-width: 10px;
   font-size: 16px;
   margin-bottom: 0;
 }
-/* line 470, ../sass/elements/_forms.scss */
+/* line 477, ../sass/elements/_forms.scss */
 .new .card-details__date, .new .card-details__security, .new .card-details__cards {
   display: inline-block;
   vertical-align: middle;
   box-sizing: border-box;
 }
-/* line 477, ../sass/elements/_forms.scss */
+/* line 484, ../sass/elements/_forms.scss */
 .new .card-details__label {
   font-size: 16px;
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 482, ../sass/elements/_forms.scss */
+/* line 489, ../sass/elements/_forms.scss */
 .new .card-details__date {
   width: 30%;
 }
-/* line 484, ../sass/elements/_forms.scss */
+/* line 491, ../sass/elements/_forms.scss */
 .new .card-details__date__month, .new .card-details__date__divider, .new .card-details__date__year {
   font-size: 0;
   display: inline-block !important;
   vertical-align: top;
 }
-/* line 491, ../sass/elements/_forms.scss */
+/* line 498, ../sass/elements/_forms.scss */
 .new .card-details__date__month {
   width: 29.62% !important;
 }
-/* line 494, ../sass/elements/_forms.scss */
+/* line 501, ../sass/elements/_forms.scss */
 .new .card-details__date__divider {
   width: 14.83% !important;
   font-size: 16px;
@@ -2746,16 +2829,16 @@ h1 + .setup-header__description,
   line-height: 40px;
   padding-top: 10px;
 }
-/* line 501, ../sass/elements/_forms.scss */
+/* line 508, ../sass/elements/_forms.scss */
 .new .card-details__date__year {
   width: 55.55% !important;
 }
-/* line 505, ../sass/elements/_forms.scss */
+/* line 512, ../sass/elements/_forms.scss */
 .new .card-details__security {
   width: 15%;
   padding-left: 20px;
 }
-/* line 509, ../sass/elements/_forms.scss */
+/* line 516, ../sass/elements/_forms.scss */
 .new .card-details__cards {
   width: 55%;
   margin-top: 37px;
@@ -2763,7 +2846,7 @@ h1 + .setup-header__description,
   height: 40px;
   line-height: 40px;
 }
-/* line 516, ../sass/elements/_forms.scss */
+/* line 523, ../sass/elements/_forms.scss */
 .new .card-details__icon {
   width: 20%;
   margin-left: 10%;
@@ -2771,26 +2854,26 @@ h1 + .setup-header__description,
   vertical-align: middle;
 }
 @media screen and (min-width: 768px) {
-  /* line 516, ../sass/elements/_forms.scss */
+  /* line 523, ../sass/elements/_forms.scss */
   .new .card-details__icon {
     width: 16.42%;
     margin-left: 20px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 527, ../sass/elements/_forms.scss */
+  /* line 534, ../sass/elements/_forms.scss */
   .new .card-details__date {
     width: 50%;
   }
-  /* line 530, ../sass/elements/_forms.scss */
+  /* line 537, ../sass/elements/_forms.scss */
   .new .card-details__security {
     width: 20%;
   }
-  /* line 533, ../sass/elements/_forms.scss */
+  /* line 540, ../sass/elements/_forms.scss */
   .new .card-details__cards {
     width: 30%;
   }
-  /* line 536, ../sass/elements/_forms.scss */
+  /* line 543, ../sass/elements/_forms.scss */
   .new .card-details .form__error {
     position: absolute;
     right: 0;
@@ -2798,52 +2881,95 @@ h1 + .setup-header__description,
     bottom: -24px;
   }
 }
-/* line 545, ../sass/elements/_forms.scss */
+/* line 552, ../sass/elements/_forms.scss */
 .new .input-group {
   display: table;
   border-collapse: separate;
   box-sizing: border-box;
 }
-/* line 549, ../sass/elements/_forms.scss */
-.new .input-group .form__input, .new .input-group textarea.form__input__code, .new .input-group input[type="text"].form__color, .new .input-group__addon {
+/* line 556, ../sass/elements/_forms.scss */
+.new .input-group .form__number,
+.new .input-group .form__input,
+.new .input-group textarea.form__input__code,
+.new .input-group input[type="text"].form__color,
+.new .input-group input[type="text"].form__number,
+.new .input-group input[type="number"].form__number, .new .input-group__addon {
   display: table-cell;
   box-sizing: border-box;
 }
-/* line 554, ../sass/elements/_forms.scss */
+/* line 562, ../sass/elements/_forms.scss */
 .new .input-group__addon {
   padding-left: 15px;
 }
-/* line 556, ../sass/elements/_forms.scss */
+/* line 564, ../sass/elements/_forms.scss */
 .new .input-group__addon:first-child {
   padding-left: 0;
   padding-right: 15px;
 }
-/* line 560, ../sass/elements/_forms.scss */
+/* line 568, ../sass/elements/_forms.scss */
 .new .input-group__addon .button {
   margin-top: 11px;
   margin-bottom: 13px;
 }
-/* line 567, ../sass/elements/_forms.scss */
+/* line 575, ../sass/elements/_forms.scss */
 .new .input-group--full {
   width: 100%;
 }
-/* line 569, ../sass/elements/_forms.scss */
-.new .input-group--full .form__input, .new .input-group--full textarea.form__input__code, .new .input-group--full input[type="text"].form__color {
+/* line 577, ../sass/elements/_forms.scss */
+.new .input-group--full .form__number,
+.new .input-group--full .form__input,
+.new .input-group--full textarea.form__input__code,
+.new .input-group--full input[type="text"].form__color,
+.new .input-group--full input[type="text"].form__number,
+.new .input-group--full input[type="number"].form__number {
   width: 100%;
 }
-/* line 572, ../sass/elements/_forms.scss */
+/* line 581, ../sass/elements/_forms.scss */
 .new .input-group--full .input-group__addon {
   width: 1%;
 }
-/* line 578, ../sass/elements/_forms.scss */
+/* line 588, ../sass/elements/_forms.scss */
 .new .form__search .input-group__addon {
   padding-left: 0;
 }
-/* line 580, ../sass/elements/_forms.scss */
+/* line 590, ../sass/elements/_forms.scss */
 .new .form__search .input-group__addon .button {
   min-width: 40px;
 }
-/* line 587, ../sass/elements/_forms.scss */
+/* line 594, ../sass/elements/_forms.scss */
+.new .form__search #submit_search {
+  font-size: 0;
+}
+/* line 596, ../sass/elements/_forms.scss */
+.new .form__search #submit_search:before {
+  font-size: 16px;
+  font-family: fontawesome;
+  content: "\f002";
+  color: #FFFFFF;
+}
+/* line 604, ../sass/elements/_forms.scss */
+.new .form__search--active input[type="text"].form__input, .new .form__search--active input[type="text"].form__color, .new .form__search--active input[type="text"].form__number {
+  border-color: #4DD6B7;
+}
+/* line 608, ../sass/elements/_forms.scss */
+.new .form__search--active #submit_search {
+  background-color: #4DD6B7;
+  font-size: 0;
+}
+/* line 611, ../sass/elements/_forms.scss */
+.new .form__search--active #submit_search:before {
+  content: "\f00d";
+}
+/* line 614, ../sass/elements/_forms.scss */
+.new .form__search--active #submit_search:hover {
+  background-color: #2BAC8F;
+}
+/* line 619, ../sass/elements/_forms.scss */
+.new .form__search__no-results {
+  color: #2C93AC;
+  text-align: center;
+}
+/* line 628, ../sass/elements/_forms.scss */
 .new .contextual__input__options {
   background-color: #f3f3f3;
   padding: 18px 20px 0;
@@ -2852,44 +2978,62 @@ h1 + .setup-header__description,
   display: none;
   margin-bottom: 23px;
 }
-/* line 596, ../sass/elements/_forms.scss */
+/* line 637, ../sass/elements/_forms.scss */
 .new .contextual__input__options:last-of-type {
   margin-bottom: 18px;
 }
-/* line 603, ../sass/elements/_forms.scss */
-.new .contextual__input__options .form__group .form__select {
+/* line 644, ../sass/elements/_forms.scss */
+.new .contextual__input__options .form__group .form__select, .new .contextual__input__options .form__search .form__select, .new .contextual__input__options .form__search__no-results .form__select, .new .contextual__input__options .form__group div.form__number, .new .contextual__input__options .form__search div.form__number, .new .contextual__input__options .form__search__no-results div.form__number {
   margin-bottom: 0;
 }
-/* line 612, ../sass/elements/_forms.scss */
-.new .form__group .form__radio__label:last-of-type,
-.new .form__group .form__checkbox__label:last-of-type {
+/* line 653, ../sass/elements/_forms.scss */
+.new .form__group .form__radio__label:last-of-type, .new .form__search .form__radio__label:last-of-type, .new .form__search__no-results .form__radio__label:last-of-type,
+.new .form__group .form__checkbox__label:last-of-type,
+.new .form__search .form__checkbox__label:last-of-type,
+.new .form__search__no-results .form__checkbox__label:last-of-type {
   margin-bottom: -16px;
 }
-/* line 614, ../sass/elements/_forms.scss */
-.new .form__group .form__radio__label:last-of-type + .contextual__input__options,
-.new .form__group .form__checkbox__label:last-of-type + .contextual__input__options {
+/* line 655, ../sass/elements/_forms.scss */
+.new .form__group .form__radio__label:last-of-type + .contextual__input__options, .new .form__search .form__radio__label:last-of-type + .contextual__input__options, .new .form__search__no-results .form__radio__label:last-of-type + .contextual__input__options,
+.new .form__group .form__checkbox__label:last-of-type + .contextual__input__options,
+.new .form__search .form__checkbox__label:last-of-type + .contextual__input__options,
+.new .form__search__no-results .form__checkbox__label:last-of-type + .contextual__input__options {
   margin-top: 19px;
 }
-/* line 625, ../sass/elements/_forms.scss */
+/* line 666, ../sass/elements/_forms.scss */
 .new .form__checkbox:checked + .form__checkbox__label + .contextual__input__options,
 .new .form__checkbox:checked + .form__radio__label + .contextual__input__options,
 .new .form__radio:checked + .form__checkbox__label + .contextual__input__options,
 .new .form__radio:checked + .form__radio__label + .contextual__input__options {
   display: block;
 }
-/* line 629, ../sass/elements/_forms.scss */
+/* line 670, ../sass/elements/_forms.scss */
 .new .form__checkbox:checked + .form__checkbox__label + .form__help + .contextual__input__options,
 .new .form__checkbox:checked + .form__radio__label + .form__help + .contextual__input__options,
 .new .form__radio:checked + .form__checkbox__label + .form__help + .contextual__input__options,
 .new .form__radio:checked + .form__radio__label + .form__help + .contextual__input__options {
   display: block;
 }
-/* line 637, ../sass/elements/_forms.scss */
+/* line 678, ../sass/elements/_forms.scss */
 .new input[type="text"].form__color {
   display: inline;
   width: 100px;
 }
-/* line 646, ../sass/elements/_forms.scss */
+/* line 686, ../sass/elements/_forms.scss */
+.new input[type="text"].form__number,
+.new input[type="number"].form__number {
+  width: auto;
+  min-width: 10px;
+  display: inline-block;
+  margin-right: 5px;
+}
+/* line 696, ../sass/elements/_forms.scss */
+.new div.form__number {
+  width: auto;
+  display: inline-block;
+  margin-right: 5px;
+}
+/* line 707, ../sass/elements/_forms.scss */
 .new input[type="color"].form__color__picker + .sp-replacer {
   margin: 12px 13px;
   vertical-align: top;
@@ -3144,7 +3288,7 @@ h1 + .setup-header__description,
 .new .dropdown h1, .new .dropdown .h1,
 .new .dropdown h2, .new .dropdown .h2,
 .new .dropdown h3, .new .dropdown .h3,
-.new .dropdown h4, .new .dropdown .h4,
+.new .dropdown h4, .new .dropdown .h4, .new .dropdown .form__search__no-results,
 .new .dropdown h5, .new .dropdown .h5 {
   display: inline;
 }
@@ -3202,7 +3346,7 @@ h1 + .setup-header__description,
 .new .dropdown__trigger h1, .new .dropdown__trigger .h1,
 .new .dropdown__trigger h2, .new .dropdown__trigger .h2,
 .new .dropdown__trigger h3, .new .dropdown__trigger .h3,
-.new .dropdown__trigger h4, .new .dropdown__trigger .h4,
+.new .dropdown__trigger h4, .new .dropdown__trigger .h4, .new .dropdown__trigger .form__search__no-results,
 .new .dropdown__trigger h5, .new .dropdown__trigger .h5 {
   top: 2px;
   position: relative;
@@ -3504,7 +3648,7 @@ h1 + .setup-header__description,
 .new .title-bar h1, .new .title-bar .h1,
 .new .title-bar h2, .new .title-bar .h2,
 .new .title-bar h3, .new .title-bar .h3,
-.new .title-bar h4, .new .title-bar .h4,
+.new .title-bar h4, .new .title-bar .h4, .new .title-bar .form__search__no-results,
 .new .title-bar h5, .new .title-bar .h5,
 .new .title-bar h6, .new .title-bar .h6 {
   margin-top: 0;
@@ -3936,57 +4080,99 @@ h1 + .setup-header__description,
   content: "\f005";
 }
 /* line 33, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group {
+.new .admin-recharge.form__group, .new .admin-recharge.form__search, .new .admin-recharge.form__search__no-results {
   color: #53BAD3;
 }
 /* line 35, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group:after {
+.new .admin-recharge.form__group:after, .new .admin-recharge.form__search:after, .new .admin-recharge.form__search__no-results:after {
   content: "";
   display: none;
 }
 /* line 39, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group .form__input, .new .admin-recharge.form__group textarea.form__input__code, .new .admin-recharge.form__group input[type="text"].form__color,
-.new .admin-recharge.form__group .form__input__code {
+.new .admin-recharge.form__group .form__input, .new .admin-recharge.form__search .form__input, .new .admin-recharge.form__search__no-results .form__input, .new .admin-recharge.form__group textarea.form__input__code, .new .admin-recharge.form__search textarea.form__input__code, .new .admin-recharge.form__search__no-results textarea.form__input__code, .new .admin-recharge.form__group input[type="text"].form__color, .new .admin-recharge.form__search input[type="text"].form__color, .new .admin-recharge.form__search__no-results input[type="text"].form__color, .new .admin-recharge.form__group input[type="text"].form__number, .new .admin-recharge.form__search input[type="text"].form__number, .new .admin-recharge.form__search__no-results input[type="text"].form__number,
+.new .admin-recharge.form__group input[type="number"].form__number,
+.new .admin-recharge.form__search input[type="number"].form__number,
+.new .admin-recharge.form__search__no-results input[type="number"].form__number,
+.new .admin-recharge.form__group .form__input__code,
+.new .admin-recharge.form__search .form__input__code,
+.new .admin-recharge.form__search__no-results .form__input__code {
   color: #53BAD3;
   border: 1px solid #53BAD3;
 }
 /* line 43, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group .form__input:focus, .new .admin-recharge.form__group textarea.form__input__code:focus, .new .admin-recharge.form__group input[type="text"].form__color:focus,
-.new .admin-recharge.form__group .form__input__code:focus {
+.new .admin-recharge.form__group .form__input:focus, .new .admin-recharge.form__search .form__input:focus, .new .admin-recharge.form__search__no-results .form__input:focus, .new .admin-recharge.form__group textarea.form__input__code:focus, .new .admin-recharge.form__search textarea.form__input__code:focus, .new .admin-recharge.form__search__no-results textarea.form__input__code:focus, .new .admin-recharge.form__group input[type="text"].form__color:focus, .new .admin-recharge.form__search input[type="text"].form__color:focus, .new .admin-recharge.form__search__no-results input[type="text"].form__color:focus, .new .admin-recharge.form__group input[type="text"].form__number:focus, .new .admin-recharge.form__search input[type="text"].form__number:focus, .new .admin-recharge.form__search__no-results input[type="text"].form__number:focus,
+.new .admin-recharge.form__group input[type="number"].form__number:focus,
+.new .admin-recharge.form__search input[type="number"].form__number:focus,
+.new .admin-recharge.form__search__no-results input[type="number"].form__number:focus,
+.new .admin-recharge.form__group .form__input__code:focus,
+.new .admin-recharge.form__search .form__input__code:focus,
+.new .admin-recharge.form__search__no-results .form__input__code:focus {
   border-color: #4DD6B7;
 }
 /* line 46, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group .form__input::-webkit-input-placeholder, .new .admin-recharge.form__group textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__color::-webkit-input-placeholder,
-.new .admin-recharge.form__group .form__input__code::-webkit-input-placeholder {
+.new .admin-recharge.form__group .form__input::-webkit-input-placeholder, .new .admin-recharge.form__search .form__input::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results .form__input::-webkit-input-placeholder, .new .admin-recharge.form__group textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__search textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__color::-webkit-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__color::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color::-webkit-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__number::-webkit-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__number::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number::-webkit-input-placeholder,
+.new .admin-recharge.form__group input[type="number"].form__number::-webkit-input-placeholder,
+.new .admin-recharge.form__search input[type="number"].form__number::-webkit-input-placeholder,
+.new .admin-recharge.form__search__no-results input[type="number"].form__number::-webkit-input-placeholder,
+.new .admin-recharge.form__group .form__input__code::-webkit-input-placeholder,
+.new .admin-recharge.form__search .form__input__code::-webkit-input-placeholder,
+.new .admin-recharge.form__search__no-results .form__input__code::-webkit-input-placeholder {
   color: #53BAD3;
 }
 /* line 49, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group .form__input:-moz-placeholder, .new .admin-recharge.form__group textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__color:-moz-placeholder,
-.new .admin-recharge.form__group .form__input__code:-moz-placeholder {
+.new .admin-recharge.form__group .form__input:-moz-placeholder, .new .admin-recharge.form__search .form__input:-moz-placeholder, .new .admin-recharge.form__search__no-results .form__input:-moz-placeholder, .new .admin-recharge.form__group textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__search textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__color:-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__color:-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color:-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__number:-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__number:-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number:-moz-placeholder,
+.new .admin-recharge.form__group input[type="number"].form__number:-moz-placeholder,
+.new .admin-recharge.form__search input[type="number"].form__number:-moz-placeholder,
+.new .admin-recharge.form__search__no-results input[type="number"].form__number:-moz-placeholder,
+.new .admin-recharge.form__group .form__input__code:-moz-placeholder,
+.new .admin-recharge.form__search .form__input__code:-moz-placeholder,
+.new .admin-recharge.form__search__no-results .form__input__code:-moz-placeholder {
   color: #53BAD3;
 }
 /* line 52, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group .form__input::-moz-placeholder, .new .admin-recharge.form__group textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__color::-moz-placeholder,
-.new .admin-recharge.form__group .form__input__code::-moz-placeholder {
+.new .admin-recharge.form__group .form__input::-moz-placeholder, .new .admin-recharge.form__search .form__input::-moz-placeholder, .new .admin-recharge.form__search__no-results .form__input::-moz-placeholder, .new .admin-recharge.form__group textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__search textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__color::-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__color::-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color::-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__number::-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__number::-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number::-moz-placeholder,
+.new .admin-recharge.form__group input[type="number"].form__number::-moz-placeholder,
+.new .admin-recharge.form__search input[type="number"].form__number::-moz-placeholder,
+.new .admin-recharge.form__search__no-results input[type="number"].form__number::-moz-placeholder,
+.new .admin-recharge.form__group .form__input__code::-moz-placeholder,
+.new .admin-recharge.form__search .form__input__code::-moz-placeholder,
+.new .admin-recharge.form__search__no-results .form__input__code::-moz-placeholder {
   color: #53BAD3;
 }
 /* line 55, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group .form__input:-ms-input-placeholder, .new .admin-recharge.form__group textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__color:-ms-input-placeholder,
-.new .admin-recharge.form__group .form__input__code:-ms-input-placeholder {
+.new .admin-recharge.form__group .form__input:-ms-input-placeholder, .new .admin-recharge.form__search .form__input:-ms-input-placeholder, .new .admin-recharge.form__search__no-results .form__input:-ms-input-placeholder, .new .admin-recharge.form__group textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__search textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__color:-ms-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__color:-ms-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color:-ms-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__number:-ms-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__number:-ms-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number:-ms-input-placeholder,
+.new .admin-recharge.form__group input[type="number"].form__number:-ms-input-placeholder,
+.new .admin-recharge.form__search input[type="number"].form__number:-ms-input-placeholder,
+.new .admin-recharge.form__search__no-results input[type="number"].form__number:-ms-input-placeholder,
+.new .admin-recharge.form__group .form__input__code:-ms-input-placeholder,
+.new .admin-recharge.form__search .form__input__code:-ms-input-placeholder,
+.new .admin-recharge.form__search__no-results .form__input__code:-ms-input-placeholder {
   color: #53BAD3;
 }
 /* line 63, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group .form__radio + .form__radio__label:before,
+.new .admin-recharge.form__group .form__radio + .form__radio__label:before, .new .admin-recharge.form__search .form__radio + .form__radio__label:before, .new .admin-recharge.form__search__no-results .form__radio + .form__radio__label:before,
 .new .admin-recharge.form__group .form__radio + .form__checkbox__label:before,
+.new .admin-recharge.form__search .form__radio + .form__checkbox__label:before,
+.new .admin-recharge.form__search__no-results .form__radio + .form__checkbox__label:before,
 .new .admin-recharge.form__group .form__checkbox + .form__radio__label:before,
-.new .admin-recharge.form__group .form__checkbox + .form__checkbox__label:before {
+.new .admin-recharge.form__search .form__checkbox + .form__radio__label:before,
+.new .admin-recharge.form__search__no-results .form__checkbox + .form__radio__label:before,
+.new .admin-recharge.form__group .form__checkbox + .form__checkbox__label:before,
+.new .admin-recharge.form__search .form__checkbox + .form__checkbox__label:before,
+.new .admin-recharge.form__search__no-results .form__checkbox + .form__checkbox__label:before {
   border-color: #53BAD3;
 }
 /* line 70, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group .form__radio:checked + .form__radio__label:before,
+.new .admin-recharge.form__group .form__radio:checked + .form__radio__label:before, .new .admin-recharge.form__search .form__radio:checked + .form__radio__label:before, .new .admin-recharge.form__search__no-results .form__radio:checked + .form__radio__label:before,
 .new .admin-recharge.form__group .form__radio:checked + .form__checkbox__label:before,
+.new .admin-recharge.form__search .form__radio:checked + .form__checkbox__label:before,
+.new .admin-recharge.form__search__no-results .form__radio:checked + .form__checkbox__label:before,
 .new .admin-recharge.form__group .form__checkbox:checked + .form__radio__label:before,
-.new .admin-recharge.form__group .form__checkbox:checked + .form__checkbox__label:before {
+.new .admin-recharge.form__search .form__checkbox:checked + .form__radio__label:before,
+.new .admin-recharge.form__search__no-results .form__checkbox:checked + .form__radio__label:before,
+.new .admin-recharge.form__group .form__checkbox:checked + .form__checkbox__label:before,
+.new .admin-recharge.form__search .form__checkbox:checked + .form__checkbox__label:before,
+.new .admin-recharge.form__search__no-results .form__checkbox:checked + .form__checkbox__label:before {
   background-color: #53BAD3;
 }
 /* line 79, ../sass/components/_admin-utilities.scss */
@@ -5839,7 +6025,7 @@ h1 + .setup-header__description,
 .new .rc_modal__content h1, .new .rc_modal__content .h1,
 .new .rc_modal__content h2, .new .rc_modal__content .h2,
 .new .rc_modal__content h3, .new .rc_modal__content .h3,
-.new .rc_modal__content h4, .new .rc_modal__content .h4,
+.new .rc_modal__content h4, .new .rc_modal__content .h4, .new .rc_modal__content .form__search__no-results,
 .new .rc_modal__content h5, .new .rc_modal__content .h5 {
   color: #424242;
 }

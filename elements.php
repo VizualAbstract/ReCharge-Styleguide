@@ -42,7 +42,7 @@
 
 <h2 class="rc_sg__pattern_title" id="inputs-radio">Inputs: Radio</h2>
 <div class="rc_sg__example">
-<?php include('_elemenets/inputs-radio.php'); ?>
+<?php include('_elements/inputs-radio.php'); ?>
 </div><!-- .example -->
 
 <h2 class="rc_sg__pattern_title" id="inputs-checkbox">Inputs: Checkbox</h2>
@@ -55,6 +55,16 @@
 <?php include('_elements/inputs-select.php'); ?>
 </div><!-- .example -->
 
+<h2 class="rc_sg__pattern_title" id="inputs-color">Inputs: Numbers</h2>
+<div class="rc_sg__description">
+	<p>There are two types of number inputs. The deafult input, <code>type="number"</code>, coupled with the <code>.form__number</code> will allow for numerical entry.</p>
+	<p>A <code>select</code> element with the class <code>.form__number</code> will show a dropdown box, with a defined options.</p>
+</div><!-- .rc_sg__description -->
+<div class="rc_sg__example">
+<label>Number input</label>
+<?php include('_elements/inputs-number.php'); ?>
+</div><!-- .example -->
+
 <h2 class="rc_sg__pattern_title" id="inputs-color">Inputs: Color</h2>
 <p>As with all inputs, each color input requires a unique and relevant ID and name attribute.</p>
 <div class="rc_sg__example">
@@ -64,6 +74,9 @@
 <hr>
 
 <h2 class="rc_sg__pattern_title" id="form-groups">Form: Groups</h2>
+<div class="rc_sg__description">
+	<p>Label to Input groups are wrapped in a form group to provide even spacing and better control over form elements.</p>
+</div><!-- .rc_sg__description -->
 <div class="rc_sg__example">
 <?php include('_elements/form-groups.php'); ?>
 </div><!-- .example -->
@@ -79,6 +92,9 @@
 </div><!-- .example -->
 
 <h2 class="rc_sg__pattern_title" id="form-actions">Form: Actions</h2>
+<div class="rc_sg__description">
+	<p>Display buttons using flexbox, so they're evenly spaced and full-width.</p>
+</div><!-- .rc_sg__description -->
 <div class="rc_sg__example">
 <?php include('_elements/form-actions.php'); ?>
 </div><!-- .example -->
@@ -126,9 +142,9 @@
 <div class="rc_sg__description">
 	<p>Tables are the second most common element on ReCharge behind forms.</p>
 </div><!-- .description -->
-<div class="example" style="overflow: hidden;">
+<div class="rc_sg__example overflow-fix">
 <?php include('_elements/tables.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="tables-responsive">Tables: Responsive</h2>
 <div class="rc_sg__description">

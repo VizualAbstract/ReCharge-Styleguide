@@ -11,7 +11,7 @@
 </div><!-- .example -->
 
 <h2 class="rc_sg__pattern_title" id="fonts">Fonts</h2>
-<div class="rc_sg__example">
+<div class="rc_sg__example overflow-fix">
 <?php include('_style/fonts.php'); ?>
 </div><!-- .example -->
 

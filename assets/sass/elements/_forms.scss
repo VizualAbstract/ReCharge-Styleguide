@@ -36,6 +36,11 @@
 	8-16-16:
 		- Required no longer has a red-border
 		- Invalid is now !important, so admin-styles are overwritten
+	8-24-16:
+		- Add number inputs. They are set to display: inline-block
+		- Expand dropkick select so it can be used for input__number
+		- Expand search input group to add an active version
+		- Add a form__search__no-results element
 */
 
 .form {
@@ -218,6 +223,7 @@ p.form__placeholder {
 	margin: 4px 0;
 }
 
+input[type="number"].form__number,
 input[type="text"].form__input,
 input[type="search"].form__input,
 input[type="password"].form__input,
@@ -253,6 +259,7 @@ textarea.form__input {
 
 textarea.form__input + textarea.form__input,
 input.form__color__picker + input.form__color,
+input[type="number"].form__number + input[type="number"].form__number,
 input[type="text"].form__input + input[type="text"].form__input,
 input[type="email"].form__input + input[type="email"].form__input,
 input[type="password"].form__input + input[type="password"].form__input {
@@ -546,6 +553,7 @@ input[type="checkbox"],
 	display: table;
 	border-collapse: separate;
 	box-sizing: border-box;
+	.form__number,
 	.form__input,
 	&__addon {
 		display: table-cell;
@@ -566,6 +574,7 @@ input[type="checkbox"],
 
 .input-group--full {
 	width: 100%;
+	.form__number,
 	.form__input {
 		width: 100%;
 	}
@@ -575,11 +584,43 @@ input[type="checkbox"],
 }
 
 .form__search {
+	@extend .form__group;
 	.input-group__addon {
 		padding-left: 0;
 		.button {
 			min-width: 40px;
 		}
+	}
+	#submit_search {
+		font-size: 0;
+		&:before {
+			font-size: $font-size-base;
+			font-family: fontawesome;
+			content: "\f002";
+			color: $button-primary-color;
+		}
+	}
+	&--active {
+		input[type="text"].form__input {
+			border-color: $button-primary-background;
+		}
+
+		#submit_search {
+			background-color: $button-primary-background;
+			font-size: 0;
+			&:before {
+				content: "\f00d";
+			}
+			&:hover {
+				background-color: $button-primary-hover-background;
+			}
+		}
+	}
+	&__no-results {
+		@extend .h4;
+		@extend .form__group;
+		color: $brand;
+		text-align: center;
 	}
 }
 
@@ -633,12 +674,32 @@ input[type="checkbox"],
 	}
 }
 
-/* Color input */
+// Color input
 input[type="text"].form__color {
 	@extend .form__input;
 
 	display: inline;
 	width: 100px;
+}
+
+// Number input, using the default input
+input[type="text"].form__number,
+input[type="number"].form__number {
+	@extend .form__input;
+	width: auto;
+	min-width: 10px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+// Number input, using the dropkick select
+div.form__number {
+	@extend .form__select;
+	@extend .clearfix;
+
+	width: auto;
+	display: inline-block;
+	margin-right: 5px;
 }
 
 input[type="color"].form__color {
