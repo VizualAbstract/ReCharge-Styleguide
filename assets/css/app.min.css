@@ -3263,9 +3263,9 @@ h1 + .setup-header__description,
   	Author: Corey M. Capetillo
   */
   /* 
-  	Element: Action List
+  	Element: Toggle List
   	Version 1.0
-  	Date: 8-15-2016
+  	Date: 5-5-2016
   	Author: Corey M. Capetillo
   */
   /* 
@@ -4030,57 +4030,88 @@ h1 + .setup-header__description,
 }
 /* line 7, ../sass/components/_toggle-list.scss */
 .new .toggle-list {
+  display: table;
   width: 100%;
 }
-/* line 9, ../sass/components/_toggle-list.scss */
+/* line 10, ../sass/components/_toggle-list.scss */
 .new .toggle-list__item {
+  display: table-row;
   width: 100%;
   text-align: left;
-  list-style: none;
 }
-/* line 13, ../sass/components/_toggle-list.scss */
+/* line 14, ../sass/components/_toggle-list.scss */
 .new .toggle-list__item__content, .new .toggle-list__item__action {
+  display: table-cell;
+  height: 75px;
   vertical-align: middle;
+  border-bottom: 1px solid #EEE;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-/* line 17, ../sass/components/_toggle-list.scss */
+/* line 23, ../sass/components/_toggle-list.scss */
 .new .toggle-list__item__content {
   text-align: left;
 }
-/* line 19, ../sass/components/_toggle-list.scss */
+/* line 25, ../sass/components/_toggle-list.scss */
 .new .toggle-list__item__content > * {
   vertical-align: middle;
 }
-/* line 24, ../sass/components/_toggle-list.scss */
-.new .toggle-list__item:last-child .action-list__item__content,
-.new .toggle-list__item:last-child .action-list__item__action {
+/* line 29, ../sass/components/_toggle-list.scss */
+.new .toggle-list__item__action {
+  text-align: right;
+  padding-left: 15px;
+}
+/* line 34, ../sass/components/_toggle-list.scss */
+.new .toggle-list__item:last-child .toggle-list__item__content,
+.new .toggle-list__item:last-child .toggle-list__item__action {
   border-bottom-width: 0 !important;
 }
-@media screen and (max-width: 767px) {
-  /* line 32, ../sass/components/_toggle-list.scss */
-  .new .toggle-list__item__action {
-    padding-top: 15px;
-    margin-bottom: 15px;
-  }
+/* line 40, ../sass/components/_toggle-list.scss */
+.new .toggle-list .switch {
+  background-color: #4DD6B7;
 }
-@media screen and (min-width: 768px) {
-  /* line 7, ../sass/components/_toggle-list.scss */
-  .new .toggle-list {
-    display: table;
-  }
-  /* line 40, ../sass/components/_toggle-list.scss */
-  .new .toggle-list__item {
-    display: table-row;
-  }
-  /* line 42, ../sass/components/_toggle-list.scss */
-  .new .toggle-list__item__content, .new .toggle-list__item__action {
-    height: 75px;
-    display: table-cell;
-  }
-  /* line 47, ../sass/components/_toggle-list.scss */
-  .new .toggle-list__item__action {
-    text-align: right;
-    padding-left: 15px;
-  }
+/* line 42, ../sass/components/_toggle-list.scss */
+.new .toggle-list .switch__overlay {
+  background: #8E8F8E;
+}
+/* line 46, ../sass/components/_toggle-list.scss */
+.new .toggle-list__item.disabled {
+  background-color: #EEEEEE;
+  color: #8E8F8E;
+}
+/* line 50, ../sass/components/_toggle-list.scss */
+.new .toggle-list__item.disabled .toggle-list__item__content a {
+  color: #8E8F8E;
+}
+/* line 53, ../sass/components/_toggle-list.scss */
+.new .toggle-list__item.disabled .toggle-list__item__content label {
+  font-weight: normal;
+  font-family: 'raleway-semibold';
+  display: inline-block;
+}
+/* line 59, ../sass/components/_toggle-list.scss */
+.new .toggle-list__item.disabled .switch {
+  background-color: #FFFFFF;
+}
+/* line 65, ../sass/components/_toggle-list.scss */
+.new--small {
+  min-width: 10px;
+  width: 100%;
+  max-width: 40px;
+  line-height: 20px;
+  height: 20px;
+  border-radius: 10px;
+  font-size: 0;
+}
+/* line 73, ../sass/components/_toggle-list.scss */
+.new--small .switch__left,
+.new--small .switch__right {
+  font-size: 0;
+}
+/* line 77, ../sass/components/_toggle-list.scss */
+.new--small .switch__overlay {
+  height: 20px;
+  border-radius: 10px;
 }
 /* line 13, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge,

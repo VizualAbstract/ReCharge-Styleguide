@@ -64,6 +64,60 @@
 <?php include('_components/action-list.php'); ?>
 </div><!-- .example -->
 
+<h2 class="rc_sg__pattern_title" id="action-lists">Action Lists</h2>
+<div class="rc_sg__example">
+<h4>Basic example</h4>
+<ul class="toggle-list">
+	<li class="toggle-list__item">
+		<div class="toggle-list__item__content">
+			<a href="#">Subscription Activation</a>
+			<p>Sent to customers when they first sign up for a subscription</p>
+		</div><!-- .toggle-list__item__content -->
+		<div class="toggle-list__item__action">
+			<label class="switch switch--small">
+				<div class="switch__inner">
+					<input class="switch__input" checked type="checkbox">
+					<span class="switch__overlay"></span>
+					<span class="switch__left"></span>
+					<span class="switch__right"></span>
+				</div><!-- .switch__inner -->
+			</label><!-- .switch -->
+		</div><!-- .toggle-list__item__action -->
+	</li><!-- .toggle-list__item -->
+	<li class="toggle-list__item disabled">
+		<div class="toggle-list__item__content">
+			<a href="#">Subscription Activation</a> <label>Disabled</label>
+			<p>Sent to customers when they first sign up for a subscription</p>
+		</div><!-- .toggle-list__item__content -->
+		<div class="toggle-list__item__action">
+			<label class="switch switch--small">
+				<div class="switch__inner">
+					<input class="switch__input" type="checkbox">
+					<span class="switch__overlay"></span>
+					<span class="switch__left"></span>
+					<span class="switch__right"></span>
+				</div><!-- .switch__inner -->
+			</label><!-- .switch -->
+		</div><!-- .toggle-list__item__action -->
+	</li><!-- .toggle-list__item -->
+	<li class="toggle-list__item">
+		<div class="toggle-list__item__content">
+			<a href="#">Subscription Activation</a>
+			<p>Sent to customers when they first sign up for a subscription</p>
+		</div><!-- .toggle-list__item__content -->
+		<div class="toggle-list__item__action">
+			<label class="switch switch--small">
+				<div class="switch__inner">
+					<input class="switch__input" checked type="checkbox">
+					<span class="switch__overlay"></span>
+					<span class="switch__left"></span>
+					<span class="switch__right"></span>
+				</div><!-- .switch__inner -->
+			</label><!-- .switch -->
+		</div><!-- .toggle-list__item__action -->
+	</li><!-- .toggle-list__item -->
+</ul><!-- .toggle-list -->
+</div><!-- .example -->
 <?php /* <h2 class="rc_sg__pattern_title" id="toggle-lists">Toggle Lists</h2>
 <div class="rc_sg__description">
 	<p><strong>Toggle Lists</strong> have a more specific use case than <a href="#action-lists">Action Lists</a>, which are a more general component. Toggle lists will lose their table-layout structure on mobile.</p>
