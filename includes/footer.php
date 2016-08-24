@@ -47,7 +47,7 @@
 		<script>
 			$(function(){
 				// Initialize dropkick.js on select fields
-				$(".form__select").dropkick({
+				$("select.form__select, select.form__number").dropkick({
 					mobile: true
 				});
 			});
