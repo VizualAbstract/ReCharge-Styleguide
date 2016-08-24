@@ -8,9 +8,12 @@
 		- Set switch buttons to box-sizing: border-box;
 		- Add padding on either end as 5px;
 		- Set font-weight to medium
+	8-24-16:
+		- Add a smaller switch, which should have no text
 */
 $switch-height: 34px;
 $switch-large-height: 44px;
+$switch-small-height: 20px;
 
 .switch {
 	font-family: 'raleway-medium', arial, sans-serif;
@@ -53,6 +56,23 @@ $switch-large-height: 44px;
 			+ .switch__overlay + .switch__left + .switch__right {
 				color: $white;
 			}
+		}
+	}
+	&--small {
+		min-width: 10px;
+		width: 100%;
+		max-width: $switch-small-height * 2;
+		line-height: $switch-small-height;
+		height: $switch-small-height;
+		border-radius: $switch-small-height / 2;
+		font-size: 0;
+		.switch__left,
+		.switch__right {
+			font-size: 0;
+		}
+		.switch__overlay {
+			height: $switch-small-height;
+			border-radius: $switch-small-height / 2;
 		}
 	}
 }

@@ -3204,6 +3204,8 @@ h1 + .setup-header__description,
   		- Set switch buttons to box-sizing: border-box;
   		- Add padding on either end as 5px;
   		- Set font-weight to medium
+  	8-24-16:
+  		- Add a smaller switch, which should have no text
   */
   /* 
   	Element: Toggle
@@ -3389,7 +3391,7 @@ h1 + .setup-header__description,
   color: inherit;
   padding: 0 18px;
 }
-/* line 15, ../sass/components/_switches.scss */
+/* line 18, ../sass/components/_switches.scss */
 .new .switch {
   font-family: 'raleway-medium', arial, sans-serif;
   font-size: 14px;
@@ -3403,7 +3405,7 @@ h1 + .setup-header__description,
   position: relative;
   vertical-align: middle;
 }
-/* line 27, ../sass/components/_switches.scss */
+/* line 30, ../sass/components/_switches.scss */
 .new .switch--large {
   min-width: 300px;
   width: 100%;
@@ -3413,38 +3415,58 @@ h1 + .setup-header__description,
   border-radius: 22px;
   font-size: 16px;
 }
-/* line 35, ../sass/components/_switches.scss */
+/* line 38, ../sass/components/_switches.scss */
 .new .switch--large .switch__overlay {
   height: 44px;
   border-radius: 22px;
 }
-/* line 39, ../sass/components/_switches.scss */
+/* line 42, ../sass/components/_switches.scss */
 .new .switch--large .switch__left,
 .new .switch--large .switch__right {
   -webkit-transition: color .3s;
   transition: color .3s;
 }
-/* line 43, ../sass/components/_switches.scss */
+/* line 46, ../sass/components/_switches.scss */
 .new .switch--large .switch__left {
   color: #FFFFFF;
 }
-/* line 46, ../sass/components/_switches.scss */
+/* line 49, ../sass/components/_switches.scss */
 .new .switch--large .switch__right {
   color: #000000;
 }
-/* line 50, ../sass/components/_switches.scss */
+/* line 53, ../sass/components/_switches.scss */
 .new .switch--large .switch__input:checked + .switch__overlay + .switch__left {
   color: #000000;
 }
-/* line 53, ../sass/components/_switches.scss */
+/* line 56, ../sass/components/_switches.scss */
 .new .switch--large .switch__input:checked + .switch__overlay + .switch__left + .switch__right {
   color: #FFFFFF;
 }
-/* line 59, ../sass/components/_switches.scss */
+/* line 61, ../sass/components/_switches.scss */
+.new .switch--small {
+  min-width: 10px;
+  width: 100%;
+  max-width: 40px;
+  line-height: 20px;
+  height: 20px;
+  border-radius: 10px;
+  font-size: 0;
+}
+/* line 69, ../sass/components/_switches.scss */
+.new .switch--small .switch__left,
+.new .switch--small .switch__right {
+  font-size: 0;
+}
+/* line 73, ../sass/components/_switches.scss */
+.new .switch--small .switch__overlay {
+  height: 20px;
+  border-radius: 10px;
+}
+/* line 79, ../sass/components/_switches.scss */
 .new .switch__input {
   display: none;
 }
-/* line 62, ../sass/components/_switches.scss */
+/* line 82, ../sass/components/_switches.scss */
 .new .switch__overlay {
   height: 34px;
   width: 50%;
@@ -3458,7 +3480,7 @@ h1 + .setup-header__description,
   background: #4DD6B7;
   border-radius: 17px;
 }
-/* line 74, ../sass/components/_switches.scss */
+/* line 94, ../sass/components/_switches.scss */
 .new .switch__left,
 .new .switch__right {
   box-sizing: border-box;
@@ -3470,15 +3492,15 @@ h1 + .setup-header__description,
   padding-left: 17px;
   padding-right: 17px;
 }
-/* line 85, ../sass/components/_switches.scss */
+/* line 105, ../sass/components/_switches.scss */
 .new .switch__left {
   float: left;
 }
-/* line 88, ../sass/components/_switches.scss */
+/* line 108, ../sass/components/_switches.scss */
 .new .switch__right {
   float: right;
 }
-/* line 91, ../sass/components/_switches.scss */
+/* line 111, ../sass/components/_switches.scss */
 .new .switch--checked .switch__input + .switch__overlay,
 .new .switch__input:checked + .switch__overlay {
   left: 50%;
