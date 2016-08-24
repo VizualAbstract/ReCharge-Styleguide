@@ -64,9 +64,12 @@
 <?php include('_components/action-list.php'); ?>
 </div><!-- .example -->
 
-<h2 class="rc_sg__pattern_title" id="action-lists">Action Lists</h2>
+<h2 class="rc_sg__pattern_title" id="action-list">Toggle List</h2>
+<div class="rc_sg__description">
+	<p>Toggle lists use a combination of HTML, CSS and JavaScript. Adding the class <code>.disable</code> to the parent list item will change the background color of the switch, the list item and the link color.</p>
+	<p>Disabling the switch will trigger the <code>.disable</code> class.</p>
+</div><!-- .rc_sg__description -->
 <div class="rc_sg__example">
-<h4>Basic example</h4>
 <ul class="toggle-list">
 	<li class="toggle-list__item">
 		<div class="toggle-list__item__content">
