@@ -3,6 +3,8 @@
 	Version 1.0
 	Date: 5-12-2016
 	Author: Corey M. Capetillo
+	8-24-16:
+		- Add a fix for the font-size and color for the footer
 */
 .footer {
 	background-color: #424242;
@@ -10,6 +12,8 @@
 	line-height: $footer-height;
 	min-height: $footer-height;
 	border-width: 0;
+	font-size: $font-size-small;
+	color: $white;
 	text-align: center;
 	@media screen and (max-width: $screen-xs-max) {
     	padding-top: 5px;
@@ -26,7 +30,6 @@
 			height: $footer-height;
 			line-height: $footer-height;
 			color: $white;
-			font-size: 12px;
 			&:hover,
 			&:focus {
 				color: $white;
@@ -35,6 +38,11 @@
 				line-height: 2em;
 				height: auto;
 			}
+		}
+	}
+	.list--inline {
+		li {
+			font-size: $font-size-small; // Inline approach sets the parent font to 0 and the line-items to the base font. This reduces the font for the footer, since it uses a smaller font size than the base
 		}
 	}
 }

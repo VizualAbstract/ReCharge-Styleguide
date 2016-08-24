@@ -3062,6 +3062,19 @@ h1 + .setup-header__description,
   		- Set font-weight to medium
   */
   /* 
+  	Element: Toggle
+  	Version 1.0
+  	Date: 8-22-2016
+  	Author: Corey M. Capetillo
+  	8-15-16:
+  		- Make switches inline-block;
+  		- Set switch buttons to box-sizing: border-box;
+  		- Add padding on either end as 5px;
+  		- Set font-weight to medium
+  	8-22-16:
+  		- Create a toggle
+  */
+  /* 
   	Components: Info Bars
   	Version 1.0
   	Date: 6-26-2016
@@ -3232,7 +3245,7 @@ h1 + .setup-header__description,
   color: inherit;
   padding: 0 18px;
 }
-/* line 12, ../sass/components/_switches.scss */
+/* line 15, ../sass/components/_switches.scss */
 .new .switch {
   font-family: 'raleway-medium', arial, sans-serif;
   font-size: 14px;
@@ -3244,8 +3257,9 @@ h1 + .setup-header__description,
   line-height: 34px;
   border-radius: 17px;
   position: relative;
+  vertical-align: middle;
 }
-/* line 23, ../sass/components/_switches.scss */
+/* line 27, ../sass/components/_switches.scss */
 .new .switch--large {
   min-width: 300px;
   width: 100%;
@@ -3255,38 +3269,38 @@ h1 + .setup-header__description,
   border-radius: 22px;
   font-size: 16px;
 }
-/* line 31, ../sass/components/_switches.scss */
+/* line 35, ../sass/components/_switches.scss */
 .new .switch--large .switch__overlay {
   height: 44px;
   border-radius: 22px;
 }
-/* line 35, ../sass/components/_switches.scss */
+/* line 39, ../sass/components/_switches.scss */
 .new .switch--large .switch__left,
 .new .switch--large .switch__right {
   -webkit-transition: color .3s;
   transition: color .3s;
 }
-/* line 39, ../sass/components/_switches.scss */
+/* line 43, ../sass/components/_switches.scss */
 .new .switch--large .switch__left {
   color: #FFFFFF;
 }
-/* line 42, ../sass/components/_switches.scss */
+/* line 46, ../sass/components/_switches.scss */
 .new .switch--large .switch__right {
   color: #000000;
 }
-/* line 46, ../sass/components/_switches.scss */
+/* line 50, ../sass/components/_switches.scss */
 .new .switch--large .switch__input:checked + .switch__overlay + .switch__left {
   color: #000000;
 }
-/* line 49, ../sass/components/_switches.scss */
+/* line 53, ../sass/components/_switches.scss */
 .new .switch--large .switch__input:checked + .switch__overlay + .switch__left + .switch__right {
   color: #FFFFFF;
 }
-/* line 55, ../sass/components/_switches.scss */
+/* line 59, ../sass/components/_switches.scss */
 .new .switch__input {
   display: none;
 }
-/* line 58, ../sass/components/_switches.scss */
+/* line 62, ../sass/components/_switches.scss */
 .new .switch__overlay {
   height: 34px;
   width: 50%;
@@ -3300,7 +3314,7 @@ h1 + .setup-header__description,
   background: #4DD6B7;
   border-radius: 17px;
 }
-/* line 70, ../sass/components/_switches.scss */
+/* line 74, ../sass/components/_switches.scss */
 .new .switch__left,
 .new .switch__right {
   box-sizing: border-box;
@@ -3309,20 +3323,133 @@ h1 + .setup-header__description,
   text-align: center;
   position: relative;
   z-index: 20;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 17px;
+  padding-right: 17px;
 }
-/* line 81, ../sass/components/_switches.scss */
+/* line 85, ../sass/components/_switches.scss */
 .new .switch__left {
   float: left;
 }
-/* line 84, ../sass/components/_switches.scss */
+/* line 88, ../sass/components/_switches.scss */
 .new .switch__right {
   float: right;
 }
-/* line 87, ../sass/components/_switches.scss */
+/* line 91, ../sass/components/_switches.scss */
 .new .switch--checked .switch__input + .switch__overlay,
 .new .switch__input:checked + .switch__overlay {
+  left: 50%;
+  right: 50%;
+}
+/* line 19, ../sass/components/_toggle.scss */
+.new .toggle {
+  font-family: 'raleway-medium', arial, sans-serif;
+  font-size: 14px;
+  background-color: #EEEEEE;
+  color: #424242;
+  display: inline-block;
+  cursor: pointer;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 10px;
+  position: relative;
+  vertical-align: middle;
+}
+/* line 31, ../sass/components/_toggle.scss */
+.new .toggle--large {
+  min-width: 300px;
+  width: 100%;
+  max-width: 500px;
+  line-height: 30px;
+  height: 30px;
+  border-radius: 15px;
+  font-size: 16px;
+}
+/* line 39, ../sass/components/_toggle.scss */
+.new .toggle--large .toggle__overlay {
+  height: 30px;
+  border-radius: 15px;
+}
+/* line 43, ../sass/components/_toggle.scss */
+.new .toggle--large .toggle__left,
+.new .toggle--large .toggle__right {
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+/* line 47, ../sass/components/_toggle.scss */
+.new .toggle--large .toggle__left {
+  color: #FFFFFF;
+}
+/* line 50, ../sass/components/_toggle.scss */
+.new .toggle--large .toggle__right {
+  color: #000000;
+}
+/* line 54, ../sass/components/_toggle.scss */
+.new .toggle--large .toggle__input:checked + .toggle__overlay + .toggle__left {
+  color: #000000;
+}
+/* line 57, ../sass/components/_toggle.scss */
+.new .toggle--large .toggle__input:checked + .toggle__overlay + .toggle__left + .toggle__right {
+  color: #FFFFFF;
+}
+/* line 66, ../sass/components/_toggle.scss */
+.new .toggle__input + .toggle__overlay + .toggle__left:before {
+  content: "Disabled";
+  display: inline-block;
+  position: absolute;
+  right: 100%;
+  padding-right: 12px;
+  color: #8E8F8E;
+  font-family: "raleway-semibold", sans-serif;
+}
+/* line 79, ../sass/components/_toggle.scss */
+.new .toggle__input:checked + .toggle__overlay {
+  background-color: #4DD6B7;
+}
+/* line 82, ../sass/components/_toggle.scss */
+.new .toggle__input:checked + .toggle__overlay + .toggle__left:before {
+  content: "Enabled";
+}
+/* line 89, ../sass/components/_toggle.scss */
+.new .toggle__input {
+  display: none;
+}
+/* line 93, ../sass/components/_toggle.scss */
+.new .toggle__overlay {
+  height: 20px;
+  width: 50%;
+  position: absolute;
+  z-index: 10;
+  left: 0%;
+  right: 50%;
+  display: block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  background: #8E8F8E;
+  border-radius: 10px;
+}
+/* line 105, ../sass/components/_toggle.scss */
+.new .toggle__left,
+.new .toggle__right {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 20;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* line 116, ../sass/components/_toggle.scss */
+.new .toggle__left {
+  float: left;
+}
+/* line 119, ../sass/components/_toggle.scss */
+.new .toggle__right {
+  float: right;
+}
+/* line 122, ../sass/components/_toggle.scss */
+.new .toggle--checked .toggle__input + .toggle__overlay,
+.new .toggle__input:checked + .toggle__overlay {
   left: 50%;
   right: 50%;
 }
@@ -3357,24 +3484,23 @@ h1 + .setup-header__description,
 /* line 36, ../sass/components/_title-bar.scss */
 .new .info-bar__label, .new .info-bar__content {
   display: table-cell;
-  vertical-align: top;
 }
-/* line 41, ../sass/components/_title-bar.scss */
+/* line 40, ../sass/components/_title-bar.scss */
 .new .info-bar__label {
   text-align: left;
 }
-/* line 44, ../sass/components/_title-bar.scss */
+/* line 43, ../sass/components/_title-bar.scss */
 .new .info-bar__content {
   text-align: right;
   white-space: nowrap;
 }
-/* line 50, ../sass/components/_title-bar.scss */
+/* line 49, ../sass/components/_title-bar.scss */
 .new .title-bar {
   display: table;
   width: 100%;
   min-height: 40px;
 }
-/* line 54, ../sass/components/_title-bar.scss */
+/* line 53, ../sass/components/_title-bar.scss */
 .new .title-bar h1, .new .title-bar .h1,
 .new .title-bar h2, .new .title-bar .h2,
 .new .title-bar h3, .new .title-bar .h3,
@@ -3384,34 +3510,38 @@ h1 + .setup-header__description,
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 63, ../sass/components/_title-bar.scss */
+/* line 62, ../sass/components/_title-bar.scss */
 .new .title-bar__title, .new .title-bar__content {
   display: table-cell;
   vertical-align: top;
 }
-/* line 68, ../sass/components/_title-bar.scss */
+/* line 67, ../sass/components/_title-bar.scss */
 .new .title-bar__content {
   text-align: right;
   font-size: 16px;
   white-space: nowrap;
 }
-/* line 72, ../sass/components/_title-bar.scss */
+/* line 71, ../sass/components/_title-bar.scss */
 .new .title-bar__content .button + .button {
   margin-left: 9px;
 }
-/* line 79, ../sass/components/_title-bar.scss */
+/* line 74, ../sass/components/_title-bar.scss */
+.new .title-bar__content .switch {
+  vertical-align: middle;
+}
+/* line 81, ../sass/components/_title-bar.scss */
 .new .title-info {
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
   font-family: 'ralewayregular', arial, sans-serif;
 }
-/* line 85, ../sass/components/_title-bar.scss */
+/* line 87, ../sass/components/_title-bar.scss */
 .new .title-info a {
   text-decoration: underline;
 }
 @media screen and (max-width: 767px) {
-  /* line 88, ../sass/components/_title-bar.scss */
+  /* line 90, ../sass/components/_title-bar.scss */
   .new .title-info.pull-right, .new .title-info.pull-left {
     float: none !important;
     display: block;
@@ -3894,7 +4024,7 @@ h1 + .setup-header__description,
 	Layout
 	Structural elements dependant on each other to build out a page. Houses Components.
 */
-/* line 71, ../sass/app.scss */
+/* line 72, ../sass/app.scss */
 .new {
   /* Page: Signup Questions */
   /* 
@@ -3902,19 +4032,23 @@ h1 + .setup-header__description,
   	Version 1.0
   	Date: 5-12-2016
   	Author: Corey M. Capetillo
+  	8-24-16:
+  		- Add a fix for the font-size and color for the footer
   */
   /* 
   	Components: Navbars
   	Version 1.1
   	Date: 5-12-2016
   	Author: Corey M. Capetillo
-  	5-5-2016
+  	5-5-2016:
   		- Create file
-  	5-12-2016
+  	5-12-2016:
   		- Tweak pixel alignments for Devon. Adjust responsive breakpoints to maintain status-quo link structure
-  	5-22-2016
+  	5-22-2016:
   		- Add forced --mobile flag for setup navbar
   		- Adjust background and link colors for dropdown menus so the contrast follows the same pattern as the standard navbar
+  	8-24-2016:
+  		- Removed 'top' from switch on desktop view. It conflicted with vertical-align: middle
   */
   /*
   	8-10-16:
@@ -5069,51 +5203,56 @@ h1 + .setup-header__description,
 .new #install_recharge {
   margin-bottom: 21px;
 }
-/* line 7, ../sass/layouts/_footer.scss */
+/* line 9, ../sass/layouts/_footer.scss */
 .new .footer {
   background-color: #424242;
   margin-top: 0;
   line-height: 50px;
   min-height: 50px;
   border-width: 0;
+  font-size: 14px;
+  color: #FFFFFF;
   text-align: center;
 }
 @media screen and (max-width: 767px) {
-  /* line 7, ../sass/layouts/_footer.scss */
+  /* line 9, ../sass/layouts/_footer.scss */
   .new .footer {
     padding-top: 5px;
   }
 }
-/* line 17, ../sass/layouts/_footer.scss */
+/* line 21, ../sass/layouts/_footer.scss */
 .new .footer__container {
   line-height: 0;
 }
-/* line 20, ../sass/layouts/_footer.scss */
+/* line 24, ../sass/layouts/_footer.scss */
 .new .footer__links {
   margin: 0;
   padding: 0;
 }
-/* line 23, ../sass/layouts/_footer.scss */
+/* line 27, ../sass/layouts/_footer.scss */
 .new .footer__links a {
   display: block;
   padding: 0 10px;
   height: 50px;
   line-height: 50px;
   color: #FFFFFF;
-  font-size: 12px;
 }
-/* line 30, ../sass/layouts/_footer.scss */
+/* line 33, ../sass/layouts/_footer.scss */
 .new .footer__links a:hover, .new .footer__links a:focus {
   color: #FFFFFF;
 }
 @media screen and (max-width: 767px) {
-  /* line 23, ../sass/layouts/_footer.scss */
+  /* line 27, ../sass/layouts/_footer.scss */
   .new .footer__links a {
     line-height: 2em;
     height: auto;
   }
 }
-/* line 93, ../sass/layouts/_navbar.scss */
+/* line 44, ../sass/layouts/_footer.scss */
+.new .footer .list--inline li {
+  font-size: 14px;
+}
+/* line 95, ../sass/layouts/_navbar.scss */
 .new .navbar {
   position: relative;
   min-height: 60px;
@@ -5123,13 +5262,13 @@ h1 + .setup-header__description,
   background-color: #424242;
   color: #FFFFFF;
 }
-/* line 102, ../sass/layouts/_navbar.scss */
+/* line 104, ../sass/layouts/_navbar.scss */
 .new .navbar__container {
   margin-left: auto;
   margin-right: auto;
 }
 @media (min-width: 768px) {
-  /* line 102, ../sass/layouts/_navbar.scss */
+  /* line 104, ../sass/layouts/_navbar.scss */
   .new .navbar__container {
     width: 740px;
     padding-left: 20px;
@@ -5137,18 +5276,18 @@ h1 + .setup-header__description,
   }
 }
 @media (min-width: 992px) {
-  /* line 102, ../sass/layouts/_navbar.scss */
+  /* line 104, ../sass/layouts/_navbar.scss */
   .new .navbar__container {
     width: 960px;
   }
 }
 @media (min-width: 1200px) {
-  /* line 102, ../sass/layouts/_navbar.scss */
+  /* line 104, ../sass/layouts/_navbar.scss */
   .new .navbar__container {
     width: 1160px;
   }
 }
-/* line 118, ../sass/layouts/_navbar.scss */
+/* line 120, ../sass/layouts/_navbar.scss */
 .new .navbar__links a,
 .new .navbar__links li > span {
   color: #FFFFFF;
@@ -5156,20 +5295,19 @@ h1 + .setup-header__description,
   line-height: 60px;
   display: block;
 }
-/* line 125, ../sass/layouts/_navbar.scss */
+/* line 127, ../sass/layouts/_navbar.scss */
 .new .navbar__links .fa {
   font-size: 25px;
   line-height: 1;
   position: relative;
   top: 4px;
 }
-/* line 133, ../sass/layouts/_navbar.scss */
+/* line 135, ../sass/layouts/_navbar.scss */
 .new .navbar .switch {
   position: relative;
-  top: 12px;
   margin: 0 8.5px 0 0;
 }
-/* line 140, ../sass/layouts/_navbar.scss */
+/* line 141, ../sass/layouts/_navbar.scss */
 .new .navbar__collapse.collapse {
   display: block;
   height: auto;
@@ -5185,72 +5323,72 @@ h1 + .setup-header__description,
   clear: both;
 }
 @media screen and (max-width: 915px) {
-  /* line 15, ../sass/layouts/_navbar.scss */
+  /* line 17, ../sass/layouts/_navbar.scss */
   .new .navbar .dropdown {
     clear: both;
   }
-  /* line 18, ../sass/layouts/_navbar.scss */
+  /* line 20, ../sass/layouts/_navbar.scss */
   .new .navbar .dropdown--open .dropdown__trigger {
     background-color: #000000;
   }
-  /* line 22, ../sass/layouts/_navbar.scss */
+  /* line 24, ../sass/layouts/_navbar.scss */
   .new .navbar .dropdown__trigger {
     height: 50px;
     border-top: 1px solid #8E8F8E;
   }
-  /* line 25, ../sass/layouts/_navbar.scss */
+  /* line 27, ../sass/layouts/_navbar.scss */
   .new .navbar .dropdown__trigger .fa {
     margin-right: 10px;
   }
-  /* line 28, ../sass/layouts/_navbar.scss */
+  /* line 30, ../sass/layouts/_navbar.scss */
   .new .navbar .dropdown__trigger::after {
     float: right;
     line-height: 49px;
     left: 0;
     top: 0;
   }
-  /* line 35, ../sass/layouts/_navbar.scss */
+  /* line 37, ../sass/layouts/_navbar.scss */
   .new .navbar .dropdown__menu {
     position: relative;
     width: 100%;
     display: none;
   }
-  /* line 41, ../sass/layouts/_navbar.scss */
+  /* line 43, ../sass/layouts/_navbar.scss */
   .new .navbar .navbar__collapse {
     width: 100%;
     overflow-x: visible;
   }
-  /* line 44, ../sass/layouts/_navbar.scss */
+  /* line 46, ../sass/layouts/_navbar.scss */
   .new .navbar .navbar__collapse .navbar__links {
     background-color: #676767;
     width: 100%;
   }
-  /* line 47, ../sass/layouts/_navbar.scss */
+  /* line 49, ../sass/layouts/_navbar.scss */
   .new .navbar .navbar__collapse .navbar__links > li {
     display: block;
   }
-  /* line 49, ../sass/layouts/_navbar.scss */
+  /* line 51, ../sass/layouts/_navbar.scss */
   .new .navbar .navbar__collapse .navbar__links > li > a,
   .new .navbar .navbar__collapse .navbar__links > li > span {
     height: 50px;
     line-height: 50px;
   }
-  /* line 55, ../sass/layouts/_navbar.scss */
+  /* line 57, ../sass/layouts/_navbar.scss */
   .new .navbar .navbar__collapse .navbar__links--left, .new .navbar .navbar__collapse .navbar__links--right {
     float: left;
   }
-  /* line 60, ../sass/layouts/_navbar.scss */
+  /* line 62, ../sass/layouts/_navbar.scss */
   .new .navbar .navbar__collapse.collapse {
     display: none;
     height: initial;
     overflow-x: visible;
   }
-  /* line 64, ../sass/layouts/_navbar.scss */
+  /* line 66, ../sass/layouts/_navbar.scss */
   .new .navbar .navbar__collapse.collapse.in {
     display: block;
     overflow-y: auto;
   }
-  /* line 69, ../sass/layouts/_navbar.scss */
+  /* line 71, ../sass/layouts/_navbar.scss */
   .new .navbar .navbar__collapse .navbar__return {
     border-left-width: 0;
     border-bottom: 1px solid #8E8F8E;
@@ -5261,13 +5399,13 @@ h1 + .setup-header__description,
   }
 }
 @media screen and (max-width: 915px) and (max-width: 915px) {
-  /* line 76, ../sass/layouts/_navbar.scss */
+  /* line 78, ../sass/layouts/_navbar.scss */
   .new .navbar .navbar__collapse .navbar__return--highlight {
     border-top-width: 0;
   }
 }
 @media screen and (max-width: 915px) {
-  /* line 83, ../sass/layouts/_navbar.scss */
+  /* line 85, ../sass/layouts/_navbar.scss */
   .new .navbar .switch {
     position: absolute;
     top: 12px;
@@ -5304,7 +5442,7 @@ h1 + .setup-header__description,
     display: none !important;
   }
 }
-/* line 154, ../sass/layouts/_navbar.scss */
+/* line 155, ../sass/layouts/_navbar.scss */
 .new .navbar__brand {
   float: left;
   font-size: 16px;
@@ -5323,13 +5461,13 @@ h1 + .setup-header__description,
   background-position: 50% 50%;
 }
 @media screen and (min-width: 355px) and (max-width: 915px) {
-  /* line 154, ../sass/layouts/_navbar.scss */
+  /* line 155, ../sass/layouts/_navbar.scss */
   .new .navbar__brand {
     background-image: url("../images/navbar__brand--mobile--white.svg");
     width: 140px;
   }
 }
-/* line 175, ../sass/layouts/_navbar.scss */
+/* line 176, ../sass/layouts/_navbar.scss */
 .new .navbar__toggle {
   display: none;
   position: relative;
@@ -5341,118 +5479,118 @@ h1 + .setup-header__description,
   width: 60px;
   cursor: pointer;
 }
-/* line 185, ../sass/layouts/_navbar.scss */
+/* line 186, ../sass/layouts/_navbar.scss */
 .new .navbar__toggle.collapsed {
   color: #FFFFFF;
 }
-/* line 188, ../sass/layouts/_navbar.scss */
+/* line 189, ../sass/layouts/_navbar.scss */
 .new .navbar__toggle, .new .navbar__toggle:hover, .new .navbar__toggle:focus {
   color: #4DD6B7;
 }
 @media screen and (max-width: 915px) {
-  /* line 175, ../sass/layouts/_navbar.scss */
+  /* line 176, ../sass/layouts/_navbar.scss */
   .new .navbar__toggle {
     display: block;
   }
 }
-/* line 198, ../sass/layouts/_navbar.scss */
+/* line 199, ../sass/layouts/_navbar.scss */
 .new .navbar__links {
   display: block;
   float: left;
 }
-/* line 201, ../sass/layouts/_navbar.scss */
+/* line 202, ../sass/layouts/_navbar.scss */
 .new .navbar__links--left {
   float: left;
 }
-/* line 204, ../sass/layouts/_navbar.scss */
+/* line 205, ../sass/layouts/_navbar.scss */
 .new .navbar__links--right {
   float: right;
 }
-/* line 207, ../sass/layouts/_navbar.scss */
+/* line 208, ../sass/layouts/_navbar.scss */
 .new .navbar__links li {
   font-size: 16px;
 }
-/* line 209, ../sass/layouts/_navbar.scss */
+/* line 210, ../sass/layouts/_navbar.scss */
 .new .navbar__links li > a,
 .new .navbar__links li > span {
   padding: 0 15px;
 }
-/* line 215, ../sass/layouts/_navbar.scss */
+/* line 216, ../sass/layouts/_navbar.scss */
 .new .navbar__links li.active > a,
 .new .navbar__links li.active > span, .new .navbar__links li:hover > a,
 .new .navbar__links li:hover > span {
   background-color: #000000;
 }
-/* line 223, ../sass/layouts/_navbar.scss */
+/* line 224, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile {
   max-width: 480px;
 }
-/* line 15, ../sass/layouts/_navbar.scss */
+/* line 17, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .dropdown {
   clear: both;
 }
-/* line 18, ../sass/layouts/_navbar.scss */
+/* line 20, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .dropdown--open .dropdown__trigger {
   background-color: #000000;
 }
-/* line 22, ../sass/layouts/_navbar.scss */
+/* line 24, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .dropdown__trigger {
   height: 50px;
   border-top: 1px solid #8E8F8E;
 }
-/* line 25, ../sass/layouts/_navbar.scss */
+/* line 27, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .dropdown__trigger .fa {
   margin-right: 10px;
 }
-/* line 28, ../sass/layouts/_navbar.scss */
+/* line 30, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .dropdown__trigger::after {
   float: right;
   line-height: 49px;
   left: 0;
   top: 0;
 }
-/* line 35, ../sass/layouts/_navbar.scss */
+/* line 37, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .dropdown__menu {
   position: relative;
   width: 100%;
   display: none;
 }
-/* line 41, ../sass/layouts/_navbar.scss */
+/* line 43, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .navbar__collapse {
   width: 100%;
   overflow-x: visible;
 }
-/* line 44, ../sass/layouts/_navbar.scss */
+/* line 46, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .navbar__collapse .navbar__links {
   background-color: #676767;
   width: 100%;
 }
-/* line 47, ../sass/layouts/_navbar.scss */
+/* line 49, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .navbar__collapse .navbar__links > li {
   display: block;
 }
-/* line 49, ../sass/layouts/_navbar.scss */
+/* line 51, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .navbar__collapse .navbar__links > li > a,
 .new .navbar--mobile .navbar__collapse .navbar__links > li > span {
   height: 50px;
   line-height: 50px;
 }
-/* line 55, ../sass/layouts/_navbar.scss */
+/* line 57, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .navbar__collapse .navbar__links--left, .new .navbar--mobile .navbar__collapse .navbar__links--right {
   float: left;
 }
-/* line 60, ../sass/layouts/_navbar.scss */
+/* line 62, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .navbar__collapse.collapse {
   display: none;
   height: initial;
   overflow-x: visible;
 }
-/* line 64, ../sass/layouts/_navbar.scss */
+/* line 66, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .navbar__collapse.collapse.in {
   display: block;
   overflow-y: auto;
 }
-/* line 69, ../sass/layouts/_navbar.scss */
+/* line 71, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .navbar__collapse .navbar__return {
   border-left-width: 0;
   border-bottom: 1px solid #8E8F8E;
@@ -5462,12 +5600,12 @@ h1 + .setup-header__description,
   text-align: left;
 }
 @media screen and (max-width: 915px) {
-  /* line 76, ../sass/layouts/_navbar.scss */
+  /* line 78, ../sass/layouts/_navbar.scss */
   .new .navbar--mobile .navbar__collapse .navbar__return--highlight {
     border-top-width: 0;
   }
 }
-/* line 83, ../sass/layouts/_navbar.scss */
+/* line 85, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .switch {
   position: absolute;
   top: 12px;
@@ -5503,38 +5641,38 @@ h1 + .setup-header__description,
 .new .navbar--mobile .hidden-xs {
   display: none !important;
 }
-/* line 226, ../sass/layouts/_navbar.scss */
+/* line 227, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .navbar__toggle {
   display: block !important;
 }
-/* line 229, ../sass/layouts/_navbar.scss */
+/* line 230, ../sass/layouts/_navbar.scss */
 .new .navbar--mobile .navbar__brand {
   background-image: url("../images/navbar__brand--mobile--white.svg");
   width: 140px;
 }
-/* line 235, ../sass/layouts/_navbar.scss */
+/* line 236, ../sass/layouts/_navbar.scss */
 .new .navbar--setup {
   background-color: #d6d6d6;
   color: #424242;
 }
-/* line 239, ../sass/layouts/_navbar.scss */
+/* line 240, ../sass/layouts/_navbar.scss */
 .new .navbar--setup li > a,
 .new .navbar--setup li > span {
   color: #424242;
   background-color: #d6d6d6;
 }
 @media screen and (max-width: 767px) {
-  /* line 239, ../sass/layouts/_navbar.scss */
+  /* line 240, ../sass/layouts/_navbar.scss */
   .new .navbar--setup li > a,
   .new .navbar--setup li > span {
     background-color: #bdbdbd;
   }
 }
-/* line 248, ../sass/layouts/_navbar.scss */
+/* line 249, ../sass/layouts/_navbar.scss */
 .new .navbar--setup .navbar__brand {
-  width: 60px !important;
+  width: 57px;
 }
-/* line 255, ../sass/layouts/_navbar.scss */
+/* line 256, ../sass/layouts/_navbar.scss */
 .new .navbar--setup .navbar__links li.active > a,
 .new .navbar--setup .navbar__links li.active > span,
 .new .navbar--setup .navbar__links li:hover > a,
@@ -5544,18 +5682,18 @@ h1 + .setup-header__description,
   color: #FFFFFF;
   background-color: #676767;
 }
-/* line 263, ../sass/layouts/_navbar.scss */
+/* line 264, ../sass/layouts/_navbar.scss */
 .new .navbar--setup .dropdown--open .dropdown__trigger {
   background-color: #676767 !important;
   color: #FFFFFF;
 }
-/* line 268, ../sass/layouts/_navbar.scss */
+/* line 269, ../sass/layouts/_navbar.scss */
 .new .navbar--setup .dropdown__menu li > a,
 .new .navbar--setup .dropdown__menu li > span {
   background-color: #bdbdbd;
   color: #424242;
 }
-/* line 276, ../sass/layouts/_navbar.scss */
+/* line 277, ../sass/layouts/_navbar.scss */
 .new .navbar--setup .dropdown__menu li.active > a,
 .new .navbar--setup .dropdown__menu li.active > span,
 .new .navbar--setup .dropdown__menu li:hover > a,
@@ -5565,33 +5703,33 @@ h1 + .setup-header__description,
   background-color: #676767;
   color: #FFFFFF;
 }
-/* line 284, ../sass/layouts/_navbar.scss */
+/* line 285, ../sass/layouts/_navbar.scss */
 .new .navbar--setup .navbar__toggle.collapsed {
   color: #424242;
 }
-/* line 287, ../sass/layouts/_navbar.scss */
+/* line 288, ../sass/layouts/_navbar.scss */
 .new .navbar--setup .navbar__brand {
   background-image: url("../images/navbar__brand--gray-darker.svg");
 }
-/* line 292, ../sass/layouts/_navbar.scss */
+/* line 293, ../sass/layouts/_navbar.scss */
 .new .navbar--setup.navbar--mobile li > a,
 .new .navbar--setup.navbar--mobile li > span {
   background-color: #bdbdbd;
 }
-/* line 300, ../sass/layouts/_navbar.scss */
+/* line 301, ../sass/layouts/_navbar.scss */
 .new .navbar__return {
   width: 200px;
   text-align: center;
   box-sizing: border-box;
   border-left: 1px solid #FFFFFF;
 }
-/* line 305, ../sass/layouts/_navbar.scss */
+/* line 306, ../sass/layouts/_navbar.scss */
 .new .navbar__return--highlight {
   border-top-width: 0;
   color: #424242 !important;
   background-color: #4DD6B7 !important;
 }
-/* line 309, ../sass/layouts/_navbar.scss */
+/* line 310, ../sass/layouts/_navbar.scss */
 .new .navbar__return--highlight:hover, .new .navbar__return--highlight:focus {
   background-color: #2bac8f !important;
 }
@@ -5625,7 +5763,7 @@ h1 + .setup-header__description,
 	Dynamic
 	Heavily dependant on javascript to deliver a specific effect.
 */
-/* line 85, ../sass/app.scss */
+/* line 86, ../sass/app.scss */
 .new {
   /* 
   	Dynamic: Modals
@@ -6039,7 +6177,7 @@ h1 + .setup-header__description,
 	Vendors
 	Impoted libraries, generally serving a singular purpose.
 */
-/* line 95, ../sass/app.scss */
+/* line 96, ../sass/app.scss */
 .new {
   /*!
    * Bootstrap v3.3.5 (http://getbootstrap.com)
@@ -7142,12 +7280,12 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 }
 
 /* Temporary fix until we no longer need to use .new {} */
-/* line 102, ../sass/app.scss */
+/* line 103, ../sass/app.scss */
 .rc_modal__open {
   overflow: hidden;
 }
 
-/* line 106, ../sass/app.scss */
+/* line 107, ../sass/app.scss */
 .rc_modal__backdrop {
   position: fixed;
   top: 0;
@@ -7157,14 +7295,14 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   z-index: 80;
   background-color: #000;
 }
-/* line 114, ../sass/app.scss */
+/* line 115, ../sass/app.scss */
 .rc_modal__backdrop.rc_fade {
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-/* line 119, ../sass/app.scss */
+/* line 120, ../sass/app.scss */
 .rc_modal__backdrop.rc_in, .rc_modal__backdrop.rc_fade.rc_in {
   opacity: 0.7;
   filter: alpha(opacity=70);

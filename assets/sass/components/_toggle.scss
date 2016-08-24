@@ -1,0 +1,126 @@
+/* 
+	Element: Toggle
+	Version 1.0
+	Date: 8-22-2016
+	Author: Corey M. Capetillo
+	8-15-16:
+		- Make switches inline-block;
+		- Set switch buttons to box-sizing: border-box;
+		- Add padding on either end as 5px;
+		- Set font-weight to medium
+	8-22-16:
+		- Create a toggle
+*/
+
+$toggle-height: 20px;
+$toggle-large-height: 30px;
+$toggle-on-background: $gray;
+
+.toggle {
+	font-family: 'raleway-medium', arial, sans-serif;
+	font-size: $font-size-small;
+	background-color: $gray-lighter;
+	color: $gray-darker;
+	display: inline-block;
+	cursor: pointer;
+	height: $toggle-height;
+	line-height: $toggle-height;
+	border-radius: $toggle-height / 2;
+	position: relative;
+	vertical-align: middle;
+	&--large {
+		min-width: 300px;
+		width: 100%;
+		max-width: 500px;
+		line-height: $toggle-large-height;
+		height: $toggle-large-height;
+		border-radius: $toggle-large-height / 2;
+		font-size: $font-size-base;
+		.toggle__overlay {
+			height: $toggle-large-height;
+			border-radius: $toggle-large-height / 2;
+		}
+		.toggle__left,
+		.toggle__right {
+			transition: color .3s;
+		}
+		.toggle__left {
+			color: $white;
+		}
+		.toggle__right {
+			color: $black;
+		}
+		.toggle__input:checked {
+			+ .toggle__overlay + .toggle__left {
+				color: $black;
+			}
+			+ .toggle__overlay + .toggle__left + .toggle__right {
+				color: $white;
+			}
+		}
+	}
+}
+
+.toggle__input {
+	+ .toggle__overlay + .toggle__left {
+		&:before {
+			content: "Disabled";
+			display: inline-block;
+			position: absolute;
+			right: 100%;
+			padding-right: 12px;
+			color: $gray;
+			font-family: "raleway-semibold", sans-serif;
+		}
+	}
+}
+
+.toggle__input:checked {
+	+ .toggle__overlay {
+		background-color: $color-primary;
+		+ .toggle__left {
+			&:before {
+				content: "Enabled";
+			}
+		}
+	}
+}
+
+.toggle__input {
+	display: none;
+}
+
+.toggle__overlay {
+	height: $toggle-height;
+	width: 50%;
+	position: absolute;
+	z-index: 10;
+	left: 0%;
+	right: 50%;
+	display: block;
+	transition: all .3s;
+	background: $toggle-on-background;
+	border-radius: $toggle-height / 2;
+}
+.toggle__left,
+.toggle__right {
+    box-sizing: border-box;
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+	position: relative;
+	z-index: 20;
+	padding-left: $toggle-height / 2;
+	padding-right: $toggle-height / 2;
+}
+.toggle__left {
+	float: left;
+}
+.toggle__right {
+	float: right;
+}
+.toggle--checked .toggle__input + .toggle__overlay,
+.toggle__input:checked + .toggle__overlay {
+	left: 50%;
+	right: 50%;
+}

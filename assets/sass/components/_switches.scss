@@ -9,6 +9,9 @@
 		- Add padding on either end as 5px;
 		- Set font-weight to medium
 */
+$switch-height: 34px;
+$switch-large-height: 44px;
+
 .switch {
 	font-family: 'raleway-medium', arial, sans-serif;
 	font-size: $font-size-small;
@@ -16,21 +19,22 @@
 	color: $gray-darker;
 	display: inline-block;
 	cursor: pointer;
-	height: 34px;
-	line-height: 34px;
-	border-radius: 17px;
+	height: $switch-height;
+	line-height: $switch-height;
+	border-radius: $switch-height / 2;
 	position: relative;
+	vertical-align: middle;
 	&--large {
 		min-width: 300px;
 		width: 100%;
 		max-width: 500px;
-		line-height: 44px;
-		height: 44px;
-		border-radius: 22px;
+		line-height: $switch-large-height;
+		height: $switch-large-height;
+		border-radius: $switch-large-height / 2;
 		font-size: $font-size-base;
 		.switch__overlay {
-			height: 44px;
-			border-radius: 22px;
+			height: $switch-large-height;
+			border-radius: $switch-large-height / 2;
 		}
 		.switch__left,
 		.switch__right {
@@ -56,7 +60,7 @@
 	display: none;
 }
 .switch__overlay {
-	height: 34px;
+	height: $switch-height;
 	width: 50%;
 	position: absolute;
 	z-index: 10;
@@ -65,7 +69,7 @@
 	display: block;
 	transition: all .3s;
 	background: $switch-on-background;
-	border-radius: 17px;
+	border-radius: $switch-height / 2;
 }
 .switch__left,
 .switch__right {
@@ -75,8 +79,8 @@
 	text-align: center;
 	position: relative;
 	z-index: 20;
-	padding-left: 16px;
-	padding-right: 16px;
+	padding-left: $switch-height / 2;
+	padding-right: $switch-height / 2;
 }
 .switch__left {
 	float: left;

@@ -1,4 +1,4 @@
-<h3>Sidebar Layout</h3>
+<h4>Sidebar Layout</h4>
 <div class="layout__container show-grid">
 	<div class="layout">
 		<div class="layout__sidebar">
@@ -10,7 +10,7 @@
 	</div>
 </div>
 
-<h3>Full-page Layout</h3>
+<h4>Full-page Layout</h4>
 <div class="layout__container show-grid">
 	<div class="layout">
 		<div class="layout__full">
@@ -19,7 +19,7 @@
 	</div>
 </div>
 
-<h3>Grid System</h3>
+<h4>Grid System</h4>
 <div class="layout__container show-grid">
 	<div class="layout">
 	  <div class="grid__sm__1"><p>1 / 12</p></div>

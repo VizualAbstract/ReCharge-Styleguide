@@ -1058,6 +1058,22 @@
 		"shouldRunBless": 1,
 		"useLibsass": 0
 		},
+	"\/assets\/sass\/components\/_toggle.scss": {
+		"createSourceMap": 1,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/sass\/components\/_toggle.scss",
+		"outputAbbreviatedPath": "\/assets\/sass\/css\/_toggle.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
+		"useLibsass": 0
+		},
 	"\/assets\/sass\/css\/_spectrum.css": {
 		"fileType": 16,
 		"ignore": 1,

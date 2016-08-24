@@ -6,15 +6,15 @@
 <hr>
 
 <h2 class="rc_sg__pattern_title" id="navbar">Navbar</h2>
-<div class="example overflow-fix">
+<div class="rc_sg__example overflow-fix">
 <?php include('_layouts/navbar.php'); ?>
 </div><!-- .example -->
 
 <h2 class="rc_sg__pattern_title" id="navbar-setup">Navbar: Setup</h2>
 <div class="rc_sg__description">
 	<p>The Setup Navbar is used during the onboarding flow, but will eventually be implemented as an alternate color scheme, as opposed to a new navbar</p>
-</div><!-- .description -->
-<div class="example overflow-fix">
+</div><!-- .rc_sg__description -->
+<div class="rc_sg__example overflow-fix">
 <?php include('_layouts/navbar--setup.php'); ?>
 </div><!-- .example -->
 

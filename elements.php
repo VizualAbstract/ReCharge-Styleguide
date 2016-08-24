@@ -37,7 +37,7 @@
 
 <h2 class="rc_sg__pattern_title" id="inputs-textarea">Inputs: Textarea</h2>
 <div class="rc_sg__example">
-<?php include('inputs-textarea.php'); ?>
+<?php include('_elements/inputs-textarea.php'); ?>
 </div><!-- .example -->
 
 <h2 class="rc_sg__pattern_title" id="inputs-radio">Inputs: Radio</h2>

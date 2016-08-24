@@ -3,13 +3,15 @@
 	Version 1.1
 	Date: 5-12-2016
 	Author: Corey M. Capetillo
-	5-5-2016
+	5-5-2016:
 		- Create file
-	5-12-2016
+	5-12-2016:
 		- Tweak pixel alignments for Devon. Adjust responsive breakpoints to maintain status-quo link structure
-	5-22-2016
+	5-22-2016:
 		- Add forced --mobile flag for setup navbar
 		- Adjust background and link colors for dropdown menus so the contrast follows the same pattern as the standard navbar
+	8-24-2016:
+		- Removed 'top' from switch on desktop view. It conflicted with vertical-align: middle
 */
 @mixin mobile-navbar() {
 	.dropdown {
@@ -132,7 +134,6 @@
 
 	.switch {
 		position: relative;
-		top: 12px;
 		margin: 0 ($padding-large-vertical / 2) 0 0;
 	}
 
@@ -246,7 +247,7 @@
 		}
 	}
 	.navbar__brand {
-		width: 60px !important;
+		width: 57px;
 	}
 	.navbar__links {
 		li.active,

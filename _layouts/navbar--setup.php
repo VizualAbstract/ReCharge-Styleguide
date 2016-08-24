@@ -1,26 +1,9 @@
 <div class="navbar navbar--setup">
-	<a href="#" class="navbar__brand">
-		ReCharge
-	</a><!-- .navbar__brand -->
-	<ul class="navbar__links list list--inline">
-		<li class="active">
-			<a href="#">SET UP</a>
-		</li><!-- .active -->
-	</ul><!-- .navbar__links .list -->
-	<ul class="navbar__links navbar__links--right list list--inline">
-		<li>
-			<a href="#" class="navbar__return">
-				POST LAUNCH
-			</a><!-- .navbar__return -->
-		</li>
-	</ul><!-- .navbar__links .list -->
-</div><!-- .navbar -->
-<div class="navbar navbar--setup">
 	<div class="navbar__container">
 		<a href="#" class="navbar__brand">
 			ReCharge
 		</a><!-- .navbar__brand -->
-		<div class="navbar__toggle collapsed" data-toggle="collapse__menu" data-target="#recharge-navbar-setup">
+		<div class="navbar__toggle collapsed" data-toggle="collapse__menu" data-target="#recharge-navbar">
 			<i class="fa fa-bars"></i>
 		</div><!-- .navbar__toggle .collapsed -->
 		<div class="visible-xs">
@@ -95,6 +78,7 @@
 		</div><!-- .navbar__collapse .collapse -->
 	</div><!-- .navbar__container -->
 </div><!-- .navbar -->
+
 <div class="navbar navbar--setup">
 	<a href="#" class="navbar__brand">
 		ReCharge
@@ -123,6 +107,7 @@
 		</ul><!-- .navbar__links .list -->
 	</div><!-- .navbar__collapse .collapse -->
 </div><!-- .navbar -->
+
 <div class="navbar navbar--setup navbar--mobile">
 	<a href="#" class="navbar__brand navbar__brand--shopify">
 		ReCharge
@@ -199,4 +184,22 @@
 			</li><!-- hidden-xs -->
 		</ul><!-- .navbar__links .list -->
 	</div><!-- #recharge-navbar .navbar__collapse .collapse -->
+</div><!-- .navbar -->
+
+<div class="navbar navbar--setup">
+	<a href="#" class="navbar__brand">
+		ReCharge
+	</a><!-- .navbar__brand -->
+	<ul class="navbar__links list list--inline">
+		<li class="active">
+			<a href="#">SET UP</a>
+		</li><!-- .active -->
+	</ul><!-- .navbar__links .list -->
+	<ul class="navbar__links navbar__links--right list list--inline">
+		<li>
+			<a href="#" class="navbar__return">
+				POST LAUNCH
+			</a><!-- .navbar__return -->
+		</li>
+	</ul><!-- .navbar__links .list -->
 </div><!-- .navbar -->

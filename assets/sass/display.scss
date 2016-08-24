@@ -217,6 +217,7 @@ body {
 				position: relative;
 				margin-left: 250px;
 				overflow-y: auto;
+				overflow-x: hidden;
 				min-height: 100%;
 			}
 		}
@@ -254,7 +255,24 @@ body {
 	margin-top: 15px !important;
 }
 
-#buttons-blocked + .rc_gs__example .button + .button {
+#buttons-blocked + .rc_sg__example .button + .button {
 	margin-top: 15px !important;
 	display: table !important;
+}
+
+#navbar + .rc_sg__example .navbar__container,
+#navbar-setup + .rc_sg__description + .rc_sg__example .navbar__container {
+	width: 100% !important;
+}
+
+#navbar-setup + .rc_sg__description + .rc_sg__example .navbar--setup {
+	overflow: hidden !important;
+}
+
+#grids + .rc_sg__example .show-grid + h4 {
+	margin-top: 18px !important;
+}
+
+#grids + .rc_sg__example .layout__container {
+	width: 100% !important;
 }
