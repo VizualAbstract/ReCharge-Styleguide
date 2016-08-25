@@ -17,6 +17,19 @@
 			});
 		</script>
 		<script>
+			$(function() {
+				$('.rc_toggle-list').on('change', '.switch__input', function(e) {
+					var status = $(this).prop('checked');
+					var list_item = $(this).parents('.rc_toggle-list__item');
+					if (status === true) {
+						list_item.removeClass('disabled');
+					} else {
+						list_item.addClass('disabled');
+					}
+				});
+			});
+		</script>
+		<script>
 			$(function(){
 				// Generate the code samples
 				$('.rc_sg__example').each(function(i) {

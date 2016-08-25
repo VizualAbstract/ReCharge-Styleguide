@@ -11,7 +11,7 @@
 </div><!-- .description -->
 <div class="rc_sg__example">
 <?php include('_components/setup-header.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="page-title">Page Title</h2>
 <div class="rc_sg__description">
@@ -19,7 +19,7 @@
 </div><!-- .description -->
 <div class="rc_sg__example">
 <?php include('_components/page-title.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="title-bar">Title Bar</h2>
 <div class="rc_sg__description">
@@ -37,7 +37,7 @@
 </div><!-- .description -->
 <div class="rc_sg__example">
 <?php include('_components/info-bar.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="dropdown-header">Dropdown Header</h2>
 <div class="rc_sg__description">
@@ -45,103 +45,47 @@
 </div><!-- .description -->
 <div class="rc_sg__example">
 <?php include('_components/dropdown-header.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <hr>
 
 <h2 class="rc_sg__pattern_title" id="dropdowns">Dropdowns</h2>
 <div class="rc_sg__example">
 <?php include('_components/dropdowns.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="switches">Switches</h2>
 <div class="rc_sg__example">
 <?php include('_components/switches.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="action-lists">Action Lists</h2>
 <div class="rc_sg__example">
 <?php include('_components/action-list.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
-<h2 class="rc_sg__pattern_title" id="action-list">Toggle List</h2>
+<h2 class="rc_sg__pattern_title" id="toggle-list">Toggle List</h2>
 <div class="rc_sg__description">
 	<p>Toggle lists use a combination of HTML, CSS and JavaScript. Adding the class <code>.disable</code> to the parent list item will change the background color of the switch, the list item and the link color.</p>
 	<p>Disabling the switch will trigger the <code>.disable</code> class.</p>
 </div><!-- .rc_sg__description -->
 <div class="rc_sg__example">
-<ul class="toggle-list">
-	<li class="toggle-list__item">
-		<div class="toggle-list__item__content">
-			<a href="#">Subscription Activation</a>
-			<p>Sent to customers when they first sign up for a subscription</p>
-		</div><!-- .toggle-list__item__content -->
-		<div class="toggle-list__item__action">
-			<label class="switch switch--small">
-				<div class="switch__inner">
-					<input class="switch__input" checked type="checkbox">
-					<span class="switch__overlay"></span>
-					<span class="switch__left"></span>
-					<span class="switch__right"></span>
-				</div><!-- .switch__inner -->
-			</label><!-- .switch -->
-		</div><!-- .toggle-list__item__action -->
-	</li><!-- .toggle-list__item -->
-	<li class="toggle-list__item disabled">
-		<div class="toggle-list__item__content">
-			<a href="#">Subscription Activation</a> <label>Disabled</label>
-			<p>Sent to customers when they first sign up for a subscription</p>
-		</div><!-- .toggle-list__item__content -->
-		<div class="toggle-list__item__action">
-			<label class="switch switch--small">
-				<div class="switch__inner">
-					<input class="switch__input" type="checkbox">
-					<span class="switch__overlay"></span>
-					<span class="switch__left"></span>
-					<span class="switch__right"></span>
-				</div><!-- .switch__inner -->
-			</label><!-- .switch -->
-		</div><!-- .toggle-list__item__action -->
-	</li><!-- .toggle-list__item -->
-	<li class="toggle-list__item">
-		<div class="toggle-list__item__content">
-			<a href="#">Subscription Activation</a>
-			<p>Sent to customers when they first sign up for a subscription</p>
-		</div><!-- .toggle-list__item__content -->
-		<div class="toggle-list__item__action">
-			<label class="switch switch--small">
-				<div class="switch__inner">
-					<input class="switch__input" checked type="checkbox">
-					<span class="switch__overlay"></span>
-					<span class="switch__left"></span>
-					<span class="switch__right"></span>
-				</div><!-- .switch__inner -->
-			</label><!-- .switch -->
-		</div><!-- .toggle-list__item__action -->
-	</li><!-- .toggle-list__item -->
-</ul><!-- .toggle-list -->
-</div><!-- .example -->
-<?php /* <h2 class="rc_sg__pattern_title" id="toggle-lists">Toggle Lists</h2>
-<div class="rc_sg__description">
-	<p><strong>Toggle Lists</strong> have a more specific use case than <a href="#action-lists">Action Lists</a>, which are a more general component. Toggle lists will lose their table-layout structure on mobile.</p>
-</div>
-<div class="rc_sg__example">
 <?php include('_components/toggle-list.php'); ?>
-</div><!-- .example --> */ ?>
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="progress-bar">Progress Bar</h2>
 <div class="rc_sg__example">
 <?php include('_components/progress-bar.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="breadcrumbs">Breadcrumbs</h2>
 <div class="rc_sg__example">
 <?php include('_components/breadcrumbs.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="continue-bar">Continue Bar</h2>
 <div class="rc_sg__example">
 <?php include('_components/continue-bar.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <?php include('includes/footer.php'); ?>
