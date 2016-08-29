@@ -1,4 +1,4 @@
-/* 
+/*
 	Element: Forms
 	Version 1.1
 	Date: 5-5-2016
@@ -388,7 +388,7 @@ input[type="checkbox"],
 			line-height: 15px;
 			text-indent: 1px;
 			font-size: 11px;
-			
+
 			color: #FFF;
 			font-family: fontawesome;
 
@@ -415,7 +415,7 @@ input[type="radio"],
 		&:before {
 			border-radius: 50%;
 		}
-	} 
+	}
 }
 
 input[type="radio"],
@@ -591,7 +591,7 @@ input[type="checkbox"],
 			min-width: 40px;
 		}
 	}
-	#submit_search {
+	.button {
 		font-size: 0;
 		&:before {
 			font-size: $font-size-base;
@@ -605,7 +605,7 @@ input[type="checkbox"],
 			border-color: $button-primary-background;
 		}
 
-		#submit_search {
+		.button {
 			background-color: $button-primary-background;
 			font-size: 0;
 			&:before {

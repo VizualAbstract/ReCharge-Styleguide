@@ -79,7 +79,7 @@
 </div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="breadcrumbs">Breadcrumbs</h2>
-<div class="rc_sg__example">
+<div class="rc_sg__example overflow-fix">
 <?php include('_components/breadcrumbs.php'); ?>
 </div><!-- .rc_sg__example -->
 

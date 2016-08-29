@@ -1444,7 +1444,7 @@
   		- Removed !important from button links
   		- Add hover-colors for button--links
   */
-  /* 
+  /*
   	Element: Forms
   	Version 1.1
   	Date: 5-5-2016
@@ -2937,11 +2937,11 @@ h1 + .setup-header__description,
   min-width: 40px;
 }
 /* line 594, ../sass/elements/_forms.scss */
-.new .form__search #submit_search {
+.new .form__search .button {
   font-size: 0;
 }
 /* line 596, ../sass/elements/_forms.scss */
-.new .form__search #submit_search:before {
+.new .form__search .button:before {
   font-size: 16px;
   font-family: fontawesome;
   content: "\f002";
@@ -2952,16 +2952,16 @@ h1 + .setup-header__description,
   border-color: #4DD6B7;
 }
 /* line 608, ../sass/elements/_forms.scss */
-.new .form__search--active #submit_search {
+.new .form__search--active .button {
   background-color: #4DD6B7;
   font-size: 0;
 }
 /* line 611, ../sass/elements/_forms.scss */
-.new .form__search--active #submit_search:before {
+.new .form__search--active .button:before {
   content: "\f00d";
 }
 /* line 614, ../sass/elements/_forms.scss */
-.new .form__search--active #submit_search:hover {
+.new .form__search--active .button:hover {
   background-color: #2BAC8F;
 }
 /* line 619, ../sass/elements/_forms.scss */
@@ -3220,13 +3220,13 @@ h1 + .setup-header__description,
   	8-22-16:
   		- Create a toggle
   */
-  /* 
+  /*
   	Components: Info Bars
   	Version 1.0
   	Date: 6-26-2016
   	Author: Corey M. Capetillo
   	- Added the old title-info element for organization
-  	8-4-2016: 
+  	8-4-2016:
   		- page-titles added
   	8-15-2016:
   		- Give inline-buttons margin between eachother
@@ -3494,15 +3494,22 @@ h1 + .setup-header__description,
   padding-left: 17px;
   padding-right: 17px;
 }
-/* line 105, ../sass/components/_switches.scss */
+@media screen and (max-width: 991px) {
+  /* line 94, ../sass/components/_switches.scss */
+  .new .switch__left,
+  .new .switch__right {
+    overflow: hidden;
+  }
+}
+/* line 108, ../sass/components/_switches.scss */
 .new .switch__left {
   float: left;
 }
-/* line 108, ../sass/components/_switches.scss */
+/* line 111, ../sass/components/_switches.scss */
 .new .switch__right {
   float: right;
 }
-/* line 111, ../sass/components/_switches.scss */
+/* line 114, ../sass/components/_switches.scss */
 .new .switch--checked .switch__input + .switch__overlay,
 .new .switch__input:checked + .switch__overlay {
   left: 50%;
@@ -3678,38 +3685,44 @@ h1 + .setup-header__description,
   margin-top: 0;
   margin-bottom: 0;
 }
-/* line 62, ../sass/components/_title-bar.scss */
-.new .title-bar__title, .new .title-bar__content {
-  display: table-cell;
-  vertical-align: top;
+@media screen and (min-width: 768px) {
+  /* line 63, ../sass/components/_title-bar.scss */
+  .new .title-bar__title, .new .title-bar__content {
+    display: table-cell;
+    vertical-align: top;
+  }
 }
-/* line 67, ../sass/components/_title-bar.scss */
+/* line 70, ../sass/components/_title-bar.scss */
+.new .title-bar__title .dropdown__trigger {
+  min-width: 271px;
+}
+/* line 74, ../sass/components/_title-bar.scss */
 .new .title-bar__content {
   text-align: right;
   font-size: 16px;
   white-space: nowrap;
 }
-/* line 71, ../sass/components/_title-bar.scss */
+/* line 78, ../sass/components/_title-bar.scss */
 .new .title-bar__content .button + .button {
   margin-left: 9px;
 }
-/* line 74, ../sass/components/_title-bar.scss */
+/* line 81, ../sass/components/_title-bar.scss */
 .new .title-bar__content .switch {
   vertical-align: middle;
 }
-/* line 81, ../sass/components/_title-bar.scss */
+/* line 88, ../sass/components/_title-bar.scss */
 .new .title-info {
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
   font-family: 'ralewayregular', arial, sans-serif;
 }
-/* line 87, ../sass/components/_title-bar.scss */
+/* line 94, ../sass/components/_title-bar.scss */
 .new .title-info a {
   text-decoration: underline;
 }
 @media screen and (max-width: 767px) {
-  /* line 90, ../sass/components/_title-bar.scss */
+  /* line 97, ../sass/components/_title-bar.scss */
   .new .title-info.pull-right, .new .title-info.pull-left {
     float: none !important;
     display: block;

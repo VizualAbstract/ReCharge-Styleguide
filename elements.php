@@ -11,51 +11,51 @@
 </div><!-- .description -->
 <div class="rc_sg__example">
 <?php include('_elements/buttons.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="buttons-links">Buttons: Links</h2>
 <div class="rc_sg__example">
 <?php include('_elements/buttons-links.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="buttons-large">Buttons: Large</h2>
 <div class="rc_sg__example">
 <?php include('_elements/buttons-large.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="buttons-blocked">Buttons: Blocked</h2>
 <div class="rc_sg__example">
 <?php include('_elements/buttons-blocked.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <hr>
 
 <h2 class="rc_sg__pattern_title" id="inputs-text-field">Inputs: Text-field</h2>
 <div class="rc_sg__example">
 <?php include('_elements/inputs-text-field.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="inputs-textarea">Inputs: Textarea</h2>
 <div class="rc_sg__example">
 <?php include('_elements/inputs-textarea.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="inputs-radio">Inputs: Radio</h2>
 <div class="rc_sg__example">
 <?php include('_elements/inputs-radio.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="inputs-checkbox">Inputs: Checkbox</h2>
 <div class="rc_sg__example">
 <?php include('_elements/inputs-checkbox.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="inputs-select">Inputs: Select</h2>
 <div class="rc_sg__example">
 <?php include('_elements/inputs-select.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
-<h2 class="rc_sg__pattern_title" id="inputs-color">Inputs: Numbers</h2>
+<h2 class="rc_sg__pattern_title" id="inputs-numbers">Inputs: Numbers</h2>
 <div class="rc_sg__description">
 	<p>There are two types of number inputs. The deafult input, <code>type="number"</code>, coupled with the <code>.form__number</code> will allow for numerical entry.</p>
 	<p>A <code>select</code> element with the class <code>.form__number</code> will show a dropdown box, with a defined options.</p>
@@ -63,13 +63,13 @@
 <div class="rc_sg__example">
 <label>Number input</label>
 <?php include('_elements/inputs-number.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="inputs-color">Inputs: Color</h2>
 <p>As with all inputs, each color input requires a unique and relevant ID and name attribute.</p>
 <div class="rc_sg__example">
 <?php include('_elements/inputs-color.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <hr>
 
@@ -79,17 +79,17 @@
 </div><!-- .rc_sg__description -->
 <div class="rc_sg__example">
 <?php include('_elements/form-groups.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="form-help">Form: Help</h2>
 <div class="rc_sg__example">
 <?php include('_elements/form-help.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="form-errors">Form: Errors</h2>
 <div class="rc_sg__example">
 <?php include('_elements/form-errors.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="form-actions">Form: Actions</h2>
 <div class="rc_sg__description">
@@ -97,7 +97,7 @@
 </div><!-- .rc_sg__description -->
 <div class="rc_sg__example">
 <?php include('_elements/form-actions.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <hr>
 
@@ -109,7 +109,7 @@
 </div><!-- .description -->
 <div class="rc_sg__example">
 <?php include('_elements/input-groups.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="input-groups-search">Input Groups: Search</h2>
 <div class="rc_sg__description">
@@ -119,7 +119,7 @@
 </div><!-- .description -->
 <div class="rc_sg__example">
 <?php include('_elements/input-groups-search.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="input-groups-contextual">Input Groups: Contextual</h2>
 <div class="rc_sg__description">
@@ -127,14 +127,14 @@
 </div><!-- .description -->
 <div class="rc_sg__example">
 <?php include('_elements/input-groups-contextual.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <hr>
 
 <h2 class="rc_sg__pattern_title" id="card-details">Card Details</h2>
 <div class="rc_sg__example">
 <?php include('_elements/card-details.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <hr>
 
@@ -156,7 +156,7 @@
 </div><!-- .description -->
 <div class="rc_sg__example">
 <?php include('_elements/tables-responsive.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <div class="rc_sg__description">
 	<p>
@@ -167,7 +167,7 @@
 </div><!-- .description -->
 <div class="rc_sg__example">
 <?php include('_elements/tables-responsive-pinned.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <div class="rc_sg__description">
 	<p>
@@ -178,7 +178,7 @@
 </div><!-- .description -->
 <div class="rc_sg__example">
 <?php include('_elements/tables-responsive-alt.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <div class="rc_sg__description">
 	<p>
@@ -189,6 +189,6 @@
 </div><!-- .description -->
 <div class="rc_sg__example">
 <?php include('_elements/tables-responsive-stacked.php'); ?>
-</div><!-- .example -->
+</div><!-- .rc_sg__example -->
 
 <?php include('includes/footer.php'); ?>

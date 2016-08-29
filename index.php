@@ -7,77 +7,88 @@
 <p>You can view the ongoing status of this page <a href="https://docs.google.com/spreadsheets/d/1J-UcLAgN9eChuWUqMxEUObY6dlxIRZFL5eN2zrT4g18/edit?usp=sharing" target="_blank">here</a>.</p>
 <hr>
 
+<?php
+	if ($_SERVER['HTTP_HOST'] == 'coreys-recharge-imac.local:5757'){
+		$site_url = '';
+	} else {
+		$site_url = '/styleguide';
+	}
+
+	$_utility = scandir('./_utility/');
+	$_dynamic = scandir('./_dynamic/');
+	$_elements = scandir('./_elements/');
+	$_layouts = scandir('./_layouts/');
+	$_style = scandir('./_style/');
+	$_templates = scandir('./_templates/');
+	$_components = scandir('./_components/');
+?>
+
+<hr>
+
 <h2 class="rc_sg__pattern_title" id="directory">Directory</h2>
 <h3>Utility</h3>
 <ul>
-	<li><a href="/styleguide/utility.php#alignment-helpers">Alignment Helpers</a></li>
-	<li><a href="/styleguide/utility.php#responsive-helpers">Responsive Helpers</a></li>
-	<li><a href="/styleguide/utility.php#structural-helpers">Structural Helpers</a></li>
+	<?php
+		for ($i = 2; $i < count($_utility); $i++) {
+			$name = str_replace('.php', '', $_utility[$i]);
+			echo '<li><a href="' . $site_ur . '/utility.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
+		}
+	?>
 </ul>
 <br>
 
 <h3>Style</h3>
 <ul>
-	<li><a href="/styleguide/style.php#colors">Colors</a></li>
-	<li><a href="/styleguide/style.php#fonts">Fonts</a></li>
-	<li><a href="/styleguide/style.php#typography">Typography</a></li>
-	<li><a href="/styleguide/style.php#animation">Animation</a></li>
+	<?php
+		for ($i = 2; $i < count($_style); $i++) {
+			$name = str_replace('.php', '', $_style[$i]);
+			echo '<li><a href="' . $site_ur . '/style.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
+		}
+	?>
 </ul>
 <br>
 
 <h3>Elements</h3>
 <ul>
-	<li><a href="/elements.php#buttons">Buttons</a></li>
-	<li><a href="/elements.php#buttons-links">Buttons: Links</a></li>
-	<li><a href="/elements.php#buttons-large">Buttons: Large</a></li>
-	<li><a href="/elements.php#buttons-blocked">Buttons: Blocked</a></li>
-	<li class="divider"></li>
-	<li><a href="/elements.php#inputs-text-field">Inputs: Text-Field</a></li>
-	<li><a href="/elements.php#inputs-textarea">Inputs: Textarea</a></li>
-	<li><a href="/elements.php#inputs-radio">Inputs: Radio</a></li>
-	<li><a href="/elements.php#inputs-checkbox">Inputs: Checkbox</a></li>
-	<li><a href="/elements.php#inputs-select">Inputs: Select</a></li>
-	<li class="divider"></li>
-	<li><a href="/elements.php#form-groups">Form: Groups</a></li>
-	<li><a href="/elements.php#form-errors">Form: Errors</a></li>
-	<li><a href="/elements.php#form-actions">Form: Actions</a></li>
-	<li class="divider"></li>
-	<li><a href="/elements.php#card-details">Card Details</a></li>
-	<li class="divider"></li>
-	<li><a href="/elements.php#tables">Tables</a></li>
-	<li><a href="/elements.php#tables-responsive">Tables: Responsive</a></li>
+	<?php
+		for ($i = 2; $i < count($_elements); $i++) {
+			$name = str_replace('.php', '', $_elements[$i]);
+			echo '<li><a href="' . $site_ur . '/elements.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
+		}
+	?>
 </ul>
 <br>
 
 <h3>Components</h3>
 <ul>
-	<li><a href="/components.php#setup-header">Setup Header</a></li>
-	<li><a href="/components.php#title-bar">Title Bar</a></li>
-	<li><a href="/components.php#info-bar">Info Bar</a></li>
-	<li><a href="/components.php#dropdowns">Dropdowns</a></li>
-	<li><a href="/components.php#switches">Switches</a></li>
-	<li><a href="/components.php#action-lists">Action Lists</a></li>
-	<li><a href="/components.php#progress-bar">Progress Bar</a></li>
-	<li><a href="/components.php#continue-bar">Continue Bar</a></li>
+	<?php
+		for ($i = 2; $i < count($_components); $i++) {
+			$name = str_replace('.php', '', $_components[$i]);
+			echo '<li><a href="' . $site_ur . '/components.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
+		}
+	?>
 </ul>
 <br>
 
 <h3>Layouts</h3>
 <ul>
-	<li><a href="/layouts.php#navbar">Navbar</a></li>
-	<li><a href="/layouts.php#navbar-setup">Navbar: Setup</a></li>
-	<li><a href="/layouts.php#footer">Footer</a></li>
-	<li><a href="/layouts.php#navs">Navs</a></li>
-	<li><a href="/layouts.php#layout-and-grid-system">Layout and Grid System</a></li>
-	<li><a href="/layouts.php#admin-tools">Admin Tools</a></li>
+	<?php
+		for ($i = 2; $i < count($_layouts); $i++) {
+			$name = str_replace('.php', '', $_layouts[$i]);
+			echo '<li><a href="' . $site_ur . '/layouts.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
+		}
+	?>
 </ul>
 <br>
 
 <h3>Dynamic</h3>
 <ul>
-	<li><a href="/dynamic.php#tooltips">Tooltips</a></li>
-	<li><a href="/dynamic.php#popover">Popover</a></li>
-	<li><a href="/dynamic.php#modals">Modals</a></li>
+	<?php
+		for ($i = 2; $i < count($_dynamic); $i++) {
+			$name = str_replace('.php', '', $_dynamic[$i]);
+			echo '<li><a href="' . $site_ur . '/dynamic.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
+		}
+	?>
 </ul>
 <br>
 

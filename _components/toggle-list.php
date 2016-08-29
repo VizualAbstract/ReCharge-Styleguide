@@ -36,7 +36,7 @@
 	</li><!-- .rc_toggle-list__item -->
 	<li class="rc_toggle-list__item">
 		<div class="rc_toggle-list__item__content">
-			CC storeowner on all customer notifications
+			CC storeowner on all customer notifications <label class="disabled_status">Disabled</label>
 		</div><!-- .rc_toggle-list__item__content -->
 		<div class="rc_toggle-list__item__action">
 			<label class="switch switch--small">

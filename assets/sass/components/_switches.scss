@@ -101,6 +101,9 @@ $switch-small-height: 20px;
 	z-index: 20;
 	padding-left: $switch-height / 2;
 	padding-right: $switch-height / 2;
+	@media screen and (max-width: $screen-sm-max) {
+		overflow: hidden;
+	}
 }
 .switch__left {
 	float: left;
