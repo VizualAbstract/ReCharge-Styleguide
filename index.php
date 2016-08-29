@@ -5,7 +5,6 @@
 <p>The Pattern Library is in a state of transition. It's becoming steadily complex, but it's not our main focus. It will be abstracted as necessary, with the main goal of maintaining usability. The <strong>Library</strong> contains all brand standards, components and snippets. <strong>Scratch Pad</strong> will contain examples of code found throughout the application.</p>
 
 <p>You can view the ongoing status of this page <a href="https://docs.google.com/spreadsheets/d/1J-UcLAgN9eChuWUqMxEUObY6dlxIRZFL5eN2zrT4g18/edit?usp=sharing" target="_blank">here</a>.</p>
-<hr>
 
 <?php
 	if ($_SERVER['HTTP_HOST'] == 'coreys-recharge-imac.local:5757'){
