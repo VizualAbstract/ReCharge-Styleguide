@@ -184,7 +184,7 @@
 		<div class="form__group">
 			<input type="radio" id="authorize_conflict_removal" name="authorize_action">
 			<label for="authorize_conflict_removal">Authorize uninstall of your current payments system</label>
-			
+
 			<input id="authorize_preview_installation" type="radio" name="authorize_action">
 			<label for="authorize_preview_installation">Keep current recurring billing app installed and authorize the setup of a development environment to preview ReCharge</label>
 		</div><!-- .form__group -->
@@ -264,7 +264,7 @@
 			</select><!-- .form__select -->
 		</div><!-- .form__group -->
 	</fieldset>
-	
+
 	<legend>
 		<p>Our support team would be happy to help you in comparing solutions. To complete this request please complete the following steps:</p>
 		<p>
@@ -296,31 +296,31 @@
 
 <h2 class="rc_sg__pattern_title" id="subscription-modals">Subscription Modals</h2>
 <div class="example" style="background-color: rgba(0, 0, 0, .7);">
-	<div class="modal fade in" id="modal" style="position: relative; display: block;">
-		<div class="modal__dialog">
-			<div class="modal__content">
+	<div class="rc_modal rc_fade rc_in" id="modal" style="position: relative; display: block;">
+		<div class="rc_modal__dialog">
+			<div class="rc_modal__content">
 				<h2 class="h2">Delete subscription ruleset</h2>
 				<br>
 				<p>Are you sure you want to delete this subscription ruleset?</p>
 				<br>
-				<div class="modal__actions">
+				<div class="rc_modal__actions">
 					<button class="button button--block button--large" data-dismiss="modal__window">Cancel</button>
 					<button class="button button--block button--large button--primary" data-dismiss="modal__window">Okay</button>
-				</div><!-- .modal__actions -->
-			</div><!-- .modal__content -->
-		</div><!-- .modal__dialog -->
-	</div><!-- .modal .fade -->
-	<div class="modal fade in" id="modal" style="position: relative; display: block;">
-		<div class="modal__dialog">
-			<div class="modal__content">
+				</div><!-- .rc_modal__actions -->
+			</div><!-- .rc_modal__content -->
+		</div><!-- .rc_modal__dialog -->
+	</div><!-- .rc_modal .fade -->
+	<div class="rc_modal rc_fade rc_in" id="modal" style="position: relative; display: block;">
+		<div class="rc_modal__dialog">
+			<div class="rc_modal__content">
 				<h2 class="h2">Subscription ruleset can not be saved</h2>
 				<br>
 				<p>Update the required rules in your subscription ruleset before you save.</p>
 				<br>
 				<button class="button button--block button--large button--primary" data-dismiss="modal__window">Okay</button>
-			</div><!-- .modal__content -->
-		</div><!-- .modal__dialog -->
-	</div><!-- .modal .fade -->
+			</div><!-- .rc_modal__content -->
+		</div><!-- .rc_modal__dialog -->
+	</div><!-- .rc_modal .rc_fade -->
 </div>
 
 <h2 class="rc_sg__pattern_title" id="subscription-forms">Subscription Forms</h2>
@@ -421,11 +421,11 @@
 		<p>Donec sed odio dui. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel <a href="#">augue laoreet rutrum</a> faucibus dolor auctor. <code>Maecenas</code> sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at <strong>lobortis</strong>. Vestibulum id ligula porta felis euismod semper. Nulla vitae elit libero, a pharetra augue.</p>
 		<p>Cum sociis natoque <code>penatibus et magnis dis</code> parturient montes, nascetur ridiculus mus. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Dolor sit amet, <a href="#">consectetur</a> adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
 <pre>
-Nulla vitae elit libero, a pharetra augue. 
-Nulla vitae elit libero, a pharetra augue. 
-Nullam id dolor id nibh ultricies vehicula ut id elit. 
-Vestibulum id ligula porta felis euismod semper. 
-Cras mattis consectetur purus sit amet fermentum. 
+Nulla vitae elit libero, a pharetra augue.
+Nulla vitae elit libero, a pharetra augue.
+Nullam id dolor id nibh ultricies vehicula ut id elit.
+Vestibulum id ligula porta felis euismod semper.
+Cras mattis consectetur purus sit amet fermentum.
 Curabitur blandit tempus porttitor.
 </pre>
 		<ul>

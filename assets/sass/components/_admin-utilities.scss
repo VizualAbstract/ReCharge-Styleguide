@@ -1,4 +1,4 @@
-/* 
+/*
 	Elements: Progress Bar
 	Version 1.0
 	Date: 5-12-2016
@@ -9,6 +9,8 @@
 		- Admin Tools will also color radio and checkbox inputs using the same shade of blue
 		- No longer use the double-colon for :before or :after. Incompatible with all browsers
 		- Add specific label classes to radio and checkbox admin classes
+	8-29-16:
+		- set :after on input__gropu.admin-recharge to display: table;
 */
 .admin-recharge,
 .admin-shopify,
@@ -30,11 +32,19 @@
 }
 
 .admin-recharge {
-	&.form__group {
+	&.rc_toggle-list__item {
 		color: #53BAD3;
 		&:after {
 			content: "";
 			display: none;
+		}
+	}
+	&.form__group {
+		color: #53BAD3;
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
 		}
 		.form__input,
 		.form__input__code {

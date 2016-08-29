@@ -30,7 +30,7 @@
 	<?php
 		for ($i = 2; $i < count($_utility); $i++) {
 			$name = str_replace('.php', '', $_utility[$i]);
-			echo '<li><a href="' . $site_ur . '/utility.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
+			echo '<li><a href="' . $site_url . '/utility.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
 		}
 	?>
 </ul>
@@ -41,7 +41,7 @@
 	<?php
 		for ($i = 2; $i < count($_style); $i++) {
 			$name = str_replace('.php', '', $_style[$i]);
-			echo '<li><a href="' . $site_ur . '/style.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
+			echo '<li><a href="' . $site_url . '/style.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
 		}
 	?>
 </ul>
@@ -52,7 +52,7 @@
 	<?php
 		for ($i = 2; $i < count($_elements); $i++) {
 			$name = str_replace('.php', '', $_elements[$i]);
-			echo '<li><a href="' . $site_ur . '/elements.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
+			echo '<li><a href="' . $site_url . '/elements.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
 		}
 	?>
 </ul>
@@ -63,7 +63,7 @@
 	<?php
 		for ($i = 2; $i < count($_components); $i++) {
 			$name = str_replace('.php', '', $_components[$i]);
-			echo '<li><a href="' . $site_ur . '/components.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
+			echo '<li><a href="' . $site_url . '/components.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
 		}
 	?>
 </ul>
@@ -74,7 +74,7 @@
 	<?php
 		for ($i = 2; $i < count($_layouts); $i++) {
 			$name = str_replace('.php', '', $_layouts[$i]);
-			echo '<li><a href="' . $site_ur . '/layouts.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
+			echo '<li><a href="' . $site_url . '/layouts.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
 		}
 	?>
 </ul>
@@ -85,7 +85,7 @@
 	<?php
 		for ($i = 2; $i < count($_dynamic); $i++) {
 			$name = str_replace('.php', '', $_dynamic[$i]);
-			echo '<li><a href="' . $site_ur . '/dynamic.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
+			echo '<li><a href="' . $site_url . '/dynamic.php#' . $name . '">' . ucfirst(str_replace('-', ' ', $name)) . '</a></li>';
 		}
 	?>
 </ul>

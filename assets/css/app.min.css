@@ -3262,7 +3262,7 @@ h1 + .setup-header__description,
   	Date: 5-5-2016
   	Author: Corey M. Capetillo
   */
-  /* 
+  /*
   	Element: Toggle List
   	Version 1.0
   	Date: 8-24-2016
@@ -3270,7 +3270,7 @@ h1 + .setup-header__description,
   	8:24-2016:
   		- Create the toggle list, based on the action-list, but with additional classes to demonstrate a disabled state. Will work with switches
   */
-  /* 
+  /*
   	Elements: Progress Bar
   	Version 1.0
   	Date: 5-12-2016
@@ -3281,6 +3281,8 @@ h1 + .setup-header__description,
   		- Admin Tools will also color radio and checkbox inputs using the same shade of blue
   		- No longer use the double-colon for :before or :after. Incompatible with all browsers
   		- Add specific label classes to radio and checkbox admin classes
+  	8-29-16:
+  		- set :after on input__gropu.admin-recharge to display: table;
   */
 }
 /* line 20, ../sass/components/_dropdowns.scss */
@@ -4059,7 +4061,7 @@ h1 + .setup-header__description,
   display: table-cell;
   vertical-align: middle;
   border-bottom: 1px solid #EEE;
-  padding: 12px 25px;
+  padding: 8px 15px;
 }
 /* line 24, ../sass/components/_toggle-list.scss */
 .new .rc_toggle-list__item__content {
@@ -4132,13 +4134,13 @@ h1 + .setup-header__description,
   height: 20px;
   border-radius: 10px;
 }
-/* line 13, ../sass/components/_admin-utilities.scss */
+/* line 15, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge,
 .new .admin-shopify,
 .new .admin-bigcommerce {
   position: relative;
 }
-/* line 19, ../sass/components/_admin-utilities.scss */
+/* line 21, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge:after,
 .new .admin-shopify:after,
 .new .admin-bigcommerce:after {
@@ -4146,21 +4148,31 @@ h1 + .setup-header__description,
   padding-left: 5px;
   font-weight: 500;
 }
-/* line 27, ../sass/components/_admin-utilities.scss */
+/* line 29, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge:after {
   color: #FBA200;
   content: "\f005";
 }
-/* line 33, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group, .new .admin-recharge.form__search, .new .admin-recharge.form__search__no-results {
+/* line 35, ../sass/components/_admin-utilities.scss */
+.new .admin-recharge.rc_toggle-list__item {
   color: #53BAD3;
 }
-/* line 35, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group:after, .new .admin-recharge.form__search:after, .new .admin-recharge.form__search__no-results:after {
+/* line 37, ../sass/components/_admin-utilities.scss */
+.new .admin-recharge.rc_toggle-list__item:after {
   content: "";
   display: none;
 }
-/* line 39, ../sass/components/_admin-utilities.scss */
+/* line 42, ../sass/components/_admin-utilities.scss */
+.new .admin-recharge.form__group, .new .admin-recharge.form__search, .new .admin-recharge.form__search__no-results {
+  color: #53BAD3;
+}
+/* line 44, ../sass/components/_admin-utilities.scss */
+.new .admin-recharge.form__group:after, .new .admin-recharge.form__search:after, .new .admin-recharge.form__search__no-results:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 49, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input, .new .admin-recharge.form__search .form__input, .new .admin-recharge.form__search__no-results .form__input, .new .admin-recharge.form__group textarea.form__input__code, .new .admin-recharge.form__search textarea.form__input__code, .new .admin-recharge.form__search__no-results textarea.form__input__code, .new .admin-recharge.form__group input[type="text"].form__color, .new .admin-recharge.form__search input[type="text"].form__color, .new .admin-recharge.form__search__no-results input[type="text"].form__color, .new .admin-recharge.form__group input[type="text"].form__number, .new .admin-recharge.form__search input[type="text"].form__number, .new .admin-recharge.form__search__no-results input[type="text"].form__number,
 .new .admin-recharge.form__group input[type="number"].form__number,
 .new .admin-recharge.form__search input[type="number"].form__number,
@@ -4171,7 +4183,7 @@ h1 + .setup-header__description,
   color: #53BAD3;
   border: 1px solid #53BAD3;
 }
-/* line 43, ../sass/components/_admin-utilities.scss */
+/* line 53, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input:focus, .new .admin-recharge.form__search .form__input:focus, .new .admin-recharge.form__search__no-results .form__input:focus, .new .admin-recharge.form__group textarea.form__input__code:focus, .new .admin-recharge.form__search textarea.form__input__code:focus, .new .admin-recharge.form__search__no-results textarea.form__input__code:focus, .new .admin-recharge.form__group input[type="text"].form__color:focus, .new .admin-recharge.form__search input[type="text"].form__color:focus, .new .admin-recharge.form__search__no-results input[type="text"].form__color:focus, .new .admin-recharge.form__group input[type="text"].form__number:focus, .new .admin-recharge.form__search input[type="text"].form__number:focus, .new .admin-recharge.form__search__no-results input[type="text"].form__number:focus,
 .new .admin-recharge.form__group input[type="number"].form__number:focus,
 .new .admin-recharge.form__search input[type="number"].form__number:focus,
@@ -4181,7 +4193,7 @@ h1 + .setup-header__description,
 .new .admin-recharge.form__search__no-results .form__input__code:focus {
   border-color: #4DD6B7;
 }
-/* line 46, ../sass/components/_admin-utilities.scss */
+/* line 56, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input::-webkit-input-placeholder, .new .admin-recharge.form__search .form__input::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results .form__input::-webkit-input-placeholder, .new .admin-recharge.form__group textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__search textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__color::-webkit-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__color::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color::-webkit-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__number::-webkit-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__number::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number::-webkit-input-placeholder,
 .new .admin-recharge.form__group input[type="number"].form__number::-webkit-input-placeholder,
 .new .admin-recharge.form__search input[type="number"].form__number::-webkit-input-placeholder,
@@ -4191,7 +4203,7 @@ h1 + .setup-header__description,
 .new .admin-recharge.form__search__no-results .form__input__code::-webkit-input-placeholder {
   color: #53BAD3;
 }
-/* line 49, ../sass/components/_admin-utilities.scss */
+/* line 59, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input:-moz-placeholder, .new .admin-recharge.form__search .form__input:-moz-placeholder, .new .admin-recharge.form__search__no-results .form__input:-moz-placeholder, .new .admin-recharge.form__group textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__search textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__color:-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__color:-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color:-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__number:-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__number:-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number:-moz-placeholder,
 .new .admin-recharge.form__group input[type="number"].form__number:-moz-placeholder,
 .new .admin-recharge.form__search input[type="number"].form__number:-moz-placeholder,
@@ -4201,7 +4213,7 @@ h1 + .setup-header__description,
 .new .admin-recharge.form__search__no-results .form__input__code:-moz-placeholder {
   color: #53BAD3;
 }
-/* line 52, ../sass/components/_admin-utilities.scss */
+/* line 62, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input::-moz-placeholder, .new .admin-recharge.form__search .form__input::-moz-placeholder, .new .admin-recharge.form__search__no-results .form__input::-moz-placeholder, .new .admin-recharge.form__group textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__search textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__color::-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__color::-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color::-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__number::-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__number::-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number::-moz-placeholder,
 .new .admin-recharge.form__group input[type="number"].form__number::-moz-placeholder,
 .new .admin-recharge.form__search input[type="number"].form__number::-moz-placeholder,
@@ -4211,7 +4223,7 @@ h1 + .setup-header__description,
 .new .admin-recharge.form__search__no-results .form__input__code::-moz-placeholder {
   color: #53BAD3;
 }
-/* line 55, ../sass/components/_admin-utilities.scss */
+/* line 65, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input:-ms-input-placeholder, .new .admin-recharge.form__search .form__input:-ms-input-placeholder, .new .admin-recharge.form__search__no-results .form__input:-ms-input-placeholder, .new .admin-recharge.form__group textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__search textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__color:-ms-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__color:-ms-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color:-ms-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__number:-ms-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__number:-ms-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number:-ms-input-placeholder,
 .new .admin-recharge.form__group input[type="number"].form__number:-ms-input-placeholder,
 .new .admin-recharge.form__search input[type="number"].form__number:-ms-input-placeholder,
@@ -4221,7 +4233,7 @@ h1 + .setup-header__description,
 .new .admin-recharge.form__search__no-results .form__input__code:-ms-input-placeholder {
   color: #53BAD3;
 }
-/* line 63, ../sass/components/_admin-utilities.scss */
+/* line 73, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__radio + .form__radio__label:before, .new .admin-recharge.form__search .form__radio + .form__radio__label:before, .new .admin-recharge.form__search__no-results .form__radio + .form__radio__label:before,
 .new .admin-recharge.form__group .form__radio + .form__checkbox__label:before,
 .new .admin-recharge.form__search .form__radio + .form__checkbox__label:before,
@@ -4234,7 +4246,7 @@ h1 + .setup-header__description,
 .new .admin-recharge.form__search__no-results .form__checkbox + .form__checkbox__label:before {
   border-color: #53BAD3;
 }
-/* line 70, ../sass/components/_admin-utilities.scss */
+/* line 80, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__radio:checked + .form__radio__label:before, .new .admin-recharge.form__search .form__radio:checked + .form__radio__label:before, .new .admin-recharge.form__search__no-results .form__radio:checked + .form__radio__label:before,
 .new .admin-recharge.form__group .form__radio:checked + .form__checkbox__label:before,
 .new .admin-recharge.form__search .form__radio:checked + .form__checkbox__label:before,
@@ -4247,32 +4259,32 @@ h1 + .setup-header__description,
 .new .admin-recharge.form__search__no-results .form__checkbox:checked + .form__checkbox__label:before {
   background-color: #53BAD3;
 }
-/* line 79, ../sass/components/_admin-utilities.scss */
+/* line 89, ../sass/components/_admin-utilities.scss */
 .new .admin-shopify::after {
   color: #7AB55C;
   content: "\f005  Shopify";
 }
-/* line 83, ../sass/components/_admin-utilities.scss */
+/* line 93, ../sass/components/_admin-utilities.scss */
 .new .admin-bigcommerce::after {
   color: #4A8BF2;
   content: "\f005  BigCom";
 }
-/* line 88, ../sass/components/_admin-utilities.scss */
+/* line 98, ../sass/components/_admin-utilities.scss */
 .new .navbar__brand--shopify {
   background-image: url("../images/navbar__brand--shopify.svg");
 }
 @media screen and (min-width: 355px) and (max-width: 915px) {
-  /* line 88, ../sass/components/_admin-utilities.scss */
+  /* line 98, ../sass/components/_admin-utilities.scss */
   .new .navbar__brand--shopify {
     background-image: url("../images/navbar__brand--mobile--shopify.svg");
   }
 }
-/* line 95, ../sass/components/_admin-utilities.scss */
+/* line 105, ../sass/components/_admin-utilities.scss */
 .new .navbar__brand--bigcommerce {
   background-image: url("../images/navbar__brand--bigcommerce.svg");
 }
 @media screen and (min-width: 355px) and (max-width: 915px) {
-  /* line 95, ../sass/components/_admin-utilities.scss */
+  /* line 105, ../sass/components/_admin-utilities.scss */
   .new .navbar__brand--bigcommerce {
     background-image: url("../images/navbar__brand--mobile--bigcommerce.svg");
   }
