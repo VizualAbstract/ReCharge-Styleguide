@@ -1,4 +1,4 @@
-/* 
+/*
 	Dynamic: Modals
 	Version 1.0
 	Date: 8-17-2016
@@ -28,6 +28,7 @@
 		background: transparent;
 		outline: 0;
 		cursor: pointer;
+		text-align: right;
 		z-index: $zindex-modal;
 		&:before {
 			content: "\f00d";
@@ -127,8 +128,8 @@
 
 .rc_modal__actions {
 	@extend .form__actions;
-	margin-top: 0;
-	margin-bottom: 0;
+	margin-top: 0 !important; // Temporary patch -- remove when we stop relying on .new, or margin is seperated from .form__actions
+	margin-bottom: 0 !important; // Temporary patch -- remove when we stop relying on .new, or margin is seperated from .form__actions
 	.button {
 		@extend .button--large;
 	}

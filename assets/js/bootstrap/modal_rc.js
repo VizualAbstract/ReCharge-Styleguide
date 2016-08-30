@@ -77,9 +77,9 @@
     this.backdrop(function () {
       var transition = $.support.transition && that.$element.hasClass('rc_fade')
 
-      if (!that.$element.parent().length) {
+      // if (!that.$element.parent().length) { // Append to the body if it's proxy
         that.$element.appendTo(that.$body) // don't move modals dom position
-      }
+      // }
 
       that.$element
         .show()

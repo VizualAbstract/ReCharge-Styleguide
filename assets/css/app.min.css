@@ -6035,7 +6035,7 @@ h1 + .setup-header__description,
 */
 /* line 86, ../sass/app.scss */
 .new {
-  /* 
+  /*
   	Dynamic: Modals
   	Version 1.0
   	Date: 8-17-2016
@@ -6081,18 +6081,19 @@ h1 + .setup-header__description,
   background: transparent;
   outline: 0;
   cursor: pointer;
+  text-align: right;
   z-index: 90;
 }
-/* line 32, ../sass/dynamic/_modals.scss */
+/* line 33, ../sass/dynamic/_modals.scss */
 .new .rc_modal__close:before {
   content: "\f00d";
   font-size: 24px;
 }
-/* line 37, ../sass/dynamic/_modals.scss */
+/* line 38, ../sass/dynamic/_modals.scss */
 .new .rc_modal__title {
   padding-right: 42px;
 }
-/* line 40, ../sass/dynamic/_modals.scss */
+/* line 41, ../sass/dynamic/_modals.scss */
 .new .rc_modal__content {
   position: relative;
   background-color: #ffffff;
@@ -6100,12 +6101,12 @@ h1 + .setup-header__description,
   outline: 0;
   padding: 35px 30px;
 }
-/* line 46, ../sass/dynamic/_modals.scss */
+/* line 47, ../sass/dynamic/_modals.scss */
 .new .rc_modal__content img {
   max-width: 100%;
   height: auto;
 }
-/* line 50, ../sass/dynamic/_modals.scss */
+/* line 51, ../sass/dynamic/_modals.scss */
 .new .rc_modal__content h1, .new .rc_modal__content .h1,
 .new .rc_modal__content h2, .new .rc_modal__content .h2,
 .new .rc_modal__content h3, .new .rc_modal__content .h3,
@@ -6113,23 +6114,23 @@ h1 + .setup-header__description,
 .new .rc_modal__content h5, .new .rc_modal__content .h5 {
   color: #424242;
 }
-/* line 57, ../sass/dynamic/_modals.scss */
+/* line 58, ../sass/dynamic/_modals.scss */
 .new .rc_modal__content h3, .new .rc_modal__content .h3 {
   font-family: 'ralewaysemibold', arial, sans-serif;
 }
 @media (min-width: 768px) {
-  /* line 61, ../sass/dynamic/_modals.scss */
+  /* line 62, ../sass/dynamic/_modals.scss */
   .new .rc_modal--small {
     width: 300px;
   }
 }
 @media (min-width: 992px) {
-  /* line 66, ../sass/dynamic/_modals.scss */
+  /* line 67, ../sass/dynamic/_modals.scss */
   .new .rc_modal--large {
     width: 900px;
   }
 }
-/* line 74, ../sass/dynamic/_modals.scss */
+/* line 75, ../sass/dynamic/_modals.scss */
 .new .rc_modal.rc_fade .rc_modal__dialog {
   -webkit-transform: translate(0, -25%);
           transform: translate(0, -25%);
@@ -6138,34 +6139,34 @@ h1 + .setup-header__description,
   transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
-/* line 78, ../sass/dynamic/_modals.scss */
+/* line 79, ../sass/dynamic/_modals.scss */
 .new .rc_modal.rc_in .rc_modal__dialog {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
 }
-/* line 81, ../sass/dynamic/_modals.scss */
+/* line 82, ../sass/dynamic/_modals.scss */
 .new .rc_modal__dialog {
   position: relative;
   width: auto;
   margin: 10px;
 }
 @media (min-width: 768px) {
-  /* line 81, ../sass/dynamic/_modals.scss */
+  /* line 82, ../sass/dynamic/_modals.scss */
   .new .rc_modal__dialog {
     width: 700px;
     margin: 4% auto;
   }
 }
-/* line 92, ../sass/dynamic/_modals.scss */
+/* line 93, ../sass/dynamic/_modals.scss */
 .new .rc_modal__open {
   overflow: hidden;
 }
-/* line 94, ../sass/dynamic/_modals.scss */
+/* line 95, ../sass/dynamic/_modals.scss */
 .new .rc_modal__open .rc_modal {
   overflow-x: hidden;
   overflow-y: auto;
 }
-/* line 100, ../sass/dynamic/_modals.scss */
+/* line 101, ../sass/dynamic/_modals.scss */
 .new .rc_modal__backdrop {
   position: fixed;
   top: 0;
@@ -6175,19 +6176,19 @@ h1 + .setup-header__description,
   z-index: 80;
   background-color: #000;
 }
-/* line 108, ../sass/dynamic/_modals.scss */
+/* line 109, ../sass/dynamic/_modals.scss */
 .new .rc_modal__backdrop.rc_fade {
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-/* line 113, ../sass/dynamic/_modals.scss */
+/* line 114, ../sass/dynamic/_modals.scss */
 .new .rc_modal__backdrop.rc_in, .new .rc_modal__backdrop.rc_fade.rc_in {
   opacity: 0.7;
   filter: alpha(opacity=70);
 }
-/* line 120, ../sass/dynamic/_modals.scss */
+/* line 121, ../sass/dynamic/_modals.scss */
 .new .rc_modal__scrollbar-measure {
   position: absolute;
   top: -9999px;
@@ -6195,19 +6196,19 @@ h1 + .setup-header__description,
   height: 50px;
   overflow: scroll;
 }
-/* line 128, ../sass/dynamic/_modals.scss */
+/* line 129, ../sass/dynamic/_modals.scss */
 .new .rc_modal__actions {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
-/* line 137, ../sass/dynamic/_modals.scss */
+/* line 138, ../sass/dynamic/_modals.scss */
 .new .fade,
 .new .rc_fade {
   opacity: 0;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-/* line 141, ../sass/dynamic/_modals.scss */
+/* line 142, ../sass/dynamic/_modals.scss */
 .new .fade.in, .new .fade.rc_in,
 .new .rc_fade.in,
 .new .rc_fade.rc_in {

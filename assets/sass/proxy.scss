@@ -80,7 +80,6 @@
 	Heavily dependant on javascript to deliver a specific effect.
 */
 // .new {
-		@import 'dynamic/_modals.scss';
 // 	@import 'dynamic/_tooltips.scss';
 // 	@import 'dynamic/_popovers.scss';
 // }
@@ -196,8 +195,13 @@
 // }
 }
 
+@import 'dynamic/_modals.scss';
+
 .rc_modal__open {
 	overflow: hidden;
+	// #content { // this was created as an initial response to BootayBag. Modals are now appended to body
+	// 	display: initial;
+	// }
 }
 
 .rc_modal__backdrop {

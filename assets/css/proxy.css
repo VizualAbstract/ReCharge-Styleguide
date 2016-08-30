@@ -75,14 +75,6 @@
   	Dynamic
   	Heavily dependant on javascript to deliver a specific effect.
   */
-  /* 
-  	Dynamic: Modals
-  	Version 1.0
-  	Date: 8-17-2016
-  	Author: Corey M. Capetillo
-  	8-17-2016:
-  		- Abstract modals outside of original file
-  */
   /*
   	Vendors
   	Impoted libraries, generally serving a singular purpose.
@@ -328,7 +320,7 @@
         touch-action: manipulation;
     white-space: nowrap;
     vertical-align: middle; }
-  .recharge .button--large.button, .recharge .rc_modal__actions .button {
+  .recharge .button--large.button, .recharge .rc_modal__actions .button, .rc_modal__actions .recharge .button {
     font-size: inherit; }
   .recharge .rc_button.rc_button--link.rc_button--alt {
     text-decoration: none; }
@@ -499,114 +491,130 @@
       text-align: right;
       font-size: 16px;
       white-space: nowrap; }
-  .recharge .rc_modal {
-    display: none;
-    overflow: auto;
-    overflow-y: scroll;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 90;
-    -webkit-overflow-scrolling: touch;
-    outline: 0; }
-    .recharge .rc_modal__close {
-      font-family: fontawesome;
-      position: absolute;
-      top: 30px;
-      right: 30px;
-      border: 0;
-      padding: 0;
-      background: transparent;
-      outline: 0;
-      cursor: pointer;
-      z-index: 90; }
-      .recharge .rc_modal__close:before {
-        content: "\f00d";
-        font-size: 24px; }
-    .recharge .rc_modal__title {
-      padding-right: 42px; }
-    .recharge .rc_modal__content {
-      position: relative;
-      background-color: #ffffff;
-      background-clip: padding-box;
-      outline: 0;
-      padding: 35px 30px; }
-      .recharge .rc_modal__content img {
-        max-width: 100%;
-        height: auto; }
-      .recharge .rc_modal__content h1, .recharge .rc_modal__content .h1,
-      .recharge .rc_modal__content h2, .recharge .rc_modal__content .h2,
-      .recharge .rc_modal__content h3, .recharge .rc_modal__content .h3,
-      .recharge .rc_modal__content h4, .recharge .rc_modal__content .h4,
-      .recharge .rc_modal__content h5, .recharge .rc_modal__content .h5 {
-        color: #424242; }
-      .recharge .rc_modal__content h3, .recharge .rc_modal__content .h3 {
-        font-family: 'ralewaysemibold', arial, sans-serif; }
-    @media (min-width: 768px) {
-      .recharge .rc_modal--small {
-        width: 300px; } }
-    @media (min-width: 992px) {
-      .recharge .rc_modal--large {
-        width: 900px; } }
-  .recharge .rc_modal.rc_fade .rc_modal__dialog {
-    -webkit-transform: translate(0, -25%);
-            transform: translate(0, -25%);
-    -webkit-transition: -webkit-transform 0.3s ease-out;
-    transition: -webkit-transform 0.3s ease-out;
-    transition: transform 0.3s ease-out;
-    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
-  .recharge .rc_modal.rc_in .rc_modal__dialog {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0); }
-  .recharge .rc_modal__dialog {
-    position: relative;
-    width: auto;
-    margin: 10px; }
-    @media (min-width: 768px) {
-      .recharge .rc_modal__dialog {
-        width: 700px;
-        margin: 4% auto; } }
-  .recharge .rc_modal__open {
-    overflow: hidden; }
-    .recharge .rc_modal__open .rc_modal {
-      overflow-x: hidden;
-      overflow-y: auto; }
-  .recharge .rc_modal__backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 80;
-    background-color: #000; }
-    .recharge .rc_modal__backdrop.rc_fade {
-      opacity: 0;
-      filter: alpha(opacity=0);
-      -webkit-transition: opacity 0.2s linear;
-      transition: opacity 0.2s linear; }
-    .recharge .rc_modal__backdrop.rc_in, .recharge .rc_modal__backdrop.rc_fade.rc_in {
-      opacity: 0.7;
-      filter: alpha(opacity=70); }
-  .recharge .rc_modal__scrollbar-measure {
+
+/*
+	Dynamic: Modals
+	Version 1.0
+	Date: 8-17-2016
+	Author: Corey M. Capetillo
+	8-17-2016:
+		- Abstract modals outside of original file
+*/
+.rc_modal {
+  display: none;
+  overflow: auto;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 90;
+  -webkit-overflow-scrolling: touch;
+  outline: 0; }
+  .rc_modal__close {
+    font-family: fontawesome;
     position: absolute;
-    top: -9999px;
-    width: 50px;
-    height: 50px;
-    overflow: scroll; }
-  .recharge .rc_modal__actions {
-    margin-top: 0;
-    margin-bottom: 0; }
-  .recharge .fade,
-  .recharge .rc_fade {
+    top: 30px;
+    right: 30px;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    outline: 0;
+    cursor: pointer;
+    text-align: right;
+    z-index: 90; }
+    .rc_modal__close:before {
+      content: "\f00d";
+      font-size: 24px; }
+  .rc_modal__title {
+    padding-right: 42px; }
+  .rc_modal__content {
+    position: relative;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    outline: 0;
+    padding: 35px 30px; }
+    .rc_modal__content img {
+      max-width: 100%;
+      height: auto; }
+    .rc_modal__content h1, .rc_modal__content .h1,
+    .rc_modal__content h2, .rc_modal__content .h2,
+    .rc_modal__content h3, .rc_modal__content .h3,
+    .rc_modal__content h4, .rc_modal__content .h4,
+    .rc_modal__content h5, .rc_modal__content .h5 {
+      color: #424242; }
+    .rc_modal__content h3, .rc_modal__content .h3 {
+      font-family: 'ralewaysemibold', arial, sans-serif; }
+  @media (min-width: 768px) {
+    .rc_modal--small {
+      width: 300px; } }
+  @media (min-width: 992px) {
+    .rc_modal--large {
+      width: 900px; } }
+
+.rc_modal.rc_fade .rc_modal__dialog {
+  -webkit-transform: translate(0, -25%);
+          transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
+.rc_modal.rc_in .rc_modal__dialog {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0); }
+.rc_modal__dialog {
+  position: relative;
+  width: auto;
+  margin: 10px; }
+  @media (min-width: 768px) {
+    .rc_modal__dialog {
+      width: 700px;
+      margin: 4% auto; } }
+
+.rc_modal__open {
+  overflow: hidden; }
+  .rc_modal__open .rc_modal {
+    overflow-x: hidden;
+    overflow-y: auto; }
+
+.rc_modal__backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 80;
+  background-color: #000; }
+  .rc_modal__backdrop.rc_fade {
     opacity: 0;
+    filter: alpha(opacity=0);
     -webkit-transition: opacity 0.2s linear;
     transition: opacity 0.2s linear; }
-    .recharge .fade.in, .recharge .fade.rc_in,
-    .recharge .rc_fade.in,
-    .recharge .rc_fade.rc_in {
-      opacity: 1; }
+  .rc_modal__backdrop.rc_in, .rc_modal__backdrop.rc_fade.rc_in {
+    opacity: 0.7;
+    filter: alpha(opacity=70); }
+
+.rc_modal__scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll; }
+
+.rc_modal__actions {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
+.fade,
+.rc_fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear; }
+  .fade.in, .fade.rc_in,
+  .rc_fade.in,
+  .rc_fade.rc_in {
+    opacity: 1; }
 
 .rc_modal__open {
   overflow: hidden; }

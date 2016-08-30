@@ -1,6 +1,6 @@
 <button data-toggle="rc_modal__window" data-target="#modal__context_feature_action" class="button">Launch Modal</button>
 
-<div id="modal__context_feature_action" class="rc_modal rc_fade">
+<div id="modal__context_feature_action" class="rc_modal rc_fade new">
 	<div class="rc_modal__dialog">
 		<div class="rc_modal__content">
 			<button class="rc_modal__close" data-dismiss="rc_modal__window"></button>
