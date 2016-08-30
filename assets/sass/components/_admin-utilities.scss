@@ -32,6 +32,12 @@
 }
 
 .admin-recharge {
+	&.switch {
+		&:after {
+			content: "";
+			display: none;
+		}
+	}
 	&.rc_toggle-list__item {
 		color: #53BAD3;
 		&:after {
@@ -40,6 +46,11 @@
 		}
 		.switch {
 			background-color: #53BAD3;
+		}
+		.disabled {
+			.switch {
+				background-color: #FFF;
+			}
 		}
 	}
 	&.form__group {
