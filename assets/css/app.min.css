@@ -3267,8 +3267,10 @@ h1 + .setup-header__description,
   	Version 1.0
   	Date: 8-24-2016
   	Author: Corey M. Capetillo
-  	8:24-2016:
+  	8-24-2016:
   		- Create the toggle list, based on the action-list, but with additional classes to demonstrate a disabled state. Will work with switches
+  	8-30-2016:
+  		- Remove border division from toggles
   */
   /*
   	Elements: Progress Bar
@@ -4059,76 +4061,75 @@ h1 + .setup-header__description,
   height: auto;
   vertical-align: middle;
 }
-/* line 10, ../sass/components/_toggle-list.scss */
+/* line 12, ../sass/components/_toggle-list.scss */
 .new .rc_toggle-list {
   display: table;
   width: 100%;
 }
-/* line 13, ../sass/components/_toggle-list.scss */
+/* line 15, ../sass/components/_toggle-list.scss */
 .new .rc_toggle-list__item {
   display: table-row;
   width: 100%;
   text-align: left;
 }
-/* line 17, ../sass/components/_toggle-list.scss */
+/* line 19, ../sass/components/_toggle-list.scss */
 .new .rc_toggle-list__item__content, .new .rc_toggle-list__item__action {
   display: table-cell;
   vertical-align: middle;
-  border-bottom: 1px solid #EEE;
   padding: 8px 15px;
 }
-/* line 24, ../sass/components/_toggle-list.scss */
+/* line 25, ../sass/components/_toggle-list.scss */
 .new .rc_toggle-list__item__content {
   text-align: left;
 }
-/* line 26, ../sass/components/_toggle-list.scss */
+/* line 27, ../sass/components/_toggle-list.scss */
 .new .rc_toggle-list__item__content > * {
   vertical-align: middle;
 }
-/* line 30, ../sass/components/_toggle-list.scss */
+/* line 31, ../sass/components/_toggle-list.scss */
 .new .rc_toggle-list__item__action {
   text-align: right;
   padding-left: 15px;
 }
-/* line 35, ../sass/components/_toggle-list.scss */
+/* line 36, ../sass/components/_toggle-list.scss */
 .new .rc_toggle-list__item:last-child .rc_toggle-list__item__content,
 .new .rc_toggle-list__item:last-child .rc_toggle-list__item__action {
   border-bottom-width: 0 !important;
 }
-/* line 41, ../sass/components/_toggle-list.scss */
+/* line 42, ../sass/components/_toggle-list.scss */
 .new .rc_toggle-list .switch {
   background-color: #4DD6B7;
   -webkit-transition: background .3s;
   transition: background .3s;
 }
-/* line 44, ../sass/components/_toggle-list.scss */
+/* line 45, ../sass/components/_toggle-list.scss */
 .new .rc_toggle-list .switch__overlay {
   background: #8E8F8E;
 }
-/* line 49, ../sass/components/_toggle-list.scss */
+/* line 50, ../sass/components/_toggle-list.scss */
 .new .rc_toggle-list__item .disabled_status {
   display: none;
 }
-/* line 53, ../sass/components/_toggle-list.scss */
+/* line 54, ../sass/components/_toggle-list.scss */
 .new .rc_toggle-list__item.disabled {
   background-color: #EEEEEE;
   color: #8E8F8E;
 }
-/* line 57, ../sass/components/_toggle-list.scss */
+/* line 58, ../sass/components/_toggle-list.scss */
 .new .rc_toggle-list__item.disabled .rc_toggle-list__item__content a {
   color: #8E8F8E;
 }
-/* line 60, ../sass/components/_toggle-list.scss */
+/* line 61, ../sass/components/_toggle-list.scss */
 .new .rc_toggle-list__item.disabled .rc_toggle-list__item__content .disabled_status {
   font-weight: normal;
   font-family: 'raleway-semibold';
   display: inline-block;
 }
-/* line 66, ../sass/components/_toggle-list.scss */
+/* line 67, ../sass/components/_toggle-list.scss */
 .new .rc_toggle-list__item.disabled .switch {
   background-color: #FFFFFF;
 }
-/* line 72, ../sass/components/_toggle-list.scss */
+/* line 73, ../sass/components/_toggle-list.scss */
 .new--small {
   min-width: 10px;
   width: 100%;
@@ -4138,12 +4139,12 @@ h1 + .setup-header__description,
   border-radius: 10px;
   font-size: 0;
 }
-/* line 80, ../sass/components/_toggle-list.scss */
+/* line 81, ../sass/components/_toggle-list.scss */
 .new--small .switch__left,
 .new--small .switch__right {
   font-size: 0;
 }
-/* line 84, ../sass/components/_toggle-list.scss */
+/* line 85, ../sass/components/_toggle-list.scss */
 .new--small .switch__overlay {
   height: 20px;
   border-radius: 10px;
@@ -4172,34 +4173,38 @@ h1 + .setup-header__description,
   content: "";
   display: none;
 }
-/* line 41, ../sass/components/_admin-utilities.scss */
+/* line 40, ../sass/components/_admin-utilities.scss */
+.new .admin-recharge.switch .switch__overlay {
+  background-color: #53BAD3;
+}
+/* line 44, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.rc_toggle-list__item {
   color: #53BAD3;
 }
-/* line 43, ../sass/components/_admin-utilities.scss */
+/* line 46, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.rc_toggle-list__item:after {
   content: "";
   display: none;
 }
-/* line 47, ../sass/components/_admin-utilities.scss */
+/* line 50, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.rc_toggle-list__item .switch {
   background-color: #53BAD3;
 }
-/* line 51, ../sass/components/_admin-utilities.scss */
+/* line 54, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.rc_toggle-list__item.disabled .switch {
   background-color: #FFF;
 }
-/* line 56, ../sass/components/_admin-utilities.scss */
+/* line 59, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group, .new .admin-recharge.form__search, .new .admin-recharge.form__search__no-results {
   color: #53BAD3;
 }
-/* line 58, ../sass/components/_admin-utilities.scss */
+/* line 61, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group:after, .new .admin-recharge.form__search:after, .new .admin-recharge.form__search__no-results:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 63, ../sass/components/_admin-utilities.scss */
+/* line 66, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input, .new .admin-recharge.form__search .form__input, .new .admin-recharge.form__search__no-results .form__input, .new .admin-recharge.form__group textarea.form__input__code, .new .admin-recharge.form__search textarea.form__input__code, .new .admin-recharge.form__search__no-results textarea.form__input__code, .new .admin-recharge.form__group input[type="text"].form__color, .new .admin-recharge.form__search input[type="text"].form__color, .new .admin-recharge.form__search__no-results input[type="text"].form__color, .new .admin-recharge.form__group input[type="text"].form__number, .new .admin-recharge.form__search input[type="text"].form__number, .new .admin-recharge.form__search__no-results input[type="text"].form__number,
 .new .admin-recharge.form__group input[type="number"].form__number,
 .new .admin-recharge.form__search input[type="number"].form__number,
@@ -4210,7 +4215,7 @@ h1 + .setup-header__description,
   color: #53BAD3;
   border: 1px solid #53BAD3;
 }
-/* line 67, ../sass/components/_admin-utilities.scss */
+/* line 70, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input:focus, .new .admin-recharge.form__search .form__input:focus, .new .admin-recharge.form__search__no-results .form__input:focus, .new .admin-recharge.form__group textarea.form__input__code:focus, .new .admin-recharge.form__search textarea.form__input__code:focus, .new .admin-recharge.form__search__no-results textarea.form__input__code:focus, .new .admin-recharge.form__group input[type="text"].form__color:focus, .new .admin-recharge.form__search input[type="text"].form__color:focus, .new .admin-recharge.form__search__no-results input[type="text"].form__color:focus, .new .admin-recharge.form__group input[type="text"].form__number:focus, .new .admin-recharge.form__search input[type="text"].form__number:focus, .new .admin-recharge.form__search__no-results input[type="text"].form__number:focus,
 .new .admin-recharge.form__group input[type="number"].form__number:focus,
 .new .admin-recharge.form__search input[type="number"].form__number:focus,
@@ -4220,7 +4225,7 @@ h1 + .setup-header__description,
 .new .admin-recharge.form__search__no-results .form__input__code:focus {
   border-color: #4DD6B7;
 }
-/* line 70, ../sass/components/_admin-utilities.scss */
+/* line 73, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input::-webkit-input-placeholder, .new .admin-recharge.form__search .form__input::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results .form__input::-webkit-input-placeholder, .new .admin-recharge.form__group textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__search textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__color::-webkit-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__color::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color::-webkit-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__number::-webkit-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__number::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number::-webkit-input-placeholder,
 .new .admin-recharge.form__group input[type="number"].form__number::-webkit-input-placeholder,
 .new .admin-recharge.form__search input[type="number"].form__number::-webkit-input-placeholder,
@@ -4230,7 +4235,7 @@ h1 + .setup-header__description,
 .new .admin-recharge.form__search__no-results .form__input__code::-webkit-input-placeholder {
   color: #53BAD3;
 }
-/* line 73, ../sass/components/_admin-utilities.scss */
+/* line 76, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input:-moz-placeholder, .new .admin-recharge.form__search .form__input:-moz-placeholder, .new .admin-recharge.form__search__no-results .form__input:-moz-placeholder, .new .admin-recharge.form__group textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__search textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__color:-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__color:-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color:-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__number:-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__number:-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number:-moz-placeholder,
 .new .admin-recharge.form__group input[type="number"].form__number:-moz-placeholder,
 .new .admin-recharge.form__search input[type="number"].form__number:-moz-placeholder,
@@ -4240,7 +4245,7 @@ h1 + .setup-header__description,
 .new .admin-recharge.form__search__no-results .form__input__code:-moz-placeholder {
   color: #53BAD3;
 }
-/* line 76, ../sass/components/_admin-utilities.scss */
+/* line 79, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input::-moz-placeholder, .new .admin-recharge.form__search .form__input::-moz-placeholder, .new .admin-recharge.form__search__no-results .form__input::-moz-placeholder, .new .admin-recharge.form__group textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__search textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__color::-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__color::-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color::-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__number::-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__number::-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number::-moz-placeholder,
 .new .admin-recharge.form__group input[type="number"].form__number::-moz-placeholder,
 .new .admin-recharge.form__search input[type="number"].form__number::-moz-placeholder,
@@ -4250,7 +4255,7 @@ h1 + .setup-header__description,
 .new .admin-recharge.form__search__no-results .form__input__code::-moz-placeholder {
   color: #53BAD3;
 }
-/* line 79, ../sass/components/_admin-utilities.scss */
+/* line 82, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__input:-ms-input-placeholder, .new .admin-recharge.form__search .form__input:-ms-input-placeholder, .new .admin-recharge.form__search__no-results .form__input:-ms-input-placeholder, .new .admin-recharge.form__group textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__search textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__color:-ms-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__color:-ms-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color:-ms-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__number:-ms-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__number:-ms-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number:-ms-input-placeholder,
 .new .admin-recharge.form__group input[type="number"].form__number:-ms-input-placeholder,
 .new .admin-recharge.form__search input[type="number"].form__number:-ms-input-placeholder,
@@ -4260,7 +4265,7 @@ h1 + .setup-header__description,
 .new .admin-recharge.form__search__no-results .form__input__code:-ms-input-placeholder {
   color: #53BAD3;
 }
-/* line 87, ../sass/components/_admin-utilities.scss */
+/* line 90, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__radio + .form__radio__label:before, .new .admin-recharge.form__search .form__radio + .form__radio__label:before, .new .admin-recharge.form__search__no-results .form__radio + .form__radio__label:before,
 .new .admin-recharge.form__group .form__radio + .form__checkbox__label:before,
 .new .admin-recharge.form__search .form__radio + .form__checkbox__label:before,
@@ -4273,7 +4278,7 @@ h1 + .setup-header__description,
 .new .admin-recharge.form__search__no-results .form__checkbox + .form__checkbox__label:before {
   border-color: #53BAD3;
 }
-/* line 94, ../sass/components/_admin-utilities.scss */
+/* line 97, ../sass/components/_admin-utilities.scss */
 .new .admin-recharge.form__group .form__radio:checked + .form__radio__label:before, .new .admin-recharge.form__search .form__radio:checked + .form__radio__label:before, .new .admin-recharge.form__search__no-results .form__radio:checked + .form__radio__label:before,
 .new .admin-recharge.form__group .form__radio:checked + .form__checkbox__label:before,
 .new .admin-recharge.form__search .form__radio:checked + .form__checkbox__label:before,
@@ -4286,32 +4291,32 @@ h1 + .setup-header__description,
 .new .admin-recharge.form__search__no-results .form__checkbox:checked + .form__checkbox__label:before {
   background-color: #53BAD3;
 }
-/* line 103, ../sass/components/_admin-utilities.scss */
+/* line 106, ../sass/components/_admin-utilities.scss */
 .new .admin-shopify::after {
   color: #7AB55C;
   content: "\f005  Shopify";
 }
-/* line 107, ../sass/components/_admin-utilities.scss */
+/* line 110, ../sass/components/_admin-utilities.scss */
 .new .admin-bigcommerce::after {
   color: #4A8BF2;
   content: "\f005  BigCom";
 }
-/* line 112, ../sass/components/_admin-utilities.scss */
+/* line 115, ../sass/components/_admin-utilities.scss */
 .new .navbar__brand--shopify {
   background-image: url("../images/navbar__brand--shopify.svg");
 }
 @media screen and (min-width: 355px) and (max-width: 915px) {
-  /* line 112, ../sass/components/_admin-utilities.scss */
+  /* line 115, ../sass/components/_admin-utilities.scss */
   .new .navbar__brand--shopify {
     background-image: url("../images/navbar__brand--mobile--shopify.svg");
   }
 }
-/* line 119, ../sass/components/_admin-utilities.scss */
+/* line 122, ../sass/components/_admin-utilities.scss */
 .new .navbar__brand--bigcommerce {
   background-image: url("../images/navbar__brand--bigcommerce.svg");
 }
 @media screen and (min-width: 355px) and (max-width: 915px) {
-  /* line 119, ../sass/components/_admin-utilities.scss */
+  /* line 122, ../sass/components/_admin-utilities.scss */
   .new .navbar__brand--bigcommerce {
     background-image: url("../images/navbar__brand--mobile--bigcommerce.svg");
   }

@@ -3,8 +3,10 @@
 	Version 1.0
 	Date: 8-24-2016
 	Author: Corey M. Capetillo
-	8:24-2016:
+	8-24-2016:
 		- Create the toggle list, based on the action-list, but with additional classes to demonstrate a disabled state. Will work with switches
+	8-30-2016:
+		- Remove border division from toggles
 */
 
 .rc_toggle-list {
@@ -18,7 +20,6 @@
 		&__action {
 			display: table-cell;
 			vertical-align: middle;
-			border-bottom: 1px solid #EEE;
 			padding: 8px 15px;
 		}
 		&__content {

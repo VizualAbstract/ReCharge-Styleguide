@@ -37,6 +37,9 @@
 			content: "";
 			display: none;
 		}
+		.switch__overlay {
+			background-color: #53BAD3;
+		}
 	}
 	&.rc_toggle-list__item {
 		color: #53BAD3;

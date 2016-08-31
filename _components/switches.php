@@ -7,15 +7,6 @@
 	</div><!-- .switch__inner -->
 </label><!-- .switch -->
 
-<label class="switch">
-	<div class="switch__inner">
-		<input class="switch__input" type="checkbox" checked="checked">
-		<span class="switch__overlay"></span>
-		<span class="switch__left">Off</span>
-		<span class="switch__right">On</span>
-	</div><!-- .switch__inner -->
-</label><!-- .switch -->
-
 <label class="switch switch--large">
 	<div class="switch__inner">
 		<input class="switch__input" type="checkbox">
@@ -34,16 +25,16 @@
 	</div><!-- .switch__inner -->
 </label><!-- .switch -->
 
-<span class="admin-recharge">
-	<label class="switch">
-		<div class="switch__inner">
-			<input class="switch__input" type="checkbox">
-			<span class="switch__overlay"></span>
-			<span class="switch__left">Off</span>
-			<span class="switch__right">On</span>
-		</div><!-- .switch__inner -->
-	</label><!-- .switch -->
-</span><!-- .admin-recharge -->
+<hr>
+
+<label class="switch admin-recharge">
+	<div class="switch__inner">
+		<input class="switch__input" type="checkbox" checked="checked">
+		<span class="switch__overlay"></span>
+		<span class="switch__left">Off</span>
+		<span class="switch__right">On</span>
+	</div><!-- .switch__inner -->
+</label><!-- .switch -->
 
 <label class="admin-recharge switch switch--large">
 	<div class="switch__inner">
