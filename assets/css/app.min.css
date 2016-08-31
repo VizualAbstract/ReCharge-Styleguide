@@ -3194,7 +3194,7 @@ h1 + .setup-header__description,
   		- Use negative-marign to fix h1-h5 tags
   		- Dropdown menu needs to be semi-bold
   */
-  /* 
+  /*
   	Element: Switches
   	Version 1.0
   	Date: 5-5-2016
@@ -3466,11 +3466,25 @@ h1 + .setup-header__description,
   height: 20px;
   border-radius: 10px;
 }
-/* line 79, ../sass/components/_switches.scss */
+@media screen and (max-width: 1199px) {
+  /* line 61, ../sass/components/_switches.scss */
+  .new .switch--small {
+    max-width: 34px;
+    line-height: 17px;
+    height: 17px;
+    border-radius: 8.5px;
+  }
+  /* line 82, ../sass/components/_switches.scss */
+  .new .switch--small .switch__overlay {
+    height: 17px;
+    border-radius: 8.5px;
+  }
+}
+/* line 89, ../sass/components/_switches.scss */
 .new .switch__input {
   display: none;
 }
-/* line 82, ../sass/components/_switches.scss */
+/* line 92, ../sass/components/_switches.scss */
 .new .switch__overlay {
   height: 34px;
   width: 50%;
@@ -3484,7 +3498,7 @@ h1 + .setup-header__description,
   background: #4DD6B7;
   border-radius: 17px;
 }
-/* line 94, ../sass/components/_switches.scss */
+/* line 104, ../sass/components/_switches.scss */
 .new .switch__left,
 .new .switch__right {
   box-sizing: border-box;
@@ -3497,21 +3511,21 @@ h1 + .setup-header__description,
   padding-right: 17px;
 }
 @media screen and (max-width: 991px) {
-  /* line 94, ../sass/components/_switches.scss */
+  /* line 104, ../sass/components/_switches.scss */
   .new .switch__left,
   .new .switch__right {
     overflow: hidden;
   }
 }
-/* line 108, ../sass/components/_switches.scss */
+/* line 118, ../sass/components/_switches.scss */
 .new .switch__left {
   float: left;
 }
-/* line 111, ../sass/components/_switches.scss */
+/* line 121, ../sass/components/_switches.scss */
 .new .switch__right {
   float: right;
 }
-/* line 114, ../sass/components/_switches.scss */
+/* line 124, ../sass/components/_switches.scss */
 .new .switch--checked .switch__input + .switch__overlay,
 .new .switch__input:checked + .switch__overlay {
   left: 50%;
@@ -4172,7 +4186,7 @@ h1 + .setup-header__description,
   background-color: #53BAD3;
 }
 /* line 51, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.rc_toggle-list__item .disabled .switch {
+.new .admin-recharge.rc_toggle-list__item.disabled .switch {
   background-color: #FFF;
 }
 /* line 56, ../sass/components/_admin-utilities.scss */
@@ -6026,6 +6040,11 @@ h1 + .setup-header__description,
   width: 100%;
 }
 /* line 15, ../sass/layouts/_admin-tools.scss */
+.new .admin-tools a {
+  color: #FFF;
+  text-decoration: underline;
+}
+/* line 20, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools__toggler {
   background-color: transparent;
   font-family: monospace;
@@ -6033,13 +6052,22 @@ h1 + .setup-header__description,
   padding: 0;
   color: #FFF;
 }
-/* line 21, ../sass/layouts/_admin-tools.scss */
+/* line 26, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools__toggler button {
   font-size: 11px !important;
   padding: 4px 8px;
   line-height: 1;
   height: auto;
   cursor: pointer;
+}
+/* line 35, ../sass/layouts/_admin-tools.scss */
+.new .admin-tools .rc_toggle-list__item, .new .admin-tools .rc_toggle-list__item.disabled {
+  background-color: transparent;
+  color: #FFF;
+}
+/* line 39, ../sass/layouts/_admin-tools.scss */
+.new .admin-tools .rc_toggle-list__item a, .new .admin-tools .rc_toggle-list__item.disabled a {
+  color: #FFF;
 }
 
 /*

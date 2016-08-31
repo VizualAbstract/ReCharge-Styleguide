@@ -12,6 +12,11 @@
 	left: 0;
 	width: 100%;
 
+	a {
+		color: #FFF;
+		text-decoration: underline;
+	}
+
 	&__toggler {
 		background-color: transparent;
 		font-family: monospace;
@@ -24,6 +29,16 @@
 			line-height: 1;
 			height: auto;
 			cursor: pointer;
+		}
+	}
+	.rc_toggle-list__item {
+		&,
+		&.disabled {
+			background-color: transparent;
+			color: #FFF;
+			a {
+				color: #FFF;
+			}
 		}
 	}
 }

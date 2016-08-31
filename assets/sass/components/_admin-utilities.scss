@@ -47,7 +47,7 @@
 		.switch {
 			background-color: #53BAD3;
 		}
-		.disabled {
+		&.disabled {
 			.switch {
 				background-color: #FFF;
 			}

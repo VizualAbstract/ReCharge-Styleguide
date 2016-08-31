@@ -1,4 +1,4 @@
-/* 
+/*
 	Element: Switches
 	Version 1.0
 	Date: 5-5-2016
@@ -73,6 +73,16 @@ $switch-small-height: 20px;
 		.switch__overlay {
 			height: $switch-small-height;
 			border-radius: $switch-small-height / 2;
+		}
+		@media screen and (max-width: $screen-md-max) {
+			max-width: ($switch-small-height - 3) * 2;
+			line-height: $switch-small-height - 3;
+			height: $switch-small-height - 3;
+			border-radius: ($switch-small-height - 3) / 2;
+			.switch__overlay {
+				height: $switch-small-height - 3;
+				border-radius: ($switch-small-height - 3) / 2;
+			}
 		}
 	}
 }
