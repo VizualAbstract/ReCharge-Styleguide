@@ -1,4 +1,4 @@
-/* 
+/*
 	Components: Breadcrumbs
 	Version 1.0
 	Date: 8-15-2016
@@ -25,13 +25,15 @@
 		text-align: left;
 		max-width: max-content;
 		font-size: $font-size-small;
-		a {
+		> a,
+		> span {
 			color: $white;
 			display: block;
 			height: 30px;
 			line-height: 30px;
 			padding-left: 20px;
 			padding-right: 10px;
+			white-space: nowrap;
 		}
 		&:after,
 		&:before {
@@ -65,6 +67,18 @@
 			}
 			&:after {
 				border-left-color: $button-background;
+			}
+		}
+		&.no-link {
+			&:hover {
+				span {
+					background: $button-background;
+				}
+				& + .crumb {
+					&:after {
+						border-left-color: $button-background;
+					}
+				}
 			}
 		}
 		&:last-child {

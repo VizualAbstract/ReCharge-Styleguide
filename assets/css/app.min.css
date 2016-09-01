@@ -3288,7 +3288,7 @@ h1 + .setup-header__description,
   	Date: 5-5-2016
   	Author: Corey M. Capetillo
   */
-  /* 
+  /*
   	Components: Breadcrumbs
   	Version 1.0
   	Date: 8-15-2016
@@ -3994,15 +3994,17 @@ h1 + .setup-header__description,
   font-size: 14px;
 }
 /* line 28, ../sass/components/_breadcrumbs.scss */
-.new .breadcrumbs .crumb a {
+.new .breadcrumbs .crumb > a,
+.new .breadcrumbs .crumb > span {
   color: #FFFFFF;
   display: block;
   height: 30px;
   line-height: 30px;
   padding-left: 20px;
   padding-right: 10px;
+  white-space: nowrap;
 }
-/* line 36, ../sass/components/_breadcrumbs.scss */
+/* line 38, ../sass/components/_breadcrumbs.scss */
 .new .breadcrumbs .crumb:after, .new .breadcrumbs .crumb:before {
   content: "";
   display: block;
@@ -4014,37 +4016,45 @@ h1 + .setup-header__description,
   border-style: solid;
   background-color: transparent;
 }
-/* line 48, ../sass/components/_breadcrumbs.scss */
+/* line 50, ../sass/components/_breadcrumbs.scss */
 .new .breadcrumbs .crumb:after {
   margin-left: -1px;
 }
-/* line 51, ../sass/components/_breadcrumbs.scss */
+/* line 53, ../sass/components/_breadcrumbs.scss */
 .new .breadcrumbs .crumb:hover {
   background: #424242;
 }
-/* line 54, ../sass/components/_breadcrumbs.scss */
+/* line 56, ../sass/components/_breadcrumbs.scss */
 .new .breadcrumbs .crumb:hover + .crumb:after {
   border-left-color: #424242;
 }
-/* line 60, ../sass/components/_breadcrumbs.scss */
+/* line 62, ../sass/components/_breadcrumbs.scss */
 .new .breadcrumbs .crumb + .crumb a {
   padding-left: 31px;
 }
-/* line 63, ../sass/components/_breadcrumbs.scss */
+/* line 65, ../sass/components/_breadcrumbs.scss */
 .new .breadcrumbs .crumb + .crumb:before {
   border-left-color: #FFFFFF;
 }
-/* line 66, ../sass/components/_breadcrumbs.scss */
+/* line 68, ../sass/components/_breadcrumbs.scss */
 .new .breadcrumbs .crumb + .crumb:after {
   border-left-color: #5C5C5C;
 }
-/* line 70, ../sass/components/_breadcrumbs.scss */
+/* line 74, ../sass/components/_breadcrumbs.scss */
+.new .breadcrumbs .crumb.no-link:hover span {
+  background: #5C5C5C;
+}
+/* line 78, ../sass/components/_breadcrumbs.scss */
+.new .breadcrumbs .crumb.no-link:hover + .crumb:after {
+  border-left-color: #5C5C5C;
+}
+/* line 84, ../sass/components/_breadcrumbs.scss */
 .new .breadcrumbs .crumb:last-child {
   width: 100%;
   max-width: 100%;
   padding-left: 31px;
 }
-/* line 74, ../sass/components/_breadcrumbs.scss */
+/* line 88, ../sass/components/_breadcrumbs.scss */
 .new .breadcrumbs .crumb:last-child:hover {
   background-color: #5C5C5C;
 }
@@ -4397,6 +4407,8 @@ h1 + .setup-header__description,
   /*
   	8-10-16:
   		- Tooltips will now be simplified, removing header and will be inline instead of overlaied with javascript
+  	8-31-16:
+  		- The layout container should not use pixel width if within the admin tools section
   */
 }
 /* line 1, ../sass/layouts/_grid.scss */
@@ -6077,7 +6089,7 @@ h1 + .setup-header__description,
 .new .navbar__return--highlight:hover, .new .navbar__return--highlight:focus {
   background-color: #2bac8f !important;
 }
-/* line 5, ../sass/layouts/_admin-tools.scss */
+/* line 7, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools {
   background-color: #53BAD3;
   color: #FFF;
@@ -6086,12 +6098,17 @@ h1 + .setup-header__description,
   left: 0;
   width: 100%;
 }
-/* line 15, ../sass/layouts/_admin-tools.scss */
+/* line 17, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools a {
   color: #FFF;
   text-decoration: underline;
 }
-/* line 20, ../sass/layouts/_admin-tools.scss */
+/* line 22, ../sass/layouts/_admin-tools.scss */
+.new .admin-tools .layout__container {
+  width: 100%;
+  max-width: 1160px;
+}
+/* line 27, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools__toggler {
   background-color: transparent;
   font-family: monospace;
@@ -6099,7 +6116,7 @@ h1 + .setup-header__description,
   padding: 0;
   color: #FFF;
 }
-/* line 26, ../sass/layouts/_admin-tools.scss */
+/* line 33, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools__toggler button {
   font-size: 11px !important;
   padding: 4px 8px;
@@ -6107,12 +6124,12 @@ h1 + .setup-header__description,
   height: auto;
   cursor: pointer;
 }
-/* line 35, ../sass/layouts/_admin-tools.scss */
+/* line 42, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools .rc_toggle-list__item, .new .admin-tools .rc_toggle-list__item.disabled {
   background-color: transparent;
   color: #FFF;
 }
-/* line 39, ../sass/layouts/_admin-tools.scss */
+/* line 46, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools .rc_toggle-list__item a, .new .admin-tools .rc_toggle-list__item.disabled a {
   color: #FFF;
 }

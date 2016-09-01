@@ -1,6 +1,8 @@
 /*
 	8-10-16:
 		- Tooltips will now be simplified, removing header and will be inline instead of overlaied with javascript
+	8-31-16:
+		- The layout container should not use pixel width if within the admin tools section
 */
 .admin-tools {
 	background-color: #53BAD3;
@@ -15,6 +17,11 @@
 	a {
 		color: #FFF;
 		text-decoration: underline;
+	}
+
+	.layout__container {
+		width: 100%;
+		max-width: $container-lg;
 	}
 
 	&__toggler {
