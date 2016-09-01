@@ -4,26 +4,115 @@
 	Date: 9-1-2016
 	Author: Corey M. Capetillo
 	9-1-16:
-		Create the first page of tabs
+		- Create the first page of tabs
+		- Add the ability to use the grid system within the tab content. But because of the tab's background color, use display: table so the heights are equal
+		- Add a statistics sidebar. Keep it in Tabs section for now
 */
 .tabs {
 	&__header {
-
+		min-height: 60px;
+		position: relative;
+		top: 1px;
 	}
 	&__list {
+		@extend .list--inline;
 		&__item {
+			border-bottom: 1px solid $gray-lighter;
+			@media screen and (max-width: $screen-xs-max) {
+				display: block;
+				width: 100%;
+			}
 			> span,
 			> a {
-
+				@extend .h3;
+				height: 60px;
+				line-height: 60px;
+				white-space: nowrap;
+				padding: 0 $padding-large-horizontal;
+				display: block;
+				color: $gray-darker;
+			}
+			&.active {
+				> span,
+				> a {
+					background-color: $gray-lighter;
+				}
 			}
 		}
 	}
 	&__content {
+		background-color: $gray-lighter;
+		padding: $padding-large-horizontal;
 		.layout__container {
-
+			width: 100%;
+			background-color: #FFF;
+			@media screen and (min-width: $screen-sm-min) {
+				padding-left: 0;
+				padding-right: 0;
+				.layout {
+					display: table;
+					width: 100%;
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
+			@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+				max-width: $container-sm;
+			}
+			@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+				max-width: $container-md;
+			}
+			@media screen and (min-width: $screen-lg-min) {
+				max-width: $container-lg;
+			}
 		}
-		.layout {
-
+		.layout__sidebar,
+		.layout__content,
+		.grid__xs__1, .grid__sm__1, .grid__md__1, .grid__lg__1,
+		.grid__xs__2, .grid__sm__2, .grid__md__2, .grid__lg__2,
+		.grid__xs__3, .grid__sm__3, .grid__md__3, .grid__lg__3,
+		.grid__xs__4, .grid__sm__4, .grid__md__4, .grid__lg__4,
+		.grid__xs__5, .grid__sm__5, .grid__md__5, .grid__lg__5,
+		.grid__xs__6, .grid__sm__6, .grid__md__6, .grid__lg__6,
+		.grid__xs__7, .grid__sm__7, .grid__md__7, .grid__lg__7,
+		.grid__xs__8, .grid__sm__8, .grid__md__8, .grid__lg__8,
+		.grid__xs__9, .grid__sm__9, .grid__md__9, .grid__lg__9,
+		.grid__xs__10, .grid__sm__10, .grid__md__10, .grid__lg__10,
+		.grid__xs__11, .grid__sm__11, .grid__md__11, .grid__lg__11,
+		.grid__xs__12, .grid__sm__12, .grid__md__12, .grid__lg__12 {
+			background-color: #FFF;
+			@media screen and (min-width: $screen-sm-min) {
+				display: table-cell;
+				float: none;
+				margin-left: 0;
+				margin-right: 0;
+			}
 		}
+	}
+}
+
+.layout__container {
+	.layout__sidebar--statistics {
+		background-color: #2c93ac;
+		border-left: 20px solid $gray-lighter;
+		@media screen and (max-width: $screen-xs-max) {
+			border-top: 20px solid $gray-lighter;
+			border-left-width: 0;
+		}
+	}
+}
+
+.layout__sidebar--statistics {
+	color: #FFF;
+	a {
+		color: #FFF;
+	}
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5,
+	h6, .h6 {
+		color: #FFF;
 	}
 }

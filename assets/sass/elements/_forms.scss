@@ -41,6 +41,9 @@
 		- Expand dropkick select so it can be used for input__number
 		- Expand search input group to add an active version
 		- Add a form__search__no-results element
+	9-1-16:
+		- Add Date Range
+		- Add Beginnings of Date Picker
 */
 
 .form {
@@ -129,7 +132,8 @@ p + .form__group  {
 button.form__input,
 input.form__input,
 textarea.form__input,
-input.form__color {
+input.form__color,
+input.form__date {
 	border-style: solid;
 	box-sizing: border-box;
 	outline: 0;
@@ -158,7 +162,8 @@ input.button {
 
 input.form__input,
 textarea.form__input,
-input.form__color {
+input.form__color,
+input.form__date {
 	color: #424242;
 }
 
@@ -229,6 +234,7 @@ input[type="search"].form__input,
 input[type="password"].form__input,
 input[type="date"].form__input,
 input.form__color,
+input.form__date,
 textarea.form__input {
 	border-width: 1px;
 	border-style: solid;
@@ -258,7 +264,8 @@ textarea.form__input {
 }
 
 textarea.form__input + textarea.form__input,
-input.form__color__picker + input.form__color,
+input.form__date + input.form__date,
+input.form__color + input.form__color,
 input[type="number"].form__number + input[type="number"].form__number,
 input[type="text"].form__input + input[type="text"].form__input,
 input[type="email"].form__input + input[type="email"].form__input,
@@ -463,6 +470,16 @@ input[type="checkbox"],
 				text-indent: 3px;
 			}
 		}
+	}
+}
+
+.date-range {
+	@include make-row();
+	max-width: 486px;
+	&__start,
+	&__end {
+		box-sizing: border-box;
+		@include make-sm-column(6);
 	}
 }
 
@@ -680,6 +697,11 @@ input[type="text"].form__color {
 
 	display: inline;
 	width: 100px;
+}
+
+// Date input
+input[type="text"].form__date {
+	@extend .form__input;
 }
 
 // Number input, using the default input

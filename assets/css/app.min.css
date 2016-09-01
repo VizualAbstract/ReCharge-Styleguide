@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 	5-5-2016 - Create this file
 	5-10-2016 - Add .new wrapper and admin_utilities.scss
@@ -990,7 +991,8 @@
   margin-bottom: 12px;
 }
 /* line 24, ../sass/style/_typography.scss */
-.new h3, .new .h3 {
+.new h3, .new .h3, .new .tabs__list__item > span,
+.new .tabs__list__item > a {
   font-family: 'ralewaysemibold', arial, san-serif;
   font-size: 24px;
   font-weight: normal;
@@ -998,7 +1000,8 @@
 }
 @media screen and (min-width: 768px) {
   /* line 24, ../sass/style/_typography.scss */
-  .new h3, .new .h3 {
+  .new h3, .new .h3, .new .tabs__list__item > span,
+  .new .tabs__list__item > a {
     line-height: 1;
   }
 }
@@ -1529,6 +1532,9 @@
   		- Expand dropkick select so it can be used for input__number
   		- Expand search input group to add an active version
   		- Add a form__search__no-results element
+  	9-1-16:
+  		- Add Date Range
+  		- Add Beginnings of Date Picker
   */
   /* Contextual sub-form */
   /* 
@@ -1569,11 +1575,11 @@ h1 + .setup-header__description,
   list-style: none;
 }
 /* line 46, ../sass/elements/_typography.scss */
-.new .list--inline {
+.new .list--inline, .new .tabs__list {
   font-size: 0;
 }
 /* line 48, ../sass/elements/_typography.scss */
-.new .list--inline > li {
+.new .list--inline > li, .new .tabs__list > li {
   font-size: 16px;
   display: inline-block;
 }
@@ -1623,7 +1629,8 @@ h1 + .setup-header__description,
   margin-bottom: 12px;
 }
 /* line 97, ../sass/elements/_typography.scss */
-.new h3, .new .h3 {
+.new h3, .new .h3, .new .tabs__list__item > span,
+.new .tabs__list__item > a {
   font-family: 'ralewaysemibold', arial, san-serif;
   font-size: 24px;
   font-weight: normal;
@@ -1631,7 +1638,8 @@ h1 + .setup-header__description,
 }
 @media screen and (min-width: 768px) {
   /* line 97, ../sass/elements/_typography.scss */
-  .new h3, .new .h3 {
+  .new h3, .new .h3, .new .tabs__list__item > span,
+  .new .tabs__list__item > a {
     line-height: 1;
   }
 }
@@ -2177,66 +2185,66 @@ h1 + .setup-header__description,
   max-width: 100%;
   height: auto;
 }
-/* line 47, ../sass/elements/_forms.scss */
+/* line 50, ../sass/elements/_forms.scss */
 .new .form .form__label {
   display: block;
 }
-/* line 51, ../sass/elements/_forms.scss */
+/* line 54, ../sass/elements/_forms.scss */
 .new .form--inline .form__label {
   display: inline;
 }
-/* line 57, ../sass/elements/_forms.scss */
+/* line 60, ../sass/elements/_forms.scss */
 .new .form__errors {
   margin-bottom: 24px;
   position: relative;
   text-align: center;
   color: #EC3D10;
 }
-/* line 62, ../sass/elements/_forms.scss */
+/* line 65, ../sass/elements/_forms.scss */
 .new .form__errors:empty {
   display: none;
 }
-/* line 67, ../sass/elements/_forms.scss */
+/* line 70, ../sass/elements/_forms.scss */
 .new .form__help {
   color: #676767;
   margin-top: -6px;
   margin-bottom: 16px;
   line-height: 25px;
 }
-/* line 76, ../sass/elements/_forms.scss */
+/* line 79, ../sass/elements/_forms.scss */
 .new .form__checkbox__label + .form__help,
 .new .form__radio__label + .form__help {
   margin-top: -19px;
   padding-left: 25px;
 }
-/* line 82, ../sass/elements/_forms.scss */
+/* line 85, ../sass/elements/_forms.scss */
 .new .form__group, .new .form__search, .new .form__search__no-results {
   margin-bottom: 16px;
   position: relative;
 }
-/* line 86, ../sass/elements/_forms.scss */
+/* line 89, ../sass/elements/_forms.scss */
 .new .form__group .button, .new .form__search .button, .new .form__search__no-results .button {
   margin-top: 10px;
 }
-/* line 89, ../sass/elements/_forms.scss */
+/* line 92, ../sass/elements/_forms.scss */
 .new .form__group p:last-child, .new .form__search p:last-child, .new .form__search__no-results p:last-child {
   margin-bottom: 5px;
 }
-/* line 93, ../sass/elements/_forms.scss */
+/* line 96, ../sass/elements/_forms.scss */
 .new p + .form__group, .new p + .form__search, .new p + .form__search__no-results {
   margin-top: 18px;
 }
-/* line 98, ../sass/elements/_forms.scss */
+/* line 101, ../sass/elements/_forms.scss */
 .new .form--signup .form__group, .new .form--signup .form__search, .new .form--signup .form__search__no-results {
   position: relative;
   margin-bottom: 45px;
 }
 @media screen and (min-width: 768px) {
-  /* line 98, ../sass/elements/_forms.scss */
+  /* line 101, ../sass/elements/_forms.scss */
   .new .form--signup .form__group, .new .form--signup .form__search, .new .form--signup .form__search__no-results {
     margin-bottom: 55px;
   }
-  /* line 103, ../sass/elements/_forms.scss */
+  /* line 106, ../sass/elements/_forms.scss */
   .new .form--signup .form__group .form__response, .new .form--signup .form__search .form__response, .new .form--signup .form__search__no-results .form__response {
     position: absolute;
     top: 100%;
@@ -2245,12 +2253,12 @@ h1 + .setup-header__description,
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  /* line 98, ../sass/elements/_forms.scss */
+  /* line 101, ../sass/elements/_forms.scss */
   .new .form--signup .form__group, .new .form--signup .form__search, .new .form--signup .form__search__no-results {
     margin-bottom: 65px;
   }
 }
-/* line 116, ../sass/elements/_forms.scss */
+/* line 119, ../sass/elements/_forms.scss */
 .new .form__actions, .new .rc_modal__actions {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2260,33 +2268,35 @@ h1 + .setup-header__description,
   margin-top: 32px;
   margin-bottom: 60px;
 }
-/* line 121, ../sass/elements/_forms.scss */
+/* line 124, ../sass/elements/_forms.scss */
 .new .form__actions .button, .new .rc_modal__actions .button {
   -webkit-box-flex: 100%;
   -webkit-flex: 100%;
       -ms-flex: 100%;
           flex: 100%;
 }
-/* line 123, ../sass/elements/_forms.scss */
+/* line 126, ../sass/elements/_forms.scss */
 .new .form__actions .button + .button, .new .rc_modal__actions .button + .button {
   margin-left: 13px;
 }
-/* line 129, ../sass/elements/_forms.scss */
+/* line 132, ../sass/elements/_forms.scss */
 .new button.form__input,
 .new input.form__input,
 .new input[type="text"].form__color,
+.new input[type="text"].form__date,
 .new input[type="text"].form__number,
 .new input[type="number"].form__number,
 .new textarea.form__input,
 .new textarea.form__input__code,
-.new input.form__color {
+.new input.form__color,
+.new input.form__date {
   border-style: solid;
   box-sizing: border-box;
   outline: 0;
   line-height: 1.5625;
   padding: 6px 10px 7px;
 }
-/* line 141, ../sass/elements/_forms.scss */
+/* line 145, ../sass/elements/_forms.scss */
 .new .form input[type="submit"] + input[type="submit"],
 .new .form input[type="submit"] + button,
 .new .form input + input[type="submit"],
@@ -2297,21 +2307,22 @@ h1 + .setup-header__description,
 .new .form input + a {
   margin-left: 15px;
 }
-/* line 153, ../sass/elements/_forms.scss */
+/* line 157, ../sass/elements/_forms.scss */
 .new button.button,
 .new input.button {
   vertical-align: middle;
   height: 40px;
 }
-/* line 159, ../sass/elements/_forms.scss */
-.new input.form__input, .new input[type="text"].form__color, .new input[type="text"].form__number,
+/* line 163, ../sass/elements/_forms.scss */
+.new input.form__input, .new input[type="text"].form__color, .new input[type="text"].form__date, .new input[type="text"].form__number,
 .new input[type="number"].form__number,
 .new textarea.form__input,
 .new textarea.form__input__code,
-.new input.form__color {
+.new input.form__color,
+.new input.form__date {
   color: #424242;
 }
-/* line 165, ../sass/elements/_forms.scss */
+/* line 170, ../sass/elements/_forms.scss */
 .new button.button,
 .new input[type="submit"].button {
   -ms-touch-action: manipulation;
@@ -2320,40 +2331,42 @@ h1 + .setup-header__description,
   border-width: 0;
   min-width: 100px;
 }
-/* line 174, ../sass/elements/_forms.scss */
+/* line 179, ../sass/elements/_forms.scss */
 .new button.button:hover, .new button.button:active,
 .new input[type="submit"].button:hover,
 .new input[type="submit"].button:active {
   outline: 0;
 }
-/* line 180, ../sass/elements/_forms.scss */
+/* line 185, ../sass/elements/_forms.scss */
 .new button.button:disabled, .new button.button.disabled,
 .new input[type="submit"].button:disabled,
 .new input[type="submit"].button.disabled {
   background-color: #D8D8D8 !important;
   cursor: default;
 }
-/* line 187, ../sass/elements/_forms.scss */
+/* line 192, ../sass/elements/_forms.scss */
 .new select.form__input {
   display: block;
 }
-/* line 191, ../sass/elements/_forms.scss */
-.new input[type="text"].form__input, .new input[type="text"].form__color, .new input[type="text"].form__number,
+/* line 196, ../sass/elements/_forms.scss */
+.new input[type="text"].form__input, .new input[type="text"].form__color, .new input[type="text"].form__date, .new input[type="text"].form__number,
 .new select.form__input,
 .new input[type="email"].form__input,
 .new input[type="email"][type="text"].form__color,
+.new input[type="email"][type="text"].form__date,
 .new input[type="email"][type="text"].form__number,
 .new input[type="email"][type="number"].form__number,
 .new input[type="password"].form__input,
 .new input[type="password"][type="text"].form__color,
+.new input[type="password"][type="text"].form__date,
 .new input[type="password"][type="text"].form__number,
 .new input[type="password"][type="number"].form__number,
 .new textarea.form__input,
 .new textarea.form__input__code {
   width: 100%;
 }
-/* line 199, ../sass/elements/_forms.scss */
-.new .form__input, .new textarea.form__input__code, .new input[type="text"].form__color, .new input[type="text"].form__number,
+/* line 204, ../sass/elements/_forms.scss */
+.new .form__input, .new textarea.form__input__code, .new input[type="text"].form__color, .new input[type="text"].form__date, .new input[type="text"].form__number,
 .new input[type="number"].form__number,
 .new .form__placeholder {
   margin: 12px 0;
@@ -2362,92 +2375,107 @@ h1 + .setup-header__description,
   max-width: 100%;
   color: #424242;
 }
-/* line 208, ../sass/elements/_forms.scss */
-.new .form__input::-webkit-input-placeholder, .new textarea.form__input__code::-webkit-input-placeholder, .new input[type="text"].form__color::-webkit-input-placeholder, .new input[type="text"].form__number::-webkit-input-placeholder,
+/* line 213, ../sass/elements/_forms.scss */
+.new .form__input::-webkit-input-placeholder, .new textarea.form__input__code::-webkit-input-placeholder, .new input[type="text"].form__color::-webkit-input-placeholder, .new input[type="text"].form__date::-webkit-input-placeholder, .new input[type="text"].form__number::-webkit-input-placeholder,
 .new input[type="number"].form__number::-webkit-input-placeholder,
 .new .form__placeholder::-webkit-input-placeholder {
   color: #676767;
 }
-/* line 211, ../sass/elements/_forms.scss */
-.new .form__input:-moz-placeholder, .new textarea.form__input__code:-moz-placeholder, .new input[type="text"].form__color:-moz-placeholder, .new input[type="text"].form__number:-moz-placeholder,
+/* line 216, ../sass/elements/_forms.scss */
+.new .form__input:-moz-placeholder, .new textarea.form__input__code:-moz-placeholder, .new input[type="text"].form__color:-moz-placeholder, .new input[type="text"].form__date:-moz-placeholder, .new input[type="text"].form__number:-moz-placeholder,
 .new input[type="number"].form__number:-moz-placeholder,
 .new .form__placeholder:-moz-placeholder {
   color: #676767;
 }
-/* line 214, ../sass/elements/_forms.scss */
-.new .form__input::-moz-placeholder, .new textarea.form__input__code::-moz-placeholder, .new input[type="text"].form__color::-moz-placeholder, .new input[type="text"].form__number::-moz-placeholder,
+/* line 219, ../sass/elements/_forms.scss */
+.new .form__input::-moz-placeholder, .new textarea.form__input__code::-moz-placeholder, .new input[type="text"].form__color::-moz-placeholder, .new input[type="text"].form__date::-moz-placeholder, .new input[type="text"].form__number::-moz-placeholder,
 .new input[type="number"].form__number::-moz-placeholder,
 .new .form__placeholder::-moz-placeholder {
   color: #676767;
 }
-/* line 217, ../sass/elements/_forms.scss */
-.new .form__input:-ms-input-placeholder, .new textarea.form__input__code:-ms-input-placeholder, .new input[type="text"].form__color:-ms-input-placeholder, .new input[type="text"].form__number:-ms-input-placeholder,
+/* line 222, ../sass/elements/_forms.scss */
+.new .form__input:-ms-input-placeholder, .new textarea.form__input__code:-ms-input-placeholder, .new input[type="text"].form__color:-ms-input-placeholder, .new input[type="text"].form__date:-ms-input-placeholder, .new input[type="text"].form__number:-ms-input-placeholder,
 .new input[type="number"].form__number:-ms-input-placeholder,
 .new .form__placeholder:-ms-input-placeholder {
   color: #676767;
 }
-/* line 222, ../sass/elements/_forms.scss */
+/* line 227, ../sass/elements/_forms.scss */
 .new p.form__placeholder {
   margin: 4px 0;
 }
-/* line 226, ../sass/elements/_forms.scss */
+/* line 231, ../sass/elements/_forms.scss */
 .new input[type="number"].form__number,
 .new input[type="text"].form__input,
 .new input[type="text"].form__color,
+.new input[type="text"].form__date,
 .new input[type="text"].form__number,
 .new input[type="search"].form__input,
 .new input[type="search"][type="text"].form__color,
+.new input[type="search"][type="text"].form__date,
 .new input[type="search"][type="text"].form__number,
 .new input[type="search"][type="number"].form__number,
 .new input[type="password"].form__input,
 .new input[type="password"][type="text"].form__color,
+.new input[type="password"][type="text"].form__date,
 .new input[type="password"][type="text"].form__number,
 .new input[type="password"][type="number"].form__number,
 .new input[type="date"].form__input,
 .new input[type="date"][type="text"].form__color,
+.new input[type="date"][type="text"].form__date,
 .new input[type="date"][type="text"].form__number,
 .new input[type="date"][type="number"].form__number,
 .new input.form__color,
+.new input.form__date,
 .new textarea.form__input,
 .new textarea.form__input__code {
   border-width: 1px;
   border-style: solid;
   border-color: #676767;
 }
-/* line 236, ../sass/elements/_forms.scss */
+/* line 242, ../sass/elements/_forms.scss */
 .new input[type="number"].form__number:focus, .new input[type="number"].form__number.form__input--focus,
 .new input[type="text"].form__input:focus,
 .new input[type="text"].form__color:focus,
+.new input[type="text"].form__date:focus,
 .new input[type="text"].form__number:focus,
 .new input[type="text"].form__input.form__input--focus,
 .new input[type="text"].form__input--focus.form__color,
+.new input[type="text"].form__input--focus.form__date,
 .new input[type="text"].form__input--focus.form__number,
 .new input[type="search"].form__input:focus,
 .new input[type="search"][type="text"].form__color:focus,
+.new input[type="search"][type="text"].form__date:focus,
 .new input[type="search"][type="text"].form__number:focus,
 .new input[type="search"][type="number"].form__number:focus,
 .new input[type="search"].form__input.form__input--focus,
 .new input[type="search"].form__input--focus[type="text"].form__color,
+.new input[type="search"].form__input--focus[type="text"].form__date,
 .new input[type="search"].form__input--focus[type="text"].form__number,
 .new input[type="search"].form__input--focus[type="number"].form__number,
 .new input[type="password"].form__input:focus,
 .new input[type="password"][type="text"].form__color:focus,
+.new input[type="password"][type="text"].form__date:focus,
 .new input[type="password"][type="text"].form__number:focus,
 .new input[type="password"][type="number"].form__number:focus,
 .new input[type="password"].form__input.form__input--focus,
 .new input[type="password"].form__input--focus[type="text"].form__color,
+.new input[type="password"].form__input--focus[type="text"].form__date,
 .new input[type="password"].form__input--focus[type="text"].form__number,
 .new input[type="password"].form__input--focus[type="number"].form__number,
 .new input[type="date"].form__input:focus,
 .new input[type="date"][type="text"].form__color:focus,
+.new input[type="date"][type="text"].form__date:focus,
 .new input[type="date"][type="text"].form__number:focus,
 .new input[type="date"][type="number"].form__number:focus,
 .new input[type="date"].form__input.form__input--focus,
 .new input[type="date"].form__input--focus[type="text"].form__color,
+.new input[type="date"].form__input--focus[type="text"].form__date,
 .new input[type="date"].form__input--focus[type="text"].form__number,
 .new input[type="date"].form__input--focus[type="number"].form__number,
 .new input.form__color:focus,
 .new input.form__color.form__input--focus,
+.new input.form__date:focus,
+.new input.form__date.form__input--focus,
 .new textarea.form__input:focus,
 .new textarea.form__input__code:focus,
 .new textarea.form__input.form__input--focus,
@@ -2456,29 +2484,34 @@ h1 + .setup-header__description,
   outline: none;
   box-shadow: none;
 }
-/* line 242, ../sass/elements/_forms.scss */
+/* line 248, ../sass/elements/_forms.scss */
 .new input[type="number"].form__number.form__input--invalid,
 .new input[type="text"].form__input.form__input--invalid,
 .new input[type="text"].form__input--invalid.form__color,
+.new input[type="text"].form__input--invalid.form__date,
 .new input[type="text"].form__input--invalid.form__number,
 .new input[type="search"].form__input.form__input--invalid,
 .new input[type="search"].form__input--invalid[type="text"].form__color,
+.new input[type="search"].form__input--invalid[type="text"].form__date,
 .new input[type="search"].form__input--invalid[type="text"].form__number,
 .new input[type="search"].form__input--invalid[type="number"].form__number,
 .new input[type="password"].form__input.form__input--invalid,
 .new input[type="password"].form__input--invalid[type="text"].form__color,
+.new input[type="password"].form__input--invalid[type="text"].form__date,
 .new input[type="password"].form__input--invalid[type="text"].form__number,
 .new input[type="password"].form__input--invalid[type="number"].form__number,
 .new input[type="date"].form__input.form__input--invalid,
 .new input[type="date"].form__input--invalid[type="text"].form__color,
+.new input[type="date"].form__input--invalid[type="text"].form__date,
 .new input[type="date"].form__input--invalid[type="text"].form__number,
 .new input[type="date"].form__input--invalid[type="number"].form__number,
 .new input.form__color.form__input--invalid,
+.new input.form__date.form__input--invalid,
 .new textarea.form__input.form__input--invalid,
 .new textarea.form__input--invalid.form__input__code {
   border-color: #EC3D10 !important;
 }
-/* line 247, ../sass/elements/_forms.scss */
+/* line 253, ../sass/elements/_forms.scss */
 .new .form__error {
   color: #EC3D10;
   font-family: 'ralewaysemibold', arial, sans-serif;
@@ -2487,67 +2520,93 @@ h1 + .setup-header__description,
   line-height: 25px;
 }
 @media screen and (min-width: 768px) {
-  /* line 247, ../sass/elements/_forms.scss */
+  /* line 253, ../sass/elements/_forms.scss */
   .new .form__error {
     position: absolute;
     top: 0;
     right: 0;
   }
 }
-/* line 260, ../sass/elements/_forms.scss */
+/* line 266, ../sass/elements/_forms.scss */
 .new textarea.form__input + textarea.form__input, .new textarea.form__input__code + textarea.form__input, .new textarea.form__input + textarea.form__input__code, .new textarea.form__input__code + textarea.form__input__code,
-.new input.form__color__picker + input.form__color,
+.new input.form__date + input.form__date,
+.new input.form__color + input.form__color,
 .new input[type="number"].form__number + input[type="number"].form__number,
 .new input[type="text"].form__input + input[type="text"].form__input,
 .new input[type="text"].form__color + input[type="text"].form__input,
+.new input[type="text"].form__date + input[type="text"].form__input,
 .new input[type="text"].form__number + input[type="text"].form__input,
 .new input[type="text"].form__input + input[type="text"].form__color,
 .new input[type="text"].form__color + input[type="text"].form__color,
+.new input[type="text"].form__date + input[type="text"].form__color,
 .new input[type="text"].form__number + input[type="text"].form__color,
+.new input[type="text"].form__input + input[type="text"].form__date,
+.new input[type="text"].form__color + input[type="text"].form__date,
+.new input[type="text"].form__date + input[type="text"].form__date,
+.new input[type="text"].form__number + input[type="text"].form__date,
 .new input[type="text"].form__input + input[type="text"].form__number,
 .new input[type="text"].form__color + input[type="text"].form__number,
+.new input[type="text"].form__date + input[type="text"].form__number,
 .new input[type="text"].form__number + input[type="text"].form__number,
 .new input[type="email"].form__input + input[type="email"].form__input,
 .new input[type="email"][type="text"].form__color + input[type="email"].form__input,
+.new input[type="email"][type="text"].form__date + input[type="email"].form__input,
 .new input[type="email"][type="text"].form__number + input[type="email"].form__input,
 .new input[type="email"][type="number"].form__number + input[type="email"].form__input,
 .new input[type="email"].form__input + input[type="email"][type="text"].form__color,
 .new input[type="email"][type="text"].form__color + input[type="email"][type="text"].form__color,
+.new input[type="email"][type="text"].form__date + input[type="email"][type="text"].form__color,
 .new input[type="email"][type="text"].form__number + input[type="email"][type="text"].form__color,
 .new input[type="email"][type="number"].form__number + input[type="email"][type="text"].form__color,
+.new input[type="email"].form__input + input[type="email"][type="text"].form__date,
+.new input[type="email"][type="text"].form__color + input[type="email"][type="text"].form__date,
+.new input[type="email"][type="text"].form__date + input[type="email"][type="text"].form__date,
+.new input[type="email"][type="text"].form__number + input[type="email"][type="text"].form__date,
+.new input[type="email"][type="number"].form__number + input[type="email"][type="text"].form__date,
 .new input[type="email"].form__input + input[type="email"][type="text"].form__number,
 .new input[type="email"][type="text"].form__color + input[type="email"][type="text"].form__number,
+.new input[type="email"][type="text"].form__date + input[type="email"][type="text"].form__number,
 .new input[type="email"][type="text"].form__number + input[type="email"][type="text"].form__number,
 .new input[type="email"][type="number"].form__number + input[type="email"][type="text"].form__number,
 .new input[type="email"].form__input + input[type="email"][type="number"].form__number,
 .new input[type="email"][type="text"].form__color + input[type="email"][type="number"].form__number,
+.new input[type="email"][type="text"].form__date + input[type="email"][type="number"].form__number,
 .new input[type="email"][type="text"].form__number + input[type="email"][type="number"].form__number,
 .new input[type="email"][type="number"].form__number + input[type="email"][type="number"].form__number,
 .new input[type="password"].form__input + input[type="password"].form__input,
 .new input[type="password"][type="text"].form__color + input[type="password"].form__input,
+.new input[type="password"][type="text"].form__date + input[type="password"].form__input,
 .new input[type="password"][type="text"].form__number + input[type="password"].form__input,
 .new input[type="password"][type="number"].form__number + input[type="password"].form__input,
 .new input[type="password"].form__input + input[type="password"][type="text"].form__color,
 .new input[type="password"][type="text"].form__color + input[type="password"][type="text"].form__color,
+.new input[type="password"][type="text"].form__date + input[type="password"][type="text"].form__color,
 .new input[type="password"][type="text"].form__number + input[type="password"][type="text"].form__color,
 .new input[type="password"][type="number"].form__number + input[type="password"][type="text"].form__color,
+.new input[type="password"].form__input + input[type="password"][type="text"].form__date,
+.new input[type="password"][type="text"].form__color + input[type="password"][type="text"].form__date,
+.new input[type="password"][type="text"].form__date + input[type="password"][type="text"].form__date,
+.new input[type="password"][type="text"].form__number + input[type="password"][type="text"].form__date,
+.new input[type="password"][type="number"].form__number + input[type="password"][type="text"].form__date,
 .new input[type="password"].form__input + input[type="password"][type="text"].form__number,
 .new input[type="password"][type="text"].form__color + input[type="password"][type="text"].form__number,
+.new input[type="password"][type="text"].form__date + input[type="password"][type="text"].form__number,
 .new input[type="password"][type="text"].form__number + input[type="password"][type="text"].form__number,
 .new input[type="password"][type="number"].form__number + input[type="password"][type="text"].form__number,
 .new input[type="password"].form__input + input[type="password"][type="number"].form__number,
 .new input[type="password"][type="text"].form__color + input[type="password"][type="number"].form__number,
+.new input[type="password"][type="text"].form__date + input[type="password"][type="number"].form__number,
 .new input[type="password"][type="text"].form__number + input[type="password"][type="number"].form__number,
 .new input[type="password"][type="number"].form__number + input[type="password"][type="number"].form__number {
   margin: 20px 0;
 }
-/* line 269, ../sass/elements/_forms.scss */
+/* line 276, ../sass/elements/_forms.scss */
 .new input[type="text"].button {
   line-height: 1.5625;
   padding: 7px;
   height: 40px;
 }
-/* line 275, ../sass/elements/_forms.scss */
+/* line 282, ../sass/elements/_forms.scss */
 .new textarea.form__input, .new textarea.form__input__code {
   line-height: 1.5625;
   padding: 7px 10px;
@@ -2557,29 +2616,29 @@ h1 + .setup-header__description,
   box-sizing: border-box;
   min-height: 100px;
 }
-/* line 288, ../sass/elements/_forms.scss */
+/* line 295, ../sass/elements/_forms.scss */
 .new textarea.form__input__code {
   font-family: 'pt-mono', monospace;
   font-size: 16px;
   color: #676767;
   line-height: 21px;
 }
-/* line 296, ../sass/elements/_forms.scss */
+/* line 303, ../sass/elements/_forms.scss */
 .new fieldset {
   padding: 0;
   margin: 0;
   border: 0;
   min-width: 0;
 }
-/* line 301, ../sass/elements/_forms.scss */
+/* line 308, ../sass/elements/_forms.scss */
 .new fieldset + fieldset {
   margin-top: 32px;
 }
-/* line 304, ../sass/elements/_forms.scss */
+/* line 311, ../sass/elements/_forms.scss */
 .new fieldset:last-child {
   margin-bottom: 60px;
 }
-/* line 309, ../sass/elements/_forms.scss */
+/* line 316, ../sass/elements/_forms.scss */
 .new h1 + fieldset,
 .new h2 + fieldset,
 .new h3 + fieldset,
@@ -2587,7 +2646,7 @@ h1 + .setup-header__description,
 .new h5 + fieldset {
   margin-top: 24px;
 }
-/* line 317, ../sass/elements/_forms.scss */
+/* line 324, ../sass/elements/_forms.scss */
 .new fieldset + h1,
 .new fieldset + h2,
 .new fieldset + h3,
@@ -2595,7 +2654,7 @@ h1 + .setup-header__description,
 .new fieldset + h5 {
   margin-top: 32px;
 }
-/* line 325, ../sass/elements/_forms.scss */
+/* line 332, ../sass/elements/_forms.scss */
 .new legend {
   display: block;
   width: 100%;
@@ -2605,16 +2664,17 @@ h1 + .setup-header__description,
   font-size: 16px;
   margin: 0 0 20px;
 }
-/* line 335, ../sass/elements/_forms.scss */
+/* line 342, ../sass/elements/_forms.scss */
 .new legend h1, .new legend .h1,
 .new legend h2, .new legend .h2,
-.new legend h3, .new legend .h3,
+.new legend h3, .new legend .h3, .new legend .tabs__list__item > span,
+.new legend .tabs__list__item > a,
 .new legend h4, .new legend .h4, .new legend .form__search__no-results,
 .new legend h5, .new legend .h5 {
   line-height: 1;
   margin: 0;
 }
-/* line 345, ../sass/elements/_forms.scss */
+/* line 352, ../sass/elements/_forms.scss */
 .new label {
   display: block;
   max-width: 100%;
@@ -2623,18 +2683,18 @@ h1 + .setup-header__description,
   display: block;
   line-height: 25px;
 }
-/* line 356, ../sass/elements/_forms.scss */
+/* line 363, ../sass/elements/_forms.scss */
 .new .form__label + .button {
   margin: 12px 0;
 }
-/* line 361, ../sass/elements/_forms.scss */
+/* line 368, ../sass/elements/_forms.scss */
 .new input[type="radio"],
 .new input[type="checkbox"],
 .new .form__radio,
 .new .form__checkbox {
   display: none;
 }
-/* line 367, ../sass/elements/_forms.scss */
+/* line 374, ../sass/elements/_forms.scss */
 .new input[type="radio"]:first-of-type + .form__radio__label,
 .new input[type="radio"]:first-of-type + .form__checkbox__label,
 .new input[type="checkbox"]:first-of-type + .form__radio__label,
@@ -2645,7 +2705,7 @@ h1 + .setup-header__description,
 .new .form__checkbox:first-of-type + .form__checkbox__label {
   margin-top: 6px;
 }
-/* line 372, ../sass/elements/_forms.scss */
+/* line 379, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label,
 .new input[type="radio"] + .form__radio__label,
 .new input[type="radio"] + .form__checkbox__label,
@@ -2662,7 +2722,7 @@ h1 + .setup-header__description,
   display: block;
   line-height: 20px;
 }
-/* line 378, ../sass/elements/_forms.scss */
+/* line 385, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label:before,
 .new input[type="radio"] + .form__radio__label:before,
 .new input[type="radio"] + .form__checkbox__label:before,
@@ -2694,7 +2754,7 @@ h1 + .setup-header__description,
   position: relative;
   top: -2px;
 }
-/* line 403, ../sass/elements/_forms.scss */
+/* line 410, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label:after,
 .new input[type="radio"] + .form__radio__label:after,
 .new input[type="radio"] + .form__checkbox__label:after,
@@ -2711,14 +2771,14 @@ h1 + .setup-header__description,
   content: "";
   margin: 10px 0;
 }
-/* line 415, ../sass/elements/_forms.scss */
+/* line 422, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label:before,
 .new input[type="radio"] + .form__radio__label:before,
 .new .form__radio + label:before,
 .new .form__radio + .form__radio__label:before {
   border-radius: 50%;
 }
-/* line 430, ../sass/elements/_forms.scss */
+/* line 437, ../sass/elements/_forms.scss */
 .new input[type="radio"]:checked + label:before,
 .new input[type="radio"]:checked + .form__radio__label:before,
 .new input[type="radio"]:checked + .form__checkbox__label:before, .new input[type="radio"].form__input--checked + label:before,
@@ -2745,7 +2805,7 @@ h1 + .setup-header__description,
   content: "\f00c";
   background-color: #767676;
 }
-/* line 441, ../sass/elements/_forms.scss */
+/* line 448, ../sass/elements/_forms.scss */
 .new input[type="radio"]:required + label::before,
 .new input[type="radio"]:required + .form__radio__label::before,
 .new input[type="radio"]:required + .form__checkbox__label::before, .new input[type="radio"].form__input--required + label::before,
@@ -2771,7 +2831,7 @@ h1 + .setup-header__description,
 .new .form__checkbox.form__input--required + .form__checkbox__label::before {
   border-color: #EC3D10;
 }
-/* line 449, ../sass/elements/_forms.scss */
+/* line 456, ../sass/elements/_forms.scss */
 .new input[type="radio"]:required:checked + label::before,
 .new input[type="radio"]:required + .form__radio__label + label::before,
 .new input[type="radio"]:required + .form__checkbox__label + label::before, .new input[type="radio"].form__input--required:checked + label::before,
@@ -2797,7 +2857,7 @@ h1 + .setup-header__description,
 .new .form__checkbox.form__input--required + .form__checkbox__label + label::before {
   background-color: #EC3D10;
 }
-/* line 460, ../sass/elements/_forms.scss */
+/* line 467, ../sass/elements/_forms.scss */
 .new input[type="radio"]:disabled + label:before,
 .new input[type="radio"]:disabled + .form__radio__label:before,
 .new input[type="radio"]:disabled + .form__checkbox__label:before, .new input[type="radio"].form__input--disabled + label:before,
@@ -2825,45 +2885,75 @@ h1 + .setup-header__description,
   color: #767676;
   text-indent: 3px;
 }
-/* line 469, ../sass/elements/_forms.scss */
+/* line 476, ../sass/elements/_forms.scss */
+.new .date-range {
+  margin-left: -10px;
+  margin-right: -10px;
+  max-width: 486px;
+}
+/* line 18, ../sass/_mixins.scss */
+.new .date-range:before, .new .date-range:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../sass/_mixins.scss */
+.new .date-range:after {
+  clear: both;
+}
+/* line 479, ../sass/elements/_forms.scss */
+.new .date-range__start, .new .date-range__end {
+  box-sizing: border-box;
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 768px) {
+  /* line 479, ../sass/elements/_forms.scss */
+  .new .date-range__start, .new .date-range__end {
+    float: left;
+    width: 50%;
+  }
+}
+/* line 486, ../sass/elements/_forms.scss */
 .new .card-details {
   width: 100%;
   font-size: 0;
 }
-/* line 472, ../sass/elements/_forms.scss */
-.new .card-details input.form__input, .new .card-details input[type="text"].form__color, .new .card-details input[type="text"].form__number,
+/* line 489, ../sass/elements/_forms.scss */
+.new .card-details input.form__input, .new .card-details input[type="text"].form__color, .new .card-details input[type="text"].form__date, .new .card-details input[type="text"].form__number,
 .new .card-details input[type="number"].form__number {
   min-width: 10px;
   font-size: 16px;
   margin-bottom: 0;
 }
-/* line 477, ../sass/elements/_forms.scss */
+/* line 494, ../sass/elements/_forms.scss */
 .new .card-details__date, .new .card-details__security, .new .card-details__cards {
   display: inline-block;
   vertical-align: middle;
   box-sizing: border-box;
 }
-/* line 484, ../sass/elements/_forms.scss */
+/* line 501, ../sass/elements/_forms.scss */
 .new .card-details__label {
   font-size: 16px;
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 489, ../sass/elements/_forms.scss */
+/* line 506, ../sass/elements/_forms.scss */
 .new .card-details__date {
   width: 30%;
 }
-/* line 491, ../sass/elements/_forms.scss */
+/* line 508, ../sass/elements/_forms.scss */
 .new .card-details__date__month, .new .card-details__date__divider, .new .card-details__date__year {
   font-size: 0;
   display: inline-block !important;
   vertical-align: top;
 }
-/* line 498, ../sass/elements/_forms.scss */
+/* line 515, ../sass/elements/_forms.scss */
 .new .card-details__date__month {
   width: 29.62% !important;
 }
-/* line 501, ../sass/elements/_forms.scss */
+/* line 518, ../sass/elements/_forms.scss */
 .new .card-details__date__divider {
   width: 14.83% !important;
   font-size: 16px;
@@ -2871,16 +2961,16 @@ h1 + .setup-header__description,
   line-height: 40px;
   padding-top: 10px;
 }
-/* line 508, ../sass/elements/_forms.scss */
+/* line 525, ../sass/elements/_forms.scss */
 .new .card-details__date__year {
   width: 55.55% !important;
 }
-/* line 512, ../sass/elements/_forms.scss */
+/* line 529, ../sass/elements/_forms.scss */
 .new .card-details__security {
   width: 15%;
   padding-left: 20px;
 }
-/* line 516, ../sass/elements/_forms.scss */
+/* line 533, ../sass/elements/_forms.scss */
 .new .card-details__cards {
   width: 55%;
   margin-top: 37px;
@@ -2888,7 +2978,7 @@ h1 + .setup-header__description,
   height: 40px;
   line-height: 40px;
 }
-/* line 523, ../sass/elements/_forms.scss */
+/* line 540, ../sass/elements/_forms.scss */
 .new .card-details__icon {
   width: 20%;
   margin-left: 10%;
@@ -2896,26 +2986,26 @@ h1 + .setup-header__description,
   vertical-align: middle;
 }
 @media screen and (min-width: 768px) {
-  /* line 523, ../sass/elements/_forms.scss */
+  /* line 540, ../sass/elements/_forms.scss */
   .new .card-details__icon {
     width: 16.42%;
     margin-left: 20px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 534, ../sass/elements/_forms.scss */
+  /* line 551, ../sass/elements/_forms.scss */
   .new .card-details__date {
     width: 50%;
   }
-  /* line 537, ../sass/elements/_forms.scss */
+  /* line 554, ../sass/elements/_forms.scss */
   .new .card-details__security {
     width: 20%;
   }
-  /* line 540, ../sass/elements/_forms.scss */
+  /* line 557, ../sass/elements/_forms.scss */
   .new .card-details__cards {
     width: 30%;
   }
-  /* line 543, ../sass/elements/_forms.scss */
+  /* line 560, ../sass/elements/_forms.scss */
   .new .card-details .form__error {
     position: absolute;
     right: 0;
@@ -2923,95 +3013,97 @@ h1 + .setup-header__description,
     bottom: -24px;
   }
 }
-/* line 552, ../sass/elements/_forms.scss */
+/* line 569, ../sass/elements/_forms.scss */
 .new .input-group {
   display: table;
   border-collapse: separate;
   box-sizing: border-box;
 }
-/* line 556, ../sass/elements/_forms.scss */
+/* line 573, ../sass/elements/_forms.scss */
 .new .input-group .form__number,
 .new .input-group .form__input,
 .new .input-group textarea.form__input__code,
 .new .input-group input[type="text"].form__color,
+.new .input-group input[type="text"].form__date,
 .new .input-group input[type="text"].form__number,
 .new .input-group input[type="number"].form__number, .new .input-group__addon {
   display: table-cell;
   box-sizing: border-box;
 }
-/* line 562, ../sass/elements/_forms.scss */
+/* line 579, ../sass/elements/_forms.scss */
 .new .input-group__addon {
   padding-left: 15px;
 }
-/* line 564, ../sass/elements/_forms.scss */
+/* line 581, ../sass/elements/_forms.scss */
 .new .input-group__addon:first-child {
   padding-left: 0;
   padding-right: 15px;
 }
-/* line 568, ../sass/elements/_forms.scss */
+/* line 585, ../sass/elements/_forms.scss */
 .new .input-group__addon .button {
   margin-top: 11px;
   margin-bottom: 13px;
 }
-/* line 575, ../sass/elements/_forms.scss */
+/* line 592, ../sass/elements/_forms.scss */
 .new .input-group--full {
   width: 100%;
 }
-/* line 577, ../sass/elements/_forms.scss */
+/* line 594, ../sass/elements/_forms.scss */
 .new .input-group--full .form__number,
 .new .input-group--full .form__input,
 .new .input-group--full textarea.form__input__code,
 .new .input-group--full input[type="text"].form__color,
+.new .input-group--full input[type="text"].form__date,
 .new .input-group--full input[type="text"].form__number,
 .new .input-group--full input[type="number"].form__number {
   width: 100%;
 }
-/* line 581, ../sass/elements/_forms.scss */
+/* line 598, ../sass/elements/_forms.scss */
 .new .input-group--full .input-group__addon {
   width: 1%;
 }
-/* line 588, ../sass/elements/_forms.scss */
+/* line 605, ../sass/elements/_forms.scss */
 .new .form__search .input-group__addon {
   padding-left: 0;
 }
-/* line 590, ../sass/elements/_forms.scss */
+/* line 607, ../sass/elements/_forms.scss */
 .new .form__search .input-group__addon .button {
   min-width: 40px;
 }
-/* line 594, ../sass/elements/_forms.scss */
+/* line 611, ../sass/elements/_forms.scss */
 .new .form__search .button {
   font-size: 0;
 }
-/* line 596, ../sass/elements/_forms.scss */
+/* line 613, ../sass/elements/_forms.scss */
 .new .form__search .button:before {
   font-size: 16px;
   font-family: fontawesome;
   content: "\f002";
   color: #FFFFFF;
 }
-/* line 604, ../sass/elements/_forms.scss */
-.new .form__search--active input[type="text"].form__input, .new .form__search--active input[type="text"].form__color, .new .form__search--active input[type="text"].form__number {
+/* line 621, ../sass/elements/_forms.scss */
+.new .form__search--active input[type="text"].form__input, .new .form__search--active input[type="text"].form__color, .new .form__search--active input[type="text"].form__date, .new .form__search--active input[type="text"].form__number {
   border-color: #4DD6B7;
 }
-/* line 608, ../sass/elements/_forms.scss */
+/* line 625, ../sass/elements/_forms.scss */
 .new .form__search--active .button {
   background-color: #4DD6B7;
   font-size: 0;
 }
-/* line 611, ../sass/elements/_forms.scss */
+/* line 628, ../sass/elements/_forms.scss */
 .new .form__search--active .button:before {
   content: "\f00d";
 }
-/* line 614, ../sass/elements/_forms.scss */
+/* line 631, ../sass/elements/_forms.scss */
 .new .form__search--active .button:hover {
   background-color: #2BAC8F;
 }
-/* line 619, ../sass/elements/_forms.scss */
+/* line 636, ../sass/elements/_forms.scss */
 .new .form__search__no-results {
   color: #2C93AC;
   text-align: center;
 }
-/* line 628, ../sass/elements/_forms.scss */
+/* line 645, ../sass/elements/_forms.scss */
 .new .contextual__input__options {
   background-color: #f3f3f3;
   padding: 18px 20px 0;
@@ -3020,48 +3112,48 @@ h1 + .setup-header__description,
   display: none;
   margin-bottom: 23px;
 }
-/* line 637, ../sass/elements/_forms.scss */
+/* line 654, ../sass/elements/_forms.scss */
 .new .contextual__input__options:last-of-type {
   margin-bottom: 18px;
 }
-/* line 644, ../sass/elements/_forms.scss */
+/* line 661, ../sass/elements/_forms.scss */
 .new .contextual__input__options .form__group .form__select, .new .contextual__input__options .form__search .form__select, .new .contextual__input__options .form__search__no-results .form__select, .new .contextual__input__options .form__group div.form__number, .new .contextual__input__options .form__search div.form__number, .new .contextual__input__options .form__search__no-results div.form__number {
   margin-bottom: 0;
 }
-/* line 653, ../sass/elements/_forms.scss */
+/* line 670, ../sass/elements/_forms.scss */
 .new .form__group .form__radio__label:last-of-type, .new .form__search .form__radio__label:last-of-type, .new .form__search__no-results .form__radio__label:last-of-type,
 .new .form__group .form__checkbox__label:last-of-type,
 .new .form__search .form__checkbox__label:last-of-type,
 .new .form__search__no-results .form__checkbox__label:last-of-type {
   margin-bottom: -16px;
 }
-/* line 655, ../sass/elements/_forms.scss */
+/* line 672, ../sass/elements/_forms.scss */
 .new .form__group .form__radio__label:last-of-type + .contextual__input__options, .new .form__search .form__radio__label:last-of-type + .contextual__input__options, .new .form__search__no-results .form__radio__label:last-of-type + .contextual__input__options,
 .new .form__group .form__checkbox__label:last-of-type + .contextual__input__options,
 .new .form__search .form__checkbox__label:last-of-type + .contextual__input__options,
 .new .form__search__no-results .form__checkbox__label:last-of-type + .contextual__input__options {
   margin-top: 19px;
 }
-/* line 666, ../sass/elements/_forms.scss */
+/* line 683, ../sass/elements/_forms.scss */
 .new .form__checkbox:checked + .form__checkbox__label + .contextual__input__options,
 .new .form__checkbox:checked + .form__radio__label + .contextual__input__options,
 .new .form__radio:checked + .form__checkbox__label + .contextual__input__options,
 .new .form__radio:checked + .form__radio__label + .contextual__input__options {
   display: block;
 }
-/* line 670, ../sass/elements/_forms.scss */
+/* line 687, ../sass/elements/_forms.scss */
 .new .form__checkbox:checked + .form__checkbox__label + .form__help + .contextual__input__options,
 .new .form__checkbox:checked + .form__radio__label + .form__help + .contextual__input__options,
 .new .form__radio:checked + .form__checkbox__label + .form__help + .contextual__input__options,
 .new .form__radio:checked + .form__radio__label + .form__help + .contextual__input__options {
   display: block;
 }
-/* line 678, ../sass/elements/_forms.scss */
+/* line 695, ../sass/elements/_forms.scss */
 .new input[type="text"].form__color {
   display: inline;
   width: 100px;
 }
-/* line 686, ../sass/elements/_forms.scss */
+/* line 708, ../sass/elements/_forms.scss */
 .new input[type="text"].form__number,
 .new input[type="number"].form__number {
   width: auto;
@@ -3069,13 +3161,13 @@ h1 + .setup-header__description,
   display: inline-block;
   margin-right: 5px;
 }
-/* line 696, ../sass/elements/_forms.scss */
+/* line 718, ../sass/elements/_forms.scss */
 .new div.form__number {
   width: auto;
   display: inline-block;
   margin-right: 5px;
 }
-/* line 707, ../sass/elements/_forms.scss */
+/* line 729, ../sass/elements/_forms.scss */
 .new input[type="color"].form__color__picker + .sp-replacer {
   margin: 12px 13px;
   vertical-align: top;
@@ -3337,7 +3429,8 @@ h1 + .setup-header__description,
 /* line 23, ../sass/components/_dropdowns.scss */
 .new .dropdown h1, .new .dropdown .h1,
 .new .dropdown h2, .new .dropdown .h2,
-.new .dropdown h3, .new .dropdown .h3,
+.new .dropdown h3, .new .dropdown .h3, .new .dropdown .tabs__list__item > span,
+.new .dropdown .tabs__list__item > a,
 .new .dropdown h4, .new .dropdown .h4, .new .dropdown .form__search__no-results,
 .new .dropdown h5, .new .dropdown .h5 {
   display: inline;
@@ -3395,7 +3488,8 @@ h1 + .setup-header__description,
 /* line 83, ../sass/components/_dropdowns.scss */
 .new .dropdown__trigger h1, .new .dropdown__trigger .h1,
 .new .dropdown__trigger h2, .new .dropdown__trigger .h2,
-.new .dropdown__trigger h3, .new .dropdown__trigger .h3,
+.new .dropdown__trigger h3, .new .dropdown__trigger .h3, .new .dropdown__trigger .tabs__list__item > span,
+.new .dropdown__trigger .tabs__list__item > a,
 .new .dropdown__trigger h4, .new .dropdown__trigger .h4, .new .dropdown__trigger .form__search__no-results,
 .new .dropdown__trigger h5, .new .dropdown__trigger .h5 {
   top: 2px;
@@ -3738,7 +3832,8 @@ h1 + .setup-header__description,
 /* line 53, ../sass/components/_title-bar.scss */
 .new .title-bar h1, .new .title-bar .h1,
 .new .title-bar h2, .new .title-bar .h2,
-.new .title-bar h3, .new .title-bar .h3,
+.new .title-bar h3, .new .title-bar .h3, .new .title-bar .tabs__list__item > span,
+.new .title-bar .tabs__list__item > a,
 .new .title-bar h4, .new .title-bar .h4, .new .title-bar .form__search__no-results,
 .new .title-bar h5, .new .title-bar .h5,
 .new .title-bar h6, .new .title-bar .h6 {
@@ -4257,7 +4352,7 @@ h1 + .setup-header__description,
   clear: both;
 }
 /* line 66, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group .form__input, .new .admin-recharge.form__search .form__input, .new .admin-recharge.form__search__no-results .form__input, .new .admin-recharge.form__group textarea.form__input__code, .new .admin-recharge.form__search textarea.form__input__code, .new .admin-recharge.form__search__no-results textarea.form__input__code, .new .admin-recharge.form__group input[type="text"].form__color, .new .admin-recharge.form__search input[type="text"].form__color, .new .admin-recharge.form__search__no-results input[type="text"].form__color, .new .admin-recharge.form__group input[type="text"].form__number, .new .admin-recharge.form__search input[type="text"].form__number, .new .admin-recharge.form__search__no-results input[type="text"].form__number,
+.new .admin-recharge.form__group .form__input, .new .admin-recharge.form__search .form__input, .new .admin-recharge.form__search__no-results .form__input, .new .admin-recharge.form__group textarea.form__input__code, .new .admin-recharge.form__search textarea.form__input__code, .new .admin-recharge.form__search__no-results textarea.form__input__code, .new .admin-recharge.form__group input[type="text"].form__color, .new .admin-recharge.form__search input[type="text"].form__color, .new .admin-recharge.form__search__no-results input[type="text"].form__color, .new .admin-recharge.form__group input[type="text"].form__date, .new .admin-recharge.form__search input[type="text"].form__date, .new .admin-recharge.form__search__no-results input[type="text"].form__date, .new .admin-recharge.form__group input[type="text"].form__number, .new .admin-recharge.form__search input[type="text"].form__number, .new .admin-recharge.form__search__no-results input[type="text"].form__number,
 .new .admin-recharge.form__group input[type="number"].form__number,
 .new .admin-recharge.form__search input[type="number"].form__number,
 .new .admin-recharge.form__search__no-results input[type="number"].form__number,
@@ -4268,7 +4363,7 @@ h1 + .setup-header__description,
   border: 1px solid #53BAD3;
 }
 /* line 70, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group .form__input:focus, .new .admin-recharge.form__search .form__input:focus, .new .admin-recharge.form__search__no-results .form__input:focus, .new .admin-recharge.form__group textarea.form__input__code:focus, .new .admin-recharge.form__search textarea.form__input__code:focus, .new .admin-recharge.form__search__no-results textarea.form__input__code:focus, .new .admin-recharge.form__group input[type="text"].form__color:focus, .new .admin-recharge.form__search input[type="text"].form__color:focus, .new .admin-recharge.form__search__no-results input[type="text"].form__color:focus, .new .admin-recharge.form__group input[type="text"].form__number:focus, .new .admin-recharge.form__search input[type="text"].form__number:focus, .new .admin-recharge.form__search__no-results input[type="text"].form__number:focus,
+.new .admin-recharge.form__group .form__input:focus, .new .admin-recharge.form__search .form__input:focus, .new .admin-recharge.form__search__no-results .form__input:focus, .new .admin-recharge.form__group textarea.form__input__code:focus, .new .admin-recharge.form__search textarea.form__input__code:focus, .new .admin-recharge.form__search__no-results textarea.form__input__code:focus, .new .admin-recharge.form__group input[type="text"].form__color:focus, .new .admin-recharge.form__search input[type="text"].form__color:focus, .new .admin-recharge.form__search__no-results input[type="text"].form__color:focus, .new .admin-recharge.form__group input[type="text"].form__date:focus, .new .admin-recharge.form__search input[type="text"].form__date:focus, .new .admin-recharge.form__search__no-results input[type="text"].form__date:focus, .new .admin-recharge.form__group input[type="text"].form__number:focus, .new .admin-recharge.form__search input[type="text"].form__number:focus, .new .admin-recharge.form__search__no-results input[type="text"].form__number:focus,
 .new .admin-recharge.form__group input[type="number"].form__number:focus,
 .new .admin-recharge.form__search input[type="number"].form__number:focus,
 .new .admin-recharge.form__search__no-results input[type="number"].form__number:focus,
@@ -4278,7 +4373,7 @@ h1 + .setup-header__description,
   border-color: #4DD6B7;
 }
 /* line 73, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group .form__input::-webkit-input-placeholder, .new .admin-recharge.form__search .form__input::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results .form__input::-webkit-input-placeholder, .new .admin-recharge.form__group textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__search textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__color::-webkit-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__color::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color::-webkit-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__number::-webkit-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__number::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number::-webkit-input-placeholder,
+.new .admin-recharge.form__group .form__input::-webkit-input-placeholder, .new .admin-recharge.form__search .form__input::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results .form__input::-webkit-input-placeholder, .new .admin-recharge.form__group textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__search textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code::-webkit-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__color::-webkit-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__color::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color::-webkit-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__date::-webkit-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__date::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__date::-webkit-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__number::-webkit-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__number::-webkit-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number::-webkit-input-placeholder,
 .new .admin-recharge.form__group input[type="number"].form__number::-webkit-input-placeholder,
 .new .admin-recharge.form__search input[type="number"].form__number::-webkit-input-placeholder,
 .new .admin-recharge.form__search__no-results input[type="number"].form__number::-webkit-input-placeholder,
@@ -4288,7 +4383,7 @@ h1 + .setup-header__description,
   color: #53BAD3;
 }
 /* line 76, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group .form__input:-moz-placeholder, .new .admin-recharge.form__search .form__input:-moz-placeholder, .new .admin-recharge.form__search__no-results .form__input:-moz-placeholder, .new .admin-recharge.form__group textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__search textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__color:-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__color:-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color:-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__number:-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__number:-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number:-moz-placeholder,
+.new .admin-recharge.form__group .form__input:-moz-placeholder, .new .admin-recharge.form__search .form__input:-moz-placeholder, .new .admin-recharge.form__search__no-results .form__input:-moz-placeholder, .new .admin-recharge.form__group textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__search textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code:-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__color:-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__color:-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color:-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__date:-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__date:-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__date:-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__number:-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__number:-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number:-moz-placeholder,
 .new .admin-recharge.form__group input[type="number"].form__number:-moz-placeholder,
 .new .admin-recharge.form__search input[type="number"].form__number:-moz-placeholder,
 .new .admin-recharge.form__search__no-results input[type="number"].form__number:-moz-placeholder,
@@ -4298,7 +4393,7 @@ h1 + .setup-header__description,
   color: #53BAD3;
 }
 /* line 79, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group .form__input::-moz-placeholder, .new .admin-recharge.form__search .form__input::-moz-placeholder, .new .admin-recharge.form__search__no-results .form__input::-moz-placeholder, .new .admin-recharge.form__group textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__search textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__color::-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__color::-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color::-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__number::-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__number::-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number::-moz-placeholder,
+.new .admin-recharge.form__group .form__input::-moz-placeholder, .new .admin-recharge.form__search .form__input::-moz-placeholder, .new .admin-recharge.form__search__no-results .form__input::-moz-placeholder, .new .admin-recharge.form__group textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__search textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code::-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__color::-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__color::-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color::-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__date::-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__date::-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__date::-moz-placeholder, .new .admin-recharge.form__group input[type="text"].form__number::-moz-placeholder, .new .admin-recharge.form__search input[type="text"].form__number::-moz-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number::-moz-placeholder,
 .new .admin-recharge.form__group input[type="number"].form__number::-moz-placeholder,
 .new .admin-recharge.form__search input[type="number"].form__number::-moz-placeholder,
 .new .admin-recharge.form__search__no-results input[type="number"].form__number::-moz-placeholder,
@@ -4308,7 +4403,7 @@ h1 + .setup-header__description,
   color: #53BAD3;
 }
 /* line 82, ../sass/components/_admin-utilities.scss */
-.new .admin-recharge.form__group .form__input:-ms-input-placeholder, .new .admin-recharge.form__search .form__input:-ms-input-placeholder, .new .admin-recharge.form__search__no-results .form__input:-ms-input-placeholder, .new .admin-recharge.form__group textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__search textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__color:-ms-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__color:-ms-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color:-ms-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__number:-ms-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__number:-ms-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number:-ms-input-placeholder,
+.new .admin-recharge.form__group .form__input:-ms-input-placeholder, .new .admin-recharge.form__search .form__input:-ms-input-placeholder, .new .admin-recharge.form__search__no-results .form__input:-ms-input-placeholder, .new .admin-recharge.form__group textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__search textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__search__no-results textarea.form__input__code:-ms-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__color:-ms-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__color:-ms-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__color:-ms-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__date:-ms-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__date:-ms-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__date:-ms-input-placeholder, .new .admin-recharge.form__group input[type="text"].form__number:-ms-input-placeholder, .new .admin-recharge.form__search input[type="text"].form__number:-ms-input-placeholder, .new .admin-recharge.form__search__no-results input[type="text"].form__number:-ms-input-placeholder,
 .new .admin-recharge.form__group input[type="number"].form__number:-ms-input-placeholder,
 .new .admin-recharge.form__search input[type="number"].form__number:-ms-input-placeholder,
 .new .admin-recharge.form__search__no-results input[type="number"].form__number:-ms-input-placeholder,
@@ -4410,7 +4505,9 @@ h1 + .setup-header__description,
   	Date: 9-1-2016
   	Author: Corey M. Capetillo
   	9-1-16:
-  		Create the first page of tabs
+  		- Create the first page of tabs
+  		- Add the ability to use the grid system within the tab content. But because of the tab's background color, use display: table so the heights are equal
+  		- Add a statistics sidebar. Keep it in Tabs section for now
   */
   /*
   	8-10-16:
@@ -5613,7 +5710,7 @@ h1 + .setup-header__description,
   }
 }
 /* line 44, ../sass/layouts/_footer.scss */
-.new .footer .list--inline li {
+.new .footer .list--inline li, .new .footer .tabs__list li {
   font-size: 14px;
 }
 /* line 95, ../sass/layouts/_navbar.scss */
@@ -6097,6 +6194,149 @@ h1 + .setup-header__description,
 .new .navbar__return--highlight:hover, .new .navbar__return--highlight:focus {
   background-color: #2bac8f !important;
 }
+/* line 12, ../sass/layouts/_tabs.scss */
+.new .tabs__header {
+  min-height: 60px;
+  position: relative;
+  top: 1px;
+}
+/* line 19, ../sass/layouts/_tabs.scss */
+.new .tabs__list__item {
+  border-bottom: 1px solid #EEEEEE;
+}
+@media screen and (max-width: 767px) {
+  /* line 19, ../sass/layouts/_tabs.scss */
+  .new .tabs__list__item {
+    display: block;
+    width: 100%;
+  }
+}
+/* line 25, ../sass/layouts/_tabs.scss */
+.new .tabs__list__item > span,
+.new .tabs__list__item > a {
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+  padding: 0 20px;
+  display: block;
+  color: #424242;
+}
+/* line 36, ../sass/layouts/_tabs.scss */
+.new .tabs__list__item.active > span,
+.new .tabs__list__item.active > a {
+  background-color: #EEEEEE;
+}
+/* line 43, ../sass/layouts/_tabs.scss */
+.new .tabs__content {
+  background-color: #EEEEEE;
+  padding: 20px;
+}
+/* line 46, ../sass/layouts/_tabs.scss */
+.new .tabs__content .layout__container {
+  width: 100%;
+  background-color: #FFF;
+}
+@media screen and (min-width: 768px) {
+  /* line 46, ../sass/layouts/_tabs.scss */
+  .new .tabs__content .layout__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* line 52, ../sass/layouts/_tabs.scss */
+  .new .tabs__content .layout__container .layout {
+    display: table;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* line 46, ../sass/layouts/_tabs.scss */
+  .new .tabs__content .layout__container {
+    max-width: 740px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* line 46, ../sass/layouts/_tabs.scss */
+  .new .tabs__content .layout__container {
+    max-width: 960px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 46, ../sass/layouts/_tabs.scss */
+  .new .tabs__content .layout__container {
+    max-width: 1160px;
+  }
+}
+/* line 69, ../sass/layouts/_tabs.scss */
+.new .tabs__content .layout__sidebar,
+.new .tabs__content .layout__content,
+.new .tabs__content .grid__xs__1, .new .tabs__content .grid__sm__1, .new .tabs__content .grid__md__1, .new .tabs__content .grid__lg__1,
+.new .tabs__content .grid__xs__2, .new .tabs__content .grid__sm__2, .new .tabs__content .grid__md__2, .new .tabs__content .grid__lg__2,
+.new .tabs__content .grid__xs__3, .new .tabs__content .grid__sm__3, .new .tabs__content .grid__md__3, .new .tabs__content .grid__lg__3,
+.new .tabs__content .grid__xs__4, .new .tabs__content .grid__sm__4, .new .tabs__content .grid__md__4, .new .tabs__content .grid__lg__4,
+.new .tabs__content .grid__xs__5, .new .tabs__content .grid__sm__5, .new .tabs__content .grid__md__5, .new .tabs__content .grid__lg__5,
+.new .tabs__content .grid__xs__6, .new .tabs__content .grid__sm__6, .new .tabs__content .grid__md__6, .new .tabs__content .grid__lg__6,
+.new .tabs__content .grid__xs__7, .new .tabs__content .grid__sm__7, .new .tabs__content .grid__md__7, .new .tabs__content .grid__lg__7,
+.new .tabs__content .grid__xs__8, .new .tabs__content .grid__sm__8, .new .tabs__content .grid__md__8, .new .tabs__content .grid__lg__8,
+.new .tabs__content .grid__xs__9, .new .tabs__content .grid__sm__9, .new .tabs__content .grid__md__9, .new .tabs__content .grid__lg__9,
+.new .tabs__content .grid__xs__10, .new .tabs__content .grid__sm__10, .new .tabs__content .grid__md__10, .new .tabs__content .grid__lg__10,
+.new .tabs__content .grid__xs__11, .new .tabs__content .grid__sm__11, .new .tabs__content .grid__md__11, .new .tabs__content .grid__lg__11,
+.new .tabs__content .grid__xs__12, .new .tabs__content .grid__sm__12, .new .tabs__content .grid__md__12, .new .tabs__content .grid__lg__12 {
+  background-color: #FFF;
+}
+@media screen and (min-width: 768px) {
+  /* line 69, ../sass/layouts/_tabs.scss */
+  .new .tabs__content .layout__sidebar,
+  .new .tabs__content .layout__content,
+  .new .tabs__content .grid__xs__1, .new .tabs__content .grid__sm__1, .new .tabs__content .grid__md__1, .new .tabs__content .grid__lg__1,
+  .new .tabs__content .grid__xs__2, .new .tabs__content .grid__sm__2, .new .tabs__content .grid__md__2, .new .tabs__content .grid__lg__2,
+  .new .tabs__content .grid__xs__3, .new .tabs__content .grid__sm__3, .new .tabs__content .grid__md__3, .new .tabs__content .grid__lg__3,
+  .new .tabs__content .grid__xs__4, .new .tabs__content .grid__sm__4, .new .tabs__content .grid__md__4, .new .tabs__content .grid__lg__4,
+  .new .tabs__content .grid__xs__5, .new .tabs__content .grid__sm__5, .new .tabs__content .grid__md__5, .new .tabs__content .grid__lg__5,
+  .new .tabs__content .grid__xs__6, .new .tabs__content .grid__sm__6, .new .tabs__content .grid__md__6, .new .tabs__content .grid__lg__6,
+  .new .tabs__content .grid__xs__7, .new .tabs__content .grid__sm__7, .new .tabs__content .grid__md__7, .new .tabs__content .grid__lg__7,
+  .new .tabs__content .grid__xs__8, .new .tabs__content .grid__sm__8, .new .tabs__content .grid__md__8, .new .tabs__content .grid__lg__8,
+  .new .tabs__content .grid__xs__9, .new .tabs__content .grid__sm__9, .new .tabs__content .grid__md__9, .new .tabs__content .grid__lg__9,
+  .new .tabs__content .grid__xs__10, .new .tabs__content .grid__sm__10, .new .tabs__content .grid__md__10, .new .tabs__content .grid__lg__10,
+  .new .tabs__content .grid__xs__11, .new .tabs__content .grid__sm__11, .new .tabs__content .grid__md__11, .new .tabs__content .grid__lg__11,
+  .new .tabs__content .grid__xs__12, .new .tabs__content .grid__sm__12, .new .tabs__content .grid__md__12, .new .tabs__content .grid__lg__12 {
+    display: table-cell;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 95, ../sass/layouts/_tabs.scss */
+.new .layout__container .layout__sidebar--statistics {
+  background-color: #2c93ac;
+  border-left: 20px solid #EEEEEE;
+}
+@media screen and (max-width: 767px) {
+  /* line 95, ../sass/layouts/_tabs.scss */
+  .new .layout__container .layout__sidebar--statistics {
+    border-top: 20px solid #EEEEEE;
+    border-left-width: 0;
+  }
+}
+/* line 105, ../sass/layouts/_tabs.scss */
+.new .layout__sidebar--statistics {
+  color: #FFF;
+}
+/* line 107, ../sass/layouts/_tabs.scss */
+.new .layout__sidebar--statistics a {
+  color: #FFF;
+}
+/* line 110, ../sass/layouts/_tabs.scss */
+.new .layout__sidebar--statistics h1, .new .layout__sidebar--statistics .h1,
+.new .layout__sidebar--statistics h2, .new .layout__sidebar--statistics .h2,
+.new .layout__sidebar--statistics h3, .new .layout__sidebar--statistics .h3, .new .layout__sidebar--statistics .tabs__list__item > span,
+.new .layout__sidebar--statistics .tabs__list__item > a,
+.new .layout__sidebar--statistics h4, .new .layout__sidebar--statistics .h4, .new .layout__sidebar--statistics .form__search__no-results,
+.new .layout__sidebar--statistics h5, .new .layout__sidebar--statistics .h5,
+.new .layout__sidebar--statistics h6, .new .layout__sidebar--statistics .h6 {
+  color: #FFF;
+}
 /* line 7, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools {
   background-color: #53BAD3;
@@ -6239,13 +6479,15 @@ h1 + .setup-header__description,
 /* line 51, ../sass/dynamic/_modals.scss */
 .new .rc_modal__content h1, .new .rc_modal__content .h1,
 .new .rc_modal__content h2, .new .rc_modal__content .h2,
-.new .rc_modal__content h3, .new .rc_modal__content .h3,
+.new .rc_modal__content h3, .new .rc_modal__content .h3, .new .rc_modal__content .tabs__list__item > span,
+.new .rc_modal__content .tabs__list__item > a,
 .new .rc_modal__content h4, .new .rc_modal__content .h4, .new .rc_modal__content .form__search__no-results,
 .new .rc_modal__content h5, .new .rc_modal__content .h5 {
   color: #424242;
 }
 /* line 58, ../sass/dynamic/_modals.scss */
-.new .rc_modal__content h3, .new .rc_modal__content .h3 {
+.new .rc_modal__content h3, .new .rc_modal__content .h3, .new .rc_modal__content .tabs__list__item > span,
+.new .rc_modal__content .tabs__list__item > a {
   font-family: 'ralewaysemibold', arial, sans-serif;
 }
 @media (min-width: 768px) {
@@ -6943,6 +7185,239 @@ h1 + .setup-header__description,
 /* line 281, ../sass/vendors/_dropkick.scss */
 .new select[data-dkcacheid] {
   display: none;
+}
+
+/*!
+ * Pikaday
+ * Copyright © 2014 David Bushell | BSD & MIT license | http://dbushell.com/
+ */
+/* line 34, ../sass/vendors/_pikaday.scss */
+.pika-single {
+  z-index: 9999;
+  display: block;
+  position: relative;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-bottom-color: #bbb;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 44, ../sass/vendors/_pikaday.scss */
+.pika-single.is-hidden {
+  display: none;
+}
+/* line 48, ../sass/vendors/_pikaday.scss */
+.pika-single.is-bound {
+  position: absolute;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* line 56, ../sass/vendors/_pikaday.scss */
+.pika-single {
+  *zoom: 1;
+}
+/* line 59, ../sass/vendors/_pikaday.scss */
+.pika-single:before, .pika-single:after {
+  content: " ";
+  display: table;
+}
+/* line 65, ../sass/vendors/_pikaday.scss */
+.pika-single:after {
+  clear: both;
+}
+
+/* line 68, ../sass/vendors/_pikaday.scss */
+.pika-lendar {
+  float: left;
+  width: 240px;
+  margin: 8px;
+}
+
+/* line 74, ../sass/vendors/_pikaday.scss */
+.pika-title {
+  position: relative;
+  text-align: center;
+}
+/* line 78, ../sass/vendors/_pikaday.scss */
+.pika-title select {
+  cursor: pointer;
+  position: absolute;
+  z-index: 9998;
+  margin: 0;
+  left: 0;
+  top: 5px;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+/* line 90, ../sass/vendors/_pikaday.scss */
+.pika-label {
+  display: inline-block;
+  *display: inline;
+  position: relative;
+  z-index: 9999;
+  overflow: hidden;
+  margin: 0;
+  padding: 5px 3px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff;
+}
+
+/* line 105, ../sass/vendors/_pikaday.scss */
+.pika-prev,
+.pika-next {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: 0;
+  padding: 0;
+  width: 20px;
+  height: 30px;
+  text-indent: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  opacity: .5;
+  *position: absolute;
+  *top: 0;
+}
+/* line 126, ../sass/vendors/_pikaday.scss */
+.pika-prev:hover,
+.pika-next:hover {
+  opacity: 1;
+}
+/* line 130, ../sass/vendors/_pikaday.scss */
+.pika-prev.is-disabled,
+.pika-next.is-disabled {
+  cursor: default;
+  opacity: .2;
+}
+
+/* line 136, ../sass/vendors/_pikaday.scss */
+.pika-prev,
+.is-rtl .pika-next {
+  float: left;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==");
+  *left: 0;
+}
+
+/* line 143, ../sass/vendors/_pikaday.scss */
+.pika-next,
+.is-rtl .pika-prev {
+  float: right;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=");
+  *right: 0;
+}
+
+/* line 150, ../sass/vendors/_pikaday.scss */
+.pika-select {
+  display: inline-block;
+  *display: inline;
+}
+
+/* line 155, ../sass/vendors/_pikaday.scss */
+.pika-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+}
+/* line 161, ../sass/vendors/_pikaday.scss */
+.pika-table th,
+.pika-table td {
+  width: 14.285714285714286%;
+  padding: 0;
+}
+/* line 167, ../sass/vendors/_pikaday.scss */
+.pika-table th {
+  color: #999;
+  font-size: 12px;
+  line-height: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+/* line 175, ../sass/vendors/_pikaday.scss */
+.pika-table abbr {
+  border-bottom: none;
+  cursor: help;
+}
+
+/* line 181, ../sass/vendors/_pikaday.scss */
+.pika-button {
+  cursor: pointer;
+  display: block;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  padding: 5px;
+  color: #666;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  background: #f5f5f5;
+}
+/* line 197, ../sass/vendors/_pikaday.scss */
+.is-today .pika-button {
+  color: #33aaff;
+  font-weight: bold;
+}
+/* line 202, ../sass/vendors/_pikaday.scss */
+.is-selected .pika-button {
+  color: #fff;
+  font-weight: bold;
+  background: #33aaff;
+  box-shadow: inset 0 1px 3px #178fe5;
+  border-radius: 3px;
+}
+/* line 210, ../sass/vendors/_pikaday.scss */
+.is-disabled .pika-button, .is-outside-current-month .pika-button {
+  pointer-events: none;
+  cursor: default;
+  color: #999;
+  opacity: .3;
+}
+/* line 218, ../sass/vendors/_pikaday.scss */
+.pika-button:hover {
+  color: #fff;
+  background: #ff8000;
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+/* line 226, ../sass/vendors/_pikaday.scss */
+.pika-week {
+  font-size: 11px;
+  color: #999;
+}
+
+/* line 231, ../sass/vendors/_pikaday.scss */
+.is-inrange .pika-button {
+  background: #D5E9F7;
+}
+
+/* line 235, ../sass/vendors/_pikaday.scss */
+.is-startrange .pika-button {
+  color: #fff;
+  background: #6CB31D;
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+/* line 242, ../sass/vendors/_pikaday.scss */
+.is-endrange .pika-button {
+  color: #fff;
+  background: #33aaff;
+  box-shadow: none;
+  border-radius: 3px;
 }
 
 /***
@@ -7681,12 +8156,12 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 }
 
 /* Temporary fix until we no longer need to use .new {} */
-/* line 104, ../sass/app.scss */
+/* line 105, ../sass/app.scss */
 .rc_modal__open {
   overflow: hidden;
 }
 
-/* line 108, ../sass/app.scss */
+/* line 109, ../sass/app.scss */
 .rc_modal__backdrop {
   position: fixed;
   top: 0;
@@ -7696,14 +8171,14 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   z-index: 80;
   background-color: #000;
 }
-/* line 116, ../sass/app.scss */
+/* line 117, ../sass/app.scss */
 .rc_modal__backdrop.rc_fade {
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-/* line 121, ../sass/app.scss */
+/* line 122, ../sass/app.scss */
 .rc_modal__backdrop.rc_in, .rc_modal__backdrop.rc_fade.rc_in {
   opacity: 0.7;
   filter: alpha(opacity=70);

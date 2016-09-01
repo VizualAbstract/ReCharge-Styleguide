@@ -136,6 +136,11 @@
 <?php include('_elements/card-details.php'); ?>
 </div><!-- .rc_sg__example -->
 
+<h2 class="rc_sg__pattern_title" id="date-range">Date Range</h2>
+<div class="rc_sg__example">
+<?php include('_elements/date-range.php'); ?>
+</div><!-- .rc_sg__example -->
+
 <hr>
 
 <h2 class="rc_sg__pattern_title" id="tables">Tables</h2>
