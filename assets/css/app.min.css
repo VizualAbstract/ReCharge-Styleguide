@@ -1124,6 +1124,10 @@
   margin-bottom: 18px;
 }
 /* line 1, ../sass/style/_colors.scss */
+.new #colors + .rc_sg__example {
+  text-align: center;
+}
+/* line 5, ../sass/style/_colors.scss */
 .new .swatch {
   display: block;
   width: 100%;
@@ -1131,212 +1135,241 @@
   line-height: 50px;
   padding: 0 1em;
   box-sizing: border-box;
+  max-width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 100px;
+  text-align: center;
+  line-height: 100px;
+  padding: 0;
+  display: inline-block;
+  margin-right: 30px;
 }
-/* line 8, ../sass/style/_colors.scss */
+@media screen and (max-width: 767px) {
+  /* line 5, ../sass/style/_colors.scss */
+  .new .swatch {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+/* line 29, ../sass/style/_colors.scss */
 .new .swatch .hexcode {
   float: right;
+  position: absolute;
+  top: 100%;
+  z-index: 30;
+  width: 100%;
+  background: #FFF;
+  text-align: center;
+  float: none;
+  left: 0;
+  color: #000;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 20px;
 }
-/* line 13, ../sass/style/_colors.scss */
+/* line 47, ../sass/style/_colors.scss */
 .new .background--black {
   background-color: #000000;
 }
-/* line 16, ../sass/style/_colors.scss */
+/* line 50, ../sass/style/_colors.scss */
 .new .background--gray-darker {
   background-color: #424242;
 }
-/* line 19, ../sass/style/_colors.scss */
+/* line 53, ../sass/style/_colors.scss */
 .new .background--gray-dark {
   background-color: #676767;
 }
-/* line 22, ../sass/style/_colors.scss */
+/* line 56, ../sass/style/_colors.scss */
 .new .background--gray {
   background-color: #8E8F8E;
 }
-/* line 25, ../sass/style/_colors.scss */
+/* line 59, ../sass/style/_colors.scss */
 .new .background--gray-light {
   background-color: #CCCCCC;
 }
-/* line 28, ../sass/style/_colors.scss */
+/* line 62, ../sass/style/_colors.scss */
 .new .background--gray-lighter {
   background-color: #EEEEEE;
 }
-/* line 31, ../sass/style/_colors.scss */
+/* line 65, ../sass/style/_colors.scss */
 .new .background--white {
   background-color: #FFFFFF;
 }
-/* line 35, ../sass/style/_colors.scss */
+/* line 69, ../sass/style/_colors.scss */
 .new .background--cyan {
   background-color: #53BAD3;
 }
-/* line 38, ../sass/style/_colors.scss */
+/* line 72, ../sass/style/_colors.scss */
 .new .background--blue {
   background-color: #2C93AC;
 }
-/* line 41, ../sass/style/_colors.scss */
+/* line 75, ../sass/style/_colors.scss */
 .new .background--green {
   background-color: #2BAC8F;
 }
-/* line 44, ../sass/style/_colors.scss */
+/* line 78, ../sass/style/_colors.scss */
 .new .background--aquamarine {
   background-color: #4DD6B7;
 }
-/* line 47, ../sass/style/_colors.scss */
+/* line 81, ../sass/style/_colors.scss */
 .new .background--mint {
   background-color: #BDF0E4;
 }
-/* line 50, ../sass/style/_colors.scss */
+/* line 84, ../sass/style/_colors.scss */
 .new .background--yellow {
   background-color: #FFF155;
 }
-/* line 53, ../sass/style/_colors.scss */
+/* line 87, ../sass/style/_colors.scss */
 .new .background--orange {
   background-color: #FB8309;
 }
-/* line 56, ../sass/style/_colors.scss */
+/* line 90, ../sass/style/_colors.scss */
 .new .background--red {
   background-color: #EC3D10;
 }
-/* line 59, ../sass/style/_colors.scss */
+/* line 93, ../sass/style/_colors.scss */
 .new .background--magenta {
   background-color: #C00399;
 }
-/* line 62, ../sass/style/_colors.scss */
+/* line 96, ../sass/style/_colors.scss */
 .new .background--pink {
   background-color: #D06EAB;
 }
-/* line 67, ../sass/style/_colors.scss */
+/* line 101, ../sass/style/_colors.scss */
 .new .color--black {
   color: #000000;
 }
-/* line 70, ../sass/style/_colors.scss */
+/* line 104, ../sass/style/_colors.scss */
 .new .color--gray-darker {
   color: #424242;
 }
-/* line 73, ../sass/style/_colors.scss */
+/* line 107, ../sass/style/_colors.scss */
 .new .color--gray-dark {
   color: #676767;
 }
-/* line 76, ../sass/style/_colors.scss */
+/* line 110, ../sass/style/_colors.scss */
 .new .color--gray {
   color: #8E8F8E;
 }
-/* line 79, ../sass/style/_colors.scss */
+/* line 113, ../sass/style/_colors.scss */
 .new .color--gray-light {
   color: #CCCCCC;
 }
-/* line 82, ../sass/style/_colors.scss */
+/* line 116, ../sass/style/_colors.scss */
 .new .color--gray-lighter {
   color: #EEEEEE;
 }
-/* line 85, ../sass/style/_colors.scss */
+/* line 119, ../sass/style/_colors.scss */
 .new .color--white {
   color: #FFFFFF;
 }
-/* line 89, ../sass/style/_colors.scss */
+/* line 123, ../sass/style/_colors.scss */
 .new .color--cyan {
   color: #53BAD3;
 }
-/* line 92, ../sass/style/_colors.scss */
+/* line 126, ../sass/style/_colors.scss */
 .new .color--blue {
   color: #2C93AC;
 }
-/* line 95, ../sass/style/_colors.scss */
+/* line 129, ../sass/style/_colors.scss */
 .new .color--green {
   color: #2BAC8F;
 }
-/* line 98, ../sass/style/_colors.scss */
+/* line 132, ../sass/style/_colors.scss */
 .new .color--aquamarine {
   color: #4DD6B7;
 }
-/* line 101, ../sass/style/_colors.scss */
+/* line 135, ../sass/style/_colors.scss */
 .new .color--mint {
   color: #BDF0E4;
 }
-/* line 104, ../sass/style/_colors.scss */
+/* line 138, ../sass/style/_colors.scss */
 .new .color--yellow {
   color: #FFF155;
 }
-/* line 107, ../sass/style/_colors.scss */
+/* line 141, ../sass/style/_colors.scss */
 .new .color--orange {
   color: #FB8309;
 }
-/* line 110, ../sass/style/_colors.scss */
+/* line 144, ../sass/style/_colors.scss */
 .new .color--red {
   color: #EC3D10;
 }
-/* line 113, ../sass/style/_colors.scss */
+/* line 147, ../sass/style/_colors.scss */
 .new .color--magenta {
   color: #C00399;
 }
-/* line 116, ../sass/style/_colors.scss */
+/* line 150, ../sass/style/_colors.scss */
 .new .color--pink {
   color: #D06EAB;
 }
-/* line 123, ../sass/style/_colors.scss */
+/* line 157, ../sass/style/_colors.scss */
 .new .swatch.background--black {
   color: #FFFFFF;
 }
-/* line 126, ../sass/style/_colors.scss */
+/* line 160, ../sass/style/_colors.scss */
 .new .swatch.background--gray-darker {
   color: #FFFFFF;
 }
-/* line 129, ../sass/style/_colors.scss */
+/* line 163, ../sass/style/_colors.scss */
 .new .swatch.background--gray-dark {
   color: #FFFFFF;
 }
-/* line 132, ../sass/style/_colors.scss */
+/* line 166, ../sass/style/_colors.scss */
 .new .swatch.background--gray {
   color: #424242;
 }
-/* line 135, ../sass/style/_colors.scss */
+/* line 169, ../sass/style/_colors.scss */
 .new .swatch.background--gray-light {
   color: #424242;
 }
-/* line 138, ../sass/style/_colors.scss */
+/* line 172, ../sass/style/_colors.scss */
 .new .swatch.background--gray-lighter {
   color: #424242;
 }
-/* line 141, ../sass/style/_colors.scss */
+/* line 175, ../sass/style/_colors.scss */
 .new .swatch.background--white {
   color: #424242;
 }
-/* line 145, ../sass/style/_colors.scss */
+/* line 179, ../sass/style/_colors.scss */
 .new .swatch.background--cyan {
   color: #424242;
 }
-/* line 148, ../sass/style/_colors.scss */
+/* line 182, ../sass/style/_colors.scss */
 .new .swatch.background--blue {
   color: #FFFFFF;
 }
-/* line 151, ../sass/style/_colors.scss */
+/* line 185, ../sass/style/_colors.scss */
 .new .swatch.background--green {
   color: #FFFFFF;
 }
-/* line 154, ../sass/style/_colors.scss */
+/* line 188, ../sass/style/_colors.scss */
 .new .swatch.background--aquamarine {
   color: #424242;
 }
-/* line 157, ../sass/style/_colors.scss */
+/* line 191, ../sass/style/_colors.scss */
 .new .swatch.background--mint {
   color: #424242;
 }
-/* line 160, ../sass/style/_colors.scss */
+/* line 194, ../sass/style/_colors.scss */
 .new .swatch.background--yellow {
   color: #424242;
 }
-/* line 163, ../sass/style/_colors.scss */
+/* line 197, ../sass/style/_colors.scss */
 .new .swatch.background--orange {
   color: #424242;
 }
-/* line 166, ../sass/style/_colors.scss */
+/* line 200, ../sass/style/_colors.scss */
 .new .swatch.background--red {
   color: #FFFFFF;
 }
-/* line 169, ../sass/style/_colors.scss */
+/* line 203, ../sass/style/_colors.scss */
 .new .swatch.background--magenta {
   color: #FFFFFF;
 }
-/* line 172, ../sass/style/_colors.scss */
+/* line 206, ../sass/style/_colors.scss */
 .new .swatch.background--pink {
   color: #424242;
 }
