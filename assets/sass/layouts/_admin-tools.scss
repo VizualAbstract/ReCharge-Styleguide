@@ -9,7 +9,7 @@
 	color: #FFF;
 
 	box-sizing: border-box;
-	padding: 20px;
+	padding: 20px 0;
 
 	left: 0;
 	width: 100%;
@@ -21,7 +21,15 @@
 
 	.layout__container {
 		width: 100%;
-		max-width: $container-lg;
+		@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+			max-width: $container-sm;
+		}
+		@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+			max-width: $container-md;
+		}
+		@media screen and (min-width: $screen-lg-min) {
+			max-width: $container-lg;
+		}
 	}
 
 	&__toggler {

@@ -1,0 +1,29 @@
+/*
+	Components: Tabs
+	Version 1.0
+	Date: 9-1-2016
+	Author: Corey M. Capetillo
+	9-1-16:
+		Create the first page of tabs
+*/
+.tabs {
+	&__header {
+
+	}
+	&__list {
+		&__item {
+			> span,
+			> a {
+
+			}
+		}
+	}
+	&__content {
+		.layout__container {
+
+		}
+		.layout {
+
+		}
+	}
+}

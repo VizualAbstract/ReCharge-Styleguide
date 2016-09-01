@@ -3,10 +3,10 @@
 	<div class="layout">
 		<div class="layout__sidebar">
 			<p>.layout__sidebar</p>
-		</div><!-- .sidebar -->
+		</div><!-- .layout__sidebar -->
 		<div class="layout__content">
 			<p>.layout__content</p>
-		</div><!-- .main-content -->
+		</div><!-- .layout__content -->
 	</div>
 </div>
 
@@ -15,7 +15,7 @@
 	<div class="layout">
 		<div class="layout__full">
 			<p>.layout__full</p>
-		</div><!-- .main-content -->
+		</div><!-- .layout__full -->
 	</div>
 </div>
 
@@ -34,21 +34,21 @@
 	  <div class="grid__sm__1"><p>10 / 12</p></div>
 	  <div class="grid__sm__1"><p>11 / 12</p></div>
 	  <div class="grid__sm__1"><p>12 / 12</p></div>
-	</div>
+	</div><!-- .layout -->
 
 	<div class="layout">
 	  <div class="grid__sm__8"><p>8 / 12</p></div>
 	  <div class="grid__sm__4"><p>4 / 8</p></div>
-	</div>
+	</div><!-- .layout -->
 
 	<div class="layout">
 	  <div class="grid__sm__4"><p>4 / 12</p></div>
 	  <div class="grid__sm__4"><p>4 / 12</p></div>
 	  <div class="grid__sm__4"><p>4 / 12</p></div>
-	</div>
+	</div><!-- .layout -->
 
 	<div class="layout">
 	  <div class="grid__sm__6"><p>6 / 12</p></div>
 	  <div class="grid__sm__6"><p>6 / 12</p></div>
-	</div>
-</div><!-- .container -->
+	</div><!-- .layout -->
+</div><!-- .layout__container -->

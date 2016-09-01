@@ -28,6 +28,14 @@
 <?php include('_layouts/navs.php'); ?>
 </div><!-- .example -->
 
+<h2 class="rc_sg__pattern_title" id="tabs">Tabs</h2>
+<div class="rc_sg__description">
+	<p>Tabs are not dynamic, only a link-list to navigate between releavant pages. They rely on <a href="#grids">Grids</a> for their interior content, which is placed within a <code>.tabs__content</code> element to receive correct padding.</p>
+</div><!-- .rc_sg__description -->
+<div class="rc_sg__example">
+<?php include('_layouts/tabs.php'); ?>
+</div><!-- .example -->
+
 <hr>
 
 <h2 class="rc_sg__pattern_title" id="grids">Grids</h2>

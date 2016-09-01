@@ -4405,6 +4405,14 @@ h1 + .setup-header__description,
   		- Removed 'top' from switch on desktop view. It conflicted with vertical-align: middle
   */
   /*
+  	Components: Tabs
+  	Version 1.0
+  	Date: 9-1-2016
+  	Author: Corey M. Capetillo
+  	9-1-16:
+  		Create the first page of tabs
+  */
+  /*
   	8-10-16:
   		- Tooltips will now be simplified, removing header and will be inline instead of overlaied with javascript
   	8-31-16:
@@ -6094,7 +6102,7 @@ h1 + .setup-header__description,
   background-color: #53BAD3;
   color: #FFF;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 20px 0;
   left: 0;
   width: 100%;
 }
@@ -6106,9 +6114,26 @@ h1 + .setup-header__description,
 /* line 22, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools .layout__container {
   width: 100%;
-  max-width: 1160px;
 }
-/* line 27, ../sass/layouts/_admin-tools.scss */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* line 22, ../sass/layouts/_admin-tools.scss */
+  .new .admin-tools .layout__container {
+    max-width: 740px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* line 22, ../sass/layouts/_admin-tools.scss */
+  .new .admin-tools .layout__container {
+    max-width: 960px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 22, ../sass/layouts/_admin-tools.scss */
+  .new .admin-tools .layout__container {
+    max-width: 1160px;
+  }
+}
+/* line 35, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools__toggler {
   background-color: transparent;
   font-family: monospace;
@@ -6116,7 +6141,7 @@ h1 + .setup-header__description,
   padding: 0;
   color: #FFF;
 }
-/* line 33, ../sass/layouts/_admin-tools.scss */
+/* line 41, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools__toggler button {
   font-size: 11px !important;
   padding: 4px 8px;
@@ -6124,12 +6149,12 @@ h1 + .setup-header__description,
   height: auto;
   cursor: pointer;
 }
-/* line 42, ../sass/layouts/_admin-tools.scss */
+/* line 50, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools .rc_toggle-list__item, .new .admin-tools .rc_toggle-list__item.disabled {
   background-color: transparent;
   color: #FFF;
 }
-/* line 46, ../sass/layouts/_admin-tools.scss */
+/* line 54, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools .rc_toggle-list__item a, .new .admin-tools .rc_toggle-list__item.disabled a {
   color: #FFF;
 }
@@ -6138,7 +6163,7 @@ h1 + .setup-header__description,
 	Dynamic
 	Heavily dependant on javascript to deliver a specific effect.
 */
-/* line 86, ../sass/app.scss */
+/* line 87, ../sass/app.scss */
 .new {
   /*
   	Dynamic: Modals
@@ -6553,7 +6578,7 @@ h1 + .setup-header__description,
 	Vendors
 	Impoted libraries, generally serving a singular purpose.
 */
-/* line 96, ../sass/app.scss */
+/* line 97, ../sass/app.scss */
 .new {
   /*!
    * Bootstrap v3.3.5 (http://getbootstrap.com)
@@ -7656,12 +7681,12 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 }
 
 /* Temporary fix until we no longer need to use .new {} */
-/* line 103, ../sass/app.scss */
+/* line 104, ../sass/app.scss */
 .rc_modal__open {
   overflow: hidden;
 }
 
-/* line 107, ../sass/app.scss */
+/* line 108, ../sass/app.scss */
 .rc_modal__backdrop {
   position: fixed;
   top: 0;
@@ -7671,14 +7696,14 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   z-index: 80;
   background-color: #000;
 }
-/* line 115, ../sass/app.scss */
+/* line 116, ../sass/app.scss */
 .rc_modal__backdrop.rc_fade {
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
-/* line 120, ../sass/app.scss */
+/* line 121, ../sass/app.scss */
 .rc_modal__backdrop.rc_in, .rc_modal__backdrop.rc_fade.rc_in {
   opacity: 0.7;
   filter: alpha(opacity=70);
