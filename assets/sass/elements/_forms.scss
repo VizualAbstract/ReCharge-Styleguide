@@ -475,11 +475,17 @@ input[type="checkbox"],
 
 .date-range {
 	@include make-row();
-	max-width: 486px;
+	max-width: 510px;
 	&__start,
 	&__end {
 		box-sizing: border-box;
 		@include make-sm-column(6);
+	}
+	&__end {
+		padding-left: 7px !important;
+	}
+	&__start {
+		padding-right: 7px !important;
 	}
 }
 
@@ -702,6 +708,23 @@ input[type="text"].form__color {
 // Date input
 input[type="text"].form__date {
 	@extend .form__input;
+	&:before {
+		content: '\f0d7';
+		position: relative;
+		font-family: FontAwesome;
+		font-weight: normal;
+		font-size: 19px;
+		line-height: 40px;
+		color: #424242;
+		float: right;
+		height: 40px;
+		width: 40px;
+		text-align: center;
+		display: block;
+		top: -8px;
+		right: -10px;
+		margin: 0;
+	}
 }
 
 // Number input, using the default input

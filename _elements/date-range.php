@@ -8,12 +8,3 @@
 		<input type="text" name="end_date" id="end_date" class="form__date">
 	</div><!-- .date-range__end -->
 </div><!-- .date-picker -->
-
-<script>
-	$(function() {
-		var picker = new Pikaday({
-			field: $('#start_date')[0],
-			format: 'YYYY-MM-DD'
-		});
-	});
-</script>

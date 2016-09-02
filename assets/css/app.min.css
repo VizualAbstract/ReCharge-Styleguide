@@ -2889,7 +2889,7 @@ h1 + .setup-header__description,
 .new .date-range {
   margin-left: -10px;
   margin-right: -10px;
-  max-width: 486px;
+  max-width: 510px;
 }
 /* line 18, ../sass/_mixins.scss */
 .new .date-range:before, .new .date-range:after {
@@ -2915,45 +2915,53 @@ h1 + .setup-header__description,
     width: 50%;
   }
 }
-/* line 486, ../sass/elements/_forms.scss */
+/* line 484, ../sass/elements/_forms.scss */
+.new .date-range__end {
+  padding-left: 7px !important;
+}
+/* line 487, ../sass/elements/_forms.scss */
+.new .date-range__start {
+  padding-right: 7px !important;
+}
+/* line 492, ../sass/elements/_forms.scss */
 .new .card-details {
   width: 100%;
   font-size: 0;
 }
-/* line 489, ../sass/elements/_forms.scss */
+/* line 495, ../sass/elements/_forms.scss */
 .new .card-details input.form__input, .new .card-details input[type="text"].form__color, .new .card-details input[type="text"].form__date, .new .card-details input[type="text"].form__number,
 .new .card-details input[type="number"].form__number {
   min-width: 10px;
   font-size: 16px;
   margin-bottom: 0;
 }
-/* line 494, ../sass/elements/_forms.scss */
+/* line 500, ../sass/elements/_forms.scss */
 .new .card-details__date, .new .card-details__security, .new .card-details__cards {
   display: inline-block;
   vertical-align: middle;
   box-sizing: border-box;
 }
-/* line 501, ../sass/elements/_forms.scss */
+/* line 507, ../sass/elements/_forms.scss */
 .new .card-details__label {
   font-size: 16px;
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 506, ../sass/elements/_forms.scss */
+/* line 512, ../sass/elements/_forms.scss */
 .new .card-details__date {
   width: 30%;
 }
-/* line 508, ../sass/elements/_forms.scss */
+/* line 514, ../sass/elements/_forms.scss */
 .new .card-details__date__month, .new .card-details__date__divider, .new .card-details__date__year {
   font-size: 0;
   display: inline-block !important;
   vertical-align: top;
 }
-/* line 515, ../sass/elements/_forms.scss */
+/* line 521, ../sass/elements/_forms.scss */
 .new .card-details__date__month {
   width: 29.62% !important;
 }
-/* line 518, ../sass/elements/_forms.scss */
+/* line 524, ../sass/elements/_forms.scss */
 .new .card-details__date__divider {
   width: 14.83% !important;
   font-size: 16px;
@@ -2961,16 +2969,16 @@ h1 + .setup-header__description,
   line-height: 40px;
   padding-top: 10px;
 }
-/* line 525, ../sass/elements/_forms.scss */
+/* line 531, ../sass/elements/_forms.scss */
 .new .card-details__date__year {
   width: 55.55% !important;
 }
-/* line 529, ../sass/elements/_forms.scss */
+/* line 535, ../sass/elements/_forms.scss */
 .new .card-details__security {
   width: 15%;
   padding-left: 20px;
 }
-/* line 533, ../sass/elements/_forms.scss */
+/* line 539, ../sass/elements/_forms.scss */
 .new .card-details__cards {
   width: 55%;
   margin-top: 37px;
@@ -2978,7 +2986,7 @@ h1 + .setup-header__description,
   height: 40px;
   line-height: 40px;
 }
-/* line 540, ../sass/elements/_forms.scss */
+/* line 546, ../sass/elements/_forms.scss */
 .new .card-details__icon {
   width: 20%;
   margin-left: 10%;
@@ -2986,26 +2994,26 @@ h1 + .setup-header__description,
   vertical-align: middle;
 }
 @media screen and (min-width: 768px) {
-  /* line 540, ../sass/elements/_forms.scss */
+  /* line 546, ../sass/elements/_forms.scss */
   .new .card-details__icon {
     width: 16.42%;
     margin-left: 20px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 551, ../sass/elements/_forms.scss */
+  /* line 557, ../sass/elements/_forms.scss */
   .new .card-details__date {
     width: 50%;
   }
-  /* line 554, ../sass/elements/_forms.scss */
+  /* line 560, ../sass/elements/_forms.scss */
   .new .card-details__security {
     width: 20%;
   }
-  /* line 557, ../sass/elements/_forms.scss */
+  /* line 563, ../sass/elements/_forms.scss */
   .new .card-details__cards {
     width: 30%;
   }
-  /* line 560, ../sass/elements/_forms.scss */
+  /* line 566, ../sass/elements/_forms.scss */
   .new .card-details .form__error {
     position: absolute;
     right: 0;
@@ -3013,13 +3021,13 @@ h1 + .setup-header__description,
     bottom: -24px;
   }
 }
-/* line 569, ../sass/elements/_forms.scss */
+/* line 575, ../sass/elements/_forms.scss */
 .new .input-group {
   display: table;
   border-collapse: separate;
   box-sizing: border-box;
 }
-/* line 573, ../sass/elements/_forms.scss */
+/* line 579, ../sass/elements/_forms.scss */
 .new .input-group .form__number,
 .new .input-group .form__input,
 .new .input-group textarea.form__input__code,
@@ -3030,25 +3038,25 @@ h1 + .setup-header__description,
   display: table-cell;
   box-sizing: border-box;
 }
-/* line 579, ../sass/elements/_forms.scss */
+/* line 585, ../sass/elements/_forms.scss */
 .new .input-group__addon {
   padding-left: 15px;
 }
-/* line 581, ../sass/elements/_forms.scss */
+/* line 587, ../sass/elements/_forms.scss */
 .new .input-group__addon:first-child {
   padding-left: 0;
   padding-right: 15px;
 }
-/* line 585, ../sass/elements/_forms.scss */
+/* line 591, ../sass/elements/_forms.scss */
 .new .input-group__addon .button {
   margin-top: 11px;
   margin-bottom: 13px;
 }
-/* line 592, ../sass/elements/_forms.scss */
+/* line 598, ../sass/elements/_forms.scss */
 .new .input-group--full {
   width: 100%;
 }
-/* line 594, ../sass/elements/_forms.scss */
+/* line 600, ../sass/elements/_forms.scss */
 .new .input-group--full .form__number,
 .new .input-group--full .form__input,
 .new .input-group--full textarea.form__input__code,
@@ -3058,52 +3066,52 @@ h1 + .setup-header__description,
 .new .input-group--full input[type="number"].form__number {
   width: 100%;
 }
-/* line 598, ../sass/elements/_forms.scss */
+/* line 604, ../sass/elements/_forms.scss */
 .new .input-group--full .input-group__addon {
   width: 1%;
 }
-/* line 605, ../sass/elements/_forms.scss */
+/* line 611, ../sass/elements/_forms.scss */
 .new .form__search .input-group__addon {
   padding-left: 0;
 }
-/* line 607, ../sass/elements/_forms.scss */
+/* line 613, ../sass/elements/_forms.scss */
 .new .form__search .input-group__addon .button {
   min-width: 40px;
 }
-/* line 611, ../sass/elements/_forms.scss */
+/* line 617, ../sass/elements/_forms.scss */
 .new .form__search .button {
   font-size: 0;
 }
-/* line 613, ../sass/elements/_forms.scss */
+/* line 619, ../sass/elements/_forms.scss */
 .new .form__search .button:before {
   font-size: 16px;
   font-family: fontawesome;
   content: "\f002";
   color: #FFFFFF;
 }
-/* line 621, ../sass/elements/_forms.scss */
+/* line 627, ../sass/elements/_forms.scss */
 .new .form__search--active input[type="text"].form__input, .new .form__search--active input[type="text"].form__color, .new .form__search--active input[type="text"].form__date, .new .form__search--active input[type="text"].form__number {
   border-color: #4DD6B7;
 }
-/* line 625, ../sass/elements/_forms.scss */
+/* line 631, ../sass/elements/_forms.scss */
 .new .form__search--active .button {
   background-color: #4DD6B7;
   font-size: 0;
 }
-/* line 628, ../sass/elements/_forms.scss */
+/* line 634, ../sass/elements/_forms.scss */
 .new .form__search--active .button:before {
   content: "\f00d";
 }
-/* line 631, ../sass/elements/_forms.scss */
+/* line 637, ../sass/elements/_forms.scss */
 .new .form__search--active .button:hover {
   background-color: #2BAC8F;
 }
-/* line 636, ../sass/elements/_forms.scss */
+/* line 642, ../sass/elements/_forms.scss */
 .new .form__search__no-results {
   color: #2C93AC;
   text-align: center;
 }
-/* line 645, ../sass/elements/_forms.scss */
+/* line 651, ../sass/elements/_forms.scss */
 .new .contextual__input__options {
   background-color: #f3f3f3;
   padding: 18px 20px 0;
@@ -3112,48 +3120,66 @@ h1 + .setup-header__description,
   display: none;
   margin-bottom: 23px;
 }
-/* line 654, ../sass/elements/_forms.scss */
+/* line 660, ../sass/elements/_forms.scss */
 .new .contextual__input__options:last-of-type {
   margin-bottom: 18px;
 }
-/* line 661, ../sass/elements/_forms.scss */
+/* line 667, ../sass/elements/_forms.scss */
 .new .contextual__input__options .form__group .form__select, .new .contextual__input__options .form__search .form__select, .new .contextual__input__options .form__search__no-results .form__select, .new .contextual__input__options .form__group div.form__number, .new .contextual__input__options .form__search div.form__number, .new .contextual__input__options .form__search__no-results div.form__number {
   margin-bottom: 0;
 }
-/* line 670, ../sass/elements/_forms.scss */
+/* line 676, ../sass/elements/_forms.scss */
 .new .form__group .form__radio__label:last-of-type, .new .form__search .form__radio__label:last-of-type, .new .form__search__no-results .form__radio__label:last-of-type,
 .new .form__group .form__checkbox__label:last-of-type,
 .new .form__search .form__checkbox__label:last-of-type,
 .new .form__search__no-results .form__checkbox__label:last-of-type {
   margin-bottom: -16px;
 }
-/* line 672, ../sass/elements/_forms.scss */
+/* line 678, ../sass/elements/_forms.scss */
 .new .form__group .form__radio__label:last-of-type + .contextual__input__options, .new .form__search .form__radio__label:last-of-type + .contextual__input__options, .new .form__search__no-results .form__radio__label:last-of-type + .contextual__input__options,
 .new .form__group .form__checkbox__label:last-of-type + .contextual__input__options,
 .new .form__search .form__checkbox__label:last-of-type + .contextual__input__options,
 .new .form__search__no-results .form__checkbox__label:last-of-type + .contextual__input__options {
   margin-top: 19px;
 }
-/* line 683, ../sass/elements/_forms.scss */
+/* line 689, ../sass/elements/_forms.scss */
 .new .form__checkbox:checked + .form__checkbox__label + .contextual__input__options,
 .new .form__checkbox:checked + .form__radio__label + .contextual__input__options,
 .new .form__radio:checked + .form__checkbox__label + .contextual__input__options,
 .new .form__radio:checked + .form__radio__label + .contextual__input__options {
   display: block;
 }
-/* line 687, ../sass/elements/_forms.scss */
+/* line 693, ../sass/elements/_forms.scss */
 .new .form__checkbox:checked + .form__checkbox__label + .form__help + .contextual__input__options,
 .new .form__checkbox:checked + .form__radio__label + .form__help + .contextual__input__options,
 .new .form__radio:checked + .form__checkbox__label + .form__help + .contextual__input__options,
 .new .form__radio:checked + .form__radio__label + .form__help + .contextual__input__options {
   display: block;
 }
-/* line 695, ../sass/elements/_forms.scss */
+/* line 701, ../sass/elements/_forms.scss */
 .new input[type="text"].form__color {
   display: inline;
   width: 100px;
 }
-/* line 708, ../sass/elements/_forms.scss */
+/* line 711, ../sass/elements/_forms.scss */
+.new input[type="text"].form__date:before {
+  content: '\f0d7';
+  position: relative;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 40px;
+  color: #424242;
+  float: right;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  display: block;
+  top: -8px;
+  right: -10px;
+  margin: 0;
+}
+/* line 731, ../sass/elements/_forms.scss */
 .new input[type="text"].form__number,
 .new input[type="number"].form__number {
   width: auto;
@@ -3161,13 +3187,13 @@ h1 + .setup-header__description,
   display: inline-block;
   margin-right: 5px;
 }
-/* line 718, ../sass/elements/_forms.scss */
+/* line 741, ../sass/elements/_forms.scss */
 .new div.form__number {
   width: auto;
   display: inline-block;
   margin-right: 5px;
 }
-/* line 729, ../sass/elements/_forms.scss */
+/* line 752, ../sass/elements/_forms.scss */
 .new input[type="color"].form__color__picker + .sp-replacer {
   margin: 12px 13px;
   vertical-align: top;
@@ -7196,49 +7222,52 @@ h1 + .setup-header__description,
   z-index: 9999;
   display: block;
   position: relative;
-  color: #333;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-bottom-color: #bbb;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #FFF;
+  background: #424242;
+  border: none;
+  font-family: "raleway-semibold", Helvetica, Arial, sans-serif;
 }
-/* line 44, ../sass/vendors/_pikaday.scss */
+/* line 47, ../sass/vendors/_pikaday.scss */
 .pika-single.is-hidden {
   display: none;
+  display: block !important;
 }
-/* line 48, ../sass/vendors/_pikaday.scss */
+/* line 52, ../sass/vendors/_pikaday.scss */
 .pika-single.is-bound {
   position: absolute;
-  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px -5px 0;
 }
 
-/* line 56, ../sass/vendors/_pikaday.scss */
+/* line 60, ../sass/vendors/_pikaday.scss */
 .pika-single {
   *zoom: 1;
 }
-/* line 59, ../sass/vendors/_pikaday.scss */
+/* line 63, ../sass/vendors/_pikaday.scss */
 .pika-single:before, .pika-single:after {
   content: " ";
   display: table;
 }
-/* line 65, ../sass/vendors/_pikaday.scss */
+/* line 69, ../sass/vendors/_pikaday.scss */
 .pika-single:after {
   clear: both;
 }
 
-/* line 68, ../sass/vendors/_pikaday.scss */
+/* line 72, ../sass/vendors/_pikaday.scss */
 .pika-lendar {
   float: left;
-  width: 240px;
-  margin: 8px;
+  width: 238px;
+  box-sizing: border-box;
 }
 
-/* line 74, ../sass/vendors/_pikaday.scss */
+/* line 78, ../sass/vendors/_pikaday.scss */
 .pika-title {
   position: relative;
   text-align: center;
+  padding: 4px 5px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #596169;
 }
-/* line 78, ../sass/vendors/_pikaday.scss */
+/* line 85, ../sass/vendors/_pikaday.scss */
 .pika-title select {
   cursor: pointer;
   position: absolute;
@@ -7250,23 +7279,21 @@ h1 + .setup-header__description,
   opacity: 0;
 }
 
-/* line 90, ../sass/vendors/_pikaday.scss */
+/* line 97, ../sass/vendors/_pikaday.scss */
 .pika-label {
   display: inline-block;
   *display: inline;
   position: relative;
   z-index: 9999;
   overflow: hidden;
-  margin: 0;
-  padding: 5px 3px;
+  padding: 5px 2px;
   font-size: 14px;
-  line-height: 20px;
-  font-weight: bold;
-  color: #333;
-  background-color: #fff;
+  line-height: 24px;
+  color: #4DD6B7;
+  background-color: #424242;
 }
 
-/* line 105, ../sass/vendors/_pikaday.scss */
+/* line 110, ../sass/vendors/_pikaday.scss */
 .pika-prev,
 .pika-next {
   display: block;
@@ -7284,140 +7311,158 @@ h1 + .setup-header__description,
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 75% 75%;
-  opacity: .5;
   *position: absolute;
   *top: 0;
-}
-/* line 126, ../sass/vendors/_pikaday.scss */
-.pika-prev:hover,
-.pika-next:hover {
-  opacity: 1;
 }
 /* line 130, ../sass/vendors/_pikaday.scss */
 .pika-prev.is-disabled,
 .pika-next.is-disabled {
   cursor: default;
-  opacity: .2;
+}
+/* line 132, ../sass/vendors/_pikaday.scss */
+.pika-prev.is-disabled:before,
+.pika-next.is-disabled:before {
+  color: #676767 !important;
 }
 
-/* line 136, ../sass/vendors/_pikaday.scss */
+/* line 138, ../sass/vendors/_pikaday.scss */
 .pika-prev,
 .is-rtl .pika-next {
   float: left;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==");
   *left: 0;
+  position: relative;
+}
+/* line 142, ../sass/vendors/_pikaday.scss */
+.pika-prev:before,
+.is-rtl .pika-next:before {
+  content: "\f053";
 }
 
-/* line 143, ../sass/vendors/_pikaday.scss */
+/* line 148, ../sass/vendors/_pikaday.scss */
 .pika-next,
 .is-rtl .pika-prev {
   float: right;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=");
   *right: 0;
+  position: relative;
+}
+/* line 152, ../sass/vendors/_pikaday.scss */
+.pika-next:before,
+.is-rtl .pika-prev:before {
+  content: "\f054";
 }
 
-/* line 150, ../sass/vendors/_pikaday.scss */
+/* line 160, ../sass/vendors/_pikaday.scss */
+.pika-next:before,
+.pika-prev:before {
+  font-family: 'fontawesome';
+  color: #4DD6B7;
+  font-size: 14px;
+  position: absolute;
+  text-indent: 0;
+  text-align: center;
+  left: 0;
+  width: 20px;
+}
+
+/* line 172, ../sass/vendors/_pikaday.scss */
 .pika-select {
   display: inline-block;
   *display: inline;
 }
 
-/* line 155, ../sass/vendors/_pikaday.scss */
+/* line 177, ../sass/vendors/_pikaday.scss */
 .pika-table {
-  width: 100%;
+  width: 210px;
   border-collapse: collapse;
   border-spacing: 0;
   border: 0;
+  box-sizing: border-box;
+  margin: 16px auto 10px;
 }
-/* line 161, ../sass/vendors/_pikaday.scss */
+/* line 186, ../sass/vendors/_pikaday.scss */
 .pika-table th,
 .pika-table td {
   width: 14.285714285714286%;
   padding: 0;
 }
-/* line 167, ../sass/vendors/_pikaday.scss */
+/* line 192, ../sass/vendors/_pikaday.scss */
 .pika-table th {
-  color: #999;
-  font-size: 12px;
-  line-height: 25px;
-  font-weight: bold;
+  color: #4DD6B7;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 24px;
   text-align: center;
 }
-/* line 175, ../sass/vendors/_pikaday.scss */
+/* line 200, ../sass/vendors/_pikaday.scss */
 .pika-table abbr {
   border-bottom: none;
   cursor: help;
 }
 
-/* line 181, ../sass/vendors/_pikaday.scss */
+/* line 206, ../sass/vendors/_pikaday.scss */
 .pika-button {
   cursor: pointer;
   display: block;
   box-sizing: border-box;
   outline: none;
   border: 0;
-  margin: 0;
   width: 100%;
-  padding: 5px;
-  color: #666;
-  font-size: 12px;
+  padding: 0;
+  margin: 4px 2px;
+  color: #FFF;
+  font-size: 11px;
   line-height: 15px;
-  text-align: right;
-  background: #f5f5f5;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background: transparent;
+  width: 24px;
 }
-/* line 197, ../sass/vendors/_pikaday.scss */
+/* line 224, ../sass/vendors/_pikaday.scss */
 .is-today .pika-button {
-  color: #33aaff;
-  font-weight: bold;
+  color: #FFF;
 }
-/* line 202, ../sass/vendors/_pikaday.scss */
+/* line 228, ../sass/vendors/_pikaday.scss */
 .is-selected .pika-button {
-  color: #fff;
-  font-weight: bold;
-  background: #33aaff;
-  box-shadow: inset 0 1px 3px #178fe5;
-  border-radius: 3px;
+  color: #FFF;
+  background: #4DD6B7;
 }
-/* line 210, ../sass/vendors/_pikaday.scss */
+/* line 233, ../sass/vendors/_pikaday.scss */
 .is-disabled .pika-button, .is-outside-current-month .pika-button {
   pointer-events: none;
   cursor: default;
-  color: #999;
-  opacity: .3;
+  color: #676767;
 }
-/* line 218, ../sass/vendors/_pikaday.scss */
+/* line 240, ../sass/vendors/_pikaday.scss */
 .pika-button:hover {
-  color: #fff;
-  background: #ff8000;
+  color: #FFF;
+  background: #4DD6B7;
   box-shadow: none;
-  border-radius: 3px;
 }
 
-/* line 226, ../sass/vendors/_pikaday.scss */
+/* line 247, ../sass/vendors/_pikaday.scss */
 .pika-week {
   font-size: 11px;
   color: #999;
 }
 
-/* line 231, ../sass/vendors/_pikaday.scss */
+/* line 252, ../sass/vendors/_pikaday.scss */
 .is-inrange .pika-button {
   background: #D5E9F7;
 }
 
-/* line 235, ../sass/vendors/_pikaday.scss */
+/* line 256, ../sass/vendors/_pikaday.scss */
 .is-startrange .pika-button {
   color: #fff;
   background: #6CB31D;
   box-shadow: none;
-  border-radius: 3px;
 }
 
-/* line 242, ../sass/vendors/_pikaday.scss */
+/* line 262, ../sass/vendors/_pikaday.scss */
 .is-endrange .pika-button {
   color: #fff;
   background: #33aaff;
   box-shadow: none;
-  border-radius: 3px;
 }
 
 /***

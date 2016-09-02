@@ -71,6 +71,11 @@
 <?php include('_elements/inputs-color.php'); ?>
 </div><!-- .rc_sg__example -->
 
+<h2 class="rc_sg__pattern_title" id="inputs-date">Inputs: Date</h2>
+<div class="rc_sg__example">
+<?php include('_elements/inputs-date.php'); ?>
+</div><!-- .rc_sg__example -->
+
 <hr>
 
 <h2 class="rc_sg__pattern_title" id="form-groups">Form: Groups</h2>

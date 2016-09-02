@@ -252,7 +252,7 @@
             nextMonth     : 'Next Month',
             months        : ['January','February','March','April','May','June','July','August','September','October','November','December'],
             weekdays      : ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
-            weekdaysShort : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+            weekdaysShort : ['SU','MO','TU','WE','TH','FR','SA']
         },
 
         // Theme Classname
@@ -996,7 +996,7 @@
             field = this._o.trigger;
             pEl = field;
             width = this.el.offsetWidth;
-            height = this.el.offsetHeight;
+            height = this.el.offsetHeight + 14;
             viewportWidth = window.innerWidth || document.documentElement.clientWidth;
             viewportHeight = window.innerHeight || document.documentElement.clientHeight;
             scrollTop = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
@@ -1004,10 +1004,10 @@
             if (typeof field.getBoundingClientRect === 'function') {
                 clientRect = field.getBoundingClientRect();
                 left = clientRect.left + window.pageXOffset;
-                top = clientRect.bottom + window.pageYOffset;
+                top = clientRect.bottom + window.pageYOffset + 14;
             } else {
                 left = pEl.offsetLeft;
-                top  = pEl.offsetTop + pEl.offsetHeight;
+                top  = pEl.offsetTop + pEl.offsetHeight + 14;
                 while((pEl = pEl.offsetParent)) {
                     left += pEl.offsetLeft;
                     top  += pEl.offsetTop;
@@ -1029,7 +1029,7 @@
                     top - height - field.offsetHeight > 0
                 )
             ) {
-                top = top - height - field.offsetHeight;
+                top = top - height - (field.offsetHeight + 14);
             }
 
             this.el.style.left = left + 'px';

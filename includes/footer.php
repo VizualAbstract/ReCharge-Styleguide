@@ -1,7 +1,42 @@
-	
+
 				</div><!-- .styleguide__page -->
 			</div><!-- .styleguide__content -->
 		</span><!-- .new -->
+		<script>
+			$(function() {
+				$('.form__date').pikaday({
+					format: 'YYYY-MM-DD',
+					showDaysInNextAndPreviousMonths: true,
+				});
+			});
+		</script>
+		<script>
+			$(function() {
+				// Date picker helper
+				$('.date-range').on('change', '.form__date', function() {
+					var selected_date = $(this).val();
+					var start_date = $(this).parents('.date-range').find('.date-range__start').find('.form__date');
+					var end_date = $(this).parents('.date-range').find('.date-range__end').find('.form__date');
+
+				 	var next_day = moment(selected_date).add(2, 'days').format('YYYY-MM-DD'); // Set to +2 due to 0:00 time
+					var previous_day = moment(selected_date).subtract(0, 'days').format('YYYY-MM-DD'); // Set to -0 due to 0:00 time
+
+					// If selecting start date:
+					if ($(this).parent().hasClass('date-range__start')) {
+						// And end date is empty, or start date is after end date, select next day
+					 	if (end_date.val() == "" || moment(start_date.val()).isAfter(end_date.val())) {
+					 		end_date.pikaday('show').pikaday('setDate', next_day);
+					 	}
+					// If selecting end date:
+					} else if ($(this).parent().hasClass('date-range__end')) {
+						// And start date is empty, or end date is before start date, select previous day
+					 	if (start_date.val() == "" || moment(end_date.val()).isBefore(start_date.val())) {
+					 		start_date.pikaday('show').pikaday('setDate', previous_day);
+					 	}
+					}
+				});
+			});
+		</script>
 		<script>
 			$(function() {
 				$('.table--stacked').each(function(i) {
@@ -137,7 +172,7 @@
 					setTimeout(function(){
 						if ($('.popover-box').hasClass('popover-box--hover')) { // is mouse on popup box?
 							// yes, do nothing
-						} else { 
+						} else {
 							// no, hide popup box
 							__this.rc_popover('hide');
 							__this.removeClass('popover-button--active');
