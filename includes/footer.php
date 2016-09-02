@@ -15,6 +15,13 @@
 				// Date picker helper
 				$('.date-range').on('change', '.form__date', function() {
 					var selected_date = $(this).val();
+
+					// Clear out the date value if it's invalid (random text)
+					if (!moment(selected_date).isValid()) {
+						$(this).val("");
+						return false;
+					}
+
 					var start_date = $(this).parents('.date-range').find('.date-range__start').find('.form__date');
 					var end_date = $(this).parents('.date-range').find('.date-range__end').find('.form__date');
 

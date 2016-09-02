@@ -544,6 +544,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/images\/form__select-caret.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1337,
+		"inputAbbreviatedPath": "\/assets\/images\/form__select-caret.png",
+		"outputAbbreviatedPath": "\/assets\/images\/form__select-caret.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/js\/bootstrap\/collapse.js": {
 		"fileType": 64,
 		"ignore": 1,

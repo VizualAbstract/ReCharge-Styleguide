@@ -44,6 +44,8 @@
 	9-1-16:
 		- Add Date Range
 		- Add Beginnings of Date Picker
+	9-2-16:
+		- Use a background image to create the dropdown chevron for the date picker
 */
 
 .form {
@@ -232,7 +234,15 @@ input[type="number"].form__number,
 input[type="text"].form__input,
 input[type="search"].form__input,
 input[type="password"].form__input,
-input[type="date"].form__input,
+input.form__color,
+input.form__date {
+	height: 40px;
+}
+
+input[type="number"].form__number,
+input[type="text"].form__input,
+input[type="search"].form__input,
+input[type="password"].form__input,
 input.form__color,
 input.form__date,
 textarea.form__input {
@@ -708,22 +718,12 @@ input[type="text"].form__color {
 // Date input
 input[type="text"].form__date {
 	@extend .form__input;
-	&:before {
-		content: '\f0d7';
-		position: relative;
-		font-family: FontAwesome;
-		font-weight: normal;
-		font-size: 19px;
-		line-height: 40px;
-		color: #424242;
-		float: right;
-		height: 40px;
-		width: 40px;
-		text-align: center;
-		display: block;
-		top: -8px;
-		right: -10px;
-		margin: 0;
+	background-image: url('../images/form__select-caret.png');
+	background-size: 26px 76px;
+	background-position: 100% 0%;
+	background-repeat: no-repeat;
+	&:focus {
+		background-position: 100% 100%;
 	}
 }
 
