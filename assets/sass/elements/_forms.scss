@@ -46,6 +46,7 @@
 		- Add Beginnings of Date Picker
 	9-2-16:
 		- Use a background image to create the dropdown chevron for the date picker
+		- Add max-width to date picker (238px)
 */
 
 .form {
@@ -718,6 +719,7 @@ input[type="text"].form__color {
 // Date input
 input[type="text"].form__date {
 	@extend .form__input;
+	max-width: 238px;
 	background-image: url('../images/form__select-caret.png');
 	background-size: 26px 76px;
 	background-position: 100% 0%;
