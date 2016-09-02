@@ -1,8 +1,10 @@
 /*
-  8-10-16:
-    - Move the variables to the top of the page
-    - Remove unused lines of CSS
-    - This page now functions a little more similair to Tooltips. The goal is to unify this with that.
+	8-10-16:
+		- Move the variables to the top of the page
+		- Remove unused lines of CSS
+		- This page now functions a little more similair to Tooltips. The goal is to unify this with that.
+	9-2-16:
+		- Expand the tooltip, supporting top, right, bottom, left popup placement
 */
 //
 // Popovers
@@ -20,67 +22,69 @@ $popover-arrow-padding: 13px;
 $popover-arrow-offset: 2px;
 
 .popover-button {
-  width: 14px;
-  height: 16px;
-  color: #424242;
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'fontawesome', arial, san-serif;
-  vertical-align: baseline;
-  line-height: $font-size-base;
-  font-size: $font-size-base;
-  padding: 4px 8px 5px;
-  box-sizing: content-box;
-  &:after {
-    content: "\f05a";
-  }
-  &--active {
-    color: #4DD6B7;
-  }
-  z-index: $zindex-popover+1;
+	width: 14px;
+	height: 16px;
+	color: #424242;
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'fontawesome', arial, san-serif;
+	vertical-align: baseline;
+	line-height: $font-size-base;
+	font-size: $font-size-base;
+	padding: 4px 8px 5px;
+	box-sizing: content-box;
+	&:after {
+		content: "\f05a";
+	}
+	&--active {
+		color: #4DD6B7;
+	}
+	z-index: $zindex-popover+1;
 }
 
 .popover-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: $zindex-popover;
-  display: none;
-  max-width: $popover-max-width;
-  color: #FFF;
-  padding: 0;
-  // Our parent element can be arbitrary since popovers are by default inserted as a sibling of their target element.
-  // So reset our font and text properties to avoid inheriting weird values.
-  // @include reset-text;
-  font-size: 16px;
-  background: $popover-bg;
-  background-clip: content-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: $zindex-popover;
+	text-align: left;
+	display: none;
+	max-width: $popover-max-width;
+	color: #FFF;
+	padding: 0;
+	min-width: 200px;
+	// Our parent element can be arbitrary since popovers are by default inserted as a sibling of their target element.
+	// So reset our font and text properties to avoid inheriting weird values.
+	// @include reset-text;
+	font-size: 16px;
+	background: $popover-bg;
+	background-clip: content-box;
 
-  // Offset the popover to account for the popover arrow
-  &.top     { padding-top: -$popover-arrow-width+8; }
-  &.right   { padding-top: $popover-arrow-width+8; }
-  &.bottom  { padding-bottom: $popover-arrow-width+8; }
-  &.left    { padding-top: $popover-arrow-width+8; }
+	// Offset the popover to account for the popover arrow
+	&.top     { padding-top: -$popover-arrow-width+8; }
+	&.right   { padding-top: $popover-arrow-width+8; }
+	&.bottom  { padding-bottom: $popover-arrow-width+8; }
+	&.left    { padding-top: $popover-arrow-width+8; }
 }
 
 
 
 .popover-box__title {
-  margin: 0;
-  padding: 20px 20px 0;
-  font-size: $font-size-base;
-  font-family: 'ralewaysemibold', arial, sans-serif;
+	margin: 0;
+	padding: 20px 20px 0;
+	font-size: $font-size-base;
+	font-family: 'ralewaysemibold', arial, sans-serif;
 }
 
 .popover-box__content {
-  padding: 0 20px 20px;
-  p {
-    margin-top: 10px;
-  }
-  a {
-    cursor: pointer; // Force pointer, sometimes it's ignored
-  }
+	padding: 0 20px 20px;
+	p {
+		margin-top: 10px;
+	}
+	a {
+		cursor: pointer; // Force pointer, sometimes it's ignored
+	}
 }
 
 // Arrows
@@ -88,50 +92,59 @@ $popover-arrow-offset: 2px;
 // .arrow is outer, .arrow:after is inner
 
 .popover-box > .popover-box__arrow {
-  &,
-  &:after {
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 0;
-    border-color: transparent;
-    border-style: solid;
-  }
+	&,
+	&:after {
+		position: absolute;
+		display: block;
+		width: 0;
+		height: 0;
+		border-color: transparent;
+		border-style: solid;
+	}
 }
 
 .popover-box > .popover-box__arrow:after {
-  border-width: $popover-arrow-width;
-  content: "";
+	border-width: $popover-arrow-width;
+	content: "";
 }
 
 .popover-box {
-  &.top > .popover-box__arrow {
-  }
-  &.right > .popover-box__arrow {
-    top: 8px;
-    &:after {
-      content: " ";
-      border-top-width: 0;
-      border-bottom-color: $popover-arrow-color;
-    }
-  }
-  &.bottom > .popover-box__arrow {
-    bottom: 18px;
-    &:after {
-      content: " ";
-      border-bottom-width: 0;
-      border-top-color: $popover-arrow-color;
-    }
-  }
-
-  &.left > .popover-box__arrow {
-    top: 8;
-    right: 0;
-    &:after {
-      content: " ";
-      right: 0;
-      border-top-width: 0;
-      border-bottom-color: $popover-arrow-color;
-    }
-  }
+	&.top > .popover-box__arrow {
+		bottom: 0;
+		left: 50%;
+		margin-left: -10px;
+		&:after {
+			content: " ";
+			border-bottom-width: 0;
+			border-top-color: $popover-arrow-color;
+		}
+	}
+	&.right > .popover-box__arrow {
+		top: 8px;
+		&:after {
+			content: " ";
+			border-top-width: 0;
+			border-bottom-color: $popover-arrow-color;
+		}
+	}
+	&.bottom > .popover-box__arrow {
+		top: -10px;
+		left: 50%;
+		margin-left: -10px;
+		&:after {
+			content: " ";
+			border-top-width: 0;
+			border-bottom-color: $popover-arrow-color;
+		}
+	}
+	&.left > .popover-box__arrow {
+		top: 8px;
+		right: 0;
+		&:after {
+			content: " ";
+			right: 0;
+			border-top-width: 0;
+			border-bottom-color: $popover-arrow-color;
+		}
+	}
 }

@@ -38,7 +38,7 @@
     trigger: 'hover focus',
     title: '',
     delay: 0,
-    html: false,
+    html: true,
     container: false,
     viewport: {
       selector: 'body',
@@ -211,6 +211,8 @@
       var actualWidth  = $tip[0].offsetWidth
       var actualHeight = $tip[0].offsetHeight
 
+    	console.log('3: ' + actualWidth);
+
       if (autoPlace) {
         var orgPlacement = placement
         var viewportDim = this.getPosition(this.$viewport)
@@ -250,6 +252,7 @@
     var $tip   = this.tip()
     var width  = $tip[0].offsetWidth
     var height = $tip[0].offsetHeight
+    console.log('1: ' + width);
 
     // manually read margins because getBoundingClientRect includes difference
     var marginTop = parseInt($tip.css('margin-top'), 10)
@@ -278,6 +281,7 @@
     // check to see if placing tip in new offset caused the tip to resize itself
     var actualWidth  = $tip[0].offsetWidth
     var actualHeight = $tip[0].offsetHeight
+    console.log('2: ' + actualWidth);
 
     if (placement == 'top' && actualHeight != height) {
       offset.top = offset.top + height - actualHeight
@@ -373,9 +377,16 @@
   }
 
   TooltipRC.prototype.getCalculatedOffset = function (placement, pos, actualWidth, actualHeight) {
-    return placement == 'bottom' ? { top: pos.top + pos.height, left: pos.left + pos.width / 2 - actualWidth / 2 } :
-           placement == 'top'    ? { top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2 } :
-           placement == 'left'   ? { top: pos.top + pos.height - 10, left: pos.left - actualWidth - 5 } :
+    console.log(placement);
+    console.log(pos.left);
+    console.log(pos.top);
+    console.log(pos.height);
+    console.log(pos);
+    console.log(actualWidth);
+    console.log(actualHeight);
+    return placement == 'bottom' ? { top: pos.top + pos.height + 8, left: pos.left + pos.width / 2 - actualWidth / 2 } :
+           placement == 'top'    ? { top: pos.top - actualHeight - 8, left: pos.left + pos.width / 2 - actualWidth / 2 } :
+           placement == 'left'   ? { top: pos.top + pos.height - 10, left: pos.left - (pos.width + actualWidth) } :
         /* placement == 'right' */ { top: pos.top + pos.height - 10, left: pos.left + (pos.width / 2) - 10 }
 
   }

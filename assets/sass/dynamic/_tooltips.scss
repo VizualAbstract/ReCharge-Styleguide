@@ -1,8 +1,10 @@
 /*
-  8-10-16:
-    - Move the variables to the top of the page
-    - Remove unused lines of CSS
-    - This page now functions a little more similair to Popovers. The goal is to unify this with that.
+	8-10-16:
+		- Move the variables to the top of the page
+		- Remove unused lines of CSS
+		- This page now functions a little more similair to Popovers. The goal is to unify this with that.
+	9-2-16:
+		- Expand the tooltip, supporting top, right, bottom, left popup placement
 */
 //
 // Tooltips
@@ -20,62 +22,63 @@ $tooltip-arrow-padding: 13px;
 $tooltip-arrow-offset: 2px;
 
 .tooltip-button {
-  width: 14px;
-  height: 16px;
-  color: #424242;
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'fontawesome', arial, san-serif;
-  vertical-align: baseline;
-  line-height: $font-size-base;
-  font-size: $font-size-base;
-  padding: 4px 8px 5px;
-  box-sizing: content-box;
-  &:after {
-    content: "\f05a";
-  }
-  &--active {
-    color: #4DD6B7;
-  }
-  z-index: $zindex-tooltip+1;
+	width: 14px;
+	height: 16px;
+	color: #424242;
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'fontawesome', arial, san-serif;
+	vertical-align: baseline;
+	line-height: $font-size-base;
+	font-size: $font-size-base;
+	padding: 4px 8px 5px;
+	box-sizing: content-box;
+	&:after {
+		content: "\f05a";
+	}
+	&--active {
+		color: #4DD6B7;
+	}
+	z-index: $zindex-tooltip+1;
 }
 
 // Base class
 .tooltip-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: $zindex-tooltip;
-  display: none;
-  max-width: $tooltip-max-width;
-  color: #FFF;
-  // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
-  // So reset our font and text properties to avoid inheriting weird values.
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: $zindex-tooltip;
+	display: none;
+	max-width: $tooltip-max-width;
+	color: #FFF;
+	padding: 0;
+	min-width: 200px;
+	// Our parent element can be arbitrary since popovers are by default inserted as a sibling of their target element.
+	// So reset our font and text properties to avoid inheriting weird values.
+	// @include reset-text;
+	font-size: 16px;
+	background: $tooltip-bg;
+	background-clip: content-box;
 
-  // @include reset-text;
-  font-size: 16px;
-  background: $tooltip-bg;
-  background-clip: content-box;
-
-  // &.in {
-  //   opacity: 1;
-  // }
-  &.top     { padding-top: $tooltip-arrow-width+8; }
-  &.right   { padding-top: $tooltip-arrow-width+8; }
-  &.bottom  { padding-bottom: $tooltip-arrow-width+8; }
-  &.left    { padding-top: $tooltip-arrow-width+8; }
+	// &.in {
+	//   opacity: 1;
+	// }
+	&.top     { padding-top: -$tooltip-arrow-width+8; }
+	&.right   { padding-top: $tooltip-arrow-width+8; }
+	&.bottom  { padding-bottom: $tooltip-arrow-width+8; }
+	&.left    { padding-top: $tooltip-arrow-width+8; }
 }
 // Wrapper for the tooltip content
 .tooltip-box__inner {
-  font-family: 'ralewayregular', arial, sans-serif;
-  max-width: $tooltip-max-width;
-  padding: 20px;
-  color: #FFF;
-  text-align: left;
-  background-color: #424242;
-  border-radius: 0;
-  font-size: 16px;
+	padding: 20px;
+	text-align: left;
+	p:first {
+		margin-top: 0;
+	}
+	a {
+		cursor: pointer; // Force pointer, sometimes it's ignored
+	}
 }
 
 
@@ -84,50 +87,60 @@ $tooltip-arrow-offset: 2px;
 // .arrow is outer, .arrow:after is inner
 
 .tooltip-box > .tooltip-box__arrow {
-  &,
-  &:after {
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 0;
-    border-color: transparent;
-    border-style: solid;
-  }
+	&,
+	&:after {
+		position: absolute;
+		display: block;
+		width: 0;
+		height: 0;
+		border-color: transparent;
+		border-style: solid;
+	}
 }
 
 .tooltip-box > .tooltip-box__arrow:after {
-  border-width: $tooltip-arrow-width;
-  content: "";
+	border-width: $tooltip-arrow-width;
+	content: "";
 }
 
 .tooltip-box {
-  &.top > .tooltip-box__arrow {
-  }
-  &.right > .tooltip-box__arrow {
-    top: 8px;
-    &:after {
-      content: " ";
-      border-top-width: 0;
-      border-bottom-color: $tooltip-arrow-color;
-    }
-  }
-  &.bottom > .tooltip-box__arrow {
-    bottom: 18px;
-    &:after {
-      content: " ";
-      border-bottom-width: 0;
-      border-top-color: $tooltip-arrow-color;
-    }
-  }
+	&.top > .tooltip-box__arrow {
+		bottom: 0;
+		left: 50%;
+		margin-left: -10px;
+		&:after {
+			content: " ";
+			border-bottom-width: 0;
+			border-top-color: $tooltip-arrow-color;
+		}
+	}
+	&.right > .tooltip-box__arrow {
+		top: 8px;
+		&:after {
+			content: " ";
+			border-top-width: 0;
+			border-bottom-color: $tooltip-arrow-color;
+		}
+	}
+	&.bottom > .tooltip-box__arrow {
+		top: -10px;
+		left: 50%;
+		margin-left: -10px;
+		&:after {
+			content: " ";
+			border-top-width: 0;
+			border-bottom-color: $tooltip-arrow-color;
+		}
+	}
 
-  &.left > .tooltip-box__arrow {
-    top: 8;
-    right: 0;
-    &:after {
-      content: " ";
-      right: 0;
-      border-top-width: 0;
-      border-bottom-color: $tooltip-arrow-color;
-    }
-  }
+	&.left > .tooltip-box__arrow {
+		top: 8px;
+		right: 0;
+		&:after {
+			content: " ";
+			right: 0;
+			border-top-width: 0;
+			border-bottom-color: $tooltip-arrow-color;
+		}
+	}
 }

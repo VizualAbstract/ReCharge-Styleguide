@@ -153,7 +153,7 @@
 				$('.tooltip-button').rc_tooltip().on('mouseenter', function(){
 					$(this).rc_tooltip('show').addClass('tooltip-button--active');
 				}).on('mouseleave', function(){
-					$(this).rc_tooltip('hide').removeClass('tooltip-button--active');
+					// $(this).rc_tooltip('hide').removeClass('tooltip-button--active');
 				});
 			});
 		</script>

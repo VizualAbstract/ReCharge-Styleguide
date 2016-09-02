@@ -509,7 +509,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 90;
+  z-index: 100090;
   -webkit-overflow-scrolling: touch;
   outline: 0; }
   .rc_modal__close {
@@ -523,7 +523,7 @@
     outline: 0;
     cursor: pointer;
     text-align: right;
-    z-index: 90; }
+    z-index: 100090; }
     .rc_modal__close:before {
       content: "\f00d";
       font-size: 24px; }
@@ -584,7 +584,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 80;
+  z-index: 100080;
   background-color: #000; }
   .rc_modal__backdrop.rc_fade {
     opacity: 0;
@@ -625,7 +625,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 80;
+  z-index: 100080;
   background-color: #000; }
   .rc_modal__backdrop.rc_fade {
     opacity: 0;

@@ -119,14 +119,15 @@ $screen-md-min: 992px !default;
 $screen-md-max: 1199px !default;
 $screen-lg-min: 1200px !default;
 
+$zindex-base:			   100000 !default;
 
-$zindex-navbar:            10 !default;
-$zindex-dropdown:          10 !default;
-$zindex-tooltip:           50 !default;
-$zindex-popover:           60 !default;
-$zindex-navbar-fixed:      70 !default;
-$zindex-modal-background:  80 !default;
-$zindex-modal:             90 !default;
+$zindex-navbar:            $zindex-base + 10 !default;
+$zindex-dropdown:          $zindex-base + 10 !default;
+$zindex-tooltip:           $zindex-base + 50 !default;
+$zindex-popover:           $zindex-base + 60 !default;
+$zindex-navbar-fixed:      $zindex-base + 70 !default;
+$zindex-modal-background:  $zindex-base + 80 !default;
+$zindex-modal:             $zindex-base + 90 !default;
 
 
 //** Popover body background color
