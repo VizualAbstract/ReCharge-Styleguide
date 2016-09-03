@@ -6755,7 +6755,7 @@ h1 + .setup-header__description,
   font-size: 16px;
   padding: 4px 8px 5px;
   box-sizing: content-box;
-  z-index: 100061;
+  z-index: 100059;
 }
 /* line 37, ../sass/dynamic/_popovers.scss */
 .new .popover-button:after {
@@ -6772,7 +6772,7 @@ h1 + .setup-header__description,
   left: 0;
   z-index: -1;
   text-align: left;
-  visibility: invisible;
+  display: none;
   max-width: 500px;
   color: #FFF;
   padding: 0;
@@ -6780,11 +6780,11 @@ h1 + .setup-header__description,
   font-size: 16px;
   background: #424242;
   background-clip: content-box;
-}
-/* line 64, ../sass/dynamic/_popovers.scss */
-.new .popover-box.in {
-  visibility: visible;
   z-index: 100060;
+}
+/* line 65, ../sass/dynamic/_popovers.scss */
+.new .popover-box.in {
+  display: block;
 }
 /* line 70, ../sass/dynamic/_popovers.scss */
 .new .popover-box.top {

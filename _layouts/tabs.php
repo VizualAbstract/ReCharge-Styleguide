@@ -153,6 +153,11 @@
 .new .stat .tooltip-button:hover {
 	color: #4dd6b7;
 }
+
+.new .stat .tooltip-box,
+.new .stat .popover-box {
+	width: 290px !important;
+}
 </style>
 				</div><!-- .layout__sidebar-->
 			</div><!-- .layout -->
