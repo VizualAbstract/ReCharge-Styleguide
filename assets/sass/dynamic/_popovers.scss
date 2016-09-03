@@ -47,9 +47,9 @@ $popover-arrow-offset: 2px;
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: $zindex-popover;
+	z-index: -1;
 	text-align: left;
-	display: none;
+		visibility: invisible;
 	max-width: $popover-max-width;
 	color: #FFF;
 	padding: 0;
@@ -60,6 +60,11 @@ $popover-arrow-offset: 2px;
 	font-size: 16px;
 	background: $popover-bg;
 	background-clip: content-box;
+
+	&.in {
+		visibility: visible;
+		z-index: $zindex-popover;
+	}
 
 	// Offset the popover to account for the popover arrow
 	&.top     { padding-top: -$popover-arrow-width+8; }
