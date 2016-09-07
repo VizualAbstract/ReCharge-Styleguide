@@ -1,7 +1,7 @@
 /*
 	Element: Download List
 	Version 1.0
-	Date: 8-7-2016
+	Date: 9-7-2016
 	Author: Corey M. Capetillo
 */
 .download-list {
@@ -17,6 +17,8 @@
 			.fa {
 				margin-right: 2px;
 				font-size: 20px;
+				position: relative;
+				top: 1px;
 			}
 		}
 		&__link,

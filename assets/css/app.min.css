@@ -3422,7 +3422,7 @@ h1 + .setup-header__description,
   /*
   	Element: Download List
   	Version 1.0
-  	Date: 8-7-2016
+  	Date: 9-7-2016
   	Author: Corey M. Capetillo
   */
   /*
@@ -4257,18 +4257,20 @@ h1 + .setup-header__description,
 .new .download-list__item__link .fa {
   margin-right: 2px;
   font-size: 20px;
+  position: relative;
+  top: 1px;
 }
-/* line 22, ../sass/components/_download-list.scss */
+/* line 24, ../sass/components/_download-list.scss */
 .new .download-list__item__link, .new .download-list__item__description {
   display: block;
   text-align: left;
   width: 100%;
 }
-/* line 28, ../sass/components/_download-list.scss */
+/* line 30, ../sass/components/_download-list.scss */
 .new .download-list__item__description {
   margin-left: 25px;
 }
-/* line 32, ../sass/components/_download-list.scss */
+/* line 34, ../sass/components/_download-list.scss */
 .new .download-list li:empty {
   border-bottom: 1px solid #EEE;
   margin-top: 10px;
