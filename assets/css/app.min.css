@@ -7316,7 +7316,6 @@ h1 + .setup-header__description,
 /* line 47, ../sass/vendors/_pikaday.scss */
 .pika-single.is-hidden {
   display: none;
-  display: block !important;
 }
 /* line 52, ../sass/vendors/_pikaday.scss */
 .pika-single.is-bound {
