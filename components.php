@@ -64,6 +64,14 @@
 <?php include('_components/action-list.php'); ?>
 </div><!-- .rc_sg__example -->
 
+<h2 class="rc_sg__pattern_title" id="action-lists">Download List</h2>
+<div class="rc_sg_description">
+	<p>Download lists are a simplified version of the action list, with an action stacked on top of a description.</p>
+</div><!-- .rc_sg_description -->
+<div class="rc_sg__example">
+<?php include('_components/download-list.php'); ?>
+</div><!-- .rc_sg__example -->
+
 <h2 class="rc_sg__pattern_title" id="toggle-list">Toggle List</h2>
 <div class="rc_sg__description">
 	<p>Toggle lists use a combination of HTML, CSS and JavaScript. Adding the class <code>.disable</code> to the parent list item will change the background color of the switch, the list item and the link color.</p>

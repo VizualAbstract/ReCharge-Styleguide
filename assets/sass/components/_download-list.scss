@@ -1,0 +1,38 @@
+/*
+	Element: Download List
+	Version 1.0
+	Date: 8-7-2016
+	Author: Corey M. Capetillo
+*/
+.download-list {
+	display: block;
+	width: 100%;
+	&__item {
+		width: 100%;
+		text-align: left;
+		list-style: none;
+		padding: 14px 0;
+		&__link {
+			margin-bottom: 1px;
+			.fa {
+				margin-right: 2px;
+				font-size: 20px;
+			}
+		}
+		&__link,
+		&__description {
+			display: block;
+			text-align: left;
+			width: 100%;
+		}
+		&__description {
+			margin-left: 25px;
+		}
+	}
+	li:empty {
+		border-bottom: 1px solid #EEE;
+		margin-top: 10px;
+		margin-bottom: 13px;
+		padding: 0 !important;
+	}
+}
