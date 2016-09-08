@@ -208,4 +208,7 @@ body {
 #grids + .rc_sg__example .layout__container {
   width: 100% !important; }
 
+#tabs + .rc_sg__description + .rc_sg__example .layout__content {
+  min-height: 200px; }
+
 /*# sourceMappingURL=display.css.map */

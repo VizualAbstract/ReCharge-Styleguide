@@ -4579,7 +4579,9 @@ h1 + .setup-header__description,
   		- Add a statistics sidebar. Keep it in Tabs section for now
   	9-8-16:
   		- Remove width constraints from the .layout__container
+  		- Incorporate stats from embedded styles
   */
+  /* Stats */
   /*
   	8-10-16:
   		- Tooltips will now be simplified, removing header and will be inline instead of overlaied with javascript
@@ -6265,24 +6267,24 @@ h1 + .setup-header__description,
 .new .navbar__return--highlight:hover, .new .navbar__return--highlight:focus {
   background-color: #2bac8f !important;
 }
-/* line 14, ../sass/layouts/_tabs.scss */
+/* line 15, ../sass/layouts/_tabs.scss */
 .new .tabs__header {
   min-height: 60px;
   position: relative;
   top: 1px;
 }
-/* line 21, ../sass/layouts/_tabs.scss */
+/* line 22, ../sass/layouts/_tabs.scss */
 .new .tabs__list__item {
   border-bottom: 1px solid #EEEEEE;
 }
 @media screen and (max-width: 767px) {
-  /* line 21, ../sass/layouts/_tabs.scss */
+  /* line 22, ../sass/layouts/_tabs.scss */
   .new .tabs__list__item {
     display: block;
     width: 100%;
   }
 }
-/* line 27, ../sass/layouts/_tabs.scss */
+/* line 28, ../sass/layouts/_tabs.scss */
 .new .tabs__list__item > span,
 .new .tabs__list__item > a {
   height: 60px;
@@ -6292,41 +6294,27 @@ h1 + .setup-header__description,
   display: block;
   color: #424242;
 }
-/* line 38, ../sass/layouts/_tabs.scss */
+/* line 39, ../sass/layouts/_tabs.scss */
 .new .tabs__list__item.active > span,
 .new .tabs__list__item.active > a {
   background-color: #EEEEEE;
 }
-/* line 45, ../sass/layouts/_tabs.scss */
+/* line 46, ../sass/layouts/_tabs.scss */
 .new .tabs__content {
   background-color: #EEEEEE;
   padding: 20px;
 }
-/* line 48, ../sass/layouts/_tabs.scss */
+/* line 49, ../sass/layouts/_tabs.scss */
 .new .tabs__content .layout__container {
   width: 100%;
 }
-@media screen and (min-width: 768px) {
-  /* line 48, ../sass/layouts/_tabs.scss */
-  .new .tabs__content .layout__container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* line 53, ../sass/layouts/_tabs.scss */
-  .new .tabs__content .layout__container .layout {
-    display: table;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-/* line 61, ../sass/layouts/_tabs.scss */
+/* line 52, ../sass/layouts/_tabs.scss */
 .new .tabs__content .layout__sidebar,
 .new .tabs__content .layout__content,
 .new .tabs__content .layout__full {
   padding: 20px;
 }
-/* line 66, ../sass/layouts/_tabs.scss */
+/* line 57, ../sass/layouts/_tabs.scss */
 .new .tabs__content .layout__sidebar,
 .new .tabs__content .layout__content,
 .new .tabs__content .layout__full,
@@ -6344,58 +6332,80 @@ h1 + .setup-header__description,
 .new .tabs__content .grid__xs__12, .new .tabs__content .grid__sm__12, .new .tabs__content .grid__md__12, .new .tabs__content .grid__lg__12 {
   background-color: #FFF;
 }
-@media screen and (min-width: 768px) {
-  /* line 66, ../sass/layouts/_tabs.scss */
-  .new .tabs__content .layout__sidebar,
-  .new .tabs__content .layout__content,
-  .new .tabs__content .layout__full,
-  .new .tabs__content .grid__xs__1, .new .tabs__content .grid__sm__1, .new .tabs__content .grid__md__1, .new .tabs__content .grid__lg__1,
-  .new .tabs__content .grid__xs__2, .new .tabs__content .grid__sm__2, .new .tabs__content .grid__md__2, .new .tabs__content .grid__lg__2,
-  .new .tabs__content .grid__xs__3, .new .tabs__content .grid__sm__3, .new .tabs__content .grid__md__3, .new .tabs__content .grid__lg__3,
-  .new .tabs__content .grid__xs__4, .new .tabs__content .grid__sm__4, .new .tabs__content .grid__md__4, .new .tabs__content .grid__lg__4,
-  .new .tabs__content .grid__xs__5, .new .tabs__content .grid__sm__5, .new .tabs__content .grid__md__5, .new .tabs__content .grid__lg__5,
-  .new .tabs__content .grid__xs__6, .new .tabs__content .grid__sm__6, .new .tabs__content .grid__md__6, .new .tabs__content .grid__lg__6,
-  .new .tabs__content .grid__xs__7, .new .tabs__content .grid__sm__7, .new .tabs__content .grid__md__7, .new .tabs__content .grid__lg__7,
-  .new .tabs__content .grid__xs__8, .new .tabs__content .grid__sm__8, .new .tabs__content .grid__md__8, .new .tabs__content .grid__lg__8,
-  .new .tabs__content .grid__xs__9, .new .tabs__content .grid__sm__9, .new .tabs__content .grid__md__9, .new .tabs__content .grid__lg__9,
-  .new .tabs__content .grid__xs__10, .new .tabs__content .grid__sm__10, .new .tabs__content .grid__md__10, .new .tabs__content .grid__lg__10,
-  .new .tabs__content .grid__xs__11, .new .tabs__content .grid__sm__11, .new .tabs__content .grid__md__11, .new .tabs__content .grid__lg__11,
-  .new .tabs__content .grid__xs__12, .new .tabs__content .grid__sm__12, .new .tabs__content .grid__md__12, .new .tabs__content .grid__lg__12 {
-    display: table-cell;
-    float: none;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-/* line 93, ../sass/layouts/_tabs.scss */
-.new .layout__container .layout__sidebar--statistics {
-  background-color: #2c93ac;
+/* line 78, ../sass/layouts/_tabs.scss */
+.new .layout__container .layout__sidebar--stats {
+  background-color: #2C93AC;
+  text-align: center;
   border-left: 20px solid #EEEEEE;
 }
 @media screen and (max-width: 767px) {
-  /* line 93, ../sass/layouts/_tabs.scss */
-  .new .layout__container .layout__sidebar--statistics {
+  /* line 78, ../sass/layouts/_tabs.scss */
+  .new .layout__container .layout__sidebar--stats {
     border-top: 20px solid #EEEEEE;
     border-left-width: 0;
   }
 }
-/* line 103, ../sass/layouts/_tabs.scss */
-.new .layout__sidebar--statistics {
+/* line 89, ../sass/layouts/_tabs.scss */
+.new .layout__sidebar--stats {
+  color: #FFF;
+}
+/* line 91, ../sass/layouts/_tabs.scss */
+.new .layout__sidebar--stats a {
+  color: #FFF;
+}
+/* line 94, ../sass/layouts/_tabs.scss */
+.new .layout__sidebar--stats h1, .new .layout__sidebar--stats .h1,
+.new .layout__sidebar--stats h2, .new .layout__sidebar--stats .h2,
+.new .layout__sidebar--stats h3, .new .layout__sidebar--stats .h3, .new .layout__sidebar--stats .tabs__list__item > span,
+.new .layout__sidebar--stats .tabs__list__item > a,
+.new .layout__sidebar--stats h4, .new .layout__sidebar--stats .h4, .new .layout__sidebar--stats .form__search__no-results,
+.new .layout__sidebar--stats h5, .new .layout__sidebar--stats .h5,
+.new .layout__sidebar--stats h6, .new .layout__sidebar--stats .h6 {
   color: #FFF;
 }
 /* line 105, ../sass/layouts/_tabs.scss */
-.new .layout__sidebar--statistics a {
+.new .stat {
+  margin: 30px auto;
+  display: block;
+  clear: both;
+}
+/* line 109, ../sass/layouts/_tabs.scss */
+.new .stat__value {
+  margin-bottom: 10px;
+}
+/* line 112, ../sass/layouts/_tabs.scss */
+.new .stat__label {
+  margin: 0 auto 2px;
+  line-height: 21px;
+  max-width: 180px;
+}
+/* line 117, ../sass/layouts/_tabs.scss */
+.new .stat--info {
+  padding: 30px;
+  background-color: #53BAD3;
+  margin-top: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+/* line 124, ../sass/layouts/_tabs.scss */
+.new .stat .rc_popover {
+  text-align: left;
+}
+/* line 127, ../sass/layouts/_tabs.scss */
+.new .stat .popover-button,
+.new .stat .tooltip-button {
   color: #FFF;
 }
-/* line 108, ../sass/layouts/_tabs.scss */
-.new .layout__sidebar--statistics h1, .new .layout__sidebar--statistics .h1,
-.new .layout__sidebar--statistics h2, .new .layout__sidebar--statistics .h2,
-.new .layout__sidebar--statistics h3, .new .layout__sidebar--statistics .h3, .new .layout__sidebar--statistics .tabs__list__item > span,
-.new .layout__sidebar--statistics .tabs__list__item > a,
-.new .layout__sidebar--statistics h4, .new .layout__sidebar--statistics .h4, .new .layout__sidebar--statistics .form__search__no-results,
-.new .layout__sidebar--statistics h5, .new .layout__sidebar--statistics .h5,
-.new .layout__sidebar--statistics h6, .new .layout__sidebar--statistics .h6 {
-  color: #FFF;
+/* line 130, ../sass/layouts/_tabs.scss */
+.new .stat .popover-button:hover, .new .stat .popover-button:hover,
+.new .stat .tooltip-button:hover,
+.new .stat .tooltip-button:hover {
+  color: #4dd6b7;
+}
+/* line 135, ../sass/layouts/_tabs.scss */
+.new .stat .tooltip-box,
+.new .stat .popover-box {
+  width: 290px !important;
 }
 /* line 7, ../sass/layouts/_admin-tools.scss */
 .new .admin-tools {
