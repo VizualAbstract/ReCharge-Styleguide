@@ -103,7 +103,7 @@
 
 /* Stats */
 .stat {
-	margin: 30px auto;
+	padding: 30px auto;
 	display: block;
 	clear: both;
 	&__value {
@@ -115,7 +115,7 @@
 		max-width: 180px;
 	}
 	&--info {
-		padding: 30px;
+		padding: 45px 0;
 		background-color: #53BAD3;
 		margin-top: -20px;
 		margin-left: -20px;

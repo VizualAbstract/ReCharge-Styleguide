@@ -6365,7 +6365,7 @@ h1 + .setup-header__description,
 }
 /* line 105, ../sass/layouts/_tabs.scss */
 .new .stat {
-  margin: 30px auto;
+  padding: 30px auto;
   display: block;
   clear: both;
 }
@@ -6381,7 +6381,7 @@ h1 + .setup-header__description,
 }
 /* line 117, ../sass/layouts/_tabs.scss */
 .new .stat--info {
-  padding: 30px;
+  padding: 45px 0;
   background-color: #53BAD3;
   margin-top: -20px;
   margin-left: -20px;
