@@ -64,10 +64,10 @@ $tooltip-arrow-offset: 2px;
 	// &.in {
 	//   opacity: 1;
 	// }
-	&.top     { padding-top: -$tooltip-arrow-width+8; }
-	&.right   { padding-top: $tooltip-arrow-width+8; }
-	&.bottom  { padding-bottom: $tooltip-arrow-width+8; }
-	&.left    { padding-top: $tooltip-arrow-width+8; }
+	&.top     { padding-top: -$tooltip-arrow-width; }
+	&.right   { padding-top: $tooltip-arrow-width; }
+	&.bottom  { padding-bottom: $tooltip-arrow-width; }
+	&.left    { padding-top: $tooltip-arrow-width; }
 }
 // Wrapper for the tooltip content
 .tooltip-box__inner {
@@ -115,7 +115,7 @@ $tooltip-arrow-offset: 2px;
 		}
 	}
 	&.right > .tooltip-box__arrow {
-		top: 8px;
+		top: 0;
 		&:after {
 			content: " ";
 			border-top-width: 0;
@@ -134,7 +134,7 @@ $tooltip-arrow-offset: 2px;
 	}
 
 	&.left > .tooltip-box__arrow {
-		top: 8px;
+		top: 0;
 		right: 0;
 		&:after {
 			content: " ";

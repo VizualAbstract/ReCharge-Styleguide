@@ -6702,19 +6702,19 @@ h1 + .setup-header__description,
 }
 /* line 67, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.top {
-  padding-top: -2px;
+  padding-top: -10px;
 }
 /* line 68, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.right {
-  padding-top: 18px;
+  padding-top: 10px;
 }
 /* line 69, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.bottom {
-  padding-bottom: 18px;
+  padding-bottom: 10px;
 }
 /* line 70, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.left {
-  padding-top: 18px;
+  padding-top: 10px;
 }
 /* line 73, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box__inner {
@@ -6757,7 +6757,7 @@ h1 + .setup-header__description,
 }
 /* line 117, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.right > .tooltip-box__arrow {
-  top: 8px;
+  top: 0;
 }
 /* line 119, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.right > .tooltip-box__arrow:after {
@@ -6779,7 +6779,7 @@ h1 + .setup-header__description,
 }
 /* line 136, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.left > .tooltip-box__arrow {
-  top: 8px;
+  top: 0;
   right: 0;
 }
 /* line 139, ../sass/dynamic/_tooltips.scss */
@@ -6840,7 +6840,7 @@ h1 + .setup-header__description,
 }
 /* line 71, ../sass/dynamic/_popovers.scss */
 .new .popover-box.right {
-  padding-top: 18px;
+  padding-top: 10px;
 }
 /* line 72, ../sass/dynamic/_popovers.scss */
 .new .popover-box.bottom {
@@ -6848,7 +6848,7 @@ h1 + .setup-header__description,
 }
 /* line 73, ../sass/dynamic/_popovers.scss */
 .new .popover-box.left {
-  padding-top: 18px;
+  padding-top: 10px;
 }
 /* line 78, ../sass/dynamic/_popovers.scss */
 .new .popover-box__title {
@@ -6897,7 +6897,7 @@ h1 + .setup-header__description,
 }
 /* line 127, ../sass/dynamic/_popovers.scss */
 .new .popover-box.right > .popover-box__arrow {
-  top: 8px;
+  top: 0;
 }
 /* line 129, ../sass/dynamic/_popovers.scss */
 .new .popover-box.right > .popover-box__arrow:after {
@@ -6919,7 +6919,7 @@ h1 + .setup-header__description,
 }
 /* line 145, ../sass/dynamic/_popovers.scss */
 .new .popover-box.left > .popover-box__arrow {
-  top: 8px;
+  top: 0;
   right: 0;
 }
 /* line 148, ../sass/dynamic/_popovers.scss */
