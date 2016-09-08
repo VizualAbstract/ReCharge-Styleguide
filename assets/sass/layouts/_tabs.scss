@@ -103,7 +103,8 @@
 
 /* Stats */
 .stat {
-	padding: 30px auto;
+	margiNn: 0 auto;
+	padding: 30px 0;
 	display: block;
 	clear: both;
 	&__value {

@@ -6365,21 +6365,22 @@ h1 + .setup-header__description,
 }
 /* line 105, ../sass/layouts/_tabs.scss */
 .new .stat {
-  padding: 30px auto;
+  margiNn: 0 auto;
+  padding: 30px 0;
   display: block;
   clear: both;
 }
-/* line 109, ../sass/layouts/_tabs.scss */
+/* line 110, ../sass/layouts/_tabs.scss */
 .new .stat__value {
   margin-bottom: 10px;
 }
-/* line 112, ../sass/layouts/_tabs.scss */
+/* line 113, ../sass/layouts/_tabs.scss */
 .new .stat__label {
   margin: 0 auto 2px;
   line-height: 21px;
   max-width: 180px;
 }
-/* line 117, ../sass/layouts/_tabs.scss */
+/* line 118, ../sass/layouts/_tabs.scss */
 .new .stat--info {
   padding: 45px 0;
   background-color: #53BAD3;
@@ -6387,22 +6388,22 @@ h1 + .setup-header__description,
   margin-left: -20px;
   margin-right: -20px;
 }
-/* line 124, ../sass/layouts/_tabs.scss */
+/* line 125, ../sass/layouts/_tabs.scss */
 .new .stat .rc_popover {
   text-align: left;
 }
-/* line 127, ../sass/layouts/_tabs.scss */
+/* line 128, ../sass/layouts/_tabs.scss */
 .new .stat .popover-button,
 .new .stat .tooltip-button {
   color: #FFF;
 }
-/* line 130, ../sass/layouts/_tabs.scss */
+/* line 131, ../sass/layouts/_tabs.scss */
 .new .stat .popover-button:hover, .new .stat .popover-button:hover,
 .new .stat .tooltip-button:hover,
 .new .stat .tooltip-button:hover {
   color: #4dd6b7;
 }
-/* line 135, ../sass/layouts/_tabs.scss */
+/* line 136, ../sass/layouts/_tabs.scss */
 .new .stat .tooltip-box,
 .new .stat .popover-box {
   width: 290px !important;
