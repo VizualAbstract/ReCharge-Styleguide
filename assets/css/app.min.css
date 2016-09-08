@@ -4577,6 +4577,8 @@ h1 + .setup-header__description,
   		- Create the first page of tabs
   		- Add the ability to use the grid system within the tab content. But because of the tab's background color, use display: table so the heights are equal
   		- Add a statistics sidebar. Keep it in Tabs section for now
+  	9-8-16:
+  		- Remove width constraints from the .layout__container
   */
   /*
   	8-10-16:
@@ -6263,24 +6265,24 @@ h1 + .setup-header__description,
 .new .navbar__return--highlight:hover, .new .navbar__return--highlight:focus {
   background-color: #2bac8f !important;
 }
-/* line 12, ../sass/layouts/_tabs.scss */
+/* line 14, ../sass/layouts/_tabs.scss */
 .new .tabs__header {
   min-height: 60px;
   position: relative;
   top: 1px;
 }
-/* line 19, ../sass/layouts/_tabs.scss */
+/* line 21, ../sass/layouts/_tabs.scss */
 .new .tabs__list__item {
   border-bottom: 1px solid #EEEEEE;
 }
 @media screen and (max-width: 767px) {
-  /* line 19, ../sass/layouts/_tabs.scss */
+  /* line 21, ../sass/layouts/_tabs.scss */
   .new .tabs__list__item {
     display: block;
     width: 100%;
   }
 }
-/* line 25, ../sass/layouts/_tabs.scss */
+/* line 27, ../sass/layouts/_tabs.scss */
 .new .tabs__list__item > span,
 .new .tabs__list__item > a {
   height: 60px;
@@ -6290,28 +6292,27 @@ h1 + .setup-header__description,
   display: block;
   color: #424242;
 }
-/* line 36, ../sass/layouts/_tabs.scss */
+/* line 38, ../sass/layouts/_tabs.scss */
 .new .tabs__list__item.active > span,
 .new .tabs__list__item.active > a {
   background-color: #EEEEEE;
 }
-/* line 43, ../sass/layouts/_tabs.scss */
+/* line 45, ../sass/layouts/_tabs.scss */
 .new .tabs__content {
   background-color: #EEEEEE;
   padding: 20px;
 }
-/* line 46, ../sass/layouts/_tabs.scss */
+/* line 48, ../sass/layouts/_tabs.scss */
 .new .tabs__content .layout__container {
   width: 100%;
-  background-color: #FFF;
 }
 @media screen and (min-width: 768px) {
-  /* line 46, ../sass/layouts/_tabs.scss */
+  /* line 48, ../sass/layouts/_tabs.scss */
   .new .tabs__content .layout__container {
     padding-left: 0;
     padding-right: 0;
   }
-  /* line 52, ../sass/layouts/_tabs.scss */
+  /* line 53, ../sass/layouts/_tabs.scss */
   .new .tabs__content .layout__container .layout {
     display: table;
     width: 100%;
@@ -6319,27 +6320,16 @@ h1 + .setup-header__description,
     margin-right: 0;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 46, ../sass/layouts/_tabs.scss */
-  .new .tabs__content .layout__container {
-    max-width: 740px;
-  }
-}
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  /* line 46, ../sass/layouts/_tabs.scss */
-  .new .tabs__content .layout__container {
-    max-width: 960px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  /* line 46, ../sass/layouts/_tabs.scss */
-  .new .tabs__content .layout__container {
-    max-width: 1160px;
-  }
-}
-/* line 69, ../sass/layouts/_tabs.scss */
+/* line 61, ../sass/layouts/_tabs.scss */
 .new .tabs__content .layout__sidebar,
 .new .tabs__content .layout__content,
+.new .tabs__content .layout__full {
+  padding: 20px;
+}
+/* line 66, ../sass/layouts/_tabs.scss */
+.new .tabs__content .layout__sidebar,
+.new .tabs__content .layout__content,
+.new .tabs__content .layout__full,
 .new .tabs__content .grid__xs__1, .new .tabs__content .grid__sm__1, .new .tabs__content .grid__md__1, .new .tabs__content .grid__lg__1,
 .new .tabs__content .grid__xs__2, .new .tabs__content .grid__sm__2, .new .tabs__content .grid__md__2, .new .tabs__content .grid__lg__2,
 .new .tabs__content .grid__xs__3, .new .tabs__content .grid__sm__3, .new .tabs__content .grid__md__3, .new .tabs__content .grid__lg__3,
@@ -6355,9 +6345,10 @@ h1 + .setup-header__description,
   background-color: #FFF;
 }
 @media screen and (min-width: 768px) {
-  /* line 69, ../sass/layouts/_tabs.scss */
+  /* line 66, ../sass/layouts/_tabs.scss */
   .new .tabs__content .layout__sidebar,
   .new .tabs__content .layout__content,
+  .new .tabs__content .layout__full,
   .new .tabs__content .grid__xs__1, .new .tabs__content .grid__sm__1, .new .tabs__content .grid__md__1, .new .tabs__content .grid__lg__1,
   .new .tabs__content .grid__xs__2, .new .tabs__content .grid__sm__2, .new .tabs__content .grid__md__2, .new .tabs__content .grid__lg__2,
   .new .tabs__content .grid__xs__3, .new .tabs__content .grid__sm__3, .new .tabs__content .grid__md__3, .new .tabs__content .grid__lg__3,
@@ -6376,27 +6367,27 @@ h1 + .setup-header__description,
     margin-right: 0;
   }
 }
-/* line 95, ../sass/layouts/_tabs.scss */
+/* line 93, ../sass/layouts/_tabs.scss */
 .new .layout__container .layout__sidebar--statistics {
   background-color: #2c93ac;
   border-left: 20px solid #EEEEEE;
 }
 @media screen and (max-width: 767px) {
-  /* line 95, ../sass/layouts/_tabs.scss */
+  /* line 93, ../sass/layouts/_tabs.scss */
   .new .layout__container .layout__sidebar--statistics {
     border-top: 20px solid #EEEEEE;
     border-left-width: 0;
   }
 }
-/* line 105, ../sass/layouts/_tabs.scss */
+/* line 103, ../sass/layouts/_tabs.scss */
 .new .layout__sidebar--statistics {
   color: #FFF;
 }
-/* line 107, ../sass/layouts/_tabs.scss */
+/* line 105, ../sass/layouts/_tabs.scss */
 .new .layout__sidebar--statistics a {
   color: #FFF;
 }
-/* line 110, ../sass/layouts/_tabs.scss */
+/* line 108, ../sass/layouts/_tabs.scss */
 .new .layout__sidebar--statistics h1, .new .layout__sidebar--statistics .h1,
 .new .layout__sidebar--statistics h2, .new .layout__sidebar--statistics .h2,
 .new .layout__sidebar--statistics h3, .new .layout__sidebar--statistics .h3, .new .layout__sidebar--statistics .tabs__list__item > span,

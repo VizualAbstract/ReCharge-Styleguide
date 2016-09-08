@@ -7,6 +7,8 @@
 		- Create the first page of tabs
 		- Add the ability to use the grid system within the tab content. But because of the tab's background color, use display: table so the heights are equal
 		- Add a statistics sidebar. Keep it in Tabs section for now
+	9-8-16:
+		- Remove width constraints from the .layout__container
 */
 .tabs {
 	&__header {
@@ -45,7 +47,6 @@
 		padding: $padding-large-horizontal;
 		.layout__container {
 			width: 100%;
-			background-color: #FFF;
 			@media screen and (min-width: $screen-sm-min) {
 				padding-left: 0;
 				padding-right: 0;
@@ -56,18 +57,15 @@
 					margin-right: 0;
 				}
 			}
-			@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-				max-width: $container-sm;
-			}
-			@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-				max-width: $container-md;
-			}
-			@media screen and (min-width: $screen-lg-min) {
-				max-width: $container-lg;
-			}
 		}
 		.layout__sidebar,
 		.layout__content,
+		.layout__full {
+			padding: 20px;
+		}
+		.layout__sidebar,
+		.layout__content,
+		.layout__full,
 		.grid__xs__1, .grid__sm__1, .grid__md__1, .grid__lg__1,
 		.grid__xs__2, .grid__sm__2, .grid__md__2, .grid__lg__2,
 		.grid__xs__3, .grid__sm__3, .grid__md__3, .grid__lg__3,

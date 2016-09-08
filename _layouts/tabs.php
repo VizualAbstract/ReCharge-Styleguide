@@ -83,59 +83,16 @@
 						</div><!-- .stat__label -->
 						<span class="tooltip-button" data-toggle="rc_tooltip" data-placement="left" title="<p>Revenue does not include taxes or  shipping costs.</p>"></span>
 					</div><!-- .stat -->
+				</div><!-- .layout__sidebar-->
+			</div><!-- .layout -->
+		</div><!-- .layout__container -->
+	</div><!-- .tabs__content -->
+</div><!-- .tabs -->
 
-					<div class="stat">
-						<h3 class="stat__value">$10,000,000</h3>
-						<div class="stat__label">
-							Average revenue per customer
-						</div><!-- .stat__label -->
-						<span class="tooltip-button" data-toggle="rc_tooltip" data-placement="left" title="<p>Revenue does not include.</p>"></span>
-					</div><!-- .stat -->
-
-					<hr>
-
-					<div class="stat">
-						<h3 class="stat__value">173</h3>
-						<div class="stat__label">
-							Active customers
-						</div><!-- .stat__label -->
-						<span class="popover-button" data-toggle="rc_popover" data-placement="left" data-content="<p>Active customers may include  customers that have had their  payment info declined because  they are not yet cancelled. </p>"></span>
-					</div><!-- .stat -->
-
-					<div class="stat">
-						<h3 class="stat__value">16%</h3>
-						<div class="stat__label">
-							Recurring churn
-						</div><!-- .stat__label -->
-						<span class="popover-button" data-toggle="rc_popover" data-placement="left" data-content="<p>Percentage of cancelled  customers, including payment  declines between their first and  2nd charge.</p><p>Percentage does not include  customers created in the last  30 days. </p>"></span>
-					</div><!-- .stat -->
-
-					<div class="stat">
-						<h3 class="stat__value">103</h3>
-						<div class="stat__label">
-							Average number of charges
-						</div><!-- .stat__label -->
-						<span class="popover-button" data-toggle="rc_popover" data-placement="left" data-content="<p>Number includes customers that  have signed up in the last 30 days.</p>"></span>
-					</div><!-- .stat -->
-
-					<div class="stat">
-						<h3 class="stat__value">$10,000,000</h3>
-						<div class="stat__label">
-							Average revenue per customer
-						</div><!-- .stat__label -->
-						<span class="popover-button" data-toggle="rc_popover" data-placement="left" data-content="<p>Revenue does not include taxes or  shipping costs.</p>"></span>
-					</div><!-- .stat -->
-
-					<div class="stat">
-						<h3 class="stat__value">$10,000,000</h3>
-						<div class="stat__label">
-							Average revenue per customer
-						</div><!-- .stat__label -->
-						<span class="popover-button" data-toggle="rc_popover" data-placement="left" data-content="<p>Revenue does not include taxes.</p>"></span>
-					</div><!-- .stat -->
 <style>
 .new .stat {
-	margin: 30px auto;
+	max-width: 210px;
+	margin: 0 auto 30px;
 	display: block;
 	clear: both;
 }
@@ -159,8 +116,3 @@
 	width: 290px !important;
 }
 </style>
-				</div><!-- .layout__sidebar-->
-			</div><!-- .layout -->
-		</div><!-- .layout__container -->
-	</div><!-- .tabs__content -->
-</div><!-- .tabs -->
