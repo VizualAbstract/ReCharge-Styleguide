@@ -6675,7 +6675,7 @@ h1 + .setup-header__description,
   font-size: 16px;
   padding: 4px 8px 5px;
   box-sizing: content-box;
-  z-index: 100051;
+  z-index: 100050;
 }
 /* line 37, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-button:after {
@@ -6690,7 +6690,7 @@ h1 + .setup-header__description,
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 100050;
+  z-index: 100051;
   display: none;
   max-width: 500px;
   color: #FFF;
