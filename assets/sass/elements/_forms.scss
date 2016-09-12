@@ -499,12 +499,16 @@ input[type="checkbox"],
 	}
 	&__end {
 		padding-left: 7px !important;
+		padding-right: 7px !important;
 	}
 	&__submit {
 		box-sizing: border-box;
 		padding-left: 7px !important;
 		margin-top: 36px;
 		@include make-sm-column(2);
+		.button {
+			margin-top: 0;
+		}
 	}
 }
 
