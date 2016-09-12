@@ -553,6 +553,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/images\/beta-badge.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3139,
+		"inputAbbreviatedPath": "\/assets\/images\/beta-badge.png",
+		"outputAbbreviatedPath": "\/assets\/images\/beta-badge.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/images\/form__select-caret.png": {
 		"fileType": 32768,
 		"ignore": 0,

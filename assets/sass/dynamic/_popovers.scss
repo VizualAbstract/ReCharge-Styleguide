@@ -41,6 +41,30 @@ $popover-arrow-offset: 2px;
 		color: #4DD6B7;
 	}
 	z-index: $zindex-popover - 1;
+
+	&.beta-badge {
+		width: 52px;
+		height: 45px;
+		position: absolute;
+		padding: 0;
+		top: 0;
+		right: 15px;
+		background-image: url('../images/beta-badge.png');
+		background-position: 0 0;
+		background-size: 52px 45px;
+		background-repeat: no-repeat;
+		&:after {
+			display: none;
+		}
+		+ .popover-box {
+			padding-top: 0 !important;
+			margin-left: -10px !important;
+			margin-top: -6px !important;
+			> .popover-box__arrow {
+				top: -10px !important;
+			}
+		}
+	}
 }
 
 .popover-box {

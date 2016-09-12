@@ -21,3 +21,8 @@ Left <span class="popover-button"
 			data-placement="left"
 			data-title="Popover"
 			data-content="<p>This is body copy for a tool tip. It can be up to 3 sentences. More than that and no one will read it.</p><p><a href='#'>Go to setup instructions...</a></p>"></span>
+
+<span class="popover-button beta-badge"
+			data-toggle="rc_popover"
+			data-placement="left"
+			data-content='<p>Metrics are retroactive as of Sept 8th, 2016</p>'></span>

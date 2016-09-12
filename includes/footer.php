@@ -150,10 +150,10 @@
 		<script>
 			$(function() {
 				// Tooltip code
-				$('.tooltip-button').rc_tooltip().on('mouseenter', function(){
-					$(this).rc_tooltip('show').addClass('tooltip-button--active');
-				}).on('mouseleave', function(){
-					$(this).rc_tooltip('hide').removeClass('tooltip-button--active');
+				$('.tooltip-button').on('mouseenter', function() {
+					$(this).addClass('tooltip-button--active');
+				}).on('mouseleave', function() {
+					$(this).removeClass('tooltip-button--active');
 				});
 			});
 		</script>

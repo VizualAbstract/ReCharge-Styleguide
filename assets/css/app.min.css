@@ -6709,7 +6709,34 @@ h1 + .setup-header__description,
 .new .tooltip-button--active {
   color: #4DD6B7;
 }
-/* line 47, ../sass/dynamic/_tooltips.scss */
+/* line 45, ../sass/dynamic/_tooltips.scss */
+.new .tooltip-button.beta-badge {
+  width: 52px;
+  height: 45px;
+  position: absolute;
+  padding: 0;
+  top: 0;
+  right: 15px;
+  background-image: url("../images/beta-badge.png");
+  background-position: 0 0;
+  background-size: 52px 45px;
+  background-repeat: no-repeat;
+}
+/* line 56, ../sass/dynamic/_tooltips.scss */
+.new .tooltip-button.beta-badge:after {
+  display: none;
+}
+/* line 59, ../sass/dynamic/_tooltips.scss */
+.new .tooltip-button.beta-badge + .tooltip-box {
+  padding-top: 0 !important;
+  margin-left: -10px !important;
+  margin-top: -6px !important;
+}
+/* line 63, ../sass/dynamic/_tooltips.scss */
+.new .tooltip-button.beta-badge + .tooltip-box > .tooltip-box__arrow {
+  top: -10px !important;
+}
+/* line 71, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box {
   position: absolute;
   top: 0;
@@ -6724,36 +6751,36 @@ h1 + .setup-header__description,
   background: #424242;
   background-clip: content-box;
 }
-/* line 67, ../sass/dynamic/_tooltips.scss */
+/* line 91, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.top {
   padding-top: -10px;
 }
-/* line 68, ../sass/dynamic/_tooltips.scss */
+/* line 92, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.right {
   padding-top: 10px;
 }
-/* line 69, ../sass/dynamic/_tooltips.scss */
+/* line 93, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.bottom {
   padding-bottom: 10px;
 }
-/* line 70, ../sass/dynamic/_tooltips.scss */
+/* line 94, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.left {
   padding-top: 10px;
 }
-/* line 73, ../sass/dynamic/_tooltips.scss */
+/* line 97, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box__inner {
   padding: 20px;
   text-align: left;
 }
-/* line 76, ../sass/dynamic/_tooltips.scss */
+/* line 100, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box__inner p:first {
   margin-top: 0;
 }
-/* line 79, ../sass/dynamic/_tooltips.scss */
+/* line 103, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box__inner a {
   cursor: pointer;
 }
-/* line 90, ../sass/dynamic/_tooltips.scss */
+/* line 114, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box > .tooltip-box__arrow, .new .tooltip-box > .tooltip-box__arrow:after {
   position: absolute;
   display: block;
@@ -6762,51 +6789,51 @@ h1 + .setup-header__description,
   border-color: transparent;
   border-style: solid;
 }
-/* line 101, ../sass/dynamic/_tooltips.scss */
+/* line 125, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box > .tooltip-box__arrow:after {
   border-width: 10px;
   content: "";
 }
-/* line 107, ../sass/dynamic/_tooltips.scss */
+/* line 131, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.top > .tooltip-box__arrow {
   bottom: 0;
   left: 50%;
   margin-left: -10px;
 }
-/* line 111, ../sass/dynamic/_tooltips.scss */
+/* line 135, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.top > .tooltip-box__arrow:after {
   content: " ";
   border-bottom-width: 0;
   border-top-color: #424242;
 }
-/* line 117, ../sass/dynamic/_tooltips.scss */
+/* line 141, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.right > .tooltip-box__arrow {
   top: 0;
 }
-/* line 119, ../sass/dynamic/_tooltips.scss */
+/* line 143, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.right > .tooltip-box__arrow:after {
   content: " ";
   border-top-width: 0;
   border-bottom-color: #424242;
 }
-/* line 125, ../sass/dynamic/_tooltips.scss */
+/* line 149, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.bottom > .tooltip-box__arrow {
   top: -10px;
   left: 50%;
   margin-left: -10px;
 }
-/* line 129, ../sass/dynamic/_tooltips.scss */
+/* line 153, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.bottom > .tooltip-box__arrow:after {
   content: " ";
   border-top-width: 0;
   border-bottom-color: #424242;
 }
-/* line 136, ../sass/dynamic/_tooltips.scss */
+/* line 160, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.left > .tooltip-box__arrow {
   top: 0;
   right: 0;
 }
-/* line 139, ../sass/dynamic/_tooltips.scss */
+/* line 163, ../sass/dynamic/_tooltips.scss */
 .new .tooltip-box.left > .tooltip-box__arrow:after {
   content: " ";
   right: 0;
@@ -6837,7 +6864,34 @@ h1 + .setup-header__description,
 .new .popover-button--active {
   color: #4DD6B7;
 }
-/* line 46, ../sass/dynamic/_popovers.scss */
+/* line 45, ../sass/dynamic/_popovers.scss */
+.new .popover-button.beta-badge {
+  width: 52px;
+  height: 45px;
+  position: absolute;
+  padding: 0;
+  top: 0;
+  right: 15px;
+  background-image: url("../images/beta-badge.png");
+  background-position: 0 0;
+  background-size: 52px 45px;
+  background-repeat: no-repeat;
+}
+/* line 56, ../sass/dynamic/_popovers.scss */
+.new .popover-button.beta-badge:after {
+  display: none;
+}
+/* line 59, ../sass/dynamic/_popovers.scss */
+.new .popover-button.beta-badge + .popover-box {
+  padding-top: 0 !important;
+  margin-left: -10px !important;
+  margin-top: -6px !important;
+}
+/* line 63, ../sass/dynamic/_popovers.scss */
+.new .popover-button.beta-badge + .popover-box > .popover-box__arrow {
+  top: -10px !important;
+}
+/* line 70, ../sass/dynamic/_popovers.scss */
 .new .popover-box {
   position: absolute;
   top: 0;
@@ -6854,46 +6908,46 @@ h1 + .setup-header__description,
   background-clip: content-box;
   z-index: 100060;
 }
-/* line 65, ../sass/dynamic/_popovers.scss */
+/* line 89, ../sass/dynamic/_popovers.scss */
 .new .popover-box.in {
   display: block;
 }
-/* line 70, ../sass/dynamic/_popovers.scss */
+/* line 94, ../sass/dynamic/_popovers.scss */
 .new .popover-box.top {
   padding-top: -2px;
 }
-/* line 71, ../sass/dynamic/_popovers.scss */
+/* line 95, ../sass/dynamic/_popovers.scss */
 .new .popover-box.right {
   padding-top: 10px;
 }
-/* line 72, ../sass/dynamic/_popovers.scss */
+/* line 96, ../sass/dynamic/_popovers.scss */
 .new .popover-box.bottom {
   padding-bottom: 18px;
 }
-/* line 73, ../sass/dynamic/_popovers.scss */
+/* line 97, ../sass/dynamic/_popovers.scss */
 .new .popover-box.left {
   padding-top: 10px;
 }
-/* line 78, ../sass/dynamic/_popovers.scss */
+/* line 102, ../sass/dynamic/_popovers.scss */
 .new .popover-box__title {
   margin: 0;
   padding: 20px 20px 0;
   font-size: 16px;
   font-family: 'ralewaysemibold', arial, sans-serif;
 }
-/* line 85, ../sass/dynamic/_popovers.scss */
+/* line 109, ../sass/dynamic/_popovers.scss */
 .new .popover-box__content {
   padding: 0 20px 20px;
 }
-/* line 87, ../sass/dynamic/_popovers.scss */
+/* line 111, ../sass/dynamic/_popovers.scss */
 .new .popover-box__content p {
   margin-top: 10px;
 }
-/* line 90, ../sass/dynamic/_popovers.scss */
+/* line 114, ../sass/dynamic/_popovers.scss */
 .new .popover-box__content a {
   cursor: pointer;
 }
-/* line 100, ../sass/dynamic/_popovers.scss */
+/* line 124, ../sass/dynamic/_popovers.scss */
 .new .popover-box > .popover-box__arrow, .new .popover-box > .popover-box__arrow:after {
   position: absolute;
   display: block;
@@ -6902,51 +6956,51 @@ h1 + .setup-header__description,
   border-color: transparent;
   border-style: solid;
 }
-/* line 111, ../sass/dynamic/_popovers.scss */
+/* line 135, ../sass/dynamic/_popovers.scss */
 .new .popover-box > .popover-box__arrow:after {
   border-width: 10px;
   content: "";
 }
-/* line 117, ../sass/dynamic/_popovers.scss */
+/* line 141, ../sass/dynamic/_popovers.scss */
 .new .popover-box.top > .popover-box__arrow {
   bottom: 0;
   left: 50%;
   margin-left: -10px;
 }
-/* line 121, ../sass/dynamic/_popovers.scss */
+/* line 145, ../sass/dynamic/_popovers.scss */
 .new .popover-box.top > .popover-box__arrow:after {
   content: " ";
   border-bottom-width: 0;
   border-top-color: #424242;
 }
-/* line 127, ../sass/dynamic/_popovers.scss */
+/* line 151, ../sass/dynamic/_popovers.scss */
 .new .popover-box.right > .popover-box__arrow {
   top: 0;
 }
-/* line 129, ../sass/dynamic/_popovers.scss */
+/* line 153, ../sass/dynamic/_popovers.scss */
 .new .popover-box.right > .popover-box__arrow:after {
   content: " ";
   border-top-width: 0;
   border-bottom-color: #424242;
 }
-/* line 135, ../sass/dynamic/_popovers.scss */
+/* line 159, ../sass/dynamic/_popovers.scss */
 .new .popover-box.bottom > .popover-box__arrow {
   top: -10px;
   left: 50%;
   margin-left: -10px;
 }
-/* line 139, ../sass/dynamic/_popovers.scss */
+/* line 163, ../sass/dynamic/_popovers.scss */
 .new .popover-box.bottom > .popover-box__arrow:after {
   content: " ";
   border-top-width: 0;
   border-bottom-color: #424242;
 }
-/* line 145, ../sass/dynamic/_popovers.scss */
+/* line 169, ../sass/dynamic/_popovers.scss */
 .new .popover-box.left > .popover-box__arrow {
   top: 0;
   right: 0;
 }
-/* line 148, ../sass/dynamic/_popovers.scss */
+/* line 172, ../sass/dynamic/_popovers.scss */
 .new .popover-box.left > .popover-box__arrow:after {
   content: " ";
   right: 0;
