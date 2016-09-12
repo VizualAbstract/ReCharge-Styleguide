@@ -47,6 +47,8 @@
 	9-2-16:
 		- Use a background image to create the dropdown chevron for the date picker
 		- Add max-width to date picker (238px)
+	9-12-16:
+		- Submit button added to date range picker, temporary until further notice :)
 */
 
 .form {
@@ -490,13 +492,19 @@ input[type="checkbox"],
 	&__start,
 	&__end {
 		box-sizing: border-box;
-		@include make-sm-column(6);
+		@include make-sm-column(5);
+	}
+	&__start {
+		padding-right: 7px !important;
 	}
 	&__end {
 		padding-left: 7px !important;
 	}
-	&__start {
-		padding-right: 7px !important;
+	&__submit {
+		box-sizing: border-box;
+		padding-left: 7px !important;
+		margin-top: 36px;
+		@include make-sm-column(2);
 	}
 }
 

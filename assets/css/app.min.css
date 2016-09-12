@@ -1538,6 +1538,8 @@
   	9-2-16:
   		- Use a background image to create the dropdown chevron for the date picker
   		- Add max-width to date picker (238px)
+  	9-12-16:
+  		- Submit button added to date range picker, temporary until further notice :)
   */
   /* Contextual sub-form */
   /* 
@@ -2188,66 +2190,66 @@ h1 + .setup-header__description,
   max-width: 100%;
   height: auto;
 }
-/* line 53, ../sass/elements/_forms.scss */
+/* line 55, ../sass/elements/_forms.scss */
 .new .form .form__label {
   display: block;
 }
-/* line 57, ../sass/elements/_forms.scss */
+/* line 59, ../sass/elements/_forms.scss */
 .new .form--inline .form__label {
   display: inline;
 }
-/* line 63, ../sass/elements/_forms.scss */
+/* line 65, ../sass/elements/_forms.scss */
 .new .form__errors {
   margin-bottom: 24px;
   position: relative;
   text-align: center;
   color: #EC3D10;
 }
-/* line 68, ../sass/elements/_forms.scss */
+/* line 70, ../sass/elements/_forms.scss */
 .new .form__errors:empty {
   display: none;
 }
-/* line 73, ../sass/elements/_forms.scss */
+/* line 75, ../sass/elements/_forms.scss */
 .new .form__help {
   color: #676767;
   margin-top: -6px;
   margin-bottom: 16px;
   line-height: 25px;
 }
-/* line 82, ../sass/elements/_forms.scss */
+/* line 84, ../sass/elements/_forms.scss */
 .new .form__checkbox__label + .form__help,
 .new .form__radio__label + .form__help {
   margin-top: -19px;
   padding-left: 25px;
 }
-/* line 88, ../sass/elements/_forms.scss */
+/* line 90, ../sass/elements/_forms.scss */
 .new .form__group, .new .form__search, .new .form__search__no-results {
   margin-bottom: 16px;
   position: relative;
 }
-/* line 92, ../sass/elements/_forms.scss */
+/* line 94, ../sass/elements/_forms.scss */
 .new .form__group .button, .new .form__search .button, .new .form__search__no-results .button {
   margin-top: 10px;
 }
-/* line 95, ../sass/elements/_forms.scss */
+/* line 97, ../sass/elements/_forms.scss */
 .new .form__group p:last-child, .new .form__search p:last-child, .new .form__search__no-results p:last-child {
   margin-bottom: 5px;
 }
-/* line 99, ../sass/elements/_forms.scss */
+/* line 101, ../sass/elements/_forms.scss */
 .new p + .form__group, .new p + .form__search, .new p + .form__search__no-results {
   margin-top: 18px;
 }
-/* line 104, ../sass/elements/_forms.scss */
+/* line 106, ../sass/elements/_forms.scss */
 .new .form--signup .form__group, .new .form--signup .form__search, .new .form--signup .form__search__no-results {
   position: relative;
   margin-bottom: 45px;
 }
 @media screen and (min-width: 768px) {
-  /* line 104, ../sass/elements/_forms.scss */
+  /* line 106, ../sass/elements/_forms.scss */
   .new .form--signup .form__group, .new .form--signup .form__search, .new .form--signup .form__search__no-results {
     margin-bottom: 55px;
   }
-  /* line 109, ../sass/elements/_forms.scss */
+  /* line 111, ../sass/elements/_forms.scss */
   .new .form--signup .form__group .form__response, .new .form--signup .form__search .form__response, .new .form--signup .form__search__no-results .form__response {
     position: absolute;
     top: 100%;
@@ -2256,12 +2258,12 @@ h1 + .setup-header__description,
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  /* line 104, ../sass/elements/_forms.scss */
+  /* line 106, ../sass/elements/_forms.scss */
   .new .form--signup .form__group, .new .form--signup .form__search, .new .form--signup .form__search__no-results {
     margin-bottom: 65px;
   }
 }
-/* line 122, ../sass/elements/_forms.scss */
+/* line 124, ../sass/elements/_forms.scss */
 .new .form__actions, .new .rc_modal__actions {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2271,18 +2273,18 @@ h1 + .setup-header__description,
   margin-top: 32px;
   margin-bottom: 60px;
 }
-/* line 127, ../sass/elements/_forms.scss */
+/* line 129, ../sass/elements/_forms.scss */
 .new .form__actions .button, .new .rc_modal__actions .button {
   -webkit-box-flex: 100%;
   -webkit-flex: 100%;
       -ms-flex: 100%;
           flex: 100%;
 }
-/* line 129, ../sass/elements/_forms.scss */
+/* line 131, ../sass/elements/_forms.scss */
 .new .form__actions .button + .button, .new .rc_modal__actions .button + .button {
   margin-left: 13px;
 }
-/* line 135, ../sass/elements/_forms.scss */
+/* line 137, ../sass/elements/_forms.scss */
 .new button.form__input,
 .new input.form__input,
 .new input[type="text"].form__color,
@@ -2299,7 +2301,7 @@ h1 + .setup-header__description,
   line-height: 1.5625;
   padding: 6px 10px 7px;
 }
-/* line 148, ../sass/elements/_forms.scss */
+/* line 150, ../sass/elements/_forms.scss */
 .new .form input[type="submit"] + input[type="submit"],
 .new .form input[type="submit"] + button,
 .new .form input + input[type="submit"],
@@ -2310,13 +2312,13 @@ h1 + .setup-header__description,
 .new .form input + a {
   margin-left: 15px;
 }
-/* line 160, ../sass/elements/_forms.scss */
+/* line 162, ../sass/elements/_forms.scss */
 .new button.button,
 .new input.button {
   vertical-align: middle;
   height: 40px;
 }
-/* line 166, ../sass/elements/_forms.scss */
+/* line 168, ../sass/elements/_forms.scss */
 .new input.form__input, .new input[type="text"].form__color, .new input[type="text"].form__date, .new input[type="text"].form__number,
 .new input[type="number"].form__number,
 .new textarea.form__input,
@@ -2325,7 +2327,7 @@ h1 + .setup-header__description,
 .new input.form__date {
   color: #424242;
 }
-/* line 173, ../sass/elements/_forms.scss */
+/* line 175, ../sass/elements/_forms.scss */
 .new button.button,
 .new input[type="submit"].button {
   -ms-touch-action: manipulation;
@@ -2334,24 +2336,24 @@ h1 + .setup-header__description,
   border-width: 0;
   min-width: 100px;
 }
-/* line 182, ../sass/elements/_forms.scss */
+/* line 184, ../sass/elements/_forms.scss */
 .new button.button:hover, .new button.button:active,
 .new input[type="submit"].button:hover,
 .new input[type="submit"].button:active {
   outline: 0;
 }
-/* line 188, ../sass/elements/_forms.scss */
+/* line 190, ../sass/elements/_forms.scss */
 .new button.button:disabled, .new button.button.disabled,
 .new input[type="submit"].button:disabled,
 .new input[type="submit"].button.disabled {
   background-color: #D8D8D8 !important;
   cursor: default;
 }
-/* line 195, ../sass/elements/_forms.scss */
+/* line 197, ../sass/elements/_forms.scss */
 .new select.form__input {
   display: block;
 }
-/* line 199, ../sass/elements/_forms.scss */
+/* line 201, ../sass/elements/_forms.scss */
 .new input[type="text"].form__input, .new input[type="text"].form__color, .new input[type="text"].form__date, .new input[type="text"].form__number,
 .new select.form__input,
 .new input[type="email"].form__input,
@@ -2368,7 +2370,7 @@ h1 + .setup-header__description,
 .new textarea.form__input__code {
   width: 100%;
 }
-/* line 207, ../sass/elements/_forms.scss */
+/* line 209, ../sass/elements/_forms.scss */
 .new .form__input, .new textarea.form__input__code, .new input[type="text"].form__color, .new input[type="text"].form__date, .new input[type="text"].form__number,
 .new input[type="number"].form__number,
 .new .form__placeholder {
@@ -2378,35 +2380,35 @@ h1 + .setup-header__description,
   max-width: 100%;
   color: #424242;
 }
-/* line 216, ../sass/elements/_forms.scss */
+/* line 218, ../sass/elements/_forms.scss */
 .new .form__input::-webkit-input-placeholder, .new textarea.form__input__code::-webkit-input-placeholder, .new input[type="text"].form__color::-webkit-input-placeholder, .new input[type="text"].form__date::-webkit-input-placeholder, .new input[type="text"].form__number::-webkit-input-placeholder,
 .new input[type="number"].form__number::-webkit-input-placeholder,
 .new .form__placeholder::-webkit-input-placeholder {
   color: #676767;
 }
-/* line 219, ../sass/elements/_forms.scss */
+/* line 221, ../sass/elements/_forms.scss */
 .new .form__input:-moz-placeholder, .new textarea.form__input__code:-moz-placeholder, .new input[type="text"].form__color:-moz-placeholder, .new input[type="text"].form__date:-moz-placeholder, .new input[type="text"].form__number:-moz-placeholder,
 .new input[type="number"].form__number:-moz-placeholder,
 .new .form__placeholder:-moz-placeholder {
   color: #676767;
 }
-/* line 222, ../sass/elements/_forms.scss */
+/* line 224, ../sass/elements/_forms.scss */
 .new .form__input::-moz-placeholder, .new textarea.form__input__code::-moz-placeholder, .new input[type="text"].form__color::-moz-placeholder, .new input[type="text"].form__date::-moz-placeholder, .new input[type="text"].form__number::-moz-placeholder,
 .new input[type="number"].form__number::-moz-placeholder,
 .new .form__placeholder::-moz-placeholder {
   color: #676767;
 }
-/* line 225, ../sass/elements/_forms.scss */
+/* line 227, ../sass/elements/_forms.scss */
 .new .form__input:-ms-input-placeholder, .new textarea.form__input__code:-ms-input-placeholder, .new input[type="text"].form__color:-ms-input-placeholder, .new input[type="text"].form__date:-ms-input-placeholder, .new input[type="text"].form__number:-ms-input-placeholder,
 .new input[type="number"].form__number:-ms-input-placeholder,
 .new .form__placeholder:-ms-input-placeholder {
   color: #676767;
 }
-/* line 230, ../sass/elements/_forms.scss */
+/* line 232, ../sass/elements/_forms.scss */
 .new p.form__placeholder {
   margin: 4px 0;
 }
-/* line 234, ../sass/elements/_forms.scss */
+/* line 236, ../sass/elements/_forms.scss */
 .new input[type="number"].form__number,
 .new input[type="text"].form__input,
 .new input[type="text"].form__color,
@@ -2426,7 +2428,7 @@ h1 + .setup-header__description,
 .new input.form__date {
   height: 40px;
 }
-/* line 243, ../sass/elements/_forms.scss */
+/* line 245, ../sass/elements/_forms.scss */
 .new input[type="number"].form__number,
 .new input[type="text"].form__input,
 .new input[type="text"].form__color,
@@ -2450,7 +2452,7 @@ h1 + .setup-header__description,
   border-style: solid;
   border-color: #676767;
 }
-/* line 253, ../sass/elements/_forms.scss */
+/* line 255, ../sass/elements/_forms.scss */
 .new input[type="number"].form__number:focus, .new input[type="number"].form__number.form__input--focus,
 .new input[type="text"].form__input:focus,
 .new input[type="text"].form__color:focus,
@@ -2492,7 +2494,7 @@ h1 + .setup-header__description,
   outline: none;
   box-shadow: none;
 }
-/* line 259, ../sass/elements/_forms.scss */
+/* line 261, ../sass/elements/_forms.scss */
 .new input[type="number"].form__number.form__input--invalid,
 .new input[type="text"].form__input.form__input--invalid,
 .new input[type="text"].form__input--invalid.form__color,
@@ -2514,7 +2516,7 @@ h1 + .setup-header__description,
 .new textarea.form__input--invalid.form__input__code {
   border-color: #EC3D10 !important;
 }
-/* line 264, ../sass/elements/_forms.scss */
+/* line 266, ../sass/elements/_forms.scss */
 .new .form__error {
   color: #EC3D10;
   font-family: 'ralewaysemibold', arial, sans-serif;
@@ -2523,14 +2525,14 @@ h1 + .setup-header__description,
   line-height: 25px;
 }
 @media screen and (min-width: 768px) {
-  /* line 264, ../sass/elements/_forms.scss */
+  /* line 266, ../sass/elements/_forms.scss */
   .new .form__error {
     position: absolute;
     top: 0;
     right: 0;
   }
 }
-/* line 277, ../sass/elements/_forms.scss */
+/* line 279, ../sass/elements/_forms.scss */
 .new textarea.form__input + textarea.form__input, .new textarea.form__input__code + textarea.form__input, .new textarea.form__input + textarea.form__input__code, .new textarea.form__input__code + textarea.form__input__code,
 .new input.form__date + input.form__date,
 .new input.form__color + input.form__color,
@@ -2603,13 +2605,13 @@ h1 + .setup-header__description,
 .new input[type="password"][type="number"].form__number + input[type="password"][type="number"].form__number {
   margin: 20px 0;
 }
-/* line 287, ../sass/elements/_forms.scss */
+/* line 289, ../sass/elements/_forms.scss */
 .new input[type="text"].button {
   line-height: 1.5625;
   padding: 7px;
   height: 40px;
 }
-/* line 293, ../sass/elements/_forms.scss */
+/* line 295, ../sass/elements/_forms.scss */
 .new textarea.form__input, .new textarea.form__input__code {
   line-height: 1.5625;
   padding: 7px 10px;
@@ -2619,29 +2621,29 @@ h1 + .setup-header__description,
   box-sizing: border-box;
   min-height: 100px;
 }
-/* line 306, ../sass/elements/_forms.scss */
+/* line 308, ../sass/elements/_forms.scss */
 .new textarea.form__input__code {
   font-family: 'pt-mono', monospace;
   font-size: 16px;
   color: #676767;
   line-height: 21px;
 }
-/* line 314, ../sass/elements/_forms.scss */
+/* line 316, ../sass/elements/_forms.scss */
 .new fieldset {
   padding: 0;
   margin: 0;
   border: 0;
   min-width: 0;
 }
-/* line 319, ../sass/elements/_forms.scss */
+/* line 321, ../sass/elements/_forms.scss */
 .new fieldset + fieldset {
   margin-top: 32px;
 }
-/* line 322, ../sass/elements/_forms.scss */
+/* line 324, ../sass/elements/_forms.scss */
 .new fieldset:last-child {
   margin-bottom: 60px;
 }
-/* line 327, ../sass/elements/_forms.scss */
+/* line 329, ../sass/elements/_forms.scss */
 .new h1 + fieldset,
 .new h2 + fieldset,
 .new h3 + fieldset,
@@ -2649,7 +2651,7 @@ h1 + .setup-header__description,
 .new h5 + fieldset {
   margin-top: 24px;
 }
-/* line 335, ../sass/elements/_forms.scss */
+/* line 337, ../sass/elements/_forms.scss */
 .new fieldset + h1,
 .new fieldset + h2,
 .new fieldset + h3,
@@ -2657,7 +2659,7 @@ h1 + .setup-header__description,
 .new fieldset + h5 {
   margin-top: 32px;
 }
-/* line 343, ../sass/elements/_forms.scss */
+/* line 345, ../sass/elements/_forms.scss */
 .new legend {
   display: block;
   width: 100%;
@@ -2667,7 +2669,7 @@ h1 + .setup-header__description,
   font-size: 16px;
   margin: 0 0 20px;
 }
-/* line 353, ../sass/elements/_forms.scss */
+/* line 355, ../sass/elements/_forms.scss */
 .new legend h1, .new legend .h1,
 .new legend h2, .new legend .h2,
 .new legend h3, .new legend .h3, .new legend .tabs__list__item > span,
@@ -2677,7 +2679,7 @@ h1 + .setup-header__description,
   line-height: 1;
   margin: 0;
 }
-/* line 363, ../sass/elements/_forms.scss */
+/* line 365, ../sass/elements/_forms.scss */
 .new label {
   display: block;
   max-width: 100%;
@@ -2686,18 +2688,18 @@ h1 + .setup-header__description,
   display: block;
   line-height: 25px;
 }
-/* line 374, ../sass/elements/_forms.scss */
+/* line 376, ../sass/elements/_forms.scss */
 .new .form__label + .button {
   margin: 12px 0;
 }
-/* line 379, ../sass/elements/_forms.scss */
+/* line 381, ../sass/elements/_forms.scss */
 .new input[type="radio"],
 .new input[type="checkbox"],
 .new .form__radio,
 .new .form__checkbox {
   display: none;
 }
-/* line 385, ../sass/elements/_forms.scss */
+/* line 387, ../sass/elements/_forms.scss */
 .new input[type="radio"]:first-of-type + .form__radio__label,
 .new input[type="radio"]:first-of-type + .form__checkbox__label,
 .new input[type="checkbox"]:first-of-type + .form__radio__label,
@@ -2708,7 +2710,7 @@ h1 + .setup-header__description,
 .new .form__checkbox:first-of-type + .form__checkbox__label {
   margin-top: 6px;
 }
-/* line 390, ../sass/elements/_forms.scss */
+/* line 392, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label,
 .new input[type="radio"] + .form__radio__label,
 .new input[type="radio"] + .form__checkbox__label,
@@ -2725,7 +2727,7 @@ h1 + .setup-header__description,
   display: block;
   line-height: 20px;
 }
-/* line 396, ../sass/elements/_forms.scss */
+/* line 398, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label:before,
 .new input[type="radio"] + .form__radio__label:before,
 .new input[type="radio"] + .form__checkbox__label:before,
@@ -2757,7 +2759,7 @@ h1 + .setup-header__description,
   position: relative;
   top: -2px;
 }
-/* line 421, ../sass/elements/_forms.scss */
+/* line 423, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label:after,
 .new input[type="radio"] + .form__radio__label:after,
 .new input[type="radio"] + .form__checkbox__label:after,
@@ -2774,14 +2776,14 @@ h1 + .setup-header__description,
   content: "";
   margin: 10px 0;
 }
-/* line 433, ../sass/elements/_forms.scss */
+/* line 435, ../sass/elements/_forms.scss */
 .new input[type="radio"] + label:before,
 .new input[type="radio"] + .form__radio__label:before,
 .new .form__radio + label:before,
 .new .form__radio + .form__radio__label:before {
   border-radius: 50%;
 }
-/* line 448, ../sass/elements/_forms.scss */
+/* line 450, ../sass/elements/_forms.scss */
 .new input[type="radio"]:checked + label:before,
 .new input[type="radio"]:checked + .form__radio__label:before,
 .new input[type="radio"]:checked + .form__checkbox__label:before, .new input[type="radio"].form__input--checked + label:before,
@@ -2808,7 +2810,7 @@ h1 + .setup-header__description,
   content: "\f00c";
   background-color: #767676;
 }
-/* line 459, ../sass/elements/_forms.scss */
+/* line 461, ../sass/elements/_forms.scss */
 .new input[type="radio"]:required + label::before,
 .new input[type="radio"]:required + .form__radio__label::before,
 .new input[type="radio"]:required + .form__checkbox__label::before, .new input[type="radio"].form__input--required + label::before,
@@ -2834,7 +2836,7 @@ h1 + .setup-header__description,
 .new .form__checkbox.form__input--required + .form__checkbox__label::before {
   border-color: #EC3D10;
 }
-/* line 467, ../sass/elements/_forms.scss */
+/* line 469, ../sass/elements/_forms.scss */
 .new input[type="radio"]:required:checked + label::before,
 .new input[type="radio"]:required + .form__radio__label + label::before,
 .new input[type="radio"]:required + .form__checkbox__label + label::before, .new input[type="radio"].form__input--required:checked + label::before,
@@ -2860,7 +2862,7 @@ h1 + .setup-header__description,
 .new .form__checkbox.form__input--required + .form__checkbox__label + label::before {
   background-color: #EC3D10;
 }
-/* line 478, ../sass/elements/_forms.scss */
+/* line 480, ../sass/elements/_forms.scss */
 .new input[type="radio"]:disabled + label:before,
 .new input[type="radio"]:disabled + .form__radio__label:before,
 .new input[type="radio"]:disabled + .form__checkbox__label:before, .new input[type="radio"].form__input--disabled + label:before,
@@ -2888,7 +2890,7 @@ h1 + .setup-header__description,
   color: #767676;
   text-indent: 3px;
 }
-/* line 487, ../sass/elements/_forms.scss */
+/* line 489, ../sass/elements/_forms.scss */
 .new .date-range {
   margin-left: -10px;
   margin-right: -10px;
@@ -2903,7 +2905,7 @@ h1 + .setup-header__description,
 .new .date-range:after {
   clear: both;
 }
-/* line 490, ../sass/elements/_forms.scss */
+/* line 492, ../sass/elements/_forms.scss */
 .new .date-range__start, .new .date-range__end {
   box-sizing: border-box;
   position: relative;
@@ -2912,59 +2914,76 @@ h1 + .setup-header__description,
   padding-right: 10px;
 }
 @media (min-width: 768px) {
-  /* line 490, ../sass/elements/_forms.scss */
+  /* line 492, ../sass/elements/_forms.scss */
   .new .date-range__start, .new .date-range__end {
     float: left;
-    width: 50%;
+    width: 41.6666666667%;
   }
 }
-/* line 495, ../sass/elements/_forms.scss */
-.new .date-range__end {
-  padding-left: 7px !important;
-}
-/* line 498, ../sass/elements/_forms.scss */
+/* line 497, ../sass/elements/_forms.scss */
 .new .date-range__start {
   padding-right: 7px !important;
 }
+/* line 500, ../sass/elements/_forms.scss */
+.new .date-range__end {
+  padding-left: 7px !important;
+}
 /* line 503, ../sass/elements/_forms.scss */
+.new .date-range__submit {
+  box-sizing: border-box;
+  padding-left: 7px !important;
+  margin-top: 36px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 768px) {
+  /* line 503, ../sass/elements/_forms.scss */
+  .new .date-range__submit {
+    float: left;
+    width: 16.6666666667%;
+  }
+}
+/* line 511, ../sass/elements/_forms.scss */
 .new .card-details {
   width: 100%;
   font-size: 0;
 }
-/* line 506, ../sass/elements/_forms.scss */
+/* line 514, ../sass/elements/_forms.scss */
 .new .card-details input.form__input, .new .card-details input[type="text"].form__color, .new .card-details input[type="text"].form__date, .new .card-details input[type="text"].form__number,
 .new .card-details input[type="number"].form__number {
   min-width: 10px;
   font-size: 16px;
   margin-bottom: 0;
 }
-/* line 511, ../sass/elements/_forms.scss */
+/* line 519, ../sass/elements/_forms.scss */
 .new .card-details__date, .new .card-details__security, .new .card-details__cards {
   display: inline-block;
   vertical-align: middle;
   box-sizing: border-box;
 }
-/* line 518, ../sass/elements/_forms.scss */
+/* line 526, ../sass/elements/_forms.scss */
 .new .card-details__label {
   font-size: 16px;
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 523, ../sass/elements/_forms.scss */
+/* line 531, ../sass/elements/_forms.scss */
 .new .card-details__date {
   width: 30%;
 }
-/* line 525, ../sass/elements/_forms.scss */
+/* line 533, ../sass/elements/_forms.scss */
 .new .card-details__date__month, .new .card-details__date__divider, .new .card-details__date__year {
   font-size: 0;
   display: inline-block !important;
   vertical-align: top;
 }
-/* line 532, ../sass/elements/_forms.scss */
+/* line 540, ../sass/elements/_forms.scss */
 .new .card-details__date__month {
   width: 29.62% !important;
 }
-/* line 535, ../sass/elements/_forms.scss */
+/* line 543, ../sass/elements/_forms.scss */
 .new .card-details__date__divider {
   width: 14.83% !important;
   font-size: 16px;
@@ -2972,16 +2991,16 @@ h1 + .setup-header__description,
   line-height: 40px;
   padding-top: 10px;
 }
-/* line 542, ../sass/elements/_forms.scss */
+/* line 550, ../sass/elements/_forms.scss */
 .new .card-details__date__year {
   width: 55.55% !important;
 }
-/* line 546, ../sass/elements/_forms.scss */
+/* line 554, ../sass/elements/_forms.scss */
 .new .card-details__security {
   width: 15%;
   padding-left: 20px;
 }
-/* line 550, ../sass/elements/_forms.scss */
+/* line 558, ../sass/elements/_forms.scss */
 .new .card-details__cards {
   width: 55%;
   margin-top: 37px;
@@ -2989,7 +3008,7 @@ h1 + .setup-header__description,
   height: 40px;
   line-height: 40px;
 }
-/* line 557, ../sass/elements/_forms.scss */
+/* line 565, ../sass/elements/_forms.scss */
 .new .card-details__icon {
   width: 20%;
   margin-left: 10%;
@@ -2997,26 +3016,26 @@ h1 + .setup-header__description,
   vertical-align: middle;
 }
 @media screen and (min-width: 768px) {
-  /* line 557, ../sass/elements/_forms.scss */
+  /* line 565, ../sass/elements/_forms.scss */
   .new .card-details__icon {
     width: 16.42%;
     margin-left: 20px;
   }
 }
 @media screen and (max-width: 767px) {
-  /* line 568, ../sass/elements/_forms.scss */
+  /* line 576, ../sass/elements/_forms.scss */
   .new .card-details__date {
     width: 50%;
   }
-  /* line 571, ../sass/elements/_forms.scss */
+  /* line 579, ../sass/elements/_forms.scss */
   .new .card-details__security {
     width: 20%;
   }
-  /* line 574, ../sass/elements/_forms.scss */
+  /* line 582, ../sass/elements/_forms.scss */
   .new .card-details__cards {
     width: 30%;
   }
-  /* line 577, ../sass/elements/_forms.scss */
+  /* line 585, ../sass/elements/_forms.scss */
   .new .card-details .form__error {
     position: absolute;
     right: 0;
@@ -3024,13 +3043,13 @@ h1 + .setup-header__description,
     bottom: -24px;
   }
 }
-/* line 586, ../sass/elements/_forms.scss */
+/* line 594, ../sass/elements/_forms.scss */
 .new .input-group {
   display: table;
   border-collapse: separate;
   box-sizing: border-box;
 }
-/* line 590, ../sass/elements/_forms.scss */
+/* line 598, ../sass/elements/_forms.scss */
 .new .input-group .form__number,
 .new .input-group .form__input,
 .new .input-group textarea.form__input__code,
@@ -3041,25 +3060,25 @@ h1 + .setup-header__description,
   display: table-cell;
   box-sizing: border-box;
 }
-/* line 596, ../sass/elements/_forms.scss */
+/* line 604, ../sass/elements/_forms.scss */
 .new .input-group__addon {
   padding-left: 15px;
 }
-/* line 598, ../sass/elements/_forms.scss */
+/* line 606, ../sass/elements/_forms.scss */
 .new .input-group__addon:first-child {
   padding-left: 0;
   padding-right: 15px;
 }
-/* line 602, ../sass/elements/_forms.scss */
+/* line 610, ../sass/elements/_forms.scss */
 .new .input-group__addon .button {
   margin-top: 11px;
   margin-bottom: 13px;
 }
-/* line 609, ../sass/elements/_forms.scss */
+/* line 617, ../sass/elements/_forms.scss */
 .new .input-group--full {
   width: 100%;
 }
-/* line 611, ../sass/elements/_forms.scss */
+/* line 619, ../sass/elements/_forms.scss */
 .new .input-group--full .form__number,
 .new .input-group--full .form__input,
 .new .input-group--full textarea.form__input__code,
@@ -3069,52 +3088,52 @@ h1 + .setup-header__description,
 .new .input-group--full input[type="number"].form__number {
   width: 100%;
 }
-/* line 615, ../sass/elements/_forms.scss */
+/* line 623, ../sass/elements/_forms.scss */
 .new .input-group--full .input-group__addon {
   width: 1%;
 }
-/* line 622, ../sass/elements/_forms.scss */
+/* line 630, ../sass/elements/_forms.scss */
 .new .form__search .input-group__addon {
   padding-left: 0;
 }
-/* line 624, ../sass/elements/_forms.scss */
+/* line 632, ../sass/elements/_forms.scss */
 .new .form__search .input-group__addon .button {
   min-width: 40px;
 }
-/* line 628, ../sass/elements/_forms.scss */
+/* line 636, ../sass/elements/_forms.scss */
 .new .form__search .button {
   font-size: 0;
 }
-/* line 630, ../sass/elements/_forms.scss */
+/* line 638, ../sass/elements/_forms.scss */
 .new .form__search .button:before {
   font-size: 16px;
   font-family: fontawesome;
   content: "\f002";
   color: #FFFFFF;
 }
-/* line 638, ../sass/elements/_forms.scss */
+/* line 646, ../sass/elements/_forms.scss */
 .new .form__search--active input[type="text"].form__input, .new .form__search--active input[type="text"].form__color, .new .form__search--active input[type="text"].form__date, .new .form__search--active input[type="text"].form__number {
   border-color: #4DD6B7;
 }
-/* line 642, ../sass/elements/_forms.scss */
+/* line 650, ../sass/elements/_forms.scss */
 .new .form__search--active .button {
   background-color: #4DD6B7;
   font-size: 0;
 }
-/* line 645, ../sass/elements/_forms.scss */
+/* line 653, ../sass/elements/_forms.scss */
 .new .form__search--active .button:before {
   content: "\f00d";
 }
-/* line 648, ../sass/elements/_forms.scss */
+/* line 656, ../sass/elements/_forms.scss */
 .new .form__search--active .button:hover {
   background-color: #2BAC8F;
 }
-/* line 653, ../sass/elements/_forms.scss */
+/* line 661, ../sass/elements/_forms.scss */
 .new .form__search__no-results {
   color: #2C93AC;
   text-align: center;
 }
-/* line 662, ../sass/elements/_forms.scss */
+/* line 670, ../sass/elements/_forms.scss */
 .new .contextual__input__options {
   background-color: #f3f3f3;
   padding: 18px 20px 0;
@@ -3123,48 +3142,48 @@ h1 + .setup-header__description,
   display: none;
   margin-bottom: 23px;
 }
-/* line 671, ../sass/elements/_forms.scss */
+/* line 679, ../sass/elements/_forms.scss */
 .new .contextual__input__options:last-of-type {
   margin-bottom: 18px;
 }
-/* line 678, ../sass/elements/_forms.scss */
+/* line 686, ../sass/elements/_forms.scss */
 .new .contextual__input__options .form__group .form__select, .new .contextual__input__options .form__search .form__select, .new .contextual__input__options .form__search__no-results .form__select, .new .contextual__input__options .form__group div.form__number, .new .contextual__input__options .form__search div.form__number, .new .contextual__input__options .form__search__no-results div.form__number {
   margin-bottom: 0;
 }
-/* line 687, ../sass/elements/_forms.scss */
+/* line 695, ../sass/elements/_forms.scss */
 .new .form__group .form__radio__label:last-of-type, .new .form__search .form__radio__label:last-of-type, .new .form__search__no-results .form__radio__label:last-of-type,
 .new .form__group .form__checkbox__label:last-of-type,
 .new .form__search .form__checkbox__label:last-of-type,
 .new .form__search__no-results .form__checkbox__label:last-of-type {
   margin-bottom: -16px;
 }
-/* line 689, ../sass/elements/_forms.scss */
+/* line 697, ../sass/elements/_forms.scss */
 .new .form__group .form__radio__label:last-of-type + .contextual__input__options, .new .form__search .form__radio__label:last-of-type + .contextual__input__options, .new .form__search__no-results .form__radio__label:last-of-type + .contextual__input__options,
 .new .form__group .form__checkbox__label:last-of-type + .contextual__input__options,
 .new .form__search .form__checkbox__label:last-of-type + .contextual__input__options,
 .new .form__search__no-results .form__checkbox__label:last-of-type + .contextual__input__options {
   margin-top: 19px;
 }
-/* line 700, ../sass/elements/_forms.scss */
+/* line 708, ../sass/elements/_forms.scss */
 .new .form__checkbox:checked + .form__checkbox__label + .contextual__input__options,
 .new .form__checkbox:checked + .form__radio__label + .contextual__input__options,
 .new .form__radio:checked + .form__checkbox__label + .contextual__input__options,
 .new .form__radio:checked + .form__radio__label + .contextual__input__options {
   display: block;
 }
-/* line 704, ../sass/elements/_forms.scss */
+/* line 712, ../sass/elements/_forms.scss */
 .new .form__checkbox:checked + .form__checkbox__label + .form__help + .contextual__input__options,
 .new .form__checkbox:checked + .form__radio__label + .form__help + .contextual__input__options,
 .new .form__radio:checked + .form__checkbox__label + .form__help + .contextual__input__options,
 .new .form__radio:checked + .form__radio__label + .form__help + .contextual__input__options {
   display: block;
 }
-/* line 712, ../sass/elements/_forms.scss */
+/* line 720, ../sass/elements/_forms.scss */
 .new input[type="text"].form__color {
   display: inline;
   width: 100px;
 }
-/* line 720, ../sass/elements/_forms.scss */
+/* line 728, ../sass/elements/_forms.scss */
 .new input[type="text"].form__date {
   max-width: 238px;
   background-image: url("../images/form__select-caret.png");
@@ -3172,11 +3191,11 @@ h1 + .setup-header__description,
   background-position: 100% 0%;
   background-repeat: no-repeat;
 }
-/* line 727, ../sass/elements/_forms.scss */
+/* line 735, ../sass/elements/_forms.scss */
 .new input[type="text"].form__date:focus {
   background-position: 100% 100%;
 }
-/* line 733, ../sass/elements/_forms.scss */
+/* line 741, ../sass/elements/_forms.scss */
 .new input[type="text"].form__number,
 .new input[type="number"].form__number {
   width: auto;
@@ -3184,13 +3203,13 @@ h1 + .setup-header__description,
   display: inline-block;
   margin-right: 5px;
 }
-/* line 743, ../sass/elements/_forms.scss */
+/* line 751, ../sass/elements/_forms.scss */
 .new div.form__number {
   width: auto;
   display: inline-block;
   margin-right: 5px;
 }
-/* line 754, ../sass/elements/_forms.scss */
+/* line 762, ../sass/elements/_forms.scss */
 .new input[type="color"].form__color__picker + .sp-replacer {
   margin: 12px 13px;
   vertical-align: top;
