@@ -488,7 +488,7 @@ input[type="checkbox"],
 
 .date-range {
 	@include make-row();
-	max-width: 510px;
+	max-width: 612px; // max-width: 510px;
 	&__start,
 	&__end {
 		box-sizing: border-box;
