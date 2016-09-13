@@ -6937,7 +6937,7 @@ h1 + .setup-header__description,
 }
 /* line 109, ../sass/dynamic/_popovers.scss */
 .new .popover-box__content {
-  padding: 0 20px 20px;
+  padding: 10px 20px 20px;
 }
 /* line 111, ../sass/dynamic/_popovers.scss */
 .new .popover-box__content p {

@@ -150,7 +150,7 @@
 		<script>
 			$(function() {
 				// Tooltip code
-				$('.tooltip-button').on('mouseenter', function() {
+				$('.tooltip-button').rc_tooltip().on('mouseenter', function() {
 					$(this).addClass('tooltip-button--active');
 				}).on('mouseleave', function() {
 					$(this).removeClass('tooltip-button--active');
@@ -174,31 +174,31 @@
 						$(this).removeClass('popover-box--hover');
 					});
 				}).on('mouseleave', function() {
-					$(this).removeClass('popover-button--hover');
-					var __this = $(this);
-					setTimeout(function(){
-						if ($('.popover-box').hasClass('popover-box--hover')) { // is mouse on popup box?
-							// yes, do nothing
-						} else {
-							// no, hide popup box
-							__this.rc_popover('hide');
-							__this.removeClass('popover-button--active');
-						}
-					}, 15);
-					$('.popover-box').on('mouseenter', function(){
-						$(this).addClass('popover-box--hover');
-					}).on('mouseleave', function(){ // hover off popup box
-						$(this).removeClass('popover-box--hover');
-						setTimeout(function(){
-							if ($('.popover-button').hasClass('popover-button--hover')) { // is mouse on popup icon?
-								// yes, do nothing
-							} else {
-								// no, hide popup box
-								$('.popover-button').rc_popover('hide');
-								$('.popover-button').removeClass('popover-button--active');
-							}
-						}, 15);
-					});
+					// $(this).removeClass('popover-button--hover');
+					// var __this = $(this);
+					// setTimeout(function(){
+					// 	if ($('.popover-box').hasClass('popover-box--hover')) { // is mouse on popup box?
+					// 		// yes, do nothing
+					// 	} else {
+					// 		// no, hide popup box
+					// 		__this.rc_popover('hide');
+					// 		__this.removeClass('popover-button--active');
+					// 	}
+					// }, 15);
+					// $('.popover-box').on('mouseenter', function(){
+					// 	$(this).addClass('popover-box--hover');
+					// }).on('mouseleave', function(){ // hover off popup box
+					// 	$(this).removeClass('popover-box--hover');
+					// 	setTimeout(function(){
+					// 		if ($('.popover-button').hasClass('popover-button--hover')) { // is mouse on popup icon?
+					// 			// yes, do nothing
+					// 		} else {
+					// 			// no, hide popup box
+					// 			$('.popover-button').rc_popover('hide');
+					// 			$('.popover-button').removeClass('popover-button--active');
+					// 		}
+					// 	}, 15);
+					// });
 				});
 			});
 		</script>
