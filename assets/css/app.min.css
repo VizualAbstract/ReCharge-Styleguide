@@ -1391,7 +1391,8 @@
 }
 /* line 13, ../sass/style/_animation.scss */
 .new #installation-animation img {
-  animation: spin 1.2s linear infinite;
+  -webkit-animation: spin 1.2s linear infinite;
+          animation: spin 1.2s linear infinite;
   margin: 0 auto;
   display: block;
   width: 195px;
@@ -1415,6 +1416,7 @@
   display: block;
   top: 0;
   left: 0;
+  -webkit-transition: opacity .55s;
   transition: opacity .55s;
 }
 /* line 37, ../sass/style/_animation.scss */
@@ -1445,11 +1447,6 @@
   position: relative;
   opacity: 1;
   z-index: 5;
-}
-@-moz-keyframes spin {
-  100% {
-    -moz-transform: rotate(360deg);
-  }
 }
 @-webkit-keyframes spin {
   100% {
@@ -1786,6 +1783,8 @@ h1 + .setup-header__description,
     display: inline-block;
     max-width: 100%;
     display: block;
+    max-width: -webkit-min-content;
+    max-width: -moz-min-content;
     max-width: min-content;
   }
 }
@@ -1802,6 +1801,7 @@ h1 + .setup-header__description,
 .new .table__container .table,
 .new .table__container .table--alt tbody {
   scrolling: touch;
+  background: -webkit-radial-gradient(left, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 0 center, -webkit-radial-gradient(right, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 100% center;
   background: radial-gradient(left, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 0 center, radial-gradient(right, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 100% center;
   background-size: 8px 100%, 8px 100%;
   background-attachment: scroll, scroll;
@@ -1820,6 +1820,7 @@ h1 + .setup-header__description,
 }
 /* line 87, ../sass/elements/_tables.scss */
 .new .table__container .table td:last-child {
+  background-image: -webkit-linear-gradient(right, white 50%, rgba(255, 255, 255, 0) 100%);
   background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
   background-repeat: no-repeat;
   background-position: 100% 0;
@@ -1827,6 +1828,7 @@ h1 + .setup-header__description,
 }
 /* line 94, ../sass/elements/_tables.scss */
 .new .table__container .table td:first-child, .new .table__container .table--alt tbody tr:first-child, .new .table__container .table--pinned th:nth-child(2), .new .table__container .table--pinned tbody td:nth-child(2) {
+  background-image: -webkit-linear-gradient(left, white 50%, rgba(255, 255, 255, 0) 100%);
   background-image: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
   background-repeat: no-repeat;
   background-size: 20px 100%;
@@ -1837,6 +1839,7 @@ h1 + .setup-header__description,
 }
 /* line 108, ../sass/elements/_tables.scss */
 .new .table__container .table--alt tbody tr:last-child, .new .table__container .table--pinned th:last-child, .new .table__container .table--pinned tbody td:last-child {
+  background-image: -webkit-linear-gradient(right, white 50%, rgba(255, 255, 255, 0) 100%);
   background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
   background-repeat: no-repeat;
   background-position: 100% 0;
@@ -1845,6 +1848,7 @@ h1 + .setup-header__description,
 /* line 118, ../sass/elements/_tables.scss */
 .new .table__container .table td:first-child:last-child,
 .new .table__container .table td:nth-child(2):last-child {
+  background-image: -webkit-linear-gradient(right, white 0%, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0) 96%, white 100%);
   background-image: linear-gradient(to left, white 0%, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0) 96%, white 100%);
   background-size: 100%;
 }
@@ -1852,6 +1856,7 @@ h1 + .setup-header__description,
 .new .table__container .table--alt tbody tr:last-child,
 .new .table__container .table--pinned thead > tr > th:last-child,
 .new .table__container .table--pinned tbody > tr > td:last-child {
+  background-image: -webkit-linear-gradient(right, white 50%, rgba(255, 255, 255, 0) 100%);
   background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
   background-repeat: no-repeat;
   background-position: 100% 0;
@@ -1860,14 +1865,24 @@ h1 + .setup-header__description,
 @media screen and (max-width: 767px) {
   /* line 146, ../sass/elements/_tables.scss */
   .new .table__container .table--alt {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     overflow: hidden;
     background: none;
   }
   /* line 152, ../sass/elements/_tables.scss */
   .new .table__container .table--alt thead {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
     min-width: min-content;
   }
 }
@@ -1880,6 +1895,9 @@ h1 + .setup-header__description,
 @media screen and (max-width: 767px) {
   /* line 164, ../sass/elements/_tables.scss */
   .new .table__container .table--alt tbody {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     overflow-x: auto;
@@ -1887,10 +1905,21 @@ h1 + .setup-header__description,
   }
   /* line 171, ../sass/elements/_tables.scss */
   .new .table__container .table--alt tr {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
     min-width: min-content;
-    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
   }
   /* line 178, ../sass/elements/_tables.scss */
   .new .table__container .table--alt td,
@@ -2038,7 +2067,8 @@ h1 + .setup-header__description,
   min-width: 100px;
   display: inline-block;
   cursor: pointer;
-  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   white-space: nowrap;
   vertical-align: middle;
   font-size: 16px;
@@ -2106,7 +2136,9 @@ h1 + .setup-header__description,
 }
 /* line 99, ../sass/elements/_buttons.scss */
 .new .button--link.button {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: transparent !important;
   font-family: 'ralewayregular', arial, sans-serif;
   padding-left: 0;
@@ -2233,6 +2265,9 @@ h1 + .setup-header__description,
 }
 /* line 124, ../sass/elements/_forms.scss */
 .new .form__actions, .new .rc_modal__actions {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin-top: 32px;
@@ -2240,7 +2275,10 @@ h1 + .setup-header__description,
 }
 /* line 129, ../sass/elements/_forms.scss */
 .new .form__actions .button, .new .rc_modal__actions .button {
-  flex: 100%;
+  -webkit-box-flex: 100%;
+  -webkit-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
 }
 /* line 131, ../sass/elements/_forms.scss */
 .new .form__actions .button + .button, .new .rc_modal__actions .button + .button {
@@ -2292,7 +2330,8 @@ h1 + .setup-header__description,
 /* line 175, ../sass/elements/_forms.scss */
 .new button.button,
 .new input[type="submit"].button {
-  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   cursor: pointer;
   border-width: 0;
   min-width: 100px;
@@ -3193,7 +3232,8 @@ h1 + .setup-header__description,
   min-width: 100px;
   display: inline-block;
   cursor: pointer;
-  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   white-space: nowrap;
   vertical-align: middle;
   font-size: 16px;
@@ -3261,7 +3301,9 @@ h1 + .setup-header__description,
 }
 /* line 99, ../sass/elements/_buttons.scss */
 .new .button--link.button {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: transparent !important;
   font-family: 'ralewayregular', arial, sans-serif;
   padding-left: 0;
@@ -3576,6 +3618,7 @@ h1 + .setup-header__description,
 /* line 42, ../sass/components/_switches.scss */
 .new .switch--large .switch__left,
 .new .switch--large .switch__right {
+  -webkit-transition: color .3s;
   transition: color .3s;
 }
 /* line 46, ../sass/components/_switches.scss */
@@ -3641,6 +3684,7 @@ h1 + .setup-header__description,
   left: 0%;
   right: 50%;
   display: block;
+  -webkit-transition: all .3s;
   transition: all .3s;
   background: #4DD6B7;
   border-radius: 17px;
@@ -3710,6 +3754,7 @@ h1 + .setup-header__description,
 /* line 43, ../sass/components/_toggle.scss */
 .new .toggle--large .toggle__left,
 .new .toggle--large .toggle__right {
+  -webkit-transition: color .3s;
   transition: color .3s;
 }
 /* line 47, ../sass/components/_toggle.scss */
@@ -3759,6 +3804,7 @@ h1 + .setup-header__description,
   left: 0%;
   right: 50%;
   display: block;
+  -webkit-transition: all .3s;
   transition: all .3s;
   background: #8E8F8E;
   border-radius: 10px;
@@ -4011,7 +4057,9 @@ h1 + .setup-header__description,
 .new .continue button,
 .new .continue a {
   line-height: 60px;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border: 0;
 }
 /* line 22, ../sass/components/_continue-bar.scss */
@@ -4088,6 +4136,8 @@ h1 + .setup-header__description,
   overflow: hidden;
   white-space: nowrap;
   text-align: left;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
   max-width: max-content;
   font-size: 14px;
 }
@@ -4289,6 +4339,7 @@ h1 + .setup-header__description,
 /* line 42, ../sass/components/_toggle-list.scss */
 .new .rc_toggle-list .switch {
   background-color: #4DD6B7;
+  -webkit-transition: background .3s;
   transition: background .3s;
 }
 /* line 45, ../sass/components/_toggle-list.scss */
@@ -6552,12 +6603,17 @@ h1 + .setup-header__description,
 }
 /* line 75, ../sass/dynamic/_modals.scss */
 .new .rc_modal.rc_fade .rc_modal__dialog {
-  transform: translate(0, -25%);
+  -webkit-transform: translate(0, -25%);
+          transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 /* line 79, ../sass/dynamic/_modals.scss */
 .new .rc_modal.rc_in .rc_modal__dialog {
-  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 /* line 82, ../sass/dynamic/_modals.scss */
 .new .rc_modal__dialog {
@@ -6595,6 +6651,7 @@ h1 + .setup-header__description,
 .new .rc_modal__backdrop.rc_fade {
   opacity: 0;
   filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
 /* line 114, ../sass/dynamic/_modals.scss */
@@ -6619,6 +6676,7 @@ h1 + .setup-header__description,
 .new .fade,
 .new .rc_fade {
   opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
 /* line 142, ../sass/dynamic/_modals.scss */
@@ -7053,9 +7111,12 @@ h1 + .setup-header__description,
   position: relative;
   height: 0;
   overflow: hidden;
+  -webkit-transition-property: height, visibility;
   transition-property: height, visibility;
-  transition-duration: 0.35s;
-  transition-timing-function: ease;
+  -webkit-transition-duration: 0.35s;
+          transition-duration: 0.35s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 /* line 32, ../sass/vendors/_dropkick.scss */
 .new .dk-select,
@@ -7066,8 +7127,6 @@ h1 + .setup-header__description,
 .new .dk-select-multi *,
 .new .dk-select-multi *:before,
 .new .dk-select-multi *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 /* line 43, ../sass/vendors/_dropkick.scss */
@@ -7090,6 +7149,10 @@ h1 + .setup-header__description,
   background: transparent;
 }
 /* line 61, ../sass/vendors/_dropkick.scss */
+.new .dk-select ::-moz-selection,
+.new .dk-select-multi ::-moz-selection {
+  background: transparent;
+}
 .new .dk-select ::selection,
 .new .dk-select-multi ::selection {
   background: transparent;
@@ -7105,7 +7168,6 @@ h1 + .setup-header__description,
   border-style: solid;
   border-color: #424242;
   border-radius: 0;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: 16px;
   line-height: 1.5625;
@@ -7729,7 +7791,8 @@ License: MIT
   -webkit-user-select: none;
   -moz-user-select: -moz-none;
   -o-user-select: none;
-  user-select: none;
+  -ms-user-select: none;
+      user-select: none;
 }
 
 /* line 147, ../sass/vendors/_spectrum.scss */
@@ -7767,9 +7830,7 @@ License: MIT
 .sp-sat {
   background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#FFF), to(rgba(204, 154, 129, 0)));
   background-image: -webkit-linear-gradient(left, #FFF, rgba(204, 154, 129, 0));
-  background-image: -moz-linear-gradient(left, #fff, rgba(204, 154, 129, 0));
-  background-image: -o-linear-gradient(left, #fff, rgba(204, 154, 129, 0));
-  background-image: -ms-linear-gradient(left, #fff, rgba(204, 154, 129, 0));
+  background-image: -webkit-linear-gradient(left, #fff, rgba(204, 154, 129, 0));
   background-image: linear-gradient(to right, #fff, rgba(204, 154, 129, 0));
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr=#FFFFFFFF, endColorstr=#00CC9A81)";
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr='#FFFFFFFF', endColorstr='#00CC9A81');
@@ -7779,9 +7840,7 @@ License: MIT
 .sp-val {
   background-image: -webkit-gradient(linear, 0 100%, 0 0, from(#000000), to(rgba(204, 154, 129, 0)));
   background-image: -webkit-linear-gradient(bottom, #000000, rgba(204, 154, 129, 0));
-  background-image: -moz-linear-gradient(bottom, #000, rgba(204, 154, 129, 0));
-  background-image: -o-linear-gradient(bottom, #000, rgba(204, 154, 129, 0));
-  background-image: -ms-linear-gradient(bottom, #000, rgba(204, 154, 129, 0));
+  background-image: -webkit-linear-gradient(bottom, #000, rgba(204, 154, 129, 0));
   background-image: linear-gradient(to top, #000, rgba(204, 154, 129, 0));
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00CC9A81, endColorstr=#FF000000)";
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00CC9A81', endColorstr='#FF000000');
@@ -7789,9 +7848,6 @@ License: MIT
 
 /* line 194, ../sass/vendors/_spectrum.scss */
 .sp-hue {
-  background: -moz-linear-gradient(top, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);
-  background: -ms-linear-gradient(top, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);
-  background: -o-linear-gradient(top, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#ff0000), color-stop(0.17, #ffff00), color-stop(0.33, #00ff00), color-stop(0.5, #00ffff), color-stop(0.67, #0000ff), color-stop(0.83, #ff00ff), to(#ff0000));
   background: -webkit-linear-gradient(top, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);
   background: linear-gradient(to bottom, #ff0000 0%, #ffff00 17%, #00ff00 33%, #00ffff 50%, #0000ff 67%, #ff00ff 83%, #ff0000 100%);
@@ -8121,6 +8177,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 /* line 482, ../sass/vendors/_spectrum.scss */
 .sp-container button {
   background-color: #eeeeee;
+  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
   background-image: linear-gradient(to bottom, #eeeeee, #cccccc);
   border: 1px solid #ccc;
   border-bottom: 1px solid #bbb;
@@ -8137,6 +8194,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 /* line 497, ../sass/vendors/_spectrum.scss */
 .sp-container button:hover {
   background-color: #dddddd;
+  background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
   background-image: linear-gradient(to bottom, #dddddd, #bbbbbb);
   border: 1px solid #bbb;
   border-bottom: 1px solid #999;
@@ -8327,6 +8385,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 .rc_modal__backdrop.rc_fade {
   opacity: 0;
   filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
 /* line 123, ../sass/app.scss */
