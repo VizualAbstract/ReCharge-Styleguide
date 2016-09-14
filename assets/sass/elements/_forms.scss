@@ -501,10 +501,14 @@ input[type="checkbox"],
 		@include make-sm-column(5);
 	}
 	&__start {
-		padding-right: 7px !important;
+		@media screen and (min-width: $screen-xs-max) {
+			padding-right: 7px !important;
+		}
 	}
 	&__end {
-		padding-left: 7px !important;
+		@media screen and (min-width: $screen-xs-max) {
+			padding-left: 7px !important;
+		}
 		@media screen and (min-width: $screen-sm-max) {
 			padding-right: 7px !important;
 		}
@@ -512,7 +516,7 @@ input[type="checkbox"],
 	&__submit {
 		@include make-sm-column(2);
 		box-sizing: border-box;
-		margin-top: 36px;
+		margin-top: 37px;
 		@media screen and (min-width: $screen-sm-max) {
 			padding-left: 7px !important;
 		}
@@ -528,9 +532,10 @@ input[type="checkbox"],
 		}
 		&__submit {
 			@include make-sm-column(12);
-			margin-top: 1px;
+			margin-top: 0;
 			padding-left: 10px !important;
 			.button {
+				margin-top: 2px;
 				width: 100%;
 			}
 		}

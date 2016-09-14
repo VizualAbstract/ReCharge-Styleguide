@@ -2539,11 +2539,15 @@ h1 + .setup-header__description,
     width: 41.6666666667%;
   }
 }
-.new .date-range__start {
-  padding-right: 7px !important;
+@media screen and (min-width: 767px) {
+  .new .date-range__start {
+    padding-right: 7px !important;
+  }
 }
-.new .date-range__end {
-  padding-left: 7px !important;
+@media screen and (min-width: 767px) {
+  .new .date-range__end {
+    padding-left: 7px !important;
+  }
 }
 @media screen and (min-width: 991px) {
   .new .date-range__end {
@@ -2556,7 +2560,7 @@ h1 + .setup-header__description,
   padding-left: 10px;
   padding-right: 10px;
   box-sizing: border-box;
-  margin-top: 36px;
+  margin-top: 37px;
 }
 @media (min-width: 768px) {
   .new .date-range__submit {
@@ -2593,7 +2597,7 @@ h1 + .setup-header__description,
     min-height: 1px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-top: 1px;
+    margin-top: 0;
     padding-left: 10px !important;
   }
 }
@@ -2605,6 +2609,7 @@ h1 + .setup-header__description,
 }
 @media screen and (max-width: 991px) {
   .new .date-range__submit .button {
+    margin-top: 2px;
     width: 100%;
   }
 }
@@ -3134,7 +3139,7 @@ h1 + .setup-header__description,
   min-width: 240px;
   left: 0;
   right: auto;
-  z-index: 100010;
+  z-index: 100050;
   background-color: #676767;
   font-family: "raleway-semibold", arial, non-serif;
   font-weight: normal;
@@ -5708,7 +5713,7 @@ h1 + .setup-header__description,
   font-size: 16px;
   padding: 4px 8px 5px;
   box-sizing: content-box;
-  z-index: 100050;
+  z-index: 100030;
 }
 .new .tooltip-button:after {
   content: "\f05a";
@@ -5743,7 +5748,7 @@ h1 + .setup-header__description,
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 100051;
+  z-index: 100031;
   display: none;
   max-width: 500px;
   color: #FFF;
@@ -5838,7 +5843,7 @@ h1 + .setup-header__description,
   font-size: 16px;
   padding: 4px 8px 5px;
   box-sizing: content-box;
-  z-index: 100059;
+  z-index: 100039;
 }
 .new .popover-button:after {
   content: "\f05a";
@@ -5883,7 +5888,7 @@ h1 + .setup-header__description,
   font-size: 16px;
   background: #424242;
   background-clip: content-box;
-  z-index: 100060;
+  z-index: 100040;
 }
 .new .popover-box.in {
   display: block;
