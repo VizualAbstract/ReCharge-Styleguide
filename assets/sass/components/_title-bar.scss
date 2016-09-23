@@ -8,6 +8,8 @@
 		- page-titles added
 	8-15-2016:
 		- Give inline-buttons margin between eachother
+	9-23-2016:
+		- Make content act like a flexbox with it's interior buttons on mobile devices
 */
 
 .page-title {
@@ -59,13 +61,6 @@
 		margin-top: 0;
 		margin-bottom: 0;
 	}
-	@media screen and (min-width: $screen-sm-min) {
-		&__title,
-		&__content {
-			display: table-cell;
-			vertical-align: top;
-		}
-	}
 	&__title {
 		.dropdown__trigger {
 			min-width: 271px;
@@ -80,6 +75,23 @@
 		}
 		.switch {
 			vertical-align: middle;
+		}
+	}
+	@media screen and (min-width: $screen-sm-min) {
+		&__title,
+		&__content {
+			display: table-cell;
+			vertical-align: top;
+		}
+		&__content {
+			display: flex;
+			width: 100%;
+			.button {
+				flex: 100%;
+				+ .button {
+					margin-left: 13px;
+				}
+			}
 		}
 	}
 }

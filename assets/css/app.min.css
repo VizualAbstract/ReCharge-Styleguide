@@ -3003,6 +3003,8 @@ h1 + .setup-header__description,
   		- page-titles added
   	8-15-2016:
   		- Give inline-buttons margin between eachother
+  	9-23-2016:
+  		- Make content act like a flexbox with it's interior buttons on mobile devices
   */
   /* This will be removed */
   /* 
@@ -3422,12 +3424,6 @@ h1 + .setup-header__description,
   margin-top: 0;
   margin-bottom: 0;
 }
-@media screen and (min-width: 768px) {
-  .new .title-bar__title, .new .title-bar__content {
-    display: table-cell;
-    vertical-align: top;
-  }
-}
 .new .title-bar__title .dropdown__trigger {
   min-width: 271px;
 }
@@ -3441,6 +3437,28 @@ h1 + .setup-header__description,
 }
 .new .title-bar__content .switch {
   vertical-align: middle;
+}
+@media screen and (min-width: 768px) {
+  .new .title-bar__title, .new .title-bar__content {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .new .title-bar__content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .new .title-bar__content .button {
+    -webkit-box-flex: 100%;
+    -webkit-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+  .new .title-bar__content .button + .button {
+    margin-left: 13px;
+  }
 }
 .new .title-info {
   font-weight: normal;
@@ -3811,7 +3829,7 @@ h1 + .setup-header__description,
 }
 .new .rc_toggle-list__item.disabled .rc_toggle-list__item__content .disabled_status {
   font-weight: normal;
-  font-family: 'raleway-semibold';
+  font-family: 'ralewaysemibold';
   display: inline-block;
 }
 .new .rc_toggle-list__item.disabled .switch {
