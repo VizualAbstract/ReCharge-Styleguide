@@ -26,7 +26,9 @@ $dk-color-aux: #BDF0E4 !default;
 $dk-border-color: #424242 !default;
 $dk-border-color-aux: #4DD6B7 !default;
 $dk-border-radius: 0 !default;
-$dk-disabled-color: #BBBBBB !default;
+$dk-disabled-color: #999 !default;
+$dk-disabled-background: #F9F9F9 !default;
+$dk-disabled-border: #8d8d8d !default;
 $dk-arrow-color: #424242 !default;
 
 .dk-select,
@@ -115,6 +117,8 @@ $dk-arrow-color: #424242 !default;
 
 .dk-selected-disabled {
 	color: $dk-disabled-color;
+	background-color: $dk-disabled-background;
+	border-color: $dk-disabled-border;
 }
 
 .dk-select .dk-select-options {
@@ -180,7 +184,8 @@ $dk-arrow-color: #424242 !default;
 
 .dk-select-options .dk-option-disabled {
 	color: $dk-disabled-color;
-	background-color: transparent;
+	background-color: $dk-disabled-background;
+	border-color: $dk-disabled-border;
 }
 
 .dk-select-options .dk-option-hidden {
@@ -267,12 +272,16 @@ $dk-arrow-color: #424242 !default;
 .dk-select-disabled {
 	opacity: 0.6;
 	color: $dk-disabled-color;
+	background-color: $dk-disabled-background;
+	border-color: $dk-disabled-border;
 	cursor: not-allowed;
-	.dk-selected{
-		&:hover, &:focus {
-			border-color: inherit;
-			&:before{
-				border-top-color: inherit;
+	.dk-selected {
+		background-color: $dk-disabled-background;
+		border-color: $dk-disabled-border;
+		&:active, &:hover, &:focus {
+			border-color: $dk-disabled-border !important;
+			&:before {
+				border-color: $dk-disabled-border !important;
 			}
 		}
 	}

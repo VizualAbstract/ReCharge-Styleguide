@@ -49,6 +49,8 @@
 		- Add max-width to date picker (238px)
 	9-12-16:
 		- Submit button added to date range picker, temporary until further notice :)
+	9-28-16:
+		- Add disabled styles for Input and dropkick select
 */
 
 .form {
@@ -226,6 +228,22 @@ textarea.form__input, {
 	}
 	&:-ms-input-placeholder {
 		color: #676767;
+	}
+}
+
+.form__input {
+	&:disabled {
+		background-color: #F9F9F9;
+		border-color: #8d8d8d !important;
+		color: #999 !important;
+		cursor: not-allowed;
+		&:focus,
+		&:active,
+		&:hover {
+			background-color: #F9F9F9 !important;
+			border-color: #8d8d8d !important;
+			color: #999 !important;
+		}
 	}
 }
 

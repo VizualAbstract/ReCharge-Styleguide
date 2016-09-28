@@ -59,9 +59,7 @@
 	position: relative;
 	display: block;
     color: inherit;
-
 	line-height: $line-height-base;
-
 	padding: $padding-base-vertical $padding-base-horizontal;
     &:hover,
     &:hover {
@@ -80,15 +78,34 @@
 		top: 2px;
 		margin-left: 10px;
 	}
-	h1, .h1,
-	h2, .h2,
-	h3, .h3,
-	h4, .h4,
-	h5, .h5 {
+	> h1, > .h1,
+	> h2, > .h2,
+	> h3, > .h3,
+	> h4, > .h4,
+	> h5, > .h5,
+	> h6, > .h6,
+	> a, > span {
 		top: 2px;
 		position: relative;
-		margin-right: -$padding-base-horizontal / 2;
-		margin-left: -$padding-base-horizontal;
+		// margin-right: -$padding-base-horizontal / 2;
+		// margin-left: -$padding-base-horizontal;
+	}
+	@media screen and (max-width: $screen-xs-max) {
+		display: table;
+		width: 100%;
+		> h1, > .h1,
+		> h2, > .h2,
+		> h3, > .h3,
+		> h4, > .h4,
+		> h5, > .h5,
+		> h6, > .h6,
+		> a, > span {
+			display: table-cell;
+		}
+		&:after {
+			display: table-cell;
+			padding-left: 10px;
+		}
 	}
 }
 

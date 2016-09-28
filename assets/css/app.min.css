@@ -1319,6 +1319,8 @@
   		- Add max-width to date picker (238px)
   	9-12-16:
   		- Submit button added to date range picker, temporary until further notice :)
+  	9-28-16:
+  		- Add disabled styles for Input and dropkick select
   */
   /* Contextual sub-form */
   /* 
@@ -2049,6 +2051,21 @@ h1 + .setup-header__description,
 .new input[type="number"].form__number:-ms-input-placeholder,
 .new .form__placeholder:-ms-input-placeholder {
   color: #676767;
+}
+.new .form__input:disabled, .new textarea.form__input__code:disabled, .new input[type="text"].form__color:disabled, .new input[type="text"].form__date:disabled, .new input[type="text"].form__number:disabled,
+.new input[type="number"].form__number:disabled {
+  background-color: #F9F9F9;
+  border-color: #8d8d8d !important;
+  color: #999 !important;
+  cursor: not-allowed;
+}
+.new .form__input:disabled:focus, .new textarea.form__input__code:disabled:focus, .new input[type="text"].form__color:disabled:focus, .new input[type="text"].form__date:disabled:focus, .new input[type="text"].form__number:disabled:focus,
+.new input[type="number"].form__number:disabled:focus, .new .form__input:disabled:active, .new textarea.form__input__code:disabled:active, .new input[type="text"].form__color:disabled:active, .new input[type="text"].form__date:disabled:active, .new input[type="text"].form__number:disabled:active,
+.new input[type="number"].form__number:disabled:active, .new .form__input:disabled:hover, .new textarea.form__input__code:disabled:hover, .new input[type="text"].form__color:disabled:hover, .new input[type="text"].form__date:disabled:hover, .new input[type="text"].form__number:disabled:hover,
+.new input[type="number"].form__number:disabled:hover {
+  background-color: #F9F9F9 !important;
+  border-color: #8d8d8d !important;
+  color: #999 !important;
 }
 .new p.form__placeholder {
   margin: 4px 0;
@@ -3030,6 +3047,8 @@ h1 + .setup-header__description,
   		- Create the breadcrumbs, based on progress-bar.
   		- Add highlight effect, as requested by devon
   		- Move padding to links, not the list items
+  	9-23-2106:
+  		- Display as a block on mobile devices, so overflow clips out excessively long trails
   */
   /* 
   	Element: Action List
@@ -3122,16 +3141,36 @@ h1 + .setup-header__description,
   top: 2px;
   margin-left: 10px;
 }
-.new .dropdown__trigger h1, .new .dropdown__trigger .h1,
-.new .dropdown__trigger h2, .new .dropdown__trigger .h2,
-.new .dropdown__trigger h3, .new .dropdown__trigger .h3, .new .dropdown__trigger .tabs__list__item > span,
-.new .dropdown__trigger .tabs__list__item > a,
-.new .dropdown__trigger h4, .new .dropdown__trigger .h4, .new .dropdown__trigger .form__search__no-results,
-.new .dropdown__trigger h5, .new .dropdown__trigger .h5 {
+.new .dropdown__trigger > h1, .new .dropdown__trigger > .h1,
+.new .dropdown__trigger > h2, .new .dropdown__trigger > .h2,
+.new .dropdown__trigger > h3, .new .dropdown__trigger > .h3, .new .tabs__list__item.dropdown__trigger > span,
+.new .tabs__list__item.dropdown__trigger > a,
+.new .dropdown__trigger > h4, .new .dropdown__trigger > .h4, .new .dropdown__trigger > .form__search__no-results,
+.new .dropdown__trigger > h5, .new .dropdown__trigger > .h5,
+.new .dropdown__trigger > h6, .new .dropdown__trigger > .h6,
+.new .dropdown__trigger > a, .new .dropdown__trigger > span {
   top: 2px;
   position: relative;
-  margin-right: -5px;
-  margin-left: -10px;
+}
+@media screen and (max-width: 767px) {
+  .new .dropdown__trigger {
+    display: table;
+    width: 100%;
+  }
+  .new .dropdown__trigger > h1, .new .dropdown__trigger > .h1,
+  .new .dropdown__trigger > h2, .new .dropdown__trigger > .h2,
+  .new .dropdown__trigger > h3, .new .dropdown__trigger > .h3, .new .tabs__list__item.dropdown__trigger > span,
+  .new .tabs__list__item.dropdown__trigger > a,
+  .new .dropdown__trigger > h4, .new .dropdown__trigger > .h4, .new .dropdown__trigger > .form__search__no-results,
+  .new .dropdown__trigger > h5, .new .dropdown__trigger > .h5,
+  .new .dropdown__trigger > h6, .new .dropdown__trigger > .h6,
+  .new .dropdown__trigger > a, .new .dropdown__trigger > span {
+    display: table-cell;
+  }
+  .new .dropdown__trigger:after {
+    display: table-cell;
+    padding-left: 10px;
+  }
 }
 .new .dropdown__menu {
   display: none;
@@ -3424,8 +3463,16 @@ h1 + .setup-header__description,
   margin-top: 0;
   margin-bottom: 0;
 }
+@media screen and (min-width: 768px) {
+  .new .title-bar__title, .new .title-bar__content {
+    display: table-cell;
+    vertical-align: top;
+  }
+}
 .new .title-bar__title .dropdown__trigger {
   min-width: 271px;
+  padding-left: 0;
+  padding-right: 0;
 }
 .new .title-bar__content {
   text-align: right;
@@ -3438,11 +3485,7 @@ h1 + .setup-header__description,
 .new .title-bar__content .switch {
   vertical-align: middle;
 }
-@media screen and (min-width: 768px) {
-  .new .title-bar__title, .new .title-bar__content {
-    display: table-cell;
-    vertical-align: top;
-  }
+@media screen and (max-width: 991px) {
   .new .title-bar__content {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3637,6 +3680,11 @@ h1 + .setup-header__description,
   background-color: #5C5C5C;
   color: #FFFFFF;
   font-family: 'ralewaysemibold', arial, sans-serif;
+}
+@media screen and (max-width: 767px) {
+  .new .breadcrumbs {
+    display: block;
+  }
 }
 .new .breadcrumbs .crumb {
   position: relative;
@@ -6158,7 +6206,9 @@ h1 + .setup-header__description,
   margin: 0 1.5em 0 0;
 }
 .new .dk-selected-disabled {
-  color: #BBBBBB;
+  color: #999;
+  background-color: #F9F9F9;
+  border-color: #8d8d8d;
 }
 .new .dk-select .dk-select-options {
   position: absolute;
@@ -6212,8 +6262,9 @@ h1 + .setup-header__description,
   color: #424242;
 }
 .new .dk-select-options .dk-option-disabled {
-  color: #BBBBBB;
-  background-color: transparent;
+  color: #999;
+  background-color: #F9F9F9;
+  border-color: #8d8d8d;
 }
 .new .dk-select-options .dk-option-hidden {
   display: none;
@@ -6287,14 +6338,20 @@ h1 + .setup-header__description,
 }
 .new .dk-select-disabled {
   opacity: 0.6;
-  color: #BBBBBB;
+  color: #999;
+  background-color: #F9F9F9;
+  border-color: #8d8d8d;
   cursor: not-allowed;
 }
-.new .dk-select-disabled .dk-selected:hover, .new .dk-select-disabled .dk-selected:focus {
-  border-color: inherit;
+.new .dk-select-disabled .dk-selected {
+  background-color: #F9F9F9;
+  border-color: #8d8d8d;
 }
-.new .dk-select-disabled .dk-selected:hover:before, .new .dk-select-disabled .dk-selected:focus:before {
-  border-top-color: inherit;
+.new .dk-select-disabled .dk-selected:active, .new .dk-select-disabled .dk-selected:hover, .new .dk-select-disabled .dk-selected:focus {
+  border-color: #8d8d8d !important;
+}
+.new .dk-select-disabled .dk-selected:active:before, .new .dk-select-disabled .dk-selected:hover:before, .new .dk-select-disabled .dk-selected:focus:before {
+  border-color: #8d8d8d !important;
 }
 .new select[data-dkcacheid] {
   display: none;

@@ -10,3 +10,9 @@
 	<option>Option 2</option>
 	<option>Option 3</option>
 </select><!-- .form__select -->
+
+<select disabled class="form__select">
+	<option selected="selected">Disabled</option>
+	<option>Option 2</option>
+	<option>Option 3</option>
+</select><!-- .form__select -->

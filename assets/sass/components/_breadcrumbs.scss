@@ -7,6 +7,8 @@
 		- Create the breadcrumbs, based on progress-bar.
 		- Add highlight effect, as requested by devon
 		- Move padding to links, not the list items
+	9-23-2106:
+		- Display as a block on mobile devices, so overflow clips out excessively long trails
 */
 .breadcrumbs {
 	list-style: none;
@@ -17,6 +19,9 @@
 	background-color: $button-background;
 	color: $white;
 	font-family: 'ralewaysemibold', arial, sans-serif;
+	@media screen and (max-width: $screen-xs-max) {
+		display: block;
+	}
 	.crumb {
 		position: relative;
 		display: table-cell;
