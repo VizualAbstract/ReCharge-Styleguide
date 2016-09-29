@@ -32,6 +32,7 @@ $pd-font-family: "raleway-semibold", Helvetica, Arial, sans-serif !default;
 
 
 .pika-single {
+    -webkit-font-smoothing: antialiased;
 	// left: 296px !important;
 	// top: 9437px !important;
 	// position: absolute !important;
@@ -94,13 +95,38 @@ $pd-font-family: "raleway-semibold", Helvetica, Arial, sans-serif !default;
 	}
 }
 
+.pika-footer {
+	display: table;
+	position: relative;
+	padding: 4px 5px;
+	box-sizing: border-box;
+	border-top: 1px solid #596169;
+	color: #4dd6b7;
+	width: 100%;
+
+	.pika-clear,
+	.pika-choose {
+    	line-height: 24px;
+    	padding: 5px 5px;
+		font-size: 14px;
+		display: inline-block;
+		cursor: pointer;
+	}
+	.pika-clear {
+		float: left;
+	}
+	.pika-choose {
+		float: right;
+	}
+}
+
 .pika-label {
 	display: inline-block;
 	*display: inline;
 	position: relative;
 	z-index: 9999;
 	overflow: hidden;
-	padding: 5px 2px;
+	padding: 5px 2px 0;
 	font-size: 14px;
 	line-height: 24px;
 	color: $pd-title-color;
@@ -199,7 +225,7 @@ $pd-font-family: "raleway-semibold", Helvetica, Arial, sans-serif !default;
 
 	abbr {
 		border-bottom: none;
-		cursor: help;
+		cursor: pointer;
 	}
 }
 

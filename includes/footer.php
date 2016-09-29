@@ -7,6 +7,10 @@
 				$('.form__date').pikaday({
 					format: 'YYYY-MM-DD',
 					showDaysInNextAndPreviousMonths: true,
+					onSelect: function() {
+						return false;
+						alert('stop');
+					}
 				});
 			});
 		</script>
@@ -32,13 +36,13 @@
 					if ($(this).parent().hasClass('date-range__start')) {
 						// And end date is empty, or start date is after end date, select next day
 					 	if (end_date.val() == "" || moment(start_date.val()).isAfter(end_date.val())) {
-					 		end_date.pikaday('show').pikaday('setDate', next_day);
+					 		// end_date.pikaday('show').pikaday('setDate', next_day);
 					 	}
 					// If selecting end date:
 					} else if ($(this).parent().hasClass('date-range__end')) {
 						// And start date is empty, or end date is before start date, select previous day
 					 	if (start_date.val() == "" || moment(end_date.val()).isBefore(start_date.val())) {
-					 		start_date.pikaday('show').pikaday('setDate', previous_day);
+					 		// start_date.pikaday('show').pikaday('setDate', previous_day);
 					 	}
 					}
 				});

@@ -2332,6 +2332,9 @@ h1 + .setup-header__description,
   display: block;
   line-height: 25px;
 }
+.new .form__label {
+  display: inline-block;
+}
 .new .form__label + .button {
   margin: 12px 0;
 }
@@ -6362,6 +6365,7 @@ h1 + .setup-header__description,
  * Copyright © 2014 David Bushell | BSD & MIT license | http://dbushell.com/
  */
 .pika-single {
+  -webkit-font-smoothing: antialiased;
   z-index: 9999;
   display: block;
   position: relative;
@@ -6413,13 +6417,37 @@ h1 + .setup-header__description,
   opacity: 0;
 }
 
+.pika-footer {
+  display: table;
+  position: relative;
+  padding: 4px 5px;
+  box-sizing: border-box;
+  border-top: 1px solid #596169;
+  color: #4dd6b7;
+  width: 100%;
+}
+.pika-footer .pika-clear,
+.pika-footer .pika-choose {
+  line-height: 24px;
+  padding: 5px 5px;
+  font-size: 14px;
+  display: inline-block;
+  cursor: pointer;
+}
+.pika-footer .pika-clear {
+  float: left;
+}
+.pika-footer .pika-choose {
+  float: right;
+}
+
 .pika-label {
   display: inline-block;
   *display: inline;
   position: relative;
   z-index: 9999;
   overflow: hidden;
-  padding: 5px 2px;
+  padding: 5px 2px 0;
   font-size: 14px;
   line-height: 24px;
   color: #4DD6B7;
@@ -6516,7 +6544,7 @@ h1 + .setup-header__description,
 }
 .pika-table abbr {
   border-bottom: none;
-  cursor: help;
+  cursor: pointer;
 }
 
 .pika-button {

@@ -345,6 +345,13 @@
         return '<thead><tr>' + (opts.isRTL ? arr.reverse() : arr).join('') + '</tr></thead>';
     },
 
+    renderFooter = function()
+    {
+
+        var html = '<span class="pika-clear">Clear</span><span class="pika-choose">Select</span>'
+        return '<div class="pika-footer">' + html + '</div>'
+    },
+
     renderTitle = function(instance, c, year, month, refYear, randId)
     {
         var i, j, arr,
@@ -433,20 +440,45 @@
             if (!hasClass(target, 'is-disabled')) {
                 if (hasClass(target, 'pika-button') && !hasClass(target, 'is-empty') && !hasClass(target.parentNode, 'is-disabled')) {
                     self.setDate(new Date(target.getAttribute('data-pika-year'), target.getAttribute('data-pika-month'), target.getAttribute('data-pika-day')));
-                    if (opts.bound) {
-                        sto(function() {
-                            self.hide();
-                            if (opts.field) {
-                                opts.field.blur();
-                            }
-                        }, 100);
-                    }
+                    // if (opts.bound) {
+                    //     sto(function() {
+                    //         // self.hide();
+                    //         // if (opts.field) {
+                    //         //     opts.field.blur();
+                    //         // }
+                    //     }, 100);
+                    // }
                 }
                 else if (hasClass(target, 'pika-prev')) {
                     self.prevMonth();
                 }
                 else if (hasClass(target, 'pika-next')) {
                     self.nextMonth();
+                }
+                // If the .pika-choose button is clicked, and date is not selected, don't close the window
+                else if (hasClass(target, 'pika-choose')) {
+                    if (self._o.field.value != '') {
+                        // Otherwise, if a value is picked, close the date picker
+                        if (opts.bound) {
+                            sto(function() {
+                                self.hide();
+                                if (opts.field) {
+                                    opts.field.blur();
+                                }
+                            }, 100);
+                        }
+                    }
+                }
+                // If the .pika-clear button is clicked, clear the input and close the calendar
+                else if (hasClass(target, 'pika-clear')) {
+                    self.setDate('');
+                    // self._o.field.value = 'select a date'; // -- Let's try relying on placeholders first
+                    sto(function() {
+                        self.hide();
+                        if (opts.field) {
+                            opts.field.blur();
+                        }
+                    }, 100);
                 }
             }
             if (!hasClass(target, 'pika-select')) {
@@ -550,7 +582,7 @@
 
             if (!self._c) {
                 self._b = sto(function() {
-                    self.hide();
+                    // self.hide();
                 }, 50);
             }
             self._c = false;
@@ -710,6 +742,7 @@
          */
         getMoment: function()
         {
+            return false;
             return hasMoment ? moment(this._d) : null;
         },
 
@@ -965,7 +998,7 @@
             randId = 'pika-title-' + Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 2);
 
             for (var c = 0; c < opts.numberOfMonths; c++) {
-                html += '<div class="pika-lendar">' + renderTitle(this, c, this.calendars[c].year, this.calendars[c].month, this.calendars[0].year, randId) + this.render(this.calendars[c].year, this.calendars[c].month, randId) + '</div>';
+                html += '<div class="pika-lendar">' + renderTitle(this, c, this.calendars[c].year, this.calendars[c].month, this.calendars[0].year, randId) + this.render(this.calendars[c].year, this.calendars[c].month, randId) + renderFooter() + '</div>';
             }
 
             this.el.innerHTML = html;

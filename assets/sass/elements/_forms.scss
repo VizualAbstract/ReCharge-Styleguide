@@ -391,6 +391,7 @@ label {
 }
 
 .form__label {
+	display: inline-block;
 	+ .button {
 		margin: 12px 0;
 	}
