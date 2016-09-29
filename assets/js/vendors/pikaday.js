@@ -473,7 +473,7 @@
                 else if (hasClass(target, 'pika-clear')) {
                     var default_date = self._o.field.attributes['data-default'];
                     // if data-default is set, fall back to the  default date
-                    if (default_date.value !== '') {
+                    if (typeof(default_date) !== "undefined") {
                         self.setDate(default_date.value);
                     } else {
                         self.setDate('');
