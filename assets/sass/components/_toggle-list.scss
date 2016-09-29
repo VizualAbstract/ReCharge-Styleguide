@@ -27,6 +27,9 @@
 			> * {
 				vertical-align: middle;
 			}
+			small {
+				font-size: $font-size-small;
+			}
 		}
 		&__action {
 			text-align: right;
@@ -61,7 +64,10 @@
 			.disabled_status {
 				font-weight: normal;
 				font-family: 'ralewaysemibold';
+				color: $gray-darker;
+				font-size: $font-size-small;
 				display: inline-block;
+				margin-left: 4px;
 			}
 		}
 		.switch {
@@ -85,5 +91,52 @@
 	.switch__overlay {
 		height: $switch-small-height;
 		border-radius: $switch-small-height / 2;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#discount_list {
+		.rc_toggle-list {
+			&__item {
+				font-size: 0;
+				&__content,
+				&__action {
+					display: inline-block;
+					font-size: 16px;
+					box-sizing: border-box;
+				}
+				&__content {
+					font-size: 16px;
+				}
+				&__action {
+					white-space: nowrap;
+				}
+				&__content:first-child {
+					width: 75%;
+				}
+				&__content:nth-child(2) {
+					width: 25%;
+					text-align: right;
+					padding-right: 15px;
+				}
+				&__content:nth-child(3),
+				&__content:nth-child(4) {
+					width: 35%;
+					text-align: left;
+					position: relative;
+				}
+				&__action:nth-child(5) {
+					padding-right: 0;
+				}
+				&__action:nth-child(5),
+				&__action:nth-child(6) {
+					width: 15%;
+					text-align: right;
+				}
+				&__action + .rc_toggle-list__item__action {
+					padding-left: 0;
+				}
+			}
+		}
 	}
 }

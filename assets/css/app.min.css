@@ -3852,6 +3852,9 @@ h1 + .setup-header__description,
 .new .rc_toggle-list__item__content > * {
   vertical-align: middle;
 }
+.new .rc_toggle-list__item__content small {
+  font-size: 14px;
+}
 .new .rc_toggle-list__item__action {
   text-align: right;
   padding-left: 15px;
@@ -3881,7 +3884,10 @@ h1 + .setup-header__description,
 .new .rc_toggle-list__item.disabled .rc_toggle-list__item__content .disabled_status {
   font-weight: normal;
   font-family: 'ralewaysemibold';
+  color: #424242;
+  font-size: 14px;
   display: inline-block;
+  margin-left: 4px;
 }
 .new .rc_toggle-list__item.disabled .switch {
   background-color: #FFFFFF;
@@ -3902,6 +3908,45 @@ h1 + .setup-header__description,
 .new--small .switch__overlay {
   height: 20px;
   border-radius: 10px;
+}
+@media screen and (max-width: 767px) {
+  .new #discount_list .rc_toggle-list__item {
+    font-size: 0;
+  }
+  .new #discount_list .rc_toggle-list__item__content, .new #discount_list .rc_toggle-list__item__action {
+    display: inline-block;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  .new #discount_list .rc_toggle-list__item__content {
+    font-size: 16px;
+  }
+  .new #discount_list .rc_toggle-list__item__action {
+    white-space: nowrap;
+  }
+  .new #discount_list .rc_toggle-list__item__content:first-child {
+    width: 75%;
+  }
+  .new #discount_list .rc_toggle-list__item__content:nth-child(2) {
+    width: 25%;
+    text-align: right;
+    padding-right: 15px;
+  }
+  .new #discount_list .rc_toggle-list__item__content:nth-child(3), .new #discount_list .rc_toggle-list__item__content:nth-child(4) {
+    width: 35%;
+    text-align: left;
+    position: relative;
+  }
+  .new #discount_list .rc_toggle-list__item__action:nth-child(5) {
+    padding-right: 0;
+  }
+  .new #discount_list .rc_toggle-list__item__action:nth-child(5), .new #discount_list .rc_toggle-list__item__action:nth-child(6) {
+    width: 15%;
+    text-align: right;
+  }
+  .new #discount_list .rc_toggle-list__item__action + .rc_toggle-list__item__action {
+    padding-left: 0;
+  }
 }
 .new .admin-recharge,
 .new .admin-shopify,
