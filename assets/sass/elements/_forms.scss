@@ -234,14 +234,14 @@ textarea.form__input, {
 .form__input {
 	&:disabled {
 		background-color: #F9F9F9;
-		border-color: #8d8d8d !important;
+		border-color: #CCC !important;
 		color: #999 !important;
 		cursor: not-allowed;
 		&:focus,
 		&:active,
 		&:hover {
 			background-color: #F9F9F9 !important;
-			border-color: #8d8d8d !important;
+			border-color: #CCC !important;
 			color: #999 !important;
 		}
 	}

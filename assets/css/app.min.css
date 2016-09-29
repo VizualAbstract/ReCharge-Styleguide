@@ -2055,7 +2055,7 @@ h1 + .setup-header__description,
 .new .form__input:disabled, .new textarea.form__input__code:disabled, .new input[type="text"].form__color:disabled, .new input[type="text"].form__date:disabled, .new input[type="text"].form__number:disabled,
 .new input[type="number"].form__number:disabled {
   background-color: #F9F9F9;
-  border-color: #8d8d8d !important;
+  border-color: #CCC !important;
   color: #999 !important;
   cursor: not-allowed;
 }
@@ -2064,7 +2064,7 @@ h1 + .setup-header__description,
 .new input[type="number"].form__number:disabled:active, .new .form__input:disabled:hover, .new textarea.form__input__code:disabled:hover, .new input[type="text"].form__color:disabled:hover, .new input[type="text"].form__date:disabled:hover, .new input[type="text"].form__number:disabled:hover,
 .new input[type="number"].form__number:disabled:hover {
   background-color: #F9F9F9 !important;
-  border-color: #8d8d8d !important;
+  border-color: #CCC !important;
   color: #999 !important;
 }
 .new p.form__placeholder {
@@ -6208,7 +6208,7 @@ h1 + .setup-header__description,
 .new .dk-selected-disabled {
   color: #999;
   background-color: #F9F9F9;
-  border-color: #8d8d8d;
+  border-color: #CCC;
 }
 .new .dk-select .dk-select-options {
   position: absolute;
@@ -6264,7 +6264,7 @@ h1 + .setup-header__description,
 .new .dk-select-options .dk-option-disabled {
   color: #999;
   background-color: #F9F9F9;
-  border-color: #8d8d8d;
+  border-color: #CCC;
 }
 .new .dk-select-options .dk-option-hidden {
   display: none;
@@ -6340,18 +6340,18 @@ h1 + .setup-header__description,
   opacity: 0.6;
   color: #999;
   background-color: #F9F9F9;
-  border-color: #8d8d8d;
+  border-color: #CCC;
   cursor: not-allowed;
 }
 .new .dk-select-disabled .dk-selected {
   background-color: #F9F9F9;
-  border-color: #8d8d8d;
+  border-color: #CCC;
 }
 .new .dk-select-disabled .dk-selected:active, .new .dk-select-disabled .dk-selected:hover, .new .dk-select-disabled .dk-selected:focus {
-  border-color: #8d8d8d !important;
+  border-color: #CCC !important;
 }
 .new .dk-select-disabled .dk-selected:active:before, .new .dk-select-disabled .dk-selected:hover:before, .new .dk-select-disabled .dk-selected:focus:before {
-  border-color: #8d8d8d !important;
+  border-color: #CCC !important;
 }
 .new select[data-dkcacheid] {
   display: none;
