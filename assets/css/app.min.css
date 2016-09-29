@@ -3074,6 +3074,9 @@ h1 + .setup-header__description,
   		- Create the toggle list, based on the action-list, but with additional classes to demonstrate a disabled state. Will work with switches
   	8-30-2016:
   		- Remove border division from toggles
+  	9-28-2016:
+  		- Create a specialized version for Discounts
+  		- Play with the idea of having rc_detail-text
   */
   /*
   	Elements: Progress Bar
@@ -3832,6 +3835,9 @@ h1 + .setup-header__description,
   margin-bottom: 13px;
   padding: 0 !important;
 }
+.new .rc_detail-text {
+  font-size: 14px;
+}
 .new .rc_toggle-list {
   display: table;
   width: 100%;
@@ -3852,12 +3858,15 @@ h1 + .setup-header__description,
 .new .rc_toggle-list__item__content > * {
   vertical-align: middle;
 }
-.new .rc_toggle-list__item__content small {
-  font-size: 14px;
-}
 .new .rc_toggle-list__item__action {
   text-align: right;
   padding-left: 15px;
+}
+.new .rc_toggle-list__item__action .fa {
+  font-size: 20px;
+  color: #8E8F8E;
+  position: relative;
+  top: 2px;
 }
 .new .rc_toggle-list__item:last-child .rc_toggle-list__item__content,
 .new .rc_toggle-list__item:last-child .rc_toggle-list__item__action {

@@ -7,7 +7,14 @@
 		- Create the toggle list, based on the action-list, but with additional classes to demonstrate a disabled state. Will work with switches
 	8-30-2016:
 		- Remove border division from toggles
+	9-28-2016:
+		- Create a specialized version for Discounts
+		- Play with the idea of having rc_detail-text
 */
+
+.rc_detail-text {
+	font-size: $font-size-small;
+}
 
 .rc_toggle-list {
 	display: table;
@@ -27,13 +34,16 @@
 			> * {
 				vertical-align: middle;
 			}
-			small {
-				font-size: $font-size-small;
-			}
 		}
 		&__action {
 			text-align: right;
 			padding-left: 15px;
+			.fa {
+				font-size: 20px;
+				color: #8E8F8E;
+				position: relative;
+				top: 2px;
+			}
 		}
 		&:last-child {
 			.rc_toggle-list__item__content,

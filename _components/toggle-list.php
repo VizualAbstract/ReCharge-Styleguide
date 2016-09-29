@@ -2,7 +2,9 @@
 	<li class="rc_toggle-list__item">
 		<div class="rc_toggle-list__item__content">
 			<a href="#">Subscription Activation</a> <label class="disabled_status">Disabled</label>
-			<p>Sent to customers when they first sign up for a subscription</p>
+			<span class="rc_detail-text">
+				<p>Sent to customers when they first sign up for a subscription</p>
+			</span><!-- .rc_detail-text -->
 		</div><!-- .rc_toggle-list__item__content -->
 		<div class="rc_toggle-list__item__action">
 			<label class="switch switch--small">
@@ -18,10 +20,12 @@
 	<li class="rc_toggle-list__item disabled">
 		<div class="rc_toggle-list__item__content">
 			<a href="#">Card Expired</a> <label class="disabled_status">Disabled</label>
-			<p>
-				Sent to your customers when their credit card is about to expire.<br>
-				Emails will be sent out at 30, 15 and 3 days before card expiration.
-			</p>
+			<span class="rc_detail-text">
+				<p>
+					Sent to your customers when their credit card is about to expire.<br>
+					Emails will be sent out at 30, 15 and 3 days before card expiration.
+				</p>
+			</span><!-- .rc_detail-text -->
 		</div><!-- .rc_toggle-list__item__content -->
 		<div class="rc_toggle-list__item__action">
 			<label class="switch switch--small">
@@ -56,8 +60,10 @@
 <ul id="discount_list" class="rc_toggle-list">
 	<li class="rc_toggle-list__item">
 		<div class="rc_toggle-list__item__content">
-			DISCOUNT 1 <label class="disabled_status">Disabled</label><br>
-			<small>Sent to customers when they first sign up for a subscription</small>
+			DISCOUNT 1 <label class="disabled_status">Disabled</label>
+			<span class="rc_detail-text">
+				<p>Sent to customers when they first sign up for a subscription</p>
+			</span><!-- .rc_detail-text -->
 		</div><!-- .rc_toggle-list__item__content -->
 		<div class="rc_toggle-list__item__content">
 			1/600
@@ -79,15 +85,17 @@
 			</label><!-- .switch -->
 		</div><!-- .rc_toggle-list__item__action -->
 		<div class="rc_toggle-list__item__action">
-			<a href="#" data-discount_id="195688" data-discount_code="Corey Discount 1" onclick="deleteDiscount(this);" class="delete_discount" style="font-size: 20px; position: relative; top: 2px; color: #8C8C8C;">
+			<a href="#">
 				<span class="fa fa-trash"></span>
 			</a>
 		</div><!-- .rc_toggle-list__item__action -->
 	</li><!-- .rc_toggle-list__item -->
 	<li class="rc_toggle-list__item disabled">
 		<div class="rc_toggle-list__item__content">
-			CARD EXPIRED <label class="disabled_status">Disabled</label><br>
-			<small>Sent to customers when they first sign up for a subscription</small>
+			CARD EXPIRED <label class="disabled_status">Disabled</label>
+			<span class="rc_detail-text">
+				<p>Sent to customers when they first sign up for a subscription</p>
+			</span><!-- .rc_detail-text -->
 		</div><!-- .rc_toggle-list__item__content -->
 		<div class="rc_toggle-list__item__content">
 			n/a
@@ -109,15 +117,17 @@
 			</label><!-- .switch -->
 		</div><!-- .rc_toggle-list__item__action -->
 		<div class="rc_toggle-list__item__action">
-			<a href="#" data-discount_id="195688" data-discount_code="Corey Discount 1" onclick="deleteDiscount(this);" class="delete_discount" style="font-size: 20px; position: relative; top: 2px; color: #8C8C8C;">
+			<a href="#">
 				<span class="fa fa-trash"></span>
 			</a>
 		</div><!-- .rc_toggle-list__item__action -->
 	</li><!-- .rc_toggle-list__item -->
 	<li class="rc_toggle-list__item">
 		<div class="rc_toggle-list__item__content">
-			CC storeowner on all customer notifications <label class="disabled_status">Disabled</label><br>
-			<small>Sent to customers when they first sign up for a subscription</small>
+			CC storeowner on all customer notifications <label class="disabled_status">Disabled</label>
+			<span class="rc_detail-text">
+				<p>Sent to customers when they first sign up for a subscription</p>
+			</span>
 		</div><!-- .rc_toggle-list__item__content -->
 		<div class="rc_toggle-list__item__content">
 			3
@@ -139,7 +149,7 @@
 			</label><!-- .switch -->
 		</div><!-- .rc_toggle-list__item__action -->
 		<div class="rc_toggle-list__item__action">
-			<a href="#" data-discount_id="195688" data-discount_code="Corey Discount 1" onclick="deleteDiscount(this);" class="delete_discount" style="font-size: 20px; position: relative; top: 2px; color: #8C8C8C;">
+			<a href="#">
 				<span class="fa fa-trash"></span>
 			</a>
 		</div><!-- .rc_toggle-list__item__action -->
