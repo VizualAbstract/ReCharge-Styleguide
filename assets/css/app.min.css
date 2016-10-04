@@ -979,6 +979,19 @@
   margin-top: 18px;
   margin-bottom: 18px;
 }
+.new .rc_text--base, .new .rc_text--base p {
+  font-size: 16px;
+  line-height: 25px;
+}
+.new .rc_text--small, .new .rc_text--small p {
+  font-size: 14px;
+  line-height: 21px;
+}
+.new .rc_text--description, .new .rc_text--description p {
+  color: #676767;
+  font-size: 14px;
+  line-height: 21px;
+}
 .new #colors + .rc_sg__example {
   text-align: center;
 }
@@ -1479,7 +1492,6 @@ h1 + .setup-header__description,
 }
 .new .table th,
 .new .table td {
-  line-height: 28px;
   padding: initial;
   padding-right: 25px;
 }
@@ -1501,241 +1513,12 @@ h1 + .setup-header__description,
 }
 .new .table tbody > tr > td {
   border-top-color: #EEEEEE;
-  font-size: 14px;
+}
+.new .table tbody > tr > td .fa {
+  font-size: 20px;
 }
 .new .table tfoot > tr > td {
   border-top: 1px solid #EEEEEE;
-}
-.new .table__container {
-  min-height: .01%;
-  overflow-x: auto;
-  /* Mobile */
-}
-.new .table__container .table {
-  width: initial;
-  overflow-x: auto;
-}
-@media screen and (min-width: 768px) {
-  .new .table__container .table {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .new .table__container .table {
-    display: inline-block;
-    max-width: 100%;
-    display: block;
-    max-width: -webkit-min-content;
-    max-width: -moz-min-content;
-    max-width: min-content;
-  }
-}
-.new .table__container .table:before, .new .table__container .table:after {
-  content: " ";
-  display: table;
-}
-.new .table__container .table:after {
-  clear: both;
-}
-.new .table__container .table,
-.new .table__container .table--alt tbody {
-  scrolling: touch;
-  background: -webkit-radial-gradient(left, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 0 center, -webkit-radial-gradient(right, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 100% center;
-  background: radial-gradient(left, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 0 center, radial-gradient(right, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 100% center;
-  background-size: 8px 100%, 8px 100%;
-  background-attachment: scroll, scroll;
-  background-repeat: no-repeat;
-}
-@media screen and (min-width: 768px) {
-  .new .table__container .table,
-  .new .table__container .table--alt tbody {
-    background: none;
-  }
-}
-.new .table__container .table th:first-child, .new .table__container .table th:last-child {
-  background-color: #FFF;
-}
-.new .table__container .table td:last-child {
-  background-image: -webkit-linear-gradient(right, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 20px 100%;
-}
-.new .table__container .table td:first-child, .new .table__container .table--alt tbody tr:first-child, .new .table__container .table--pinned th:nth-child(2), .new .table__container .table--pinned tbody td:nth-child(2) {
-  background-image: -webkit-linear-gradient(left, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-image: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-repeat: no-repeat;
-  background-size: 20px 100%;
-}
-.new .table__container .table--alt th {
-  border-top: 1px solid #EEEEEE;
-}
-.new .table__container .table--alt tbody tr:last-child, .new .table__container .table--pinned th:last-child, .new .table__container .table--pinned tbody td:last-child {
-  background-image: -webkit-linear-gradient(right, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 20px 100%;
-}
-.new .table__container .table td:first-child:last-child,
-.new .table__container .table td:nth-child(2):last-child {
-  background-image: -webkit-linear-gradient(right, white 0%, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0) 96%, white 100%);
-  background-image: linear-gradient(to left, white 0%, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0) 96%, white 100%);
-  background-size: 100%;
-}
-.new .table__container .table--alt tbody tr:last-child,
-.new .table__container .table--pinned thead > tr > th:last-child,
-.new .table__container .table--pinned tbody > tr > td:last-child {
-  background-image: -webkit-linear-gradient(right, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 20px 100%;
-}
-@media screen and (max-width: 767px) {
-  .new .table__container .table--alt {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    overflow: hidden;
-    background: none;
-  }
-  .new .table__container .table--alt thead {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-    min-width: -webkit-min-content;
-    min-width: -moz-min-content;
-    min-width: min-content;
-  }
-}
-@media screen and (max-width: 767px) and (max-width: 767px) {
-  .new .table__container .table--alt tfoot {
-    display: none;
-  }
-}
-@media screen and (max-width: 767px) {
-  .new .table__container .table--alt tbody {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    overflow-x: auto;
-    overflow-y: hidden;
-  }
-  .new .table__container .table--alt tr {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    min-width: -webkit-min-content;
-    min-width: -moz-min-content;
-    min-width: min-content;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-  }
-  .new .table__container .table--alt td,
-  .new .table__container .table--alt th {
-    display: block;
-  }
-  .new .table__container .table--flip td {
-    background-image: none !important;
-    border-left: 0;
-  }
-  .new .table__container .table--alt th:not(:last-child),
-  .new .table__container .table--alt td:not(:last-child) {
-    border-bottom: 0;
-  }
-  .new .table__container .table--alt td {
-    padding-left: 5px;
-  }
-  .new .table__container .table--alt th,
-  .new .table__container .table--alt td {
-    padding-right: 15px;
-  }
-}
-@media screen and (max-width: 767px) and (max-width: 767px) {
-  .new .table__container .table--alt th:last-child,
-  .new .table__container .table--alt td:last-child {
-    text-align: left;
-  }
-}
-@media screen and (max-width: 767px) and (max-width: 767px) {
-  .new .table__container .table--alt td:last-child {
-    padding-right: 0;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .new .table__container .table--pinned {
-    margin-left: 125px;
-    position: static;
-  }
-  .new .table__container .table--pinned thead > tr > th:first-child,
-  .new .table__container .table--pinned tfoot > tr > td:first-child,
-  .new .table__container .table--pinned tbody > tr > td:first-child {
-    position: absolute;
-    left: 15px;
-    background-color: #FFF;
-    width: 100px;
-    overflow: hidden;
-  }
-  .new .table__container .table--pinned thead > tr > th:nth-child(2),
-  .new .table__container .table--pinned tfoot > tr > td:nth-child(2),
-  .new .table__container .table--pinned tbody > tr > td:nth-child(2) {
-    padding-left: 5px;
-  }
-  .new .table__container .table--pinned tfoot td:last-child {
-    text-align: left !important;
-  }
-  .new .table__container .table--stacked {
-    background-image: none;
-    max-width: 100%;
-  }
-  .new .table__container .table--stacked, .new .table__container .table--stacked tbody, .new .table__container .table--stacked th, .new .table__container .table--stacked td, .new .table__container .table--stacked tr {
-    display: block;
-    width: 100%;
-  }
-  .new .table__container .table--stacked thead,
-  .new .table__container .table--stacked tfoot {
-    display: none !important;
-  }
-  .new .table__container .table--stacked tbody > tr > td,
-  .new .table__container .table--stacked tfoot > tr > td {
-    border: none;
-    position: relative;
-    padding-left: 38%;
-    text-align: left;
-    border-bottom: 1px solid #EEEEEE;
-    box-sizing: border-box;
-  }
-  .new .table__container .table--stacked tbody > tr > td:before,
-  .new .table__container .table--stacked tfoot > tr > td:before {
-    content: attr(data-label);
-    font-weight: normal;
-    font-style: normal;
-    font-family: 'ralewaysemibold';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 38%;
-    white-space: nowrap;
-    font-size: 16px;
-    line-height: 28px;
-    display: block;
-    box-sizing: border-box;
-  }
-  .new .table__container .table--stacked tbody > tr > td:last-child,
-  .new .table__container .table--stacked tfoot > tr > td:last-child {
-    border-bottom-color: transparent;
-    margin-bottom: 25px;
-  }
 }
 .new ul.list-unstyled,
 .new li.list-unstyled {
@@ -3167,6 +2950,8 @@ h1 + .setup-header__description,
   	9-28-2016:
   		- Create a specialized version for Discounts
   		- Play with the idea of having rc_detail-text
+  	10-3-2016:
+  		- Toggle lists have received an overhaul, removing a lot of the font-sizing to external classes. Styles organized
   */
   /*
   	Elements: Progress Bar
@@ -3923,9 +3708,6 @@ h1 + .setup-header__description,
   margin-bottom: 13px;
   padding: 0 !important;
 }
-.new .rc_detail-text {
-  font-size: 14px;
-}
 .new .rc_toggle-list {
   display: table;
   width: 100%;
@@ -3938,7 +3720,8 @@ h1 + .setup-header__description,
 .new .rc_toggle-list__item__content, .new .rc_toggle-list__item__action {
   display: table-cell;
   vertical-align: middle;
-  padding: 8px 15px;
+  padding: 10px 15px 13px;
+  border-bottom: 1px solid #EEEEEE;
 }
 .new .rc_toggle-list__item__content {
   text-align: left;
@@ -3948,25 +3731,6 @@ h1 + .setup-header__description,
 }
 .new .rc_toggle-list__item__action {
   text-align: right;
-  padding-left: 15px;
-}
-.new .rc_toggle-list__item__action .fa {
-  font-size: 20px;
-  color: #8E8F8E;
-  position: relative;
-  top: 2px;
-}
-.new .rc_toggle-list__item:last-child .rc_toggle-list__item__content,
-.new .rc_toggle-list__item:last-child .rc_toggle-list__item__action {
-  border-bottom-width: 0 !important;
-}
-.new .rc_toggle-list .switch {
-  background-color: #4DD6B7;
-  -webkit-transition: background .3s;
-  transition: background .3s;
-}
-.new .rc_toggle-list .switch__overlay {
-  background: #8E8F8E;
 }
 .new .rc_toggle-list__item .disabled_status {
   display: none;
@@ -3982,9 +3746,27 @@ h1 + .setup-header__description,
   font-weight: normal;
   font-family: 'ralewaysemibold';
   color: #424242;
-  font-size: 14px;
   display: inline-block;
   margin-left: 4px;
+  line-height: 1;
+  position: relative;
+}
+.new .rc_toggle-list a .fa {
+  font-size: 20px;
+  color: #8E8F8E;
+  position: relative;
+  top: 2px;
+}
+.new .rc_toggle-list a:hover .fa, .new .rc_toggle-list a:focus .fa, .new .rc_toggle-list a:active .fa {
+  color: #4DD6B7;
+}
+.new .rc_toggle-list .switch {
+  background-color: #4DD6B7;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+.new .rc_toggle-list .switch__overlay {
+  background: #8E8F8E;
 }
 .new .rc_toggle-list__item.disabled .switch {
   background-color: #FFFFFF;
@@ -4012,11 +3794,8 @@ h1 + .setup-header__description,
   }
   .new #discount_list .rc_toggle-list__item__content, .new #discount_list .rc_toggle-list__item__action {
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
     box-sizing: border-box;
-  }
-  .new #discount_list .rc_toggle-list__item__content {
-    font-size: 16px;
   }
   .new #discount_list .rc_toggle-list__item__action {
     white-space: nowrap;

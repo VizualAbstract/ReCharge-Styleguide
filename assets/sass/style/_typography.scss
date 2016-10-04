@@ -149,3 +149,29 @@ hr {
 	margin-top: 18px;
 	margin-bottom: 18px;
 }
+
+
+.rc_text--base {
+	&,
+	& p {
+		font-size: $font-size-base;
+		line-height: $line-height-computed;
+	}
+}
+
+.rc_text--small {
+	&,
+	& p {
+		font-size: $font-size-small;
+		line-height: $line-height-small;
+	}
+}
+
+.rc_text--description {
+	&,
+	& p {
+		color: $gray-dark;
+		font-size: $font-size-small;
+		line-height: $line-height-small;
+	}
+}

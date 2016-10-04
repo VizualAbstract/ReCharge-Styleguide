@@ -412,7 +412,6 @@
 }
 .recharge .form__actions, .recharge .rc_modal__actions {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
@@ -421,7 +420,6 @@
 }
 .recharge .form__actions .button, .recharge .rc_modal__actions .button {
   -webkit-box-flex: 100%;
-  -webkit-flex: 100%;
       -ms-flex: 100%;
           flex: 100%;
 }
