@@ -51,6 +51,8 @@
 		- Submit button added to date range picker, temporary until further notice :)
 	9-28-16:
 		- Add disabled styles for Input and dropkick select
+	9-29-16:
+		- Allow for input fields to be within a label, specifically for radios and checkboxes
 */
 
 .form {
@@ -86,6 +88,10 @@
 	+ .form__help {
 		margin-top: -19px;
 		padding-left: 25px;
+	}
+	.form__input,
+	.form__number {
+		margin-left: -5px;
 	}
 }
 
@@ -375,7 +381,6 @@ legend {
   h3, .h3,
   h4, .h4,
   h5, .h5 {
-  	line-height: 1;
   	margin: 0;
   }
 }
@@ -391,7 +396,8 @@ label {
 }
 
 .form__label {
-	display: inline-block;
+	display: inline;
+	@extend .clearfix;
 	+ .button {
 		margin: 12px 0;
 	}
@@ -414,6 +420,10 @@ input[type="checkbox"],
 		cursor: pointer;
 		display: block;
 		line-height: 20px;
+		.form__number,
+		.form__input {
+			margin-top: 0;
+		}
 		&:before {
 			width: 16px;
 			height: 16px;
