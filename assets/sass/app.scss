@@ -21,6 +21,9 @@
 	@import 'common/_normalize.scss';
 	@import 'common/_utilities.scss';
 }
+body.new {
+	background-color: #FFF;
+}
 
 .new {
 	@import 'style/_typography.scss';

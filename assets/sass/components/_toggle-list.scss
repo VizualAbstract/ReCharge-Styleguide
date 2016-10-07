@@ -12,6 +12,8 @@
 		- Play with the idea of having rc_detail-text
 	10-3-2016:
 		- Toggle lists have received an overhaul, removing a lot of the font-sizing to external classes. Styles organized
+	10-5-2016:
+		- Do not grey out links for disabled
 */
 
 .rc_toggle-list {
@@ -40,6 +42,12 @@
 		&__action {
 			text-align: right;
 		}
+		&:only-child {
+			.rc_toggle-list__item__content,
+			.rc_toggle-list__item__action {
+				border-bottom-color: transparent;
+			}
+		}
 	}
 	&__item {
 
@@ -53,9 +61,6 @@
 
 		.rc_toggle-list__item__content {
 
-			a {
-				color: $gray;
-			}
 			.disabled_status {
 				font-weight: normal;
 				font-family: 'ralewaysemibold';
@@ -126,12 +131,15 @@
 	#discount_list {
 		.rc_toggle-list {
 			&__item {
+    			display: block;
 				font-size: 0;
+				border-bottom: 1px solid $gray-lighter;
 				&__content,
 				&__action {
 					display: inline-block;
 					font-size: $font-size-small;
 					box-sizing: border-box;
+					border-bottom-width: 0px;
 				}
 				&__action {
 					white-space: nowrap;

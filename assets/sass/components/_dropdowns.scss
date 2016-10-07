@@ -15,6 +15,8 @@
 		- Make adjustments to dropdown so it supports having h1-h5 elements as the target-link for the dropdown
 		- Use negative-marign to fix h1-h5 tags
 		- Dropdown menu needs to be semi-bold
+	10-04-2016:
+		- Add a '--settings' flag, which removes horizontal padding and the chevron. Force the cursor: pointer; and greatly changes coloring
 */
 
 .dropdown {
@@ -44,13 +46,63 @@
 	}
 	&--open {
 		.dropdown__trigger {
-			&::after {
+			&:after {
 				content: '\f0d8';
 				top: -1px;
 			}
 		}
 		.dropdown__menu {
 			display: block !important;
+		}
+	}
+	&--settings {
+		&.dropdown--open {
+			.dropdown__trigger {
+				color: $color-primary;
+			}
+		}
+		.dropdown__trigger {
+			padding-left: 0;
+			padding-right: 0;
+			cursor: pointer;
+
+			&:after {
+				display: none;
+			}
+		}
+		.dropdown__menu {
+			background-color: $gray-darker;
+			margin-top: 10px;
+			li {
+				&.active,
+				&:hover,
+				&:active {
+					> a {
+						background-color: $color-primary;
+						display: block;
+					}
+				}
+			}
+			&:before {
+				content: "";
+				border: 10px solid transparent;
+				position: absolute;
+				top: -20px;
+				right: 0;
+				border-bottom-color: $gray-darker;
+			}
+		}
+		@media screen and (max-width: $screen-xs-max) {
+			width: 100%;
+			text-align: right;
+
+			&:before,
+			&:after {
+				@include clearfix();
+			}
+			.dropdown__menu.list {
+				width: 100%;
+			}
 		}
 	}
 }
@@ -61,10 +113,10 @@
     color: inherit;
 	line-height: $line-height-base;
 	padding: $padding-base-vertical $padding-base-horizontal;
-    &:hover,
-    &:hover {
-    	color: inherit;
-    }
+	&:hover,
+	&:hover {
+		color: inherit;
+	}
 	&:after {
 		content: '\f0d7';
 		position: relative;

@@ -2067,6 +2067,7 @@ h1 + .setup-header__description,
   font-size: 16px;
   color: #676767;
   line-height: 21px;
+  min-height: 215px;
 }
 .new fieldset {
   padding: 0;
@@ -2859,6 +2860,8 @@ h1 + .setup-header__description,
   		- Make adjustments to dropdown so it supports having h1-h5 elements as the target-link for the dropdown
   		- Use negative-marign to fix h1-h5 tags
   		- Dropdown menu needs to be semi-bold
+  	10-04-2016:
+  		- Add a '--settings' flag, which removes horizontal padding and the chevron. Force the cursor: pointer; and greatly changes coloring
   */
   /*
   	Element: Switches
@@ -2952,6 +2955,8 @@ h1 + .setup-header__description,
   		- Play with the idea of having rc_detail-text
   	10-3-2016:
   		- Toggle lists have received an overhaul, removing a lot of the font-sizing to external classes. Styles organized
+  	10-5-2016:
+  		- Do not grey out links for disabled
   */
   /*
   	Elements: Progress Bar
@@ -2993,12 +2998,55 @@ h1 + .setup-header__description,
     right: 0;
   }
 }
-.new .dropdown--open .dropdown__trigger::after {
+.new .dropdown--open .dropdown__trigger:after {
   content: '\f0d8';
   top: -1px;
 }
 .new .dropdown--open .dropdown__menu {
   display: block !important;
+}
+.new .dropdown--settings.dropdown--open .dropdown__trigger {
+  color: #4DD6B7;
+}
+.new .dropdown--settings .dropdown__trigger {
+  padding-left: 0;
+  padding-right: 0;
+  cursor: pointer;
+}
+.new .dropdown--settings .dropdown__trigger:after {
+  display: none;
+}
+.new .dropdown--settings .dropdown__menu {
+  background-color: #424242;
+  margin-top: 10px;
+}
+.new .dropdown--settings .dropdown__menu li.active > a, .new .dropdown--settings .dropdown__menu li:hover > a, .new .dropdown--settings .dropdown__menu li:active > a {
+  background-color: #4DD6B7;
+  display: block;
+}
+.new .dropdown--settings .dropdown__menu:before {
+  content: "";
+  border: 10px solid transparent;
+  position: absolute;
+  top: -20px;
+  right: 0;
+  border-bottom-color: #424242;
+}
+@media screen and (max-width: 767px) {
+  .new .dropdown--settings {
+    width: 100%;
+    text-align: right;
+  }
+  .new .dropdown--settings:before:before, .new .dropdown--settings:before:after, .new .dropdown--settings:after:before, .new .dropdown--settings:after:after {
+    content: " ";
+    display: table;
+  }
+  .new .dropdown--settings:before:after, .new .dropdown--settings:after:after {
+    clear: both;
+  }
+  .new .dropdown--settings .dropdown__menu.list {
+    width: 100%;
+  }
 }
 .new .dropdown__trigger {
   position: relative;
@@ -3144,24 +3192,13 @@ h1 + .setup-header__description,
   height: 20px;
   border-radius: 10px;
 }
-@media screen and (max-width: 1199px) {
-  .new .switch--small {
-    max-width: 34px;
-    line-height: 17px;
-    height: 17px;
-    border-radius: 8.5px;
-  }
-  .new .switch--small .switch__overlay {
-    height: 17px;
-    border-radius: 8.5px;
-  }
-}
 .new .switch__input {
   display: none;
 }
 .new .switch__overlay {
   height: 34px;
   width: 50%;
+  min-width: 20px;
   position: absolute;
   z-index: 10;
   left: 0%;
@@ -3368,6 +3405,7 @@ h1 + .setup-header__description,
 }
 @media screen and (max-width: 991px) {
   .new .title-bar__content {
+    margin-top: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3732,14 +3770,15 @@ h1 + .setup-header__description,
 .new .rc_toggle-list__item__action {
   text-align: right;
 }
+.new .rc_toggle-list__item:only-child .rc_toggle-list__item__content,
+.new .rc_toggle-list__item:only-child .rc_toggle-list__item__action {
+  border-bottom-color: transparent;
+}
 .new .rc_toggle-list__item .disabled_status {
   display: none;
 }
 .new .rc_toggle-list__item.disabled {
   background-color: #EEEEEE;
-  color: #8E8F8E;
-}
-.new .rc_toggle-list__item.disabled .rc_toggle-list__item__content a {
   color: #8E8F8E;
 }
 .new .rc_toggle-list__item.disabled .rc_toggle-list__item__content .disabled_status {
@@ -3790,12 +3829,15 @@ h1 + .setup-header__description,
 }
 @media screen and (max-width: 767px) {
   .new #discount_list .rc_toggle-list__item {
+    display: block;
     font-size: 0;
+    border-bottom: 1px solid #EEEEEE;
   }
   .new #discount_list .rc_toggle-list__item__content, .new #discount_list .rc_toggle-list__item__action {
     display: inline-block;
     font-size: 14px;
     box-sizing: border-box;
+    border-bottom-width: 0px;
   }
   .new #discount_list .rc_toggle-list__item__action {
     white-space: nowrap;
