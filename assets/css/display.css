@@ -5,6 +5,8 @@
 		- Adjust z-index. Popovers and tooltips were appearing over modal overlay
 */
 /* Colors */
+.styleguide .rc_sg__item + .rc_sg__item {
+  margin-top: 50px; }
 .styleguide .rc_sg__figure + .rc_sg__pattern_title {
   margin-top: 50px; }
 .styleguide .rc_sg__example {
@@ -179,11 +181,6 @@ body {
 .rc_sg__example.overflow-fix {
   overflow-x: hidden;
   overflow-y: overlay; }
-.rc_sg__example > .table thead th,
-.rc_sg__example > .table thead th:last-child,
-.rc_sg__example > .table tbody td,
-.rc_sg__example > .table tbody td:last-child {
-  text-align: left; }
 .rc_sg__example .table + .table {
   margin-top: 18px; }
 

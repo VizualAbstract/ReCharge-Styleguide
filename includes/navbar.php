@@ -28,7 +28,7 @@
 		</ul><!-- .navbar__links .list -->
 		<ul class="navbar__links navbar__links--right list list--inline">
 			<li>
-				<a href="mailto:corey@rechargeapps.com" class="navbar__return">
+				<a href="mailto:corey@rechargeapps.com,devon@rechargeapps.com" class="navbar__return">
 					Contact
 				</a><!-- .navbar__return -->
 			</li>

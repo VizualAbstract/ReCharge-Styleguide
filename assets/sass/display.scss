@@ -2,6 +2,11 @@
 @import 'common/_variables.scss';
 
 .styleguide {
+	.rc_sg__item {
+		+ .rc_sg__item {
+			margin-top: 50px;
+		}
+	}
 	.rc_sg {
 		&__figure + .rc_sg__pattern_title {
 			margin-top: 50px;
@@ -242,7 +247,6 @@ body {
 		thead th:last-child,
 		tbody td,
 		tbody td:last-child {
-			text-align: left;
 		}
 	}
 	.table + .table {

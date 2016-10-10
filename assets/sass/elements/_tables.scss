@@ -9,14 +9,15 @@
 	white-space: nowrap;
 	border-collapse: collapse;
 	border-spacing: 0;
+	font-size: 14px;
 
 	th,
 	td {
 		padding: initial;
 		padding-right: 25px;
+		padding: $table-padding-vertical $table-padding-horizontal $table-padding-vertical + 3; // 8px 15px
 
 		&:last-child {
-			padding-right: 10px;
 			text-align: right;
 		}
 		&:first-child {

@@ -84,7 +84,7 @@ $popover-arrow-offset: 2px;
 	font-size: 16px;
 	background: $popover-bg;
 	background-clip: content-box;
-	z-index: $zindex-popover;
+	z-index: $zindex-popover + 1;
 
 	&.in {
 		display: block;

@@ -817,6 +817,11 @@
   margin-top: 0;
 }
 
+body.new,
+html.new body {
+  background-color: #FFF;
+}
+
 .new {
   /* 
   	Element: Typography
@@ -872,7 +877,7 @@
     line-height: 1;
   }
 }
-.new h4, .new .h4, .new .form__search__no-results {
+.new h4, .new .h4 {
   font-family: 'ralewayregular', arial, san-serif;
   font-weight: normal;
   font-size: 20px;
@@ -1336,6 +1341,8 @@
   		- Add disabled styles for Input and dropkick select
   	9-29-16:
   		- Allow for input fields to be within a label, specifically for radios and checkboxes
+  	10-5-16:
+  		- Small patch to fix alignment with select forms within input groups
   */
   /* Contextual sub-form */
   /* 
@@ -1427,7 +1434,7 @@ h1 + .setup-header__description,
     line-height: 1;
   }
 }
-.new h4, .new .h4, .new .form__search__no-results {
+.new h4, .new .h4 {
   font-family: 'ralewayregular', arial, san-serif;
   font-weight: normal;
 }
@@ -1489,15 +1496,16 @@ h1 + .setup-header__description,
   white-space: nowrap;
   border-collapse: collapse;
   border-spacing: 0;
+  font-size: 14px;
 }
 .new .table th,
 .new .table td {
   padding: initial;
   padding-right: 25px;
+  padding: 10px 15px 13px;
 }
 .new .table th:last-child,
 .new .table td:last-child {
-  padding-right: 10px;
   text-align: right;
 }
 .new .table th:first-child,
@@ -2108,7 +2116,7 @@ h1 + .setup-header__description,
 .new legend h2, .new legend .h2,
 .new legend h3, .new legend .h3, .new legend .tabs__list__item > span,
 .new legend .tabs__list__item > a,
-.new legend h4, .new legend .h4, .new legend .form__search__no-results,
+.new legend h4, .new legend .h4,
 .new legend h5, .new legend .h5 {
   margin: 0;
 }
@@ -2593,6 +2601,11 @@ h1 + .setup-header__description,
   border-collapse: separate;
   box-sizing: border-box;
 }
+.new .input-group .form__select.dk-select, .new .input-group div.dk-select.form__number {
+  display: inline-block;
+  position: relative;
+  top: -1px;
+}
 .new .input-group .form__number,
 .new .input-group .form__input,
 .new .input-group textarea.form__input__code,
@@ -2658,6 +2671,8 @@ h1 + .setup-header__description,
   background-color: #2BAC8F;
 }
 .new .form__search__no-results {
+  font-size: 20px;
+  line-height: 24px;
   color: #2C93AC;
   text-align: center;
 }
@@ -2901,6 +2916,8 @@ h1 + .setup-header__description,
   		- Give inline-buttons margin between eachother
   	9-23-2016:
   		- Make content act like a flexbox with it's interior buttons on mobile devices
+  	10-07-2016:
+  		- Flex items don't right-align text properly. Set inner-link items with margin-left: auto;
   */
   /* This will be removed */
   /* 
@@ -2981,7 +2998,7 @@ h1 + .setup-header__description,
 .new .dropdown h2, .new .dropdown .h2,
 .new .dropdown h3, .new .dropdown .h3, .new .dropdown .tabs__list__item > span,
 .new .dropdown .tabs__list__item > a,
-.new .dropdown h4, .new .dropdown .h4, .new .dropdown .form__search__no-results,
+.new .dropdown h4, .new .dropdown .h4,
 .new .dropdown h5, .new .dropdown .h5 {
   display: inline;
 }
@@ -3074,7 +3091,7 @@ h1 + .setup-header__description,
 .new .dropdown__trigger > h2, .new .dropdown__trigger > .h2,
 .new .dropdown__trigger > h3, .new .dropdown__trigger > .h3, .new .tabs__list__item.dropdown__trigger > span,
 .new .tabs__list__item.dropdown__trigger > a,
-.new .dropdown__trigger > h4, .new .dropdown__trigger > .h4, .new .dropdown__trigger > .form__search__no-results,
+.new .dropdown__trigger > h4, .new .dropdown__trigger > .h4,
 .new .dropdown__trigger > h5, .new .dropdown__trigger > .h5,
 .new .dropdown__trigger > h6, .new .dropdown__trigger > .h6,
 .new .dropdown__trigger > a, .new .dropdown__trigger > span {
@@ -3090,7 +3107,7 @@ h1 + .setup-header__description,
   .new .dropdown__trigger > h2, .new .dropdown__trigger > .h2,
   .new .dropdown__trigger > h3, .new .dropdown__trigger > .h3, .new .tabs__list__item.dropdown__trigger > span,
   .new .tabs__list__item.dropdown__trigger > a,
-  .new .dropdown__trigger > h4, .new .dropdown__trigger > .h4, .new .dropdown__trigger > .form__search__no-results,
+  .new .dropdown__trigger > h4, .new .dropdown__trigger > .h4,
   .new .dropdown__trigger > h5, .new .dropdown__trigger > .h5,
   .new .dropdown__trigger > h6, .new .dropdown__trigger > .h6,
   .new .dropdown__trigger > a, .new .dropdown__trigger > span {
@@ -3375,7 +3392,7 @@ h1 + .setup-header__description,
 .new .title-bar h2, .new .title-bar .h2,
 .new .title-bar h3, .new .title-bar .h3, .new .title-bar .tabs__list__item > span,
 .new .title-bar .tabs__list__item > a,
-.new .title-bar h4, .new .title-bar .h4, .new .title-bar .form__search__no-results,
+.new .title-bar h4, .new .title-bar .h4,
 .new .title-bar h5, .new .title-bar .h5,
 .new .title-bar h6, .new .title-bar .h6 {
   margin-top: 0;
@@ -3410,6 +3427,9 @@ h1 + .setup-header__description,
     display: -ms-flexbox;
     display: flex;
     width: 100%;
+  }
+  .new .title-bar__content a {
+    margin-left: auto;
   }
   .new .title-bar__content .button {
     -webkit-box-flex: 100%;
@@ -5464,7 +5484,7 @@ h1 + .setup-header__description,
 .new .layout__sidebar--stats h2, .new .layout__sidebar--stats .h2,
 .new .layout__sidebar--stats h3, .new .layout__sidebar--stats .h3, .new .layout__sidebar--stats .tabs__list__item > span,
 .new .layout__sidebar--stats .tabs__list__item > a,
-.new .layout__sidebar--stats h4, .new .layout__sidebar--stats .h4, .new .layout__sidebar--stats .form__search__no-results,
+.new .layout__sidebar--stats h4, .new .layout__sidebar--stats .h4,
 .new .layout__sidebar--stats h5, .new .layout__sidebar--stats .h5,
 .new .layout__sidebar--stats h6, .new .layout__sidebar--stats .h6 {
   color: #FFF;
@@ -5636,7 +5656,7 @@ h1 + .setup-header__description,
 .new .rc_modal__content h2, .new .rc_modal__content .h2,
 .new .rc_modal__content h3, .new .rc_modal__content .h3, .new .rc_modal__content .tabs__list__item > span,
 .new .rc_modal__content .tabs__list__item > a,
-.new .rc_modal__content h4, .new .rc_modal__content .h4, .new .rc_modal__content .form__search__no-results,
+.new .rc_modal__content h4, .new .rc_modal__content .h4,
 .new .rc_modal__content h5, .new .rc_modal__content .h5 {
   color: #424242;
 }
@@ -5738,7 +5758,7 @@ h1 + .setup-header__description,
   font-size: 16px;
   padding: 4px 8px 5px;
   box-sizing: content-box;
-  z-index: 100030;
+  z-index: 100029;
 }
 .new .tooltip-button:after {
   content: "\f05a";
@@ -5868,7 +5888,7 @@ h1 + .setup-header__description,
   font-size: 16px;
   padding: 4px 8px 5px;
   box-sizing: content-box;
-  z-index: 100039;
+  z-index: 100029;
 }
 .new .popover-button:after {
   content: "\f05a";
@@ -5913,7 +5933,7 @@ h1 + .setup-header__description,
   font-size: 16px;
   background: #424242;
   background-clip: content-box;
-  z-index: 100040;
+  z-index: 100031;
 }
 .new .popover-box.in {
   display: block;
@@ -6012,7 +6032,16 @@ h1 + .setup-header__description,
   		- We may eventually go to a named-class minimum
   	6-18-2016:
   		- Form select should have just as much bottom margin as input fields
+  	10-7-2016:
+  		- Include variables and utilize $zindex-dropkick
   */
+  /*
+  
+  	8-10-16:
+  		- Add variables for fieldset margin
+  		- Adjust z-index. Popovers and tooltips were appearing over modal overlay
+  */
+  /* Colors */
 }
 .new .dropup,
 .new .dropdown {
@@ -6199,7 +6228,7 @@ h1 + .setup-header__description,
   overflow-y: auto;
   padding: 0;
   width: auto;
-  z-index: 100;
+  z-index: 100030;
 }
 .new .dk-option-selected {
   background-color: #BDF0E4;

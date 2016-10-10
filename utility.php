@@ -4,23 +4,30 @@
 
 <hr>
 
-<h2 class="rc_sg__pattern_title" id="alignment-helpers">Alignment Helpers</h2>
+<div class="rc_sg__item" id="alignment-helpers">
+<h2 class="rc_sg__pattern_title">Alignment Helpers</h2>
 <div class="rc_sg__description">
 	<p>Align text and elements with the following text alignment classes.</p>
 </div><!-- .rc_sg__description -->
 <div class="rc_sg__example">
 <?php include('_utility/alignment-helpers.php'); ?>
 </div><!-- .rc_sg__example -->
+</div><!-- #alignment-helpers .rc_sg__item -->
 
-<h2 class="rc_sg__pattern_title" id="responsive-helpers">Resonsive Helpers</h2>
+<div class="rc_sg__item" id="responsive-helpers">
+<h2 class="rc_sg__pattern_title">Resonsive Helpers</h2>
 <div class="rc_sg__example">
 <?php include('_utility/responsive-helpers.php'); ?>
 </div><!-- .rc_sg__example -->
+</div><!-- #responsive-helpers .rc_sg__item -->
 
-<h2 class="rc_sg__pattern_title" id="structural-helpers">Strucutral Helpers</h2>
+<div class="rc_sg__item" id="structural-helpers">
+<h2 class="rc_sg__pattern_title">Strucutral Helpers</h2>
 <div class="rc_sg__example">
 <?php include('_utility/structural-helpers.php'); ?>
 </div><!-- .rc_sg__example -->
+</div><!-- #structural-helpers .rc_sg__item -->
 
 <hr>
+
 <?php include('includes/footer.php'); ?>

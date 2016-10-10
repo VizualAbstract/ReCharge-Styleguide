@@ -91,15 +91,15 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>.rc_sg__??__block</td>
+			<td>.rc_visible__??__block</td>
 			<td>display: block;</td>
 		</tr>
 		<tr>
-			<td>.rc_sg__??__inline</td>
+			<td>.rc_visible__??__inline</td>
 			<td>display: inline;</td>
 		</tr>
 		<tr>
-			<td>.rc_sg__??__inline-block</td>
+			<td>.rc_visible__??__inline-block</td>
 			<td>display: inline-block;</td>
 		</tr>
 	</tbody>

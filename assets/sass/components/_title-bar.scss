@@ -10,6 +10,8 @@
 		- Give inline-buttons margin between eachother
 	9-23-2016:
 		- Make content act like a flexbox with it's interior buttons on mobile devices
+	10-07-2016:
+		- Flex items don't right-align text properly. Set inner-link items with margin-left: auto;
 */
 
 .page-title {
@@ -150,6 +152,9 @@
 			margin-top: 10px;
 			display: flex;
 			width: 100%;
+			a {
+				margin-left: auto;
+			}
 			.button {
 				flex: 100%;
 				+ .button {

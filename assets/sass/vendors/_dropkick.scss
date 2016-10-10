@@ -4,7 +4,12 @@
 		- We may eventually go to a named-class minimum
 	6-18-2016:
 		- Form select should have just as much bottom margin as input fields
+	10-7-2016:
+		- Include variables and utilize $zindex-dropkick
 */
+
+@import '_mixins.scss';
+@import 'common/_variables.scss';
 
 @mixin dk-pre($property, $value, $prefixes) {
 	@each $prefix in $prefixes {
@@ -155,7 +160,7 @@ $dk-arrow-color: #424242 !default;
 	overflow-y: auto;
 	padding: 0;
 	width: auto;
-	z-index: 100;
+	z-index: $zindex-dropkick;
 }
 
 .dk-option-selected {

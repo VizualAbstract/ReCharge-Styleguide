@@ -40,7 +40,7 @@ $tooltip-arrow-offset: 2px;
 	&--active {
 		color: #4DD6B7;
 	}
-	z-index: $zindex-tooltip;
+	z-index: $zindex-tooltip - 1;
 
 	&.beta-badge {
 		width: 52px;

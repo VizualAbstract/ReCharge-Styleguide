@@ -126,7 +126,8 @@ $screen-lg-min: 1200px !default;
 $zindex-base:			   100000 !default;
 
 $zindex-tooltip:           $zindex-base + 30 !default;
-$zindex-popover:           $zindex-base + 40 !default;
+$zindex-popover:           $zindex-base + 30 !default;
+$zindex-dropkick:		   $zindex-base + 30 !default;
 $zindex-dropdown:          $zindex-base + 50 !default;
 $zindex-navbar:            $zindex-base + 60 !default;
 $zindex-navbar-fixed:      $zindex-base + 70 !default;
