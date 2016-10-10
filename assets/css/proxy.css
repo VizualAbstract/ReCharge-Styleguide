@@ -629,6 +629,8 @@
 	Author: Corey M. Capetillo
 	8-17-2016:
 		- Abstract modals outside of original file
+	10-10-2016:
+		- Add adjustment to .in .fade
 */
 .rc_modal {
   display: none;
@@ -769,6 +771,10 @@
 .fade.in, .fade.rc_in,
 .rc_fade.in,
 .rc_fade.rc_in {
+  opacity: 1;
+}
+
+.in .fade {
   opacity: 1;
 }
 
