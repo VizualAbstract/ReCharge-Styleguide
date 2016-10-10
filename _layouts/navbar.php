@@ -3,7 +3,7 @@
 		<a href="#" class="navbar__brand">
 			ReCharge
 		</a><!-- .navbar__brand -->
-		<div class="navbar__toggle collapsed" data-toggle="collapse__menu" data-target="#recharge-navbar">
+		<div class="navbar__toggle collapsed" data-toggle="collapse__menu" data-target="#recharge-navbar_1">
 			<i class="fa fa-bars"></i>
 		</div><!-- .navbar__toggle .collapsed -->
 		<div class="visible-xs">
@@ -16,7 +16,7 @@
 				</div><!-- .switch__inner -->
 			</label><!-- .switch -->
 		</div>
-		<div class="navbar__collapse collapse">
+		<div id="recharge-navbar_1" class="navbar__collapse collapse">
 			<ul class="navbar__links list list--inline">
 				<li class="active">
 					<a href="#">ORDERS</a>

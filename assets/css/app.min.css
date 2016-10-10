@@ -2877,6 +2877,8 @@ h1 + .setup-header__description,
   		- Dropdown menu needs to be semi-bold
   	10-04-2016:
   		- Add a '--settings' flag, which removes horizontal padding and the chevron. Force the cursor: pointer; and greatly changes coloring
+  	10-10-2016:
+  		- Add box-sizing to trigger. May eventually need on all elements in the future
   */
   /*
   	Element: Switches
@@ -3069,6 +3071,7 @@ h1 + .setup-header__description,
   position: relative;
   display: block;
   color: inherit;
+  box-sizing: border-box;
   line-height: 1.5625;
   padding: 7px 10px;
 }
