@@ -12,17 +12,17 @@
 		- Incorporate stats from embedded styles
 	10-4-16:
 		- Add style flag --cards to give layout elements within tabs a white background
+	10-12-16:
+		- Move the tab border to the header and have it full-width
 */
 .tabs {
 	&__header {
 		min-height: 60px;
-		position: relative;
-		top: 1px;
+		border-bottom: 1px solid $gray-lighter;
 	}
 	&__list {
 		@extend .list--inline;
 		&__item {
-			border-bottom: 1px solid $gray-lighter;
 			@media screen and (max-width: $screen-xs-max) {
 				display: block;
 				width: 100%;

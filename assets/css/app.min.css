@@ -1521,12 +1521,244 @@ h1 + .setup-header__description,
 }
 .new .table tbody > tr > td {
   border-top-color: #EEEEEE;
+  white-space: normal;
 }
 .new .table tbody > tr > td .fa {
   font-size: 20px;
 }
 .new .table tfoot > tr > td {
   border-top: 1px solid #EEEEEE;
+}
+.new .table__container {
+  min-height: .01%;
+  overflow-x: auto;
+  /* Mobile */
+}
+.new .table__container .table {
+  width: initial;
+  overflow-x: auto;
+}
+@media screen and (min-width: 768px) {
+  .new .table__container .table {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .new .table__container .table {
+    display: inline-block;
+    max-width: 100%;
+    display: block;
+    max-width: -webkit-min-content;
+    max-width: -moz-min-content;
+    max-width: min-content;
+  }
+}
+.new .table__container .table:before, .new .table__container .table:after {
+  content: " ";
+  display: table;
+}
+.new .table__container .table:after {
+  clear: both;
+}
+.new .table__container .table,
+.new .table__container .table--alt tbody {
+  scrolling: touch;
+  background: -webkit-radial-gradient(left, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 0 center, -webkit-radial-gradient(right, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 100% center;
+  background: radial-gradient(left, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 0 center, radial-gradient(right, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 100% center;
+  background-size: 8px 100%, 8px 100%;
+  background-attachment: scroll, scroll;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .new .table__container .table,
+  .new .table__container .table--alt tbody {
+    background: none;
+  }
+}
+.new .table__container .table th:first-child, .new .table__container .table th:last-child {
+  background-color: #FFF;
+}
+.new .table__container .table td:last-child {
+  background-image: -webkit-linear-gradient(right, white 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 20px 100%;
+}
+.new .table__container .table td:first-child, .new .table__container .table--alt tbody tr:first-child, .new .table__container .table--pinned th:nth-child(2), .new .table__container .table--pinned tbody td:nth-child(2) {
+  background-image: -webkit-linear-gradient(left, white 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+  background-size: 20px 100%;
+}
+.new .table__container .table--alt th {
+  border-top: 1px solid #EEEEEE;
+}
+.new .table__container .table--alt tbody tr:last-child, .new .table__container .table--pinned th:last-child, .new .table__container .table--pinned tbody td:last-child {
+  background-image: -webkit-linear-gradient(right, white 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 20px 100%;
+}
+.new .table__container .table td:first-child:last-child,
+.new .table__container .table td:nth-child(2):last-child {
+  background-image: -webkit-linear-gradient(right, white 0%, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0) 96%, white 100%);
+  background-image: linear-gradient(to left, white 0%, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0) 96%, white 100%);
+  background-size: 100%;
+}
+.new .table__container .table--alt tbody tr:last-child,
+.new .table__container .table--pinned thead > tr > th:last-child,
+.new .table__container .table--pinned tbody > tr > td:last-child {
+  background-image: -webkit-linear-gradient(right, white 50%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 20px 100%;
+}
+@media screen and (max-width: 767px) {
+  .new .table__container .table--alt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    background: none;
+  }
+  .new .table__container .table--alt thead {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
+    min-width: min-content;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .new .table__container .table--alt tfoot {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .new .table__container .table--alt tbody {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .new .table__container .table--alt tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
+    min-width: min-content;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .new .table__container .table--alt td,
+  .new .table__container .table--alt th {
+    display: block;
+  }
+  .new .table__container .table--flip td {
+    background-image: none !important;
+    border-left: 0;
+  }
+  .new .table__container .table--alt th:not(:last-child),
+  .new .table__container .table--alt td:not(:last-child) {
+    border-bottom: 0;
+  }
+  .new .table__container .table--alt td {
+    padding-left: 5px;
+  }
+  .new .table__container .table--alt th,
+  .new .table__container .table--alt td {
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .new .table__container .table--alt th:last-child,
+  .new .table__container .table--alt td:last-child {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .new .table__container .table--alt td:last-child {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .new .table__container .table--pinned {
+    margin-left: 125px;
+    position: static;
+  }
+  .new .table__container .table--pinned thead > tr > th:first-child,
+  .new .table__container .table--pinned tfoot > tr > td:first-child,
+  .new .table__container .table--pinned tbody > tr > td:first-child {
+    position: absolute;
+    left: 15px;
+    background-color: #FFF;
+    width: 100px;
+    overflow: hidden;
+  }
+  .new .table__container .table--pinned thead > tr > th:nth-child(2),
+  .new .table__container .table--pinned tfoot > tr > td:nth-child(2),
+  .new .table__container .table--pinned tbody > tr > td:nth-child(2) {
+    padding-left: 5px;
+  }
+  .new .table__container .table--pinned tfoot td:last-child {
+    text-align: left !important;
+  }
+  .new .table__container .table--stacked {
+    background-image: none;
+    max-width: 100%;
+  }
+  .new .table__container .table--stacked, .new .table__container .table--stacked tbody, .new .table__container .table--stacked th, .new .table__container .table--stacked td, .new .table__container .table--stacked tr {
+    display: block;
+    width: 100%;
+  }
+  .new .table__container .table--stacked thead,
+  .new .table__container .table--stacked tfoot {
+    display: none !important;
+  }
+  .new .table__container .table--stacked tbody > tr > td,
+  .new .table__container .table--stacked tfoot > tr > td {
+    border: none;
+    position: relative;
+    padding-left: 38%;
+    text-align: left;
+    border-bottom: 1px solid #EEEEEE;
+    box-sizing: border-box;
+  }
+  .new .table__container .table--stacked tbody > tr > td:before,
+  .new .table__container .table--stacked tfoot > tr > td:before {
+    content: attr(data-label);
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'ralewaysemibold';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38%;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 28px;
+    display: block;
+    box-sizing: border-box;
+  }
+  .new .table__container .table--stacked tbody > tr > td:last-child,
+  .new .table__container .table--stacked tfoot > tr > td:last-child {
+    border-bottom-color: transparent;
+    margin-bottom: 25px;
+  }
 }
 .new ul.list-unstyled,
 .new li.list-unstyled {
@@ -4080,6 +4312,8 @@ h1 + .setup-header__description,
   		- Incorporate stats from embedded styles
   	10-4-16:
   		- Add style flag --cards to give layout elements within tabs a white background
+  	10-12-16:
+  		- Move the tab border to the header and have it full-width
   */
   /* Stats */
   /*
@@ -5421,10 +5655,6 @@ h1 + .setup-header__description,
 }
 .new .tabs__header {
   min-height: 60px;
-  position: relative;
-  top: 1px;
-}
-.new .tabs__list__item {
   border-bottom: 1px solid #EEEEEE;
 }
 @media screen and (max-width: 767px) {
