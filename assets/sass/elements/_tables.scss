@@ -67,86 +67,84 @@
 
 		@include clearfix();
 	}
+	@media screen and (max-width: $screen-xs-max) {
+		.table,
+		.table--alt tbody {
+			// optional - enable iOS momentum scrolling
+			scrolling: touch;
 
-	.table,
-	.table--alt tbody {
-		// optional - enable iOS momentum scrolling
-		scrolling: touch;
-
-		// scrolling shadows
-		background: radial-gradient(left, ellipse, rgba(0,0,0, .1) 0%, rgba(0,0,0, 0) 75%) 0 center, radial-gradient(right, ellipse, rgba(0,0,0, .1) 0%, rgba(0,0,0, 0) 75%) 100% center;
-		background-size: 8px 100%, 8px 100%;
-		background-attachment: scroll, scroll;
-		background-repeat: no-repeat;
-		@media screen and (min-width: $screen-sm-min) {
-			background: none;
-		}
-	}
-	.table {
-		th {
-			&:first-child,
-			&:last-child {
-				background-color: #FFF;
+			// scrolling shadows
+			background: radial-gradient(left, ellipse, rgba(0,0,0, .1) 0%, rgba(0,0,0, 0) 75%) 0 center, radial-gradient(right, ellipse, rgba(0,0,0, .1) 0%, rgba(0,0,0, 0) 75%) 100% center;
+			background-size: 8px 100%, 8px 100%;
+			background-attachment: scroll, scroll;
+			background-repeat: no-repeat;
+			@media screen and (min-width: $screen-sm-min) {
+				background: none;
 			}
 		}
-		td {
-			&:last-child {
+		.table {
+			th {
+				&:first-child,
+				&:last-child {
+					background-image: none;
+				}
+			}
+			td {
+				&:last-child {
+					background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+					background-repeat: no-repeat;
+					background-position: 100% 0;
+					background-size: 20px 100%;
+				}
+			}
+			& td:first-child,
+			&--alt tbody tr:first-child,
+			&--pinned th:nth-child(2),
+			&--pinned tbody td:nth-child(2){
+				// change these gradients from white to your background colour if it differs
+				// gradient on the first cells to hide the left shadow
+				background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+				background-repeat: no-repeat;
+				background-size: 20px 100%;
+			}
+			&--alt th {
+				border-top: 1px solid $gray-lighter;
+			}
+			// gradient on the last cells to hide the right shadow
+			&--alt tbody tr:last-child,
+			&--pinned th:last-child,
+			&--pinned tbody td:last-child {
 				background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
 				background-repeat: no-repeat;
 				background-position: 100% 0;
 				background-size: 20px 100%;
 			}
+			&--pinned {
+			}
+			td:first-child:last-child,
+			td:nth-child(2):last-child {
+				background-image: linear-gradient(to left, rgba(255,255,255, 1) 0%, rgba(255,255,255,0) 6%, rgba(255,255,255,0) 96%, rgba(255,255,255, 1) 100%);
+				background-size: 100%;
+			}
 		}
-		& td:first-child,
-		&--alt tbody tr:first-child,
-		&--pinned th:nth-child(2),
-		&--pinned tbody td:nth-child(2){
-			// change these gradients from white to your background colour if it differs
-			// gradient on the first cells to hide the left shadow
-			background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
-			background-repeat: no-repeat;
-			background-size: 20px 100%;
-		}
-		&--alt th {
-			border-top: 1px solid $gray-lighter;
+		// change these gradients from white to your background colour if it differs
+		// gradient on the first cells to hide the left shadow
+		.table td:first-child,
+		.table--alt tbody tr:first-child,
+		.table--pinned thead > tr > th:nth-child(2),
+		.table--pinned tfoot > tr > td:nth-child(2),
+		.table--pinned tbody > tr > td:nth-child(2) {
 		}
 		// gradient on the last cells to hide the right shadow
-		&--alt tbody tr:last-child,
-		&--pinned th:last-child,
-		&--pinned tbody td:last-child {
+		.table--alt tbody tr:last-child,
+		.table--pinned thead > tr > th:last-child,
+		.table--pinned tbody > tr > td:last-child {
 			background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
 			background-repeat: no-repeat;
 			background-position: 100% 0;
 			background-size: 20px 100%;
 		}
-		&--pinned {
-		}
-		td:first-child:last-child,
-		td:nth-child(2):last-child {
-			background-image: linear-gradient(to left, rgba(255,255,255, 1) 0%, rgba(255,255,255,0) 6%, rgba(255,255,255,0) 96%, rgba(255,255,255, 1) 100%);
-			background-size: 100%;
-		}
 	}
-	// change these gradients from white to your background colour if it differs
-	// gradient on the first cells to hide the left shadow
-	.table td:first-child,
-	.table--alt tbody tr:first-child,
-	.table--pinned thead > tr > th:nth-child(2),
-	.table--pinned tfoot > tr > td:nth-child(2),
-	.table--pinned tbody > tr > td:nth-child(2) {
-	}
-	// gradient on the last cells to hide the right shadow
-	.table--alt tbody tr:last-child,
-	.table--pinned thead > tr > th:last-child,
-	.table--pinned tbody > tr > td:last-child {
-		background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
-		background-repeat: no-repeat;
-		background-position: 100% 0;
-		background-size: 20px 100%;
-	}
-
-
-
 
 	@media screen and (max-width: $screen-xs-max) {
 		.table--alt {
@@ -220,7 +218,7 @@
 	}
 
 	/* Mobile */
-	@media only screen and (max-width: 767px) {
+	@media only screen and (max-width: $screen-xs-max) {
 		.table--pinned {
 			margin-left: 125px;
 			position: static;
@@ -229,7 +227,6 @@
 			tbody > tr > td:first-child {
 				position: absolute;
 				left: 15px;
-				background-color: #FFF;
 				width: 100px;
 				overflow: hidden;
 			}

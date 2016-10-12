@@ -1560,61 +1560,65 @@ h1 + .setup-header__description,
 .new .table__container .table:after {
   clear: both;
 }
-.new .table__container .table,
-.new .table__container .table--alt tbody {
-  scrolling: touch;
-  background: -webkit-radial-gradient(left, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 0 center, -webkit-radial-gradient(right, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 100% center;
-  background: radial-gradient(left, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 0 center, radial-gradient(right, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 100% center;
-  background-size: 8px 100%, 8px 100%;
-  background-attachment: scroll, scroll;
-  background-repeat: no-repeat;
+@media screen and (max-width: 767px) {
+  .new .table__container .table,
+  .new .table__container .table--alt tbody {
+    scrolling: touch;
+    background: -webkit-radial-gradient(left, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 0 center, -webkit-radial-gradient(right, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 100% center;
+    background: radial-gradient(left, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 0 center, radial-gradient(right, ellipse, rgba(0, 0, 0, 0.1) 0%, transparent 75%) 100% center;
+    background-size: 8px 100%, 8px 100%;
+    background-attachment: scroll, scroll;
+    background-repeat: no-repeat;
+  }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) and (min-width: 768px) {
   .new .table__container .table,
   .new .table__container .table--alt tbody {
     background: none;
   }
 }
-.new .table__container .table th:first-child, .new .table__container .table th:last-child {
-  background-color: #FFF;
-}
-.new .table__container .table td:last-child {
-  background-image: -webkit-linear-gradient(right, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 20px 100%;
-}
-.new .table__container .table td:first-child, .new .table__container .table--alt tbody tr:first-child, .new .table__container .table--pinned th:nth-child(2), .new .table__container .table--pinned tbody td:nth-child(2) {
-  background-image: -webkit-linear-gradient(left, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-image: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-repeat: no-repeat;
-  background-size: 20px 100%;
-}
-.new .table__container .table--alt th {
-  border-top: 1px solid #EEEEEE;
-}
-.new .table__container .table--alt tbody tr:last-child, .new .table__container .table--pinned th:last-child, .new .table__container .table--pinned tbody td:last-child {
-  background-image: -webkit-linear-gradient(right, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 20px 100%;
-}
-.new .table__container .table td:first-child:last-child,
-.new .table__container .table td:nth-child(2):last-child {
-  background-image: -webkit-linear-gradient(right, white 0%, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0) 96%, white 100%);
-  background-image: linear-gradient(to left, white 0%, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0) 96%, white 100%);
-  background-size: 100%;
-}
-.new .table__container .table--alt tbody tr:last-child,
-.new .table__container .table--pinned thead > tr > th:last-child,
-.new .table__container .table--pinned tbody > tr > td:last-child {
-  background-image: -webkit-linear-gradient(right, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 20px 100%;
+@media screen and (max-width: 767px) {
+  .new .table__container .table th:first-child, .new .table__container .table th:last-child {
+    background-image: none;
+  }
+  .new .table__container .table td:last-child {
+    background-image: -webkit-linear-gradient(right, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 20px 100%;
+  }
+  .new .table__container .table td:first-child, .new .table__container .table--alt tbody tr:first-child, .new .table__container .table--pinned th:nth-child(2), .new .table__container .table--pinned tbody td:nth-child(2) {
+    background-image: -webkit-linear-gradient(left, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-repeat: no-repeat;
+    background-size: 20px 100%;
+  }
+  .new .table__container .table--alt th {
+    border-top: 1px solid #EEEEEE;
+  }
+  .new .table__container .table--alt tbody tr:last-child, .new .table__container .table--pinned th:last-child, .new .table__container .table--pinned tbody td:last-child {
+    background-image: -webkit-linear-gradient(right, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 20px 100%;
+  }
+  .new .table__container .table td:first-child:last-child,
+  .new .table__container .table td:nth-child(2):last-child {
+    background-image: -webkit-linear-gradient(right, white 0%, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0) 96%, white 100%);
+    background-image: linear-gradient(to left, white 0%, rgba(255, 255, 255, 0) 6%, rgba(255, 255, 255, 0) 96%, white 100%);
+    background-size: 100%;
+  }
+  .new .table__container .table--alt tbody tr:last-child,
+  .new .table__container .table--pinned thead > tr > th:last-child,
+  .new .table__container .table--pinned tbody > tr > td:last-child {
+    background-image: -webkit-linear-gradient(right, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 20px 100%;
+  }
 }
 @media screen and (max-width: 767px) {
   .new .table__container .table--alt {
@@ -1705,7 +1709,6 @@ h1 + .setup-header__description,
   .new .table__container .table--pinned tbody > tr > td:first-child {
     position: absolute;
     left: 15px;
-    background-color: #FFF;
     width: 100px;
     overflow: hidden;
   }
