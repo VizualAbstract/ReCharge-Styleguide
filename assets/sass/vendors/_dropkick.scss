@@ -268,7 +268,7 @@ $dk-arrow-color: #424242 !default;
 // .dk-selected:hover,
 .dk-selected:focus {
 	outline: none;
-	border-color: $dk-border-color-aux !important;
+	border-color: $dk-border-color-aux;
 	&:before {
 		border-top-color: $dk-arrow-color;
 	}

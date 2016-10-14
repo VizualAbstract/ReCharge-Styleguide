@@ -55,6 +55,8 @@
 		- Allow for input fields to be within a label, specifically for radios and checkboxes
 	10-5-16:
 		- Small patch to fix alignment with select forms within input groups
+	10-13-16:
+		- Add a more comprehensive approach to invalid inputs (color, number, dropdown selects, improved checkbox & radio)
 */
 
 .form {
@@ -284,9 +286,6 @@ textarea.form__input {
 		outline: none;
 		box-shadow: none; // Prevent bh-ui styles fro madding a box-shadow
 	}
-	&.form__input--invalid {
-		border-color: #EC3D10 !important;
-	}
 }
 
 .form__error {
@@ -482,25 +481,6 @@ input[type="checkbox"],
 			&:before {
 				content: "\f00c";
 				background-color: #767676;
-			}
-		}
-	}
-	&:required,
-	&.form__input--required {
-		+ label,
-		+ .form__radio__label,
-		+ .form__checkbox__label {
-			&::before {
-				border-color: #EC3D10
-			}
-		}
-		&:checked,
-		+ .form__radio__label,
-		+ .form__checkbox__label {
-			+ label {
-				&::before {
-					background-color: #EC3D10;
-				}
 			}
 		}
 	}
@@ -836,5 +816,69 @@ input[type="color"].form__color {
 			margin: 12px 13px;
 			vertical-align: top;
 		}
+	}
+}
+
+// Errors
+input[type="text"].form__input,
+input[type="search"].form__input,
+input[type="password"].form__input,
+input[type="number"].form__number,
+input.form__color,
+input.form__date,
+textarea.form__input {
+	&.form__input--invalid {
+		border-color: #EC3D10;
+	}
+}
+
+input[type="radio"],
+input[type="checkbox"],
+.form__radio,
+.form__checkbox {
+	&.form__input--invalid {
+		+ label,
+		+ .form__radio__label,
+		+ .form__checkbox__label {
+			&:before {
+				border-color: #EC3D10;
+			}
+		}
+		&:checked,
+		+ .form__radio__label,
+		+ .form__checkbox__label {
+			+ label {
+				&:before {
+					background-color: #EC3D10;
+				}
+			}
+		}
+	}
+}
+.form__select {
+	&.form__input--invalid {
+		.dk-selected,
+		.dk-select-options 
+		.dk-selected:focus,
+		.dk-select-options:focus {
+			border-color: #EC3D10;
+		}
+	}
+}
+.form__checkout {
+	&.form__input--invalid {
+		border-color: #EC3D10;
+	}
+}
+.form__color {
+	&.form__input--invalid {
+		+ .form__color__picker + .sp-replacer.sp-light {
+			border-color: #EC3D10;
+		}
+	}
+}
+.dk-select.form__select {
+	&.form__input--invalid {
+		border-color: #EC3D10;
 	}
 }

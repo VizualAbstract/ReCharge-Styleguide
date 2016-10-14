@@ -4,29 +4,37 @@
 		</span><!-- .new -->
 		<script>
 			$(function() {
+				$('.rc_notifications').on('click', '.rc_notifications__close', function(e) {
+					e.preventDefault();
+					$(this).parents('.rc_notifications').slideToggle();
+				});
+			});
+		</script>
+		<script>
+			$(function() {
 				$('#date-range__charts .form__date').pikaday({
 					format: 'YYYY-MM-DD',
 					minDate: moment('2016-09-08').toDate(),
 					maxDate: moment().toDate(),
 					showDaysInNextAndPreviousMonths: true,
 					onClose: function() {
-						// var input = $(this._o.field);
-						// var value = input.val();
-						// if (value == '') {
-						// 	// If value is empty, set default date if avaialble
-						// 	if (input.data('default')) {
-						// 		input.val(input.data('default'));
-						// 	} else {
-						// 		var start_date = input.parents('.date-range__start');
-						// 		var end_date = input.parents('.date-range__end');
-						// 		if (start_date.length > 0) {
-						// 			input.val(moment().subtract(8, 'days').format('YYYY-MM-DD'));
-						// 		}
-						// 		if (end_date.length > 0) {
-						// 			input.val(moment().subtract(1, 'days').format('YYYY-MM-DD'));
-						// 		}
-						// 	}
-						// }
+						var input = $(this._o.field);
+						var value = input.val();
+						if (value == '') {
+							// If value is empty, set default date if avaialble
+							if (input.data('default')) {
+								input.val(input.data('default'));
+							} else {
+								var start_date = input.parents('.date-range__start');
+								var end_date = input.parents('.date-range__end');
+								if (start_date.length > 0) {
+									input.val(moment().subtract(8, 'days').format('YYYY-MM-DD'));
+								}
+								if (end_date.length > 0) {
+									input.val(moment().subtract(1, 'days').format('YYYY-MM-DD'));
+								}
+							}
+						}
 					}
 				});
 				$('#date-range__downloads .form__date').pikaday({
@@ -199,31 +207,31 @@
 						$(this).removeClass('popover-box--hover');
 					});
 				}).on('mouseleave', function() {
-					// $(this).removeClass('popover-button--hover');
-					// var __this = $(this);
-					// setTimeout(function(){
-					// 	if ($('.popover-box').hasClass('popover-box--hover')) { // is mouse on popup box?
-					// 		// yes, do nothing
-					// 	} else {
-					// 		// no, hide popup box
-					// 		__this.rc_popover('hide');
-					// 		__this.removeClass('popover-button--active');
-					// 	}
-					// }, 15);
-					// $('.popover-box').on('mouseenter', function(){
-					// 	$(this).addClass('popover-box--hover');
-					// }).on('mouseleave', function(){ // hover off popup box
-					// 	$(this).removeClass('popover-box--hover');
-					// 	setTimeout(function(){
-					// 		if ($('.popover-button').hasClass('popover-button--hover')) { // is mouse on popup icon?
-					// 			// yes, do nothing
-					// 		} else {
-					// 			// no, hide popup box
-					// 			$('.popover-button').rc_popover('hide');
-					// 			$('.popover-button').removeClass('popover-button--active');
-					// 		}
-					// 	}, 15);
-					// });
+					$(this).removeClass('popover-button--hover');
+					var __this = $(this);
+					setTimeout(function(){
+						if ($('.popover-box').hasClass('popover-box--hover')) { // is mouse on popup box?
+							// yes, do nothing
+						} else {
+							// no, hide popup box
+							__this.rc_popover('hide');
+							__this.removeClass('popover-button--active');
+						}
+					}, 15);
+					$('.popover-box').on('mouseenter', function(){
+						$(this).addClass('popover-box--hover');
+					}).on('mouseleave', function(){ // hover off popup box
+						$(this).removeClass('popover-box--hover');
+						setTimeout(function(){
+							if ($('.popover-button').hasClass('popover-button--hover')) { // is mouse on popup icon?
+								// yes, do nothing
+							} else {
+								// no, hide popup box
+								$('.popover-button').rc_popover('hide');
+								$('.popover-button').removeClass('popover-button--active');
+							}
+						}, 15);
+					});
 				});
 			});
 		</script>

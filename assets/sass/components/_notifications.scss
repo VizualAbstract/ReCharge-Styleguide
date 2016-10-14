@@ -1,0 +1,98 @@
+/* 
+	Element: Notifications
+	Version 1.0
+	Date: 10-14-2016
+	Author: Corey M. Capetillo
+	10-14-2016:
+		- Creation
+*/
+
+.rc_notifications {
+	display: block;
+	margin: 0;
+	padding: 40px;
+	position: relative;
+	padding: 0;
+	color: #FFF;
+	.fa {
+		color: #FFF;
+	}
+	a,
+	a:link
+	a:hover,
+	a:focus,
+	a:active {
+		color: #FFF;
+	}
+
+	&__header {
+		display: block;
+		width: 100%;
+		font-size: $h4-font-size;
+		line-height: 1;
+		margin-bottom: $padding-large-vertical / 1.5;
+		padding: $padding-large-vertical $padding-large-horizontal 0 $padding-large-horizontal * 2.75;
+		&:before {
+			font-family: "fontawesome";
+			font-size: 20px;
+			position: absolute;
+			top: $padding-large-vertical;
+			left: $padding-large-horizontal;
+			width: 30px;
+			height: 20px;
+			display: block;
+		}
+	}
+	&__content {
+		padding: 0 $padding-large-horizontal $padding-large-vertical $padding-large-horizontal * 2.75;
+		p {
+			@extend strong;
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+	&__close {
+		width: 30px;
+		height: 35px;
+		padding: 5px;
+		box-sizing: border-box;
+		position: absolute;
+		top: $padding-large-vertical / 2;
+		right: $padding-large-horizontal / 2;
+		cursor: pointer;
+		&:before {
+			content: "\f00d";
+			font-size: 24px;
+			font-family: "fontawesome";
+		}
+	}
+	&--error {
+		background-color: $red;
+		.rc_notifications__header:before {
+			content: "\f071";
+		}
+		.rc__notifications__close {
+			display: none;
+		}
+	}
+	&--warning {
+		background-color: $orange;
+		.rc_notifications__header:before {
+			content: "\f071";
+		}
+	}
+	&--success {
+		background-color: $aquamarine;
+		.rc_notifications__header:before {
+			content: "\f058";
+		}
+		.rc__notifications__close {
+			display: none;
+		}
+	}
+}
+
+.error-list {
+	@extend .list;
+}

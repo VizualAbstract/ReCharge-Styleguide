@@ -39,12 +39,26 @@
 <?php include('_components/info-bar.php'); ?>
 </div><!-- .rc_sg__example -->
 
+<hr>
+
 <h2 class="rc_sg__pattern_title" id="dropdown-header">Dropdown Header</h2>
 <div class="rc_sg__description">
 	<p>There is no unique class name for the dropdown header, it is just a made up of a page-title, dropdown and buttons</p>
 </div><!-- .description -->
 <div class="rc_sg__example">
 <?php include('_components/dropdown-header.php'); ?>
+</div><!-- .rc_sg__example -->
+
+<hr>
+
+<h2 class="rc_sg__pattern_title" id="notifications">Notifications</h2>
+<div class="rc_sg__description">
+	<p>
+		Error notifications will be closeable. The rest will be time-closed at 2500 ms
+	</p>
+</div><!-- .description -->
+<div class="rc_sg__example">
+<?php include('_components/notifications.php'); ?>
 </div><!-- .rc_sg__example -->
 
 <hr>
