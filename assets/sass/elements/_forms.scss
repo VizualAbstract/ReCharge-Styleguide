@@ -820,6 +820,64 @@ input[type="color"].form__color {
 }
 
 // Errors
+.form__group {
+	&--error {
+		.form__label,
+		.input-group__addon {
+			color: #EC3D10;
+		}
+		input[type="text"].form__input,
+		input[type="search"].form__input,
+		input[type="password"].form__input,
+		input[type="number"].form__number,
+		input.form__color,
+		input.form__date,
+		textarea.form__input {
+			border-color: #EC3D10;
+		}
+		input[type="radio"],
+		input[type="checkbox"],
+		.form__radio,
+		.form__checkbox {
+			+ label,
+			+ .form__radio__label,
+			+ .form__checkbox__label {
+				&:before {
+					border-color: #EC3D10;
+				}
+			}
+			&:checked,
+			+ .form__radio__label,
+			+ .form__checkbox__label {
+				+ label {
+					&:before {
+						background-color: #EC3D10;
+					}
+				}
+			}
+		}
+		.form__select {
+			.dk-selected,
+			.dk-select-options 
+			.dk-selected:focus,
+			.dk-select-options:focus {
+				border-color: #EC3D10;
+			}
+		}
+		.form__checkout {
+			border-color: #EC3D10;
+		}
+		.form__color {
+			+ .form__color__picker + .sp-replacer.sp-light {
+				border-color: #EC3D10;
+			}
+		}
+		.dk-select.form__select {
+			border-color: #EC3D10;
+		}
+	}
+}
+
 input[type="text"].form__input,
 input[type="search"].form__input,
 input[type="password"].form__input,

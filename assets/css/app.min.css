@@ -3960,6 +3960,74 @@ h1 + .setup-header__description,
   margin: 12px 13px;
   vertical-align: top;
 }
+.new .form__group--error .form__label,
+.new .form__group--error .input-group__addon {
+  color: #EC3D10;
+}
+.new .form__group--error input[type="text"].form__input, .new .form__group--error input[type="text"].form__color, .new .form__group--error input[type="text"].form__date, .new .form__group--error input[type="text"].form__number,
+.new .form__group--error input[type="search"].form__input,
+.new .form__group--error input[type="search"][type="text"].form__color,
+.new .form__group--error input[type="search"][type="text"].form__date,
+.new .form__group--error input[type="search"][type="text"].form__number,
+.new .form__group--error input[type="search"][type="number"].form__number,
+.new .form__group--error input[type="password"].form__input,
+.new .form__group--error input[type="password"][type="text"].form__color,
+.new .form__group--error input[type="password"][type="text"].form__date,
+.new .form__group--error input[type="password"][type="text"].form__number,
+.new .form__group--error input[type="password"][type="number"].form__number,
+.new .form__group--error input[type="number"].form__number,
+.new .form__group--error input.form__color,
+.new .form__group--error input.form__date,
+.new .form__group--error textarea.form__input,
+.new .form__group--error textarea.form__input__code {
+  border-color: #EC3D10;
+}
+.new .form__group--error input[type="radio"] + label:before,
+.new .form__group--error input[type="radio"] + .form__radio__label:before,
+.new .form__group--error input[type="radio"] + .form__checkbox__label:before,
+.new .form__group--error input[type="checkbox"] + label:before,
+.new .form__group--error input[type="checkbox"] + .form__radio__label:before,
+.new .form__group--error input[type="checkbox"] + .form__checkbox__label:before,
+.new .form__group--error .form__radio + label:before,
+.new .form__group--error .form__radio + .form__radio__label:before,
+.new .form__group--error .form__radio + .form__checkbox__label:before,
+.new .form__group--error .form__checkbox + label:before,
+.new .form__group--error .form__checkbox + .form__radio__label:before,
+.new .form__group--error .form__checkbox + .form__checkbox__label:before {
+  border-color: #EC3D10;
+}
+.new .form__group--error input[type="radio"]:checked + label:before,
+.new .form__group--error input[type="radio"] + .form__radio__label + label:before,
+.new .form__group--error input[type="radio"] + .form__checkbox__label + label:before,
+.new .form__group--error input[type="checkbox"]:checked + label:before,
+.new .form__group--error input[type="checkbox"] + .form__radio__label + label:before,
+.new .form__group--error input[type="checkbox"] + .form__checkbox__label + label:before,
+.new .form__group--error .form__radio:checked + label:before,
+.new .form__group--error .form__radio + .form__radio__label + label:before,
+.new .form__group--error .form__radio + .form__checkbox__label + label:before,
+.new .form__group--error .form__checkbox:checked + label:before,
+.new .form__group--error .form__checkbox + .form__radio__label + label:before,
+.new .form__group--error .form__checkbox + .form__checkbox__label + label:before {
+  background-color: #EC3D10;
+}
+.new .form__group--error .form__select .dk-selected, .new .form__group--error div.form__number .dk-selected,
+.new .form__group--error .form__select .dk-select-options
+.dk-selected:focus,
+.new .form__group--error div.form__number .dk-select-options
+.dk-selected:focus,
+.new .form__group--error .form__select .dk-select-options:focus,
+.new .form__group--error div.form__number .dk-select-options:focus {
+  border-color: #EC3D10;
+}
+.new .form__group--error .form__checkout {
+  border-color: #EC3D10;
+}
+.new .form__group--error .form__color + .form__color__picker + .sp-replacer.sp-light {
+  border-color: #EC3D10;
+}
+.new .form__group--error .dk-select.form__select, .new .form__group--error div.dk-select.form__number {
+  border-color: #EC3D10;
+}
 .new input[type="text"].form__input.form__input--invalid, .new input[type="text"].form__input--invalid.form__color, .new input[type="text"].form__input--invalid.form__date, .new input[type="text"].form__input--invalid.form__number,
 .new input[type="search"].form__input.form__input--invalid,
 .new input[type="search"].form__input--invalid[type="text"].form__color,
@@ -4145,6 +4213,10 @@ h1 + .setup-header__description,
   	Author: Corey M. Capetillo
   	10-14-2016:
   		- Creation
+  	10-21-2016:
+  		- Create a review banner
+  	10-24-2016:
+  		- Even out spacing for mobile version
   */
   /*
   	Components: Dropdowns
@@ -4283,13 +4355,16 @@ h1 + .setup-header__description,
 .new .rc_notifications {
   display: block;
   margin: 0;
-  padding: 40px;
   position: relative;
   padding: 0;
   color: #FFF;
 }
 .new .rc_notifications .fa {
   color: #FFF;
+}
+.new .rc_notifications .button {
+  background-color: #FFF;
+  text-decoration: none;
 }
 .new .rc_notifications a,
 .new .rc_notifications a:link
@@ -4298,37 +4373,40 @@ a:hover,
 .new .rc_notifications a:active {
   color: #FFF;
 }
+.new .rc_notifications__title {
+  font-size: 20px;
+}
 .new .rc_notifications__header {
   display: block;
   width: 100%;
-  font-size: 20px;
-  line-height: 1;
   margin-bottom: 11.3333333333px;
-  padding: 17px 20px 0 55px;
+  padding: 17px 20px 0;
+  padding-left: 40px;
+  line-height: 1;
 }
 .new .rc_notifications__header:before {
   font-family: "fontawesome";
   font-size: 20px;
   position: absolute;
   top: 17px;
-  left: 20px;
+  left: 10px;
   width: 30px;
   height: 20px;
   display: block;
 }
 .new .rc_notifications__content {
-  padding: 0 20px 17px 55px;
+  padding: 0 40px 17px;
 }
 .new .rc_notifications__content a {
   text-decoration: underline;
 }
 .new .rc_notifications__close {
-  width: 30px;
-  height: 35px;
-  padding: 5px;
+  width: 19px;
+  height: 18px;
+  padding: 0;
   box-sizing: border-box;
   position: absolute;
-  top: 8.5px;
+  top: 17px;
   right: 10px;
   cursor: pointer;
 }
@@ -4336,6 +4414,10 @@ a:hover,
   content: "\f00d";
   font-size: 24px;
   font-family: "fontawesome";
+  margin-top: -5px;
+  width: 19px;
+  height: 18px;
+  display: block;
 }
 .new .rc_notifications--error {
   background-color: #EC3D10;
@@ -4346,11 +4428,17 @@ a:hover,
 .new .rc_notifications--error .rc__notifications__close {
   display: none;
 }
+.new .rc_notifications--error .button {
+  color: #EC3D10;
+}
 .new .rc_notifications--warning {
   background-color: #FB8309;
 }
 .new .rc_notifications--warning .rc_notifications__header:before {
   content: "\f071";
+}
+.new .rc_notifications--warning .button {
+  color: #FB8309;
 }
 .new .rc_notifications--success {
   background-color: #4DD6B7;
@@ -4360,6 +4448,69 @@ a:hover,
 }
 .new .rc_notifications--success .rc__notifications__close {
   display: none;
+}
+.new .rc_notifications--success .button {
+  color: #4DD6B7;
+}
+.new .rc_notifications--review {
+  background-color: #2C93AC;
+  text-align: center;
+  padding-bottom: 11.3333333333px;
+}
+@media screen and (min-width: 768px) {
+  .new .rc_notifications--review p {
+    display: inline;
+  }
+  .new .rc_notifications--review p + * {
+    margin-left: 22px;
+  }
+}
+.new .rc_notifications--review.reviewed .rc__notifications__close {
+  display: none;
+}
+.new .rc_notifications--review p {
+  margin-bottom: 10px;
+}
+.new .rc_notifications--review .button {
+  color: #2C93AC;
+}
+@media screen and (max-width: 767px) {
+  .new .rc_notifications--review .button {
+    margin-top: 10px;
+    display: block;
+  }
+}
+.new .review {
+  display: inline-block;
+  position: relative;
+  top: 4px;
+}
+.new .review.rated .star {
+  float: right;
+}
+.new .review.rated .star .star {
+  margin-left: 4px;
+}
+.new .review .star {
+  display: inline-block;
+  cursor: pointer;
+  float: right;
+  z-index: 0;
+}
+.new .review .star .star {
+  margin-left: 4px;
+}
+.new .review .star:before {
+  content: "\f006";
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'fontawesome';
+}
+.new .review .star.active:before {
+  content: "\f005";
+}
+.new .review .star:hover:before {
+  content: "\f005";
 }
 .new .dropdown {
   position: relative;

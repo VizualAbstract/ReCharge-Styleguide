@@ -35,7 +35,7 @@
 				left: 0;
 				padding: 15px 15px 0;
 			}
-			@media screen and (max-width: 768px){
+			@media screen and (max-width: $screen-xs-max){
 				margin-left: -30px;
 				margin-right: -30px;
 				border-left: 0;
@@ -64,7 +64,7 @@
 				letter-spacing: initial;
 				border-width: 0;
 			}
-			@media screen and (max-width: 768px){
+			@media screen and (max-width: $screen-xs-max){
 				margin-left: -30px;
 				margin-right: -30px;
 				border-left: 0;
@@ -129,7 +129,7 @@ body.styleguide {
 		+ figure {
 			margin-top: -1em;
 		}
-		@media screen and (max-width: 768px){
+		@media screen and (max-width: $screen-xs-max){
 			margin-left: -30px;
 			margin-right: -30px;
 			border-left: 0;
