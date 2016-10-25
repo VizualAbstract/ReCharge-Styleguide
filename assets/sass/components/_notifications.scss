@@ -13,9 +13,9 @@
 
 .rc_notifications {
 	display: block;
-	margin: 0;
 	position: relative;
-	padding: 0;
+	margin: 0;
+	padding: $padding-large-vertical 0;
 	color: #FFF;
 	.fa {
 		color: #FFF;
@@ -38,7 +38,7 @@
 		display: block;
 		width: 100%;
 		margin-bottom: $padding-large-vertical / 1.5;
-		padding: $padding-large-vertical $padding-large-horizontal 0;
+		padding: 0 $padding-large-horizontal;
 		padding-left: $padding-large-horizontal * 2;
 		line-height: 1;
 
@@ -54,8 +54,7 @@
 		}
 	}
 	&__content {
-		padding: 0 $padding-large-horizontal * 2 $padding-large-vertical;
-
+		padding: 0 $padding-large-horizontal * 2 $padding-large-vertical / 2;
 		// @media screen and (max-width: $screen-xs-max) {
 		// 	padding: 0 $padding-large-horizontal $padding-large-vertical $padding-large-horizontal / 2;
 		// }
@@ -76,6 +75,7 @@
 		top: $padding-large-vertical;
 		right: $padding-large-horizontal / 2;
 		cursor: pointer;
+		z-index: 30;
 
 		&:before {
 			content: "\f00d";
@@ -87,6 +87,9 @@
 			display: block;
 		}
 	}
+}
+
+.rc_notifications {
 	&--error {
 		background-color: $red;
 		.rc_notifications__header:before {
@@ -96,18 +99,30 @@
 			display: none;
 		}
 		.button {
-			color: $red;
+			&,
+			&:hover,
+			&:active,
+			&:focus {
+				color: $red;
+			}
 		}
 	}
+
 	&--warning {
 		background-color: $orange;
 		.rc_notifications__header:before {
 			content: "\f071";
 		}
 		.button {
-			color: $orange;
+			&,
+			&:hover,
+			&:active,
+			&:focus {
+				color: $orange;
+			}
 		}
 	}
+
 	&--success {
 		background-color: $aquamarine;
 		.rc_notifications__header:before {
@@ -117,16 +132,25 @@
 			display: none;
 		}
 		.button {
-			color: $aquamarine;
+			&,
+			&:hover,
+			&:active,
+			&:focus {
+				color: $aquamarine;
+			}
 		}
 	}
+
 	&--review {
 		background-color: $blue;
 		text-align: center;
 		padding-bottom: 11.3333333333px;
 		@media screen and (min-width: $screen-sm-min) {
 			p {
-				display: inline;
+    			vertical-align: middle;
+				height: 40px;
+    			line-height: 40px;
+				display: inline-block;
 				+ * {
 					margin-left: 22px;
 				}
@@ -135,11 +159,13 @@
 		&.reviewed .rc__notifications__close {
 			display: none;
 		}
-		p {
-			margin-bottom: 10px;
-		}
 		.button {
-			color: $blue;
+			&,
+			&:hover,
+			&:active,
+			&:focus {
+				color: $blue;
+			}
 			@media screen and (max-width: $screen-xs-max) {
 				margin-top: 10px;
 				display: block;
@@ -148,38 +174,27 @@
 	}
 }
 
-.review {
+.rating {
+	@extend .list;
+	@extend .list--inline;
+
 	display: inline-block;
 	position: relative;
-	top: 4px;
-	&.rated {
-		.star {
-			float: right;
-			 .star {
-				margin-left: 4px;
-			}
-		}
-	}
-	.star {
-		display: inline-block;
+	top: 2px;
+
+	.rating__star {
 		cursor: pointer;
-		float: right;
-		z-index: 0;
-		.star {
-			margin-left: 4px;
-		}
+		padding: 0 3px 0 1px;
+		position: relative;
+
 		&:before {
 			content: "\f006";
 			display: inline-block;
 			font-size: 16px;
 			font-family: 'fontawesome';
 		}
+		&:hover,
 		&.active {
-			&:before {
-				content: "\f005";
-			}
-		}
-		&:hover {
 			&:before {
 				content: "\f005";
 			}
@@ -189,4 +204,17 @@
 
 .error-list {
 	@extend .list;
+}
+
+#rating__unrated {
+	position: absolute;
+	width: 100%;
+	left: -40px;
+	z-index: 30;
+	top: 50%;
+	transform: translateY(-45%);
+}
+
+#rating__rated {
+	opacity: 0;
 }
