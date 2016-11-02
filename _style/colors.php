@@ -1,9 +1,9 @@
-<span class="swatch background--blue">
-	Brand <span class="hexcode">Blue<br>#2C93AC</span>
+<span class="swatch background--cyan">
+	Brand <span class="hexcode">Cyan<br>#53BAD3</span>
 </span>
 
-<span class="swatch background--gray-darker">
-	Text <span class="hexcode">Gray, Darker<br>#424242</span>
+<span class="swatch background--gray-dark">
+	Text <span class="hexcode">Gray, Dark<br>#676767</span>
 </span>
 
 <span class="swatch background--aquamarine">
