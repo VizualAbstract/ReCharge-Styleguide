@@ -18,89 +18,95 @@
 /* Colors */
 .recharge {
   /*
-  	Style: Utility
-  	Version 1.0
-  	Date: 8-22-2016
-  	Author: Corey M. Capetillo
-  	5-1-16: Page Created
-  	8-22-16:
-  		- Add alignment for justify and nowrap
-  		- Flesh out responsive utilities
-  		- Allow compatability for old class nomiclature
-  */
+	Style: Utility
+	Version 1.0
+	Date: 8-22-2016
+	Author: Corey M. Capetillo
+	5-1-16: Page Created
+	8-22-16:
+		- Add alignment for justify and nowrap
+		- Flesh out responsive utilities
+		- Allow compatability for old class nomiclature
+*/
   /*
-  	Layouts
-  	Bare-bone html elements. Essential to the general look and feel. Class nomiclature follows standard HTML naming conventions, but CSS selectors are used for their improved rendering speed.
-  */
+	Layouts
+	Bare-bone html elements. Essential to the general look and feel. Class nomiclature follows standard HTML naming conventions, but CSS selectors are used for their improved rendering speed.
+*/
   /* Tables */
   /* 
-  	Element: Buttons
-  	Version 1.0
-  	Date: 5-5-2016
-  	Author: Corey M. Capetillo
-  	5-5-2016
-  		- Creation date
-  	7-22-2016
-  		- Removed !important from button links
-  		- Add hover-colors for button--links
-  */
+	Element: Buttons
+	Version 1.0
+	Date: 5-5-2016
+	Author: Corey M. Capetillo
+	5-5-2016
+		- Creation date
+	7-22-2016
+		- Removed !important from button links
+		- Add hover-colors for button--links
+*/
   /* 
-  	Element: Forms
-  	Version 1.1
-  	Date: 5-5-2016
-  	Author: Corey M. Capetillo
-  	8-17-16:
-  		- Create RC version
-  */
+	Element: Forms
+	Version 1.1
+	Date: 5-5-2016
+	Author: Corey M. Capetillo
+	8-17-16:
+		- Create RC version
+*/
   /*
-  	Layout
-  	Structural elements dependant on each other to build out a page. Houses Components.
-  */
+	Layout
+	Structural elements dependant on each other to build out a page. Houses Components.
+*/
   /*
-  	Components
-  	Typically made up of Elements, grouped with with a unique class identifier. Serves a specific, but widely-used purpose.
-  */
+	Components
+	Typically made up of Elements, grouped with with a unique class identifier. Serves a specific, but widely-used purpose.
+*/
   /* 
-  	Components: Info Bars (Proxy)
-  	Version 1.0
-  	Date: 8-4-2016
-  	Author: Corey M. Capetillo
-  	8-3-2016:
-  		- Added the old title-info element for organization
-  	8-16-2016:
-  		- Make the margin-bottom less aggressive
-  		- Add rc_page-title
-  */
+	Components: Info Bars (Proxy)
+	Version 1.0
+	Date: 8-4-2016
+	Author: Corey M. Capetillo
+	8-3-2016:
+		- Added the old title-info element for organization
+	8-16-2016:
+		- Make the margin-bottom less aggressive
+		- Add rc_page-title
+*/
   /*
-  	Dynamic
-  	Heavily dependant on javascript to deliver a specific effect.
-  */
+	Dynamic
+	Heavily dependant on javascript to deliver a specific effect.
+*/
   /*
-  	Vendors
-  	Impoted libraries, generally serving a singular purpose.
-  */
+	Vendors
+	Impoted libraries, generally serving a singular purpose.
+*/
   /* Temporary fix until we no longer need to use .new {} */
   /*
-  	Misc
-  	Items that don't fit anywhere else. Usually found in a singular location within the app.
-  */
+	Misc
+	Items that don't fit anywhere else. Usually found in a singular location within the app.
+*/
 }
+
 .recharge .text--left {
   text-align: left !important;
 }
+
 .recharge .text--right {
   text-align: right !important;
 }
+
 .recharge .text--center {
   text-align: center !important;
 }
+
 .recharge .text--justify {
   text-align: justify !important;
   text-justify: inter-ideograph;
 }
+
 .recharge .text--nowrap {
   white-sace: nowrap;
 }
+
 .recharge .text--hide {
   font: 0/0 a;
   color: transparent;
@@ -108,13 +114,16 @@
   background-color: transparent;
   border: 0;
 }
+
 .recharge .clearfix:before, .recharge .clearfix:after {
   content: " ";
   display: table;
 }
+
 .recharge .clearfix:after {
   clear: both;
 }
+
 @media (max-width: 767px) {
   .recharge .rc_hidden__xs {
     display: none !important;
@@ -123,6 +132,7 @@
     display: none !important;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .recharge .rc_hidden__sm {
     display: none !important;
@@ -131,6 +141,7 @@
     display: none !important;
   }
 }
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .recharge .rc_hidden__md {
     display: none !important;
@@ -139,6 +150,7 @@
     display: none !important;
   }
 }
+
 @media (min-width: 1200px) {
   .recharge .rc_hidden__lg {
     display: none !important;
@@ -147,6 +159,7 @@
     display: none !important;
   }
 }
+
 @media (max-width: 767px) {
   .recharge .rc_visible__xs {
     display: initial !important;
@@ -200,6 +213,7 @@
     display: inline-block !important;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .recharge .rc_visible__sm {
     display: initial !important;
@@ -253,6 +267,7 @@
     display: inline-block !important;
   }
 }
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .recharge .rc_visible__md {
     display: initial !important;
@@ -306,6 +321,7 @@
     display: inline-block !important;
   }
 }
+
 @media (min-width: 1200px) {
   .recharge .rc_visible__lg {
     display: initial !important;
@@ -359,11 +375,13 @@
     display: inline-block !important;
   }
 }
+
 .recharge .updates__block {
   padding-bottom: 2em;
   border-bottom: 1px solid #EEE;
   margin-bottom: 2em;
 }
+
 .recharge .updates__block > ul,
 .recharge .updates__block > ol,
 .recharge .updates__block hr,
@@ -371,24 +389,29 @@
   margin-top: 1em !important;
   margin-bottom: 1em !important;
 }
+
 .recharge .updates__block code {
   color: #ec3d10;
 }
+
 .recharge .updates__block ul li,
 .recharge .updates__block ol li {
   line-height: 1.61803em;
   margin-top: 0;
 }
+
 .recharge .rc_table {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   vertical-align: top;
 }
+
 .recharge .rc_table td:last-child {
   white-space: nowrap;
   width: 1%;
 }
+
 .recharge .rc_button {
   text-align: center;
   text-decoration: none;
@@ -399,91 +422,106 @@
   min-width: 100px;
   display: inline-block;
   cursor: pointer;
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
+  touch-action: manipulation;
   white-space: nowrap;
   vertical-align: middle;
 }
+
 .recharge .button--large.button, .recharge .rc_modal__actions .button, .rc_modal__actions .recharge .button {
   font-size: inherit;
 }
+
 .recharge .rc_button.rc_button--link.rc_button--alt {
   text-decoration: none;
 }
+
 .recharge .form__actions, .recharge .rc_modal__actions {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin-top: 32px;
   margin-bottom: 60px;
 }
+
 .recharge .form__actions .button, .recharge .rc_modal__actions .button {
-  -webkit-box-flex: 100%;
-      -ms-flex: 100%;
-          flex: 100%;
+  flex: 100%;
 }
+
 .recharge .form__actions .button + .button, .recharge .rc_modal__actions .button + .button {
   margin-left: 13px;
 }
+
 .recharge .rc_layout__container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 10px;
   padding-right: 10px;
 }
+
 .recharge .rc_layout__container:before, .recharge .rc_layout__container:after {
   content: " ";
   display: table;
 }
+
 .recharge .rc_layout__container:after {
   clear: both;
 }
+
 @media (min-width: 768px) {
   .recharge .rc_layout__container {
     max-width: 740px;
   }
 }
+
 @media (min-width: 992px) {
   .recharge .rc_layout__container {
     max-width: 960px;
   }
 }
+
 @media (min-width: 1200px) {
   .recharge .rc_layout__container {
     max-width: 1160px;
   }
 }
+
 .recharge .rc_layout {
   margin-left: -10px;
   margin-right: -10px;
 }
+
 .recharge .rc_layout:before, .recharge .rc_layout:after {
   content: " ";
   display: table;
 }
+
 .recharge .rc_layout:after {
   clear: both;
 }
+
 .recharge .rc_layout__container {
   box-sizing: border-box;
 }
+
 .recharge .rc_layout__container:before {
   display: table;
   content: " ";
 }
+
 .recharge .rc_layout {
   margin-left: -10px;
   margin-right: -10px;
   box-sizing: border-box;
 }
+
 .recharge .rc_layout:before, .recharge .rc_layout:after {
   content: " ";
   display: table;
 }
+
 .recharge .rc_layout:after {
   clear: both;
 }
+
 .recharge .rc_layout__sidebar {
   box-sizing: border-box;
   position: relative;
@@ -493,6 +531,7 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .recharge .rc_layout__sidebar {
     position: relative;
@@ -503,6 +542,7 @@
     padding-right: 10px;
   }
 }
+
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .recharge .rc_layout__sidebar {
     position: relative;
@@ -513,6 +553,7 @@
     padding-right: 10px;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .recharge .rc_layout__sidebar {
     position: relative;
@@ -523,6 +564,7 @@
     padding-right: 10px;
   }
 }
+
 .recharge .rc_layout__content {
   box-sizing: border-box;
   position: relative;
@@ -532,16 +574,18 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .recharge .rc_layout__content {
     position: relative;
     float: left;
-    width: 66.6666666667%;
+    width: 66.66667%;
     min-height: 1px;
     padding-left: 10px;
     padding-right: 10px;
   }
 }
+
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .recharge .rc_layout__content {
     position: relative;
@@ -552,6 +596,7 @@
     padding-right: 10px;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .recharge .rc_layout__content {
     position: relative;
@@ -562,6 +607,7 @@
     padding-right: 10px;
   }
 }
+
 .recharge .rc_layout__full {
   box-sizing: border-box;
   position: relative;
@@ -571,39 +617,48 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+
 .recharge .rc_page-title {
   width: 100%;
   min-height: 40px;
 }
+
 .recharge .rc_page-title h1, .recharge .rc_page-title .h1 {
   margin-top: 0;
 }
+
 .recharge .rc_page-title__description {
   display: table;
   width: 100%;
   font-size: 16px;
   text-align: left;
 }
+
 .recharge .rc_info-bar {
   display: table;
   width: 100%;
 }
+
 .recharge .rc_info-bar__label, .recharge .rc_info-bar__content {
   display: table-cell;
   vertical-align: top;
 }
+
 .recharge .rc_info-bar__label {
   text-align: left;
 }
+
 .recharge .rc_info-bar__content {
   text-align: right;
   white-space: nowrap;
 }
+
 .recharge .rc_title-bar {
   display: table;
   width: 100%;
   min-height: 40px;
 }
+
 .recharge .rc_title-bar h1, .recharge .rc_title-bar .h1,
 .recharge .rc_title-bar h2, .recharge .rc_title-bar .h2,
 .recharge .rc_title-bar h3, .recharge .rc_title-bar .h3,
@@ -612,10 +667,12 @@
 .recharge .rc_title-bar h6, .recharge .rc_title-bar .h6 {
   margin-top: 0;
 }
+
 .recharge .rc_title-bar__title, .recharge .rc_title-bar__content {
   display: table-cell;
   vertical-align: top;
 }
+
 .recharge .rc_title-bar__content {
   text-align: right;
   font-size: 16px;
@@ -645,6 +702,7 @@
   -webkit-overflow-scrolling: touch;
   outline: 0;
 }
+
 .rc_modal__close {
   font-family: fontawesome;
   position: absolute;
@@ -658,13 +716,16 @@
   text-align: right;
   z-index: 100090;
 }
+
 .rc_modal__close:before {
   content: "\f00d";
   font-size: 24px;
 }
+
 .rc_modal__title {
   padding-right: 42px;
 }
+
 .rc_modal__content {
   position: relative;
   background-color: #ffffff;
@@ -672,10 +733,12 @@
   outline: 0;
   padding: 35px 30px;
 }
+
 .rc_modal__content img {
   max-width: 100%;
   height: auto;
 }
+
 .rc_modal__content h1, .rc_modal__content .h1,
 .rc_modal__content h2, .rc_modal__content .h2,
 .rc_modal__content h3, .rc_modal__content .h3,
@@ -683,14 +746,17 @@
 .rc_modal__content h5, .rc_modal__content .h5 {
   color: #424242;
 }
+
 .rc_modal__content h3, .rc_modal__content .h3 {
   font-family: 'ralewaysemibold', arial, sans-serif;
 }
+
 @media (min-width: 768px) {
   .rc_modal--small {
     width: 300px;
   }
 }
+
 @media (min-width: 992px) {
   .rc_modal--large {
     width: 900px;
@@ -698,22 +764,20 @@
 }
 
 .rc_modal.rc_fade .rc_modal__dialog {
-  -webkit-transform: translate(0, -25%);
-          transform: translate(0, -25%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: -webkit-transform 0.3s ease-out;
+  transform: translate(0, -25%);
   transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
+
 .rc_modal.rc_in .rc_modal__dialog {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  transform: translate(0, 0);
 }
+
 .rc_modal__dialog {
   position: relative;
   width: auto;
   margin: 10px;
 }
+
 @media (min-width: 768px) {
   .rc_modal__dialog {
     width: 700px;
@@ -724,6 +788,7 @@
 .rc_modal__open {
   overflow: hidden;
 }
+
 .rc_modal__open .rc_modal {
   overflow-x: hidden;
   overflow-y: auto;
@@ -738,12 +803,13 @@
   z-index: 100080;
   background-color: #000;
 }
+
 .rc_modal__backdrop.rc_fade {
   opacity: 0;
   filter: alpha(opacity=0);
-  -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
+
 .rc_modal__backdrop.rc_in, .rc_modal__backdrop.rc_fade.rc_in {
   opacity: 0.7;
   filter: alpha(opacity=70);
@@ -765,9 +831,9 @@
 .fade,
 .rc_fade {
   opacity: 0;
-  -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
+
 .fade.in, .fade.rc_in,
 .rc_fade.in,
 .rc_fade.rc_in {
@@ -791,12 +857,13 @@
   z-index: 100080;
   background-color: #000;
 }
+
 .rc_modal__backdrop.rc_fade {
   opacity: 0;
   filter: alpha(opacity=0);
-  -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
+
 .rc_modal__backdrop.rc_in, .rc_modal__backdrop.rc_fade.rc_in {
   opacity: 0.7;
   filter: alpha(opacity=70);

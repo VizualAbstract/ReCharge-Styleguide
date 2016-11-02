@@ -3,7 +3,7 @@
 		<a href="#" class="navbar__brand">
 			ReCharge
 		</a><!-- .navbar__brand -->
-		<div class="navbar__toggle collapsed" data-toggle="collapse__menu" data-target="#recharge-navbar">
+		<div class="navbar__toggle collapsed" data-toggle="collapse__menu" data-target="#recharge-navbar_A">
 			<i class="fa fa-bars"></i>
 		</div><!-- .navbar__toggle .collapsed -->
 		<div class="visible-xs">
@@ -16,7 +16,7 @@
 				</div><!-- .switch__inner -->
 			</label><!-- .switch -->
 		</div>
-		<div class="navbar__collapse collapse">
+		<div id="recharge-navbar_A" class="navbar__collapse collapse">
 			<ul class="navbar__links list list--inline">
 				<li class="active">
 					<a href="#">ORDERS</a>
@@ -83,10 +83,10 @@
 	<a href="#" class="navbar__brand">
 		ReCharge
 	</a><!-- .navbar__brand -->
-	<div class="navbar__toggle collapsed" data-toggle="collapse__menu" data-target="#recharge-navbar-setup">
+	<div class="navbar__toggle collapsed" data-toggle="collapse__menu" data-target="#recharge-navbar-setup--B">
 		<i class="fa fa-bars"></i>
 	</div><!-- .navbar__toggle .collapsed -->
-	<div class="navbar__collapse collapse">
+	<div id="recharge-navbar-setup--B" class="navbar__collapse collapse">
 		<ul class="navbar__links list list--inline">
 			<li>
 				<a href="#">ORDERS</a>
@@ -112,7 +112,7 @@
 	<a href="#" class="navbar__brand navbar__brand--shopify">
 		ReCharge
 	</a><!-- .navbar__brand -->
-	<div class="navbar__toggle collapsed" data-toggle="collapse__menu" data-target="#recharge-navbar-setup">
+	<div class="navbar__toggle collapsed" data-toggle="collapse__menu" data-target="#recharge-navbar-setup--C">
 		<i class="fa fa-bars"></i>
 	</div><!-- .navbar__toggle .collapsed -->
 	<div class="visible-xs">
@@ -125,7 +125,7 @@
 			</div><!-- .switch__inner -->
 		</label><!-- .switch -->
 	</div>
-	<div id="recharge-navbar-setup" class="navbar__collapse collapse">
+	<div id="recharge-navbar-setup--C" class="navbar__collapse collapse">
 		<ul class="navbar__links list list--inline">
 			<li>
 				<a href="#">ORDERS</a>
