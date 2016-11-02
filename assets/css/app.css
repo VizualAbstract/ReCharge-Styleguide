@@ -5160,6 +5160,10 @@ a:hover,
   display: block;
 }
 
+.new .dropdown__menu li > a {
+  cursor: pointer;
+}
+
 .new .dropdown__menu li > a,
 .new .dropdown__menu li > span {
   height: 40px;
