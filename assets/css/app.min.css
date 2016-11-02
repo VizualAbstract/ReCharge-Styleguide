@@ -1641,7 +1641,7 @@ html.new body {
 .new .slick-track:after {
   clear: both;
 }
-.slick-loading .new .slick-track {
+.new .slick-loading .slick-track {
   visibility: hidden;
 }
 .new .slick-slide {
@@ -1662,13 +1662,13 @@ html.new body {
 .new .slick-slide.dragging img {
   pointer-events: none;
 }
-.slick-initialized .new .slick-slide {
+.new .slick-initialized .slick-slide {
   display: block;
 }
-.slick-loading .new .slick-slide {
+.new .slick-loading .slick-slide {
   visibility: hidden;
 }
-.slick-vertical .new .slick-slide {
+.new .slick-vertical .slick-slide {
   display: block;
   height: auto;
   border: 1px solid transparent;
@@ -4023,6 +4023,7 @@ h1 + .setup-header__description,
   padding: 18px 20px 0;
   margin-left: 24px;
   margin-top: -7px;
+  margin-top: 19px;
   display: none;
   margin-bottom: 23px;
 }

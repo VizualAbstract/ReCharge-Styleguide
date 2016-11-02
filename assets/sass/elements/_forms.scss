@@ -724,7 +724,10 @@ input[type="checkbox"],
 	background-color: #f3f3f3;
 	padding: 18px 20px 0;
 	margin-left: 24px;
+
 	margin-top: -7px;
+	margin-top: 19px; // Not sure original value is -7px. Research. For now, overwrite it here
+
 	display: none;
 
 	margin-bottom: 23px;
