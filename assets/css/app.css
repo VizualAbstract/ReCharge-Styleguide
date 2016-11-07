@@ -1104,6 +1104,11 @@ html.new body {
   line-height: 21px;
 }
 
+.new .rc_text--muted,
+.new .rc_text--muted p {
+  color: #8E8F8E;
+}
+
 .new #colors + .rc_sg__example {
   text-align: center;
 }
@@ -3432,7 +3437,7 @@ h1 + .setup-header__description,
 .new .form__help {
   color: #676767;
   margin-top: -6px;
-  margin-bottom: 16px;
+  margin-bottom: 5px;
   line-height: 25px;
 }
 
