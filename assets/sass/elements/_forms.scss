@@ -740,7 +740,7 @@ input[type="checkbox"],
 
 	.form__group {
 		.form__select {
-			margin-bottom: 0; // Quick fix, too much margin beneath a form__select in contextual form dropdown
+			// margin-bottom: 0; // Quick fix, too much margin beneath a form__select in contextual form dropdown
 		}
 	}
 }

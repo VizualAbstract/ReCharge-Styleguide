@@ -3139,7 +3139,7 @@ h1 + .setup-header__description,
 
 .new .setup-header__title,
 .new .header__title {
-  color: #2c93ac;
+  color: #53BAD3;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -4320,10 +4320,6 @@ h1 + .setup-header__description,
   margin-bottom: 18px;
 }
 
-.new .contextual__input__options .form__group .form__select, .new .contextual__input__options .form__search .form__select, .new .contextual__input__options .form__search__no-results .form__select, .new .contextual__input__options .form__group div.form__number, .new .contextual__input__options .form__search div.form__number, .new .contextual__input__options .form__search__no-results div.form__number {
-  margin-bottom: 0;
-}
-
 .new .form__group .form__radio__label:last-of-type, .new .form__search .form__radio__label:last-of-type, .new .form__search__no-results .form__radio__label:last-of-type,
 .new .form__group .form__checkbox__label:last-of-type, .new .form__search .form__checkbox__label:last-of-type, .new .form__search__no-results .form__checkbox__label:last-of-type {
   margin-bottom: -16px;
@@ -5156,12 +5152,8 @@ a:hover,
 }
 
 .new .dropdown__menu li.active > a, .new .dropdown__menu li:hover > a, .new .dropdown__menu li:active > a {
-  background-color: #2c93ac;
+  background-color: #53BAD3;
   display: block;
-}
-
-.new .dropdown__menu li > a {
-  cursor: pointer;
 }
 
 .new .dropdown__menu li > a,
