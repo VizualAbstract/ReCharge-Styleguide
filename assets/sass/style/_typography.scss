@@ -175,3 +175,10 @@ hr {
 		line-height: $line-height-small;
 	}
 }
+
+.rc_text--muted {
+	&,
+	& p {
+		color: $gray;
+	}
+}
