@@ -734,6 +734,7 @@ input[type="checkbox"],
 
 	&:last-of-type {
     	margin-bottom: 18px;
+    	margin-bottom: 0; // Fix, contextual items should be within form__group, so margin is automatically added. This removes double margin
 	}
 
 	@extend .clearfix;

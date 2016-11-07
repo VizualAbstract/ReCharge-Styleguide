@@ -4323,6 +4323,7 @@ h1 + .setup-header__description,
 
 .new .contextual__input__options:last-of-type {
   margin-bottom: 18px;
+  margin-bottom: 0;
 }
 
 .new .form__group .form__radio__label:last-of-type, .new .form__search .form__radio__label:last-of-type, .new .form__search__no-results .form__radio__label:last-of-type,
