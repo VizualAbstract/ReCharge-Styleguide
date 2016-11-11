@@ -679,6 +679,10 @@
   white-space: nowrap;
 }
 
+.recharge .table {
+  width: 100%;
+}
+
 /*
 	Dynamic: Modals
 	Version 1.0
