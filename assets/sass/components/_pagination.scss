@@ -1,0 +1,26 @@
+/*
+	Components: Pagination
+	Version 1.0
+	Date: 11-16-2016
+	Author: Corey M. Capetillo
+
+	11-16-2016
+		- Conception
+*/
+
+.pagination {
+	@extend .list;
+	@extend .list--inline;
+	li {
+		+ li {
+			padding-left: 5px;
+		}
+	}
+	.active {
+		a {
+			color: $gray-dark;
+			font-family: 'ralewaysemibold';
+			cursor: default;
+		}
+	}
+}
