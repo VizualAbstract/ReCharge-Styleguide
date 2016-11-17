@@ -7,6 +7,10 @@
 			<h3 class="rc_modal__title">Select a product</h3>
 			<p>Click on the product name to preview in a new tab.</p>
 			<br>
+			<div class="form__group">
+				<label for="date" class="form__label">Date</label>
+				<input type="text" name="date" id="date" value="2016-11-08" placeholder="select a date" class="form__date">
+			</div><!-- .form__group -->
 			<form class="form__search">
 				<div class="input-group input-group--full">
 					<input type="text" id="product_search" name="product_search" placeholder="Search products" value="" class="form__input" data-com.agilebits.onepassword.user-edited="yes">

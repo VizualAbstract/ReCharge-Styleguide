@@ -31,6 +31,13 @@
 	content: "\f005";
 }
 
+.admin-recharge a,
+a.admin-recharge {
+	color: #53BAD3;
+	&:hover {
+		color: darken(#53BAD3, 15%);
+	}
+}
 .admin-recharge {
 	&.switch {
 		&:after {
@@ -103,11 +110,11 @@
 	}
 }
 
-.admin-shopify::after {
+.admin-shopify:after {
 	color: #7AB55C;
 	content: "\f005  Shopify";
 }
-.admin-bigcommerce::after {
+.admin-bigcommerce:after {
 	color: #4A8BF2;
 	content: "\f005  BigCom";
 }
