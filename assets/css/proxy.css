@@ -84,6 +84,7 @@
 	Misc
 	Items that don't fit anywhere else. Usually found in a singular location within the app.
 */
+  /* Base layout styles for improved rendering of layout elements */
 }
 
 .recharge .text--left {
@@ -681,6 +682,10 @@
 
 .recharge .table {
   width: 100%;
+}
+
+.recharge .table th {
+  text-align: left;
 }
 
 /*

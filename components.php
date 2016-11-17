@@ -110,4 +110,9 @@
 <?php include('_components/continue-bar.php'); ?>
 </div><!-- .rc_sg__example -->
 
+<h2 class="rc_sg__pattern_title" id="pagination">Pagination</h2>
+<div class="rc_sg__example">
+<?php include('_components/pagination.php'); ?>
+</div><!-- .rc_sg__example -->
+
 <?php include('includes/footer.php'); ?>
