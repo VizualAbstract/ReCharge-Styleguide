@@ -97,10 +97,10 @@
 	min-height: $navbar-height;
 	min-width: 320px;
 	font-family: 'ralewaymedium', arial, sans-serif;
-
 	width: 100%;
 	background-color: $navbar-background;
 	color: $navbar-color;
+
 	&__container {
 		margin-left: auto;
 		margin-right: auto;
@@ -131,12 +131,10 @@
 			top: 4px;
 		}
 	}
-
 	.switch {
 		position: relative;
 		margin: 0 ($padding-large-vertical / 2) 0 0;
 	}
-
 	&__collapse {
 		&.collapse {
 			display: block;
@@ -163,13 +161,16 @@
 
     @include text-hide();
 
-	background-image: url('../images/navbar__brand--white.svg');
+	background-image: url('../images/logos/logo__icon.svg');
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 
 	@media screen and (min-width: 355px) and (max-width: 915px){ // max-width: 955px // 420px // $screen-xs-max
-		background-image: url('../images/navbar__brand--mobile--white.svg');
-		width: 140px;
+		width: 145px;
+
+		background-image: url('../images/logos/logo.svg');
+		background-size: 135px 40px;
+		background-position: 100% 50%;
 	}
 }
 
@@ -228,22 +229,22 @@
 		display: block !important;
 	}
 	.navbar__brand {
-		background-image: url('../images/navbar__brand--mobile--white.svg');
-		width: 140px;
+		width: 145px;
+
+		background-image: url('../images/logos/logo.svg');
+		background-size: 135px 40px;
+		background-position: 100% 50%;
 	}
 }
 
 .navbar--setup {
-	background-color: $navbar-setup-background;
 	color: $navbar-setup-color;
+	background-color: $navbar-setup-background;
 	li {
 		> a,
 		> span {
 			color: $navbar-setup-color;
-			background-color: $navbar-setup-background;
-			@media screen and (max-width: $screen-xs-max) {
-				background-color: darken($navbar-setup-background, 10%);
-			}
+			// background-color: $navbar-setup-background;
 		}
 	}
 	.navbar__brand {
@@ -255,29 +256,45 @@
 		li:active {
 			> a,
 			> span {
-				color: $white;
-				background-color: $gray-dark;
+				color: $navbar-setup-color;
+				background-color: $navbar-setup-active-background;
+			}
+		}
+	}
+	@media screen and (max-width: 915px) {
+		.navbar__collapse {
+			.navbar__links {
+				color: $navbar-setup-color;
+				background-color: $navbar-setup-active-background;
+				li.active,
+				li:hover,
+				li:active {
+					> a,
+					> span {
+						background-color: darken($navbar-setup-active-background, 10%);
+					}
+				}
 			}
 		}
 	}
 	.dropdown {
 		&--open .dropdown__trigger {
-			background-color: $gray-dark !important;
-			color: $white;
+			color: $navbar-setup-color;
+			background-color: $navbar-setup-active-background;
 		}
 		&__menu {
 			li > a,
 			li > span {
-				background-color: darken($navbar-setup-background, 10%);
-				color: $gray-darker;
+				color: $navbar-setup-color;
+				background-color: $navbar-setup-active-background;
 			}
 			li.active,
 			li:hover,
 			li:active {
 				> a,
 				> span {
-					background-color: $gray-dark;
-					color: $white;
+					color: $navbar-setup-color;
+					background-color: darken($navbar-setup-active-background, 10%);
 				}
 			}
 		}
@@ -286,7 +303,10 @@
 		color: $gray-darker;
 	}
 	.navbar__brand {
-		background-image: url('../images/navbar__brand--gray-darker.svg');
+		background-image: url('../images/logos/logo__icon__grey.svg');
+		width: 57px;
+		background-position: 50% 50%;
+		background-size: 26px 30px;
 	}
 	&.navbar--mobile {
 		li {

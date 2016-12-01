@@ -83,7 +83,7 @@
 .form__help {
 	color: $gray-dark;
 	margin-top: -6px;
-	margin-bottom: 16px;
+	margin-bottom: 5px;
 	line-height: 25px;
 }
 
@@ -724,20 +724,24 @@ input[type="checkbox"],
 	background-color: #f3f3f3;
 	padding: 18px 20px 0;
 	margin-left: 24px;
+
 	margin-top: -7px;
+	margin-top: 19px; // Not sure original value is -7px. Research. For now, overwrite it here
+
 	display: none;
 
 	margin-bottom: 23px;
 
 	&:last-of-type {
     	margin-bottom: 18px;
+    	margin-bottom: 0; // Fix, contextual items should be within form__group, so margin is automatically added. This removes double margin
 	}
 
 	@extend .clearfix;
 
 	.form__group {
 		.form__select {
-			margin-bottom: 0; // Quick fix, too much margin beneath a form__select in contextual form dropdown
+			// margin-bottom: 0; // Quick fix, too much margin beneath a form__select in contextual form dropdown
 		}
 	}
 }

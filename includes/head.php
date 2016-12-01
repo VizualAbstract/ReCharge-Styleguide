@@ -3,7 +3,7 @@
 <meta name="robots" content="noindex, nofollow">
 
 <!-- App Code -->
-<link rel="stylesheet" href="assets/css/app.min.css">
+<link rel="stylesheet" href="assets/css/app.css">
 <link rel="stylesheet" href="assets/css/font-awesome.css">
 
 <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>

@@ -193,6 +193,13 @@
 // 	@import 'pages/signup_questions.scss';
 // 	@import 'sass/common/_utility.scss';
 // }
+	/* Base layout styles for improved rendering of layout elements */
+	.table {
+		width: 100%;
+		th {
+			text-align: left;
+		}
+	}
 }
 
 @import 'dynamic/_modals.scss';

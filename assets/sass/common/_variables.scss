@@ -30,9 +30,7 @@ $red: #EC3D10;
 $magenta: #C00399;
 $pink: #D06EAB;
 
-
-
-$brand-blue: #2c93ac !default;
+$brand-blue: $cyan !default;
 $black: #000000 !default;
 $white: #ffffff !default;
 $red: #EC3D10 !default;
@@ -101,14 +99,14 @@ $navbar-background: $gray-darker !default;
 $navbar-color: $white !default;
 $navbar-active-background: $black !default;
 
-$navbar-setup-background: #d6d6d6 !default;
+$navbar-setup-background: $gray-lighter !default;
 $navbar-setup-color: $gray-darker !default;
-$navbar-setup-active-background: #bebebe !default;
+$navbar-setup-active-background: #D6D6D6 !default;
 
 $footer-height: 50px;
 $footer-margin: 0;
 
-$continue-background: #d6d6d6 !default;
+$continue-background: #D6D6D6 !default;
 
 $h1-font-size: 35px !default;
 $h2-font-size: 30px !default;

@@ -37,7 +37,7 @@ $pd-font-family: "raleway-semibold", Helvetica, Arial, sans-serif !default;
 	// top: 9437px !important;
 	// position: absolute !important;
 
-	z-index: 9999;
+	z-index: $zindex-modal + 9;
 	display: block;
 	position: relative;
 	color: $pd-text-color;
@@ -86,7 +86,7 @@ $pd-font-family: "raleway-semibold", Helvetica, Arial, sans-serif !default;
 	select {
 		cursor: pointer;
 		position: absolute;
-		z-index: 9998;
+		z-index: $zindex-modal + 8;
 		margin: 0;
 		left: 0;
 		top: 5px;
@@ -124,7 +124,7 @@ $pd-font-family: "raleway-semibold", Helvetica, Arial, sans-serif !default;
 	display: inline-block;
 	*display: inline;
 	position: relative;
-	z-index: 9999;
+	z-index: $zindex-modal + 9;
 	overflow: hidden;
 	padding: 5px 2px 0;
 	font-size: 14px;
