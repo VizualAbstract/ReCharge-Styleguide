@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="-551.482 489.4 134.082 34.476" style="enable-background:new -551.482 489.4 134.082 34.476;" xml:space="preserve">
+<svg version="1.1" id="logo__grey" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="-551.482 489.4 134.082 34.476" style="enable-background:new -551.482 489.4 134.082 34.476;"
+	 xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;}
+	.st0{fill:#424242;}
 </style>
 <g>
 	<path class="st0" d="M-525.522,501.482l-8.708-5.026c-0.05-0.025-0.112-0.037-0.162-0.037s-0.112,0.012-0.162,0.037l-8.684,5.014

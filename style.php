@@ -5,6 +5,11 @@
 
 <hr>
 
+<h2 class="rc_sg__pattern_title" id="branding">Branding</h2>
+<div class="rc_sg__example">
+<?php include('_style/branding.php'); ?>
+</div><!-- .example -->
+
 <h2 class="rc_sg__pattern_title" id="colors">Colors</h2>
 <div class="rc_sg__example">
 <?php include('_style/colors.php'); ?>
