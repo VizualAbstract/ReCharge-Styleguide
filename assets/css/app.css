@@ -2876,6 +2876,8 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 	Version 1.0
 	Date: 5-5-2016
 	Author: Corey M. Capetillo
+	01-25-2017:
+		- Reduce margin beneath setup header title
 */
   font-family: 'ralewayregular', arial, sans-serif;
   font-weight: normal;
@@ -2954,6 +2956,8 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 		- Small patch to fix alignment with select forms within input groups
 	10-13-16:
 		- Add a more comprehensive approach to invalid inputs (color, number, dropdown selects, improved checkbox & radio)
+	01-25-17
+		- Add support .form__help, for post-contextual form inputs
 */
   /* Contextual sub-form */
   /* 
@@ -2971,15 +2975,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 
 .new #wrapper {
   margin-bottom: 45px;
-}
-
-.new h1 + .header__description,
-.new .h1 + .header__description
-h1 + .setup-header__description,
-.new .h1 + .setup-header__description {
-  margin-top: -38px;
-  margin-bottom: 38px;
-  padding-top: 10px;
 }
 
 .new .list, .new .rating, .new .error-list, .new .rc_pagination {
@@ -3038,6 +3033,14 @@ h1 + .setup-header__description,
   font-style: normal;
   margin-top: 23px;
   margin-bottom: 38px;
+}
+
+.new h1 + .header__description
++ .setup-header__description, .new .h1 + .header__description
++ .setup-header__description {
+  margin-top: -38px;
+  margin-bottom: 38px;
+  padding-top: 10px;
 }
 
 .new h2, .new .h2 {
@@ -3127,6 +3130,10 @@ h1 + .setup-header__description,
   font-style: normal;
   line-height: 1;
   letter-spacing: -0.037em;
+}
+
+.new .setup-header__title {
+  margin-bottom: 20px;
 }
 
 .new .table {
@@ -4312,6 +4319,11 @@ h1 + .setup-header__description,
   margin-bottom: 0;
 }
 
+.new .contextual__input__options + .form__help {
+  margin-top: 10px;
+  display: none;
+}
+
 .new .form__group .form__radio__label:last-of-type, .new .form__search .form__radio__label:last-of-type, .new .form__search__no-results .form__radio__label:last-of-type,
 .new .form__group .form__checkbox__label:last-of-type, .new .form__search .form__checkbox__label:last-of-type, .new .form__search__no-results .form__checkbox__label:last-of-type {
   margin-bottom: -16px;
@@ -4329,11 +4341,27 @@ h1 + .setup-header__description,
   display: block;
 }
 
+.new .form__checkbox:checked + .form__checkbox__label + .contextual__input__options + .form__help,
+.new .form__checkbox:checked + .form__radio__label + .contextual__input__options + .form__help,
+.new .form__radio:checked + .form__checkbox__label + .contextual__input__options + .form__help,
+.new .form__radio:checked + .form__radio__label + .contextual__input__options + .form__help {
+  display: block;
+  margin-left: 24px;
+}
+
 .new .form__checkbox:checked + .form__checkbox__label + .form__help + .contextual__input__options,
 .new .form__checkbox:checked + .form__radio__label + .form__help + .contextual__input__options,
 .new .form__radio:checked + .form__checkbox__label + .form__help + .contextual__input__options,
 .new .form__radio:checked + .form__radio__label + .form__help + .contextual__input__options {
   display: block;
+}
+
+.new .form__checkbox:checked + .form__checkbox__label + .form__help + .contextual__input__options + .form__help,
+.new .form__checkbox:checked + .form__radio__label + .form__help + .contextual__input__options + .form__help,
+.new .form__radio:checked + .form__checkbox__label + .form__help + .contextual__input__options + .form__help,
+.new .form__radio:checked + .form__radio__label + .form__help + .contextual__input__options + .form__help {
+  display: block;
+  margin-left: 24px;
 }
 
 .new input[type="text"].form__color {

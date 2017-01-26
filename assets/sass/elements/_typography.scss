@@ -3,6 +3,8 @@
 	Version 1.0
 	Date: 5-5-2016
 	Author: Corey M. Capetillo
+	01-25-2017:
+		- Reduce margin beneath setup header title
 */
 // body {
 // 	font-weight: 500;
@@ -23,15 +25,6 @@
 // 	margin-left: auto;
 // 	margin-right: auto;
 // }
-
-h1 + .header__description, 
-.h1 + .header__description
-h1 + .setup-header__description, 
-.h1 + .setup-header__description {
-	margin-top: -38px;
-	margin-bottom: 38px;
-	padding-top: 10px;
-}
 
 .list {
 	margin: 0;
@@ -86,7 +79,14 @@ h1, .h1 {
 	font-style: normal;
 	margin-top: 23px;
 	margin-bottom: 38px;
+	+ .header__description
+	+ .setup-header__description {
+		margin-top: -38px;
+		margin-bottom: 38px;
+		padding-top: 10px;
+	}
 }
+
 h2, .h2 {
 	font-size: $h2-font-size;
 	font-family: 'ralewayregular', arial, san-serif;
@@ -163,5 +163,11 @@ hr {
 		font-style: normal;
 		line-height: 1;
 		letter-spacing: -0.037em;
+	}
+}
+
+.setup-header {
+	&__title {
+		margin-bottom: 20px;
 	}
 }
