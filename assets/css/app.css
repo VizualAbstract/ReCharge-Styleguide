@@ -5430,48 +5430,59 @@ a:hover,
   right: 50%;
 }
 
-.new .page-title {
+.new .page-title,
+.new .rc_page-title {
   width: 100%;
   min-height: 40px;
   margin-top: 23px;
   margin-bottom: 38px;
 }
 
-.new .page-title h1, .new .page-title .h1 {
+.new .page-title h1, .new .page-title .h1,
+.new .rc_page-title h1,
+.new .rc_page-title .h1 {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.new .page-title__description {
+.new .page-title__description,
+.new .rc_page-title__description {
   display: table;
   width: 100%;
   font-size: 16px;
   text-align: left;
 }
 
-.new .page-title__description p {
+.new .page-title__description p,
+.new .rc_page-title__description p {
   margin: 15px 0;
 }
 
-.new .info-bar {
+.new .info-bar,
+.new .rc_info-bar {
   display: table;
   width: 100%;
 }
 
-.new .info-bar__label, .new .info-bar__content {
+.new .info-bar__label, .new .info-bar__content,
+.new .rc_info-bar__label,
+.new .rc_info-bar__content {
   display: table-cell;
 }
 
-.new .info-bar__label {
+.new .info-bar__label,
+.new .rc_info-bar__label {
   text-align: left;
 }
 
-.new .info-bar__content {
+.new .info-bar__content,
+.new .rc_info-bar__content {
   text-align: right;
   white-space: nowrap;
 }
 
-.new .title-bar {
+.new .title-bar,
+.new .rc_title-bar {
   display: table;
   width: 100%;
   min-height: 40px;
@@ -5483,72 +5494,99 @@ a:hover,
 .new .title-bar .tabs__list__item > a,
 .new .title-bar h4, .new .title-bar .h4,
 .new .title-bar h5, .new .title-bar .h5,
-.new .title-bar h6, .new .title-bar .h6 {
+.new .title-bar h6, .new .title-bar .h6,
+.new .rc_title-bar h1,
+.new .rc_title-bar .h1,
+.new .rc_title-bar h2,
+.new .rc_title-bar .h2,
+.new .rc_title-bar h3,
+.new .rc_title-bar .h3, .new .rc_title-bar .tabs__list__item > span,
+.new .rc_title-bar .tabs__list__item > a,
+.new .rc_title-bar h4,
+.new .rc_title-bar .h4,
+.new .rc_title-bar h5,
+.new .rc_title-bar .h5,
+.new .rc_title-bar h6,
+.new .rc_title-bar .h6 {
   margin-top: 0;
   margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
-  .new .title-bar__title, .new .title-bar__content {
+  .new .title-bar__title, .new .title-bar__content,
+  .new .rc_title-bar__title,
+  .new .rc_title-bar__content {
     display: table-cell;
     vertical-align: top;
   }
 }
 
-.new .title-bar__title .dropdown__trigger {
+.new .title-bar__title .dropdown__trigger,
+.new .rc_title-bar__title .dropdown__trigger {
   min-width: 271px;
   padding-left: 0;
   padding-right: 0;
 }
 
-.new .title-bar__content {
+.new .title-bar__content,
+.new .rc_title-bar__content {
   text-align: right;
   font-size: 16px;
   white-space: nowrap;
 }
 
-.new .title-bar__content .button + .button {
+.new .title-bar__content .button + .button,
+.new .rc_title-bar__content .button + .button {
   margin-left: 9px;
 }
 
-.new .title-bar__content .switch {
+.new .title-bar__content .switch,
+.new .rc_title-bar__content .switch {
   vertical-align: middle;
 }
 
 @media screen and (max-width: 991px) {
-  .new .title-bar__content {
+  .new .title-bar__content,
+  .new .rc_title-bar__content {
     margin-top: 10px;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     width: 100%;
   }
-  .new .title-bar__content a {
+  .new .title-bar__content a,
+  .new .rc_title-bar__content a {
     margin-left: auto;
   }
-  .new .title-bar__content .button {
+  .new .title-bar__content .button,
+  .new .rc_title-bar__content .button {
     -webkit-flex: 100%;
         -ms-flex: 100%;
             flex: 100%;
   }
-  .new .title-bar__content .button + .button {
+  .new .title-bar__content .button + .button,
+  .new .rc_title-bar__content .button + .button {
     margin-left: 13px;
   }
 }
 
-.new .title-info {
+.new .title-info,
+.new .rc_title-info {
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
   font-family: 'ralewayregular', arial, sans-serif;
 }
 
-.new .title-info a {
+.new .title-info a,
+.new .rc_title-info a {
   text-decoration: underline;
 }
 
 @media screen and (max-width: 767px) {
-  .new .title-info.pull-right, .new .title-info.pull-left {
+  .new .title-info.pull-right, .new .title-info.pull-left,
+  .new .rc_title-info.pull-right,
+  .new .rc_title-info.pull-left {
     float: none !important;
     display: block;
     text-align: left;

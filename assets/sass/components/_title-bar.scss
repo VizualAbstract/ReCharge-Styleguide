@@ -14,7 +14,8 @@
 		- Flex items don't right-align text properly. Set inner-link items with margin-left: auto;
 */
 
-.page-title {
+.page-title,
+.rc_page-title {
 	width: 100%;
 	min-height: 40px;
     margin-top: 23px;
@@ -93,7 +94,8 @@
 // 	}
 // }
 
-.info-bar {
+.info-bar,
+.rc_info-bar {
 	display: table;
 	width: 100%;
 	&__label,
@@ -109,7 +111,8 @@
 	}
 }
 
-.title-bar {
+.title-bar,
+.rc_title-bar {
 	display: table;
 	width: 100%;
 	min-height: 40px;
@@ -166,7 +169,8 @@
 }
 
 /* This will be removed */
-.title-info {
+.title-info,
+.rc_title-info {
 	font-weight: normal;
 	font-style: normal;
 	font-size: 16px;
