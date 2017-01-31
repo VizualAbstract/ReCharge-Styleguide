@@ -1,4 +1,5 @@
-.container {
+.container,
+.rc_container {
 	margin-right: auto;
 	margin-left: auto;
 	padding-left: floor(($grid-gutter-width / 2));
@@ -16,7 +17,6 @@
 		width: $container-lg;
 	}
 }
-
 
 #schedule_call {
 	// Prevents the margin around a header from forcing a scrollbar because of a height: 100% bug
@@ -46,12 +46,11 @@
 // Grid system
 // --------------------------------------------------
 
-
 // Container widths
 //
 // Set the container width, and override it for fixed navbars in media queries.
-
-.container {
+.container,
+.rc_container {
   @include container-fixed;
 
   @media (min-width: $screen-sm-min) {
@@ -70,8 +69,8 @@
 //
 // Utilizes the mixin meant for fixed width containers, but without any defined
 // width for fluid, full width layouts.
-
-.layout__container {
+.layout__container,
+.rc_layout__container {
   @include container-fixed;
 
   @media (min-width: $screen-sm-min) {
@@ -89,8 +88,8 @@
 // Row
 //
 // Rows contain and clear the floats of your columns.
-
-.layout {
+.layout,
+.rc_layout {
   @include make-row;
 }
 
@@ -98,7 +97,6 @@
 // Columns
 //
 // Common styles for small and large grid columns
-
 @include make-grid-columns;
 
 
@@ -106,7 +104,6 @@
 //
 // Columns, offsets, pushes, and pulls for extra small devices like
 // smartphones.
-
 @include make-grid(xs);
 
 
@@ -114,7 +111,6 @@
 //
 // Columns, offsets, pushes, and pulls for the small device range, from phones
 // to tablets.
-
 @media (min-width: $screen-sm-min) {
   @include make-grid(sm);
 }
@@ -123,7 +119,6 @@
 // Medium grid
 //
 // Columns, offsets, pushes, and pulls for the desktop device range.
-
 @media (min-width: $screen-md-min) {
   @include make-grid(md);
 }
@@ -150,6 +145,7 @@
 		padding-bottom: 20px;
 	}
 }
+
 &__wrapper {
 	// New Sticky Footer code
 	min-height: 100%;
@@ -161,18 +157,23 @@
 	}
 }
 
-.layout__container {
+.layout__container,
+.rc_layout__container {
 	box-sizing: border-box;
 	&:before {
 		display: table;
 		content: " ";
 	}
 }
-.layout {
+
+.layout,
+.rc_layout {
 	@include make-row;
 	box-sizing: border-box;
 }
-.layout__sidebar {
+
+.layout__sidebar,
+.rc_layout__sidebar {
 	box-sizing: border-box;
 	@include make-xs-column(12);
 	@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
@@ -185,7 +186,9 @@
 		@include make-xs-column(3);
 	}
 }
-.layout__content {
+
+.layout__content,
+.rc_layout__content {
 	box-sizing: border-box;
 	@include make-xs-column(12);
 	@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
@@ -198,7 +201,9 @@
 		@include make-xs-column(9);
 	}
 }
-.layout__full {
+
+.layout__full,
+.rc_layout__full {
 	box-sizing: border-box;
 	@include make-xs-column(12);
 }
