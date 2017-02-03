@@ -5997,6 +5997,18 @@ a:hover,
   z-index: 1;
 }
 
+.new .accordion__header.admin-recharge {
+  color: #2C93AC;
+}
+
+.new .accordion__header.admin-recharge:after {
+  display: none;
+}
+
+.new .accordion__header--inactive:before {
+  display: none !important;
+}
+
 .new .accordion__media, .new .accordion__description {
   display: inline-block;
   vertical-align: top;
@@ -6021,7 +6033,7 @@ a:hover,
   padding-bottom: 30px;
 }
 
-.new .accordion__details + .new .accordion__header {
+.new .accordion__details + .accordion__header {
   margin-top: 20px;
 }
 

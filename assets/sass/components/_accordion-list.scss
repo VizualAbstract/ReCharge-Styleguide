@@ -50,6 +50,19 @@ ul.accordion > li {
 			cursor: pointer;
 			z-index: 1;
 		}
+
+		&.admin-recharge {
+			color: $blue;
+			&:after {
+				display: none;
+			}
+		}
+
+		&--inactive {
+			&:before {
+				display: none !important;
+			}
+		}
 	}
 
 	&__media,
@@ -77,7 +90,7 @@ ul.accordion > li {
 		padding-bottom: 30px;
 	}
 
-	&__details + &__header {
+	&__details + .accordion__header {
 		margin-top: 20px;
 	}
 
