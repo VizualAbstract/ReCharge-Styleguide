@@ -5945,10 +5945,6 @@ a:hover,
   vertical-align: middle;
 }
 
-.new * {
-  box-sizing: border-box;
-}
-
 .new ul.accordion,
 .new ul.accordion > li {
   list-style: none;
@@ -5959,6 +5955,10 @@ a:hover,
   display: table;
   width: 100%;
   position: relative;
+}
+
+.new .accordion * {
+  box-sizing: border-box;
 }
 
 .new .accordion__header {

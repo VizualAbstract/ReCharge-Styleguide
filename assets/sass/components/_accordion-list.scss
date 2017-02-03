@@ -5,10 +5,6 @@
 	Author: Corey M. Capetillo
 */
 
-* {
-	box-sizing: border-box;
-}
-
 ul.accordion,
 ul.accordion > li {
 	list-style: none;
@@ -16,6 +12,9 @@ ul.accordion > li {
 }
 
 .accordion {
+	* {
+		box-sizing: border-box;
+	}
 	display: table;
 	width: 100%;
 	position: relative;
