@@ -5952,6 +5952,7 @@ a:hover,
 }
 
 .new .accordion {
+  margin-bottom: 30px;
   display: table;
   width: 100%;
   position: relative;
