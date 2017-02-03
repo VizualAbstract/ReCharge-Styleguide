@@ -30,7 +30,7 @@
 		display: flex;
 	}
 	.new .accordion__details + .accordion__header {
-		margin-top: 25px;
+		margin-top: 20px;
 	}
 	.new .accordion__header:before {
 		content: "\f078";
@@ -55,7 +55,6 @@
 	.new .accordion__media {
 		width: 55px;
 		padding-left: 40px;
-		padding-top: 5px;
 	}
 	.new .accordion__media img {
 		width: 100%;
@@ -68,9 +67,13 @@
 	.new .accordion__description {
 		padding-left: 30px;
 		width: 100%;
+		padding-bottom: 30px;
 	}
 	.new .accordion__details {
 		padding-left: 119px;
+	}
+	.new .accordion__details .button {
+		margin-bottom: 20px;
 	}
 </style>
 <h2 class="rc_sg__pattern_title" id="setup-header">Setup Header</h2>

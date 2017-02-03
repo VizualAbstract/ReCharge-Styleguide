@@ -2,7 +2,7 @@
 <?php for ($i = 1; $i <= 3; $i++) { ?>
 	<li class="accordion__header">
 		<div class="accordion__media" data-target="#google_analytics__<?php echo $i; ?>" data-toggle="collapse__menu" data-parent="#integrations">
-			<img src="/assets/images/google_analytics__on.png" alt="Google Analytics logo">
+			<img src="assets/images/thumbnail__on.png" alt="Google Analytics logo">
 		</div>
 		<div class="accordion__description">
 			<h5 data-target="#google_analytics__<?php echo $i; ?>" data-toggle="collapse__menu" data-parent="#integrations">
