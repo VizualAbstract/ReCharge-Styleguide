@@ -4,6 +4,13 @@
 		</span><!-- .new -->
 		<script>
 			$(function() {
+				$('.accordion').on('click', '[data-toggle="collapse__menu"]', function() {
+					$(this).parents('.accordion__header').toggleClass('accordion--active');
+				});
+			});
+		</script>
+		<script>
+			$(function() {
 				$('.rc_notifications').on('click', '.rc_notifications__close', function(e) {
 					e.preventDefault();
 					$(this).parents('.rc_notifications').slideToggle();
@@ -12,35 +19,6 @@
 		</script>
 		<script>
 			$(function() {
-				// $('#date-range__charts .form__date').pikaday({
-				// 	format: 'YYYY-MM-DD',
-				// 	minDate: moment('2016-09-08').toDate(),
-				// 	maxDate: moment().toDate(),
-				// 	showDaysInNextAndPreviousMonths: true,
-				// 	onClose: function() {
-				// 		var input = $(this._o.field);
-				// 		var value = input.val();
-				// 		if (value == '') {
-				// 			// If value is empty, set default date if avaialble
-				// 			if (input.data('default')) {
-				// 				input.val(input.data('default'));
-				// 			} else {
-				// 				var start_date = input.parents('.date-range__start');
-				// 				var end_date = input.parents('.date-range__end');
-				// 				if (start_date.length > 0) {
-				// 					input.val(moment().subtract(8, 'days').format('YYYY-MM-DD'));
-				// 				}
-				// 				if (end_date.length > 0) {
-				// 					input.val(moment().subtract(1, 'days').format('YYYY-MM-DD'));
-				// 				}
-				// 			}
-				// 		}
-				// 	}
-				// });
-				// $('#date-range__downloads .form__date').pikaday({
-				// 	format: 'YYYY-MM-DD',
-				// 	showDaysInNextAndPreviousMonths: true
-				// });
 				$('.form__date').pikaday({
 					format: 'YYYY-MM-DD',
 					showDaysInNextAndPreviousMonths: true

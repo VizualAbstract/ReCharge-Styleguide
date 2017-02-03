@@ -1,2 +1,11 @@
 .DS_Store
 .sass-cache
+assets/css/app.css
+assets/css/app.min.css
+assets/css/app.css.map
+assets/css/display.min.css
+assets/css/display.css
+assets/css/display.css.map
+assets/css/proxy.min.css
+assets/css/proxy.css
+assets/css/proxy.css.map

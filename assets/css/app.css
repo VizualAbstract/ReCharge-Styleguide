@@ -3333,6 +3333,10 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   background-color: #d4370e;
 }
 
+.new .button + .button--link.button {
+  margin-left: 10px;
+}
+
 .new .button--large.button, .new .rc_modal__actions .button {
   padding: 17px;
   font-size: 16px;
@@ -3355,6 +3359,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   font-family: 'ralewayregular', arial, sans-serif;
   padding-left: 0;
   padding-right: 0;
+  min-width: auto;
   color: #424242;
 }
 
@@ -3367,7 +3372,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 }
 
 .new .button--link.button.button--primary:hover, .new .button--link.button.button--primary:hover {
-  color: #4DD6B7;
+  color: #2BAC8F;
 }
 
 .new .button--link.button.button--secondary {
@@ -4595,6 +4600,10 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   background-color: #d4370e;
 }
 
+.new .button + .button--link.button {
+  margin-left: 10px;
+}
+
 .new .button--large.button, .new .rc_modal__actions .button {
   padding: 17px;
   font-size: 16px;
@@ -4617,6 +4626,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   font-family: 'ralewayregular', arial, sans-serif;
   padding-left: 0;
   padding-right: 0;
+  min-width: auto;
   color: #424242;
 }
 
@@ -4629,7 +4639,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 }
 
 .new .button--link.button.button--primary:hover, .new .button--link.button.button--primary:hover {
-  color: #4DD6B7;
+  color: #2BAC8F;
 }
 
 .new .button--link.button.button--secondary {
@@ -4771,6 +4781,12 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 	Element: Action List
 	Version 1.0
 	Date: 5-5-2016
+	Author: Corey M. Capetillo
+*/
+  /* 
+	Element: Action List
+	Version 1.0
+	Date: 2-3-2017
 	Author: Corey M. Capetillo
 */
   /*
@@ -5927,6 +5943,94 @@ a:hover,
   width: auto;
   height: auto;
   vertical-align: middle;
+}
+
+.new * {
+  box-sizing: border-box;
+}
+
+.new ul.accordion,
+.new ul.accordion > li {
+  list-style: none;
+  margin-left: 0;
+}
+
+.new .accordion {
+  display: table;
+  width: 100%;
+  position: relative;
+}
+
+.new .accordion__header {
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.new .accordion__header [data-toggle="collapse__menu"] {
+  cursor: pointer;
+}
+
+.new .accordion__header h5 small {
+  font-size: 14px;
+  color: #676767;
+}
+
+.new .accordion__header.accordion--active:before {
+  content: "\f077";
+}
+
+.new .accordion__header:before {
+  content: "\f078";
+  font-family: "font-awesome", "fontawesome";
+  display: block;
+  position: absolute;
+  font-size: 16px;
+  top: 0;
+  left: 0;
+  width: 40px;
+  text-align: left;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.new .accordion__media, .new .accordion__description {
+  display: inline-block;
+  vertical-align: top;
+  white-space: initial;
+}
+
+.new .accordion__media {
+  width: 95px;
+  padding-left: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.new .accordion__media img {
+  width: 100%;
+  height: auto;
+}
+
+.new .accordion__description {
+  padding-left: 30px;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.new .accordion__details + .new .accordion__header {
+  margin-top: 20px;
+}
+
+.new .accordion__details {
+  padding-left: 119px;
+}
+
+.new .accordion__details .button {
+  margin-bottom: 20px;
 }
 
 .new .download-list {
@@ -7799,7 +7903,7 @@ a:hover,
 
 .new .navbar--setup {
   color: #424242;
-  background-color: #EEEEEE;
+  background-color: #D6D6D6;
 }
 
 .new .navbar--setup li > a,
@@ -7818,13 +7922,13 @@ a:hover,
 .new .navbar--setup .navbar__links li:active > a,
 .new .navbar--setup .navbar__links li:active > span {
   color: #424242;
-  background-color: #D6D6D6;
+  background-color: #BEBEBE;
 }
 
 @media screen and (max-width: 915px) {
   .new .navbar--setup .navbar__collapse .navbar__links {
     color: #424242;
-    background-color: #D6D6D6;
+    background-color: #BEBEBE;
   }
   .new .navbar--setup .navbar__collapse .navbar__links li.active > a,
   .new .navbar--setup .navbar__collapse .navbar__links li.active > span,
@@ -7832,19 +7936,19 @@ a:hover,
   .new .navbar--setup .navbar__collapse .navbar__links li:hover > span,
   .new .navbar--setup .navbar__collapse .navbar__links li:active > a,
   .new .navbar--setup .navbar__collapse .navbar__links li:active > span {
-    background-color: #bdbdbd;
+    background-color: #a5a5a5;
   }
 }
 
 .new .navbar--setup .dropdown--open .dropdown__trigger {
   color: #424242;
-  background-color: #D6D6D6;
+  background-color: #BEBEBE;
 }
 
 .new .navbar--setup .dropdown__menu li > a,
 .new .navbar--setup .dropdown__menu li > span {
   color: #424242;
-  background-color: #D6D6D6;
+  background-color: #BEBEBE;
 }
 
 .new .navbar--setup .dropdown__menu li.active > a,
@@ -7854,7 +7958,7 @@ a:hover,
 .new .navbar--setup .dropdown__menu li:active > a,
 .new .navbar--setup .dropdown__menu li:active > span {
   color: #424242;
-  background-color: #bdbdbd;
+  background-color: #a5a5a5;
 }
 
 .new .navbar--setup .navbar__toggle.collapsed {
@@ -7870,7 +7974,7 @@ a:hover,
 
 .new .navbar--setup.navbar--mobile li > a,
 .new .navbar--setup.navbar--mobile li > span {
-  background-color: #d5d5d5;
+  background-color: #bdbdbd;
 }
 
 .new .navbar__return {

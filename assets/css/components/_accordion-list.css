@@ -1,0 +1,79 @@
+/* 
+	Element: Action List
+	Version 1.0
+	Date: 2-3-2017
+	Author: Corey M. Capetillo
+*/
+ul.accordion,
+ul.accordion > li {
+  list-style: none;
+  margin-left: 0;
+}
+
+.accordion {
+  display: table;
+  width: 100%;
+  position: relative;
+}
+
+.accordion__header {
+  position: relative;
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+}
+
+.accordion__header h5 small {
+  font-size: 14px;
+  color: #676767;
+}
+
+.accordion__header.accordion--active:before {
+  content: "\f077";
+}
+
+.accordion__header:before {
+  content: "\f078";
+  font-family: "font-awesome", "fontawesome";
+  display: block;
+  position: absolute;
+  font-size: 16px;
+  top: 0;
+  left: 0;
+  width: 40px;
+  text-align: left;
+}
+
+.accordion__media, .accordion__description {
+  display: inline-block;
+  vertical-align: top;
+  white-space: initial;
+}
+
+.accordion__media {
+  width: 55px;
+  padding-left: 40px;
+}
+
+.accordion__media img {
+  width: 100%;
+  height: auto;
+}
+
+.accordion__description {
+  padding-left: 30px;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.accordion__details + .accordion__header {
+  margin-top: 20px;
+}
+
+.accordion__details {
+  padding-left: 119px;
+}
+
+.accordion__details .button {
+  margin-bottom: 20px;
+}

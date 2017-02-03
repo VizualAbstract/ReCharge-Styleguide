@@ -78,6 +78,11 @@
 <?php include('_components/action-list.php'); ?>
 </div><!-- .rc_sg__example -->
 
+<h2 class="rc_sg__pattern_title" id="accordion-lists">Accordion Lists</h2>
+<div class="rc_sg__example">
+<?php include('_components/accordion-list.php'); ?>
+</div><!-- .rc_sg__example -->
+
 <h2 class="rc_sg__pattern_title" id="action-lists">Download List</h2>
 <div class="rc_sg_description">
 	<p>Download lists are a simplified version of the action list, with an action stacked on top of a description.</p>
