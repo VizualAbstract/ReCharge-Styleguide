@@ -3333,6 +3333,10 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   background-color: #d4370e;
 }
 
+.new .button + .button--link.button {
+  margin-left: 10px;
+}
+
 .new .button--large.button, .new .rc_modal__actions .button {
   padding: 17px;
   font-size: 16px;
@@ -3355,6 +3359,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   font-family: 'ralewayregular', arial, sans-serif;
   padding-left: 0;
   padding-right: 0;
+  min-width: auto;
   color: #424242;
 }
 
@@ -3367,7 +3372,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 }
 
 .new .button--link.button.button--primary:hover, .new .button--link.button.button--primary:hover {
-  color: #4DD6B7;
+  color: #2BAC8F;
 }
 
 .new .button--link.button.button--secondary {
@@ -4595,6 +4600,10 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   background-color: #d4370e;
 }
 
+.new .button + .button--link.button {
+  margin-left: 10px;
+}
+
 .new .button--large.button, .new .rc_modal__actions .button {
   padding: 17px;
   font-size: 16px;
@@ -4617,6 +4626,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
   font-family: 'ralewayregular', arial, sans-serif;
   padding-left: 0;
   padding-right: 0;
+  min-width: auto;
   color: #424242;
 }
 
@@ -4629,7 +4639,7 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 }
 
 .new .button--link.button.button--primary:hover, .new .button--link.button.button--primary:hover {
-  color: #4DD6B7;
+  color: #2BAC8F;
 }
 
 .new .button--link.button.button--secondary {
@@ -7721,7 +7731,7 @@ a:hover,
 
 .new .navbar--setup {
   color: #424242;
-  background-color: #EEEEEE;
+  background-color: #D6D6D6;
 }
 
 .new .navbar--setup li > a,
@@ -7740,13 +7750,13 @@ a:hover,
 .new .navbar--setup .navbar__links li:active > a,
 .new .navbar--setup .navbar__links li:active > span {
   color: #424242;
-  background-color: #D6D6D6;
+  background-color: #BEBEBE;
 }
 
 @media screen and (max-width: 915px) {
   .new .navbar--setup .navbar__collapse .navbar__links {
     color: #424242;
-    background-color: #D6D6D6;
+    background-color: #BEBEBE;
   }
   .new .navbar--setup .navbar__collapse .navbar__links li.active > a,
   .new .navbar--setup .navbar__collapse .navbar__links li.active > span,
@@ -7754,19 +7764,19 @@ a:hover,
   .new .navbar--setup .navbar__collapse .navbar__links li:hover > span,
   .new .navbar--setup .navbar__collapse .navbar__links li:active > a,
   .new .navbar--setup .navbar__collapse .navbar__links li:active > span {
-    background-color: #bdbdbd;
+    background-color: #a5a5a5;
   }
 }
 
 .new .navbar--setup .dropdown--open .dropdown__trigger {
   color: #424242;
-  background-color: #D6D6D6;
+  background-color: #BEBEBE;
 }
 
 .new .navbar--setup .dropdown__menu li > a,
 .new .navbar--setup .dropdown__menu li > span {
   color: #424242;
-  background-color: #D6D6D6;
+  background-color: #BEBEBE;
 }
 
 .new .navbar--setup .dropdown__menu li.active > a,
@@ -7776,7 +7786,7 @@ a:hover,
 .new .navbar--setup .dropdown__menu li:active > a,
 .new .navbar--setup .dropdown__menu li:active > span {
   color: #424242;
-  background-color: #bdbdbd;
+  background-color: #a5a5a5;
 }
 
 .new .navbar--setup .navbar__toggle.collapsed {
@@ -7792,7 +7802,7 @@ a:hover,
 
 .new .navbar--setup.navbar--mobile li > a,
 .new .navbar--setup.navbar--mobile li > span {
-  background-color: #d5d5d5;
+  background-color: #bdbdbd;
 }
 
 .new .navbar__return {

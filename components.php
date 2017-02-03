@@ -5,6 +5,74 @@
 
 <hr>
 
+<script>
+	$(function() {
+		$('.accordion').on('click', '[data-toggle="collapse__menu"]', function() {
+			$(this).parents('.accordion__header').toggleClass('accordion--active');
+		});
+	});
+</script>
+<style>
+	.new ul.accordion,
+	.new ul.accordion > li {
+		list-style: none;
+		margin-left: 0;
+	}
+	.new .accordion {
+		display: table;
+		width: 100%;
+		position: relative;
+	}
+	.new .accordion__header {
+		position: relative;
+		width: 100%;
+		white-space: nowrap;
+		display: flex;
+	}
+	.new .accordion__details + .accordion__header {
+		margin-top: 25px;
+	}
+	.new .accordion__header:before {
+		content: "\f078";
+		font-family: "font-awesome", "fontawesome";
+		display: block;
+		position: absolute;
+		font-size: 16px;
+		top: 0;
+		left: 0;
+		width: 40px;
+		text-align: left;
+	}
+	.new .accordion__header.accordion--active:before {
+		content: "\f077";
+	}
+	.new .accordion__media,
+	.new .accordion__description {
+		display: inline-block;
+		vertical-align: top;
+		white-space: initial;
+	}
+	.new .accordion__media {
+		width: 55px;
+		padding-left: 40px;
+		padding-top: 5px;
+	}
+	.new .accordion__media img {
+		width: 100%;
+		height: auto;
+	}
+	.new .accordion__header h5 small {
+		font-size: 14px;
+		color: #676767;
+	}
+	.new .accordion__description {
+		padding-left: 30px;
+		width: 100%;
+	}
+	.new .accordion__details {
+		padding-left: 119px;
+	}
+</style>
 <h2 class="rc_sg__pattern_title" id="setup-header">Setup Header</h2>
 <div class="rc_sg__description">
 	<p>The previous base class name for this component was <code>.header</code>, but this was before I realized this was the Setup Header, not a standard header. The old class nomiclature will be removed in the future.</p>
@@ -76,6 +144,11 @@
 <h2 class="rc_sg__pattern_title" id="action-lists">Action Lists</h2>
 <div class="rc_sg__example">
 <?php include('_components/action-list.php'); ?>
+</div><!-- .rc_sg__example -->
+
+<h2 class="rc_sg__pattern_title" id="accordion-lists">Accordion Lists</h2>
+<div class="rc_sg__example">
+<?php include('_components/accordion-list.php'); ?>
 </div><!-- .rc_sg__example -->
 
 <h2 class="rc_sg__pattern_title" id="action-lists">Download List</h2>
