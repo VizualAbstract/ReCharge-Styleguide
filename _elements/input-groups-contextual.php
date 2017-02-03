@@ -21,6 +21,9 @@
 			</div><!-- .input-group -->
 		</div><!-- .form__group -->
 	</div><!-- .contextual__input__options -->
+	<p class="form__help">
+		Useful information about this contextual input
+	</p>
 </div><!-- .form__group -->
 
 <div class="form__group">

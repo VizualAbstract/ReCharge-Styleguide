@@ -7,7 +7,7 @@
 <p>You can view the ongoing status of this page <a href="https://docs.google.com/spreadsheets/d/1J-UcLAgN9eChuWUqMxEUObY6dlxIRZFL5eN2zrT4g18/edit?usp=sharing" target="_blank">here</a>.</p>
 
 <?php
-	if ($_SERVER['HTTP_HOST'] == 'coreys-recharge-imac.local:5757'){
+	if ($_SERVER['HTTP_HOST'] == 'coreys-recharge-imac.local:5757' || $_SERVER['HTTP_HOST'] == 'styleguide.dev'){
 		$site_url = '';
 	} else {
 		$site_url = '/styleguide';

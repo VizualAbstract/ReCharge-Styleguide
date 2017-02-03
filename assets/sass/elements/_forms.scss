@@ -57,6 +57,8 @@
 		- Small patch to fix alignment with select forms within input groups
 	10-13-16:
 		- Add a more comprehensive approach to invalid inputs (color, number, dropdown selects, improved checkbox & radio)
+	01-25-17
+		- Add support .form__help, for post-contextual form inputs
 */
 
 .form {
@@ -737,6 +739,11 @@ input[type="checkbox"],
     	margin-bottom: 0; // Fix, contextual items should be within form__group, so margin is automatically added. This removes double margin
 	}
 
+	+ .form__help {
+		margin-top: 10px;
+		display: none;
+	}
+
 	@extend .clearfix;
 
 	.form__group {
@@ -764,10 +771,18 @@ input[type="checkbox"],
 	+ .form__radio__label {
 		+ .contextual__input__options {
 			display: block;
+			+ .form__help {
+				display: block;
+				margin-left: 24px;
+			}
 		}
 		+ .form__help {
 			+ .contextual__input__options {
 				display: block;
+				+ .form__help {
+					display: block;
+					margin-left: 24px;
+				}
 			}
 		}
 	}
