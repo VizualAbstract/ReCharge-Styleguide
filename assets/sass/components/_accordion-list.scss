@@ -20,6 +20,7 @@ ul.accordion > li {
 	display: table;
 	width: 100%;
 	position: relative;
+
 	&__header {
 		position: relative;
 		width: 100%;
@@ -48,6 +49,7 @@ ul.accordion > li {
 			top: 0;
 			left: 0;
 			width: 40px;
+			line-height: 51px; // Same height as the media image should be
 			text-align: left;
 			cursor: pointer;
 			z-index: 1;

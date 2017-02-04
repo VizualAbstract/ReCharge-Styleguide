@@ -7,6 +7,7 @@
 		<div class="accordion__description">
 			<h5 data-toggle="collapse__menu" data-parent="#integrations" data-target="#google_analytics__<?php echo $i; ?>">
 				Google Analytics
+				<span class="beta-tag"></span>
 				<small class="pull--right">Connected</small>
 			</h5>
 			<p class="rc_text--description">

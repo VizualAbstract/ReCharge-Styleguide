@@ -67,6 +67,37 @@ $popover-arrow-offset: 2px;
 	}
 }
 
+
+.beta-tag {
+	display: inline-block;
+	width: 53px;
+	height: 20px;
+	position: relative;
+	padding: 0;
+	top: 0;
+	left: 0;
+	margin-left: 5px;
+	background-image: url('../images/beta-tag.png');
+	background-position: 0 0;
+	background-size: 53px 20px;
+	background-repeat: no-repeat;
+}
+h1 .beta-tag {
+	top: 20 - $h1-font-size / 2 - 5;
+}
+h2 .beta-tag {
+	top: 20 - $h2-font-size / 2 - 5;
+}
+h3 .beta-tag {
+	top: 20 - $h3-font-size / 2 - 5;
+}
+h4 .beta-tag {
+	top: 20 - $h4-font-size / 2 - 6;
+}
+h5 .beta-tag {
+	top: 20 - $h5-font-size;
+}
+
 .popover-box {
 	position: absolute;
 	top: 0;
