@@ -1,0 +1,44 @@
+/* 
+	Element: Alerts
+	Version 1.0
+	Date: 2-3-2016
+	Author: Corey M. Capetillo
+*/
+
+.rc_alert {
+	box-sizing: border-box;
+
+	p {
+		font-size: 14px;
+
+		&:before {
+			font-family: "fontawesome";
+			font-size: 20px;
+			display: inline-block;
+			padding-right: 14px;
+			position: relative;
+			top: 3px;
+		}
+	}
+
+	&--error {
+		color: $red;
+		p:before {
+			content: "\f071";
+		}
+	}
+
+	&--warning {
+		color: $orange;
+		p:before{
+			content: "\f071";
+		}
+	}
+
+	&--success {
+		color: $aquamarine;
+		p:before {
+			content: "\f058";
+		}
+	}
+}

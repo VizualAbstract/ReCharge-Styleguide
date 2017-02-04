@@ -1,0 +1,24 @@
+.rc_alert {
+  box-sizing: border-box;
+}
+
+.rc_alert p {
+  font-size: 14px;
+}
+
+.rc_alert p:before {
+  font-family: "fontawesome";
+  font-size: 20px;
+  display: inline-block;
+  padding-right: 14px;
+  position: relative;
+  top: 3px;
+}
+
+.rc_alert--warning {
+  color: #fb8309;
+}
+
+.rc_alert--warning p:before {
+  content: "\f071";
+}

@@ -5,6 +5,11 @@
 
 <hr>
 
+<h2 class="rc_sg__pattern_title" id="alerts">Alerts</h2>
+<div class="rc_sg__example">
+<?php include('_elements/alerts.php'); ?>
+</div><!-- .rc_sg__example -->
+
 <h2 class="rc_sg__pattern_title" id="buttons">Buttons</h2>
 <div class="rc_sg__description">
 	<p>The <code>.button</code> class will render links, input[type="submit"] and buttons in the same fashion. Use  <code>.button--primary</code>, <code>.button--secondary</code>, <code>.button--danger</code>, <code>.button--disabled</code> to stylize further.</p>

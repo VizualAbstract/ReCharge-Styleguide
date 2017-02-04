@@ -2971,6 +2971,12 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 		- Removed !important from button links
 		- Add hover-colors for button--links
 */
+  /* 
+	Element: Alerts
+	Version 1.0
+	Date: 2-3-2016
+	Author: Corey M. Capetillo
+*/
 }
 
 .new #wrapper {
@@ -4668,6 +4674,47 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 
 .new .button.button--link.button--alt {
   text-decoration: none;
+}
+
+.new .rc_alert {
+  box-sizing: border-box;
+}
+
+.new .rc_alert p {
+  font-size: 14px;
+}
+
+.new .rc_alert p:before {
+  font-family: "fontawesome";
+  font-size: 20px;
+  display: inline-block;
+  padding-right: 14px;
+  position: relative;
+  top: 3px;
+}
+
+.new .rc_alert--error {
+  color: #EC3D10;
+}
+
+.new .rc_alert--error p:before {
+  content: "\f071";
+}
+
+.new .rc_alert--warning {
+  color: #FB8309;
+}
+
+.new .rc_alert--warning p:before {
+  content: "\f071";
+}
+
+.new .rc_alert--success {
+  color: #4DD6B7;
+}
+
+.new .rc_alert--success p:before {
+  content: "\f058";
 }
 
 /*

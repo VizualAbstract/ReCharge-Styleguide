@@ -276,6 +276,9 @@ body {
 	width: 100% !important;
 }
 
+.rc_alert + .rc_alert {
+	margin-top: 25px;
+}
 
 
 #grids + .rc_sg__example .show-grid + h4 {
