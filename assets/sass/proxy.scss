@@ -207,6 +207,22 @@
 .user-customer .recharge .layout__container {
 	width: 100%;
 }
+@media (min-width: 768px) {
+	.recharge .layout__container, .recharge .rc_layout__container {
+		max-width: 740px;
+	}
+}
+@media (min-width: 992px) {
+	.recharge .layout__container, .recharge .rc_layout__container {
+		max-width: 960px;
+	}
+}
+@media (min-width: 1200px) {
+	.recharge .layout__container, .recharge .rc_layout__container {
+		max-width: 1160px;
+	}
+}
+
 
 @import 'dynamic/_modals.scss';
 
