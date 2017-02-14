@@ -2204,62 +2204,6 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
 	Version 1.1
 	Date: 5-5-2016
 	Author: Corey M. Capetillo
-	5-5-2016
-		- Creation date
-	7-22-2016
-		- Removed color: $white from submit .button
-		- Remove submit button color on hover
-	8-4-2016
-		- Add textarea class for code blocks
-		- Add contextual blocks for hidden inputs unless they're needed
-	8-5-2016
-		- Add color picker. Might need a better way for new input types to adopt the input[type='text'] styles
-	8-8-2016
-		- Create several fixes to address spacing issues between elements
-	8-9-16:
-		- No longer use the double-colon for :before or :after. Incompatible with all browsers
-		- Standardized some of the spacing between fieldsets, form groups, and headers to formgroups
-		- Headers should be placed within a legend. Legends will get margin comparitive to a form group
-	8-10-16:
-		- Give the final fieldset a bottom margin of 60
-		- Form action div should receive the same amount of spacing as a fieldset
-		- Use variables for fieldset margin
-		- Add new form help text
-		- Add support for contextual dropdowns with new form help text
-		- Quick fix, too much margin beneath a form__select in contextual form dropdown
-	8-12-16:
-		- Create form__help
-		- Adjust spacing between form__groups and form__help
-		- Add spacing beneath contextual menus
-		- Make adjustments to spacing above radio and checkbox buttons in form groups, so it matches better with other elements in form groups
-	8-15-16:
-		- Increase margin between inline buttons
-	8-16-16:
-		- Required no longer has a red-border
-		- Invalid is now !important, so admin-styles are overwritten
-	8-24-16:
-		- Add number inputs. They are set to display: inline-block
-		- Expand dropkick select so it can be used for input__number
-		- Expand search input group to add an active version
-		- Add a form__search__no-results element
-	9-1-16:
-		- Add Date Range
-		- Add Beginnings of Date Picker
-	9-2-16:
-		- Use a background image to create the dropdown chevron for the date picker
-		- Add max-width to date picker (238px)
-	9-12-16:
-		- Submit button added to date range picker, temporary until further notice :)
-	9-28-16:
-		- Add disabled styles for Input and dropkick select
-	9-29-16:
-		- Allow for input fields to be within a label, specifically for radios and checkboxes
-	10-5-16:
-		- Small patch to fix alignment with select forms within input groups
-	10-13-16:
-		- Add a more comprehensive approach to invalid inputs (color, number, dropdown selects, improved checkbox & radio)
-	01-25-17
-		- Add support .form__help, for post-contextual form inputs
 */
   /* Contextual sub-form */
   /* 
@@ -2567,7 +2511,8 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     color: #676767;
     margin-top: -6px;
     margin-bottom: 5px;
-    line-height: 25px; }
+    line-height: 25px;
+    font-size: 14px; }
   .new .form__checkbox__label + .form__help,
   .new .form__radio__label + .form__help {
     margin-top: -19px;
