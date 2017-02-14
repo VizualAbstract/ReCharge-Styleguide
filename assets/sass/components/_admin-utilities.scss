@@ -108,6 +108,24 @@ a.admin-recharge {
 			}
 		}
 	}
+	&.form__radio,
+	&.form__checkbox {
+		+ .form__radio__label,
+		+ .form__checkbox__label {
+			color: #53BAD3;
+			&:before {
+				border-color: #53BAD3;
+			}
+		}
+		&:checked {
+			+ .form__radio__label,
+			+ .form__checkbox__label {
+				&:before {
+					background-color: #53BAD3;
+				}
+			}
+		}
+	}
 }
 
 .admin-shopify:after {
