@@ -35,6 +35,14 @@
 			}
 		}
 	}
+	&--slim {
+		.action-list__item {
+			&__content,
+			&__action {
+				height: 35px;
+			}
+		}
+	}
 }
 
 .subscription-product-media {

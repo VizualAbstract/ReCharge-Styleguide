@@ -4276,6 +4276,8 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
       .new .action-list__item:last-child .action-list__item__content,
       .new .action-list__item:last-child .action-list__item__action {
         border-bottom-width: 0 !important; }
+    .new .action-list--slim .action-list__item__content, .new .action-list--slim .action-list__item__action {
+      height: 35px; }
   .new .subscription-product-media {
     width: 75px;
     height: 60px;
